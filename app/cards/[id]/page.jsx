@@ -21,8 +21,65 @@ export default function CardPage({ params }) {
 
   const sorted = Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1]);
   const maxRate = sorted[0][1];
+  const bestCategory = sorted[0][0];
+
+  // JSON-LD: Product schema for credit card
+  const cardSchema = {
+    "@context": "https://schema.org",
+    "@type": "FinancialProduct",
+    name: card.name,
+    description: `${card.name} by ${card.bank}. ${card.type} credit card with up to ${maxRate}% rewards on ${bestCategory}. ${card.fee === 0 ? "Lifetime free — no annual fee." : `Annual fee: ₹${card.fee}.`} ${card.highlights.join(". ")}.`,
+    brand: { "@type": "Organization", name: card.bank },
+    category: "Credit Card",
+    offers: {
+      "@type": "Offer",
+      price: card.fee,
+      priceCurrency: "INR",
+      description: card.fee === 0 ? "Lifetime free — no annual fee" : `Annual fee: ₹${card.fee}`,
+    },
+    additionalProperty: [
+      { "@type": "PropertyValue", name: "Card Type", value: card.type },
+      { "@type": "PropertyValue", name: "Card Network", value: card.network },
+      { "@type": "PropertyValue", name: "Lounge Access", value: card.lounge },
+      { "@type": "PropertyValue", name: "Best Reward Category", value: bestCategory },
+      { "@type": "PropertyValue", name: "Best Reward Rate", value: `${maxRate}%` },
+      ...sorted.map(([catId, rate]) => ({
+        "@type": "PropertyValue",
+        name: `${catId.charAt(0).toUpperCase() + catId.slice(1)} Reward Rate`,
+        value: `${rate}%`,
+      })),
+    ],
+    feesAndCommissionsSpecification: card.fee === 0 ? "No annual fee" : `Annual fee of ₹${card.fee}`,
+    areaServed: { "@type": "Country", name: "India" },
+  };
+
+  // JSON-LD: Review/Rating schema
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: { "@type": "FinancialProduct", name: card.name },
+    author: { "@type": "Organization", name: "CardStack" },
+    reviewBody: `${card.name} review: ${card.pros.join(". ")}. Downsides: ${card.cons.join(". ")}.`,
+    positiveNotes: { "@type": "ItemList", itemListElement: card.pros.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p })) },
+    negativeNotes: { "@type": "ItemList", itemListElement: card.cons.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c })) },
+  };
+
+  // JSON-LD: BreadcrumbList
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://cardstack.vercel.app" },
+      { "@type": "ListItem", position: 2, name: "Cards", item: "https://cardstack.vercel.app/compare" },
+      { "@type": "ListItem", position: 3, name: card.name, item: `https://cardstack.vercel.app/cards/${card.id}` },
+    ],
+  };
 
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(cardSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <section className="pt-24 pb-20 px-6 max-w-[700px] mx-auto">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 mb-8 text-sm" style={{ color: "var(--text-faint)" }}>
@@ -113,5 +170,6 @@ export default function CardPage({ params }) {
         </Link>
       </div>
     </section>
+    </>
   );
 }

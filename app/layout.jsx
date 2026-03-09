@@ -24,8 +24,41 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "CardStack",
+    description: "India's smartest credit card optimization tool. Compare 25+ Indian credit cards, find the best card for every purchase, and maximize your rewards.",
+    url: "https://cardstack.vercel.app",
+    foundingDate: "2026",
+    areaServed: { "@type": "Country", name: "India" },
+    sameAs: [],
+    knowsAbout: [
+      "Credit Cards", "Credit Card Rewards", "Cashback", "Indian Banking",
+      "HDFC Credit Cards", "SBI Credit Cards", "ICICI Credit Cards", "Axis Credit Cards",
+      "Credit Card Comparison", "Reward Optimization"
+    ],
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "CardStack",
+    url: "https://cardstack.vercel.app",
+    description: "Compare 25+ Indian credit cards. Find the best card for every purchase with real savings math.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://cardstack.vercel.app/compare?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
+      </head>
       <body>
         <ThemeProvider>
           <Navbar />
