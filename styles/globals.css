@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap");
+
+:root {
+  --bg: #f8f8fa;
+  --bg-alt: #ffffff;
+  --bg-card: #ffffff;
+  --bg-input: #f3f4f6;
+  --bg-muted: #eef0f4;
+  --text: #111118;
+  --text-secondary: #555566;
+  --text-muted: #8888a0;
+  --text-faint: #aaaabc;
+  --border: rgba(0, 0, 0, 0.07);
+  --border-light: rgba(0, 0, 0, 0.04);
+  --accent: #6366f1;
+  --accent-light: rgba(99, 102, 241, 0.08);
+  --accent-border: rgba(99, 102, 241, 0.18);
+  --accent-text: #4f46e5;
+  --green: #16a34a;
+  --green-bg: rgba(22, 163, 74, 0.08);
+  --green-border: rgba(22, 163, 74, 0.15);
+  --orange: #ea580c;
+  --orange-bg: rgba(234, 88, 12, 0.08);
+  --orange-border: rgba(234, 88, 12, 0.15);
+  --blue: #2563eb;
+  --blue-bg: rgba(37, 99, 235, 0.08);
+  --blue-border: rgba(37, 99, 235, 0.15);
+  --nav-bg: rgba(248, 248, 250, 0.88);
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.92);
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 2px 8px rgba(0, 0, 0, 0.08), 0 12px 32px rgba(0, 0, 0, 0.06);
+  --card-alpha: 18;
+  --card-border-alpha: 25;
+  --sel-alpha: 15;
+  --sel-border-alpha: 40;
+  --hero-g1: rgba(99, 102, 241, 0.08);
+  --hero-g2: rgba(168, 85, 247, 0.06);
+  --select-bg: #f3f4f6;
+}
+
+.dark {
+  --bg: #08080c;
+  --bg-alt: #0e0e14;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-input: rgba(255, 255, 255, 0.05);
+  --bg-muted: rgba(255, 255, 255, 0.04);
+  --text: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --text-muted: rgba(255, 255, 255, 0.4);
+  --text-faint: rgba(255, 255, 255, 0.25);
+  --border: rgba(255, 255, 255, 0.06);
+  --border-light: rgba(255, 255, 255, 0.04);
+  --accent: #6366f1;
+  --accent-light: rgba(99, 102, 241, 0.1);
+  --accent-border: rgba(99, 102, 241, 0.2);
+  --accent-text: #a5b4fc;
+  --green: #4ade80;
+  --green-bg: rgba(34, 197, 94, 0.1);
+  --green-border: rgba(34, 197, 94, 0.2);
+  --orange: #fb923c;
+  --orange-bg: rgba(249, 115, 22, 0.1);
+  --orange-border: rgba(249, 115, 22, 0.15);
+  --blue: #60a5fa;
+  --blue-bg: rgba(59, 130, 246, 0.1);
+  --blue-border: rgba(59, 130, 246, 0.15);
+  --nav-bg: transparent;
+  --nav-bg-scrolled: rgba(8, 8, 12, 0.92);
+  --shadow: none;
+  --shadow-hover: none;
+  --card-alpha: 22;
+  --card-border-alpha: 44;
+  --sel-alpha: 33;
+  --sel-border-alpha: 88;
+  --hero-g1: rgba(99, 102, 241, 0.15);
+  --hero-g2: rgba(168, 85, 247, 0.12);
+  --select-bg: #111;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s, color 0.4s;
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.2);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.2);
+  border-radius: 3px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
