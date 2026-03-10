@@ -118,7 +118,6 @@ export default function CardPage({ params }) {
         {!card.verified && (
           <div className="mt-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)", color: "var(--orange)" }}>⚠️ Data being verified</div>
         )}
-        </div>
       </div>
 
       {/* Reward Rates */}
