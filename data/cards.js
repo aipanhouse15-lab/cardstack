@@ -8,6 +8,8 @@ export const CARDS = [
 
   { id: "hdfc-regalia", name: "HDFC Regalia", bank: "HDFC", img: "💳", color: "#1a3c6e", fee: 2500, feeWaiver: "₹4L annual spend", type: "Premium", verified: true,
     rewards: { dining: 1.33, travel: 1.33, online: 1.33, groceries: 1.33, fuel: 0, utilities: 1.33, entertainment: 1.33, shopping: 1.33, default: 1.33 },
+    caps: { monthlyPoints: 50000, pointValue: 0.20, spendPer: 150, pointsPer: 4 },
+    // Cap math: 50000 pts × ₹0.20 = ₹10,000 max cashback/month. At 4pts/₹150, need ₹18.75L spend to hit cap. Unlikely for most users.
     partnerRates: [
       { name: "SmartBuy (flights/hotels)", rate: "up to 13.33%" },
       { name: "Myntra, Nykaa, Reliance Digital", rate: "5x points (~3.33%)" },
@@ -30,7 +32,9 @@ export const CARDS = [
     network: "Visa", lounge: "Unlimited" },
 
   { id: "hdfc-millennia", name: "HDFC Millennia", bank: "HDFC", img: "✨", color: "#7c3aed", fee: 1000, feeWaiver: "₹1L annual spend", type: "Lifestyle", verified: true,
-    rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
+    rewards: { dining: 5, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 1, entertainment: 5, shopping: 5, default: 1 },
+    caps: { monthlyCashback: 1000, capRate: 5, fallbackRate: 1, capAppliesTo: ["dining", "online", "entertainment", "shopping"] },
+    // Cap math: ₹1000/mo at 5% = max beneficial spend ₹20,000/mo across partner categories. After that, drops to 1%.
     partnerRates: [
       { name: "Swiggy, Zomato", rate: "5% cashback" },
       { name: "Amazon, Flipkart, Myntra", rate: "5% cashback" },
@@ -54,7 +58,9 @@ export const CARDS = [
     network: "Diners Club", lounge: "8/year" },
 
   { id: "hdfc-swiggy", name: "HDFC Swiggy Card", bank: "HDFC", img: "🍕", color: "#fc8019", fee: 500, feeWaiver: "₹2L annual spend", type: "Entry", verified: false,
-    rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 0, entertainment: 1, shopping: 1, default: 1 },
+    rewards: { dining: 10, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 0, entertainment: 5, shopping: 5, default: 1 },
+    caps: { monthlyCashback: 1500, capRate: 10, fallbackRate: 1, capAppliesTo: ["dining", "online", "entertainment", "shopping"] },
+    // Cap math: ₹1500/mo across 10%/5% categories. At 10% Swiggy, max beneficial = ₹15,000. At 5% online, ₹30,000.
     partnerRates: [
       { name: "Swiggy", rate: "10% cashback (cap ₹1500)" },
       { name: "Online (apparel, electronics, entertainment)", rate: "5% (cap ₹1500)" },
@@ -78,6 +84,8 @@ export const CARDS = [
 
   { id: "sbi-cashback", name: "SBI Cashback Card", bank: "SBI", img: "💰", color: "#0369a1", fee: 999, feeWaiver: "₹2L annual spend", type: "Cashback", verified: true,
     rewards: { dining: 1, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 0, entertainment: 1, shopping: 1, default: 1 },
+    caps: { yearlyCashback: 5000, capRate: 5, fallbackRate: 1, capAppliesTo: ["online"] },
+    // Cap math: ₹5000/year at 5% = max beneficial online spend ₹1,00,000/year or ₹8,333/month. After that, drops to 1%.
     partnerRates: [],
     pointsInfo: "5% online, 1% offline · Auto-credited cashback",
     highlights: ["5% online cashback", "Auto-credited to statement", "Fee waiver ₹2L spend", "No point conversion needed"],
@@ -156,7 +164,9 @@ export const CARDS = [
     network: "Visa", lounge: "4/year" },
 
   { id: "axis-ace", name: "Axis ACE", bank: "Axis", img: "🎯", color: "#7c3aed", fee: 499, feeWaiver: "₹2L annual spend", type: "Cashback", verified: true,
-    rewards: { dining: 1.5, travel: 1.5, online: 1.5, groceries: 1.5, fuel: 0, utilities: 5, entertainment: 1.5, shopping: 1.5, default: 1.5 },
+    rewards: { dining: 4, travel: 1.5, online: 1.5, groceries: 1.5, fuel: 0, utilities: 5, entertainment: 1.5, shopping: 1.5, default: 1.5 },
+    caps: { monthlyCashback: 500, capRate: 5, fallbackRate: 1.5, capAppliesTo: ["utilities", "dining"] },
+    // Cap math: ₹500/mo total cap. At 5% utilities, max = ₹10,000. At 4% dining, max = ₹12,500. Combined cap across all categories.
     partnerRates: [
       { name: "Bill payments via Google Pay", rate: "5%" },
       { name: "Swiggy, Zomato, Ola", rate: "4%" },
@@ -307,3 +317,110 @@ export function getCardById(id) {
 export function getCardsByBank(bank) {
   return CARDS.filter(c => c.bank === bank);
 }
+
+// ─── CAP-AWARE REWARD CALCULATION ───
+// This is the killer feature — no other Indian site does this.
+// Returns { cashback, effectiveRate, capped, capNote } for a card + category + monthly spend
+
+export function calcReward(card, categoryId, monthlySpend) {
+  const baseRate = card.rewards[categoryId] || card.rewards.default || 0;
+  if (baseRate === 0 || monthlySpend === 0) return { cashback: 0, effectiveRate: 0, capped: false, capNote: null };
+
+  const rawCashback = monthlySpend * baseRate / 100;
+
+  if (!card.caps) {
+    return { cashback: Math.round(rawCashback), effectiveRate: baseRate, capped: false, capNote: null };
+  }
+
+  const caps = card.caps;
+
+  // Monthly cashback cap (Axis ACE, HDFC Millennia, HDFC Swiggy)
+  if (caps.monthlyCashback !== undefined) {
+    const isCappedCategory = !caps.capAppliesTo || caps.capAppliesTo.includes(categoryId);
+
+    if (isCappedCategory && rawCashback > caps.monthlyCashback) {
+      // Spend beyond cap earns fallback rate
+      const maxBeneficialSpend = caps.monthlyCashback / (baseRate / 100);
+      const overflowSpend = monthlySpend - maxBeneficialSpend;
+      const fallback = caps.fallbackRate || 0;
+      const totalCashback = caps.monthlyCashback + (overflowSpend * fallback / 100);
+      const effectiveRate = parseFloat(((totalCashback / monthlySpend) * 100).toFixed(2));
+
+      return {
+        cashback: Math.round(totalCashback),
+        effectiveRate,
+        capped: true,
+        capNote: `${baseRate}% up to ₹${Math.round(maxBeneficialSpend).toLocaleString()}/mo, then ${fallback}%. Cap: ₹${caps.monthlyCashback}/mo`,
+      };
+    }
+
+    // Under cap — full rate
+    return { cashback: Math.round(rawCashback), effectiveRate: baseRate, capped: false, capNote: `Cap: ₹${caps.monthlyCashback}/mo (you're under it)` };
+  }
+
+  // Yearly cashback cap (SBI Cashback)
+  if (caps.yearlyCashback !== undefined) {
+    const isCappedCategory = !caps.capAppliesTo || caps.capAppliesTo.includes(categoryId);
+
+    if (isCappedCategory) {
+      const yearlySpend = monthlySpend * 12;
+      const rawYearly = yearlySpend * baseRate / 100;
+
+      if (rawYearly > caps.yearlyCashback) {
+        const maxBeneficialYearlySpend = caps.yearlyCashback / (baseRate / 100);
+        const maxBeneficialMonthly = maxBeneficialYearlySpend / 12;
+        const fallback = caps.fallbackRate || 0;
+
+        if (monthlySpend > maxBeneficialMonthly) {
+          const overflowSpend = monthlySpend - maxBeneficialMonthly;
+          const totalCashback = (maxBeneficialMonthly * baseRate / 100) + (overflowSpend * fallback / 100);
+          const effectiveRate = parseFloat(((totalCashback / monthlySpend) * 100).toFixed(2));
+
+          return {
+            cashback: Math.round(totalCashback),
+            effectiveRate,
+            capped: true,
+            capNote: `${baseRate}% up to ₹${Math.round(maxBeneficialMonthly).toLocaleString()}/mo (₹${caps.yearlyCashback.toLocaleString()}/yr cap), then ${fallback}%`,
+          };
+        }
+      }
+
+      return { cashback: Math.round(rawCashback), effectiveRate: baseRate, capped: false, capNote: `Yearly cap: ₹${caps.yearlyCashback.toLocaleString()}/yr (you're under it)` };
+    }
+  }
+
+  // Monthly points cap (HDFC Regalia — 50K points/cycle)
+  if (caps.monthlyPoints !== undefined) {
+    const pointsEarned = (monthlySpend / caps.spendPer) * caps.pointsPer;
+    if (pointsEarned > caps.monthlyPoints) {
+      const maxBeneficialSpend = (caps.monthlyPoints / caps.pointsPer) * caps.spendPer;
+      const effectiveRate = parseFloat(((caps.monthlyPoints * caps.pointValue / monthlySpend) * 100).toFixed(2));
+
+      return {
+        cashback: Math.round(caps.monthlyPoints * caps.pointValue),
+        effectiveRate,
+        capped: true,
+        capNote: `Capped at ${caps.monthlyPoints.toLocaleString()} points/month (₹${Math.round(caps.monthlyPoints * caps.pointValue).toLocaleString()})`,
+      };
+    }
+  }
+
+  return { cashback: Math.round(rawCashback), effectiveRate: baseRate, capped: false, capNote: null };
+}
+
+// Calculate total monthly reward across all categories for a card
+export function calcTotalMonthlyReward(card, spending) {
+  let total = 0;
+  let anyCapped = false;
+  const details = {};
+
+  CATEGORIES.forEach(cat => {
+    const result = calcReward(card, cat.id, spending[cat.id] || 0);
+    total += result.cashback;
+    if (result.capped) anyCapped = true;
+    details[cat.id] = result;
+  });
+
+  return { total, anyCapped, details };
+}
+
