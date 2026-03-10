@@ -101,15 +101,23 @@ export default function CardPage({ params }) {
         </div>
         <div className="flex gap-6 flex-wrap">
           {[["Annual Fee", card.fee === 0 ? "FREE" : `₹${card.fee.toLocaleString()}`],
+            ["Fee Waiver", card.feeWaiver || "N/A"],
             ["Lounge Access", card.lounge],
             ["Best Rate", `${maxRate}%`],
             ["Network", card.network],
           ].map(([label, value], i) => (
             <div key={i}>
               <div className="text-[11px] uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>{label}</div>
-              <div className="text-lg font-bold font-mono" style={{ color: i === 2 ? "var(--green)" : "var(--text)" }}>{value}</div>
+              <div className="text-lg font-bold font-mono" style={{ color: i === 3 ? "var(--green)" : "var(--text)" }}>{value}</div>
             </div>
           ))}
+        </div>
+        {card.verified && (
+          <div className="mt-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)", color: "var(--green)" }}>✅ Data verified March 2026</div>
+        )}
+        {!card.verified && (
+          <div className="mt-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)", color: "var(--orange)" }}>⚠️ Data being verified</div>
+        )}
         </div>
       </div>
 
@@ -132,6 +140,30 @@ export default function CardPage({ params }) {
           })}
         </div>
       </div>
+
+      {/* Points Info */}
+      {card.pointsInfo && (
+        <div className="mb-6 rounded-xl p-4" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
+          <div className="text-xs font-bold uppercase tracking-wider mb-1.5" style={{ color: "var(--text-faint)" }}>How Points Work</div>
+          <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{card.pointsInfo}</p>
+        </div>
+      )}
+
+      {/* Partner / SmartBuy Rates */}
+      {card.partnerRates && card.partnerRates.length > 0 && (
+        <div className="mb-8">
+          <h2 className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>🚀 Boosted Rates (Partners & SmartBuy)</h2>
+          <div className="flex flex-col gap-2">
+            {card.partnerRates.map((pr, i) => (
+              <div key={i} className="flex items-center justify-between rounded-xl px-4 py-3" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)" }}>
+                <span className="text-sm font-medium" style={{ color: "var(--text)" }}>{pr.name}</span>
+                <span className="text-sm font-bold font-mono rounded-md px-2.5 py-1" style={{ background: "var(--green-bg)", color: "var(--green)" }}>{pr.rate}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs mt-2" style={{ color: "var(--text-faint)" }}>These rates apply when using specific platforms or partners — higher than the base category rate shown above.</p>
+        </div>
+      )}
 
       {/* Benefits */}
       <div className="mb-8">
