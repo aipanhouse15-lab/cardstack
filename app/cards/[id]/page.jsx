@@ -186,6 +186,35 @@ export default function CardPage({ params }) {
         </div>
       </div>
 
+      {/* Upcoming Changes */}
+      {card.upcoming && (
+        <div className="mb-8 rounded-xl overflow-hidden" style={{ border: "2px solid var(--orange-border)" }}>
+          <div className="px-5 py-3 flex items-center justify-between" style={{ background: "var(--orange-bg)" }}>
+            <div className="flex items-center gap-2">
+              <span className="text-lg">🔔</span>
+              <span className="text-sm font-bold" style={{ color: "var(--orange)" }}>Upcoming Changes</span>
+            </div>
+            <span className="text-xs font-semibold rounded-full px-3 py-1" style={{ background: "var(--orange)", color: "#fff" }}>{card.upcoming.date}</span>
+          </div>
+          <div className="p-5" style={{ background: "var(--bg-card)" }}>
+            <div className="flex flex-col gap-2 mb-4">
+              {card.upcoming.changes.map((change, i) => (
+                <div key={i} className="flex items-start gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
+                  <span className="flex-shrink-0 mt-0.5" style={{ color: "var(--orange)" }}>→</span>
+                  <span>{change}</span>
+                </div>
+              ))}
+            </div>
+            {card.upcoming.impact && (
+              <div className="rounded-lg p-3.5 text-sm leading-relaxed" style={{ background: "var(--orange-bg)", color: "var(--text-secondary)" }}>
+                <span className="font-bold" style={{ color: "var(--orange)" }}>Impact: </span>
+                {card.upcoming.impact}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* CTA */}
       <button className="w-full rounded-xl py-3.5 text-base font-semibold text-white border-none cursor-pointer opacity-80"
         style={{ background: `linear-gradient(135deg, ${card.color}, ${card.color}cc)` }}>

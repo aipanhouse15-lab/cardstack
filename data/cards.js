@@ -84,13 +84,22 @@ export const CARDS = [
 
   { id: "sbi-cashback", name: "SBI Cashback Card", bank: "SBI", img: "💰", color: "#0369a1", fee: 999, feeWaiver: "₹2L annual spend", type: "Cashback", verified: true,
     rewards: { dining: 1, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 0, entertainment: 1, shopping: 1, default: 1 },
-    caps: { yearlyCashback: 5000, capRate: 5, fallbackRate: 1, capAppliesTo: ["online"] },
-    // Cap math: ₹5000/year at 5% = max beneficial online spend ₹1,00,000/year or ₹8,333/month. After that, drops to 1%.
+    caps: { monthlyCashback: 5000, capRate: 5, fallbackRate: 1, capAppliesTo: ["online"] },
+    // Cap math: ₹5000/statement cycle at 5% = max beneficial online spend ₹1,00,000/cycle. After that, drops to 1%.
     partnerRates: [],
-    pointsInfo: "5% online, 1% offline · Auto-credited cashback",
+    pointsInfo: "5% online, 1% offline · Direct cashback (no points) · ₹5K cap/cycle · Fuel surcharge waiver ₹500-₹3K",
     highlights: ["5% online cashback", "Auto-credited to statement", "Fee waiver ₹2L spend", "No point conversion needed"],
-    pros: ["Simple 5% on all online", "Cashback auto-credited", "Fee waiver available"],
-    cons: ["₹5K cashback cap/year", "Fuel/utilities excluded", "Only 1% offline"],
+    pros: ["Simple 5% on all online spends", "Cashback auto-credited (no redemption hassle)", "Fee waiver on ₹2L spend"],
+    cons: ["₹5K cashback cap per cycle", "Fuel/utilities excluded from cashback", "Only 1% offline"],
+    upcoming: {
+      date: "April 2026",
+      changes: [
+        "Total cashback cap reduced: ₹5,000 → ₹4,000 per statement cycle",
+        "Online cashback capped at ₹2,000 per cycle (currently no sub-cap)",
+        "Offline cashback capped at ₹2,000 per cycle (currently no sub-cap)",
+      ],
+      impact: "At 5% online, max beneficial online spend drops from ₹1L to ₹40K per cycle. Heavy online spenders should consider pairing with another card after April.",
+    },
     network: "Visa", lounge: "None" },
 
   { id: "sbi-elite", name: "SBI Card ELITE", bank: "SBI", img: "👑", color: "#4338ca", fee: 4999, feeWaiver: "₹10L annual spend", type: "Premium", verified: true,
