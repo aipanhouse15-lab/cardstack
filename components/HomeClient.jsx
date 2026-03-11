@@ -40,8 +40,9 @@ const QUICK_PICKS = [
 ];
 const TOOLS = [
   { icon: "🎯", name: "Smart Swipe Guide", desc: "Select your cards and spending. See the best card for every category — with real cashback after caps.", color: "#6366f1", tag: "Most popular", cta: "Try it free →", href: "/smart-swipe" },
+  { icon: "🏗️", name: "Stack Builder", desc: "Find the optimal 2 or 3 card combo. We test every possible combination from 25 cards for max savings.", color: "#8b5cf6", tag: "New", cta: "Build stack →", href: "/stack-builder" },
   { icon: "💡", name: "Card Gap Finder", desc: "Find categories where better cards exist. See the exact ₹ you're leaving on the table per year.", color: "#f59e0b", tag: "Eye-opener", cta: "Find gaps →", href: "/gap-finder" },
-  { icon: "🔍", name: "Swipe Check", desc: "Pick a merchant — Swiggy, Amazon, Zomato, petrol — get top 3 cards with pro tips.", color: "#ec4899", tag: "New", cta: "Check merchant →", href: "/swipe-check" },
+  { icon: "🔍", name: "Swipe Check", desc: "Pick a merchant — Swiggy, Amazon, Zomato, petrol — get top 3 cards with pro tips.", color: "#ec4899", tag: "Merchant-level", cta: "Check merchant →", href: "/swipe-check" },
   { icon: "⚖️", name: "Compare Cards", desc: "Visual head-to-head with bar charts, category scores, and auto-generated verdict.", color: "#06b6d4", tag: "Popular", cta: "Compare now →", href: "/compare" },
 ];
 const TRUST_CARDS = [

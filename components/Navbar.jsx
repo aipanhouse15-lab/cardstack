@@ -8,6 +8,7 @@ const NAV = [
   { href: "/", label: "Home" },
   { href: "/cards", label: "All Cards" },
   { href: "/smart-swipe", label: "Smart Swipe" },
+  { href: "/stack-builder", label: "Stack Builder" },
   { href: "/gap-finder", label: "Gap Finder" },
   { href: "/swipe-check", label: "Swipe Check" },
   { href: "/compare", label: "Compare" },
