@@ -133,7 +133,7 @@ export default function HomeClient() {
       <section style={{ background: "linear-gradient(135deg,#0f172a,#1e293b,#0f172a)", position: "relative", overflow: "hidden", marginTop: 64 }}>
         <div style={{ position:"absolute",top:-120,right:-80,width:450,height:450,borderRadius:"50%",background:"radial-gradient(circle,rgba(99,102,241,0.1),transparent 70%)",filter:"blur(60px)",pointerEvents:"none" }}/>
         <div style={{ position:"absolute",bottom:-60,left:-40,width:300,height:300,borderRadius:"50%",background:"radial-gradient(circle,rgba(168,85,247,0.06),transparent 70%)",filter:"blur(50px)",pointerEvents:"none" }}/>
-        <div style={{ maxWidth:1060, margin:"0 auto", padding:"72px 24px 64px", display:"grid", gridTemplateColumns:"1.15fr 0.85fr", gap:48, alignItems:"center", position:"relative", zIndex:2 }}>
+        <div className="max-w-[1060px] mx-auto px-6 py-16 md:py-[72px] grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr] gap-10 md:gap-12 items-center relative z-[2]">
           <div style={{ transition:"all 0.7s", opacity:vis?1:0, transform:vis?"translateY(0)":"translateY(20px)" }}>
             <div style={{ display:"inline-flex", alignItems:"center", gap:6, background:"rgba(255,255,255,0.05)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:100, padding:"5px 14px", marginBottom:22, fontSize:11, fontWeight:700, color:"rgba(255,255,255,0.5)" }}>
               <span style={{ width:6,height:6,borderRadius:"50%",background:"#4ade80" }}/> Live tool — try it right now
@@ -162,7 +162,13 @@ export default function HomeClient() {
       <section style={{ background:"var(--bg-section-slate)", borderBottom:"1px solid var(--border-section-slate)", padding:"14px 24px" }}>
         <div style={{ maxWidth:900, margin:"0 auto", display:"flex", alignItems:"center", gap:16, overflow:"hidden" }}>
           <span className="text-[11px] font-extrabold uppercase tracking-wider flex-shrink-0" style={{color:"var(--text-faint)"}}>Quick answers</span>
-          <div style={{ display:"flex", gap:10, overflow:"hidden", flex:1 }}>
+          {/* Mobile: show only active pick */}
+          <div className="flex md:hidden items-center gap-2 flex-1 min-w-0">
+            <span className="text-xs font-bold truncate" style={{color:"var(--text)"}}>{QUICK_PICKS[quickIdx].q}</span>
+            <span className="text-xs font-semibold flex-shrink-0" style={{color:QUICK_PICKS[quickIdx].c}}>{QUICK_PICKS[quickIdx].a}</span>
+          </div>
+          {/* Desktop: show all */}
+          <div className="hidden md:flex" style={{ gap:10, overflow:"hidden", flex:1 }}>
             {QUICK_PICKS.map((q,i)=>(<div key={i} style={{ display:"flex", gap:8, alignItems:"center", padding:"6px 14px", borderRadius:8, flexShrink:0, cursor:"pointer", transition:"all 0.3s", background:i===quickIdx?`${q.c}08`:"transparent", border:i===quickIdx?`1.5px solid ${q.c}25`:"1px solid transparent" }}>
               <span className="text-xs font-bold" style={{color:i===quickIdx?"var(--text)":"var(--text-faint)"}}>{q.q}</span>
               <span className="text-xs font-semibold" style={{color:i===quickIdx?q.c:"var(--text-faint)"}}>{q.a}</span>
@@ -204,10 +210,10 @@ export default function HomeClient() {
               <div className="p-5" style={{background:"var(--bg-card)"}}>
                 <div className="flex gap-5 flex-wrap">
                   <div className="flex-shrink-0 rounded-xl flex items-center justify-center text-4xl" style={{width:88,height:56,background:`${c.color}0a`,border:`1.5px solid ${c.color}18`}}>{c.img}</div>
-                  <div className="flex-1" style={{minWidth:260}}>
+                  <div className="flex-1 min-w-0">
                     <h3 className="text-xl font-extrabold" style={{color:"var(--text)"}}>{c.name}</h3>
                     <p className="text-sm mt-0.5 mb-3" style={{color:"var(--text-muted)"}}>{c.bank}</p>
-                    <div className="grid gap-3 py-3 mb-3" style={{gridTemplateColumns:"repeat(5,1fr)",borderTop:"1px solid var(--border-light)",borderBottom:"1px solid var(--border-light)"}}>
+                    <div className="grid grid-cols-3 md:grid-cols-5 gap-3 py-3 mb-3" style={{borderTop:"1px solid var(--border-light)",borderBottom:"1px solid var(--border-light)"}}>
                       {[["Fee",c.fee,c.feeNote,false],["Best",c.rate,c.rateCat,true],["Base",c.base,null,false],["Lounge",c.lounge,null,false],["Cap",c.cap||"None",null,false]].map(([l,v,s,ig],j)=>(
                         <div key={j}><div className="text-[10px] font-semibold uppercase tracking-wider" style={{color:"var(--text-faint)"}}>{l}</div><div className="text-[15px] font-extrabold mt-0.5" style={{color:ig?"var(--green)":(l==="Cap"&&v!=="None"?"var(--orange)":"var(--text)")}}>{v}</div>{s&&<div className="text-[10px] mt-0.5" style={{color:ig?"var(--green)":"var(--text-faint)"}}>{s}</div>}</div>
                       ))}
@@ -231,7 +237,7 @@ export default function HomeClient() {
           <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-1.5" style={{color:"var(--text)"}}>Four free tools. Real math.</h2>
           <p className="text-sm" style={{color:"var(--text-muted)"}}>Each one answers a different credit card question.</p>
         </div>
-        <div className="grid gap-3.5" style={{gridTemplateColumns:"repeat(2, 1fr)"}}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
           {TOOLS.map((t,i)=>(
             <a key={i} href={t.href} style={{textDecoration:"none",color:"inherit"}}>
               <div className="rounded-2xl overflow-hidden transition-all cursor-pointer" style={{border:"1px solid var(--border)",boxShadow:"var(--shadow)",background:"var(--bg-card)"}}>
@@ -335,7 +341,7 @@ export default function HomeClient() {
 
       {/* ═══ 10. METHODOLOGY ═══ */}
       <section style={{ maxWidth:720, margin:"0 auto", padding:"40px 24px 56px" }}>
-        <div className="grid gap-6" style={{gridTemplateColumns:"1fr 1fr"}}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <h2 className="text-xl font-extrabold tracking-tight mb-3.5" style={{color:"var(--text)"}}>How we calculate</h2>
             <p className="text-sm leading-relaxed mb-2.5" style={{color:"var(--text-muted)"}}><strong style={{color:"var(--text)"}}>Formula:</strong> (Points × Value) ÷ Spend × 100 = Effective %</p>
