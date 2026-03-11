@@ -47,7 +47,7 @@ function EditorialCard({ card, rank, badgeLabel, badgeColor }) {
         <div className="p-5" style={{ background: "var(--bg-card)" }}>
           <div className="flex gap-5 flex-wrap">
             <div className="flex-shrink-0 rounded-xl flex items-center justify-center" style={{ width: 80, height: 52 }}>
-              <BankLogo bank={card.bank} size={48} rounded={12} fontSize={12} />
+              <BankLogo bank={card.bank} cardId={card.id} size={48} rounded={12} fontSize={12} />
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="text-lg sm:text-xl font-extrabold" style={{ color: "var(--text)" }}>{card.name}</h3>
@@ -100,7 +100,7 @@ function CardTile({ card }) {
         <div className="p-4">
           {/* Header */}
           <div className="flex items-center gap-3 mb-3">
-            <BankLogo bank={card.bank} size={40} rounded={10} fontSize={11} />
+            <BankLogo bank={card.bank} cardId={card.id} size={40} rounded={10} fontSize={11} />
             <div className="flex-1 min-w-0">
               <div className="text-sm font-bold truncate" style={{ color: "var(--text)" }}>{card.name}</div>
               <div className="text-[11px]" style={{ color: "var(--text-faint)" }}>{card.bank} · {card.fee === 0 ? "Free" : `₹${card.fee.toLocaleString()}/yr`}</div>
@@ -257,7 +257,7 @@ export default function CardCatalogClient({ winners, allCards, banks }) {
                     <div className="text-xs mb-3" style={{ color: "var(--text-muted)" }}>{cat.desc}</div>
                     {top && (
                       <div className="flex items-center gap-2 rounded-lg p-2" style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}>
-                        <BankLogo bank={top.bank} size={28} rounded={6} fontSize={8} />
+                        <BankLogo bank={top.bank} cardId={top.id} size={28} rounded={6} fontSize={8} />
                         <div className="flex-1 min-w-0">
                           <div className="text-xs font-bold truncate" style={{ color: "var(--text)" }}>{top.name}</div>
                           <div className="text-[10px]" style={{ color: "var(--text-faint)" }}>{top.fee === 0 ? "Free" : `₹${top.fee.toLocaleString()}`}</div>

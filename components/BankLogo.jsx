@@ -1,5 +1,8 @@
-// Bank logo component — styled initials with brand colors
-// Used across card tiles, detail pages, and homepage
+"use client";
+// Bank logo component — shows card image if available, falls back to styled initials
+// Images should be in /public/cards/[card-id].png
+
+import { useState } from "react";
 
 const BANK_STYLES = {
   "HDFC": { initials: "HDFC", bg: "#004b87", text: "#fff" },
@@ -16,24 +19,37 @@ const BANK_STYLES = {
   "RBL": { initials: "RBL", bg: "#e31837", text: "#fff" },
 };
 
-export default function BankLogo({ bank, size = 40, rounded = 12, fontSize = 11 }) {
+export default function BankLogo({ bank, cardId, size = 40, rounded = 12, fontSize = 11 }) {
+  const [imgError, setImgError] = useState(false);
   const style = BANK_STYLES[bank] || { initials: bank?.slice(0, 2) || "??", bg: "#6b7280", text: "#fff" };
+  const imgPath = cardId ? `/cards/${cardId}.png` : null;
 
+  // Try card image first, fall back to styled initials
+  if (imgPath && !imgError) {
+    return (
+      <div style={{
+        width: size, height: size, borderRadius: rounded, overflow: "hidden",
+        flexShrink: 0, background: "#f8f8fa",
+      }}>
+        <img
+          src={imgPath}
+          alt={bank}
+          onError={() => setImgError(true)}
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
+        />
+      </div>
+    );
+  }
+
+  // Fallback: styled initials
   return (
     <div style={{
-      width: size,
-      height: size,
-      borderRadius: rounded,
-      background: style.bg,
-      color: style.text,
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: fontSize,
-      fontWeight: 800,
+      width: size, height: size, borderRadius: rounded,
+      background: style.bg, color: style.text,
+      display: "flex", alignItems: "center", justifyContent: "center",
+      fontSize, fontWeight: 800,
       letterSpacing: style.initials.length > 3 ? "-0.05em" : "0.02em",
-      flexShrink: 0,
-      fontFamily: "system-ui, sans-serif",
+      flexShrink: 0, fontFamily: "system-ui, sans-serif",
     }}>
       {style.initials}
     </div>
