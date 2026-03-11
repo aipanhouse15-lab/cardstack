@@ -2,6 +2,7 @@ import { CARDS, CATEGORIES } from "@/data/cards";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ReportForm from "@/components/ReportForm";
+import BankLogo from "@/components/BankLogo";
 
 export async function generateStaticParams() {
   return CARDS.map(card => ({ id: card.id }));
@@ -94,7 +95,7 @@ export default function CardPage({ params }) {
       {/* Header */}
       <div className="rounded-2xl p-7 mb-8" style={{ background: `${card.color}12`, border: `1px solid ${card.color}20` }}>
         <div className="flex items-center gap-4 flex-wrap mb-5">
-          <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-4xl" style={{ background: `${card.color}18`, border: `1px solid ${card.color}25` }}>{card.img}</div>
+          <BankLogo bank={card.bank} size={64} rounded={16} fontSize={16} />
           <div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight" style={{ color: "var(--text)" }}>{card.name}</h1>
             <p className="text-sm mt-1" style={{ color: "var(--text-muted)" }}>{card.bank} · {card.type} · {card.network}</p>
