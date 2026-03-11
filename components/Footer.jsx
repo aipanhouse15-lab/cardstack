@@ -53,8 +53,13 @@ export default function Footer() {
           {/* Company */}
           <div>
             <div className="text-xs font-bold uppercase tracking-wider mb-4" style={{ color: "var(--text-faint)" }}>Company</div>
-            {["About", "How We Earn", "Editorial Policy", "Contact"].map(l => (
-              <span key={l} className={`${linkClass} cursor-pointer`} style={{ color: "var(--text-muted)" }}>{l}</span>
+            {[
+              { href: "/about", label: "About" },
+              { href: "/how-we-earn", label: "How We Earn" },
+              { href: "/editorial-policy", label: "Editorial Policy" },
+              { href: "/contact", label: "Contact" },
+            ].map(l => (
+              <Link key={l.href} href={l.href} className={linkClass} style={{ color: "var(--text-muted)" }}>{l.label}</Link>
             ))}
           </div>
         </div>

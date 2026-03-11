@@ -6,6 +6,7 @@ import { useTheme } from "./ThemeProvider";
 
 const NAV = [
   { href: "/", label: "Home" },
+  { href: "/cards", label: "All Cards" },
   { href: "/smart-swipe", label: "Smart Swipe" },
   { href: "/gap-finder", label: "Gap Finder" },
   { href: "/swipe-check", label: "Swipe Check" },
