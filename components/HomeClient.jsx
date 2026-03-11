@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { CARDS, CATEGORIES, calcReward } from "@/data/cards";
 
 /*
   FINAL HOMEPAGE — 12 sections
@@ -18,19 +19,11 @@ import { useState, useEffect } from "react";
 */
 
 // ─── DATA ───
-const DEMO_CARDS = [
-  { id: "amazon", name: "Amazon Pay ICICI", img: "📦", color: "#d97706", sel: true },
-  { id: "ace", name: "Axis ACE", img: "🎯", color: "#7c3aed", sel: true },
-  { id: "millennia", name: "HDFC Millennia", img: "✨", color: "#8b5cf6", sel: true },
-  { id: "regalia", name: "HDFC Regalia", img: "💳", color: "#1a3c6e", sel: false },
-  { id: "aulit", name: "AU LIT", img: "🔥", color: "#ea580c", sel: false },
-];
-const DEMO_RESULTS = [
-  { cat: "Dining", icon: "🍽️", card: "HDFC Millennia", rate: "5%", save: "₹250", cap: null },
-  { cat: "Online Shopping", icon: "🛒", card: "Amazon Pay ICICI", rate: "5%", save: "₹400", cap: null },
-  { cat: "Utilities", icon: "💡", card: "Axis ACE", rate: "5%→3.2%", save: "₹200", cap: "Cap hit: ₹500/mo. After ₹10K spend, drops to 1.5%" },
-  { cat: "Groceries", icon: "🥦", card: "Amazon Pay ICICI", rate: "1%", save: "₹60", cap: null },
-];
+// Hero demo uses real cards from database
+const HERO_CARD_IDS = ["amazon-icici", "axis-ace", "hdfc-millennia", "hdfc-regalia", "au-lit", "onecard"];
+const HERO_CARDS = HERO_CARD_IDS.map(id => CARDS.find(c => c.id === id)).filter(Boolean);
+const HERO_CATS = CATEGORIES.filter(c => ["dining", "online", "utilities", "groceries"].includes(c.id));
+const HERO_SPEND = { dining: 5000, online: 8000, utilities: 4000, groceries: 6000 };
 const AWARD_CARDS = [
   { badge: "Best Free All-Rounder 2026", name: "Axis ACE Credit Card", bank: "Axis Bank", img: "🎯", color: "#7c3aed", grad: "linear-gradient(135deg,#7c3aed,#6d28d9)", fee: "₹499/yr", feeNote: "Waived on ₹2L", rate: "5%", rateCat: "Bills via GPay", base: "1.5%", lounge: "4/yr", cap: "₹500/mo cap", verdict: "Unmatched 5% on utility bills via Google Pay. 4% back on Swiggy, Zomato, and Ola. Solid 1.5% base. ₹500/mo cap means pair with another card for heavy spend.", pros: ["5% bills via GPay","4% food delivery","4 lounge visits"], cons: ["₹500/mo total cap","Fuel excluded"], id: "axis-ace" },
   { badge: "Best for Amazon Shoppers 2026", name: "Amazon Pay ICICI Card", bank: "ICICI Bank", img: "📦", color: "#d97706", grad: "linear-gradient(135deg,#d97706,#b45309)", fee: "Lifetime Free", feeNote: "", rate: "5%", rateCat: "Amazon Prime", base: "1%", lounge: "None", cap: null, verdict: "5% with Prime, 3% without. Rewards as Amazon Pay balance — no points to convert. No fee, no cap, instant issuance. Only 1% outside Amazon.", pros: ["5% Amazon Prime","No fee ever","No cap"], cons: ["1% non-Amazon","Locked to Amazon Pay"], id: "amazon-icici" },
@@ -85,34 +78,93 @@ const TRUST_BAR = [["📊","Cap-aware math"],["🔒","Zero tracking"],["✅","11
 
 // ─── HERO DEMO ───
 function HeroDemoCard() {
+  const [selected, setSelected] = useState(["amazon-icici", "axis-ace", "hdfc-millennia"]);
   const [step, setStep] = useState(0);
   const bdr = "rgba(255,255,255,0.08)";
   const muted = "rgba(255,255,255,0.35)";
+
+  const toggle = (id) => setSelected(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
+
+  // Live calculate results from selected cards
+  const results = HERO_CATS.map(cat => {
+    let bestCard = null;
+    let bestResult = { cashback: 0, effectiveRate: 0, capped: false, capNote: null };
+    const spend = HERO_SPEND[cat.id] || 5000;
+    selected.forEach(cid => {
+      const card = CARDS.find(x => x.id === cid);
+      if (!card) return;
+      const result = calcReward(card, cat.id, spend);
+      if (result.cashback > bestResult.cashback) { bestCard = card; bestResult = result; }
+    });
+    return { cat, card: bestCard, result: bestResult };
+  });
+  const totalMonthly = results.reduce((s, r) => s + r.result.cashback, 0);
+  const baselineMonthly = Object.values(HERO_SPEND).reduce((s, v) => s + Math.round(v * 0.01), 0);
+  const annualSavings = (totalMonthly - baselineMonthly) * 12;
+
   return (
     <div style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${bdr}`, borderRadius: 16, overflow: "hidden", backdropFilter: "blur(12px)", boxShadow: "0 8px 40px rgba(0,0,0,0.3)" }}>
       <div style={{ background: "rgba(255,255,255,0.03)", borderBottom: "1px solid rgba(255,255,255,0.06)", padding: "10px 14px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <span style={{ fontSize: 12, fontWeight: 700, color: "#fff" }}>Smart Swipe Guide</span>
         <div style={{ display: "flex", gap: 2 }}>
-          {["Select","Results"].map((l,i)=>(<button key={l} onClick={()=>setStep(i)} style={{ background:step===i?"#fff":"transparent", color:step===i?"#111":muted, border:"none", borderRadius:6, padding:"4px 12px", fontSize:10, fontWeight:600, cursor:"pointer" }}>{l}</button>))}
+          {["Select", "Results"].map((l, i) => (
+            <button key={l} onClick={() => setStep(i)} style={{ background: step === i ? "#fff" : "transparent", color: step === i ? "#111" : muted, border: "none", borderRadius: 6, padding: "4px 12px", fontSize: 10, fontWeight: 600, cursor: "pointer" }}>{l}</button>
+          ))}
         </div>
       </div>
       <div style={{ padding: "14px" }}>
-        {step===0?(
+        {step === 0 ? (
           <div>
-            {DEMO_CARDS.map(c=>(<div key={c.id} style={{ display:"flex", alignItems:"center", gap:8, padding:"8px 10px", borderRadius:8, marginBottom:4, background:c.sel?`${c.color}18`:"transparent", border:c.sel?`1.5px solid ${c.color}40`:`1px solid ${bdr}` }}><span style={{fontSize:16}}>{c.img}</span><span style={{flex:1,fontSize:12,fontWeight:600,color:"#fff"}}>{c.name}</span>{c.sel&&<span style={{width:16,height:16,borderRadius:4,background:c.color,fontSize:9,color:"#fff",display:"flex",alignItems:"center",justifyContent:"center"}}>✓</span>}</div>))}
-            <button onClick={()=>setStep(1)} style={{ width:"100%", marginTop:8, background:"#fff", color:"#111", border:"none", borderRadius:8, padding:"10px", fontSize:12, fontWeight:700, cursor:"pointer" }}>Show Results →</button>
+            <div style={{ fontSize: 10, color: muted, marginBottom: 6 }}>Tap to select/deselect · {selected.length} selected</div>
+            {HERO_CARDS.map(c => {
+              const isSel = selected.includes(c.id);
+              return (
+                <div key={c.id} onClick={() => toggle(c.id)} style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 10px", borderRadius: 8, marginBottom: 4, cursor: "pointer", transition: "all 0.15s", background: isSel ? `${c.color}18` : "transparent", border: isSel ? `1.5px solid ${c.color}40` : `1px solid ${bdr}` }}>
+                  <span style={{ fontSize: 16 }}>{c.img}</span>
+                  <span style={{ flex: 1, fontSize: 12, fontWeight: 600, color: "#fff" }}>{c.name}</span>
+                  <span style={{ width: 18, height: 18, borderRadius: 5, fontSize: 9, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", background: isSel ? c.color : "rgba(255,255,255,0.1)", transition: "all 0.15s" }}>{isSel ? "✓" : ""}</span>
+                </div>
+              );
+            })}
+            <button onClick={() => { if (selected.length) setStep(1); }} style={{ width: "100%", marginTop: 8, background: selected.length ? "#fff" : "rgba(255,255,255,0.1)", color: selected.length ? "#111" : "rgba(255,255,255,0.3)", border: "none", borderRadius: 8, padding: "10px", fontSize: 12, fontWeight: 700, cursor: selected.length ? "pointer" : "default" }}>
+              {selected.length ? `Show Results (${selected.length} cards) →` : "Select at least 1 card"}
+            </button>
           </div>
-        ):(
+        ) : (
           <div>
-            {DEMO_RESULTS.map((r,i)=>(<div key={i} style={{ padding:"10px", borderRadius:8, marginBottom:4, border:r.cap?`1px solid rgba(251,191,36,0.2)`:`1px solid ${bdr}`, background:r.cap?"rgba(251,191,36,0.06)":"transparent" }}><div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}><div style={{display:"flex",alignItems:"center",gap:6}}><span style={{fontSize:16}}>{r.icon}</span><div><div style={{fontSize:12,fontWeight:700,color:"#fff"}}>{r.cat}</div><div style={{fontSize:10,color:muted}}>{r.card}</div></div></div><span style={{fontSize:16,fontWeight:800,color:"#4ade80"}}>{r.rate}</span></div>{r.cap&&<div style={{marginTop:6,fontSize:10,color:"#fbbf24",padding:"4px 6px",background:"rgba(251,191,36,0.06)",borderRadius:4,lineHeight:1.4}}>⚡ {r.cap}</div>}</div>))}
-            <div style={{ marginTop:10, padding:"12px", border:"1.5px solid rgba(255,255,255,0.15)", borderRadius:8, textAlign:"center" }}>
-              <div style={{ fontSize:10, color:muted, textTransform:"uppercase", letterSpacing:"0.06em" }}>Annual savings</div>
-              <div style={{ fontSize:22, fontWeight:800, color:"#fff" }}>₹10,920</div>
-              <div style={{ fontSize:10, color:"#4ade80" }}>After cashback caps applied</div>
-            </div>
+            {selected.length === 0 ? (
+              <div style={{ textAlign: "center", padding: "20px 0", color: muted, fontSize: 12 }}>Select cards first</div>
+            ) : (<>
+              <div style={{ fontSize: 10, color: muted, marginBottom: 6 }}>Best card per category · Live calculation</div>
+              {results.map((r, i) => {
+                if (!r.card) return <div key={i} style={{ padding: "10px", borderRadius: 8, marginBottom: 4, border: `1px solid ${bdr}`, display: "flex", alignItems: "center", gap: 6 }}><span style={{ fontSize: 16 }}>{r.cat.icon}</span><span style={{ fontSize: 12, color: muted }}>{r.cat.label} — no match</span></div>;
+                return (
+                  <div key={i} style={{ padding: "10px", borderRadius: 8, marginBottom: 4, border: r.result.capped ? "1px solid rgba(251,191,36,0.2)" : `1px solid ${bdr}`, background: r.result.capped ? "rgba(251,191,36,0.06)" : "transparent" }}>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                        <span style={{ fontSize: 16 }}>{r.cat.icon}</span>
+                        <div><div style={{ fontSize: 12, fontWeight: 700, color: "#fff" }}>{r.cat.label}</div><div style={{ fontSize: 10, color: muted }}>{r.card.name}</div></div>
+                      </div>
+                      <div style={{ textAlign: "right" }}>
+                        <div style={{ fontSize: 16, fontWeight: 800, color: "#4ade80" }}>{r.result.effectiveRate}%</div>
+                        <div style={{ fontSize: 9, color: muted }}>₹{r.result.cashback}/mo</div>
+                      </div>
+                    </div>
+                    {r.result.capped && <div style={{ marginTop: 6, fontSize: 10, color: "#fbbf24", padding: "4px 6px", background: "rgba(251,191,36,0.06)", borderRadius: 4, lineHeight: 1.4 }}>⚡ {r.result.capNote}</div>}
+                  </div>
+                );
+              })}
+              <div style={{ marginTop: 10, padding: "12px", border: "1.5px solid rgba(255,255,255,0.15)", borderRadius: 8, textAlign: "center" }}>
+                <div style={{ fontSize: 10, color: muted, textTransform: "uppercase", letterSpacing: "0.06em" }}>Extra savings vs 1% card</div>
+                <div style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>₹{annualSavings.toLocaleString()}/yr</div>
+                <div style={{ fontSize: 10, color: "#4ade80" }}>Cap-aware · {selected.length} cards</div>
+              </div>
+            </>)}
+            <button onClick={() => setStep(0)} style={{ width: "100%", marginTop: 8, background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.5)", border: `1px solid ${bdr}`, borderRadius: 8, padding: "8px", fontSize: 11, fontWeight: 600, cursor: "pointer" }}>← Change cards</button>
           </div>
         )}
       </div>
+      <a href="/smart-swipe" style={{ display: "block", textAlign: "center", padding: "10px", fontSize: 11, fontWeight: 600, color: "#818cf8", textDecoration: "none", borderTop: "1px solid rgba(255,255,255,0.06)", background: "rgba(255,255,255,0.02)" }}>Try full tool with all 25 cards + custom spending →</a>
     </div>
   );
 }
