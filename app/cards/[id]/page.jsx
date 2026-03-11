@@ -149,6 +149,17 @@ export default function CardPage({ params }) {
         </div>
       )}
 
+      {/* Redemption Note */}
+      {card.redemptionNote && (
+        <div className="mb-6 rounded-xl p-4 flex items-start gap-3" style={{ background: "var(--blue-bg)", border: "1px solid var(--blue-border)" }}>
+          <span className="text-lg flex-shrink-0 mt-0.5">💡</span>
+          <div>
+            <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "var(--blue)" }}>Redemption matters</div>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{card.redemptionNote}</p>
+          </div>
+        </div>
+      )}
+
       {/* Partner / SmartBuy Rates */}
       {card.partnerRates && card.partnerRates.length > 0 && (
         <div className="mb-8">

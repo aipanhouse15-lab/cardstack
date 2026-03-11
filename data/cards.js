@@ -18,6 +18,8 @@ export const CARDS = [
     highlights: ["12 domestic + 6 intl lounge/yr", "Up to 10x on SmartBuy", "5x on select partners", "Fee waiver on ₹4L spend"],
     pros: ["Excellent lounge access (18/yr total)", "SmartBuy gives up to 13% on travel", "Partner brands 5x rewards"],
     cons: ["Base rate only 1.33%", "Fuel excluded from rewards", "₹2,500 + GST fee"],
+    
+    redemptionNote: "Rate shown (1.33%) assumes cashback at ₹0.20/point. Travel redemption via SmartBuy = ₹0.50/point (3.33% base). SmartBuy flights/hotels can reach 13.33%.",
     network: "Visa/MC", lounge: "18/year" },
 
   { id: "hdfc-infinia", name: "HDFC Infinia", bank: "HDFC", img: "💎", color: "#1a1a2e", fee: 12500, feeWaiver: "None", type: "Super Premium", verified: true,
@@ -29,6 +31,8 @@ export const CARDS = [
     highlights: ["Unlimited lounge worldwide", "24/7 concierge", "10x on SmartBuy", "Golf 100+ courses"],
     pros: ["Best all-round rate (3.33%)", "Unlimited lounge", "SmartBuy up to 33% on travel"],
     cons: ["₹12,500 fee", "Invite-only", "Fuel excluded"],
+    
+    redemptionNote: "Rate shown (3.33%) assumes travel redemption at ₹1/point. Cashback is only ₹0.20/point (0.66%). Always redeem via SmartBuy for max value.",
     network: "Visa", lounge: "Unlimited" },
 
   { id: "hdfc-millennia", name: "HDFC Millennia", bank: "HDFC", img: "✨", color: "#7c3aed", fee: 1000, feeWaiver: "₹1L annual spend", type: "Lifestyle", verified: true,
@@ -56,6 +60,8 @@ export const CARDS = [
     highlights: ["Unlimited domestic + intl lounge", "Amazon Prime/Swiggy One/MMT Black", "10x SmartBuy", "Fee waiver ₹5L"],
     pros: ["3.33% on everything", "Unlimited lounge access", "Free memberships (Prime, Swiggy One, MMT)"],
     cons: ["Diners Club acceptance limited in India", "₹10K + GST fee", "Fuel excluded"],
+    
+    redemptionNote: "Rate shown (3.33%) assumes travel redemption at ₹1/point via SmartBuy. Cashback value is ₹0.50/point (1.66%). SmartBuy bookings can reach 33%.",
     network: "Diners Club", lounge: "Unlimited" },
 
   { id: "hdfc-swiggy", name: "HDFC Swiggy Card", bank: "HDFC", img: "🍕", color: "#fc8019", fee: 500, feeWaiver: "₹2L annual spend", type: "Entry", verified: true,
@@ -84,8 +90,8 @@ export const CARDS = [
 
   { id: "sbi-cashback", name: "SBI Cashback Card", bank: "SBI", img: "💰", color: "#0369a1", fee: 999, feeWaiver: "₹2L annual spend", type: "Cashback", verified: true,
     rewards: { dining: 1, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 0, entertainment: 1, shopping: 1, default: 1 },
-    caps: { monthlyCashback: 5000, capRate: 5, fallbackRate: 1, capAppliesTo: ["online"] },
-    // Cap math: ₹5000/statement cycle at 5% = max beneficial online spend ₹1,00,000/cycle. After that, drops to 1%.
+    caps: { monthlyCashback: 5000, capRate: 5, fallbackRate: 0, capAppliesTo: ["online"] },
+    // Cap math: ₹5000/statement cycle at 5% = max beneficial online spend ₹1,00,000/cycle. After cap, no more cashback earned.
     partnerRates: [],
     pointsInfo: "5% online, 1% offline · Direct cashback (no points) · ₹5K cap/cycle · Fuel surcharge waiver ₹500-₹3K",
     highlights: ["5% online cashback", "Auto-credited to statement", "Fee waiver ₹2L spend", "No point conversion needed"],
@@ -112,6 +118,8 @@ export const CARDS = [
     highlights: ["Movie BOGO BookMyShow", "2.5% dining/grocery", "14 lounge visits/yr", "Milestone rewards"],
     pros: ["2.5% on dining/grocery/dept stores", "Movie BOGO excellent value", "14 lounge visits"],
     cons: ["₹4,999 fee (waiver needs ₹10L)", "Only 1% on other spends", "High fee waiver threshold"],
+    
+    redemptionNote: "Point value ₹0.50 (higher than most SBI cards). Real value is BookMyShow BOGO (2 tickets/month) — worth ₹300-600/mo for regular moviegoers.",
     network: "Visa/MC/Amex", lounge: "14/year" },
 
   { id: "amazon-icici", name: "Amazon Pay ICICI", bank: "ICICI", img: "📦", color: "#d97706", fee: 0, feeWaiver: "Lifetime free", type: "Cashback", verified: true,
@@ -159,6 +167,8 @@ export const CARDS = [
     highlights: ["Unlimited lounge worldwide (Priority Pass)", "24/7 concierge", "2% international", "Visa Infinite perks"],
     pros: ["Unlimited global lounge", "2% on international", "Concierge service"],
     cons: ["₹12K + GST fee", "Only 1% domestic", "Fee waiver needs ₹15L spend"],
+    
+    redemptionNote: "Domestic 1% at ₹0.25/point. International earns 8pts/₹100 = 2%. Frequent international travelers get significantly higher effective rates.",
     network: "Visa Infinite/Amex", lounge: "Unlimited" },
 
   { id: "axis-flipkart", name: "Axis Flipkart", bank: "Axis", img: "🛍️", color: "#2563eb", fee: 500, feeWaiver: "₹3.5L annual spend", type: "Cashback", verified: true,
@@ -177,16 +187,16 @@ export const CARDS = [
 
   { id: "axis-ace", name: "Axis ACE", bank: "Axis", img: "🎯", color: "#7c3aed", fee: 499, feeWaiver: "₹2L annual spend", type: "Cashback", verified: true,
     rewards: { dining: 4, travel: 1.5, online: 1.5, groceries: 1.5, fuel: 0, utilities: 5, entertainment: 1.5, shopping: 1.5, default: 1.5 },
-    caps: { monthlyCashback: 500, capRate: 5, fallbackRate: 1.5, capAppliesTo: ["utilities", "dining"] },
-    // Cap math: ₹500/mo total cap. At 5% utilities, max = ₹10,000. At 4% dining, max = ₹12,500. Combined cap across all categories.
+    caps: { monthlyCashback: 500, capRate: 5, fallbackRate: 0, capAppliesTo: ["utilities", "dining"] },
+    // Cap math: ₹500/mo COMBINED cap on accelerated only (5% utilities + 4% food). After cap, accelerated → 0%. Base 1.5% is UNCAPPED.
     partnerRates: [
       { name: "Bill payments via Google Pay", rate: "5%" },
       { name: "Swiggy, Zomato, Ola", rate: "4%" },
     ],
-    pointsInfo: "5% bills (GPay), 4% Swiggy/Zomato/Ola, 1.5% all other · ₹500/mo cap",
-    highlights: ["5% on bills via GPay", "4% Swiggy/Zomato", "4 lounge visits/yr", "₹500/mo cashback cap"],
-    pros: ["5% on utility bills is rare", "4% on food delivery", "Lounge access at low fee"],
-    cons: ["₹500/month cashback cap", "₹499 fee (waivable)", "Fuel excluded"],
+    pointsInfo: "5% bills (GPay), 4% Swiggy/Zomato/Ola, 1.5% all other · ₹500/mo cap on 5%+4% only · 1.5% base uncapped",
+    highlights: ["5% on bills via GPay", "4% Swiggy/Zomato", "4 lounge visits/yr", "₹500/mo cap on accelerated only"],
+    pros: ["5% on utility bills (rare)", "4% on food delivery", "1.5% base is uncapped", "Lounge access at low fee"],
+    cons: ["₹500/mo cap on 5%+4% categories", "After cap, accelerated → 0%", "Fuel excluded"],
     network: "Visa", lounge: "4/year" },
 
   { id: "axis-atlas", name: "Axis Atlas", bank: "Axis", img: "🌍", color: "#0f766e", fee: 5000, feeWaiver: "₹10L annual spend", type: "Travel", verified: true,
@@ -199,6 +209,8 @@ export const CARDS = [
     highlights: ["5% on travel", "18 lounge visits/yr", "Airline mile transfers", "Fee waiver ₹10L"],
     pros: ["Best Indian travel rewards card", "Airline mile transfers (6 partners)", "2% on non-travel"],
     cons: ["₹5K fee", "~3.5% forex markup (no zero forex)", "Fuel excluded"],
+    
+    redemptionNote: "1 EDGE Mile ≈ ₹1 (typical). Actual value varies ₹0.80–₹1.50 by airline partner and route. Best value on premium cabin redemptions.",
     network: "Visa Infinite", lounge: "18/year" },
 
 
@@ -211,6 +223,8 @@ export const CARDS = [
     highlights: ["Lifetime free", "Customizable reward categories", "Up to 5% on your picks", "Fuel surcharge waiver"],
     pros: ["Choose your own reward categories", "Lifetime free", "Up to 5% on selected"],
     cons: ["Need to actively select feature packs", "1% base on non-selected", "10K points cap/cycle"],
+    
+    redemptionNote: "Rates depend on Feature Pack selection. Pick 2-3 categories for up to 5%. Without packs, base is ~1%. Change packs monthly via AU app.",
     network: "Visa/RuPay", lounge: "Add-on" },
 
   { id: "au-zenith", name: "AU Zenith+", bank: "AU Bank", img: "⚜️", color: "#b45309", fee: 4999, feeWaiver: "₹8L annual spend", type: "Premium", verified: true,
@@ -247,6 +261,8 @@ export const CARDS = [
     highlights: ["Lifetime free", "5% birthday month", "Airport + railway lounge", "Points never expire"],
     pros: ["Free card with lounge access", "5% on birthday month", "2.5% on spends above ₹20K"],
     cons: ["Low base rate (0.5%)", "Fuel excluded", "No zero forex"],
+    
+    redemptionNote: "Base rate (0.5%) is for normal spends. Jumps to 2.5% above ₹20K/mo and 5% in birthday month. UPI earns 1%. Effective rate depends on spending pattern.",
     network: "Visa", lounge: "4/year" },
 
   { id: "onecard", name: "OneCard", bank: "OneCard", img: "⚡", color: "#18181b", fee: 0, feeWaiver: "Lifetime free", type: "Lifestyle", verified: true,
@@ -258,6 +274,8 @@ export const CARDS = [
     highlights: ["Metal card", "5x on top 2 categories", "Lifetime free", "Points never expire"],
     pros: ["Metal card (premium feel)", "Auto-optimizes for your spending", "Free forever"],
     cons: ["Effective rate only ~1% even at 5x", "0.2% on non-top categories", "No lounge"],
+    
+    redemptionNote: "Top 2 spending categories auto-detected monthly at 5x (~1%). Other categories 1x (~0.2%). Algorithm picks based on actual spend — not manually selectable.",
     network: "Visa/MC", lounge: "None" },
 
   { id: "bob-eterna", name: "BOB Eterna", bank: "BOB", img: "🏛️", color: "#1e40af", fee: 2499, feeWaiver: "₹2.5L annual spend", type: "Premium", verified: true,
@@ -376,7 +394,7 @@ export function calcReward(card, categoryId, monthlySpend) {
         cashback: Math.round(totalCashback),
         effectiveRate,
         capped: true,
-        capNote: `${baseRate}% up to ₹${Math.round(maxBeneficialSpend).toLocaleString()}/mo, then ${fallback}%. Cap: ₹${caps.monthlyCashback}/mo`,
+        capNote: `${baseRate}% up to ₹${Math.round(maxBeneficialSpend).toLocaleString()}/mo, then ${fallback}%${fallback === 0 ? " (no cashback)" : ""}. Cap: ₹${caps.monthlyCashback}/mo on accelerated categories`,
       };
     }
 
