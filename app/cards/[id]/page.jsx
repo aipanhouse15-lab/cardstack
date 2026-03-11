@@ -1,6 +1,7 @@
 import { CARDS, CATEGORIES } from "@/data/cards";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import ReportForm from "@/components/ReportForm";
 
 export async function generateStaticParams() {
   return CARDS.map(card => ({ id: card.id }));
@@ -221,6 +222,9 @@ export default function CardPage({ params }) {
         Check {card.name} on bank website →
       </button>
       <p className="text-[11px] text-center mt-2" style={{ color: "var(--text-faint)" }}>Affiliate links coming soon</p>
+
+      {/* Report an update */}
+      <ReportForm cardName={card.name} cardId={card.id} />
 
       {/* Compare CTA */}
       <div className="mt-8 rounded-xl p-5 text-center" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)" }}>
