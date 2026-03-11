@@ -130,7 +130,7 @@ export default function HomeClient() {
   return (
     <div>
       {/* ═══ 1. DARK HERO + DEMO ═══ */}
-      <section style={{ background: "linear-gradient(135deg,#0f172a,#1e293b,#0f172a)", position: "relative", overflow: "hidden" }}>
+      <section style={{ background: "linear-gradient(135deg,#0f172a,#1e293b,#0f172a)", position: "relative", overflow: "hidden", marginTop: 64 }}>
         <div style={{ position:"absolute",top:-120,right:-80,width:450,height:450,borderRadius:"50%",background:"radial-gradient(circle,rgba(99,102,241,0.1),transparent 70%)",filter:"blur(60px)",pointerEvents:"none" }}/>
         <div style={{ position:"absolute",bottom:-60,left:-40,width:300,height:300,borderRadius:"50%",background:"radial-gradient(circle,rgba(168,85,247,0.06),transparent 70%)",filter:"blur(50px)",pointerEvents:"none" }}/>
         <div style={{ maxWidth:1060, margin:"0 auto", padding:"72px 24px 64px", display:"grid", gridTemplateColumns:"1.15fr 0.85fr", gap:48, alignItems:"center", position:"relative", zIndex:2 }}>
