@@ -85,7 +85,7 @@ const TRUST_BAR = [["📊","Cap-aware math"],["🔒","Zero tracking"],["✅","11
 
 // ─── HERO DEMO ───
 function HeroDemoCard() {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
   const bdr = "rgba(255,255,255,0.08)";
   const muted = "rgba(255,255,255,0.35)";
   return (
@@ -158,22 +158,20 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* ═══ 2. QUICK ANSWERS TICKER ═══ */}
-      <section style={{ background:"var(--bg-section-slate)", borderBottom:"1px solid var(--border-section-slate)", padding:"14px 24px" }}>
-        <div style={{ maxWidth:900, margin:"0 auto", display:"flex", alignItems:"center", gap:16, overflow:"hidden" }}>
-          <span className="text-[11px] font-extrabold uppercase tracking-wider flex-shrink-0" style={{color:"var(--text-faint)"}}>Quick answers</span>
-          {/* Mobile: show only active pick */}
-          <div className="flex md:hidden items-center gap-2 flex-1 min-w-0">
-            <span className="text-xs font-bold truncate" style={{color:"var(--text)"}}>{QUICK_PICKS[quickIdx].q}</span>
-            <span className="text-xs font-semibold flex-shrink-0" style={{color:QUICK_PICKS[quickIdx].c}}>{QUICK_PICKS[quickIdx].a}</span>
-          </div>
-          {/* Desktop: show all */}
-          <div className="hidden md:flex" style={{ gap:10, overflow:"hidden", flex:1 }}>
-            {QUICK_PICKS.map((q,i)=>(<div key={i} style={{ display:"flex", gap:8, alignItems:"center", padding:"6px 14px", borderRadius:8, flexShrink:0, cursor:"pointer", transition:"all 0.3s", background:i===quickIdx?`${q.c}08`:"transparent", border:i===quickIdx?`1.5px solid ${q.c}25`:"1px solid transparent" }}>
-              <span className="text-xs font-bold" style={{color:i===quickIdx?"var(--text)":"var(--text-faint)"}}>{q.q}</span>
-              <span className="text-xs font-semibold" style={{color:i===quickIdx?q.c:"var(--text-faint)"}}>{q.a}</span>
-            </div>))}
-          </div>
+      {/* ═══ 2. QUICK ANSWERS MARQUEE ═══ */}
+      <section style={{ background:"var(--bg-section-slate)", borderBottom:"1px solid var(--border-section-slate)", padding:"12px 0", overflow:"hidden" }}>
+        <style>{`
+          @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+          .marquee-track { display: flex; gap: 8px; animation: marquee 25s linear infinite; width: max-content; }
+          .marquee-track:hover { animation-play-state: paused; }
+        `}</style>
+        <div className="marquee-track">
+          {[...QUICK_PICKS, ...QUICK_PICKS].map((q, i) => (
+            <div key={i} style={{ display:"flex", gap:8, alignItems:"center", padding:"6px 16px", borderRadius:8, background:`${q.c}06`, border:`1px solid ${q.c}15`, flexShrink:0, cursor:"pointer" }}>
+              <span className="text-xs font-bold" style={{color:"var(--text)"}}>{q.q}</span>
+              <span className="text-xs font-semibold" style={{color:q.c}}>{q.a}</span>
+            </div>
+          ))}
         </div>
       </section>
 
