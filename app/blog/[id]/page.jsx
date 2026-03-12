@@ -25,8 +25,8 @@ export default function BlogPostPage({ params }) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    author: { "@type": "Organization", name: "CardStack" },
-    publisher: { "@type": "Organization", name: "CardStack" },
+    author: { "@type": "Organization", name: "Assure Fintech" },
+    publisher: { "@type": "Organization", name: "Assure Fintech" },
     articleSection: post.category,
   };
 

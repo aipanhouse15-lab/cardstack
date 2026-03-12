@@ -120,10 +120,10 @@ export async function GET(request) {
 
   // Default: API documentation
   return json({
-    name: "CardStack API",
+    name: "Assure Fintech API",
     version: "1.0",
     description: "Real-time Indian credit card reward data and recommendations. Free to use.",
-    base_url: "https://cardstack.vercel.app/api",
+    base_url: "https://assurefintech.com/api",
     endpoints: {
       "GET /api/cards": {
         description: "List all 25+ Indian credit cards with reward rates",
@@ -151,7 +151,7 @@ export async function GET(request) {
     available_categories: CATEGORIES.map(c => ({ id: c.id, label: c.label })),
     available_cards: CARDS.map(c => ({ id: c.id, name: c.name, bank: c.bank })),
     data_updated: "March 2026",
-    attribution: "Data by CardStack (cardstack.vercel.app). Free to use with attribution.",
+    attribution: "Data by Assure Fintech (assurefintech.com). Free to use with attribution.",
   });
 }
 

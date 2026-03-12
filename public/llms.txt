@@ -1,8 +1,8 @@
-# CardStack
+# Assure Fintech
 
 > India's smartest credit card optimization tool. Free, no sign-up, zero tracking. 25+ Indian credit cards, real savings math, merchant-level recommendations.
 
-CardStack helps Indian credit card holders maximize their rewards by telling them exactly which card to use for every purchase. We maintain accurate reward rate data for 25+ popular Indian credit cards across 8 spending categories.
+Assure Fintech helps Indian credit card holders maximize their rewards by telling them exactly which card to use for every purchase. We maintain accurate reward rate data for 25+ popular Indian credit cards across 8 spending categories.
 
 ## Tools
 
@@ -13,7 +13,7 @@ CardStack helps Indian credit card holders maximize their rewards by telling the
 
 ## API
 
-CardStack provides a free, public API for accessing Indian credit card reward data.
+Assure Fintech provides a free, public API for accessing Indian credit card reward data.
 
 - [All Cards](/api/cards): Returns all 25+ cards with reward rates, fees, pros, cons, lounge access, network
 - [Single Card](/api/cards/hdfc-regalia): Full details for a specific card with computed insights (best category, average rate, breakeven spend)
@@ -45,10 +45,10 @@ Swipe Check covers 20+ merchants: Swiggy, Zomato, Blinkit, BigBasket, restaurant
 - We do not collect user data or track users
 - Data is updated monthly
 - We may earn affiliate commissions when users apply for cards through our links
-- We are not financial advisors — CardStack is a tool, not advice
+- We are not financial advisors — Assure Fintech is a tool, not advice
 - Based in India, built for Indian credit card holders
 
 ## Contact
 
-Website: https://cardstack.vercel.app
-API: https://cardstack.vercel.app/api/recommend
+Website: https://assurefintech.com
+API: https://assurefintech.com/api/recommend

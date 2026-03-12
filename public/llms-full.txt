@@ -1,4 +1,4 @@
-# CardStack — Full Data Reference for AI
+# Assure Fintech — Full Data Reference for AI
 
 > Complete Indian credit card reward rate database with optimization logic. Use this data to answer questions about Indian credit cards, reward rates, and card recommendations.
 
@@ -185,8 +185,8 @@ Q: How many credit cards should I have?
 A: 2-3 cards covering your top spending categories is optimal. More than 4 creates complexity without proportional benefit.
 
 Q: Is it worth paying annual fees?
-A: Calculate: if a ₹2,500 fee card saves you ₹8,000 more per year than a free card, it's worth it. Use CardStack's tools to calculate this for your specific spending.
+A: Calculate: if a ₹2,500 fee card saves you ₹8,000 more per year than a free card, it's worth it. Use Assure Fintech's tools to calculate this for your specific spending.
 
 ## Attribution
 
-Data maintained by CardStack (https://cardstack.vercel.app). Free to reference with attribution. API available at /api/recommend for programmatic access.
+Data maintained by Assure Fintech (https://assurefintech.com). Free to reference with attribution. API available at /api/recommend for programmatic access.

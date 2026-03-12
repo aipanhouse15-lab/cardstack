@@ -313,7 +313,7 @@ export default function HomeClient() {
         <div style={{ maxWidth:900, margin:"0 auto" }}>
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-sm font-medium" style={{background:"var(--green-bg)",border:"1px solid var(--green-border)",color:"var(--green)"}}>🛡️ Trust</div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight" style={{color:"var(--text)"}}>Why people trust CardStack</h2>
+            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight" style={{color:"var(--text)"}}>Why people trust Assure Fintech</h2>
           </div>
           <div className="grid gap-3" style={{gridTemplateColumns:"repeat(auto-fit, minmax(220px, 1fr))"}}>
             {TRUST_CARDS.map((t,i)=>(

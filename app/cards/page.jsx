@@ -3,7 +3,7 @@ import Link from "next/link";
 import CardCatalogClient from "./CardCatalogClient";
 
 export const metadata = {
-  title: "Best Credit Cards in India 2026 — Compare 25+ Cards | CardStack",
+  title: "Best Credit Cards in India 2026 — Compare 25+ Cards | Assure Fintech",
   description: "Browse and compare 25+ Indian credit cards by category. Best free cards, best cashback, best for dining, travel, fuel, and more. Real cashback rates after caps.",
 };
 
@@ -61,7 +61,7 @@ export default function CardsPage() {
           "@type": "FinancialProduct",
           name: c.name,
           provider: { "@type": "Organization", name: c.bank },
-          url: `https://cardstack-mocha.vercel.app/cards/${c.id}`,
+          url: `https://assurefintech.com/cards/${c.id}`,
         },
       })),
     },

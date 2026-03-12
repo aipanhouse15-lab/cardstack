@@ -41,8 +41,8 @@ export default function Navbar() {
       <div className="max-w-[1200px] mx-auto flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 no-underline">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-sm font-extrabold">C</div>
-          <span className="text-lg font-bold tracking-tight" style={{ color: "var(--text)" }}>CardStack</span>
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-[10px] font-extrabold">AF</div>
+          <span className="text-lg font-bold tracking-tight" style={{ color: "var(--text)" }}>Assure Fintech</span>
         </Link>
 
         {/* Desktop Nav */}

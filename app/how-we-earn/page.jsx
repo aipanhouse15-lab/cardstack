@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How We Earn Money — CardStack Transparency",
-  description: "CardStack is free for users. Here's exactly how we plan to make money — with full transparency about affiliate links and future revenue.",
+  title: "How We Earn Money — Assure Fintech Transparency",
+  description: "Assure Fintech is free for users. Here's exactly how we plan to make money — with full transparency about affiliate links and future revenue.",
 };
 
 export default function HowWeEarnPage() {
@@ -17,7 +17,7 @@ export default function HowWeEarnPage() {
 
       <div className="flex flex-col gap-6 text-base leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>
-          CardStack is <strong style={{ color: "var(--text)" }}>100% free</strong> for users. All tools, all card data, all comparisons — free. No sign-up required. No premium tier. No hidden costs.
+          Assure Fintech is <strong style={{ color: "var(--text)" }}>100% free</strong> for users. All tools, all card data, all comparisons — free. No sign-up required. No premium tier. No hidden costs.
         </p>
         <p>
           So how do we plan to sustain this? Here's the honest answer.
@@ -26,7 +26,7 @@ export default function HowWeEarnPage() {
         <div className="rounded-2xl p-6" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
           <h2 className="text-lg font-extrabold mb-4" style={{ color: "var(--text)" }}>Current status: We earn ₹0</h2>
           <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-            As of March 2026, CardStack has no revenue. We haven't activated any affiliate links yet. The site is bootstrapped and runs on a free Vercel hosting plan. This is intentional — we're focused on building trust and accurate data before monetizing.
+            As of March 2026, Assure Fintech has no revenue. We haven't activated any affiliate links yet. The site is bootstrapped and runs on a free Vercel hosting plan. This is intentional — we're focused on building trust and accurate data before monetizing.
           </p>
         </div>
 

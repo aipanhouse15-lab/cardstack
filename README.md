@@ -1,4 +1,4 @@
-# CardStack — India's Smartest Credit Card Tool
+# Assure Fintech — India's Smartest Credit Card Tool
 
 ## What is this?
 A multi-page Next.js website that helps Indians maximize their credit card rewards. 4 tools, 25 cards, real savings math, zero tracking.
@@ -7,7 +7,7 @@ A multi-page Next.js website that helps Indians maximize their credit card rewar
 ```
 cardstack/
 ├── app/                    # Pages (each folder = a URL)
-│   ├── page.jsx            # Homepage (cardstack.in/)
+│   ├── page.jsx            # Homepage (assurefintech.com/)
 │   ├── layout.jsx          # Shared layout (nav + footer)
 │   ├── globals.css          # Global styles
 │   ├── smart-swipe/        # /smart-swipe
@@ -40,17 +40,17 @@ cardstack/
 2. Go to vercel.com → Sign up with GitHub (free)
 
 ### Step 2: Upload to GitHub
-1. Create a new repository called "cardstack"
+1. Create a new repository called "assurefintech"
 2. Upload all project files
 
 ### Step 3: Deploy on Vercel
 1. Go to vercel.com/new
-2. Import your "cardstack" repository
+2. Import your "assurefintech" repository
 3. Click "Deploy"
-4. Your site is live at cardstack.vercel.app!
+4. Your site is live at assurefintech.com!
 
 ### Step 4: Custom Domain (optional)
-1. Buy a domain (cardstack.in, ~₹500/year)
+1. Buy a domain (assurefintech.com, ~₹500/year)
 2. In Vercel → Settings → Domains → Add your domain
 3. Update DNS at your registrar (Vercel shows you how)
 

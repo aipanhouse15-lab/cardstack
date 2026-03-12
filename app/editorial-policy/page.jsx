@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Editorial Policy — How We Review Cards | CardStack",
+  title: "Editorial Policy — How We Review Cards | Assure Fintech",
   description: "Our methodology for calculating effective cashback rates, verifying card data, handling caps, and ranking credit cards. Full transparency.",
 };
 
@@ -17,7 +17,7 @@ export default function EditorialPolicyPage() {
 
       <div className="flex flex-col gap-6 text-base leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>
-          Every number on CardStack is calculated, not copied. This page explains exactly how we review cards, calculate rates, and make ranking decisions.
+          Every number on Assure Fintech is calculated, not copied. This page explains exactly how we review cards, calculate rates, and make ranking decisions.
         </p>
 
         {/* Methodology */}

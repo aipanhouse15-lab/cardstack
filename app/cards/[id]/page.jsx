@@ -60,7 +60,7 @@ export default function CardPage({ params }) {
     "@context": "https://schema.org",
     "@type": "Review",
     itemReviewed: { "@type": "FinancialProduct", name: card.name },
-    author: { "@type": "Organization", name: "CardStack" },
+    author: { "@type": "Organization", name: "Assure Fintech" },
     reviewBody: `${card.name} review: ${card.pros.join(". ")}. Downsides: ${card.cons.join(". ")}.`,
     positiveNotes: { "@type": "ItemList", itemListElement: card.pros.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p })) },
     negativeNotes: { "@type": "ItemList", itemListElement: card.cons.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c })) },
@@ -71,9 +71,9 @@ export default function CardPage({ params }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://cardstack.vercel.app" },
-      { "@type": "ListItem", position: 2, name: "Cards", item: "https://cardstack.vercel.app/compare" },
-      { "@type": "ListItem", position: 3, name: card.name, item: `https://cardstack.vercel.app/cards/${card.id}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com" },
+      { "@type": "ListItem", position: 2, name: "Cards", item: "https://assurefintech.com/compare" },
+      { "@type": "ListItem", position: 3, name: card.name, item: `https://assurefintech.com/cards/${card.id}` },
     ],
   };
 

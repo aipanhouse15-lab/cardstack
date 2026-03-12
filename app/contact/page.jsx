@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Contact CardStack — Report Issues, Suggest Cards, Say Hi",
-  description: "Get in touch with CardStack. Report incorrect data, suggest new cards, share feedback, or just say hello.",
+  title: "Contact Assure Fintech — Report Issues, Suggest Cards, Say Hi",
+  description: "Get in touch with Assure Fintech. Report incorrect data, suggest new cards, share feedback, or just say hello.",
 };
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
 
       <div className="flex flex-col gap-6 text-base leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>
-          CardStack is built by one person. Every message is read personally. Here's how to reach us.
+          Assure Fintech is built by one person. Every message is read personally. Here's how to reach us.
         </p>
 
         <div className="flex flex-col gap-4">
@@ -76,7 +76,7 @@ export default function ContactPage() {
               </div>
             </div>
             <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-              Interested in licensing our card data API? Want to integrate CardStack into your app? We have a public API at <code className="text-xs rounded px-1.5 py-0.5" style={{ background: "var(--bg-muted)" }}>/api/cards</code> and <code className="text-xs rounded px-1.5 py-0.5" style={{ background: "var(--bg-muted)" }}>/api/recommend</code>. Contact us to discuss enterprise access.
+              Interested in licensing our card data API? Want to integrate Assure Fintech into your app? We have a public API at <code className="text-xs rounded px-1.5 py-0.5" style={{ background: "var(--bg-muted)" }}>/api/cards</code> and <code className="text-xs rounded px-1.5 py-0.5" style={{ background: "var(--bg-muted)" }}>/api/recommend</code>. Contact us to discuss enterprise access.
             </p>
           </div>
         </div>

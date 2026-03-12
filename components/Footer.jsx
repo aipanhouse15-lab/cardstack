@@ -26,8 +26,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-sm font-extrabold">C</div>
-              <span className="text-lg font-bold" style={{ color: "var(--text)" }}>CardStack</span>
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-[10px] font-extrabold">AF</div>
+              <span className="text-lg font-bold" style={{ color: "var(--text)" }}>Assure Fintech</span>
             </div>
             <p className="text-sm leading-relaxed max-w-[220px]" style={{ color: "var(--text-muted)" }}>
               India's smartest credit card tool. 25+ cards, real savings, zero tracking.
@@ -65,7 +65,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pt-6" style={{ borderTop: "1px solid var(--border)" }}>
-          <p className="text-xs" style={{ color: "var(--text-faint)" }}>© 2026 CardStack. Not financial advice.</p>
+          <p className="text-xs" style={{ color: "var(--text-faint)" }}>© 2026 Assure Fintech. Not financial advice.</p>
           <p className="text-xs text-right max-w-[360px] leading-relaxed" style={{ color: "var(--text-faint)" }}>
             We may earn commissions through affiliate links — at no extra cost to you.
           </p>
