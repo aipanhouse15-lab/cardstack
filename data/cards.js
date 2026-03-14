@@ -48,7 +48,54 @@ export const CARDS = [
     highlights: ["5% on 10+ partner brands", "₹1000/mo cashback cap on 5%", "4 domestic lounge/yr", "Fee waiver ₹1L spend"],
     pros: ["5% on Swiggy/Zomato/Amazon/Flipkart", "Low ₹1000 fee (waivable)", "4 lounge visits"],
     cons: ["Only 1% on non-partner spends", "₹1000/mo cap on 5% cashback", "Fuel excluded"],
-    network: "Visa/MC", lounge: "4/year" },
+    network: "Visa/MC", lounge: "4/year",
+
+    editorial: {
+      verdict: {
+        headline: "The best entry-level card for online spenders — if you understand the ₹1,000 monthly cap.",
+        body: `At face value, 5% cashback on Swiggy, Zomato, Amazon, Flipkart, Myntra, BookMyShow, and a dozen other platforms sounds unbeatable. And for most people spending under ₹20,000/month on these platforms, it genuinely is. The problem starts when you cross that ₹20,000 threshold — because every rupee after that earns just 1%. Most review sites mention the 5% but bury the cap, and that's how people end up disappointed.
+
+The card's annual fee of ₹1,000 is easily waivable at ₹1 lakh annual spend — roughly ₹8,300/month, which most working professionals hit without trying. If you're spending on Swiggy and Amazon anyway, this card essentially pays for itself within the first two months.`,
+        idealFor: "Anyone who spends ₹5,000–20,000/month on food delivery, online shopping, or entertainment platforms. At ₹15,000/month partner spend, you're earning ₹750/month — that's ₹9,000/year from a card with a waivable ₹1,000 fee.",
+        skipIf: "You're a heavy online spender above ₹20,000/month on partner categories. You'll hit the cap halfway through the month, and the 1% fallback rate is below average. You need a second card for the overflow, or a card with higher caps altogether.",
+      },
+      capMath: {
+        title: "Understanding the ₹1,000 monthly cashback cap",
+        body: `This is the single most important detail about this card, and it's the one most sites gloss over.
+
+The 5% cashback on partner brands — Swiggy, Zomato, Amazon, Flipkart, Myntra, BookMyShow, Tata CLiQ, Uber, Sony LIV, Cult.fit — is capped at ₹1,000 total cashback per month across all these brands combined. Not ₹1,000 per brand. Combined.
+
+Here's what that means in practice: ₹1,000 cashback at 5% means your maximum beneficial partner spend is ₹20,000/month. Spend ₹10,000 on Amazon and ₹10,000 on Swiggy? You've hit the cap. Everything after that drops to 1%.
+
+The 1% rate on non-partner spends (groceries, travel, offline shopping) has no cap, but 1% is below average for those categories. You're better off using a different card for non-partner spends entirely.`,
+      },
+      bestFor: [
+        { category: "Swiggy & Zomato orders", reason: "5% is the highest cashback rate on food delivery among entry-level cards. Even the Axis Flipkart card only gives 4% on Swiggy." },
+        { category: "Amazon & Flipkart purchases", reason: "5% matches the Amazon Pay ICICI card on Amazon (for Prime members), and beats it on Flipkart. If you shop on both platforms, Millennia is more versatile." },
+        { category: "BookMyShow, Sony LIV, Cult.fit", reason: "Entertainment and lifestyle spends that most cards give 1% on. Getting 5% here is genuine found money." },
+        { category: "Monthly spends under ₹20,000 on partner platforms", reason: "This is the sweet spot where this card is unbeatable at its fee level." },
+      ],
+      avoidFor: [
+        { category: "Groceries", reason: "Millennia gives 1% on groceries. SBI Card ELITE gives 2.5%. Even ICICI Coral's Culinary Treats gives better dining/grocery value.", altCard: "sbi-elite" },
+        { category: "Fuel", reason: "0% rewards. No card gives great fuel rewards, but at least Axis ACE's 1.5% base covers fuel.", altCard: "axis-ace" },
+        { category: "Utility bills", reason: "1% on Millennia vs 5% on Axis ACE via Google Pay. If your electricity bill is ₹3,000/month, that's ₹150 vs ₹30.", altCard: "axis-ace" },
+        { category: "Spending after ₹20K/month cap", reason: "Once the cap hits, switch to a flat-rate card like Axis ACE (1.5% uncapped) for the rest of the month.", altCard: "axis-ace" },
+        { category: "Travel", reason: "1% is poor for travel. HDFC Regalia gives 1.33% base and up to 13% via SmartBuy.", altCard: "hdfc-regalia" },
+      ],
+      pairWith: [
+        { combo: "Millennia + Axis ACE", fee: "₹1,499/year, both waivable", reason: "The most popular budget combo. Use Millennia for partner platforms, ACE for utility bills (5% via GPay), food delivery overflow (4%), and everything else (1.5% uncapped).", cardId: "axis-ace" },
+        { combo: "Millennia + Amazon Pay ICICI", fee: "₹1,000/year", reason: "If you're a heavy Amazon shopper, the Amazon card's 5% has no monthly cap — unlike Millennia's. Use Millennia for non-Amazon partners, Amazon card exclusively for Amazon.", cardId: "amazon-icici" },
+        { combo: "Millennia + SBI ELITE", fee: "₹5,999/year", reason: "If you eat out often and watch movies. ELITE gives 2.5% on dining/groceries plus BookMyShow Buy 1 Get 1. Use Millennia for online, ELITE for offline dining and groceries.", cardId: "sbi-elite" },
+      ],
+      faq: [
+        { q: "Does HDFC Millennia cashback work on Swiggy orders under ₹150?", a: "Yes, there is no minimum transaction amount for the 5% cashback on Swiggy. However, the ₹1,000 monthly cap across all partner brands still applies." },
+        { q: "Is HDFC Millennia cashback real cashback or reward points?", a: "It's CashPoints, which are HDFC's version of cashback. They're automatically credited and can be redeemed against your statement or converted to rewards. The effective value is 1:1 — ₹1 CashPoint = ₹1." },
+        { q: "Can I get the HDFC Millennia fee waived?", a: "Yes. Spend ₹1 lakh in a year (roughly ₹8,300/month) and the ₹1,000 annual fee is waived for the next year. Most regular users hit this without trying." },
+        { q: "Is HDFC Millennia better than Amazon Pay ICICI?", a: "For Amazon-only shopping, the Amazon Pay ICICI card wins because its 5% has no monthly cap. But Millennia covers a broader range of platforms — Swiggy, Zomato, Flipkart, Myntra, BookMyShow — all at 5%. If you shop across multiple platforms, Millennia is more versatile." },
+        { q: "What happens after I hit the ₹1,000 monthly cap?", a: "All partner category spending drops from 5% to 1% for the rest of that month. The cap resets on the 1st of the next month. Non-partner spends are always at 1% regardless of the cap." },
+      ],
+    },
+  },
 
   { id: "hdfc-diners-black", name: "HDFC Diners Black", bank: "HDFC", img: "🖤", color: "#111827", fee: 10000, feeWaiver: "₹5L annual spend", type: "Super Premium", verified: true,
     rewards: { dining: 3.33, travel: 3.33, online: 3.33, groceries: 3.33, fuel: 0, utilities: 3.33, entertainment: 3.33, shopping: 3.33, default: 3.33 },
