@@ -186,7 +186,7 @@ The 1% rate on non-partner spends (groceries, travel, offline shopping) has no c
     cons: ["Diners Club acceptance limited in India", "₹10K + GST fee", "Fuel excluded"],
     
     redemptionNote: "Rate shown (3.33%) assumes travel redemption at ₹1/point via SmartBuy. Cashback value is ₹0.50/point (1.66%). SmartBuy bookings can reach 33%.",
-    network: "Diners Club", lounge: "Unlimited" 
+    network: "Diners Club", lounge: "Unlimited",
 
     editorial: {
   verdict: {
@@ -240,7 +240,7 @@ The real math to focus on: SmartBuy bookings earn 10x points. A ₹50,000 flight
     highlights: ["10% on Swiggy", "5% on online shopping", "Fee waiver on ₹2L", "₹500 joining voucher"],
     pros: ["Best for Swiggy users (10%)", "5% on online categories", "Low fee (waivable)"],
     cons: ["₹1500/mo total cashback cap", "Fuel/utilities excluded", "Min ₹100 per transaction"],
-    network: "MC", lounge: "None" 
+    network: "MC", lounge: "None",
 
     editorial: {
   verdict: {
@@ -290,7 +290,7 @@ Minimum transaction: ₹100. Orders below ₹100 earn zero cashback. This matter
     highlights: ["2.5% on 9 partner brands", "1.25% all online", "Fee waiver ₹1L", "E-voucher redemption"],
     pros: ["2.5% on Swiggy/Cleartrip/Myntra/BookMyShow", "1.25% on all online", "Easy fee waiver"],
     cons: ["Only 0.25% offline", "No lounge access", "Point redemption limited to e-vouchers"],
-    network: "Visa/MC", lounge: "None" 
+    network: "Visa/MC", lounge: "None",
 
     editorial: {
   verdict: {
@@ -341,7 +341,7 @@ The card's main remaining advantage is its low ₹499 fee (waivable at ₹1L) an
       ],
       impact: "At 5% online, max beneficial online spend drops from ₹1L to ₹40K per cycle. Heavy online spenders should consider pairing with another card after April.",
     },
-    network: "Visa", lounge: "None" 
+    network: "Visa", lounge: "None",
 
     editorial: {
   verdict: {
@@ -395,7 +395,7 @@ If you currently spend ₹60K-₹1L online per cycle, you'll need a second card 
     cons: ["₹4,999 fee (waiver needs ₹10L)", "Only 1% on other spends", "High fee waiver threshold"],
     
     redemptionNote: "Point value ₹0.50 (higher than most SBI cards). Real value is BookMyShow BOGO (2 tickets/month) — worth ₹300-600/mo for regular moviegoers.",
-    network: "Visa/MC/Amex", lounge: "14/year" 
+    network: "Visa/MC/Amex", lounge: "14/year",
 
     editorial: {
   verdict: {
@@ -441,7 +441,7 @@ The downsides are real: ₹4,999 annual fee with a ₹10L spend waiver threshold
     highlights: ["5% on Amazon (Prime)", "3% non-Prime", "Lifetime free", "No cashback cap"],
     pros: ["Best for Amazon shopping", "Lifetime free", "Instant issuance", "No cap"],
     cons: ["Rewards locked to Amazon Pay balance", "Only 1% non-Amazon", "Fuel surcharge waiver only"],
-    network: "Visa", lounge: "None" 
+    network: "Visa", lounge: "None",
 
     editorial: {
   verdict: {
@@ -486,7 +486,7 @@ The catch is that rewards are credited as Amazon Pay balance, not real cashback.
     highlights: ["Movie BOGO BookMyShow", "Culinary Treats 15% off dining", "4+4 lounge (domestic+railway)", "Fee waiver ₹1.5L"],
     pros: ["Movie BOGO excellent value", "8 total lounge visits", "Dining discounts", "Low fee"],
     cons: ["Very low reward rate (0.5%)", "Fuel excluded", "Points redemption limited"],
-    network: "Visa/MC/RuPay/Amex", lounge: "8/year" 
+    network: "Visa/MC/RuPay/Amex", lounge: "8/year",
 
     editorial: {
   verdict: {
@@ -528,7 +528,7 @@ But the reward rate — 0.5% on most purchases — is genuinely low. On ₹50,00
     highlights: ["Golf 4 rounds/year", "6 lounge visits/yr", "Concierge", "1% on international"],
     pros: ["Golf privileges", "Decent lounge access", "1% on international spends"],
     cons: ["Low domestic rate (0.5%)", "₹3,500 fee", "No zero forex markup"],
-    network: "Visa/MC/Amex", lounge: "6/year" 
+    network: "Visa/MC/Amex", lounge: "6/year",
 
     editorial: {
   verdict: {
@@ -571,7 +571,7 @@ For golfers, the 4 rounds/year (worth ₹4,000-8,000 depending on the course) ju
     cons: ["₹12K + GST fee", "Only 1% domestic", "Fee waiver needs ₹15L spend"],
     
     redemptionNote: "Domestic 1% at ₹0.25/point. International earns 8pts/₹100 = 2%. Frequent international travelers get significantly higher effective rates.",
-    network: "Visa Infinite/Amex", lounge: "Unlimited" 
+    network: "Visa Infinite/Amex", lounge: "Unlimited",
 
     editorial: {
   verdict: {
@@ -616,7 +616,7 @@ Domestically, though, it's average at best. 1% on everything and ₹12,000 annua
     highlights: ["5% Flipkart/Myntra/Cleartrip", "4% Swiggy/Uber/PVR", "4 lounge visits/yr", "No cashback cap"],
     pros: ["Best for Flipkart ecosystem", "4% on Swiggy/dining", "Now has lounge access"],
     cons: ["₹500 fee", "1% on non-partner spends", "Fuel excluded"],
-    network: "Visa", lounge: "4/year" 
+    network: "Visa", lounge: "4/year",
 
     editorial: {
   verdict: {
@@ -662,7 +662,7 @@ Unlike Amazon Pay ICICI, the Axis Flipkart card has a ₹500 annual fee (waivabl
     highlights: ["5% on bills via GPay", "4% Swiggy/Zomato", "4 lounge visits/yr", "₹500/mo cap on accelerated only"],
     pros: ["5% on utility bills (rare)", "4% on food delivery", "1.5% base is uncapped", "Lounge access at low fee"],
     cons: ["₹500/mo cap on 5%+4% categories", "After cap, accelerated → 0%", "Fuel excluded"],
-    network: "Visa", lounge: "4/year" 
+    network: "Visa", lounge: "4/year",
 
     editorial: {
   verdict: {
@@ -719,7 +719,7 @@ In practice: ₹500 accelerated cap means optimal bill+food spending is about �
     cons: ["₹5K fee", "~3.5% forex markup (no zero forex)", "Fuel excluded"],
     
     redemptionNote: "1 EDGE Mile ≈ ₹1 (typical). Actual value varies ₹0.80–₹1.50 by airline partner and route. Best value on premium cabin redemptions.",
-    network: "Visa Infinite", lounge: "18/year" 
+    network: "Visa Infinite", lounge: "18/year",
 
     editorial: {
   verdict: {
@@ -765,7 +765,7 @@ The 2% base rate on non-travel spending is strong enough that Atlas works as a p
     cons: ["Need to actively select feature packs", "1% base on non-selected", "10K points cap/cycle"],
     
     redemptionNote: "Rates depend on Feature Pack selection. Pick 2-3 categories for up to 5%. Without packs, base is ~1%. Change packs monthly via AU app.",
-    network: "Visa/RuPay", lounge: "Add-on" 
+    network: "Visa/RuPay", lounge: "Add-on",
 
     editorial: {
   verdict: {
@@ -808,7 +808,7 @@ The catch is that you need to actively manage it. Select the wrong Feature Pack 
     highlights: ["Unlimited domestic + intl lounge", "2.5% on international", "1.25% dining/travel", "Fee waiver ₹8L"],
     pros: ["Unlimited lounge access", "2.5% on international spends", "Decent dining/travel rate"],
     cons: ["₹4,999 fee", "Only 0.5% on general spends", "AU Bank less established"],
-    network: "Visa Infinite", lounge: "Unlimited" 
+    network: "Visa Infinite", lounge: "Unlimited",
 
     editorial: {
   verdict: {
@@ -845,7 +845,7 @@ Domestically, 1.25% on dining/travel and 0.5% on everything else is underwhelmin
     highlights: ["Lifetime free", "Zero forex markup", "Points never expire", "Redeemable as cash"],
     pros: ["Zero forex (rare for free card)", "Points never expire", "Cash redemption", "Free forever"],
     cons: ["Low base rate (0.66%)", "No lounge access", "No accelerated categories"],
-    network: "Visa", lounge: "None" 
+    network: "Visa", lounge: "None",
 
     editorial: {
   verdict: {
@@ -893,7 +893,7 @@ The domestic reward rate of 0.66% is low, and there's no lounge access. This isn
     cons: ["Low base rate (0.5%)", "Fuel excluded", "No zero forex"],
     
     redemptionNote: "Base rate (0.5%) is for normal spends. Jumps to 2.5% above ₹20K/mo and 5% in birthday month. UPI earns 1%. Effective rate depends on spending pattern.",
-    network: "Visa", lounge: "4/year" 
+    network: "Visa", lounge: "4/year",
 
     editorial: {
   verdict: {
@@ -978,7 +978,7 @@ The metal card looks and feels premium, and the app is genuinely excellent. But 
     highlights: ["3.75% on dining/travel/online", "18 lounge visits/yr", "Golf access", "BookMyShow discount"],
     pros: ["Excellent 3.75% on dining/travel/online", "18 lounge visits", "Golf access", "Low fee waiver ₹2.5L"],
     cons: ["0.75% on general spends", "BOB app mediocre", "Point redemption limited"],
-    network: "Visa", lounge: "18/year" 
+    network: "Visa", lounge: "18/year",
 
     editorial: {
   verdict: {
@@ -1020,7 +1020,7 @@ The fee waiver at ₹2.5L is more achievable than Regalia's ₹4L. The main down
     highlights: ["Lifetime free", "1% online", "Easy approval", "Good starter card"],
     pros: ["Free forever", "1% online cashback", "Easy approval for beginners"],
     cons: ["0.5% offline", "10K points/month cap", "No lounge/perks", "Fuel excluded"],
-    network: "Visa", lounge: "None" 
+    network: "Visa", lounge: "None",
 
     editorial: {
   verdict: {
@@ -1060,7 +1060,7 @@ This card is a stepping stone, not a destination. Use it for 6-12 months to buil
     highlights: ["Lifetime free", "Weekend 2x points", "₹5L milestone bonus", "Fuel surcharge waiver"],
     pros: ["Lifetime free", "Weekend double points", "Milestone bonus at ₹5L"],
     cons: ["Very low base rate (0.25%)", "Lounge discontinued Mar 2025", "0.5% even on weekends"],
-    network: "Visa Signature", lounge: "Discontinued" 
+    network: "Visa Signature", lounge: "Discontinued",
 
     editorial: {
   verdict: {
@@ -1100,7 +1100,7 @@ The milestone bonus of 10,000 points (₹2,500) at ₹5L annual spend is nice, b
     highlights: ["Unlimited lounge access", "0.75% online", "Fee waiver ₹10L"],
     pros: ["Unlimited domestic + intl lounge", "Higher online rate"],
     cons: ["₹10K + GST fee", "Low reward rates overall", "Fuel/rent excluded", "50K pts cap"],
-    network: "Visa Infinite", lounge: "Unlimited" 
+    network: "Visa Infinite", lounge: "Unlimited",
 
     editorial: {
   verdict: {
@@ -1143,7 +1143,7 @@ But 0.5-0.75% reward rates on a ₹10,000/year card are hard to justify on spend
     highlights: ["5% on grocery + fuel", "2.5% on movies", "2000 welcome points"],
     pros: ["Best grocery rate (5%)", "5% fuel (very rare)", "Movie cashback"],
     cons: ["₹500 fee (not free)", "5000 points/month cap", "Near-zero on most categories"],
-    network: "Visa/MC", lounge: "None" 
+    network: "Visa/MC", lounge: "None",
 
     editorial: {
   verdict: {
