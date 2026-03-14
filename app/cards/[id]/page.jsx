@@ -64,7 +64,7 @@ export default function CardPage({ params }) {
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
-    itemReviewed: { "@type": "FinancialProduct", name: card.name },
+    itemReviewed: { "@type": "Product", name: card.name },
     author: { "@type": "Organization", name: "Assure Fintech" },
     reviewBody: ed?.verdict?.headline
       ? `${card.name}: ${ed.verdict.headline} ${ed.verdict.idealFor}`
