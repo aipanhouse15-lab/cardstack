@@ -1,7 +1,5 @@
 import { CARDS } from "@/data/cards";
 import { BLOG_POSTS } from "@/data/content";
-import { BEST_FOR_CATEGORIES } from "@/data/bestfor";
-import { COMPARISONS } from "@/data/comparisons";
 
 export default function sitemap() {
   const base = "https://assurefintech.com";
@@ -30,22 +28,6 @@ export default function sitemap() {
     priority: 0.8,
   }));
 
-  // Best-for category pages
-  const bestForPages = BEST_FOR_CATEGORIES.map(cat => ({
-    url: `${base}/best/${cat.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.85,
-  }));
-
-  // Comparison pages
-  const comparisonPages = COMPARISONS.map(comp => ({
-    url: `${base}/compare/${comp.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
-
   // Blog pages
   const blogPages = BLOG_POSTS.map(post => ({
     url: `${base}/blog/${post.id}`,
@@ -54,5 +36,5 @@ export default function sitemap() {
     priority: 0.6,
   }));
 
-  return [...staticPages, ...cardPages, ...bestForPages, ...comparisonPages, ...blogPages];
+  return [...staticPages, ...cardPages, ...blogPages];
 }

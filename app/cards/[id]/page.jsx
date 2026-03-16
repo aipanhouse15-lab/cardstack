@@ -1,5 +1,4 @@
 import { CARDS, CATEGORIES } from "@/data/cards";
-import { processEditorial } from "@/data/editorial-helper";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ReportForm from "@/components/ReportForm";
@@ -12,12 +11,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const card = CARDS.find(c => c.id === params.id);
   if (!card) return { title: "Card Not Found" };
-  const editorial = processEditorial(card.editorial, card);
   return {
-    title: `${card.name} Review — Rewards, Fees, Caps & Best Combos (2026)`,
-    description: editorial?.verdict?.headline
-      ? `${card.name}: ${editorial.verdict.headline} Full review with cap math, best uses, what to avoid, and ideal card pairings.`
-      : `${card.name} by ${card.bank}: ${card.fee === 0 ? "Lifetime free" : `₹${card.fee}/year`}. Best for ${Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1])[0][0]} at ${Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1])[0][1]}%. Full review with pros, cons, and reward breakdown.`,
+    title: `${card.name} Review — Rewards, Fees & Benefits`,
+    description: `${card.name} by ${card.bank}: ${card.fee === 0 ? "Lifetime free" : `₹${card.fee}/year`}. Best for ${Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1])[0][0]} at ${Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1])[0][1]}%. Full review with pros, cons, and reward breakdown.`,
   };
 }
 
@@ -28,7 +24,6 @@ export default function CardPage({ params }) {
   const sorted = Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1]);
   const maxRate = sorted[0][1];
   const bestCategory = sorted[0][0];
-  const ed = processEditorial(card.editorial, card);
 
   // JSON-LD: Product schema for credit card
   const cardSchema = {
@@ -60,15 +55,13 @@ export default function CardPage({ params }) {
     areaServed: { "@type": "Country", name: "India" },
   };
 
-  // JSON-LD: Review schema
+  // JSON-LD: Review/Rating schema
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
-    itemReviewed: { "@type": "Product", name: card.name },
+    itemReviewed: { "@type": "FinancialProduct", name: card.name },
     author: { "@type": "Organization", name: "Assure Fintech" },
-    reviewBody: ed?.verdict?.headline
-      ? `${card.name}: ${ed.verdict.headline} ${ed.verdict.idealFor}`
-      : `${card.name} review: ${card.pros.join(". ")}. Downsides: ${card.cons.join(". ")}.`,
+    reviewBody: `${card.name} review: ${card.pros.join(". ")}. Downsides: ${card.cons.join(". ")}.`,
     positiveNotes: { "@type": "ItemList", itemListElement: card.pros.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p })) },
     negativeNotes: { "@type": "ItemList", itemListElement: card.cons.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c })) },
   };
@@ -79,35 +72,22 @@ export default function CardPage({ params }) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com" },
-      { "@type": "ListItem", position: 2, name: "Cards", item: "https://assurefintech.com/cards" },
+      { "@type": "ListItem", position: 2, name: "Cards", item: "https://assurefintech.com/compare" },
       { "@type": "ListItem", position: 3, name: card.name, item: `https://assurefintech.com/cards/${card.id}` },
     ],
   };
-
-  // JSON-LD: FAQ schema (if editorial FAQ exists)
-  const faqSchema = ed?.faq ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: ed.faq.map(f => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  } : null;
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(cardSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
-
     <section className="pt-24 pb-20 px-6 max-w-[700px] mx-auto">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 mb-8 text-sm" style={{ color: "var(--text-faint)" }}>
         <Link href="/" className="no-underline hover:underline" style={{ color: "var(--text-faint)" }}>Home</Link>
         <span>/</span>
-        <Link href="/cards" className="no-underline hover:underline" style={{ color: "var(--text-faint)" }}>Cards</Link>
+        <Link href="/compare" className="no-underline hover:underline" style={{ color: "var(--text-faint)" }}>Cards</Link>
         <span>/</span>
         <span style={{ color: "var(--text-muted)" }}>{card.name}</span>
       </div>
@@ -142,30 +122,6 @@ export default function CardPage({ params }) {
         )}
       </div>
 
-      {/* ═══ EDITORIAL: Verdict ═══ */}
-      {ed?.verdict && (
-        <div className="mb-10">
-          <p className="text-lg sm:text-xl font-bold leading-snug mb-4" style={{ color: "var(--text)" }}>
-            {ed.verdict.headline}
-          </p>
-          {ed.verdict.body.split("\n\n").map((para, i) => (
-            <p key={i} className="text-[15px] leading-relaxed mb-3" style={{ color: "var(--text-secondary)" }}>
-              {para}
-            </p>
-          ))}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5">
-            <div className="rounded-xl p-4" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)" }}>
-              <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "var(--green)" }}>✦ Ideal for</div>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{ed.verdict.idealFor}</p>
-            </div>
-            <div className="rounded-xl p-4" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
-              <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "var(--orange)" }}>✦ Skip if</div>
-              <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{ed.verdict.skipIf}</p>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Reward Rates */}
       <div className="mb-8">
         <h2 className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>Reward Rates by Category</h2>
@@ -185,23 +141,6 @@ export default function CardPage({ params }) {
           })}
         </div>
       </div>
-
-      {/* ═══ EDITORIAL: Cap Math ═══ */}
-      {ed?.capMath && (
-        <div className="mb-8 rounded-xl overflow-hidden" style={{ border: "2px solid var(--orange-border)" }}>
-          <div className="px-5 py-3 flex items-center gap-2" style={{ background: "var(--orange-bg)" }}>
-            <span className="text-lg">⚠️</span>
-            <span className="text-sm font-bold" style={{ color: "var(--orange)" }}>{ed.capMath.title}</span>
-          </div>
-          <div className="p-5" style={{ background: "var(--bg-card)" }}>
-            {ed.capMath.body.split("\n\n").map((para, i) => (
-              <p key={i} className="text-sm leading-relaxed mb-3 last:mb-0" style={{ color: "var(--text-secondary)" }}>
-                {para}
-              </p>
-            ))}
-          </div>
-        </div>
-      )}
 
       {/* Points Info */}
       {card.pointsInfo && (
@@ -260,83 +199,6 @@ export default function CardPage({ params }) {
         </div>
       </div>
 
-      {/* ═══ EDITORIAL: Best Used For ═══ */}
-      {ed?.bestFor && (
-        <div className="mb-8">
-          <h2 className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>✅ Best Used For</h2>
-          <div className="flex flex-col gap-2">
-            {ed.bestFor.map((item, i) => (
-              <div key={i} className="rounded-xl p-4" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
-                <div className="text-sm font-bold mb-1" style={{ color: "var(--text)" }}>{item.category}</div>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{item.reason}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* ═══ EDITORIAL: Don't Use For ═══ */}
-      {ed?.avoidFor && (
-        <div className="mb-8">
-          <h2 className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>⚠️ Switch to Another Card For</h2>
-          <div className="flex flex-col gap-2">
-            {ed.avoidFor.map((item, i) => {
-              const altCard = item.altCard ? CARDS.find(c => c.id === item.altCard) : null;
-              return (
-                <div key={i} className="rounded-xl p-4" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-sm font-bold" style={{ color: "var(--text)" }}>{item.category}</span>
-                    {altCard && (
-                      <Link href={`/cards/${altCard.id}`} className="text-xs font-semibold no-underline rounded-md px-2 py-0.5" style={{ background: "var(--accent-light)", color: "var(--accent-text)", border: "1px solid var(--accent-border)" }}>
-                        → {altCard.name}
-                      </Link>
-                    )}
-                  </div>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{item.reason}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {/* ═══ EDITORIAL: Pair With ═══ */}
-      {ed?.pairWith && (
-        <div className="mb-8">
-          <h2 className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>🤝 Best Card Combos with {card.name}</h2>
-          <p className="text-sm mb-4 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-            No single card covers everything well. Here are the best combinations to fill {card.name}'s gaps:
-          </p>
-          <div className="flex flex-col gap-3">
-            {ed.pairWith.map((combo, i) => {
-              const pairedCard = combo.cardId ? CARDS.find(c => c.id === combo.cardId) : null;
-              return (
-                <div key={i} className="rounded-xl overflow-hidden" style={{ border: "1px solid var(--accent-border)" }}>
-                  <div className="px-4 py-2.5 flex items-center justify-between" style={{ background: "var(--accent-light)" }}>
-                    <span className="text-sm font-bold" style={{ color: "var(--text)" }}>{combo.combo}</span>
-                    <span className="text-xs font-mono font-semibold rounded-md px-2 py-0.5" style={{ background: "var(--bg-muted)", color: "var(--text-muted)" }}>{combo.fee}</span>
-                  </div>
-                  <div className="px-4 py-3" style={{ background: "var(--bg-card)" }}>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{combo.reason}</p>
-                    {pairedCard && (
-                      <Link href={`/cards/${pairedCard.id}`} className="inline-block mt-2 text-xs font-semibold no-underline" style={{ color: "var(--accent-text)" }}>
-                        View {pairedCard.name} details →
-                      </Link>
-                    )}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <div className="mt-4 rounded-xl p-4 text-center" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)" }}>
-            <p className="text-sm mb-2" style={{ color: "var(--text-secondary)" }}>Want to find the best card to pair with yours?</p>
-            <Link href="/gap-finder" className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white no-underline rounded-lg px-5 py-2 text-sm font-semibold">
-              Try Gap Finder →
-            </Link>
-          </div>
-        </div>
-      )}
-
       {/* Upcoming Changes */}
       {card.upcoming && (
         <div className="mb-8 rounded-xl overflow-hidden" style={{ border: "2px solid var(--orange-border)" }}>
@@ -362,26 +224,6 @@ export default function CardPage({ params }) {
                 {card.upcoming.impact}
               </div>
             )}
-          </div>
-        </div>
-      )}
-
-      {/* ═══ EDITORIAL: FAQ ═══ */}
-      {ed?.faq && (
-        <div className="mb-8">
-          <h2 className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>❓ Frequently Asked Questions</h2>
-          <div className="flex flex-col gap-2">
-            {ed.faq.map((item, i) => (
-              <details key={i} className="group rounded-xl overflow-hidden" style={{ border: "1px solid var(--border)" }}>
-                <summary className="cursor-pointer px-4 py-3.5 text-sm font-semibold flex items-center justify-between" style={{ color: "var(--text)", background: "var(--bg-muted)" }}>
-                  <span>{item.q}</span>
-                  <span className="text-base ml-2 transition-transform group-open:rotate-45" style={{ color: "var(--text-faint)" }}>+</span>
-                </summary>
-                <div className="px-4 py-3.5" style={{ background: "var(--bg-card)" }}>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{item.a}</p>
-                </div>
-              </details>
-            ))}
           </div>
         </div>
       )}
