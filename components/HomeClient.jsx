@@ -390,6 +390,38 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* ═══ 9B. BEST CARDS BY CATEGORY ═══ */}
+      <section style={{ background:"var(--bg-section-violet)", borderTop:"1px solid var(--border-section-violet)", borderBottom:"1px solid var(--border-section-violet)", padding:"56px 24px" }}>
+        <div style={{ maxWidth:800, margin:"0 auto" }}>
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-extrabold tracking-tight" style={{color:"var(--text)"}}>Best credit cards by category</h2>
+            <p className="text-sm mt-1.5" style={{color:"var(--text-muted)"}}>Cap-aware picks — not just advertised rates, but what you actually earn.</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5">
+            {[
+              { icon: "🛒", label: "Online Shopping", href: "/best/credit-card-for-online-shopping" },
+              { icon: "🍕", label: "Swiggy & Zomato", href: "/best/credit-card-for-swiggy-zomato" },
+              { icon: "📦", label: "Amazon", href: "/best/credit-card-for-amazon" },
+              { icon: "🛍️", label: "Flipkart", href: "/best/credit-card-for-flipkart" },
+              { icon: "💸", label: "No Annual Fee", href: "/best/best-cashback-credit-card-no-annual-fee" },
+              { icon: "🥦", label: "Groceries", href: "/best/credit-card-for-groceries" },
+              { icon: "⛽", label: "Fuel", href: "/best/credit-card-for-fuel" },
+              { icon: "💡", label: "Utility Bills", href: "/best/credit-card-for-utility-bills" },
+              { icon: "✈️", label: "Travel", href: "/best/credit-card-for-travel" },
+              { icon: "🌍", label: "International", href: "/best/credit-card-for-international-spending" },
+            ].map((item, i) => (
+              <a key={i} href={item.href} className="rounded-xl p-3.5 text-center no-underline transition-all" style={{background:"var(--bg-card)",border:"1px solid var(--border)",boxShadow:"var(--shadow)"}}>
+                <div className="text-2xl mb-1.5">{item.icon}</div>
+                <div className="text-xs font-semibold" style={{color:"var(--text)"}}>{item.label}</div>
+              </a>
+            ))}
+          </div>
+          <div className="text-center mt-6">
+            <p className="text-xs" style={{color:"var(--text-faint)"}}>Each page shows real cashback calculations with cap math — not just rankings.</p>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ 10. METHODOLOGY ═══ */}
       <section style={{ maxWidth:720, margin:"0 auto", padding:"40px 24px 56px" }}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
