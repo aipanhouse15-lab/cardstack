@@ -13,12 +13,12 @@ export const MERCHANTS = {
         { card: "icici-coral", rate: "5% (dining)", note: "Dining category + Buy 1 Get 1 movies." },
       ], proTip: "HDFC Diners Black gives free Zomato Gold membership — ₹600/year saved before any cashback." },
       { id: "blinkit", name: "Blinkit", icon: "🟡", cat: "groceries", tips: [
-        { card: "rbl-shoprite", rate: "5% (grocery)", note: "Best free grocery card." },
+        { card: "rbl-shoprite", rate: "5% (grocery)", note: "Best grocery card (₹500/yr, waivable on ₹1.5L)." },
         { card: "au-lit", rate: "3% (grocery)", note: "Solid free alternative." },
         { card: "amazon-icici", rate: "2% (grocery)", note: "Decent if paying via Amazon Pay." },
       ], proTip: "Blinkit often codes as 'grocery' — verify on your statement. Some cards classify it as 'online shopping'." },
       { id: "bigbasket", name: "BigBasket", icon: "🟢", cat: "groceries", tips: [
-        { card: "rbl-shoprite", rate: "5% (grocery)", note: "Highest grocery rate, free card." },
+        { card: "rbl-shoprite", rate: "5% (grocery)", note: "Highest grocery rate (₹500/yr, waivable on ₹1.5L)." },
         { card: "au-lit", rate: "3% (grocery)", note: "Free card with 3% on groceries." },
         { card: "au-zenith", rate: "3.5% (flat)", note: "No category guessing needed." },
       ], proTip: "BigBasket accepts TATA Neu payments — if your card gives bonuses on TATA Neu, that could stack." },

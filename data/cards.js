@@ -96,7 +96,7 @@ The catch? It's invite-only. HDFC offers it to customers with high savings balan
       ],
       avoidFor: [
         { category: "Cashback redemption", reason: "If you redeem as cashback (₹0.20/point), the effective rate drops to 0.66% — terrible for a premium card. Always redeem via travel.", altCard: "sbi-cashback" },
-        { category: "Fuel", reason: "0% on fuel, same as every HDFC card.", altCard: "rbl-shoprite" },
+        { category: "Fuel", reason: "0% on fuel, same as every HDFC card.", altCard: null },
         { category: "Small everyday purchases", reason: "If you're spending ₹5K/month total, the ₹12,500 fee eats all your rewards. This card needs volume to justify itself.", altCard: "axis-ace" },
       ],
       pairWith: [
@@ -213,7 +213,7 @@ The real math to focus on: SmartBuy bookings earn 10x points. A ₹50,000 flight
   ],
   avoidFor: [
     { category: "Small merchants and toll plazas", reason: "Diners Club isn't accepted at many small businesses, toll booths, and some POS terminals. Keep a Visa/MC backup.", altCard: "axis-ace" },
-    { category: "Fuel", reason: "0% rewards on fuel, consistent across HDFC cards.", altCard: "rbl-shoprite" },
+    { category: "Fuel", reason: "0% rewards on fuel, consistent across HDFC cards.", altCard: null },
     { category: "Online food delivery", reason: "While 3.33% is decent, HDFC Millennia gives 5% on Swiggy/Zomato. Use Millennia for food, Diners Black for everything else.", altCard: "hdfc-millennia" },
   ],
   pairWith: [
@@ -368,7 +368,7 @@ If you currently spend ₹60K-₹1L online per cycle, you'll need a second card 
   avoidFor: [
     { category: "Offline shopping", reason: "1% offline is below average. Axis ACE gives 1.5% uncapped offline.", altCard: "axis-ace" },
     { category: "Amazon-only shopping", reason: "Amazon Pay ICICI gives 5% on Amazon with no monthly cap. If Amazon is your primary online spend, that card is better.", altCard: "amazon-icici" },
-    { category: "Fuel", reason: "Excluded from cashback entirely. Fuel surcharge waiver applies only on ₹500-₹3,000 transactions.", altCard: "rbl-shoprite" },
+    { category: "Fuel", reason: "Excluded from cashback entirely. Fuel surcharge waiver applies only on ₹500-₹3,000 transactions.", altCard: null },
   ],
   pairWith: [
     { combo: "SBI Cashback + Axis ACE", fee: "₹1,498/year", reason: "SBI for online purchases (5%), ACE for offline spending (1.5% uncapped) and utility overflow. Covers both worlds.", cardId: "axis-ace" },
@@ -505,7 +505,7 @@ But the reward rate — 0.5% on most purchases — is genuinely low. On ₹50,00
   avoidFor: [
     { category: "Online shopping", reason: "0.5% is very low. HDFC Millennia gives 10x more (5%) on the same purchases.", altCard: "hdfc-millennia" },
     { category: "General spending", reason: "0.5% across the board. Even free cards like Axis ACE (1.5%) give 3x more.", altCard: "axis-ace" },
-    { category: "Fuel", reason: "0% on fuel. No rewards whatsoever at petrol pumps.", altCard: "rbl-shoprite" },
+    { category: "Fuel", reason: "0% on fuel. No rewards whatsoever at petrol pumps.", altCard: null },
   ],
   pairWith: [
     { combo: "ICICI Coral + HDFC Millennia", fee: "₹1,500/year", reason: "Coral for movies and dining discounts, Millennia for all actual spending (5% on online partners). Use Coral for perks, Millennia for rewards.", cardId: "hdfc-millennia" },
@@ -997,7 +997,7 @@ The fee waiver at ₹2.5L is more achievable than Regalia's ₹4L. The main down
   ],
   avoidFor: [
     { category: "Groceries and utilities", reason: "0.75% on both. SBI ELITE gives 2.5% on groceries, Axis ACE gives 5% on utility bills.", altCard: "axis-ace" },
-    { category: "Fuel", reason: "0% rewards on fuel. Only fuel surcharge waiver applies.", altCard: "rbl-shoprite" },
+    { category: "Fuel", reason: "0% rewards on fuel. Only fuel surcharge waiver applies.", altCard: null },
     { category: "General offline non-dining", reason: "0.75% on general spending. Axis ACE's 1.5% uncapped is double.", altCard: "axis-ace" },
   ],
   pairWith: [
@@ -1130,56 +1130,51 @@ But 0.5-0.75% reward rates on a ₹10,000/year card are hard to justify on spend
 },
   },
 
-  { id: "rbl-shoprite", name: "RBL ShopRite", bank: "RBL", img: "🧺", color: "#c026d3", fee: 500, feeWaiver: "None", type: "Cashback", verified: true,
-    rewards: { dining: 0, travel: 0, online: 1.25, groceries: 5, fuel: 5, utilities: 0, entertainment: 2.5, shopping: 0, default: 0.25 },
-    caps: { monthlyPoints: 5000, pointValue: 0.25, spendPer: 100, pointsPer: 20 },
+  { id: "rbl-shoprite", name: "RBL ShopRite", bank: "RBL", img: "🧺", color: "#c026d3", fee: 500, feeWaiver: "₹1.5L annual spend", type: "Cashback", verified: true,
+    rewards: { dining: 0.25, travel: 0.25, online: 0.25, groceries: 5, fuel: 0, utilities: 0.25, entertainment: 0.25, shopping: 0.25, default: 0.25 },
+    caps: { monthlyPoints: 1000, pointValue: 0.25, spendPer: 100, pointsPer: 20 },
     partnerRates: [
       { name: "Grocery stores", rate: "20 pts/₹100 (5%)" },
-      { name: "Fuel", rate: "20 pts/₹100 (5%)" },
-      { name: "BookMyShow movies", rate: "10 pts/₹100 (2.5%)" },
-      { name: "Online shopping", rate: "5 pts/₹100 (1.25%)" },
+      { name: "BookMyShow", rate: "10% discount (max ₹100/ticket, 15x/yr)" },
     ],
-    pointsInfo: "5% grocery/fuel, 2.5% movies, 1.25% online, 0.25% other · 5K pts/mo cap · 2000 welcome pts",
-    highlights: ["5% on grocery + fuel", "2.5% on movies", "2000 welcome points"],
-    pros: ["Best grocery rate (5%)", "5% fuel (very rare)", "Movie cashback"],
-    cons: ["₹500 fee (not free)", "5000 points/month cap", "Near-zero on most categories"],
+    pointsInfo: "5% grocery only (1000 pts/mo cap = ₹250/mo max) · 0.25% on everything else · Fuel: surcharge waiver only (no cashback) · 2000 welcome pts (₹500 value)",
+    highlights: ["5% on grocery stores", "Fee waiver on ₹1.5L spend", "BookMyShow 10% off", "2000 welcome points"],
+    pros: ["Best grocery rate (5%)", "Fee waiver available (₹1.5L)", "Welcome bonus covers first year fee"],
+    cons: ["Only ₹250/mo max grocery cashback", "0.25% on everything else", "No fuel rewards (surcharge waiver only)"],
     network: "Visa/MC", lounge: "None",
 
     editorial: {
   verdict: {
-    headline: "The only card in India with 5% on both groceries AND fuel — two categories every other card ignores.",
-    body: `RBL ShopRite fills a unique gap: 5% on grocery stores and 5% on fuel. Every major card excludes fuel from rewards, and most give 1% or less on groceries. If you spend significantly on weekly groceries and monthly fuel, ShopRite earns rewards where no other card will.
+    headline: "The best card in India for grocery rewards at 5% — but fuel cashback is a myth.",
+    body: `RBL ShopRite gives 5% on grocery stores — the highest grocery rate available. But contrary to popular belief, it does NOT give 5% on fuel. Fuel only gets a standard 1% surcharge waiver (max ₹100/month).
 
-The 5,000 points/month cap (₹1,250) and near-zero rates on other categories (0.25%) limit its use as a primary card. But as a dedicated grocery+fuel card paired with a better all-rounder, ShopRite adds genuine value that no other card can provide.`,
-    idealFor: "Families spending ₹10,000+/month on groceries and ₹5,000+/month on fuel. At these levels, ShopRite earns ₹750/month or ₹9,000/year on spending that every other card ignores.",
-    skipIf: "You don't spend much on groceries or fuel. The 0.25% rate on everything else makes this useless as a primary card.",
+The 1,000 points/month cap (₹250) limits beneficial grocery spend to ₹5,000/month. Everything else earns 0.25% — essentially nothing. This is a dedicated grocery card, not an all-rounder. Pair it with a general-purpose card.`,
+    idealFor: "Families spending ₹5,000+/month on groceries. At ₹5K/month grocery spend, ShopRite earns ₹250/month or ₹3,000/year from a ₹500 card.",
+    skipIf: "You don't spend much on groceries. The 0.25% rate on everything else makes this useless as a primary card.",
   },
   capMath: {
-    title: "Understanding the 5,000 points/month cap",
-    body: `The 5,000 points/month cap across grocery and fuel (at 20 pts/₹100) means your maximum beneficial spend in these categories is ₹25,000/month. At 5%, that's ₹1,250/month in rewards.
+    title: "Understanding the 1,000 points/month cap",
+    body: `The 1,000 points/month cap on grocery spending (at 20 pts/₹100) means your maximum beneficial grocery spend is ₹5,000/month. At 5%, that's ₹250/month in rewards.
 
-Spend ₹15K on groceries and ₹10K on fuel? You've hit the cap. The movie and online rates have the same shared cap, so the effective beneficial spend is ₹25K total across all accelerated categories.
-
-Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. Don't use this card for non-grocery/fuel purchases.`,
+Spend more than ₹5K on groceries? Points stop accumulating for that cycle. Everything else (dining, travel, shopping, fuel) earns just 0.25% with no acceleration. Don't use this card for non-grocery purchases.`,
   },
   bestFor: [
     { category: "Grocery stores", reason: "5% at grocery stores is unmatched. No other widely-available card gives more than 2.5% on groceries (SBI ELITE). ShopRite gives double." },
-    { category: "Fuel", reason: "5% on fuel is extremely rare — almost every card in India excludes fuel or gives 0%. This is ShopRite's truly unique feature." },
-    { category: "Movies via BookMyShow", reason: "2.5% on movie tickets — a nice secondary perk for moviegoers." },
+    { category: "Movies via BookMyShow", reason: "10% discount on tickets (max ₹100/ticket, 15 times/year) — a nice perk for moviegoers." },
   ],
   avoidFor: [
-    { category: "Everything except groceries and fuel", reason: "0.25% on dining, travel, utilities, and general shopping is near-zero. Use any other card.", altCard: "axis-ace" },
+    { category: "Everything except groceries", reason: "0.25% on dining, travel, utilities, fuel, and general shopping is near-zero. Use any other card.", altCard: "axis-ace" },
     { category: "Online shopping", reason: "1.25% online is below average. HDFC Millennia gives 5%.", altCard: "hdfc-millennia" },
     { category: "Dining", reason: "0% on dining. SBI ELITE gives 2.5%, BOB Eterna gives 3.75%.", altCard: "sbi-elite" },
   ],
   pairWith: [
-    { combo: "RBL ShopRite + Axis ACE", fee: "₹999/year", reason: "ShopRite for groceries (5%) and fuel (5%), ACE for everything else (1.5-5%). This combo has no weak categories.", cardId: "axis-ace" },
-    { combo: "RBL ShopRite + HDFC Millennia", fee: "₹1,500/year", reason: "ShopRite for groceries and fuel, Millennia for online shopping and food delivery. Two specialized cards covering each other's gaps.", cardId: "hdfc-millennia" },
+    { combo: "RBL ShopRite + Axis ACE", fee: "₹999/year", reason: "ShopRite for groceries (5%), ACE for bills (5% GPay) and everything else (1.5%). Strong everyday combo.", cardId: "axis-ace" },
+    { combo: "RBL ShopRite + HDFC Millennia", fee: "₹1,500/year", reason: "ShopRite for groceries, Millennia for online shopping and food delivery. Two specialized cards covering each other's gaps.", cardId: "hdfc-millennia" },
   ],
   faq: [
-    { q: "Does 5% fuel cashback really work?", a: "Yes, at fuel stations that accept the card. The 5% is credited as reward points (20 pts/₹100 at ₹0.25/point). Subject to the 5,000 pts/month shared cap." },
+    { q: "Does ShopRite give fuel cashback?", a: "No. Despite many sites claiming 5% on fuel, RBL ShopRite only provides a standard 1% fuel surcharge waiver (max ₹100/month). No reward points on fuel transactions." },
     { q: "Does it work at BigBasket/Blinkit?", a: "The 5% grocery rate typically applies to physical grocery store transactions (MCC-coded as grocery). Online grocery platforms like BigBasket may code differently — check your statements." },
-    { q: "Is the ₹500 fee waivable?", a: "No fee waiver option. The ₹500 is a fixed annual charge. But with ₹15K/month grocery+fuel spend, you earn ₹750/month — the fee is recovered in the first month." },
+    { q: "Is the ₹500 fee waivable?", a: "Yes, fee is waived on ₹1.5L annual spend. The 2000 welcome points (₹500 value) also effectively cover the first year fee." },
   ],
 },
   },

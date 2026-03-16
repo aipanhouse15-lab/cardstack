@@ -150,16 +150,16 @@ The winners might surprise you.`,
 
 We found the exceptions. Here's where to earn actual cashback on your BigBasket, Blinkit, DMart, and supermarket spending.`,
     picks: [
-      { cardId: "rbl-shoprite", badge: "Highest grocery rate: 5%", note: "5% at grocery stores is unmatched. The 5,000 pts/month cap limits beneficial spend to ₹25K (shared with fuel). For pure grocery rewards, nothing else comes close." },
+      { cardId: "rbl-shoprite", badge: "Highest grocery rate: 5%", note: "5% at grocery stores is unmatched. The 1,000 pts/month cap limits beneficial spend to ₹5,000/month (₹250 max cashback). For dedicated grocery rewards, nothing else comes close." },
       { cardId: "sbi-elite", badge: "Best premium grocery card", note: "2.5% on groceries is solid for a mainstream card. Plus BookMyShow BOGO and 14 lounge visits. The all-round premium card that also happens to reward groceries." },
       { cardId: "axis-ace", badge: "Best floor rate for groceries", note: "1.5% on groceries (uncapped). Not the highest, but reliably above average. And 5% on utility bills via GPay covers your household spending broadly." },
       { cardId: "au-lit", badge: "Best if you customize", note: "Set groceries as your Feature Pack category for up to 5%. Requires active management but the rate matches RBL ShopRite." },
     ],
-    verdict: "**RBL ShopRite** is the clear winner for dedicated grocery spending at 5%. Pair it with **Axis ACE** for everything else. If you want one card for groceries + other categories, **SBI ELITE** at 2.5% is the best compromise.",
+    verdict: "**RBL ShopRite** is the clear winner for dedicated grocery spending at 5% (₹250/mo cap). Pair it with **Axis ACE** for everything else. If you want one card for groceries + other categories, **SBI ELITE** at 2.5% is the best compromise.",
     faq: [
       { q: "Does BigBasket/Blinkit count as grocery?", a: "It depends on the MCC code. Physical grocery stores reliably code as grocery. Online platforms like BigBasket may code as online shopping instead. Check your statement for the specific category." },
       { q: "Why don't more cards reward groceries?", a: "Groceries are high-frequency, low-margin transactions. Banks earn less interchange on grocery merchants, so they don't incentivize the category. This is why grocery-focused cards like ShopRite are rare." },
-      { q: "Is 5% on groceries sustainable?", a: "RBL ShopRite caps it at 5,000 pts/month. This limits the bank's liability while giving genuine value to typical grocery spenders (₹10-25K/month range)." },
+      { q: "Is 5% on groceries sustainable?", a: "RBL ShopRite caps it at 1,000 pts/month (₹250). This limits the bank's liability while giving genuine value to typical grocery spenders (up to ₹5K/month)." },
     ],
   },
 
@@ -174,17 +174,16 @@ We found the exceptions. Here's where to earn actual cashback on your BigBasket,
     testSpend: 5000,
     intro: `Fuel is the most excluded category in Indian credit cards. HDFC, ICICI, SBI — nearly all major banks give 0% rewards on fuel transactions. The best most cards offer is a fuel surcharge waiver (saving 1% on the ₹500-₹3,000 transaction range).
 
-But two cards actually earn meaningful rewards at the pump.`,
+Very few cards earn meaningful rewards at the pump.`,
     picks: [
-      { cardId: "rbl-shoprite", badge: "Best fuel card: 5%", note: "5% on fuel is extraordinary — most cards give literally 0%. The 5,000 pts/month cap (shared with groceries) limits beneficial fuel spend, but any fuel reward is better than none." },
-      { cardId: "onecard", badge: "1% on fuel (auto-detected)", note: "If fuel is your top spending category, OneCard's algorithm may select it for 5x points (~1%). Not guaranteed, but one of the few cards that can earn anything on fuel." },
+      { cardId: "onecard", badge: "Possible fuel rewards (auto-detected)", note: "If fuel is your top spending category, OneCard's algorithm may select it for 5x points (~1%). Not guaranteed, but one of the few cards that can earn anything on fuel." },
       { cardId: "axis-ace", badge: "Best general card with fuel tolerance", note: "While Axis ACE officially excludes fuel from cashback, the 1.5% base rate may apply depending on the fuel station MCC. Plus fuel surcharge waiver on ₹400-₹5,000 transactions." },
     ],
-    verdict: "**RBL ShopRite is the only card worth getting specifically for fuel rewards** at 5%. If fuel is a major expense (₹5K+/month), ShopRite earns ₹250/month that you'd get nowhere else. Pair it with any general card for non-fuel spending.",
+    verdict: "**Honest truth: no widely-available card gives great fuel cashback.** Most cards give 0%. The best strategy is to use any card with a fuel surcharge waiver (saves 1%) and not overthink this category. For dedicated fuel cards, look at co-branded options like ICICI HPCL or BPCL SBI Octane (not yet in our database).",
     faq: [
       { q: "Why do cards exclude fuel?", a: "Fuel margins are razor-thin (1-2%), and interchange fees are low on fuel transactions. Banks earn almost nothing when you swipe at a petrol pump, so they exclude fuel from rewards to protect their economics." },
       { q: "What's a fuel surcharge waiver?", a: "Petrol pumps charge 1% extra for card payments (fuel surcharge). Many cards waive this on transactions between ₹400-₹5,000. This saves you 1% but doesn't earn additional cashback." },
-      { q: "Should I pay for fuel with a credit card?", a: "Yes, even without cashback. Fuel surcharge waivers save 1%, you get a 20-50 day payment float, and the transaction builds your credit score. Use RBL ShopRite for actual cashback, or any card with surcharge waiver for the basic benefit." },
+      { q: "Does RBL ShopRite give 5% on fuel?", a: "No. Despite many sites claiming this, RBL ShopRite only gives a standard fuel surcharge waiver. The 5% rate applies only to grocery stores." },
     ],
   },
 

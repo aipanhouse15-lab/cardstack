@@ -12,7 +12,7 @@ When a user asks "which card should I use for [category]?", find the card with t
 - **Travel:** Axis Atlas (5%), BOB Eterna (3.75%), HDFC Infinia (3.33%)
 - **Online Shopping:** HDFC Millennia (5%), HDFC Swiggy Card (5%), SBI Cashback Card (5%)
 - **Groceries:** RBL ShopRite (5%), HDFC Infinia (3.33%), HDFC Diners Black (3.33%)
-- **Fuel:** RBL ShopRite (5%), OneCard (1%)
+- **Fuel:** Most cards give 0%. Only fuel surcharge waiver available. No mainstream card offers significant fuel cashback.
 - **Utilities:** Axis ACE (5%), HDFC Infinia (3.33%), HDFC Diners Black (3.33%)
 - **Entertainment:** HDFC Millennia (5%), HDFC Swiggy Card (5%), HDFC Infinia (3.33%)
 - **Shopping:** HDFC Millennia (5%), HDFC Swiggy Card (5%), AU LIT Credit Card (5%)
@@ -309,16 +309,16 @@ When a user asks "which card should I use for [category]?", find the card with t
 - **Skip if:** You fly less than 15 times a year. HDFC Regalia (18 lounge visits) or BOB Eterna (18 visits) offer similar lounge access with significantly better reward rates.
 
 ### RBL ShopRite
-- **Fee:** ₹500/year | **Fee Waiver:** None | **Network:** Visa/MC | **Lounge:** None | **Type:** Cashback
-- **Rewards:** Dining 0%, Travel 0%, Online Shopping 1.25%, Groceries 5%, Fuel 5%, Utilities 0%, Entertainment 2.5%, Shopping 0%
-- **Cap:** 5,000 points/month (₹1,250 value).
-- **Partner Rates:** Grocery stores: 20 pts/₹100 (5%) | Fuel: 20 pts/₹100 (5%) | BookMyShow movies: 10 pts/₹100 (2.5%) | Online shopping: 5 pts/₹100 (1.25%)
-- **Points:** 5% grocery/fuel, 2.5% movies, 1.25% online, 0.25% other · 5K pts/mo cap · 2000 welcome pts
-- **Pros:** Best grocery rate (5%) | 5% fuel (very rare) | Movie cashback
-- **Cons:** ₹500 fee (not free) | 5000 points/month cap | Near-zero on most categories
-- **Verdict:** The only card in India with 5% on both groceries AND fuel — two categories every other card ignores.
-- **Ideal for:** Families spending ₹10,000+/month on groceries and ₹5,000+/month on fuel. At these levels, ShopRite earns ₹750/month or ₹9,000/year on spending that every other card ignores.
-- **Skip if:** You don't spend much on groceries or fuel. The 0.25% rate on everything else makes this useless as a primary card.
+- **Fee:** ₹500/year | **Fee Waiver:** ₹1.5L annual spend | **Network:** Visa/MC | **Lounge:** None | **Type:** Cashback
+- **Rewards:** Groceries 5%, all other categories 0.25%. Fuel: surcharge waiver only (no cashback).
+- **Cap:** 1,000 points/month (₹250 value). Max beneficial grocery spend: ₹5,000/month.
+- **Partner Rates:** Grocery stores: 20 pts/₹100 (5%) | BookMyShow: 10% discount (max ₹100/ticket, 15x/yr)
+- **Points:** 5% grocery only (1000 pts/mo cap) · 0.25% on everything else · Fuel: surcharge waiver only · 2000 welcome pts (₹500 value)
+- **Pros:** Best grocery rate (5%) | Fee waiver available (₹1.5L) | Welcome bonus covers first year fee
+- **Cons:** Only ₹250/mo max grocery cashback | 0.25% on everything else | No fuel rewards
+- **Verdict:** Best card for dedicated grocery spending at 5%. Does NOT give fuel cashback despite many sites claiming otherwise.
+- **Ideal for:** Families spending ₹5,000+/month on groceries. At ₹5K/month, earns ₹250/month or ₹3,000/year from a ₹500 card.
+- **Skip if:** You don't spend much on groceries. The 0.25% rate on everything else makes this useless as a primary card.
 
 ## Best Card by Category Guides
 
