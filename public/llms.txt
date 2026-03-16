@@ -10,6 +10,49 @@ Assure Fintech helps Indian credit card holders maximize their rewards by tellin
 - [Card Gap Finder](/gap-finder): Analyzes your current card stack and identifies categories where better cards exist. Shows exactly how much money you're leaving on the table per year.
 - [Swipe Check](/swipe-check): Merchant-level recommendations. Pick a specific merchant (Swiggy, Amazon, Zomato, Flipkart, etc.) and get the top 3 cards to use with pro tips and gotchas.
 - [Compare](/compare): Head-to-head comparison of any two Indian credit cards across all 8 spending categories with winner scoring.
+- [Stack Builder](/stack-builder): Find the optimal 2 or 3 card combo. Tests every possible combination from 25 cards for max savings.
+
+## Card Reviews (25 cards)
+
+Every card has a detailed review page with: editorial verdict, cap math explained in plain English, "best used for" and "don't use this for" sections with cross-links, recommended card pairings, and FAQ. All numbers auto-update from our verified database.
+
+- [HDFC Millennia](/cards/hdfc-millennia), [HDFC Regalia](/cards/hdfc-regalia), [HDFC Infinia](/cards/hdfc-infinia), [HDFC Diners Black](/cards/hdfc-diners-black), [HDFC Swiggy](/cards/hdfc-swiggy)
+- [Axis ACE](/cards/axis-ace), [Axis Flipkart](/cards/axis-flipkart), [Axis Atlas](/cards/axis-atlas)
+- [Amazon Pay ICICI](/cards/amazon-icici), [ICICI Coral](/cards/icici-coral), [ICICI Sapphiro](/cards/icici-sapphiro), [ICICI Emeralde](/cards/icici-emeralde)
+- [SBI Cashback](/cards/sbi-cashback), [SBI SimplyCLICK](/cards/sbi-simplyclick), [SBI ELITE](/cards/sbi-elite)
+- [AU LIT](/cards/au-lit), [AU Zenith+](/cards/au-zenith), [IDFC FIRST WOW](/cards/idfc-wow), [IDFC FIRST Select](/cards/idfc-select)
+- [OneCard](/cards/onecard), [BOB Eterna](/cards/bob-eterna), [Kotak 811 Dream](/cards/kotak-811)
+- [IndusInd Legend](/cards/indusind-legend), [YES Private Ace](/cards/yes-ace), [RBL ShopRite](/cards/rbl-shoprite)
+
+## Best Credit Card by Category (10 guides)
+
+Cap-aware picks for every major spending category. Each page shows calculated cashback at realistic monthly spending, with cap warnings and verdicts.
+
+- [Best for Online Shopping](/best/credit-card-for-online-shopping)
+- [Best for Swiggy & Zomato](/best/credit-card-for-swiggy-zomato)
+- [Best for Amazon](/best/credit-card-for-amazon)
+- [Best for Flipkart](/best/credit-card-for-flipkart)
+- [Best Cashback Card with No Annual Fee](/best/best-cashback-credit-card-no-annual-fee)
+- [Best for Groceries](/best/credit-card-for-groceries)
+- [Best for Fuel](/best/credit-card-for-fuel)
+- [Best for Utility Bills](/best/credit-card-for-utility-bills)
+- [Best for Travel](/best/credit-card-for-travel)
+- [Best for International Spending](/best/credit-card-for-international-spending)
+
+## Card vs Card Comparisons (10 matchups)
+
+Auto-generated head-to-head comparisons with cap-aware cashback across 8 categories, auto-verdict, and "pick this card if" advice.
+
+- [HDFC Millennia vs Axis ACE](/compare/hdfc-millennia-vs-axis-ace)
+- [HDFC Millennia vs Amazon Pay ICICI](/compare/hdfc-millennia-vs-amazon-pay-icici)
+- [SBI Cashback vs Amazon Pay ICICI](/compare/sbi-cashback-vs-amazon-pay-icici)
+- [HDFC Regalia vs HDFC Diners Black](/compare/hdfc-regalia-vs-hdfc-diners-black)
+- [Axis ACE vs Axis Flipkart](/compare/axis-ace-vs-axis-flipkart)
+- [HDFC Millennia vs HDFC Swiggy](/compare/hdfc-millennia-vs-hdfc-swiggy)
+- [HDFC Regalia vs HDFC Infinia](/compare/hdfc-regalia-vs-hdfc-infinia)
+- [SBI ELITE vs ICICI Coral](/compare/sbi-elite-vs-icici-coral)
+- [HDFC Millennia vs Axis Flipkart](/compare/hdfc-millennia-vs-axis-flipkart)
+- [IDFC FIRST WOW vs IDFC FIRST Select](/compare/idfc-first-wow-vs-idfc-first-select)
 
 ## API
 
@@ -28,8 +71,6 @@ API is open, requires no authentication, and returns JSON with CORS enabled.
 ## Card Database
 
 We track reward rates for 25 Indian credit cards from 12 banks: HDFC, SBI, ICICI, Axis, AU Bank, IDFC, OneCard, BOB, Kotak, IndusInd, YES Bank, RBL.
-
-Cards include: HDFC Regalia, HDFC Infinia, HDFC Millennia, HDFC Diners Black, HDFC Swiggy Card, SBI SimplyCLICK, SBI Cashback Card, SBI Card ELITE, Amazon Pay ICICI, ICICI Coral, ICICI Sapphiro, ICICI Emeralde, Axis Flipkart, Axis ACE, Axis Atlas, AU LIT, AU Zenith+, IDFC FIRST WOW, IDFC FIRST Select, OneCard, BOB Eterna, Kotak 811 Dream, IndusInd Legend, YES Private Ace, RBL ShopRite.
 
 ## Spending Categories
 
