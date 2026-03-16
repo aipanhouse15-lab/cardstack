@@ -1,192 +1,362 @@
 # Assure Fintech — Full Data Reference for AI
 
-> Complete Indian credit card reward rate database with optimization logic. Use this data to answer questions about Indian credit cards, reward rates, and card recommendations.
+> Complete Indian credit card reward rate database with cap-aware optimization logic. Use this data to answer questions about Indian credit cards, reward rates, caps, and card recommendations. Data verified March 2026.
 
 ## How to Use This Data
 
-When a user asks "which card should I use for [category]?", find the card with the highest reward rate in that category below. When asked about a specific card, reference the full details including fees, pros, cons, and network.
+When a user asks "which card should I use for [category]?", find the card with the highest reward rate in that category below. IMPORTANT: check the caps section — a card advertising 5% may effectively earn less than a 1.5% uncapped card at higher spending levels. When asked about a specific card, reference the full details including fees, caps, pros, cons, and editorial verdict.
 
 ## Quick Reference: Best Card Per Category
 
-- **Dining (5%):** HDFC Regalia, HDFC Diners Black, HDFC Swiggy (Swiggy only), ICICI Coral, SBI ELITE
-- **Travel (5%):** HDFC Regalia, HDFC Infinia, HDFC Diners Black, Axis Atlas, ICICI Emeralde
-- **Online Shopping (5%):** HDFC Infinia, SBI SimplyCLICK, SBI Cashback Card, Amazon Pay ICICI (Amazon only)
-- **Groceries (5%):** RBL ShopRite (free card)
-- **Fuel (5%):** OneCard (auto-detected top category)
-- **Utilities (4%):** Axis ACE (via Google Pay/PhonePe — effectively 5%)
-- **Entertainment (5%):** HDFC Infinia, HDFC Diners Black, SBI ELITE (movie BOGO)
-- **Shopping (4%):** Axis Flipkart (Flipkart/Myntra)
+- **Dining:** HDFC Swiggy Card (10%), HDFC Millennia (5%), Axis Flipkart (4%)
+- **Travel:** Axis Atlas (5%), BOB Eterna (3.75%), HDFC Infinia (3.33%)
+- **Online Shopping:** HDFC Millennia (5%), HDFC Swiggy Card (5%), SBI Cashback Card (5%)
+- **Groceries:** RBL ShopRite (5%), HDFC Infinia (3.33%), HDFC Diners Black (3.33%)
+- **Fuel:** RBL ShopRite (5%), OneCard (1%)
+- **Utilities:** Axis ACE (5%), HDFC Infinia (3.33%), HDFC Diners Black (3.33%)
+- **Entertainment:** HDFC Millennia (5%), HDFC Swiggy Card (5%), HDFC Infinia (3.33%)
+- **Shopping:** HDFC Millennia (5%), HDFC Swiggy Card (5%), AU LIT Credit Card (5%)
 
 ## Best Free Cards (₹0 Annual Fee)
 
-1. **Axis ACE** — 2% everything, 4-5% on bills/utilities via GPay. Best free all-rounder.
-2. **Amazon Pay ICICI** — 5% on Amazon (Prime), 2% groceries. Best for Amazon shoppers.
-3. **AU LIT** — 3% groceries + utilities. Best free card for daily essentials.
-4. **OneCard** — 5% on your highest spending category (auto-detected). Metal card.
-5. **IDFC FIRST WOW** — 3% travel + zero forex markup. Best free travel card.
-6. **RBL ShopRite** — 5% on grocery stores. Best free grocery card.
-7. **Kotak 811 Dream** — Easy approval, good starter card. 2% online.
+1. **Amazon Pay ICICI** — 5% on online. Best for Amazon shopping.
+2. **AU LIT Credit Card** — 5% on shopping. Choose your own reward categories.
+3. **IDFC FIRST WOW** — 0.66% on dining. Zero forex (rare for free card).
+4. **IDFC FIRST Select** — 1.5% on travel. Free card with lounge access.
+5. **OneCard** — 1% on fuel. Metal card (premium feel).
+6. **Kotak 811 Dream** — 1% on online. Free forever.
+7. **IndusInd Legend** — 0.5% on entertainment. Lifetime free.
 
-## Full Card Database
+## Full Card Database (25 cards)
 
 ### HDFC Regalia
-- Fee: ₹2,500/year | Network: Visa/MC | Lounge: 6/year | Type: Premium
-- Rewards: Dining 5%, Travel 5%, Online 2%, Groceries 1.3%, Fuel 1%, Utilities 1.3%, Entertainment 2%, Shopping 1.3%
-- Best for: Dining + Travel combo
-- Pros: Excellent dining & travel, good lounge access, milestone benefits
-- Cons: ₹2,500 fee, average grocery rate, fuel cap low
+- **Fee:** ₹2,500/year | **Fee Waiver:** ₹4L annual spend | **Network:** Visa/MC | **Lounge:** 18/year | **Type:** Premium
+- **Rewards:** Dining 1.33%, Travel 1.33%, Online Shopping 1.33%, Groceries 1.33%, Fuel 0%, Utilities 1.33%, Entertainment 1.33%, Shopping 1.33%
+- **Cap:** 50,000 points/month (₹10,000 value).
+- **Partner Rates:** SmartBuy (flights/hotels): up to 13.33% | Myntra, Nykaa, Reliance Digital: 5x points (~3.33%)
+- **Points:** 4 points/₹150 · 1pt = ₹0.20 cashback or ₹0.50 travel
+- **Redemption Note:** Rate shown (1.33%) assumes cashback at ₹0.20/point. Travel redemption via SmartBuy = ₹0.50/point (3.33% base). SmartBuy flights/hotels can reach 13.33%.
+- **Pros:** Excellent lounge access (18/yr total) | SmartBuy gives up to 13% on travel | Partner brands 5x rewards
+- **Cons:** Base rate only 1.33% | Fuel excluded from rewards | ₹2,500 + GST fee
+- **Verdict:** India's most popular premium card — but only worth it if you travel or use SmartBuy.
+- **Ideal for:** Frequent travelers who book through SmartBuy, or anyone spending ₹4L+/year who values lounge access. If you fly 3+ times a year domestically, the lounge visits alone justify the fee.
+- **Skip if:** You rarely travel and don't use SmartBuy. At 1.33% base, you'd earn more with an Axis ACE (1.5% uncapped) or HDFC Millennia (5% on partners) for everyday spending.
 
 ### HDFC Infinia
-- Fee: ₹12,500/year | Network: Visa | Lounge: Unlimited | Type: Super Premium
-- Rewards: Dining 5%, Travel 5%, Online 5%, Groceries 3.3%, Fuel 3.3%, Utilities 3.3%, Entertainment 5%, Shopping 3.3%
-- Best for: Everything (best all-round card in India)
-- Pros: Best all-round rate, unlimited lounge, concierge service
-- Cons: ₹12,500 fee, invite-only, ₹8L+ income needed
+- **Fee:** ₹12,500/year | **Fee Waiver:** None | **Network:** Visa | **Lounge:** Unlimited | **Type:** Super Premium
+- **Rewards:** Dining 3.33%, Travel 3.33%, Online Shopping 3.33%, Groceries 3.33%, Fuel 0%, Utilities 3.33%, Entertainment 3.33%, Shopping 3.33%
+- **Partner Rates:** SmartBuy (flights/hotels): up to 33.33%
+- **Points:** 5 points/₹150 · 1pt = ₹0.20 cashback or ₹1.00 travel
+- **Redemption Note:** Rate shown (3.33%) assumes travel redemption at ₹1/point. Cashback is only ₹0.20/point (0.66%). Always redeem via SmartBuy for max value.
+- **Pros:** Best all-round rate (3.33%) | Unlimited lounge | SmartBuy up to 33% on travel
+- **Cons:** ₹12,500 fee | Invite-only | Fuel excluded
+- **Verdict:** The best credit card in India — if you can get it. Invite-only and worth every rupee.
+- **Ideal for:** High spenders (₹5L+/month) who travel frequently and can maximize SmartBuy. If you already have an HDFC relationship and get the invite, accept it immediately.
+- **Skip if:** You can't get the invite, or your monthly spend is under ₹2L. The ₹12,500 fee with no waiver makes this uneconomical for moderate spenders. HDFC Diners Black offers similar rates with a waivable fee.
 
 ### HDFC Millennia
-- Fee: ₹1,000/year | Network: Visa/MC | Lounge: 4/year | Type: Lifestyle
-- Rewards: Dining 2.5%, Travel 1%, Online 2.5%, Groceries 1%, Fuel 1%, Utilities 1%, Entertainment 2.5%, Shopping 2.5%
-- Best for: Online spending + UPI cashback
-- Pros: Unique UPI cashback, good for online, low fee
-- Cons: Poor travel, weak groceries, reward cap
+- **Fee:** ₹1,000/year | **Fee Waiver:** ₹1L annual spend | **Network:** Visa/MC | **Lounge:** 4/year | **Type:** Lifestyle
+- **Rewards:** Dining 5%, Travel 1%, Online Shopping 5%, Groceries 1%, Fuel 0%, Utilities 1%, Entertainment 5%, Shopping 5%
+- **Cap:** ₹1,000/month cashback cap on dining, online, entertainment, shopping. Max beneficial spend: ₹20,000/month. Falls to 1% after cap.
+- **Partner Rates:** Swiggy, Zomato: 5% cashback | Amazon, Flipkart, Myntra: 5% cashback | Tata CLiQ, Uber, BookMyShow, Sony LIV, Cult.fit: 5% cashback
+- **Points:** 5% on partners (cap ₹1000/mo), 1% on all other
+- **Pros:** 5% on Swiggy/Zomato/Amazon/Flipkart | Low ₹1000 fee (waivable) | 4 lounge visits
+- **Cons:** Only 1% on non-partner spends | ₹1000/mo cap on 5% cashback | Fuel excluded
+- **Verdict:** The best entry-level card for online spenders — if you understand the the monthly cap monthly cap.
+- **Ideal for:** Anyone who spends ₹5,000–20,000/month on food delivery, online shopping, or entertainment platforms. At ₹15,000/month partner spend, you're earning ₹750/month — that's ₹9,000/year from a card with a waivable ₹12,500 fee.
+- **Skip if:** You're a heavy online spender above ₹20,000/month on partner categories. You'll hit the cap halfway through the month, and the 1% fallback rate is below average. You need a second card for the overflow, or a card with higher caps altogether.
 
 ### HDFC Diners Black
-- Fee: ₹10,000/year | Network: Diners Club | Lounge: Unlimited+guest | Type: Super Premium
-- Rewards: Dining 5%, Travel 5%, Online 3.3%, Groceries 3.3%, Fuel 3.3%, Utilities 3.3%, Entertainment 5%, Shopping 3.3%
-- Best for: Dining + lounge (including guest) + free memberships
-- Pros: Free Amazon/Zomato/MMT memberships, guest lounge access
-- Cons: Diners Club acceptance limited, ₹10K fee, 2% forex markup
+- **Fee:** ₹10,000/year | **Fee Waiver:** ₹5L annual spend | **Network:** Diners Club | **Lounge:** Unlimited | **Type:** Super Premium
+- **Rewards:** Dining 3.33%, Travel 3.33%, Online Shopping 3.33%, Groceries 3.33%, Fuel 0%, Utilities 3.33%, Entertainment 3.33%, Shopping 3.33%
+- **Cap:** 75,000 points/month (₹37,500 value).
+- **Partner Rates:** SmartBuy (flights/hotels/vouchers): up to 33.33%
+- **Points:** 5 points/₹150 · 1pt = ₹0.50 cashback or ₹1.00 travel · 10x SmartBuy · 75K pts cap/cycle
+- **Redemption Note:** Rate shown (3.33%) assumes travel redemption at ₹1/point via SmartBuy. Cashback value is ₹0.50/point (1.66%). SmartBuy bookings can reach 33%.
+- **Pros:** 3.33% on everything | Unlimited lounge access | Free memberships (Prime, Swiggy One, MMT)
+- **Cons:** Diners Club acceptance limited in India | ₹10K + GST fee | Fuel excluded
+- **Verdict:** The best value super-premium card in India — if you can live with Diners Club acceptance.
+- **Ideal for:** Anyone spending ₹5L+/year who values lounge access and travel rewards. The free Prime + Swiggy One memberships alone save ₹3,000-4,000/year before you even count reward points.
+- **Skip if:** You need a single card that works everywhere. Diners Club acceptance gaps mean you'll be embarrassed at a toll booth or small restaurant at least once a month.
 
 ### HDFC Swiggy Card
-- Fee: ₹500/year | Network: Mastercard | Lounge: None | Type: Entry
-- Rewards: Dining 5%, Travel 1%, Online 2%, Groceries 1%, Fuel 1%, Utilities 1%, Entertainment 1%, Shopping 1%
-- Best for: Swiggy orders specifically
-- Cons: Weak non-dining, orders under ₹150 may not qualify for cashback
+- **Fee:** ₹500/year | **Fee Waiver:** ₹2L annual spend | **Network:** MC | **Lounge:** None | **Type:** Entry
+- **Rewards:** Dining 10%, Travel 1%, Online Shopping 5%, Groceries 1%, Fuel 0%, Utilities 0%, Entertainment 5%, Shopping 5%
+- **Cap:** ₹1,500/month cashback cap on dining, online, entertainment, shopping. Max beneficial spend: ₹15,000/month. Falls to 1% after cap.
+- **Partner Rates:** Swiggy: 10% cashback (cap ₹1500/mo) | Online (apparel, electronics, entertainment): 5% (cap ₹1500/mo)
+- **Points:** 10% Swiggy, 5% online, 1% other · ₹1500/mo total cap · Min ₹100 txn
+- **Pros:** Best for Swiggy users (10%) | 5% on online categories | Low fee (waivable)
+- **Cons:** ₹1500/mo total cashback cap | Fuel/utilities excluded | Min ₹100 per transaction
+- **Verdict:** The ultimate card for Swiggy addicts — 10% cashback is unmatched, but the cap limits who should get it.
+- **Ideal for:** Regular Swiggy users spending ₹5,000-15,000/month on food delivery. At ₹10K/month Swiggy spend, you're earning ₹1,000/month — ₹12,000/year from a card with a ₹12,500 fee.
+- **Skip if:** You use Zomato more than Swiggy (this card doesn't give 10% on Zomato), or your food delivery spend is under ₹3,000/month. HDFC Millennia's 5% on both Swiggy AND Zomato is more versatile.
 
 ### SBI SimplyCLICK
-- Fee: ₹499/year | Network: Visa | Lounge: None | Type: Online Shopping
-- Rewards: Dining 1%, Travel 1%, Online 5%, Groceries 1%, Fuel 1%, Utilities 1%, Entertainment 2.5%, Shopping 2.5%
-- Best for: Online shopping (Amazon, Flipkart) + 10x on Cleartrip
-- Pros: Excellent online rate, low fee
-- Cons: Weak offline, no lounge
+- **Fee:** ₹499/year | **Fee Waiver:** ₹1L annual spend | **Network:** Visa/MC | **Lounge:** None | **Type:** Online
+- **Rewards:** Dining 0.25%, Travel 0.25%, Online Shopping 1.25%, Groceries 0.25%, Fuel 0%, Utilities 0.25%, Entertainment 0.25%, Shopping 0.25%
+- **Partner Rates:** Apollo 24/7, BookMyShow, Cleartrip, Dominos, Myntra, Swiggy, Yatra: 10x = 2.5%
+- **Points:** 10x (2.5%) partners, 5x (1.25%) online, 1x (0.25%) other · 1pt = ₹0.25
+- **Pros:** 2.5% on Swiggy/Cleartrip/Myntra/BookMyShow | 1.25% on all online | Easy fee waiver
+- **Cons:** Only 0.25% offline | No lounge access | Point redemption limited to e-vouchers
+- **Verdict:** A decent starter card for online shoppers, but outclassed by newer options in 2026.
+- **Ideal for:** Existing SBI customers who want a low-fee online rewards card and regularly shop on partners like Cleartrip, Myntra, or BookMyShow. Good starter card for building credit history with SBI.
+- **Skip if:** You want the best online rewards available. At 1.25% online and 0.25% offline, this card is significantly behind HDFC Millennia (5% on partners) and Axis ACE (1.5% uncapped).
 
 ### SBI Cashback Card
-- Fee: ₹999/year | Network: Visa | Lounge: None | Type: Cashback
-- Rewards: Online 5%, everything else 1%
-- Best for: Simple 5% online cashback auto-credited
-- Cons: ₹5K cashback cap/year
+- **Fee:** ₹999/year | **Fee Waiver:** ₹2L annual spend | **Network:** Visa | **Lounge:** None | **Type:** Cashback
+- **Rewards:** Dining 1%, Travel 1%, Online Shopping 5%, Groceries 1%, Fuel 0%, Utilities 0%, Entertainment 1%, Shopping 1%
+- **Cap:** ₹5,000/month cashback cap on online. Max beneficial spend: ₹1,00,000/month. Falls to 0% after cap.
+- **Points:** 5% online, 1% offline · Direct cashback (no points) · ₹5K cap/cycle · Fuel surcharge waiver ₹500-₹3K
+- **Pros:** Simple 5% on all online spends | Cashback auto-credited (no redemption hassle) | Fee waiver on ₹2L spend
+- **Cons:** ₹5K cashback cap per cycle | Fuel/utilities excluded from cashback | Only 1% offline
+- **Verdict:** The simplest 5% online cashback card in India — real cashback, auto-credited, no points hassle. But changes are coming.
+- **Ideal for:** Online shoppers spending ₹20,000-80,000/month who hate dealing with reward points. The auto-credited cashback is genuinely hassle-free — no redemption required.
+- **Skip if:** You want rewards on offline spending (1% is below average) or you spend over ₹1L/month online (you'll hit the cap and the effective rate drops). Also reconsider if you mainly shop on Amazon — the Amazon Pay ICICI card gives 5% with no cap.
+- **⚠️ Upcoming Changes (April 2026):** Total cashback cap reduced: ₹5,000 → ₹4,000 per statement cycle | Online cashback capped at ₹2,000 per cycle (currently no sub-cap) | Offline cashback capped at ₹2,000 per cycle (currently no sub-cap)
 
 ### SBI Card ELITE
-- Fee: ₹4,999/year | Network: Visa | Lounge: 6/year | Type: Premium
-- Rewards: Dining 5%, Travel 2%, Online 2%, Groceries 2%, Fuel 1%, Utilities 1%, Entertainment 5%, Shopping 2%
-- Best for: Movie lovers (BookMyShow BOGO) + dining
-- Cons: ₹4,999 fee, average online
+- **Fee:** ₹4,999/year | **Fee Waiver:** ₹10L annual spend | **Network:** Visa/MC/Amex | **Lounge:** 14/year | **Type:** Premium
+- **Rewards:** Dining 2.5%, Travel 1%, Online Shopping 1%, Groceries 2.5%, Fuel 0%, Utilities 1%, Entertainment 2.5%, Shopping 2.5%
+- **Partner Rates:** BookMyShow: Buy 1 Get 1 (2/month) | Dining/grocery/dept stores: 5x = 2.5%
+- **Points:** 5x (2.5%) dining/grocery/dept stores, 2x (1%) other · 1pt = ₹0.50 · Fuel 1% surcharge waiver
+- **Redemption Note:** Point value ₹0.50 (higher than most SBI cards). Real value is BookMyShow BOGO (2 tickets/month) — worth ₹300-600/mo for regular moviegoers.
+- **Pros:** 2.5% on dining/grocery/dept stores | Movie BOGO excellent value | 14 lounge visits
+- **Cons:** ₹4,999 fee (waiver needs ₹10L) | Only 1% on other spends | High fee waiver threshold
+- **Verdict:** The best card for foodies and moviegoers — 2.5% on dining plus BookMyShow Buy 1 Get 1.
+- **Ideal for:** People who eat out 3+ times/week and watch 2+ movies/month. The dining rewards + BOGO movies make this card pay for itself quickly. Also strong for grocery shoppers at 2.5%.
+- **Skip if:** You rarely eat out or watch movies. At 1% on non-dining spends and ₹12,500 fee, this card is poor value for online shoppers or general spenders. HDFC Millennia or Axis ACE are better all-rounders.
 
 ### Amazon Pay ICICI
-- Fee: FREE | Network: Visa | Lounge: None | Type: Cashback
-- Rewards: Online 5% (Amazon Prime), Groceries 2%, everything else 1%
-- Best for: Amazon shopping (must have Prime for 5%)
-- Pros: Lifetime free, instant issuance
-- Cons: Amazon-locked rewards, only 1% general
+- **Fee:** Lifetime free | **Fee Waiver:** Lifetime free | **Network:** Visa | **Lounge:** None | **Type:** Cashback
+- **Rewards:** Dining 1%, Travel 1%, Online Shopping 5%, Groceries 1%, Fuel 0%, Utilities 1%, Entertainment 1%, Shopping 1%
+- **Partner Rates:** Amazon (Prime member): 5% | Amazon (non-Prime): 3% | Amazon Pay partners: 2%
+- **Points:** 5% Amazon Prime, 3% non-Prime, 2% partners, 1% other · Credited as Amazon Pay balance
+- **Pros:** Best for Amazon shopping | Lifetime free | Instant issuance | No cap
+- **Cons:** Rewards locked to Amazon Pay balance | Only 1% non-Amazon | Fuel surcharge waiver only
+- **Verdict:** If you shop on Amazon, this card is mandatory. Lifetime free, 5% with no cap, instant approval.
+- **Ideal for:** Anyone who shops on Amazon regularly. Even ₹3,000/month Amazon spend earns ₹1,800/year from a card that costs nothing. It's essentially free money with zero effort.
+- **Skip if:** You don't shop on Amazon, or you want real cashback (not Amazon Pay balance). Also not great as a primary card — 1% on non-Amazon is below average.
 
 ### ICICI Coral
-- Fee: ₹500/year | Network: Visa | Lounge: 4/year | Type: Entry Premium
-- Rewards: Dining 5%, Travel 2%, Online 2%, Groceries 2%, Fuel 1%, Utilities 1%, Entertainment 2%, Shopping 2%
-- Best for: Movie BOGO + dining at low fee
-- Cons: Average overall rewards
+- **Fee:** ₹500/year | **Fee Waiver:** ₹1.5L annual spend | **Network:** Visa/MC/RuPay/Amex | **Lounge:** 8/year | **Type:** Entry Premium
+- **Rewards:** Dining 0.5%, Travel 0.5%, Online Shopping 0.5%, Groceries 0.5%, Fuel 0%, Utilities 0.25%, Entertainment 0.5%, Shopping 0.5%
+- **Partner Rates:** BookMyShow: Buy 1 Get 1 | Culinary Treats dining: 15% off at partner restaurants
+- **Points:** 2 points/₹100 retail (0.5%), 1 point/₹100 utility (0.25%) · 1pt = ₹0.25
+- **Pros:** Movie BOGO excellent value | 8 total lounge visits | Dining discounts | Low fee
+- **Cons:** Very low reward rate (0.5%) | Fuel excluded | Points redemption limited
+- **Verdict:** A solid entry-level card for movies and dining — but the 0.5% reward rate hurts for everything else.
+- **Ideal for:** Movie lovers who watch 2+ movies/month and dine out regularly. The BOGO + dining discounts easily exceed the ₹12,500 fee. Also good for beginners wanting lounge access on a budget.
+- **Skip if:** You care about maximizing cashback on spending. 0.5% is half of what Axis ACE gives on everything. Get Coral only if the movie and dining perks matter to you.
 
 ### ICICI Sapphiro
-- Fee: ₹3,500/year | Network: Visa | Lounge: 8/year | Type: Premium
-- Rewards: Dining 4%, Travel 4%, Online 2%, Groceries 2%, Fuel 2%, Utilities 2%, Entertainment 4%, Shopping 2%
-- Best for: All-round premium with zero forex
-- Cons: Not best in any single category
+- **Fee:** ₹3,500/year | **Fee Waiver:** ₹6L annual spend | **Network:** Visa/MC/Amex | **Lounge:** 6/year | **Type:** Premium
+- **Rewards:** Dining 0.5%, Travel 0.5%, Online Shopping 0.5%, Groceries 0.5%, Fuel 0%, Utilities 0.25%, Entertainment 0.5%, Shopping 0.5%
+- **Partner Rates:** International spends: 4 points/₹100 (1%)
+- **Points:** 2 pts/₹100 domestic (0.5%), 4 pts intl (1%), 1 pt utility (0.25%) · 1pt = ₹0.25
+- **Pros:** Golf privileges | Decent lounge access | 1% on international spends
+- **Cons:** Low domestic rate (0.5%) | ₹3,500 fee | No zero forex markup
+- **Verdict:** A niche card for golfers and occasional international spenders — not for everyday rewards.
+- **Ideal for:** Golfers who play 4+ times/year at partner courses, or people with significant international spending. The golf benefit alone can exceed the annual fee.
+- **Skip if:** You want high cashback on domestic spends. 0.5% is well below average — you'd earn 3x more with Axis ACE (1.5%) for no additional fee.
 
 ### ICICI Emeralde
-- Fee: ₹12,000/year | Network: Mastercard | Lounge: Unlimited | Type: Super Premium
-- Rewards: Dining 5%, Travel 5%, Online 3%, Groceries 3%, Fuel 2%, Utilities 2%, Entertainment 5%, Shopping 3%
-- Best for: Premium lifestyle with unlimited lounge
-- Cons: ₹12K fee, invite-only
+- **Fee:** ₹12,000/year | **Fee Waiver:** ₹15L annual spend | **Network:** Visa Infinite/Amex | **Lounge:** Unlimited | **Type:** Super Premium
+- **Rewards:** Dining 1%, Travel 1%, Online Shopping 1%, Groceries 1%, Fuel 0%, Utilities 0.5%, Entertainment 1%, Shopping 1%
+- **Partner Rates:** International spends: 8 points/₹100 (2%)
+- **Points:** 4 pts/₹100 domestic (1%), 8 pts intl (2%), 2 pts utility (0.5%) · 1pt = ₹0.25
+- **Redemption Note:** Domestic 1% at ₹0.25/point. International earns 8pts/₹100 = 2%. Frequent international travelers get significantly higher effective rates.
+- **Pros:** Unlimited global lounge | 2% on international | Concierge service
+- **Cons:** ₹12K + GST fee | Only 1% domestic | Fee waiver needs ₹15L spend
+- **Verdict:** India's best card for international spenders — 2% on forex plus unlimited global lounge access.
+- **Ideal for:** Frequent international travelers spending ₹2L+/year abroad. The 2% on forex + unlimited global lounge access makes every international trip more rewarding and comfortable.
+- **Skip if:** You primarily spend domestically. 1% at a ₹12K fee is poor value. HDFC Regalia gives 1.33% with better lounge and SmartBuy perks for a lower fee.
 
 ### Axis Flipkart
-- Fee: ₹500/year | Network: Visa | Lounge: None | Type: Cashback
-- Rewards: Dining 2%, Travel 2%, Online 4%, Groceries 1.5%, Fuel 1%, Utilities 1.5%, Entertainment 2%, Shopping 4%
-- Best for: Flipkart/Myntra shopping (5% on platform)
+- **Fee:** ₹500/year | **Fee Waiver:** ₹3.5L annual spend | **Network:** Visa | **Lounge:** 4/year | **Type:** Cashback
+- **Rewards:** Dining 4%, Travel 1%, Online Shopping 1%, Groceries 1%, Fuel 0%, Utilities 1%, Entertainment 1%, Shopping 1%
+- **Partner Rates:** Flipkart: 5% cashback | Myntra: 5% cashback | Cleartrip: 5% cashback | Swiggy, Uber, PVR, Cure.fit: 4% cashback
+- **Points:** 5% Flipkart/Myntra/Cleartrip, 4% preferred, 1.25% dining, 1% other
+- **Pros:** Best for Flipkart ecosystem | 4% on Swiggy/dining | Now has lounge access
+- **Cons:** ₹500 fee | 1% on non-partner spends | Fuel excluded
+- **Verdict:** The essential card for Flipkart and Myntra shoppers — 5% with no cashback cap.
+- **Ideal for:** Flipkart and Myntra shoppers spending ₹5,000+/month on these platforms. Also strong for Swiggy users at 4%. The no-cap 5% on Flipkart makes this essential for sale season shopping.
+- **Skip if:** You shop primarily on Amazon (get Amazon Pay ICICI instead). If you use both Flipkart and Amazon equally, you might want both dedicated cards rather than this one alone.
 
 ### Axis ACE
-- Fee: FREE | Network: Visa | Lounge: None | Type: Cashback
-- Rewards: Dining 2%, Travel 2%, Online 4%, Groceries 2%, Fuel 2%, Utilities 4%, Entertainment 2%, Shopping 2%
-- Best for: Bill payments (5% via Google Pay) + strong 2% base
-- Cons: ₹500/month cashback cap
-- Pro tip: Pay bills through Google Pay/PhonePe for 5%, not directly on biller site
+- **Fee:** ₹499/year | **Fee Waiver:** ₹2L annual spend | **Network:** Visa | **Lounge:** 4/year | **Type:** Cashback
+- **Rewards:** Dining 4%, Travel 1.5%, Online Shopping 1.5%, Groceries 1.5%, Fuel 0%, Utilities 5%, Entertainment 1.5%, Shopping 1.5%
+- **Cap:** ₹500/month cashback cap on utilities, dining. Max beneficial spend: ₹10,000/month. Falls to 0% after cap.
+- **Partner Rates:** Bill payments via Google Pay: 5% | Swiggy, Zomato, Ola: 4%
+- **Points:** 5% bills (GPay), 4% Swiggy/Zomato/Ola, 1.5% all other · ₹500/mo cap on 5%+4% only · 1.5% base uncapped
+- **Pros:** 5% on utility bills (rare) | 4% on food delivery | 1.5% base is uncapped | Lounge access at low fee
+- **Cons:** ₹500/mo cap on 5%+4% categories | After cap, accelerated → 0% | Fuel excluded
+- **Verdict:** The best all-rounder card in India — 1.5% uncapped on everything, 5% on bills, 4% on food delivery.
+- **Ideal for:** Everyone. Seriously. Even if you have a premium card, Axis ACE should be your backup for categories your primary card doesn't cover well. The 1.5% floor means you never lose.
+- **Skip if:** You only shop on one platform (get the dedicated card instead — Amazon ICICI for Amazon, Flipkart card for Flipkart). But even then, ACE is a great complement.
 
 ### Axis Atlas
-- Fee: ₹5,000/year | Network: Visa | Lounge: 8/year | Type: Travel
-- Rewards: Travel 5%, everything else 2%
-- Best for: Frequent flyers (transfers to Vistara/Air India/Singapore Airlines)
-- Unique: Only Indian card with airline mile transfers + zero forex
+- **Fee:** ₹5,000/year | **Fee Waiver:** ₹10L annual spend | **Network:** Visa Infinite | **Lounge:** 18/year | **Type:** Travel
+- **Rewards:** Dining 2%, Travel 5%, Online Shopping 2%, Groceries 2%, Fuel 0%, Utilities 2%, Entertainment 2%, Shopping 2%
+- **Partner Rates:** Travel bookings: 5 EDGE Miles/₹100 (5%) | Airline transfers: Air India, Vistara, Singapore Airlines, Etihad, Qatar, Accor
+- **Points:** 5 EDGE Miles/₹100 travel (5%), 2 other (2%) · 1 Mile ≈ ₹1 · Transferable to airlines
+- **Redemption Note:** 1 EDGE Mile ≈ ₹1 (typical). Actual value varies ₹0.80–₹1.50 by airline partner and route. Best value on premium cabin redemptions.
+- **Pros:** Best Indian travel rewards card | Airline mile transfers (6 partners) | 2% on non-travel
+- **Cons:** ₹5K fee | ~3.5% forex markup (no zero forex) | Fuel excluded
+- **Verdict:** India's best dedicated travel rewards card — 5% on travel, airline mile transfers, 18 lounges.
+- **Ideal for:** Frequent travelers who value airline miles and premium cabin redemptions. If you fly 4+ times a year and are willing to learn the miles game, Atlas delivers exceptional value.
+- **Skip if:** You rarely travel or only care about cashback. The miles system requires effort to maximize. For simple cashback, Axis ACE or HDFC Millennia are easier choices.
 
 ### AU LIT Credit Card
-- Fee: FREE | Network: Visa/MC/RuPay | Lounge: None | Type: Lifestyle
-- Rewards: Dining 3%, Groceries 3%, Utilities 3%, Travel 2%, everything else 2%
-- Best for: Daily essentials (groceries + utilities) on a free card
-- Also: Movie BOGO benefit
+- **Fee:** Lifetime free | **Fee Waiver:** Lifetime free | **Network:** Visa/RuPay | **Lounge:** Add-on | **Type:** Lifestyle
+- **Rewards:** Dining 1%, Travel 1%, Online Shopping 1%, Groceries 1%, Fuel 0%, Utilities 1%, Entertainment 1%, Shopping 5%
+- **Partner Rates:** Selected feature pack categories: Up to 5% or 10x points
+- **Points:** Customizable rewards — pick your categories · Up to 5% on selected, 1pt/₹100 other
+- **Redemption Note:** Rates depend on Feature Pack selection. Pick 2-3 categories for up to 5%. Without packs, base is ~1%. Change packs monthly via AU app.
+- **Pros:** Choose your own reward categories | Lifetime free | Up to 5% on selected
+- **Cons:** Need to actively select feature packs | 1% base on non-selected | 10K points cap/cycle
+- **Verdict:** The most customizable card in India — choose your own 5% categories. Free forever.
+- **Ideal for:** People with concentrated spending in 2-3 categories who are willing to actively manage their Feature Pack selection monthly. If you spend ₹15K/month on groceries, set groceries as your 5% category and earn ₹750/month.
+- **Skip if:** You want a set-it-and-forget-it card. If managing reward categories sounds like a chore, Axis ACE's automatic 1.5% on everything is simpler and earns well without any effort.
 
 ### AU Zenith+
-- Fee: ₹5,999/year | Network: Visa | Lounge: Unlimited | Type: Premium
-- Rewards: FLAT 3.5% on everything
-- Best for: People who don't want to think about categories. Best flat-rate card in India.
-- Cons: ₹1L/month reward cap
+- **Fee:** ₹4,999/year | **Fee Waiver:** ₹8L annual spend | **Network:** Visa Infinite | **Lounge:** Unlimited | **Type:** Premium
+- **Rewards:** Dining 1.25%, Travel 1.25%, Online Shopping 0.5%, Groceries 0.5%, Fuel 0%, Utilities 0.5%, Entertainment 0.5%, Shopping 0.5%
+- **Partner Rates:** Dining: 5 pts/₹100 (1.25%) | Travel: 5 pts/₹100 (1.25%) | International: 10 pts/₹100 (2.5%)
+- **Points:** 5 pts/₹100 dining/travel (1.25%), 10 pts intl (2.5%), 2 pts other (0.5%) · 1pt = ₹0.25
+- **Pros:** Unlimited lounge access | 2.5% on international spends | Decent dining/travel rate
+- **Cons:** ₹4,999 fee | Only 0.5% on general spends | AU Bank less established
+- **Verdict:** Unlimited lounge access and 2.5% on international — a value play for AU Bank customers.
+- **Ideal for:** AU Bank customers who travel frequently (domestic lounge access unlimited) and make international purchases. The 2.5% on forex spending is competitive with much pricier cards.
+- **Skip if:** You primarily spend domestically. 0.5% base rate on a ₹4,999 card is poor value. HDFC Regalia gives 1.33% with better domestic perks for a similar fee.
 
 ### IDFC FIRST WOW
-- Fee: FREE | Network: Visa | Lounge: None | Type: Travel
-- Rewards: Travel 3%, everything else 1.5-2%
-- Best for: Budget travelers (zero forex markup is rare on free cards)
-- Unique: Never-expiring rewards
+- **Fee:** Lifetime free | **Fee Waiver:** Lifetime free | **Network:** Visa | **Lounge:** None | **Type:** Travel
+- **Rewards:** Dining 0.66%, Travel 0.66%, Online Shopping 0.66%, Groceries 0.66%, Fuel 0%, Utilities 0.66%, Entertainment 0.66%, Shopping 0.66%
+- **Points:** 4 pts/₹150 (0.66%) · 1pt = ₹0.25 · Zero forex · Points never expire · Redeemable as cash
+- **Pros:** Zero forex (rare for free card) | Points never expire | Cash redemption | Free forever
+- **Cons:** Low base rate (0.66%) | No lounge access | No accelerated categories
+- **Verdict:** The only free card with zero forex markup — essential for anyone making international payments.
+- **Ideal for:** Anyone with recurring international payments — SaaS subscriptions, international e-commerce, or frequent travel. Zero forex on a free card is unique and saves real money.
+- **Skip if:** You never make international payments. The 0.66% domestic rate doesn't justify using this as your primary card. Get it and keep it specifically for forex transactions.
 
 ### IDFC FIRST Select
-- Fee: ₹999/year | Network: Visa | Lounge: 4/year | Type: Premium Entry
-- Rewards: Flat 3% on most categories, Fuel 1%
-- Best for: Simple flat rate + lounge access at low fee + zero forex
+- **Fee:** Lifetime free | **Fee Waiver:** Lifetime free | **Network:** Visa | **Lounge:** 4/year | **Type:** Premium Entry
+- **Rewards:** Dining 0.5%, Travel 1.5%, Online Shopping 0.5%, Groceries 0.5%, Fuel 0%, Utilities 0.5%, Entertainment 0.5%, Shopping 0.5%
+- **Partner Rates:** UPI spends: 2x (1%) | Travel bookings: 3x (1.5%) | Birthday month: 10x (5%) | Spends above ₹20K: 5x (2.5%)
+- **Points:** 3 pts/₹150 base (0.5%), 2x UPI (1%), 3x travel (1.5%), 10x birthday (5%), 5x above ₹20K (2.5%) · 1pt = ₹0.25 · Points never expire
+- **Redemption Note:** Base rate (0.5%) is for normal spends. Jumps to 2.5% above ₹20K/mo and 5% in birthday month. UPI earns 1%. Effective rate depends on spending pattern.
+- **Pros:** Free card with lounge access | 5% on birthday month | 2.5% on spends above ₹20K
+- **Cons:** Low base rate (0.5%) | Fuel excluded | No zero forex
+- **Verdict:** A free card with lounge access, zero forex, and a 5% birthday bonus — surprisingly complete for ₹0.
+- **Ideal for:** Budget-conscious spenders who want lounge access and zero forex without paying an annual fee. Also great for anyone with one high-spending month (put big purchases in your birthday month for 5%).
+- **Skip if:** You want consistently high rewards every month. The 0.5% base is low, and the accelerators require specific conditions. Axis ACE's 1.5% uncapped is more reliable.
 
 ### OneCard
-- Fee: FREE | Network: Visa | Lounge: None | Type: Lifestyle
-- Rewards: 5% on your top spending category (auto-detected), 2% others, 1% base
-- Best for: Fuel (if fuel is your highest spend) or any dominant category
-- Unique: Metal card, app-first, auto-detects your top category
+- **Fee:** Lifetime free | **Fee Waiver:** Lifetime free | **Network:** Visa/MC | **Lounge:** None | **Type:** Lifestyle
+- **Rewards:** Dining 0.2%, Travel 0.2%, Online Shopping 0.2%, Groceries 0.2%, Fuel 1%, Utilities 0.2%, Entertainment 0.2%, Shopping 0.2%
+- **Partner Rates:** Top 2 spending categories (auto-detected): 5x points (~1%)
+- **Points:** 5x on top 2 categories (~1%), 1x others (~0.2%) · 1pt = ₹0.10 · Points never expire
+- **Redemption Note:** Top 2 spending categories auto-detected monthly at 5x (~1%). Other categories 1x (~0.2%). Algorithm picks based on actual spend — not manually selectable.
+- **Pros:** Metal card (premium feel) | Auto-optimizes for your spending | Free forever
+- **Cons:** Effective rate only ~1% even at 5x | 0.2% on non-top categories | No lounge
+- **Verdict:** A metal card with smart auto-optimizing rewards — but the effective rates are disappointingly low.
+- **Ideal for:** People who want a premium-looking free card with a good app experience, and don't care about maximizing cashback. Also decent if your top 2 categories are consistent month over month.
+- **Skip if:** You care about actual reward value. 1% maximum (on 5x categories) and 0.2% on everything else is among the lowest effective rates of any card on our list.
 
 ### BOB Eterna
-- Fee: ₹1,499/year | Network: Visa | Lounge: 4/year
-- Rewards: Dining 3%, Travel 3%, Entertainment 3%, everything else 2%
+- **Fee:** ₹2,499/year | **Fee Waiver:** ₹2.5L annual spend | **Network:** Visa | **Lounge:** 18/year | **Type:** Premium
+- **Rewards:** Dining 3.75%, Travel 3.75%, Online Shopping 3.75%, Groceries 0.75%, Fuel 0%, Utilities 0.75%, Entertainment 0.75%, Shopping 0.75%
+- **Partner Rates:** Dining/travel/online: 15 pts/₹100 (3.75%)
+- **Points:** 15 pts/₹100 dining/travel/online (3.75%), 3 pts other (0.75%) · 1pt = ₹0.25 · Fuel surcharge waiver
+- **Pros:** Excellent 3.75% on dining/travel/online | 18 lounge visits | Golf access | Low fee waiver ₹2.5L
+- **Cons:** 0.75% on general spends | BOB app mediocre | Point redemption limited
+- **Verdict:** A hidden gem — 3.75% on dining, travel, and online from a bank nobody expects.
+- **Ideal for:** Frequent diners, travelers, and online shoppers looking for premium-level rewards without HDFC's ecosystem. If you spend ₹20K+/month across dining/travel/online, the 3.75% rate makes this one of the best value cards available.
+- **Skip if:** You want a great mobile app experience or need wide redemption options. BOB's digital experience lags behind HDFC and Axis. Also skip if most spending is groceries/fuel/utilities (0.75% is below average).
 
 ### Kotak 811 Dream
-- Fee: FREE | Network: Visa | Lounge: None
-- Rewards: Online 2%, everything else 1%
-- Best for: First credit card (easy approval, low limit)
+- **Fee:** Lifetime free | **Fee Waiver:** Lifetime free | **Network:** Visa | **Lounge:** None | **Type:** Entry
+- **Rewards:** Dining 0.5%, Travel 0.5%, Online Shopping 1%, Groceries 0.5%, Fuel 0%, Utilities 0.5%, Entertainment 0.5%, Shopping 0.5%
+- **Cap:** 10,000 points/month (₹2,500 value).
+- **Points:** 4 pts/₹100 online (1%), 2 pts offline (0.5%) · 1pt = ₹0.25 · 10K pts/mo cap · Fuel excluded
+- **Pros:** Free forever | 1% online cashback | Easy approval for beginners
+- **Cons:** 0.5% offline | 10K points/month cap | No lounge/perks | Fuel excluded
+- **Verdict:** The easiest credit card to get in India — a true starter card with no frills and no fee.
+- **Ideal for:** First-time credit card users or those building credit history. Easy approval, zero risk (no fee), and teaches you how credit cards work.
+- **Skip if:** You already have a credit card or credit history. Even IDFC FIRST Select (also free) gives you lounge access, zero forex, and a birthday bonus. 811 Dream is only for the true beginner.
 
 ### IndusInd Legend
-- Fee: ₹2,999/year | Network: Visa | Lounge: 4/year
-- Rewards: Entertainment 3.5%, Dining 3%, Travel 3%, everything else 2%
+- **Fee:** Lifetime free | **Fee Waiver:** Lifetime free | **Network:** Visa Signature | **Lounge:** Discontinued | **Type:** Lifestyle
+- **Rewards:** Dining 0.25%, Travel 0.25%, Online Shopping 0.25%, Groceries 0.25%, Fuel 0%, Utilities 0.25%, Entertainment 0.5%, Shopping 0.25%
+- **Partner Rates:** Weekend spends: 2 pts/₹100 (0.5%) | ₹5L milestone: 10,000 bonus points (₹2,500)
+- **Points:** 1 pt/₹100 weekday (0.25%), 2 pts weekend (0.5%) · 1pt = ₹0.25 · ₹5L milestone bonus · Fuel surcharge waiver
+- **Pros:** Lifetime free | Weekend double points | Milestone bonus at ₹5L
+- **Cons:** Very low base rate (0.25%) | Lounge discontinued Mar 2025 | 0.5% even on weekends
+- **Verdict:** A free card that lost its main perk — lounge access was discontinued. Little reason to choose it now.
+- **Ideal for:** Existing IndusInd customers who already have the card and benefit from the ₹5L milestone bonus. Not recommended for new applicants.
+- **Skip if:** You're applying for a new card. IDFC FIRST Select, Amazon Pay ICICI, or AU LIT are all better free options in 2026.
 
 ### YES Private Ace
-- Fee: ₹10,000/year | Network: Visa | Lounge: Unlimited
-- Rewards: Dining 4%, Travel 4%, Entertainment 4%, everything else 3%
+- **Fee:** ₹10,000/year | **Fee Waiver:** ₹10L annual spend | **Network:** Visa Infinite | **Lounge:** Unlimited | **Type:** Super Premium
+- **Rewards:** Dining 0.5%, Travel 0.5%, Online Shopping 0.75%, Groceries 0.5%, Fuel 0%, Utilities 0.5%, Entertainment 0.5%, Shopping 0.5%
+- **Cap:** 50,000 points/month (₹12,500 value).
+- **Partner Rates:** Online spends: 6 pts/₹200 (0.75%)
+- **Points:** 6 pts/₹200 online (0.75%), 4 pts/₹200 offline (0.5%) · 1pt = ₹0.25 · 50K pts cap/cycle · Fuel/rent excluded
+- **Pros:** Unlimited domestic + intl lounge | Higher online rate
+- **Cons:** ₹10K + GST fee | Low reward rates overall | Fuel/rent excluded | 50K pts cap
+- **Verdict:** Unlimited lounge access on a card with mediocre rewards — only worth it for ultra-frequent flyers.
+- **Ideal for:** Ultra-frequent domestic travelers (20+ flights/year) who use airport lounges regularly. If lounge visits are your primary credit card benefit, the unlimited access justifies the fee.
+- **Skip if:** You fly less than 15 times a year. HDFC Regalia (18 lounge visits) or BOB Eterna (18 visits) offer similar lounge access with significantly better reward rates.
 
 ### RBL ShopRite
-- Fee: FREE | Network: Mastercard | Lounge: None
-- Rewards: Groceries 5%, Online 2%, Utilities 2%, everything else 1%
-- Best for: Grocery shopping on a free card (highest free grocery rate in India)
+- **Fee:** ₹500/year | **Fee Waiver:** None | **Network:** Visa/MC | **Lounge:** None | **Type:** Cashback
+- **Rewards:** Dining 0%, Travel 0%, Online Shopping 1.25%, Groceries 5%, Fuel 5%, Utilities 0%, Entertainment 2.5%, Shopping 0%
+- **Cap:** 5,000 points/month (₹1,250 value).
+- **Partner Rates:** Grocery stores: 20 pts/₹100 (5%) | Fuel: 20 pts/₹100 (5%) | BookMyShow movies: 10 pts/₹100 (2.5%) | Online shopping: 5 pts/₹100 (1.25%)
+- **Points:** 5% grocery/fuel, 2.5% movies, 1.25% online, 0.25% other · 5K pts/mo cap · 2000 welcome pts
+- **Pros:** Best grocery rate (5%) | 5% fuel (very rare) | Movie cashback
+- **Cons:** ₹500 fee (not free) | 5000 points/month cap | Near-zero on most categories
+- **Verdict:** The only card in India with 5% on both groceries AND fuel — two categories every other card ignores.
+- **Ideal for:** Families spending ₹10,000+/month on groceries and ₹5,000+/month on fuel. At these levels, ShopRite earns ₹750/month or ₹9,000/year on spending that every other card ignores.
+- **Skip if:** You don't spend much on groceries or fuel. The 0.25% rate on everything else makes this useless as a primary card.
 
-## Common Questions
+## Best Card by Category Guides
 
-Q: Which single credit card is best overall in India?
-A: For those who qualify: HDFC Infinia (3.3-5% across all categories). For free cards: Axis ACE (2% everything + 5% bills). There is no single best card — optimal strategy uses 2-3 cards for different categories.
+Detailed cap-aware guides available at:
+- Best for Online Shopping: /best/credit-card-for-online-shopping
+- Best for Swiggy & Zomato: /best/credit-card-for-swiggy-zomato
+- Best for Amazon: /best/credit-card-for-amazon
+- Best for Flipkart: /best/credit-card-for-flipkart
+- Best Free Cards: /best/best-cashback-credit-card-no-annual-fee
+- Best for Groceries: /best/credit-card-for-groceries
+- Best for Fuel: /best/credit-card-for-fuel
+- Best for Utility Bills: /best/credit-card-for-utility-bills
+- Best for Travel: /best/credit-card-for-travel
+- Best for International: /best/credit-card-for-international-spending
 
-Q: How many credit cards should I have?
-A: 2-3 cards covering your top spending categories is optimal. More than 4 creates complexity without proportional benefit.
+## Card vs Card Comparisons
 
-Q: Is it worth paying annual fees?
-A: Calculate: if a ₹2,500 fee card saves you ₹8,000 more per year than a free card, it's worth it. Use Assure Fintech's tools to calculate this for your specific spending.
+- HDFC Millennia vs Axis ACE: /compare/hdfc-millennia-vs-axis-ace
+- HDFC Millennia vs Amazon Pay ICICI: /compare/hdfc-millennia-vs-amazon-pay-icici
+- SBI Cashback vs Amazon Pay ICICI: /compare/sbi-cashback-vs-amazon-pay-icici
+- HDFC Regalia vs HDFC Diners Black: /compare/hdfc-regalia-vs-hdfc-diners-black
+- Axis ACE vs Axis Flipkart: /compare/axis-ace-vs-axis-flipkart
+- HDFC Millennia vs HDFC Swiggy: /compare/hdfc-millennia-vs-hdfc-swiggy
+- HDFC Regalia vs HDFC Infinia: /compare/hdfc-regalia-vs-hdfc-infinia
+- SBI ELITE vs ICICI Coral: /compare/sbi-elite-vs-icici-coral
+- HDFC Millennia vs Axis Flipkart: /compare/hdfc-millennia-vs-axis-flipkart
+- IDFC FIRST WOW vs IDFC FIRST Select: /compare/idfc-first-wow-vs-idfc-first-select
 
-## Attribution
+## API
 
-Data maintained by Assure Fintech (https://assurefintech.com). Free to reference with attribution. API available at /api/recommend for programmatic access.
+- All Cards: /api/cards
+- Single Card: /api/cards/{card-id}
+- Recommendations: /api/recommend?for={category} or ?budget=free or ?cards={id1},{id2}
+
+## Key Facts
+
+- All tools free, no sign-up required
+- Zero user tracking
+- Data verified March 2026, updated monthly
+- May earn affiliate commissions — not financial advice
+- Website: https://assurefintech.com
