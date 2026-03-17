@@ -60,7 +60,7 @@ export default function SharedStackPage({ params }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-    <section className="pt-24 pb-20 px-6 max-w-[700px] mx-auto">
+    <section className="pt-24 pb-20 px-4 sm:px-6 max-w-[700px] mx-auto">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 mb-6 text-sm" style={{ color: "var(--text-faint)" }}>
         <Link href="/" className="no-underline hover:underline" style={{ color: "var(--text-faint)" }}>Home</Link>
@@ -84,9 +84,9 @@ export default function SharedStackPage({ params }) {
       </div>
 
       {/* Cards in stack */}
-      <div className="flex gap-2 mb-6 flex-wrap">
+      <div className="flex flex-col sm:flex-row gap-2 mb-6">
         {cards.map(c => (
-          <Link key={c.id} href={`/cards/${c.id}`} className="flex items-center gap-2 rounded-xl px-4 py-3 no-underline"
+          <Link key={c.id} href={`/cards/${c.id}`} className="flex items-center gap-2 rounded-xl px-3 sm:px-4 py-2.5 sm:py-3 no-underline"
             style={{ background: `${c.color}10`, border: `1px solid ${c.color}20` }}>
             <BankLogo bank={c.bank} cardId={c.id} size={32} rounded={8} fontSize={10} />
             <div>
@@ -101,20 +101,20 @@ export default function SharedStackPage({ params }) {
       </div>
 
       {/* Savings summary */}
-      <div className="grid grid-cols-3 gap-3 mb-6">
-        <div className="rounded-xl p-4 text-center" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)" }}>
-          <div className="text-[10px] uppercase tracking-wider" style={{ color: "var(--green)" }}>Annual cashback</div>
-          <div className="text-2xl font-extrabold font-mono" style={{ color: "var(--green)" }}>₹{(totalCashback * 12).toLocaleString()}</div>
+      <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6">
+        <div className="rounded-xl p-3 sm:p-4 text-center" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)" }}>
+          <div className="text-[9px] sm:text-[10px] uppercase tracking-wider" style={{ color: "var(--green)" }}>Annual cashback</div>
+          <div className="text-lg sm:text-2xl font-extrabold font-mono" style={{ color: "var(--green)" }}>₹{(totalCashback * 12).toLocaleString()}</div>
         </div>
-        <div className="rounded-xl p-4 text-center" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
-          <div className="text-[10px] uppercase tracking-wider" style={{ color: "var(--orange)" }}>Total card fees</div>
-          <div className="text-2xl font-extrabold font-mono" style={{ color: totalFee === 0 ? "var(--green)" : "var(--orange)" }}>
+        <div className="rounded-xl p-3 sm:p-4 text-center" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
+          <div className="text-[9px] sm:text-[10px] uppercase tracking-wider" style={{ color: "var(--orange)" }}>Card fees</div>
+          <div className="text-lg sm:text-2xl font-extrabold font-mono" style={{ color: totalFee === 0 ? "var(--green)" : "var(--orange)" }}>
             {totalFee === 0 ? "₹0" : `₹${totalFee.toLocaleString()}`}
           </div>
         </div>
-        <div className="rounded-xl p-4 text-center" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)" }}>
-          <div className="text-[10px] uppercase tracking-wider" style={{ color: "var(--accent-text)" }}>Net savings/yr</div>
-          <div className="text-2xl font-extrabold font-mono" style={{ color: "var(--accent-text)" }}>₹{netSavings.toLocaleString()}</div>
+        <div className="rounded-xl p-3 sm:p-4 text-center" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)" }}>
+          <div className="text-[9px] sm:text-[10px] uppercase tracking-wider" style={{ color: "var(--accent-text)" }}>Net savings/yr</div>
+          <div className="text-lg sm:text-2xl font-extrabold font-mono" style={{ color: "var(--accent-text)" }}>₹{netSavings.toLocaleString()}</div>
         </div>
       </div>
 
