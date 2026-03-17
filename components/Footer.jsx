@@ -88,6 +88,7 @@ export default function Footer() {
             <div className="text-xs font-bold uppercase tracking-wider mb-4" style={{ color: "var(--text-faint)" }}>Company</div>
             {[
               { href: "/about", label: "About" },
+              { href: "/whats-changed", label: "What Changed" },
               { href: "/how-we-earn", label: "How We Earn" },
               { href: "/editorial-policy", label: "Editorial Policy" },
               { href: "/contact", label: "Contact" },
