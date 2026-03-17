@@ -262,6 +262,22 @@ export default function StackBuilderClient() {
                     <div className="text-xl font-extrabold" style={{ color: "var(--accent-text)" }}>₹{r.netSavings.toLocaleString()}</div>
                   </div>
                 </div>
+
+                {/* Share this stack */}
+                <button
+                  onClick={() => {
+                    const url = `${window.location.origin}/stack/${r.combo.join("+")}`;
+                    if (navigator.share) {
+                      navigator.share({ title: `My ${r.combo.length}-Card Stack — ₹${r.netSavings.toLocaleString()}/yr savings`, url });
+                    } else {
+                      navigator.clipboard.writeText(url);
+                      alert("Stack link copied! Share it with friends.");
+                    }
+                  }}
+                  className="w-full mt-3 rounded-lg py-2.5 text-xs font-semibold cursor-pointer"
+                  style={{ background: "var(--bg-muted)", border: "1px solid var(--border)", color: "var(--accent-text)" }}>
+                  📤 Share this stack
+                </button>
               </div>
             </div>
           ))}
