@@ -266,7 +266,7 @@ export default function StackBuilderClient() {
                 {/* Share this stack */}
                 <button
                   onClick={() => {
-                    const url = `${window.location.origin}/stack/${r.combo.join("+")}`;
+                    const url = `${window.location.origin}/stack/${r.combo.join("-and-")}`;
                     if (navigator.share) {
                       navigator.share({ title: `My ${r.combo.length}-Card Stack — ₹${r.netSavings.toLocaleString()}/yr savings`, url });
                     } else {
