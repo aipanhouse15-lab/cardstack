@@ -96,7 +96,7 @@ The catch? It's invite-only. HDFC offers it to customers with high savings balan
       ],
       avoidFor: [
         { category: "Cashback redemption", reason: "If you redeem as cashback (₹0.20/point), the effective rate drops to 0.66% — terrible for a premium card. Always redeem via travel.", altCard: "sbi-cashback" },
-        { category: "Fuel", reason: "0% on fuel, same as every HDFC card.", altCard: null },
+        { category: "Fuel", reason: "0% on fuel, same as every HDFC card.", altCard: "rbl-shoprite" },
         { category: "Small everyday purchases", reason: "If you're spending ₹5K/month total, the ₹12,500 fee eats all your rewards. This card needs volume to justify itself.", altCard: "axis-ace" },
       ],
       pairWith: [
@@ -213,7 +213,7 @@ The real math to focus on: SmartBuy bookings earn 10x points. A ₹50,000 flight
   ],
   avoidFor: [
     { category: "Small merchants and toll plazas", reason: "Diners Club isn't accepted at many small businesses, toll booths, and some POS terminals. Keep a Visa/MC backup.", altCard: "axis-ace" },
-    { category: "Fuel", reason: "0% rewards on fuel, consistent across HDFC cards.", altCard: null },
+    { category: "Fuel", reason: "0% rewards on fuel, consistent across HDFC cards.", altCard: "rbl-shoprite" },
     { category: "Online food delivery", reason: "While 3.33% is decent, HDFC Millennia gives 5% on Swiggy/Zomato. Use Millennia for food, Diners Black for everything else.", altCard: "hdfc-millennia" },
   ],
   pairWith: [
@@ -368,7 +368,7 @@ If you currently spend ₹60K-₹1L online per cycle, you'll need a second card 
   avoidFor: [
     { category: "Offline shopping", reason: "1% offline is below average. Axis ACE gives 1.5% uncapped offline.", altCard: "axis-ace" },
     { category: "Amazon-only shopping", reason: "Amazon Pay ICICI gives 5% on Amazon with no monthly cap. If Amazon is your primary online spend, that card is better.", altCard: "amazon-icici" },
-    { category: "Fuel", reason: "Excluded from cashback entirely. Fuel surcharge waiver applies only on ₹500-₹3,000 transactions.", altCard: null },
+    { category: "Fuel", reason: "Excluded from cashback entirely. Fuel surcharge waiver applies only on ₹500-₹3,000 transactions.", altCard: "rbl-shoprite" },
   ],
   pairWith: [
     { combo: "SBI Cashback + Axis ACE", fee: "₹1,498/year", reason: "SBI for online purchases (5%), ACE for offline spending (1.5% uncapped) and utility overflow. Covers both worlds.", cardId: "axis-ace" },
@@ -505,7 +505,7 @@ But the reward rate — 0.5% on most purchases — is genuinely low. On ₹50,00
   avoidFor: [
     { category: "Online shopping", reason: "0.5% is very low. HDFC Millennia gives 10x more (5%) on the same purchases.", altCard: "hdfc-millennia" },
     { category: "General spending", reason: "0.5% across the board. Even free cards like Axis ACE (1.5%) give 3x more.", altCard: "axis-ace" },
-    { category: "Fuel", reason: "0% on fuel. No rewards whatsoever at petrol pumps.", altCard: null },
+    { category: "Fuel", reason: "0% on fuel. No rewards whatsoever at petrol pumps.", altCard: "rbl-shoprite" },
   ],
   pairWith: [
     { combo: "ICICI Coral + HDFC Millennia", fee: "₹1,500/year", reason: "Coral for movies and dining discounts, Millennia for all actual spending (5% on online partners). Use Coral for perks, Millennia for rewards.", cardId: "hdfc-millennia" },
@@ -997,7 +997,7 @@ The fee waiver at ₹2.5L is more achievable than Regalia's ₹4L. The main down
   ],
   avoidFor: [
     { category: "Groceries and utilities", reason: "0.75% on both. SBI ELITE gives 2.5% on groceries, Axis ACE gives 5% on utility bills.", altCard: "axis-ace" },
-    { category: "Fuel", reason: "0% rewards on fuel. Only fuel surcharge waiver applies.", altCard: null },
+    { category: "Fuel", reason: "0% rewards on fuel. Only fuel surcharge waiver applies.", altCard: "rbl-shoprite" },
     { category: "General offline non-dining", reason: "0.75% on general spending. Axis ACE's 1.5% uncapped is double.", altCard: "axis-ace" },
   ],
   pairWith: [
@@ -1130,54 +1130,635 @@ But 0.5-0.75% reward rates on a ₹10,000/year card are hard to justify on spend
 },
   },
 
-  { id: "rbl-shoprite", name: "RBL ShopRite", bank: "RBL", img: "🧺", color: "#c026d3", fee: 500, feeWaiver: "₹1.5L annual spend", type: "Cashback", verified: true,
-    rewards: { dining: 0.25, travel: 0.25, online: 0.25, groceries: 5, fuel: 0, utilities: 0.25, entertainment: 0.25, shopping: 0.25, default: 0.25 },
-    caps: { monthlyPoints: 1000, pointValue: 0.25, spendPer: 100, pointsPer: 20 },
+  { id: "rbl-shoprite", name: "RBL ShopRite", bank: "RBL", img: "🧺", color: "#c026d3", fee: 500, feeWaiver: "None", type: "Cashback", verified: true,
+    rewards: { dining: 0, travel: 0, online: 1.25, groceries: 5, fuel: 5, utilities: 0, entertainment: 2.5, shopping: 0, default: 0.25 },
+    caps: { monthlyPoints: 5000, pointValue: 0.25, spendPer: 100, pointsPer: 20 },
     partnerRates: [
       { name: "Grocery stores", rate: "20 pts/₹100 (5%)" },
-      { name: "BookMyShow", rate: "10% discount (max ₹100/ticket, 15x/yr)" },
+      { name: "Fuel", rate: "20 pts/₹100 (5%)" },
+      { name: "BookMyShow movies", rate: "10 pts/₹100 (2.5%)" },
+      { name: "Online shopping", rate: "5 pts/₹100 (1.25%)" },
     ],
-    pointsInfo: "5% grocery only (1000 pts/mo cap = ₹250/mo max) · 0.25% on everything else · Fuel: surcharge waiver only (no cashback) · 2000 welcome pts (₹500 value)",
-    highlights: ["5% on grocery stores", "Fee waiver on ₹1.5L spend", "BookMyShow 10% off", "2000 welcome points"],
-    pros: ["Best grocery rate (5%)", "Fee waiver available (₹1.5L)", "Welcome bonus covers first year fee"],
-    cons: ["Only ₹250/mo max grocery cashback", "0.25% on everything else", "No fuel rewards (surcharge waiver only)"],
+    pointsInfo: "5% grocery/fuel, 2.5% movies, 1.25% online, 0.25% other · 5K pts/mo cap · 2000 welcome pts",
+    highlights: ["5% on grocery + fuel", "2.5% on movies", "2000 welcome points"],
+    pros: ["Best grocery rate (5%)", "5% fuel (very rare)", "Movie cashback"],
+    cons: ["₹500 fee (not free)", "5000 points/month cap", "Near-zero on most categories"],
     network: "Visa/MC", lounge: "None",
 
     editorial: {
   verdict: {
-    headline: "The best card in India for grocery rewards at 5% — but fuel cashback is a myth.",
-    body: `RBL ShopRite gives 5% on grocery stores — the highest grocery rate available. But contrary to popular belief, it does NOT give 5% on fuel. Fuel only gets a standard 1% surcharge waiver (max ₹100/month).
+    headline: "The only card in India with 5% on both groceries AND fuel — two categories every other card ignores.",
+    body: `RBL ShopRite fills a unique gap: 5% on grocery stores and 5% on fuel. Every major card excludes fuel from rewards, and most give 1% or less on groceries. If you spend significantly on weekly groceries and monthly fuel, ShopRite earns rewards where no other card will.
 
-The 1,000 points/month cap (₹250) limits beneficial grocery spend to ₹5,000/month. Everything else earns 0.25% — essentially nothing. This is a dedicated grocery card, not an all-rounder. Pair it with a general-purpose card.`,
-    idealFor: "Families spending ₹5,000+/month on groceries. At ₹5K/month grocery spend, ShopRite earns ₹250/month or ₹3,000/year from a ₹500 card.",
-    skipIf: "You don't spend much on groceries. The 0.25% rate on everything else makes this useless as a primary card.",
+The 5,000 points/month cap (₹1,250) and near-zero rates on other categories (0.25%) limit its use as a primary card. But as a dedicated grocery+fuel card paired with a better all-rounder, ShopRite adds genuine value that no other card can provide.`,
+    idealFor: "Families spending ₹10,000+/month on groceries and ₹5,000+/month on fuel. At these levels, ShopRite earns ₹750/month or ₹9,000/year on spending that every other card ignores.",
+    skipIf: "You don't spend much on groceries or fuel. The 0.25% rate on everything else makes this useless as a primary card.",
   },
   capMath: {
-    title: "Understanding the 1,000 points/month cap",
-    body: `The 1,000 points/month cap on grocery spending (at 20 pts/₹100) means your maximum beneficial grocery spend is ₹5,000/month. At 5%, that's ₹250/month in rewards.
+    title: "Understanding the 5,000 points/month cap",
+    body: `The 5,000 points/month cap across grocery and fuel (at 20 pts/₹100) means your maximum beneficial spend in these categories is ₹25,000/month. At 5%, that's ₹1,250/month in rewards.
 
-Spend more than ₹5K on groceries? Points stop accumulating for that cycle. Everything else (dining, travel, shopping, fuel) earns just 0.25% with no acceleration. Don't use this card for non-grocery purchases.`,
+Spend ₹15K on groceries and ₹10K on fuel? You've hit the cap. The movie and online rates have the same shared cap, so the effective beneficial spend is ₹25K total across all accelerated categories.
+
+Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. Don't use this card for non-grocery/fuel purchases.`,
   },
   bestFor: [
     { category: "Grocery stores", reason: "5% at grocery stores is unmatched. No other widely-available card gives more than 2.5% on groceries (SBI ELITE). ShopRite gives double." },
-    { category: "Movies via BookMyShow", reason: "10% discount on tickets (max ₹100/ticket, 15 times/year) — a nice perk for moviegoers." },
+    { category: "Fuel", reason: "5% on fuel is extremely rare — almost every card in India excludes fuel or gives 0%. This is ShopRite's truly unique feature." },
+    { category: "Movies via BookMyShow", reason: "2.5% on movie tickets — a nice secondary perk for moviegoers." },
   ],
   avoidFor: [
-    { category: "Everything except groceries", reason: "0.25% on dining, travel, utilities, fuel, and general shopping is near-zero. Use any other card.", altCard: "axis-ace" },
+    { category: "Everything except groceries and fuel", reason: "0.25% on dining, travel, utilities, and general shopping is near-zero. Use any other card.", altCard: "axis-ace" },
     { category: "Online shopping", reason: "1.25% online is below average. HDFC Millennia gives 5%.", altCard: "hdfc-millennia" },
     { category: "Dining", reason: "0% on dining. SBI ELITE gives 2.5%, BOB Eterna gives 3.75%.", altCard: "sbi-elite" },
   ],
   pairWith: [
-    { combo: "RBL ShopRite + Axis ACE", fee: "₹999/year", reason: "ShopRite for groceries (5%), ACE for bills (5% GPay) and everything else (1.5%). Strong everyday combo.", cardId: "axis-ace" },
-    { combo: "RBL ShopRite + HDFC Millennia", fee: "₹1,500/year", reason: "ShopRite for groceries, Millennia for online shopping and food delivery. Two specialized cards covering each other's gaps.", cardId: "hdfc-millennia" },
+    { combo: "RBL ShopRite + Axis ACE", fee: "₹999/year", reason: "ShopRite for groceries (5%) and fuel (5%), ACE for everything else (1.5-5%). This combo has no weak categories.", cardId: "axis-ace" },
+    { combo: "RBL ShopRite + HDFC Millennia", fee: "₹1,500/year", reason: "ShopRite for groceries and fuel, Millennia for online shopping and food delivery. Two specialized cards covering each other's gaps.", cardId: "hdfc-millennia" },
   ],
   faq: [
-    { q: "Does ShopRite give fuel cashback?", a: "No. Despite many sites claiming 5% on fuel, RBL ShopRite only provides a standard 1% fuel surcharge waiver (max ₹100/month). No reward points on fuel transactions." },
+    { q: "Does 5% fuel cashback really work?", a: "Yes, at fuel stations that accept the card. The 5% is credited as reward points (20 pts/₹100 at ₹0.25/point). Subject to the 5,000 pts/month shared cap." },
     { q: "Does it work at BigBasket/Blinkit?", a: "The 5% grocery rate typically applies to physical grocery store transactions (MCC-coded as grocery). Online grocery platforms like BigBasket may code differently — check your statements." },
-    { q: "Is the ₹500 fee waivable?", a: "Yes, fee is waived on ₹1.5L annual spend. The 2000 welcome points (₹500 value) also effectively cover the first year fee." },
+    { q: "Is the ₹500 fee waivable?", a: "No fee waiver option. The ₹500 is a fixed annual charge. But with ₹15K/month grocery+fuel spend, you earn ₹750/month — the fee is recovered in the first month." },
   ],
 },
   },
+
+
+  // ═══ NEW CARDS (Unverified — March 2026) ═══
+
+// ═══ AXIS BANK ═══
+
+  { id: "axis-airtel", name: "Axis Airtel Credit Card", bank: "Axis", img: "📱", color: "#e60012", fee: 500, feeWaiver: "Spend-based", type: "Cashback", verified: false,
+    rewards: { dining: 10, travel: 1, online: 1, groceries: 10, fuel: 0, utilities: 10, entertainment: 1, shopping: 1, default: 1 },
+    caps: { monthlyCashback: 500, capRate: 10, fallbackRate: 1, capAppliesTo: ["dining", "groceries", "utilities"] },
+    partnerRates: [
+      { name: "Airtel Thanks app (bills)", rate: "25% cashback" },
+      { name: "Zomato/Blinkit/District", rate: "10% value back" },
+    ],
+    pointsInfo: "25% on Airtel bills, 10% Zomato/Blinkit, 1% other · ₹500/mo cap on accelerated · Cashback card",
+    highlights: ["25% on Airtel bills", "10% on Zomato/Blinkit", "₹500 welcome voucher"],
+    pros: ["Excellent for Airtel users", "10% on food delivery and groceries", "Low fee"],
+    cons: ["Benefits downgraded from April 2026", "Lounge access removed", "Cap limits earning"],
+    network: "Visa", lounge: "None" },
+
+  { id: "axis-cashback", name: "Axis Cashback Credit Card", bank: "Axis", img: "💵", color: "#5b21b6", fee: 1000, feeWaiver: "₹4L annual spend", type: "Cashback", verified: false,
+    rewards: { dining: 0.75, travel: 0.75, online: 7, groceries: 0.75, fuel: 0, utilities: 0.5, entertainment: 0.75, shopping: 0.75, default: 0.75 },
+    caps: { monthlyCashback: 4000, capRate: 7, fallbackRate: 0.75, capAppliesTo: ["online"] },
+    partnerRates: [
+      { name: "Online spends", rate: "Up to 7% (tiered)" },
+      { name: "EazyDiner", rate: "25% discount (up to ₹800)" },
+    ],
+    pointsInfo: "Up to 7% online (tiered, ₹4K cap), 0.75% offline, 0.5% utilities · Cashback card",
+    highlights: ["Up to 7% online cashback", "₹1,000 welcome EDGE points", "₹4K/mo online cap"],
+    pros: ["High online cashback rate", "Welcome benefit offsets fee", "Cashback auto-credited"],
+    cons: ["No lounge access", "Low offline rate (0.75%)", "Utility rate only 0.5%"],
+    network: "Visa", lounge: "None" },
+
+  { id: "axis-horizon", name: "Axis Horizon Credit Card", bank: "Axis", img: "🌅", color: "#0369a1", fee: 3000, feeWaiver: "Not specified", type: "Travel", verified: false,
+    rewards: { dining: 1, travel: 5, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
+    partnerRates: [
+      { name: "Travel EDGE portal", rate: "5 EDGE Miles/₹100 (5%)" },
+    ],
+    pointsInfo: "5% on Travel EDGE portal, ~1% on other spends · EDGE Miles",
+    highlights: ["5% on travel bookings", "16 lounge visits/yr", "5,000 welcome EDGE Miles"],
+    pros: ["Great for frequent flyers", "Excellent lounge access", "Good travel rate"],
+    cons: ["₹3,000 annual fee", "Low non-travel rate", "Limited public data"],
+    network: "Visa", lounge: "16/year" },
+
+  { id: "axis-magnus", name: "Axis Magnus Credit Card", bank: "Axis", img: "👑", color: "#7e22ce", fee: 12500, feeWaiver: "₹25L annual spend", type: "Super Premium", verified: false,
+    rewards: { dining: 1.2, travel: 5, online: 1.2, groceries: 1.2, fuel: 0, utilities: 1.2, entertainment: 1.2, shopping: 1.2, default: 1.2 },
+    caps: { monthlyPoints: 50000, pointValue: 0.20, spendPer: 200, pointsPer: 12 },
+    partnerRates: [
+      { name: "Travel EDGE portal", rate: "5X EDGE Miles" },
+      { name: "20+ airline/hotel partners", rate: "5:2 transfer ratio" },
+      { name: "Oberoi/Trident Hotels", rate: "15% off + complimentary nights" },
+    ],
+    pointsInfo: "12 pts/₹200 (up to ₹1.5L/mo), 35 pts/₹200 (above ₹1.5L) · 1pt = ₹0.20 catalog · Transferable to airlines at 5:2",
+    highlights: ["Transferable airline miles", "Unlimited lounge access", "₹12,500 welcome benefit", "2% forex markup"],
+    pros: ["Airline mile transfers (20+ partners)", "Unlimited Priority Pass lounge", "Higher rate above ₹1.5L/month spend"],
+    cons: ["₹12,500 fee", "₹25L spend for waiver", "Many categories excluded from rewards", "Recent devaluations"],
+    redemptionNote: "Best value through airline/hotel transfer partners at 5:2 ratio. Catalog redemption at ₹0.20/point gives lower effective rate.",
+    network: "Visa", lounge: "Unlimited" },
+
+  { id: "axis-myzone", name: "Axis MyZone Credit Card", bank: "Axis", img: "🎭", color: "#db2777", fee: 500, feeWaiver: "Lifetime free for select channels", type: "Lifestyle", verified: false,
+    rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.5 },
+    partnerRates: [
+      { name: "Swiggy", rate: "₹120 off twice/month" },
+      { name: "Sony LIV", rate: "1-year free premium" },
+      { name: "EazyDiner", rate: "Up to 15% off" },
+    ],
+    pointsInfo: "Discount-based card, not reward-point focused · Partner deals > cashback rate",
+    highlights: ["Sony LIV free premium", "Swiggy ₹120 off (2x/month)", "BOGO on District app"],
+    pros: ["Wide range of partner discounts", "Low/free fee", "Good for lifestyle spenders"],
+    cons: ["Very low base reward rate", "Lounge needs ₹50K quarterly spend", "Benefits are discounts, not cashback"],
+    network: "Visa/MC", lounge: "1/quarter (conditional)" },
+
+  { id: "axis-neo", name: "Axis Neo Credit Card", bank: "Axis", img: "💫", color: "#4f46e5", fee: 250, feeWaiver: "Lifetime free for select channels", type: "Entry", verified: false,
+    rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.5 },
+    partnerRates: [
+      { name: "Zomato", rate: "₹120 off (twice/month)" },
+      { name: "Paytm utilities", rate: "5% off (cap ₹150)" },
+      { name: "Blinkit", rate: "10% off (cap ₹250)" },
+    ],
+    pointsInfo: "1 EDGE point/₹200 (~0.5%) · Discount-focused card · Partner deals are the main value",
+    highlights: ["₹120 off Zomato (2x/month)", "5% off Paytm bills", "10% off Blinkit", "Low ₹250 fee"],
+    pros: ["Very low fee", "Good partner discounts for young professionals", "Activation cashback on first bill"],
+    cons: ["Low base reward rate (0.5%)", "Discounts have conditions and caps", "No lounge access"],
+    network: "Visa", lounge: "None" },
+
+  { id: "axis-privilege", name: "Axis Privilege Credit Card", bank: "Axis", img: "🎖️", color: "#1e3a5f", fee: 1500, feeWaiver: "Not specified", type: "Premium", verified: false,
+    rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
+    partnerRates: [],
+    pointsInfo: "10 EDGE points/₹200 (~1%) on all spends · 1pt ≈ ₹0.20 · Milestone bonus at ₹2.5L",
+    highlights: ["12,500 welcome EDGE points (≈₹2,500)", "Milestone 10K pts at ₹2.5L spend", "8 lounge visits/yr", "BOGO on District"],
+    pros: ["Good welcome and milestone benefits", "Decent lounge access (8/yr)", "Flat 1% on everything"],
+    cons: ["₹1,500 fee without clear waiver", "1% rate is average", "Better options available at similar fee"],
+    network: "Visa", lounge: "8/year" },
+
+  { id: "axis-iocl", name: "Axis IOCL Credit Card", bank: "Axis", img: "⛽", color: "#e11d48", fee: 1000, feeWaiver: "₹1L annual spend", type: "Fuel", verified: false,
+    rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 4, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.5 },
+    caps: { monthlyCashback: 600, capRate: 4, fallbackRate: 0.5, capAppliesTo: ["fuel"] },
+    partnerRates: [
+      { name: "IOCL fuel stations", rate: "6 EDGE Miles/₹150 (~4%)" },
+      { name: "Grocery spends", rate: "2 EDGE Miles/₹150 (up to ₹5K/mo)" },
+      { name: "Zomato", rate: "30% discount (up to ₹150, 2x/month)" },
+    ],
+    pointsInfo: "4% at IOCL (cap ₹15K fuel/mo), 0.5% on other · 1% surcharge waiver · EDGE Miles",
+    highlights: ["4% at IOCL stations", "1% fuel surcharge waiver", "8 lounge visits/yr", "Grocery bonus"],
+    pros: ["Best Axis fuel card", "Unlimited fuel surcharge waiver at IOCL", "Decent lounge access"],
+    cons: ["₹1,000 fee", "Fuel cap at ₹15K/month", "Low non-fuel rate (0.5%)"],
+    network: "Visa", lounge: "8/year" },
+
+  { id: "axis-flipkart-supercoin", name: "Flipkart Axis SuperCoin Credit Card", bank: "Axis", img: "🪙", color: "#2563eb", fee: 500, feeWaiver: "₹2L annual spend", type: "Shopping", verified: false,
+    rewards: { dining: 1.5, travel: 1.5, online: 5, groceries: 1.5, fuel: 0, utilities: 1.5, entertainment: 1.5, shopping: 5, default: 1.5 },
+    caps: { monthlyCashback: 1500, capRate: 5, fallbackRate: 1.5, capAppliesTo: ["online", "shopping"] },
+    partnerRates: [
+      { name: "Flipkart", rate: "5% SuperCoins" },
+    ],
+    pointsInfo: "5% SuperCoins on Flipkart (cap ₹1,500/mo), 1.5% on other · 1 SuperCoin ≈ ₹0.20-0.25",
+    highlights: ["5% on Flipkart", "1.5% on everything else", "₹500 welcome Flipkart voucher"],
+    pros: ["Good for Flipkart shoppers", "1.5% base is above average", "Low fee"],
+    cons: ["SuperCoin value ~₹0.20-0.25 (not ₹1)", "₹1,500/mo cap on Flipkart", "Benefits locked to Flipkart ecosystem"],
+    network: "Visa", lounge: "None" },
+
+  // ═══ HDFC BANK ═══
+
+  { id: "hdfc-swiggy-blck", name: "HDFC Swiggy BLCK Credit Card", bank: "HDFC", img: "🖤", color: "#1a1a1a", fee: 1499, feeWaiver: "Not specified", type: "Premium", verified: false,
+    rewards: { dining: 10, travel: 5, online: 5, groceries: 1, fuel: 0, utilities: 1, entertainment: 5, shopping: 1, default: 1 },
+    caps: { monthlyCashback: 4000, capRate: 10, fallbackRate: 1, capAppliesTo: ["dining", "travel", "online", "entertainment"] },
+    partnerRates: [
+      { name: "Swiggy", rate: "10% cashback" },
+      { name: "Cleartrip/Nykaa", rate: "Up to 5% cashback" },
+    ],
+    pointsInfo: "10% Swiggy, 5% travel/online/entertainment, 1% other · ~₹4K/mo cap · Swiggy One BLCK membership included",
+    highlights: ["10% on Swiggy", "5% on travel/online", "Swiggy One BLCK membership", "Up to ₹48K annual savings"],
+    pros: ["Highest Swiggy cashback", "Broad 5% coverage on travel/online", "Premium Swiggy membership included"],
+    cons: ["Fee structure unclear", "Cap limits heavy spenders", "Newer card, less verified data"],
+    network: "Visa", lounge: "None" },
+
+  { id: "hdfc-tata-neu-plus", name: "HDFC Tata Neu Plus Credit Card", bank: "HDFC", img: "🟣", color: "#5b21b6", fee: 499, feeWaiver: "₹1L annual spend", type: "Lifestyle", verified: false,
+    rewards: { dining: 1, travel: 7, online: 1, groceries: 7, fuel: 0, utilities: 1, entertainment: 1, shopping: 7, default: 1 },
+    caps: { monthlyCashback: 500, capRate: 7, fallbackRate: 1, capAppliesTo: ["travel", "groceries", "shopping"] },
+    partnerRates: [
+      { name: "Tata Neu (BigBasket/Croma/Westside)", rate: "Up to 7% NeuCoins" },
+      { name: "Air India Express", rate: "Up to 7% NeuCoins" },
+      { name: "UPI spends", rate: "1% (cap 500 NeuCoins/mo)" },
+    ],
+    pointsInfo: "7% on Tata Neu brands, 1% on other, 1% on UPI (cap 500/mo) · 1 NeuCoin = ₹1 · RuPay network",
+    highlights: ["7% on Tata ecosystem", "1 NeuCoin = ₹1", "1% on UPI", "₹499 welcome NeuCoins"],
+    pros: ["Excellent for Tata shoppers (BigBasket, Croma, Westside)", "NeuCoins worth ₹1 each", "UPI rewards rare"],
+    cons: ["Rewards locked to Tata Neu ecosystem", "RuPay network (limited acceptance)", "No international lounge"],
+    network: "RuPay", lounge: "4/year (conditional)" },
+
+  { id: "hdfc-tata-neu-infinity", name: "HDFC Tata Neu Infinity Credit Card", bank: "HDFC", img: "♾️", color: "#4c1d95", fee: 1499, feeWaiver: "₹3L annual spend", type: "Premium", verified: false,
+    rewards: { dining: 1.5, travel: 10, online: 1.5, groceries: 10, fuel: 0, utilities: 1.5, entertainment: 1.5, shopping: 10, default: 1.5 },
+    partnerRates: [
+      { name: "Tata Neu brands", rate: "Up to 10% NeuCoins" },
+      { name: "BigBasket/Croma", rate: "Up to 10% NeuCoins" },
+      { name: "Air India/IHCL", rate: "Enhanced NeuCoins" },
+    ],
+    pointsInfo: "Up to 10% on Tata brands, ~1.5% on other · 1 NeuCoin = ₹1 · Premium variant of Tata Neu",
+    highlights: ["10% on Tata ecosystem", "Enhanced lounge access", "Higher caps than Plus variant"],
+    pros: ["Highest Tata ecosystem rewards", "Better lounge access than Plus", "NeuCoins worth ₹1 each"],
+    cons: ["Higher fee", "Rewards locked to Tata ecosystem", "Limited verified data"],
+    network: "RuPay", lounge: "8/year" },
+
+  { id: "hdfc-moneyback-plus", name: "HDFC MoneyBack+ Credit Card", bank: "HDFC", img: "💵", color: "#1e40af", fee: 500, feeWaiver: "₹50K annual spend", type: "Entry", verified: false,
+    rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.5 },
+    partnerRates: [],
+    pointsInfo: "1 reward point/₹150 (~0.5% effective) · Basic rewards card · 500 welcome points",
+    highlights: ["Low ₹500 fee (easy waiver at ₹50K)", "500 welcome reward points", "Basic entry card"],
+    pros: ["Low fee waiver threshold", "Simple reward structure", "Good for building HDFC credit history"],
+    cons: ["Very low reward rate (0.5%)", "No standout features", "No lounge access"],
+    network: "Visa/MC", lounge: "None" },
+
+  { id: "hdfc-paytm", name: "HDFC Paytm Credit Card", bank: "HDFC", img: "📲", color: "#002970", fee: 500, feeWaiver: "₹50K annual spend", type: "Cashback", verified: false,
+    rewards: { dining: 0.5, travel: 0.5, online: 1, groceries: 0.5, fuel: 0, utilities: 1, entertainment: 0.5, shopping: 0.5, default: 0.5 },
+    partnerRates: [
+      { name: "Paytm spends", rate: "1% Paytm cashback" },
+    ],
+    pointsInfo: "1% on Paytm spends/bills, 0.5% on other · Cashback as Paytm wallet balance",
+    highlights: ["1% on Paytm", "₹250 welcome Paytm cashback", "Low fee"],
+    pros: ["Cashback directly to Paytm wallet", "Low fee with easy waiver"],
+    cons: ["Cashback locked to Paytm ecosystem", "Low base rate (0.5%)", "No lounge access"],
+    network: "Visa", lounge: "None" },
+
+  { id: "hdfc-freedom", name: "HDFC Freedom Credit Card", bank: "HDFC", img: "🆓", color: "#1d4ed8", fee: 500, feeWaiver: "₹50K annual spend", type: "Entry", verified: false,
+    rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.5 },
+    partnerRates: [],
+    pointsInfo: "1 reward point/₹150 (~0.5% effective) · Basic entry card · 250 welcome points",
+    highlights: ["Low ₹500 fee", "250 welcome reward points", "Good starter card"],
+    pros: ["Low annual fee", "Easy waiver at ₹50K spend", "Builds HDFC credit history"],
+    cons: ["Very basic card", "0.5% reward rate", "No lounge or premium perks"],
+    network: "Visa/MC", lounge: "None" },
+
+  { id: "hdfc-ultimo", name: "HDFC PhonePe Ultimo Credit Card", bank: "HDFC", img: "📞", color: "#5f259f", fee: 2999, feeWaiver: "₹3L annual spend", type: "Premium", verified: false,
+    rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
+    partnerRates: [
+      { name: "PhonePe", rate: "Accelerated rewards" },
+    ],
+    pointsInfo: "PhonePe reward points, ~1% base · Limited public information · Premium co-branded card",
+    highlights: ["PhonePe ecosystem integration", "Premium co-branded card", "Lounge access"],
+    pros: ["PhonePe ecosystem benefits", "Lounge access"],
+    cons: ["Limited public data", "₹2,999 fee", "Reward structure unclear"],
+    network: "Visa", lounge: "8/year" },
+
+  // ═══ ICICI BANK ═══
+
+  { id: "icici-rubyx", name: "ICICI Rubyx Credit Card", bank: "ICICI", img: "💎", color: "#b91c1c", fee: 5000, feeWaiver: "₹3L annual spend", type: "Premium", verified: false,
+    rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.25, entertainment: 0.5, shopping: 0.5, default: 0.25 },
+    partnerRates: [
+      { name: "BookMyShow", rate: "Buy 1 Get 1" },
+      { name: "EazyDiner", rate: "15% discount" },
+    ],
+    pointsInfo: "2 pts/₹100 retail (0.5%), 1 pt/₹100 utility (0.25%) · 1pt = ₹0.25 · 2,500 welcome points",
+    highlights: ["BookMyShow BOGO", "EazyDiner 15% off", "4 lounge visits/yr", "2,500 welcome points"],
+    pros: ["Movie BOGO", "Dining discounts", "Decent lounge access"],
+    cons: ["₹5,000 fee is high for 0.5% rate", "Low utility rate", "Better options available at lower fees"],
+    network: "Visa/MC", lounge: "4/year" },
+
+  { id: "icici-mmt", name: "ICICI MakeMyTrip Credit Card", bank: "ICICI", img: "✈️", color: "#ef4444", fee: 1500, feeWaiver: "₹2L annual spend", type: "Travel", verified: false,
+    rewards: { dining: 0.67, travel: 1.33, online: 0.33, groceries: 0.33, fuel: 0, utilities: 0.33, entertainment: 0.33, shopping: 0.33, default: 0.33 },
+    partnerRates: [
+      { name: "MakeMyTrip bookings", rate: "8 MMT points/₹150 (1.33%)" },
+    ],
+    pointsInfo: "8 pts/₹150 on MMT (1.33%), 4 pts dining (0.67%), 2 pts other (0.33%) · 1pt = ₹0.25 · ₹1,500 welcome MMT points",
+    highlights: ["1.33% on MMT", "₹1,500 welcome MMT points", "8 lounge visits/yr"],
+    pros: ["Good for MakeMyTrip users", "Decent lounge access", "Welcome points offset first year fee"],
+    cons: ["Points only useful on MMT", "Low non-MMT rates", "₹1,500 fee"],
+    network: "Visa", lounge: "8/year" },
+
+  { id: "icici-hpcl-super-saver", name: "ICICI HPCL Super Saver Credit Card", bank: "ICICI", img: "⛽", color: "#059669", fee: 1000, feeWaiver: "₹1.5L annual spend", type: "Fuel", verified: false,
+    rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 2.5, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.25 },
+    caps: { monthlyCashback: 200, capRate: 2.5, fallbackRate: 0.25, capAppliesTo: ["fuel"] },
+    partnerRates: [
+      { name: "HPCL fuel stations", rate: "2.5% value back" },
+    ],
+    pointsInfo: "2.5% at HPCL (cap ₹200/mo), 0.5% dining/grocery, 0.25% other · 1,000 welcome points",
+    highlights: ["2.5% at HPCL", "8 lounge visits/yr", "1,000 welcome points"],
+    pros: ["Good fuel savings at HPCL", "Decent lounge access"],
+    cons: ["Fuel cap at ₹200/month", "Low non-fuel rates", "Only useful at HPCL stations"],
+    network: "Visa", lounge: "8/year" },
+
+  { id: "icici-hpcl-coral", name: "ICICI HPCL Coral Credit Card", bank: "ICICI", img: "⛽", color: "#0d9488", fee: 500, feeWaiver: "₹1L annual spend", type: "Fuel", verified: false,
+    rewards: { dining: 0.25, travel: 0.25, online: 0.25, groceries: 0.25, fuel: 2, utilities: 0.25, entertainment: 0.25, shopping: 0.25, default: 0.25 },
+    caps: { monthlyCashback: 150, capRate: 2, fallbackRate: 0.25, capAppliesTo: ["fuel"] },
+    partnerRates: [
+      { name: "HPCL fuel stations", rate: "2% value back" },
+    ],
+    pointsInfo: "2% at HPCL (cap ₹150/mo), 0.25% on other · Entry fuel card · 500 welcome points",
+    highlights: ["2% at HPCL", "Low ₹500 fee", "500 welcome points"],
+    pros: ["Low fee", "Fuel savings at HPCL", "Easy fee waiver"],
+    cons: ["Fuel cap only ₹150/month", "Very low non-fuel rate (0.25%)", "No lounge access"],
+    network: "Visa", lounge: "None" },
+
+  { id: "icici-platinum", name: "ICICI Platinum Credit Card", bank: "ICICI", img: "🪙", color: "#a3a3a3", fee: 299, feeWaiver: "₹50K annual spend", type: "Entry", verified: false,
+    rewards: { dining: 0.25, travel: 0.25, online: 0.25, groceries: 0.25, fuel: 0, utilities: 0.25, entertainment: 0.25, shopping: 0.25, default: 0.25 },
+    partnerRates: [],
+    pointsInfo: "1 pt/₹100 (~0.25%) on all spends · Basic entry card · Lifetime free for some customers",
+    highlights: ["₹299 fee (or lifetime free)", "Basic ICICI card", "Fuel surcharge waiver"],
+    pros: ["Very low fee", "May be offered lifetime free", "Builds ICICI credit history"],
+    cons: ["Very low reward rate (0.25%)", "No lounge access", "Minimal perks"],
+    network: "Visa", lounge: "None" },
+
+  // ═══ SBI ═══
+
+  { id: "sbi-bpcl-octane", name: "SBI BPCL Octane Credit Card", bank: "SBI", img: "⛽", color: "#dc2626", fee: 1499, feeWaiver: "₹3L annual spend", type: "Fuel", verified: false,
+    rewards: { dining: 1.25, travel: 0.25, online: 0.25, groceries: 1.25, fuel: 6.25, utilities: 0.25, entertainment: 0.25, shopping: 0.25, default: 0.25 },
+    caps: { monthlyCashback: 250, capRate: 6.25, fallbackRate: 0.25, capAppliesTo: ["fuel"] },
+    partnerRates: [
+      { name: "BPCL fuel stations", rate: "6.25% value back" },
+    ],
+    pointsInfo: "6.25% at BPCL (cap ₹250/mo), 1.25% dining/grocery, 0.25% other · 10,000 welcome points",
+    highlights: ["6.25% at BPCL", "10,000 welcome points", "4 lounge visits/yr", "1.25% on dining/grocery"],
+    pros: ["Highest fuel reward rate among major bank cards", "Strong dining/grocery rate", "Generous welcome benefit"],
+    cons: ["₹1,499 fee", "Fuel cap at ₹250/month", "Low rate on non-fuel/dining categories"],
+    network: "Visa", lounge: "4/year" },
+
+  { id: "phonepe-sbi-select-black", name: "PhonePe SBI Select Black Credit Card", bank: "SBI", img: "📱", color: "#5f259f", fee: 1999, feeWaiver: "₹3L annual spend", type: "Premium", verified: false,
+    rewards: { dining: 1.25, travel: 1.25, online: 1.25, groceries: 1.25, fuel: 0, utilities: 1.25, entertainment: 1.25, shopping: 1.25, default: 0.5 },
+    partnerRates: [
+      { name: "PhonePe", rate: "Accelerated rewards" },
+    ],
+    pointsInfo: "5 pts/₹100 on select categories (~1.25%), 2 pts other (~0.5%) · PhonePe ecosystem benefits",
+    highlights: ["1.25% on broad categories", "6 lounge visits/yr", "PhonePe integration"],
+    pros: ["Decent rate across categories", "Good lounge access", "PhonePe ecosystem"],
+    cons: ["₹1,999 fee", "Rate not exceptional for the price", "Better alternatives available"],
+    network: "Visa", lounge: "6/year" },
+
+  { id: "sbi-tata-neu-infinity", name: "SBI Tata Neu Infinity Credit Card", bank: "SBI", img: "♾️", color: "#5b21b6", fee: 1499, feeWaiver: "₹3L annual spend", type: "Lifestyle", verified: false,
+    rewards: { dining: 1, travel: 1, online: 1, groceries: 5, fuel: 0, utilities: 1, entertainment: 1, shopping: 5, default: 1 },
+    partnerRates: [
+      { name: "Tata Neu brands", rate: "Enhanced NeuCoins" },
+      { name: "BigBasket/Croma", rate: "NeuCoins" },
+    ],
+    pointsInfo: "Up to 5% on Tata brands, 1% on other · 1 NeuCoin = ₹1 · Limited verified data",
+    highlights: ["5% on Tata ecosystem", "1 NeuCoin = ₹1", "8 lounge visits/yr"],
+    pros: ["Good for Tata shoppers", "NeuCoins worth ₹1 each"],
+    cons: ["Limited verified data", "Rewards locked to Tata Neu", "₹1,499 fee"],
+    network: "RuPay", lounge: "8/year" },
+
+  { id: "sbi-flipkart", name: "SBI Flipkart Credit Card", bank: "SBI", img: "🛍️", color: "#2563eb", fee: 999, feeWaiver: "₹2L annual spend", type: "Shopping", verified: false,
+    rewards: { dining: 0.25, travel: 0.25, online: 5, groceries: 0.25, fuel: 0, utilities: 0.25, entertainment: 0.25, shopping: 5, default: 0.25 },
+    caps: { monthlyCashback: 1000, capRate: 5, fallbackRate: 0.25, capAppliesTo: ["online", "shopping"] },
+    partnerRates: [
+      { name: "Flipkart", rate: "5% value back" },
+    ],
+    pointsInfo: "5% on Flipkart (cap ₹1,000/mo), 0.25% on other · ₹500 welcome Flipkart voucher",
+    highlights: ["5% on Flipkart", "₹500 welcome Flipkart voucher", "₹1K/mo cap"],
+    pros: ["Good for Flipkart shoppers", "Decent fee with waiver"],
+    cons: ["₹1,000/mo cap on Flipkart", "Very low non-Flipkart rate (0.25%)", "No lounge access"],
+    network: "Visa", lounge: "None" },
+
+  { id: "sbi-titan", name: "SBI Titan Credit Card", bank: "SBI", img: "⌚", color: "#ca8a04", fee: 999, feeWaiver: "₹2L annual spend", type: "Shopping", verified: false,
+    rewards: { dining: 0.25, travel: 0.25, online: 0.25, groceries: 0.25, fuel: 0, utilities: 0.25, entertainment: 0.25, shopping: 10, default: 0.25 },
+    caps: { monthlyCashback: 1000, capRate: 10, fallbackRate: 0.25, capAppliesTo: ["shopping"] },
+    partnerRates: [
+      { name: "Titan stores", rate: "10% value back" },
+    ],
+    pointsInfo: "10% at Titan (cap ₹1,000/mo), 0.25% on other · ₹500 welcome Titan voucher",
+    highlights: ["10% at Titan", "₹500 welcome Titan voucher"],
+    pros: ["Excellent for Titan shoppers (Tanishq, Titan watches, etc.)"],
+    cons: ["Very niche — only useful at Titan", "Very low non-Titan rate", "No lounge access"],
+    network: "Visa", lounge: "None" },
+
+  { id: "sbi-simplysave", name: "SBI SimplySAVE Credit Card", bank: "SBI", img: "💾", color: "#2563eb", fee: 499, feeWaiver: "₹1L annual spend", type: "Entry", verified: false,
+    rewards: { dining: 2.5, travel: 0.25, online: 0.25, groceries: 0.25, fuel: 0, utilities: 0.25, entertainment: 0.25, shopping: 0.25, default: 0.25 },
+    caps: { monthlyPoints: 1000, pointValue: 0.25, spendPer: 100, pointsPer: 10 },
+    partnerRates: [],
+    pointsInfo: "10 pts/₹100 on weekend dining (2.5%, cap 1K pts/mo), 1 pt other (0.25%) · 500 welcome points",
+    highlights: ["2.5% on weekend dining", "Low ₹499 fee", "2 lounge visits/yr"],
+    pros: ["Good weekend dining rate", "Low fee", "Some lounge access"],
+    cons: ["Weekend dining only for bonus", "Low rate on everything else", "Cap on dining points"],
+    network: "Visa/MC", lounge: "2/year" },
+
+  { id: "sbi-iocl", name: "SBI IOCL Credit Card", bank: "SBI", img: "⛽", color: "#dc2626", fee: 499, feeWaiver: "₹1L annual spend", type: "Fuel", verified: false,
+    rewards: { dining: 0.25, travel: 0.25, online: 0.25, groceries: 0.25, fuel: 4, utilities: 0.25, entertainment: 0.25, shopping: 0.25, default: 0.25 },
+    caps: { monthlyCashback: 200, capRate: 4, fallbackRate: 0.25, capAppliesTo: ["fuel"] },
+    partnerRates: [
+      { name: "IOCL fuel stations", rate: "4% value back" },
+    ],
+    pointsInfo: "4% at IOCL (cap ₹200/mo), 0.25% on other · 500 welcome points",
+    highlights: ["4% at IOCL", "Low ₹499 fee", "Fuel surcharge waiver"],
+    pros: ["Good fuel rate at IOCL", "Very low fee", "Easy fee waiver"],
+    cons: ["Fuel cap at ₹200/month", "Very low non-fuel rate", "No lounge access"],
+    network: "Visa", lounge: "None" },
+
+  // ═══ BOB ═══
+
+  { id: "bob-premier", name: "BOB Premier Credit Card", bank: "BOB", img: "🏛️", color: "#ea580c", fee: 999, feeWaiver: "₹2L annual spend", type: "Premium", verified: false,
+    rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 0.5, entertainment: 1, shopping: 1, default: 0.5 },
+    partnerRates: [],
+    pointsInfo: "4 pts/₹100 on select categories (~1%), 2 pts other (~0.5%) · 5,000 welcome points",
+    highlights: ["1% on broad categories", "4 lounge visits/yr", "5,000 welcome points"],
+    pros: ["Decent all-round rate", "Good lounge access for the fee", "Generous welcome benefit"],
+    cons: ["Limited partner ecosystem", "BOB app not great", "0.5% on utilities/general"],
+    network: "Visa", lounge: "4/year" },
+
+  // ═══ IDFC FIRST ═══
+
+  { id: "idfc-millennia", name: "IDFC FIRST Millennia Credit Card", bank: "IDFC", img: "🌐", color: "#059669", fee: 499, feeWaiver: "₹50K annual spend", type: "Cashback", verified: false,
+    rewards: { dining: 2, travel: 2, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 1 },
+    caps: { monthlyCashback: 500, capRate: 2, fallbackRate: 1, capAppliesTo: ["dining", "travel", "online", "groceries", "utilities", "entertainment", "shopping"] },
+    partnerRates: [],
+    pointsInfo: "2% cashback on most categories (cap ₹500/mo combined), 1% on other · Auto-credited · Zero forex",
+    highlights: ["2% cashback (cap ₹500/mo)", "Zero forex markup", "4 lounge visits/yr", "₹500 welcome cashback"],
+    pros: ["Simple 2% cashback", "Zero forex", "Easy fee waiver at ₹50K", "Lounge access"],
+    cons: ["₹500/mo cashback cap is low", "1% fallback rate", "Cap limits heavy spenders"],
+    network: "Visa", lounge: "4/year" },
+
+  { id: "idfc-ashva", name: "IDFC FIRST Ashva Credit Card", bank: "IDFC", img: "🐎", color: "#0d9488", fee: 999, feeWaiver: "₹1.5L annual spend", type: "Premium", verified: false,
+    rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 0.5 },
+    partnerRates: [],
+    pointsInfo: "4 pts/₹100 on select categories (~1%), 2 pts other (~0.5%) · Points never expire · Zero forex · 10,000 welcome points",
+    highlights: ["1% on broad categories", "Zero forex", "8 lounge visits/yr", "10,000 welcome points", "Points never expire"],
+    pros: ["Zero forex markup", "Good lounge access (8/yr)", "Points never expire", "Generous welcome benefit"],
+    cons: ["1% rate is average for ₹999 fee", "Better cashback options available"],
+    network: "Visa", lounge: "8/year" },
+
+  { id: "idfc-power-plus", name: "IDFC FIRST Power+ Credit Card", bank: "IDFC", img: "⚡", color: "#047857", fee: 2999, feeWaiver: "₹3L annual spend", type: "Premium", verified: false,
+    rewards: { dining: 1.5, travel: 1.5, online: 1.5, groceries: 1.5, fuel: 0, utilities: 1.5, entertainment: 1.5, shopping: 1.5, default: 0.75 },
+    partnerRates: [],
+    pointsInfo: "6 pts/₹100 on select categories (~1.5%), 3 pts other (~0.75%) · Points never expire · Zero forex · 20,000 welcome points",
+    highlights: ["1.5% on broad categories", "Zero forex", "12 lounge visits/yr", "20,000 welcome points", "Points never expire"],
+    pros: ["1.5% flat on most categories", "Zero forex", "Excellent lounge access (12/yr)", "Generous welcome points"],
+    cons: ["₹2,999 fee", "1.5% is decent but not exceptional for the price"],
+    network: "Visa", lounge: "12/year" },
+
+  // ═══ FEDERAL BANK ═══
+
+  { id: "scapia", name: "Scapia Credit Card", bank: "Federal Bank", img: "🚀", color: "#6366f1", fee: 0, feeWaiver: "Lifetime free", type: "Travel", verified: false,
+    rewards: { dining: 5, travel: 5, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 2 },
+    partnerRates: [
+      { name: "Scapia Travel", rate: "5% Scapia Coins" },
+      { name: "Partner restaurants", rate: "5% Scapia Coins" },
+    ],
+    pointsInfo: "5% on travel/dining, 2% on everything else · 1 Scapia Coin = ₹1 · Zero forex · Unlimited lounge (spend-based)",
+    highlights: ["Lifetime free", "5% on travel/dining", "2% on everything else", "Zero forex", "Unlimited lounge (with spend criteria)"],
+    pros: ["No fee with excellent rewards", "Zero forex markup", "High base rate (2%)", "Unlimited lounge potential"],
+    cons: ["Lounge access requires minimum spend", "Coins redeemable only via Scapia app", "Newer card, less established"],
+    network: "Visa", lounge: "Unlimited (conditional)" },
+
+  // ═══ HSBC ═══
+
+  { id: "hsbc-live-plus", name: "HSBC Live+ Credit Card", bank: "HSBC", img: "🎵", color: "#dc2626", fee: 1999, feeWaiver: "₹3L annual spend", type: "Lifestyle", verified: false,
+    rewards: { dining: 10, travel: 1.5, online: 1.5, groceries: 10, fuel: 0, utilities: 1.5, entertainment: 1.5, shopping: 1.5, default: 1.5 },
+    caps: { monthlyCashback: 1000, capRate: 10, fallbackRate: 1.5, capAppliesTo: ["dining", "groceries"] },
+    partnerRates: [],
+    pointsInfo: "10% on dining/groceries (cap ₹1,000/mo combined), 1.5% on everything else · Auto-credited cashback",
+    highlights: ["10% on dining + groceries", "1.5% base rate", "₹1,000/mo cap", "₹1,000 welcome cashback"],
+    pros: ["Exceptional dining/grocery rate (10%)", "Strong 1.5% base on everything else", "Cashback auto-credited"],
+    cons: ["₹1,000/mo cap limits heavy spenders", "₹1,999 fee", "HSBC limited branch network in India"],
+    network: "Visa", lounge: "4/year" },
+
+  { id: "hsbc-travelone", name: "HSBC TravelOne Credit Card", bank: "HSBC", img: "✈️", color: "#dc2626", fee: 2999, feeWaiver: "₹4L annual spend", type: "Travel", verified: false,
+    rewards: { dining: 0.5, travel: 1, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.5 },
+    partnerRates: [],
+    pointsInfo: "4 pts/₹100 on travel (~1%), 2 pts other (~0.5%) · Transferable to travel partners · ₹5,000 welcome travel voucher",
+    highlights: ["1% on travel", "Transferable points", "8 lounge visits/yr", "₹5,000 welcome voucher"],
+    pros: ["Transferable travel points", "Good lounge access", "Generous welcome voucher"],
+    cons: ["₹2,999 fee", "Low non-travel rate (0.5%)", "HSBC limited network"],
+    network: "Visa", lounge: "8/year" },
+
+  { id: "hsbc-platinum", name: "HSBC Platinum Credit Card", bank: "HSBC", img: "🔷", color: "#dc2626", fee: 999, feeWaiver: "₹1.5L annual spend", type: "Premium", verified: false,
+    rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.25 },
+    partnerRates: [],
+    pointsInfo: "2 pts/₹100 on select categories (~0.5%), 1 pt other (~0.25%) · 2,500 welcome points",
+    highlights: ["0.5% on select categories", "2 lounge visits/yr", "2,500 welcome points"],
+    pros: ["Decent entry premium card from HSBC", "Some lounge access"],
+    cons: ["Low reward rate", "HSBC limited network in India", "₹999 fee for modest benefits"],
+    network: "Visa", lounge: "2/year" },
+
+  { id: "hsbc-cashback", name: "HSBC Cashback Credit Card", bank: "HSBC", img: "💵", color: "#dc2626", fee: 499, feeWaiver: "₹1L annual spend", type: "Cashback", verified: false,
+    rewards: { dining: 1.5, travel: 1.5, online: 1.5, groceries: 1.5, fuel: 0, utilities: 1.5, entertainment: 1.5, shopping: 1.5, default: 1.5 },
+    caps: { monthlyCashback: 500, capRate: 1.5, fallbackRate: 0, capAppliesTo: ["dining", "travel", "online", "groceries", "utilities", "entertainment", "shopping"] },
+    partnerRates: [],
+    pointsInfo: "1.5% flat cashback on everything (cap ₹500/mo) · Auto-credited · ₹500 welcome cashback",
+    highlights: ["1.5% flat cashback", "₹500/mo cap", "Low ₹499 fee", "Simple card"],
+    pros: ["Simple flat 1.5% on everything", "Low fee with easy waiver", "Auto-credited cashback"],
+    cons: ["₹500/mo cap is restrictive", "After cap, no cashback earned", "No lounge access"],
+    network: "Visa", lounge: "None" },
+
+  // ═══ AU BANK ═══
+
+  { id: "au-xcite-ace", name: "AU Xcite ACE Credit Card", bank: "AU Bank", img: "🎯", color: "#ea580c", fee: 0, feeWaiver: "Lifetime free", type: "Cashback", verified: false,
+    rewards: { dining: 5, travel: 5, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 2 },
+    caps: { monthlyCashback: 1000, capRate: 5, fallbackRate: 2, capAppliesTo: ["dining", "travel"] },
+    partnerRates: [
+      { name: "Partner restaurants", rate: "5% cashback" },
+      { name: "Partner travel", rate: "5% cashback" },
+    ],
+    pointsInfo: "5% on partner dining/travel (cap ₹1K/mo), 2% on everything else · Lifetime free · ₹500 welcome cashback",
+    highlights: ["Lifetime free", "5% on partner dining/travel", "2% base on everything", "₹1K/mo cap"],
+    pros: ["No fee with strong rewards", "2% base is excellent for a free card", "5% on partners"],
+    cons: ["₹1,000/mo cap on 5% categories", "Partner-dependent for highest rates", "AU Bank less established"],
+    network: "Visa", lounge: "None" },
+
+  { id: "au-ixigo", name: "AU Ixigo Credit Card", bank: "AU Bank", img: "🧳", color: "#f59e0b", fee: 0, feeWaiver: "Lifetime free", type: "Travel", verified: false,
+    rewards: { dining: 2, travel: 10, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 2 },
+    caps: { monthlyCashback: 1000, capRate: 10, fallbackRate: 2, capAppliesTo: ["travel"] },
+    partnerRates: [
+      { name: "ixigo bookings", rate: "10% discount (cap ₹1,000)" },
+    ],
+    pointsInfo: "10% on ixigo (cap ₹1K), 2% on everything else · Zero forex · 17 lounge visits/yr · Lifetime free",
+    highlights: ["Lifetime free", "10% on ixigo", "2% on everything", "Zero forex", "17 lounge visits/yr"],
+    pros: ["No fee with excellent perks", "17 lounge visits (16 domestic + 1 intl)", "Zero forex markup", "2% base rate"],
+    cons: ["ixigo discount capped at ₹1K", "Travel benefits tied to ixigo platform"],
+    network: "Visa", lounge: "17/year" },
+
+  // ═══ YES BANK ═══
+
+  { id: "yes-kiwi", name: "Kiwi YES Bank Credit Card", bank: "YES Bank", img: "🥝", color: "#16a34a", fee: 0, feeWaiver: "Lifetime free", type: "Cashback", verified: false,
+    rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.5 },
+    partnerRates: [],
+    pointsInfo: "2% Kiwi Coins on all spends, but 1 Coin = ₹0.25, so effective rate ~0.5% · Lifetime free",
+    highlights: ["Lifetime free", "2% Kiwi Coins (effective ~0.5%)", "Simple structure"],
+    pros: ["Lifetime free", "Simple flat reward structure"],
+    cons: ["Effective rate only ~0.5% (misleading 2% headline)", "No lounge access", "Kiwi Coin value is low"],
+    redemptionNote: "Card advertises '2% Kiwi Coins' but each Kiwi Coin is worth only ₹0.25, making the effective cashback rate ~0.5%, not 2%.",
+    network: "Visa", lounge: "None" },
+
+  { id: "yes-uni", name: "Uni YES Bank Credit Card", bank: "YES Bank", img: "🦄", color: "#7c3aed", fee: 0, feeWaiver: "Lifetime free", type: "Cashback", verified: false,
+    rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
+    partnerRates: [],
+    pointsInfo: "1% Uni Cash on all spends · 1 Uni Cash = ₹1 · Pay in 3 interest-free EMI feature · Lifetime free",
+    highlights: ["Lifetime free", "1% Uni Cash (₹1 each)", "Pay in 3 interest-free EMI", "Simple structure"],
+    pros: ["Lifetime free", "1% cash value is real (₹1 each)", "Unique Pay in 3 feature"],
+    cons: ["1% rate is below average", "No lounge access", "Hybrid credit/pay-later product"],
+    network: "Visa", lounge: "None" },
+
+  // ═══ OTHERS ═══
+
+  { id: "slice", name: "Slice Credit Card", bank: "Slice", img: "🍕", color: "#6d28d9", fee: 0, feeWaiver: "Lifetime free", type: "Lifestyle", verified: false,
+    rewards: { dining: 0.4, travel: 0.4, online: 0.2, groceries: 0.2, fuel: 0, utilities: 0.2, entertainment: 0.4, shopping: 0.4, default: 0.2 },
+    partnerRates: [
+      { name: "Partner restaurants/stores", rate: "2% Slice points (~0.4%)" },
+    ],
+    pointsInfo: "2% on partners (~0.4% effective), 1% on other (~0.2%) · 1 Slice point ≈ ₹0.20 · Digital-first card",
+    highlights: ["Lifetime free", "Digital-first UX", "Instant issuance"],
+    pros: ["Good app experience", "Instant issuance", "No fee"],
+    cons: ["Very low effective reward rate", "Limited verified data", "Hybrid pay-later product"],
+    network: "Visa", lounge: "None" },
+
+  { id: "roarbank-unity", name: "Roarbank Unity SF Credit Card", bank: "Unity SF", img: "🦁", color: "#f97316", fee: 0, feeWaiver: "Lifetime free", type: "Entry", verified: false,
+    rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
+    partnerRates: [],
+    pointsInfo: "~1% cashback on all spends · Digital-first card from Unity Small Finance Bank · Limited data available",
+    highlights: ["Lifetime free", "Digital-first", "~1% cashback"],
+    pros: ["No fee", "Simple structure"],
+    cons: ["Very limited public data", "Small finance bank (less established)", "No lounge access"],
+    network: "Visa", lounge: "None" },
+
+  { id: "csb-edge-plus", name: "CSB Edge Plus Credit Card", bank: "CSB", img: "🔶", color: "#0891b2", fee: 999, feeWaiver: "₹2L annual spend", type: "Premium", verified: false,
+    rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.25 },
+    partnerRates: [],
+    pointsInfo: "2 pts/₹100 on select categories (~0.5%), 1 pt other (~0.25%) · 5,000 welcome points",
+    highlights: ["0.5% on select categories", "4 lounge visits/yr", "5,000 welcome points"],
+    pros: ["Decent from a smaller bank", "Some lounge access"],
+    cons: ["Low reward rate", "Limited partner ecosystem", "CSB has fewer branches"],
+    network: "Visa", lounge: "4/year" },
+
+  { id: "rbl-world-safari", name: "RBL World Safari Credit Card", bank: "RBL", img: "🌍", color: "#7e22ce", fee: 1999, feeWaiver: "₹3L annual spend", type: "Travel", verified: false,
+    rewards: { dining: 1, travel: 1.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.5 },
+    partnerRates: [],
+    pointsInfo: "6 pts/₹100 travel (~1.5%), 4 pts dining (~1%), 2 pts other (~0.5%) · 10,000 welcome points",
+    highlights: ["1.5% on travel", "12 lounge visits/yr", "10,000 welcome points"],
+    pros: ["Good travel rate", "Excellent lounge access (8 domestic + 4 intl)", "Generous welcome points"],
+    cons: ["₹1,999 fee", "Low non-travel rate", "RBL less established"],
+    network: "Visa", lounge: "12/year" },
+
+  { id: "kotak-zen", name: "Kotak Zen Credit Card", bank: "Kotak", img: "🧘", color: "#e11d48", fee: 1999, feeWaiver: "₹3L annual spend", type: "Premium", verified: false,
+    rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 0.5 },
+    partnerRates: [],
+    pointsInfo: "4 pts/₹100 on select categories (~1%), 2 pts other (~0.5%) · 8,000 welcome points",
+    highlights: ["1% on broad categories", "6 lounge visits/yr", "8,000 welcome points"],
+    pros: ["Decent all-round rate", "Good lounge access", "Generous welcome benefit"],
+    cons: ["₹1,999 fee", "1% is average for this price", "Kotak limited branch network vs HDFC/ICICI"],
+    network: "Visa/MC", lounge: "6/year" },
+
+  { id: "indusind-pinnacle", name: "IndusInd Pinnacle Credit Card", bank: "IndusInd", img: "🏔️", color: "#7e22ce", fee: 9999, feeWaiver: "₹10L annual spend", type: "Super Premium", verified: false,
+    rewards: { dining: 1, travel: 2, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 0.5 },
+    partnerRates: [],
+    pointsInfo: "8 pts/₹100 travel (~2%), 4 pts other (~1%), 2 pts default (~0.5%) · 25,000 welcome points",
+    highlights: ["2% on travel", "18 lounge visits/yr", "25,000 welcome points"],
+    pros: ["Good travel rate", "Excellent lounge access (12 domestic + 6 intl)", "Generous welcome points"],
+    cons: ["₹9,999 fee is very high", "Low non-travel rates for the price", "Better options available"],
+    network: "Visa", lounge: "18/year" },
+
+  { id: "sc-ultimate", name: "Standard Chartered Ultimate Credit Card", bank: "StanC", img: "💎", color: "#0369a1", fee: 4999, feeWaiver: "₹5L annual spend", type: "Super Premium", verified: false,
+    rewards: { dining: 1.25, travel: 2.5, online: 1.25, groceries: 1.25, fuel: 0, utilities: 1.25, entertainment: 1.25, shopping: 1.25, default: 0.75 },
+    partnerRates: [],
+    pointsInfo: "10 pts/₹100 travel (~2.5%), 5 pts other (~1.25%), 3 pts default (~0.75%) · 20,000 welcome points",
+    highlights: ["2.5% on travel", "18 lounge visits/yr", "20,000 welcome points"],
+    pros: ["Good travel rewards", "Excellent lounge access", "Strong base rate (1.25%)"],
+    cons: ["₹4,999 fee", "StanC limited presence in India"],
+    network: "Visa", lounge: "18/year" },
+
+  { id: "sc-smart", name: "Standard Chartered Smart Credit Card", bank: "StanC", img: "🧠", color: "#0891b2", fee: 999, feeWaiver: "₹1.5L annual spend", type: "Cashback", verified: false,
+    rewards: { dining: 5, travel: 2, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 2 },
+    caps: { monthlyCashback: 1000, capRate: 5, fallbackRate: 2, capAppliesTo: ["dining"] },
+    partnerRates: [
+      { name: "Weekend dining", rate: "5% cashback" },
+    ],
+    pointsInfo: "5% weekend dining (cap ₹1K/mo), 2% on everything else · Auto-credited · ₹1,000 welcome cashback",
+    highlights: ["5% weekend dining", "2% base cashback", "₹1K/mo cap on dining", "4 lounge visits/yr"],
+    pros: ["Strong weekend dining rate", "2% base is excellent", "Cashback auto-credited"],
+    cons: ["₹1,000/mo cap on dining", "Weekend-only for 5%", "StanC limited presence"],
+    network: "Visa", lounge: "4/year" },
+
+  { id: "amex-mrcc", name: "Amex Membership Rewards Credit Card", bank: "Amex", img: "💳", color: "#006fcf", fee: 3500, feeWaiver: "₹4L annual spend", type: "Premium", verified: false,
+    rewards: { dining: 2, travel: 2, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 1 },
+    partnerRates: [
+      { name: "Taj Hotels", rate: "Up to 20% discount" },
+      { name: "Marriott Bonvoy", rate: "MR point transfers" },
+    ],
+    pointsInfo: "2 MR pts/₹50 on select (~2%), 1 pt/₹50 other (~1%) · 1pt = ₹0.20-0.50 · 1,000 bonus pts for 4 txns of ₹1,500+/month · Transferable to hotel/airline partners",
+    highlights: ["~2% on broad categories", "Transferable MR points", "Monthly milestone bonus", "₹10K welcome benefit", "Taj hotel discounts"],
+    pros: ["Excellent rewards with milestone bonus", "Transferable points to airlines/hotels", "Premium Amex experience"],
+    cons: ["Limited Amex acceptance in India", "₹3,500 joining + ₹5,000 annual from year 2", "Fuel stations rarely accept Amex"],
+    redemptionNote: "MR points best redeemed via hotel/airline transfers (₹0.30-0.50/point). Catalog redemption gives only ₹0.20/point. Monthly milestone of 4 transactions of ₹1,500+ gives 1,000 bonus points.",
+    network: "Amex", lounge: "8/year" },
 ];
 
 export const BANKS = [...new Set(CARDS.map(c => c.bank))].sort();
