@@ -4,7 +4,7 @@ import Link from "next/link";
 import BankLogo from "@/components/BankLogo";
 
 export async function generateMetadata({ params }) {
-  const cardIds = params.cards.split("+").map(id => id.trim()).filter(Boolean);
+  const cardIds = params.cards.split("-and-").map(id => id.trim()).filter(Boolean);
   const cards = cardIds.map(id => CARDS.find(c => c.id === id)).filter(Boolean);
   if (cards.length === 0) return { title: "Stack Not Found" };
   const names = cards.map(c => c.name).join(" + ");
@@ -33,7 +33,7 @@ function calcComboSavings(cards, spending) {
 }
 
 export default function SharedStackPage({ params }) {
-  const cardIds = params.cards.split("+").map(id => id.trim()).filter(Boolean);
+  const cardIds = params.cards.split("-and-").map(id => id.trim()).filter(Boolean);
   const cards = cardIds.map(id => CARDS.find(c => c.id === id)).filter(Boolean);
   if (cards.length === 0) notFound();
 
