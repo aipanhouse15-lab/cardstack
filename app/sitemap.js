@@ -4,7 +4,7 @@ import { BEST_FOR_CATEGORIES } from "@/data/bestfor";
 import { COMPARISONS } from "@/data/comparisons";
 
 export default function sitemap() {
-  const base = "https://assurefintech.com";
+  const base = "https://www.assurefintech.com";
 
   // Static pages
   const staticPages = [
