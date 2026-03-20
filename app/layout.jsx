@@ -5,6 +5,10 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
+  metadataBase: new URL("https://www.assurefintech.com"),
+  alternates: {
+    canonical: "/",
+  },
   title: {
     default: "Assure Fintech — India's Smartest Credit Card Tool",
     template: "%s | Assure Fintech",
@@ -30,7 +34,7 @@ export default function RootLayout({ children }) {
     "@type": "Organization",
     name: "Assure Fintech",
     description: "India's smartest credit card optimization tool. Compare 25+ Indian credit cards, find the best card for every purchase, and maximize your rewards.",
-    url: "https://assurefintech.com",
+    url: "https://www.assurefintech.com",
     foundingDate: "2026",
     areaServed: { "@type": "Country", name: "India" },
     sameAs: [],
@@ -45,11 +49,11 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Assure Fintech",
-    url: "https://assurefintech.com",
+    url: "https://www.assurefintech.com",
     description: "Compare 25+ Indian credit cards. Find the best card for every purchase with real savings math.",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://assurefintech.com/compare?q={search_term_string}",
+      target: "https://www.assurefintech.com/compare?q={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
