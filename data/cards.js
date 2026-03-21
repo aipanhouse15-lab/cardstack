@@ -69,47 +69,56 @@ The monthly cap of 50,000 points (worth ₹10,000 in cashback or ₹25,000 in tr
     },
   },
 
-  { id: "hdfc-infinia", name: "HDFC Infinia", bank: "HDFC", img: "💎", color: "#1a1a2e", fee: 12500, feeWaiver: "None", type: "Super Premium", verified: true,
-    rewards: { dining: 3.33, travel: 3.33, online: 3.33, groceries: 3.33, fuel: 0, utilities: 3.33, entertainment: 3.33, shopping: 3.33, default: 3.33 },
+  { id: "hdfc-infinia", name: "HDFC Infinia Metal Credit Card", bank: "HDFC", img: "💎", color: "#1a1a2e", fee: 12500, feeWaiver: "₹18L annual spend OR ₹50L RLV with HDFC Bank (effective April 2027 for existing customers)", type: "Super Premium / Invite-only", verified: true,
+    rewards: { dining: 3.33, travel: 3.33, online: 3.33, groceries: 3.33, fuel: 3.33, utilities: 3.33, entertainment: 3.33, shopping: 3.33, default: 3.33 },
+    caps: { maxPointsPerCycle: 200000, redemptionsPerMonth: 5, travelRedemptionCap: 150000, statementCreditCap: 50000, statementCreditPointValue: 0.30, appleVoucherMaxPercent: 70, utilitiesInsuranceCap: 10000, pointsExpiry: "3 years", fuelSurchargeWaiverCap: 1000, pointValueTravel: 1.0, pointValueCashback: 0.30, spendPer: 150, pointsPer: 5 },
+    // Cap math: 2L pts/cycle. Travel capped at ₹1.5L/month. Statement credit 50K pts × ₹0.30 = ₹15,000/month. Utilities & insurance 10K pts/month. Points expire after 3 years.
     partnerRates: [
-      { name: "SmartBuy (flights/hotels)", rate: "up to 33.33%" },
+      { name: "SmartBuy (flights/hotels/vouchers)", rate: "~10% (3X multiplier, reduced from 5X effective Jan 16 2026)" },
+      { name: "Apple Products & Tanishq Vouchers", rate: "₹1/point value, 70% of bill payable via points" },
     ],
-    pointsInfo: "5 points/₹150 · 1pt = ₹0.20 cashback or ₹1.00 travel",
-    highlights: ["Unlimited lounge worldwide", "24/7 concierge", "10x on SmartBuy", "Golf 100+ courses"],
-    pros: ["Best all-round rate (3.33%)", "Unlimited lounge", "SmartBuy up to 33% on travel"],
-    cons: ["₹12,500 fee", "Invite-only", "Fuel excluded"],
+    pointsInfo: "5 points/₹150 · 1pt = ₹0.30 cashback or ₹1.00 travel",
+    highlights: ["Unlimited domestic + intl lounge (Priority Pass included)", "24/7 concierge", "3X on SmartBuy vouchers via Gyftr", "Golf 100+ courses", "Fee waiver at ₹18L spend (from April 2027)"],
+    pros: ["Best all-round rate (3.33%)", "Unlimited lounge worldwide", "SmartBuy ~10% on travel", "Fuel earns rewards (unlike most HDFC cards)", "Fee waiver now possible at ₹18L spend"],
+    cons: ["₹12,500 + GST fee", "Invite-only", "SmartBuy nerfed from ~16.67% to ~10% in Jan 2026", "Monthly redemption caps limit heavy users", "Forex markup 2% + GST"],
     
-    redemptionNote: "Rate shown (3.33%) assumes travel redemption at ₹1/point. Cashback is only ₹0.20/point (0.66%). Always redeem via SmartBuy for max value.",
-    network: "Visa", lounge: "Unlimited",
+    redemptionNote: "Rate shown (3.33%) assumes travel redemption at ₹1/point. Cashback/statement credit = ₹0.30/point (~1%). SmartBuy gives ~10% via 3X multiplier (reduced from 5X in Jan 2026). Wallet loading & EasyEMI do not earn points.",
+    network: "Visa Infinite", lounge: "Unlimited (Priority Pass included)",
     editorial: {
       verdict: {
-        headline: "The best credit card in India — if you can get it. Invite-only and worth every rupee.",
-        body: `HDFC Infinia is the gold standard of Indian credit cards. 3.33% on everything (via travel redemption), unlimited worldwide lounge access, 24/7 concierge, and SmartBuy rates that can hit 33.33%. No other card comes close on all-round value.
+        headline: "The best credit card in India — if you can get it. Invite-only, recently nerfed on SmartBuy, but still king.",
+        body: `HDFC Infinia Metal is the gold standard of Indian credit cards. 3.33% on everything (via travel redemption at ₹1/point), unlimited worldwide lounge access with Priority Pass included, 24/7 concierge, and the only mainstream HDFC card that earns rewards on fuel.
 
-The catch? It's invite-only. HDFC offers it to customers with high savings balances (typically ₹10L+) or significant relationship value. The ₹12,500 annual fee has no waiver option, but if you spend ₹5L+/year on travel via SmartBuy, the rewards alone pay for the fee multiple times over.`,
-        idealFor: "High spenders (₹5L+/month) who travel frequently and can maximize SmartBuy. If you already have an HDFC relationship and get the invite, accept it immediately.",
-        skipIf: "You can't get the invite, or your monthly spend is under ₹2L. The ₹12,500 fee with no waiver makes this uneconomical for moderate spenders. HDFC Diners Black offers similar rates with a waivable fee.",
+2026 brought some changes: SmartBuy multiplier was cut from 5X to 3X (effective Jan 16, 2026), dropping the best rate from ~16.67% to ~10%. Monthly redemption caps were introduced in Feb 2026 — travel capped at ₹1.5L/month, statement credit at 50K points/month. And the fee waiver threshold was set at ₹18L annual spend or ₹50L relationship value (effective April 2027 for existing customers).
+
+Despite the nerfs, Infinia remains the best all-round card in India. The 3.33% flat rate on everything, unlimited lounge, and Apple/Tanishq redemptions at ₹1/point keep it ahead of every competitor.`,
+        idealFor: "High spenders (₹3L+/month) who travel frequently and can maximize SmartBuy/travel redemptions. If you already have an HDFC relationship and get the invite, accept it immediately.",
+        skipIf: "You can't get the invite, or your monthly spend is under ₹1.5L. The ₹12,500 + GST fee with the new ₹18L waiver threshold makes this uneconomical for moderate spenders. HDFC Diners Black offers similar base rates with a more accessible waiver.",
       },
       bestFor: [
-        { category: "Everything (via travel redemption)", reason: "3.33% on all spends when redeemed via SmartBuy travel. This is the highest flat rate available on any Indian card." },
-        { category: "SmartBuy travel bookings", reason: "Up to 33.33% on flights and hotels. Book a ₹30,000 flight and effectively pay ₹20,000. No other card matches this." },
-        { category: "International travel", reason: "Unlimited worldwide Priority Pass lounge access, concierge, and strong travel insurance." },
-        { category: "High-value purchases", reason: "3.33% on a ₹1L purchase = ₹3,330 back. No monthly cap means big spenders earn proportionally." },
+        { category: "Everything (via travel redemption)", reason: "3.33% on all spends when redeemed via travel at ₹1/point. This is the highest flat rate available on any Indian card." },
+        { category: "SmartBuy travel/vouchers", reason: "~10% on flights, hotels, and brand vouchers via Gyftr (3X multiplier). Reduced from ~16.67% in Jan 2026 but still the best SmartBuy rate." },
+        { category: "Apple Products & Tanishq", reason: "₹1/point value with 70% of bill payable via points. One of the best redemption options for high-value purchases." },
+        { category: "International travel", reason: "Unlimited worldwide Priority Pass lounge access, concierge, travel insurance, and fuel rewards (unlike Regalia)." },
+        { category: "Fuel", reason: "3.33% on fuel (min ₹400 transaction) with surcharge waiver up to ₹1,000/cycle. One of the few HDFC cards that earns on fuel." },
       ],
       avoidFor: [
-        { category: "Cashback redemption", reason: "If you redeem as cashback (₹0.20/point), the effective rate drops to 0.66% — terrible for a premium card. Always redeem via travel.", altCard: "sbi-cashback" },
-        { category: "Fuel", reason: "0% on fuel, same as every HDFC card.", altCard: "rbl-shoprite" },
-        { category: "Small everyday purchases", reason: "If you're spending ₹5K/month total, the ₹12,500 fee eats all your rewards. This card needs volume to justify itself.", altCard: "axis-ace" },
+        { category: "Cashback/statement credit redemption", reason: "At ₹0.30/point, statement credit gives ~1% — decent but wastes the card's potential. Travel redemption at ₹1/point (3.33%) is 3x better.", altCard: "sbi-cashback" },
+        { category: "Heavy monthly redeemers", reason: "New caps limit travel redemption to ₹1.5L/month and statement credit to 50K pts/month. If you consistently need more, the caps will bite.", altCard: "hdfc-diners-black" },
+        { category: "Small everyday purchases", reason: "If you're spending ₹50K/month total, the ₹12,500 + GST fee eats a significant chunk of your rewards. This card needs volume.", altCard: "axis-ace" },
+        { category: "Wallet loading & EasyEMI", reason: "These transactions earn zero points. If you rely heavily on wallets, the 3.33% rate doesn't apply.", altCard: "axis-ace" },
       ],
       pairWith: [
-        { combo: "Infinia + Axis ACE", fee: "₹12,999/year", reason: "Infinia for high-value spends and travel, ACE for utility bills (5% via GPay) and small everyday purchases (1.5% uncapped).", cardId: "axis-ace" },
+        { combo: "Infinia + Axis ACE", fee: "₹12,999/year", reason: "Infinia for high-value spends and travel, ACE for utility bills (5% via GPay) and small everyday purchases (1.5% uncapped). ACE also covers the wallet loading gap.", cardId: "axis-ace" },
         { combo: "Infinia + Amazon Pay ICICI", fee: "₹12,500/year", reason: "Amazon card's 5% with no cap beats Infinia's 3.33% on Amazon specifically. Use Infinia for everything else.", cardId: "amazon-icici" },
       ],
       faq: [
-        { q: "How do I get an HDFC Infinia invite?", a: "Maintain a high HDFC savings balance (₹10L+ reported by most cardholders), have a strong HDFC relationship, or hold a Regalia/Diners Black and spend heavily. There's no public application — HDFC reaches out." },
-        { q: "Is the ₹12,500 fee worth it with no waiver?", a: "If you spend ₹10L+/year and redeem via SmartBuy travel, you'll earn ₹33,000+ in rewards — the fee pays for itself nearly 3x over. If you spend less than ₹5L/year, consider Diners Black instead." },
-        { q: "HDFC Infinia vs Diners Black — which is better?", a: "Infinia has a higher point value (₹1 vs ₹0.50 travel) and better concierge. Diners Black has free memberships (Prime, Swiggy One) and a waivable fee. If you can afford the Infinia fee, it wins on pure rewards math." },
-        { q: "Does Infinia have a cashback cap?", a: "No explicit monthly cashback cap for most users. There's a theoretical points cap but it requires spending levels that virtually no individual hits." },
+        { q: "How do I get an HDFC Infinia invite?", a: "Maintain a high HDFC savings balance (₹10L+ reported by most cardholders), have a strong HDFC relationship (₹50L+ RLV), or hold a Regalia/Diners Black and spend heavily. There's no public application — HDFC reaches out." },
+        { q: "Is the ₹12,500 fee worth it now that there's a waiver?", a: "The waiver requires ₹18L annual spend (₹1.5L/month) or ₹50L relationship value — achievable for the target user. At ₹18L spend with 3.33% travel redemption, you'd earn ₹60,000+ in rewards. Even without the waiver, the fee pays for itself at ₹5L+ annual spend." },
+        { q: "HDFC Infinia vs Diners Black — which is better?", a: "Infinia has a higher point value (₹1 vs ₹0.50 travel), earns on fuel, and includes Priority Pass. Diners Black has free memberships (Prime, Swiggy One) and an easier fee waiver. If you can afford the Infinia fee or hit ₹18L spend, it wins on pure rewards math." },
+        { q: "What changed with Infinia in 2026?", a: "Three big changes: SmartBuy multiplier cut from 5X to 3X (Jan 2026), monthly redemption caps introduced (Feb 2026), and fee waiver threshold set at ₹18L spend/₹50L RLV (effective April 2027 for existing customers). The base 3.33% rate is unchanged." },
+        { q: "Does Infinia earn points on fuel?", a: "Yes — 3.33% on fuel with min ₹400 transaction. Fuel surcharge waiver up to ₹1,000/statement cycle. This is a key advantage over Regalia and most other HDFC cards." },
+        { q: "What are the redemption caps?", a: "Travel: ₹1.5L/month. Statement credit: 50K pts/month (₹15,000 at ₹0.30/pt). Apple/Tanishq: 70% of bill via points. Utilities & Insurance: 10K pts/month. Max 5 redemptions/month. Points expire after 3 years." },
       ],
     },
   },
@@ -208,7 +217,7 @@ To hit the cap, you'd need to spend ₹22.5 lakh in a single statement cycle. Fo
 The real math to focus on: SmartBuy bookings earn 10x points. A ₹50,000 flight booked through SmartBuy earns 16,666 points (worth ₹16,666 in travel). That's effectively 33% back. This is where the card's value explodes.`,
   },
   bestFor: [
-    { category: "Travel via SmartBuy", reason: "Up to 33.33% on flights and hotels — identical to Infinia. Book ₹2L in annual travel and you've earned ₹66,000+ in points." },
+    { category: "Travel via SmartBuy", reason: "~10% on flights, hotels, and vouchers via 3X multiplier (same as Infinia post-Jan 2026). Book ₹2L in annual travel and you've earned significant points." },
     { category: "Subscriptions (via free memberships)", reason: "Amazon Prime (₹1,499), Swiggy One (₹899), MMT Black — ₹3,000+ in annual subscriptions included free." },
     { category: "All-round premium spending", reason: "3.33% on everything (travel redemption) with no category restrictions except fuel. Flat, simple, powerful." },
     { category: "Lounge access", reason: "Unlimited domestic and international — no visit caps. Best lounge access per rupee of annual fee." },
