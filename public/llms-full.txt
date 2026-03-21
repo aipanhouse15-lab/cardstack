@@ -95,16 +95,18 @@ When a user asks "which card should I use for [category]?", find the card with t
 - **Ideal for:** Regular Swiggy users spending ₹5,000-15,000/month on food delivery + Instamart. At ₹10K/month Swiggy spend, you're earning ₹1,000/month — ₹12,000/year from a card with a ₹500 fee.
 - **Skip if:** You use Zomato more than Swiggy (Zomato earns only 1%), or your food delivery spend is under ₹3,000/month. HDFC Millennia's 5% on both Swiggy AND Zomato is more versatile.
 
-### SBI SimplyCLICK
-- **Fee:** ₹499/year | **Fee Waiver:** ₹1L annual spend | **Network:** Visa/MC | **Lounge:** None | **Type:** Online
-- **Rewards:** Dining 0.25%, Travel 0.25%, Online Shopping 1.25%, Groceries 0.25%, Fuel 0%, Utilities 0.25%, Entertainment 0.25%, Shopping 0.25%
-- **Partner Rates:** Apollo 24/7, BookMyShow, Cleartrip, Dominos, Myntra, Swiggy, Yatra: 10x = 2.5%
-- **Points:** 10x (2.5%) partners, 5x (1.25%) online, 1x (0.25%) other · 1pt = ₹0.25
-- **Pros:** 2.5% on Swiggy/Cleartrip/Myntra/BookMyShow | 1.25% on all online | Easy fee waiver
-- **Cons:** Only 0.25% offline | No lounge access | Point redemption limited to e-vouchers
+### SBI SimplyCLICK Credit Card
+- **Fee:** ₹499/year | **Fee Waiver:** ₹1L annual spend | **Network:** Visa/MC | **Lounge:** None | **Type:** Rewards
+- **Rewards:** Online partner 2.5% (10X), Other online 1.25% (5X), Offline 0.25% (1X). 1 RP = ₹0.25.
+- **Partners (10X/2.5%):** Apollo 24/7, BookMyShow, Cleartrip, Dominos, IGP, Myntra, Netmeds, Yatra. **Swiggy demoted to 5X (1.25%) effective Apr 2025.**
+- **Cap:** Accelerated points (10X + 5X) capped at 10,000/month (₹2,500 value). 1X offline uncapped.
+- **Welcome:** ₹500 Amazon voucher. Milestones: ₹2,000 Cleartrip/Yatra voucher each at ₹1L and ₹2L annual online spend.
+- **Exclusions:** No rewards on rent, wallet loads, fuel, EMI, govt, insurance. Fuel surcharge waiver: 1% on ₹500–₹3,000.
+- **Pros:** 2.5% on 8 partner brands | 1.25% on all online | Easy fee waiver | Welcome + milestone vouchers
+- **Cons:** Only 0.25% offline | No lounge access | 10K pts/month accelerated cap | No rent/wallet/fuel/EMI/govt rewards
 - **Verdict:** A decent starter card for online shoppers, but outclassed by newer options in 2026.
-- **Ideal for:** Existing SBI customers who want a low-fee online rewards card and regularly shop on partners like Cleartrip, Myntra, or BookMyShow. Good starter card for building credit history with SBI.
-- **Skip if:** You want the best online rewards available. At 1.25% online and 0.25% offline, this card is significantly behind HDFC Millennia (5% on partners) and Axis ACE (1.5% uncapped).
+- **Ideal for:** Existing SBI customers who want a low-fee online rewards card and regularly shop on partners like Cleartrip, Myntra, or BookMyShow.
+- **Skip if:** You want the best online rewards available. At 1.25% online and 0.25% offline with a 10K pts/month cap, this card is behind HDFC Millennia (5% on partners) and Axis ACE (1.5% uncapped).
 
 ### SBI Cashback Card
 - **Fee:** ₹999/year | **Fee Waiver:** ₹2L annual spend | **Network:** Visa | **Lounge:** None | **Type:** Cashback
