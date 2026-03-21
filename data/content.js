@@ -63,7 +63,7 @@ export const BLOG_POSTS = [
       { type: "h2", text: "The Core Difference" },
       { type: "p", text: "Regalia earns 4 points per ₹150 at ₹0.20/point cashback (0.53%) or ₹0.50/point travel (1.33%). Infinia earns 5 points per ₹150 at ₹1/point travel (3.33%). That's a massive gap — Infinia's travel redemption rate is 2.5x higher." },
       { type: "h2", text: "Where Infinia Wins" },
-      { type: "p", text: "Infinia wins on every category because of higher point value. 3.33% vs 0.53% (cashback) or 1.33% (travel) across all spends. On SmartBuy, Infinia can hit 33.33% vs Regalia's 13.33%. Infinia also gets unlimited lounge access vs Regalia's 12 domestic + 6 intl." },
+      { type: "p", text: "Infinia wins on every category because of higher point value. 3.33% vs 0.53% (cashback) or 1.33% (travel) across all spends. On SmartBuy, Infinia hits ~10% (post-Jan 2026 nerf) vs Regalia's ~13.33%. Infinia also earns on fuel (Regalia doesn't) and gets unlimited lounge access vs Regalia's 12 domestic + 6 intl." },
       { type: "h2", text: "The Break-Even Calculation" },
       { type: "p", text: "The extra ₹10,000 in fees means Infinia needs to earn you ₹10,000 more per year. With the rate difference (3.33% vs 1.33% travel redemption = 2% gap), you need roughly ₹5L annual spend for Infinia to pay for itself. Below that, Regalia is the smarter choice." },
       { type: "h2", text: "The Real Answer" },
