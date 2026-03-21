@@ -8,7 +8,7 @@ export const MERCHANTS = {
         { card: "icici-coral", rate: "5% (dining)", note: "Counts as dining category. Movie BOGO bonus." },
       ], proTip: "Stack Swiggy Super (free delivery) + HDFC Swiggy Card for max savings. On orders ₹1,500+, HDFC Diners Black's points can beat flat 5%." },
       { id: "zomato", name: "Zomato", icon: "🔴", cat: "dining", tips: [
-        { card: "hdfc-regalia", rate: "5% (dining)", note: "Top dining rate." },
+        { card: "hdfc-regalia", rate: "0.53% cashback (1.33% travel)", note: "Low for dining. Use Millennia or Swiggy card instead." },
         { card: "axis-ace", rate: "4% cashback", note: "Zomato is a preferred partner." },
         { card: "icici-coral", rate: "5% (dining)", note: "Dining category + Buy 1 Get 1 movies." },
       ], proTip: "HDFC Diners Black gives free Zomato Gold membership — ₹600/year saved before any cashback." },
@@ -23,7 +23,7 @@ export const MERCHANTS = {
         { card: "au-zenith", rate: "3.5% (flat)", note: "No category guessing needed." },
       ], proTip: "BigBasket accepts TATA Neu payments — if your card gives bonuses on TATA Neu, that could stack." },
       { id: "restaurant", name: "Restaurant Dining", icon: "🍽️", cat: "dining", tips: [
-        { card: "hdfc-regalia", rate: "5% (dining)", note: "Best widely-available dining card." },
+        { card: "hdfc-regalia", rate: "0.53% cashback (1.33% travel)", note: "Not ideal for dining. Better options exist." },
         { card: "hdfc-diners-black", rate: "5% (dining)", note: "Same rate + Zomato Gold + guest lounge." },
         { card: "sbi-elite", rate: "5% (dining)", note: "Plus dining privileges at partner restaurants." },
       ], proTip: "Check EazyDiner or Dineout for extra 20-30% off that stacks on top of card rewards." },
@@ -33,7 +33,7 @@ export const MERCHANTS = {
     label: "Travel & Transport", icon: "✈️",
     items: [
       { id: "makemytrip", name: "MakeMyTrip", icon: "🔵", cat: "travel", tips: [
-        { card: "hdfc-regalia", rate: "5% (travel)", note: "Great for flights and hotels on MMT." },
+        { card: "hdfc-regalia", rate: "Up to 13.33% via SmartBuy", note: "Book through SmartBuy portal for max value." },
         { card: "axis-atlas", rate: "5% (travel)", note: "Points transfer to airlines." },
         { card: "hdfc-diners-black", rate: "5% + free membership", note: "Free MMT Black membership worth ₹3,000/year." },
       ], proTip: "HDFC Diners Black gives free MMT Black. Book via MMT using Diners Black = 5% + Black discounts. Double dip." },
@@ -50,7 +50,7 @@ export const MERCHANTS = {
       { id: "airlines", name: "Airlines", icon: "🛫", cat: "travel", tips: [
         { card: "axis-atlas", rate: "5% + mile transfers", note: "Only Indian card that transfers to airline miles." },
         { card: "hdfc-infinia", rate: "5% (travel)", note: "Points convertible to airline miles too." },
-        { card: "hdfc-regalia", rate: "5% (travel)", note: "Solid airline booking rate." },
+        { card: "hdfc-regalia", rate: "Up to 13.33% via SmartBuy", note: "Use SmartBuy portal, not direct airline booking." },
       ], proTip: "Axis Atlas points transfer to Vistara/Air India/Singapore Airlines. If you fly 4+ times a year, this is the card." },
     ]
   },
