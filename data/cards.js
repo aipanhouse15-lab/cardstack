@@ -6,61 +6,63 @@
 export const CARDS = [
   // ═══ VERIFIED CARDS (March 2026) ═══
 
-  { id: "hdfc-regalia", name: "HDFC Regalia", bank: "HDFC", img: "💳", color: "#1a3c6e", fee: 2500, feeWaiver: "₹4L annual spend", type: "Premium", verified: true,
-    rewards: { dining: 1.33, travel: 1.33, online: 1.33, groceries: 1.33, fuel: 0, utilities: 1.33, entertainment: 1.33, shopping: 1.33, default: 1.33 },
-    caps: { monthlyPoints: 50000, pointValue: 0.20, spendPer: 150, pointsPer: 4 },
-    // Cap math: 50000 pts × ₹0.20 = ₹10,000 max cashback/month. At 4pts/₹150, need ₹18.75L spend to hit cap. Unlikely for most users.
+  { id: "hdfc-regalia", name: "HDFC Regalia", bank: "HDFC", img: "💳", color: "#1a3c6e", fee: 2500, feeWaiver: "₹3L annual spend", type: "Premium", verified: true,
+    rewards: { dining: 0.53, travel: 0.53, online: 0.53, groceries: 0.53, fuel: 0, utilities: 0.53, entertainment: 0.53, shopping: 0.53, default: 0.53 },
+    caps: { monthlyPoints: 50000, groceryPointsMonthlyCap: 2000, insurancePointsDailyCap: 2000, pointValueCashback: 0.2, pointValueTravel: 0.5, spendPer: 150, pointsPer: 4 },
+    // Cap math: 50000 pts × ₹0.20 = ₹10,000 max cashback/month. Grocery points capped at 2000/month. Insurance points capped at 2000/day. At 4pts/₹150, need ₹18.75L spend to hit overall cap. Unlikely for most users.
     partnerRates: [
       { name: "SmartBuy (flights/hotels)", rate: "up to 13.33%" },
       { name: "Myntra, Nykaa, Reliance Digital", rate: "5x points (~3.33%)" },
     ],
     pointsInfo: "4 points/₹150 · 1pt = ₹0.20 cashback or ₹0.50 travel",
-    highlights: ["12 domestic + 6 intl lounge/yr", "Up to 10x on SmartBuy", "5x on select partners", "Fee waiver on ₹4L spend"],
-    pros: ["Excellent lounge access (18/yr total)", "SmartBuy gives up to 13% on travel", "Partner brands 5x rewards"],
-    cons: ["Base rate only 1.33%", "Fuel excluded from rewards", "₹2,500 + GST fee"],
+    highlights: ["12 domestic lounge/yr (2/quarter) + 6 intl via Priority Pass", "Up to 10x on SmartBuy", "5x on select partners", "Fee waiver on ₹3L spend"],
+    pros: ["Good lounge access (12 domestic + 6 intl via Priority Pass)", "SmartBuy gives up to 13% on travel", "Partner brands 5x rewards"],
+    cons: ["Base cashback rate only 0.53%", "Fuel excluded from rewards", "₹2,500 + GST fee", "Intl lounge requires separate Priority Pass application"],
     
-    redemptionNote: "Rate shown (1.33%) assumes cashback at ₹0.20/point. Travel redemption via SmartBuy = ₹0.50/point (3.33% base). SmartBuy flights/hotels can reach 13.33%.",
-    network: "Visa/MC", lounge: "18/year",
+    redemptionNote: "Rates shown (0.53%) are cashback-equivalent at ₹0.20/point. Travel redemption via SmartBuy = ₹0.50/point (1.33% base). SmartBuy accelerated rewards can yield up to 13.33% on flights/hotels.",
+    network: "Visa/MC", lounge: "12 domestic/yr + 6 intl (Priority Pass)",
     editorial: {
       verdict: {
         headline: "India's most popular premium card — but only worth it if you travel or use SmartBuy.",
-        body: `HDFC Regalia looks average on paper at 1.33% cashback. But that number is misleading. The real value is hidden in SmartBuy, where travel bookings earn up to 13.33%, and partner brands earn 3.33%. If you book even 2-3 flights a year through SmartBuy, the rewards easily outpace cards with higher base rates.
+        body: `HDFC Regalia looks underwhelming on paper at 0.53% cashback. But that number is misleading — it's the cashback-equivalent rate at ₹0.20/point. The real value is hidden in SmartBuy, where travel bookings earn up to 13.33%, and partner brands earn 3.33%. If you book even 2-3 flights a year through SmartBuy, the rewards easily outpace cards with higher base rates.
 
-The 18 lounge visits per year (12 domestic + 6 international) are worth ₹15,000-20,000 alone if you travel regularly. The ₹2,500 annual fee is waivable at ₹4 lakh spend — roughly ₹33,000/month, which is achievable for most premium card holders. For non-travelers, though, 1.33% flat is mediocre.`,
-        idealFor: "Frequent travelers who book through SmartBuy, or anyone spending ₹4L+/year who values lounge access. If you fly 3+ times a year domestically, the lounge visits alone justify the fee.",
-        skipIf: "You rarely travel and don't use SmartBuy. At 1.33% base, you'd earn more with an Axis ACE (1.5% uncapped) or HDFC Millennia (5% on partners) for everyday spending.",
+The lounge access — 12 domestic visits/year (2 per quarter) plus 6 international via Priority Pass (requires separate application) — is worth ₹12,000-15,000 alone if you travel regularly. The ₹2,500 annual fee is waivable at ₹3 lakh spend — roughly ₹25,000/month, achievable for most premium card holders. For non-travelers, though, 0.53% cashback is poor.`,
+        idealFor: "Frequent travelers who book through SmartBuy, or anyone spending ₹3L+/year who values lounge access. If you fly 3+ times a year domestically, the lounge visits alone justify the fee.",
+        skipIf: "You rarely travel and don't use SmartBuy. At 0.53% cashback, you'd earn more with an Axis ACE (1.5% uncapped) or HDFC Millennia (5% on partners) for everyday spending.",
       },
       capMath: {
         title: "Understanding Regalia's point value — cashback vs travel",
         body: `This is where most people get confused. Regalia earns 4 points per ₹150 spent. But those points have two very different values:
 
-Cashback redemption: 1 point = ₹0.20 → effective rate 1.33%. This is what most people experience.
+Cashback redemption: 1 point = ₹0.20 → effective rate 0.53%. This is what most people experience.
 
-Travel via SmartBuy: 1 point = ₹0.50 → effective rate 3.33%. This is the intended use case. Book flights or hotels through HDFC SmartBuy and your effective rate jumps to 3.33% base, with 10x accelerators pushing it to 13.33%.
+Travel via SmartBuy: 1 point = ₹0.50 → effective rate 1.33%. This is the intended use case. Book flights or hotels through HDFC SmartBuy and your effective rate jumps to 1.33% base, with 10x accelerators pushing it to 13.33%.
 
-The monthly cap of 50,000 points (worth ₹10,000 in cashback or ₹25,000 in travel) requires ₹18.75 lakh in monthly spend to hit — virtually impossible for individuals. So the cap is effectively irrelevant.`,
+Additional caps to know: Grocery points are capped at 2,000 per month. Insurance points are capped at 2,000 per day. Fuel, rent, government payments, wallet loading, and EMI transactions do not earn points. Utilities earn base rewards.
+
+The monthly cap of 50,000 points (worth ₹10,000 in cashback or ₹25,000 in travel) requires ₹18.75 lakh in monthly spend to hit — virtually impossible for individuals. So the overall cap is effectively irrelevant. The grocery and insurance sub-caps, however, can matter.`,
       },
       bestFor: [
         { category: "Flight and hotel bookings via SmartBuy", reason: "Up to 13.33% back on travel bookings is the highest effective rate among non-invite-only cards. Even base travel via SmartBuy gives 3.33%." },
-        { category: "Lounge access", reason: "18 visits/year (12 domestic + 6 international) is the best ratio of lounge access to annual fee in the premium segment." },
+        { category: "Lounge access", reason: "12 domestic visits/year (2 per quarter) plus 6 international via Priority Pass is strong for a ₹2,500 fee card." },
         { category: "Partner brand shopping", reason: "5x points on Myntra, Nykaa, Reliance Digital gives 3.33% — competitive with dedicated shopping cards." },
-        { category: "All-round premium spending", reason: "1.33% on everything with no category restrictions (except fuel) is reliable as a default card for non-partner spends." },
+        { category: "All-round premium spending", reason: "0.53% cashback (or 1.33% via travel redemption) on everything with no category restrictions (except fuel) works as a default card for non-partner spends." },
       ],
       avoidFor: [
-        { category: "Food delivery", reason: "1.33% on Swiggy/Zomato is poor. HDFC Millennia gives 5% and even Axis ACE gives 4%.", altCard: "hdfc-millennia" },
-        { category: "Utility bills", reason: "1.33% vs Axis ACE's 5% on bills via Google Pay. If your monthly bills are ₹5K, that's ₹250 vs ₹67.", altCard: "axis-ace" },
+        { category: "Food delivery", reason: "0.53% on Swiggy/Zomato is terrible. HDFC Millennia gives 5% and even Axis ACE gives 4%.", altCard: "hdfc-millennia" },
+        { category: "Utility bills", reason: "0.53% vs Axis ACE's 5% on bills via Google Pay. If your monthly bills are ₹5K, that's ₹250 vs ₹27.", altCard: "axis-ace" },
         { category: "Fuel", reason: "0% rewards on fuel. No Regalia points earned at petrol pumps.", altCard: "axis-ace" },
-        { category: "Online shopping (non-partner)", reason: "1.33% on Amazon/Flipkart is below average. Amazon Pay ICICI gives 5% on Amazon, HDFC Millennia gives 5% on both.", altCard: "hdfc-millennia" },
+        { category: "Online shopping (non-partner)", reason: "0.53% on Amazon/Flipkart is well below average. Amazon Pay ICICI gives 5% on Amazon, HDFC Millennia gives 5% on both.", altCard: "hdfc-millennia" },
       ],
       pairWith: [
         { combo: "Regalia + HDFC Millennia", fee: "₹3,500/year", reason: "Regalia for travel/SmartBuy/lounges, Millennia for Swiggy/Amazon/Flipkart at 5%. Covers both premium travel and everyday online spending.", cardId: "hdfc-millennia" },
         { combo: "Regalia + Axis ACE", fee: "₹2,999/year", reason: "Regalia for travel and partner brands, ACE for utility bills (5%) and all-round spending (1.5% uncapped). The ACE fills Regalia's biggest gaps.", cardId: "axis-ace" },
-        { combo: "Regalia + Amazon Pay ICICI", fee: "₹2,500/year", reason: "If you're a heavy Amazon shopper. Amazon card's 5% with no cap beats Regalia's 1.33% on Amazon. Use Regalia for everything else.", cardId: "amazon-icici" },
+        { combo: "Regalia + Amazon Pay ICICI", fee: "₹2,500/year", reason: "If you're a heavy Amazon shopper. Amazon card's 5% with no cap beats Regalia's 0.53% on Amazon. Use Regalia for travel/SmartBuy.", cardId: "amazon-icici" },
       ],
       faq: [
-        { q: "Is HDFC Regalia worth the ₹2,500 annual fee?", a: "Yes, if you travel 2+ times a year. The 18 lounge visits alone are worth ₹15K+. The fee is waivable at ₹4L annual spend (₹33K/month). If you don't travel, there are better options." },
-        { q: "How do I maximize Regalia rewards?", a: "Always book travel through HDFC SmartBuy for 10x points (up to 13.33%). For non-travel, use partner brands (Myntra, Nykaa) for 5x points. Never redeem points as cashback — travel redemption gives 2.5x more value." },
-        { q: "HDFC Regalia vs Infinia — which is better?", a: "Infinia is objectively better (3.33% vs 1.33% base, unlimited lounge) but it's invite-only and costs ₹12,500. If you can get Infinia, get it. If not, Regalia is the best accessible HDFC premium card." },
+        { q: "Is HDFC Regalia worth the ₹2,500 annual fee?", a: "Yes, if you travel 2+ times a year. The lounge visits (12 domestic + 6 intl via Priority Pass) are worth ₹12K+. The fee is waivable at ₹3L annual spend (₹25K/month). If you don't travel, there are better options." },
+        { q: "How do I maximize Regalia rewards?", a: "Always book travel through HDFC SmartBuy for 10x points (up to 13.33%). For non-travel, use partner brands (Myntra, Nykaa) for 5x points. Never redeem points as cashback (0.53%) — travel redemption gives 2.5x more value (1.33%)." },
+        { q: "HDFC Regalia vs Infinia — which is better?", a: "Infinia is objectively better (3.33% vs 0.53% cashback, unlimited lounge) but it's invite-only and costs ₹12,500. If you can get Infinia, get it. If not, Regalia is the best accessible HDFC premium card." },
         { q: "Does Regalia earn points on rent payments?", a: "Yes, but only if processed as a normal transaction. Rent paid via third-party platforms may not earn points depending on the MCC code." },
         { q: "Can I use Regalia lounge access for guests?", a: "Guest access depends on the specific lounge program (Priority Pass, Visa, domestic). Generally, you can bring 1 guest per visit but the guest visit counts toward your annual limit." },
       ],
@@ -157,7 +159,7 @@ The 1% rate on non-partner spends (groceries, travel, offline shopping) has no c
         { category: "Fuel", reason: "0% rewards. No card gives great fuel rewards, but at least Axis ACE's 1.5% base covers fuel.", altCard: "axis-ace" },
         { category: "Utility bills", reason: "1% on Millennia vs 5% on Axis ACE via Google Pay. If your electricity bill is ₹3,000/month, that's ₹150 vs ₹30.", altCard: "axis-ace" },
         { category: "Spending after ₹20K/month cap", reason: "Once the cap hits, switch to a flat-rate card like Axis ACE (1.5% uncapped) for the rest of the month.", altCard: "axis-ace" },
-        { category: "Travel", reason: "1% is poor for travel. HDFC Regalia gives 1.33% base and up to 13% via SmartBuy.", altCard: "hdfc-regalia" },
+        { category: "Travel", reason: "1% is poor for travel. HDFC Regalia gives up to 13% via SmartBuy (1.33% base travel redemption).", altCard: "hdfc-regalia" },
       ],
       pairWith: [
         { combo: "Millennia + Axis ACE", fee: "₹1,499/year, both waivable", reason: "The most popular budget combo. Use Millennia for partner platforms, ACE for utility bills (5% via GPay), food delivery overflow (4%), and everything else (1.5% uncapped).", cardId: "axis-ace" },
@@ -222,7 +224,7 @@ The real math to focus on: SmartBuy bookings earn 10x points. A ₹50,000 flight
   ],
   faq: [
     { q: "Where does Diners Club NOT work in India?", a: "Toll plazas (FASTag works on all networks but POS doesn't), some small restaurants, local shops, and a few government payment portals. Most large retailers and all major online merchants accept it." },
-    { q: "Is Diners Black better than Regalia?", a: "Yes, significantly. 3.33% vs 1.33% base rate, unlimited vs 18 lounge visits, plus free memberships. The only advantage Regalia has is wider Visa/MC acceptance." },
+    { q: "Is Diners Black better than Regalia?", a: "Yes, significantly. 3.33% vs 0.53% cashback (1.33% travel), unlimited vs 12 domestic lounge visits, plus free memberships. The only advantage Regalia has is wider Visa/MC acceptance." },
     { q: "Can I get the ₹10,000 fee waived?", a: "Yes. Spend ₹5 lakh in a year and the fee is waived. That's roughly ₹42,000/month — achievable for most premium card users if it's their primary card." },
     { q: "Does Diners Black work for international payments?", a: "Diners Club/Discover network works at most international merchants, especially in the US, Japan, and Europe. Coverage is similar to Amex — good but not as universal as Visa/MC." },
   ],
@@ -415,7 +417,7 @@ The downsides are real: ₹4,999 annual fee with a ₹10L spend waiver threshold
   avoidFor: [
     { category: "Online shopping", reason: "1% on online purchases. HDFC Millennia gives 5x more on the same platforms.", altCard: "hdfc-millennia" },
     { category: "Utility bills", reason: "1% on utilities. Axis ACE gives 5% via Google Pay — five times the return.", altCard: "axis-ace" },
-    { category: "Travel bookings", reason: "1% on travel. HDFC Regalia gives 1.33% base and up to 13% via SmartBuy. Axis Atlas gives 5% on travel.", altCard: "hdfc-regalia" },
+    { category: "Travel bookings", reason: "1% on travel. HDFC Regalia gives up to 13% via SmartBuy (1.33% base travel redemption). Axis Atlas gives 5% on travel.", altCard: "hdfc-regalia" },
   ],
   pairWith: [
     { combo: "SBI ELITE + HDFC Millennia", fee: "₹5,999/year", reason: "ELITE for dining/groceries/movies, Millennia for online shopping at 5%. This combo covers eating in, eating out, and shopping online.", cardId: "hdfc-millennia" },
@@ -580,7 +582,7 @@ For golfers, the 4 rounds/year (worth ₹4,000-8,000 depending on the course) ju
 
 Domestically, though, it's average at best. 1% on everything and ₹12,000 annual fee with a ₹15L spend waiver makes it hard to justify unless you travel internationally frequently. This is not an everyday spending card — it's a travel card you activate when crossing borders.`,
     idealFor: "Frequent international travelers spending ₹2L+/year abroad. The 2% on forex + unlimited global lounge access makes every international trip more rewarding and comfortable.",
-    skipIf: "You primarily spend domestically. 1% at a ₹12K fee is poor value. HDFC Regalia gives 1.33% with better lounge and SmartBuy perks for a lower fee.",
+    skipIf: "You primarily spend domestically. 1% at a ₹12K fee is poor value. HDFC Regalia gives up to 1.33% (travel redemption) with better lounge and SmartBuy perks for a lower fee.",
   },
   bestFor: [
     { category: "International purchases", reason: "2% on all international transactions — shopping, dining, and hotel payments abroad. Among the highest forex reward rates in India." },
@@ -588,7 +590,7 @@ Domestically, though, it's average at best. 1% on everything and ₹12,000 annua
     { category: "International online subscriptions", reason: "Subscriptions billed in foreign currency (Netflix US, Spotify, SaaS tools) earn 2% instead of the domestic 1%." },
   ],
   avoidFor: [
-    { category: "Domestic spending", reason: "1% on domestic purchases doesn't justify the ₹12K fee. HDFC Regalia gives 1.33% with better domestic perks at lower cost.", altCard: "hdfc-regalia" },
+    { category: "Domestic spending", reason: "1% on domestic purchases doesn't justify the ₹12K fee. HDFC Regalia gives up to 1.33% (travel redemption) with better domestic perks at lower cost.", altCard: "hdfc-regalia" },
     { category: "Online shopping (domestic)", reason: "1% on Amazon/Flipkart is poor. HDFC Millennia gives 5% on the same platforms.", altCard: "hdfc-millennia" },
     { category: "People who need zero forex", reason: "2% rewards doesn't mean zero forex. Forex markup is separate. IDFC FIRST WOW has actual zero forex markup.", altCard: "idfc-wow" },
   ],
@@ -734,7 +736,7 @@ The 2% base rate on non-travel spending is strong enough that Atlas works as a p
     { category: "Flight and hotel bookings", reason: "5% on travel is the highest travel rate outside of SmartBuy. Book ₹3L in annual travel and earn 15,000 EDGE Miles (worth ₹15K+ in flights)." },
     { category: "Airline mile transfers", reason: "Transfer to Air India, Vistara, Singapore Airlines, Etihad, Qatar, Accor. Premium cabin redemptions can give 3-5x value per mile." },
     { category: "All-round spending", reason: "2% base on non-travel is above average. Unlike most travel cards that give 0.5-1% on non-travel, Atlas remains competitive for everyday purchases." },
-    { category: "Lounge access", reason: "18 visits/year (comparable to HDFC Regalia) at a similar fee point. Excellent for domestic and international transit." },
+    { category: "Lounge access", reason: "18 visits/year at a similar fee point. Excellent for domestic and international transit." },
   ],
   avoidFor: [
     { category: "International transactions", reason: "~3.5% forex markup eats into rewards. For international spending, IDFC FIRST WOW (zero forex) or ICICI Emeralde (2% forex rewards) are better.", altCard: "idfc-wow" },
@@ -817,7 +819,7 @@ The catch is that you need to actively manage it. Select the wrong Feature Pack 
 
 Domestically, 1.25% on dining/travel and 0.5% on everything else is underwhelming for a ₹4,999 card. This card makes sense primarily for AU Bank customers who value lounge access and travel internationally. For domestic spending, there are much better options.`,
     idealFor: "AU Bank customers who travel frequently (domestic lounge access unlimited) and make international purchases. The 2.5% on forex spending is competitive with much pricier cards.",
-    skipIf: "You primarily spend domestically. 0.5% base rate on a ₹4,999 card is poor value. HDFC Regalia gives 1.33% with better domestic perks for a similar fee.",
+    skipIf: "You primarily spend domestically. 0.5% base rate on a ₹4,999 card is poor value. HDFC Regalia gives up to 1.33% (travel redemption) with better domestic perks for a similar fee.",
   },
   bestFor: [
     { category: "Airport lounges", reason: "Unlimited domestic and international lounge access. No visit caps — use it every time you fly." },
@@ -983,9 +985,9 @@ The metal card looks and feels premium, and the app is genuinely excellent. But 
     editorial: {
   verdict: {
     headline: "A hidden gem — 3.75% on dining, travel, and online from a bank nobody expects.",
-    body: `BOB Eterna flies under the radar because Bank of Baroda isn't the first name in credit cards. But 3.75% on dining, travel, and online shopping is the highest non-HDFC rate in India at this price point. Add 18 lounge visits/year and golf access, and Eterna competes directly with HDFC Regalia.
+    body: `BOB Eterna flies under the radar because Bank of Baroda isn't the first name in credit cards. But 3.75% on dining, travel, and online shopping is the highest non-HDFC rate in India at this price point. Add 18 lounge visits/year and golf access, and Eterna competes directly with HDFC Regalia — and wins on base rate.
 
-The fee waiver at ₹2.5L is more achievable than Regalia's ₹4L. The main downsides: 0.75% on general spends, BOB's mobile app is dated, and point redemption options are limited. But for the three categories where it shines, Eterna is genuinely excellent.`,
+The fee waiver at ₹2.5L is more achievable than Regalia's ₹3L. The main downsides: 0.75% on general spends, BOB's mobile app is dated, and point redemption options are limited. But for the three categories where it shines, Eterna is genuinely excellent.`,
     idealFor: "Frequent diners, travelers, and online shoppers looking for premium-level rewards without HDFC's ecosystem. If you spend ₹20K+/month across dining/travel/online, the 3.75% rate makes this one of the best value cards available.",
     skipIf: "You want a great mobile app experience or need wide redemption options. BOB's digital experience lags behind HDFC and Axis. Also skip if most spending is groceries/fuel/utilities (0.75% is below average).",
   },
@@ -993,7 +995,7 @@ The fee waiver at ₹2.5L is more achievable than Regalia's ₹4L. The main down
     { category: "Dining", reason: "3.75% on restaurants — among the highest dining rates available. On ₹10K/month restaurant spending, that's ₹375/month or ₹4,500/year." },
     { category: "Travel", reason: "3.75% on travel bookings. Competitive with HDFC Regalia's SmartBuy rates without needing a specific booking portal." },
     { category: "Online shopping", reason: "3.75% on online shopping is exceptional — only HDFC Millennia's 5% on partners beats it, and that has a ₹1K/month cap." },
-    { category: "Lounge access", reason: "18 visits/year matches HDFC Regalia, at a lower effective fee (easier waiver)." },
+    { category: "Lounge access", reason: "18 visits/year vs HDFC Regalia's 12 domestic + 6 intl (Priority Pass), at a lower effective fee (easier waiver)." },
   ],
   avoidFor: [
     { category: "Groceries and utilities", reason: "0.75% on both. SBI ELITE gives 2.5% on groceries, Axis ACE gives 5% on utility bills.", altCard: "axis-ace" },
@@ -1007,7 +1009,7 @@ The fee waiver at ₹2.5L is more achievable than Regalia's ₹4L. The main down
   faq: [
     { q: "Is BOB Eterna easy to get?", a: "BOB has lower approval thresholds than HDFC for premium cards. If you have an existing BOB relationship or salary account, approval is typically straightforward." },
     { q: "How do I redeem BOB Eterna points?", a: "Points can be redeemed through the BOB rewards portal for gift vouchers, merchandise, or catalogue items. Direct statement credit may be available but check current options — redemption is more limited than HDFC." },
-    { q: "BOB Eterna vs HDFC Regalia?", a: "Eterna gives 3.75% on dining/travel/online vs Regalia's 1.33% base. Eterna wins on raw rate. Regalia wins on SmartBuy (up to 13%), app experience, and wider redemption options. If you don't use SmartBuy, Eterna is better value." },
+    { q: "BOB Eterna vs HDFC Regalia?", a: "Eterna gives 3.75% on dining/travel/online vs Regalia's 0.53% cashback (1.33% travel redemption). Eterna wins on raw rate. Regalia wins on SmartBuy (up to 13%), app experience, and wider redemption options. If you don't use SmartBuy, Eterna is better value." },
   ],
 },
   },
@@ -1109,14 +1111,14 @@ The milestone bonus of 10,000 points (₹2,500) at ₹5L annual spend is nice, b
 
 But 0.5-0.75% reward rates on a ₹10,000/year card are hard to justify on spending alone. The 50K points/month cap further limits earning potential. This is purely a lounge card — if you need rewards, look elsewhere.`,
     idealFor: "Ultra-frequent domestic travelers (20+ flights/year) who use airport lounges regularly. If lounge visits are your primary credit card benefit, the unlimited access justifies the fee.",
-    skipIf: "You fly less than 15 times a year. HDFC Regalia (18 lounge visits) or BOB Eterna (18 visits) offer similar lounge access with significantly better reward rates.",
+    skipIf: "You fly less than 15 times a year. HDFC Regalia (12 domestic + 6 intl lounge visits) or BOB Eterna (18 visits) offer similar lounge access with significantly better reward rates.",
   },
   bestFor: [
     { category: "Unlimited lounge access", reason: "No visit caps, domestic or international. For someone flying weekly, this is unmatched." },
     { category: "Online spending", reason: "0.75% online is the highest rate this card offers — modest but slightly above its offline rate." },
   ],
   avoidFor: [
-    { category: "Earning rewards", reason: "0.5% base on a ₹10K card. HDFC Regalia gives 1.33% with better perks for a lower effective fee.", altCard: "hdfc-regalia" },
+    { category: "Earning rewards", reason: "0.5% base on a ₹10K card. HDFC Regalia gives up to 1.33% (travel redemption) with better perks for a lower effective fee.", altCard: "hdfc-regalia" },
     { category: "Online shopping", reason: "0.75% when competitors offer 5%+. The gap is enormous.", altCard: "hdfc-millennia" },
   ],
   pairWith: [
