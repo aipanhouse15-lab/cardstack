@@ -265,54 +265,70 @@ Important: the 33% on hotels applies ONLY via SmartBuy and is limited by the 75K
 },
   },
 
-  { id: "hdfc-swiggy", name: "HDFC Swiggy Card", bank: "HDFC", img: "🍕", color: "#fc8019", fee: 500, feeWaiver: "₹2L annual spend", type: "Entry", verified: true,
-    rewards: { dining: 10, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 0, entertainment: 5, shopping: 5, default: 1 },
-    caps: { monthlyCashback: 1500, capRate: 10, fallbackRate: 1, capAppliesTo: ["dining", "online", "entertainment", "shopping"] },
+  { id: "hdfc-swiggy", name: "Swiggy HDFC Bank Credit Card", bank: "HDFC", img: "🍕", color: "#fc8019", fee: 500, feeWaiver: "₹2L annual spend", type: "Cashback", verified: true,
+    rewardModel: "merchant-based",
+    rewards: { dining: 1, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
+    // NOTE: Merchant-based card. 10% applies ONLY to Swiggy ecosystem (Food, Instamart, Dineout, Genie). 5% on online spends (Amazon, Flipkart, Myntra, etc.). 1% on all other. Separate caps per category.
+    caps: { swiggyCashbackCap: 1500, onlineCashbackCap: 1500, otherCashbackCap: 500, totalMaxCashback: 3500 },
+    // Cap math: Swiggy cap ₹1500/mo (at 10% = max ₹15K Swiggy spend). Online cap ₹1500/mo (at 5% = max ₹30K online spend). Other cap ₹500/mo (at 1% = max ₹50K other spend). Total possible: ₹3500/mo.
     partnerRates: [
-      { name: "Swiggy", rate: "10% cashback (cap ₹1500/mo)" },
-      { name: "Online (apparel, electronics, entertainment)", rate: "5% (cap ₹1500/mo)" },
+      { name: "Swiggy ecosystem (Food, Instamart, Dineout, Genie)", rate: "10% cashback (cap ₹1500/mo)" },
+      { name: "Online (Amazon, Flipkart, Myntra, etc.)", rate: "5% cashback (cap ₹1500/mo)" },
+      { name: "All other spends", rate: "1% cashback (cap ₹500/mo)" },
     ],
-    pointsInfo: "10% Swiggy, 5% online, 1% other · ₹1500/mo total cap · Min ₹100 txn",
-    highlights: ["10% on Swiggy", "5% on online shopping", "Fee waiver on ₹2L", "₹500 joining voucher"],
-    pros: ["Best for Swiggy users (10%)", "5% on online categories", "Low fee (waivable)"],
-    cons: ["₹1500/mo total cashback cap", "Fuel/utilities excluded", "Min ₹100 per transaction"],
+    pointsInfo: "10% Swiggy (cap ₹1500), 5% online (cap ₹1500), 1% other (cap ₹500) · Separate caps per category",
+    highlights: ["10% on entire Swiggy ecosystem", "5% on online shopping", "Separate caps (₹3500 total possible)", "Fee waiver on ₹2L", "Welcome: 3-month free Swiggy One"],
+    pros: ["Best for Swiggy users (10%)", "5% on online shopping", "Low fee (waivable)", "Separate category caps — not shared", "Swiggy Dineout included in 10%"],
+    cons: ["Swiggy-exclusive 10% (Zomato earns 1%)", "No lounge access", "No fuel/rent/wallet/EMI/jewellery/govt rewards", "Cashback as statement credit"],
+    
+    redemptionNote: "Cashback credited as statement credit (since June 2024). Separate monthly caps: ₹1500 Swiggy, ₹1500 online, ₹500 other. No rewards on fuel, rent, wallet loading, EMI, jewellery, govt payments.",
     network: "MC", lounge: "None",
 
     editorial: {
   verdict: {
-    headline: "The ultimate card for Swiggy addicts — 10% cashback is unmatched, but the cap limits who should get it.",
-    body: `10% cashback on Swiggy is the highest food delivery reward rate on any Indian credit card. If you order Swiggy regularly, no other card comes close. The card also gives 5% on online shopping, entertainment, and apparel — making it a strong contender for the online lifestyle segment.
+    headline: "The ultimate card for Swiggy addicts — 10% cashback on the entire ecosystem, with separate caps that are better than you think.",
+    body: `10% cashback on the entire Swiggy ecosystem — Food, Instamart, Dineout, and Genie — is the highest food delivery reward rate on any Indian credit card. If you order Swiggy regularly, no other card comes close. The card also gives 5% on online shopping (Amazon, Flipkart, Myntra, etc.).
 
-But there's a hard ceiling: ₹1,500/month total cashback cap across all accelerated categories combined. At 10% on Swiggy, that's maxed out at ₹15,000 in Swiggy orders. If you also shop online (5%), the cap is eaten even faster. The ₹100 minimum transaction requirement also means your ₹80 chai orders earn nothing.`,
-    idealFor: "Regular Swiggy users spending ₹5,000-15,000/month on food delivery. At ₹10K/month Swiggy spend, you're earning ₹1,000/month — ₹12,000/year from a card with a ₹500 fee.",
-    skipIf: "You use Zomato more than Swiggy (this card doesn't give 10% on Zomato), or your food delivery spend is under ₹3,000/month. HDFC Millennia's 5% on both Swiggy AND Zomato is more versatile.",
+The caps are better than most sites report: they're SEPARATE per category, not shared. ₹1,500/month on Swiggy, ₹1,500/month on online, and ₹500/month on other spends. Total possible cashback: ₹3,500/month, not the ₹1,500 many reviews claim. Cashback is credited as statement credit.
+
+Welcome benefit: 3-month free Swiggy One membership. No lounge access. No rewards on fuel, rent, wallet loading, EMI, jewellery, or government payments.`,
+    idealFor: "Regular Swiggy users spending ₹5,000-15,000/month on food delivery + Instamart. At ₹10K/month Swiggy spend, you're earning ₹1,000/month — ₹12,000/year from a card with a ₹500 fee.",
+    skipIf: "You use Zomato more than Swiggy (Zomato earns only 1%), or your food delivery spend is under ₹3,000/month. HDFC Millennia's 5% on both Swiggy AND Zomato is more versatile.",
   },
   capMath: {
-    title: "Understanding the ₹1,500/month combined cap",
-    body: `The ₹1,500/month cashback cap is shared across ALL accelerated categories — Swiggy (10%), online shopping (5%), entertainment (5%), and apparel (5%). Not ₹1,500 per category. Combined.
+    title: "The caps are SEPARATE — not shared (this is better than most sites report)",
+    body: `Most reviews say this card has a ₹1,500/month cap. That's misleading. The caps are separate per category:
 
-At 10% on Swiggy alone, you hit the cap at ₹15,000/month in orders. But if you also shop online, the cap fills faster. Example: ₹10,000 Swiggy (₹1,000 cashback) + ₹10,000 online shopping (₹500 cashback) = ₹1,500 cap reached. Everything after that earns 1%.
+Swiggy ecosystem (10%): ₹1,500/month cap → max beneficial Swiggy spend: ₹15,000/month
+Online shopping (5%): ₹1,500/month cap → max beneficial online spend: ₹30,000/month
+Other spends (1%): ₹500/month cap → max beneficial other spend: ₹50,000/month
 
-Minimum transaction: ₹100. Orders below ₹100 earn zero cashback. This matters for quick snack or chai orders.`,
+Total possible cashback: ₹3,500/month (₹42,000/year). That's from a card with a ₹500 annual fee.
+
+Example: ₹12,000 Swiggy (₹1,200 cashback, within cap) + ₹20,000 online (₹1,000 cashback, within cap) + ₹30,000 other (₹300 cashback, within cap) = ₹2,500/month total. All three caps are independent.
+
+Cashback is credited as statement credit (since June 2024). No rewards on fuel, rent, wallet loading, EMI, jewellery, or government payments.`,
   },
   bestFor: [
-    { category: "Swiggy orders above ₹100", reason: "10% is double what any competitor offers. HDFC Millennia gives 5%, Axis Flipkart gives 4%." },
-    { category: "Online shopping", reason: "5% on online purchases is competitive with HDFC Millennia when you haven't hit the shared cap." },
-    { category: "Budget-conscious food delivery users", reason: "₹500 annual fee waivable at ₹2L spend. If Swiggy is your primary spend, the rewards far exceed the fee." },
+    { category: "Swiggy ecosystem (Food, Instamart, Dineout, Genie)", reason: "10% is double what any competitor offers. HDFC Millennia gives 5%, Axis Flipkart gives 4%. Covers the entire Swiggy ecosystem including groceries via Instamart and dining out via Dineout." },
+    { category: "Online shopping", reason: "5% on Amazon, Flipkart, Myntra, etc. with a separate ₹1500/mo cap — doesn't eat into your Swiggy cap." },
+    { category: "Budget-conscious food delivery users", reason: "₹500 annual fee waivable at ₹2L spend. Welcome: 3-month free Swiggy One. The rewards far exceed the fee for any regular Swiggy user." },
   ],
   avoidFor: [
-    { category: "Zomato orders", reason: "The 10% rate is Swiggy-exclusive. Zomato falls under general dining at lower rates. If you use both platforms, HDFC Millennia's 5% on both is better.", altCard: "hdfc-millennia" },
-    { category: "Offline dining", reason: "Restaurant bills don't get 10% — only Swiggy orders do. For restaurant spending, look at SBI ELITE's 2.5% or BOB Eterna's 3.75%.", altCard: "sbi-elite" },
-    { category: "Groceries and utilities", reason: "1% on groceries and 0% on utilities. You need a separate card for these categories.", altCard: "axis-ace" },
+    { category: "Zomato orders", reason: "Zomato earns only 1% (falls under 'other'). If you use both platforms, HDFC Millennia's 5% on both is better.", altCard: "hdfc-millennia" },
+    { category: "Offline dining", reason: "Restaurant bills in person earn only 1%. But Swiggy Dineout (dining via Swiggy app) does get 10%. For non-Swiggy restaurant spending, SBI ELITE's 2.5% or BOB Eterna's 3.75% is better.", altCard: "sbi-elite" },
+    { category: "Fuel, rent, wallet, EMI, jewellery, govt", reason: "Zero cashback on all of these. Need a separate card.", altCard: "axis-ace" },
   ],
   pairWith: [
     { combo: "HDFC Swiggy + Axis ACE", fee: "₹999/year", reason: "Swiggy card for food delivery, ACE for utilities (5%), Zomato overflow (4%), and everything else (1.5% uncapped). Total fee under ₹1K.", cardId: "axis-ace" },
     { combo: "HDFC Swiggy + Amazon Pay ICICI", fee: "₹500/year", reason: "Swiggy card for food delivery, Amazon card for Amazon shopping (5%, no cap). Both low-cost, high-value for online spenders.", cardId: "amazon-icici" },
   ],
   faq: [
-    { q: "Does HDFC Swiggy card give 10% on Swiggy Instamart?", a: "Swiggy Instamart orders generally qualify as Swiggy transactions, but cashback depends on the MCC code. Most users report getting 10% on Instamart as well." },
-    { q: "Is the ₹100 minimum per order or per day?", a: "Per transaction. Each Swiggy order must be ₹100+ to earn the 10% cashback. Multiple small orders below ₹100 won't earn anything regardless of daily total." },
-    { q: "HDFC Swiggy vs HDFC Millennia for food delivery?", a: "If you use only Swiggy and spend under ₹15K/month on it, the Swiggy card wins (10% vs 5%). If you use Swiggy AND Zomato, Millennia is more versatile since it covers both at 5%." },
+    { q: "Does HDFC Swiggy card give 10% on Swiggy Instamart?", a: "Yes — the 10% covers the entire Swiggy ecosystem: Food, Instamart, Dineout, and Genie. All under the same ₹1,500/month Swiggy cap." },
+    { q: "Are the cashback caps shared or separate?", a: "Separate. ₹1,500/month for Swiggy, ₹1,500/month for online, ₹500/month for other. Total possible: ₹3,500/month. Many review sites incorrectly report a single shared ₹1,500 cap." },
+    { q: "HDFC Swiggy vs HDFC Millennia for food delivery?", a: "If you use only Swiggy and spend under ₹15K/month on it, the Swiggy card wins (10% vs 5%). If you use Swiggy AND Zomato, Millennia is more versatile since it covers both at 5%. Swiggy card has separate caps (better); Millennia has a shared partner cap." },
+    { q: "How is cashback credited?", a: "As statement credit (since June 2024). Not as reward points or CashPoints." },
+    { q: "Does Swiggy Dineout get 10%?", a: "Yes. Dining out through Swiggy Dineout is part of the Swiggy ecosystem and earns 10%. But dining at the same restaurant directly (not via Swiggy app) earns only 1%." },
   ],
 },
   },
