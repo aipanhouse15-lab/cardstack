@@ -27,7 +27,7 @@ We ran the numbers at ₹15,000/month online spend across every card in our data
     faq: [
       { q: "Which card gives the highest online cashback?", a: "HDFC Millennia and Amazon Pay ICICI both give 5%, but Millennia has a ₹1,000/month cap while Amazon card has no cap. For pure rate, they tie. For uncapped earning, Amazon ICICI wins on Amazon specifically." },
       { q: "Does cashback work on EMI purchases?", a: "Generally no. Most cards exclude EMI transactions from cashback calculations. Full-payment transactions earn the advertised rate." },
-      { q: "Is 5% cashback really 5%?", a: "Check the caps. HDFC Millennia's 5% is capped at ₹1,000/month (₹20K beneficial spend). SBI Cashback's 5% is capped at ₹5,000/cycle. Amazon ICICI's 5% has no cap. The effective rate depends on your spending volume." },
+      { q: "Is 5% cashback really 5%?", a: "Check the caps. HDFC Millennia's 5% is capped at ₹1,000/month (₹20K beneficial spend). SBI Cashback's 5% is capped at ₹5,000/cycle (dropping to ₹2,000 online sub-cap from Apr 2026). Amazon ICICI's 5% has no cap. The effective rate depends on your spending volume." },
     ],
   },
 
@@ -201,7 +201,7 @@ Very few cards earn meaningful rewards at the pump.`,
 One card changes this equation dramatically — and it works through a payment method you're already using.`,
     picks: [
       { cardId: "axis-ace", badge: "Best for bills: 5% via Google Pay", note: "5% on bill payments via Google Pay. Electricity, broadband, water, DTH, gas — all qualify. The ₹500/month accelerated cap means optimal bill spend is ₹10,000/month on bills+food combined." },
-      { cardId: "sbi-cashback", badge: "5% on online bill payments", note: "5% on all online transactions — including bill payments made online. The ₹5,000/cycle cap (reducing to ₹2,000 in April 2026) covers bills plus other online spending." },
+      { cardId: "sbi-cashback", badge: "5% on all online purchases", note: "5% on all online transactions (excluding utilities, insurance, rent, education, etc.). The ₹5,000/cycle cap (reducing to ₹4,000 with ₹2,000 online sub-cap from April 2026) still offers strong value for diverse online shoppers." },
       { cardId: "axis-ace", badge: "Also the best backup", note: "Even after hitting the ₹500 accelerated cap, ACE's 1.5% base on utility bills is above average. Most cards give 0%." },
     ],
     verdict: "**Axis ACE is the definitive bills card** — 5% via Google Pay on all utility payments. At ₹6K/month in bills, that's ₹300/month or ₹3,600/year. Pay your bills through GPay with ACE linked, and you're earning real money on expenses you can't avoid.",
@@ -235,7 +235,7 @@ We ranked cards by effective return on ₹20,000/month travel spend, factoring i
     faq: [
       { q: "What's SmartBuy and why does it matter?", a: "HDFC SmartBuy is a booking portal that gives accelerated reward points on flights, hotels, and brand vouchers via Gyftr. Post-Jan 2026, the multiplier was reduced from 5X to 3X. It turns Regalia's 0.53% cashback into up to ~13.33% and Infinia's 3.33% into ~10%. If you have an HDFC card, always book travel through SmartBuy." },
       { q: "Are airline mile transfers worth it?", a: "For economy tickets, usually not — you get roughly 1:1 value. For business/first class, miles can deliver 3-5x value. If you ever fly premium cabins, mile transfers from Axis Atlas are extremely valuable." },
-      { q: "Which card has the best lounge access?", a: "Unlimited: HDFC Infinia, HDFC Diners Black, ICICI Emeralde, AU Zenith+. 18/year: Axis Atlas, BOB Eterna. HDFC Regalia: 12 domestic + 6 intl (Priority Pass). 14/year: SBI ELITE. For most travelers, 12-18/year is more than enough." },
+      { q: "Which card has the best lounge access?", a: "Unlimited: HDFC Infinia, HDFC Diners Black, ICICI Emeralde, AU Zenith+. 18/year: Axis Atlas, BOB Eterna. HDFC Regalia: 12 domestic + 6 intl (Priority Pass). SBI ELITE: 8 domestic + 6 intl. For most travelers, 12-18/year is more than enough." },
     ],
   },
 
