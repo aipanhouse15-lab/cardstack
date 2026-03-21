@@ -199,24 +199,28 @@ Exclusions: fuel, EMI, rent, government payments, wallet loading, and education 
     },
   },
 
-  { id: "hdfc-diners-black", name: "HDFC Diners Black", bank: "HDFC", img: "🖤", color: "#111827", fee: 10000, feeWaiver: "₹5L annual spend", type: "Super Premium", verified: true,
-    rewards: { dining: 3.33, travel: 3.33, online: 3.33, groceries: 3.33, fuel: 0, utilities: 3.33, entertainment: 3.33, shopping: 3.33, default: 3.33 },
-    caps: { monthlyPoints: 75000, pointValue: 0.50, spendPer: 150, pointsPer: 5 },
+  { id: "hdfc-diners-black", name: "HDFC Diners Club Black Credit Card", bank: "HDFC", img: "🖤", color: "#111827", fee: 10000, feeWaiver: "₹5L annual spend", type: "Super Premium", verified: true,
+    rewards: { dining: 1.66, travel: 3.33, online: 1.66, groceries: 1.66, fuel: 0, utilities: 1.66, entertainment: 1.66, shopping: 1.66, default: 1.66 },
+    caps: { monthlyPoints: 75000, spendPer: 150, pointsPer: 5, pointValueTravel: 1.0, pointValueCashback: 0.5, pointsExpiry: "3 years" },
+    // Cap math: 75K pts/cycle. At travel value (₹1/pt) = ₹75,000 max/cycle. At cashback (₹0.50/pt) = ₹37,500 max/cycle. Need ₹22.5L spend to hit cap. Points expire ~3 years.
     partnerRates: [
-      { name: "SmartBuy (flights/hotels/vouchers)", rate: "up to 33.33%" },
+      { name: "SmartBuy Hotels", rate: "33.33% (10X multiplier)" },
+      { name: "SmartBuy Flights", rate: "16.5% (5X multiplier)" },
+      { name: "SmartBuy Vouchers", rate: "~10% gross / ~6% net after fees (3X multiplier)" },
+      { name: "Amazon Pay vouchers", rate: "~5.77%" },
     ],
-    pointsInfo: "5 points/₹150 · 1pt = ₹0.50 cashback or ₹1.00 travel · 10x SmartBuy · 75K pts cap/cycle",
-    highlights: ["Unlimited domestic + intl lounge", "Amazon Prime/Swiggy One/MMT Black", "10x SmartBuy", "Fee waiver ₹5L"],
-    pros: ["3.33% on everything", "Unlimited lounge access", "Free memberships (Prime, Swiggy One, MMT)"],
-    cons: ["Diners Club acceptance limited in India", "₹10K + GST fee", "Fuel excluded"],
+    pointsInfo: "5 points/₹150 · 1pt = ₹0.50 cashback or ₹1.00 travel · SmartBuy: Hotels 10X, Flights 5X, Vouchers 3X · 75K pts cap/cycle",
+    highlights: ["Unlimited domestic + intl lounge", "Amazon Prime/Swiggy One/MMT Black", "SmartBuy Hotels 33.33% (10X)", "Fee waiver ₹5L", "Points expire in 3 years"],
+    pros: ["Up to 33.33% on SmartBuy hotels", "3.33% travel redemption on all spends", "Unlimited lounge access", "Free memberships (Prime, Swiggy One, MMT)"],
+    cons: ["Diners Club acceptance limited in India", "₹10K + GST fee", "Fuel excluded", "Cashback rate only 1.66% (travel redemption gives 3.33%)", "SmartBuy voucher fees reduce net rate to ~6%"],
     
-    redemptionNote: "Rate shown (3.33%) assumes travel redemption at ₹1/point via SmartBuy. Cashback value is ₹0.50/point (1.66%). SmartBuy bookings can reach 33%.",
-    network: "Diners Club", lounge: "Unlimited",
+    redemptionNote: "Base earn: 5 points/₹150. Travel redemption: ₹1/point (3.33% base). Cashback: ₹0.50/point (1.66% base). SmartBuy Hotels: 10X = 33.33%. Flights: 5X = 16.5%. Vouchers: 3X = ~10% gross, ~6% net after ~4.1% fees. Amazon Pay vouchers: ~5.77%. 75K monthly cap. Points expire ~3 years.",
+    network: "Diners Club", lounge: "Unlimited (spend-based conditions may apply)",
 
     editorial: {
   verdict: {
     headline: "The best value super-premium card in India — if you can live with Diners Club acceptance.",
-    body: `HDFC Diners Black delivers Infinia-level rewards (3.33% via travel) at a waivable ₹10,000 fee. Throw in unlimited lounge access, free Amazon Prime, Swiggy One, and MakeMyTrip Black memberships, and you have arguably the best overall value proposition in Indian credit cards.
+    body: `HDFC Diners Club Black delivers serious rewards at a waivable ₹10,000 fee. The base rate is 1.66% (cashback) or 3.33% (travel redemption at ₹1/point). But the real value is SmartBuy: 33.33% on hotels (10X), 16.5% on flights (5X), and ~6% net on vouchers (3X after fees). Add unlimited lounge access, free Amazon Prime, Swiggy One, and MakeMyTrip Black memberships, and this is arguably the best overall value proposition in Indian credit cards.
 
 The one real problem: Diners Club network acceptance. While it works at most large merchants and online, smaller shops, toll plazas, and some POS terminals don't accept it. You'll need a backup Visa/Mastercard for those situations. If you can tolerate carrying two cards, Diners Black is phenomenal.`,
     idealFor: "Anyone spending ₹5L+/year who values lounge access and travel rewards. The free Prime + Swiggy One memberships alone save ₹3,000-4,000/year before you even count reward points.",
@@ -224,16 +228,23 @@ The one real problem: Diners Club network acceptance. While it works at most lar
   },
   capMath: {
     title: "Understanding the 75,000 points/cycle cap",
-    body: `Diners Black earns 5 points per ₹150, capped at 75,000 points per statement cycle. At travel redemption value (₹1/point), that's ₹75,000 in rewards per cycle.
+    body: `Diners Black earns 5 points per ₹150, capped at 75,000 points per statement cycle. At travel redemption value (₹1/point), that's ₹75,000 in rewards per cycle. At cashback (₹0.50/point), that's ₹37,500.
 
-To hit the cap, you'd need to spend ₹22.5 lakh in a single statement cycle. For almost everyone, this cap is irrelevant — you'll never hit it. The effective rate remains 3.33% (travel) or 1.66% (cashback) on all spending.
+To hit the cap, you'd need to spend ₹22.5 lakh in a single statement cycle. For almost everyone, this cap is irrelevant — you'll never hit it with base spend. But SmartBuy accelerated earning can hit the cap faster.
 
-The real math to focus on: SmartBuy bookings earn 10x points. A ₹50,000 flight booked through SmartBuy earns 16,666 points (worth ₹16,666 in travel). That's effectively 33% back. This is where the card's value explodes.`,
+SmartBuy multipliers (this is where the card shines):
+Hotels: 10X = 33.33% back. A ₹50,000 hotel booked through SmartBuy earns ~₹16,650 in travel value.
+Flights: 5X = 16.5% back. A ₹30,000 flight = ~₹4,950 back.
+Vouchers: 3X = ~10% gross, but ~6% net after ~4.1% Gyftr fees.
+Amazon Pay vouchers: ~5.77%.
+
+Important: the 33% on hotels applies ONLY via SmartBuy and is limited by the 75K monthly points cap. Points expire after approximately 3 years.`,
   },
   bestFor: [
-    { category: "Travel via SmartBuy", reason: "~10% on flights, hotels, and vouchers via 3X multiplier (same as Infinia post-Jan 2026). Book ₹2L in annual travel and you've earned significant points." },
+    { category: "SmartBuy Hotels", reason: "33.33% on hotel bookings (10X multiplier) is the highest accelerated rate on any accessible HDFC card. Book ₹1L in hotels = ₹33,330 back." },
+    { category: "SmartBuy Flights", reason: "16.5% on flights (5X multiplier). Significantly better than base earning. Book ₹2L in flights = ₹33,000 back." },
     { category: "Subscriptions (via free memberships)", reason: "Amazon Prime (₹1,499), Swiggy One (₹899), MMT Black — ₹3,000+ in annual subscriptions included free." },
-    { category: "All-round premium spending", reason: "3.33% on everything (travel redemption) with no category restrictions except fuel. Flat, simple, powerful." },
+    { category: "All-round premium spending (travel redemption)", reason: "3.33% on everything via travel redemption at ₹1/point. Or 1.66% cashback. No category restrictions except fuel." },
     { category: "Lounge access", reason: "Unlimited domestic and international — no visit caps. Best lounge access per rupee of annual fee." },
   ],
   avoidFor: [
@@ -247,7 +258,7 @@ The real math to focus on: SmartBuy bookings earn 10x points. A ₹50,000 flight
   ],
   faq: [
     { q: "Where does Diners Club NOT work in India?", a: "Toll plazas (FASTag works on all networks but POS doesn't), some small restaurants, local shops, and a few government payment portals. Most large retailers and all major online merchants accept it." },
-    { q: "Is Diners Black better than Regalia?", a: "Yes, significantly. 3.33% vs 0.53% cashback (1.33% travel), unlimited vs 12 domestic lounge visits, plus free memberships. The only advantage Regalia has is wider Visa/MC acceptance." },
+    { q: "Is Diners Black better than Regalia?", a: "Yes, significantly. 1.66% cashback (3.33% travel) vs Regalia's 0.53% cashback (1.33% travel). Unlimited vs 12 domestic lounge visits. Plus free Prime/Swiggy One memberships. SmartBuy hotels give 33.33% (10X) vs Regalia's ~13.33%. The only advantage Regalia has is wider Visa/MC acceptance." },
     { q: "Can I get the ₹10,000 fee waived?", a: "Yes. Spend ₹5 lakh in a year and the fee is waived. That's roughly ₹42,000/month — achievable for most premium card users if it's their primary card." },
     { q: "Does Diners Black work for international payments?", a: "Diners Club/Discover network works at most international merchants, especially in the US, Japan, and Europe. Coverage is similar to Amex — good but not as universal as Visa/MC." },
   ],
