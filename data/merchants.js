@@ -41,7 +41,7 @@ export const MERCHANTS = {
         { card: "sbi-simplyclick", rate: "10x points", note: "Best rate for Cleartrip — 10x reward points." },
         { card: "axis-atlas", rate: "5% (travel)", note: "Solid travel rate across all platforms." },
         { card: "hdfc-infinia", rate: "~10% via SmartBuy", note: "3X multiplier on travel bookings. Premium rate + lounge + concierge." },
-      ], proTip: "SBI SimplyCLICK gives 10x on Cleartrip — effectively 5%+ value. Best Cleartrip-specific deal in India." },
+      ], proTip: "SBI SimplyCLICK gives 10x on Cleartrip — effectively 2.5% (1pt = ₹0.25). Best Cleartrip-specific deal among entry cards." },
       { id: "uber", name: "Uber / Ola", icon: "🚕", cat: "travel", tips: [
         { card: "axis-atlas", rate: "5% (travel)", note: "Cab rides count as travel." },
         { card: "idfc-wow", rate: "3% (travel)", note: "Free card, decent rate." },
@@ -59,16 +59,16 @@ export const MERCHANTS = {
     items: [
       { id: "amazon", name: "Amazon", icon: "📦", cat: "online", tips: [
         { card: "amazon-icici", rate: "5% (Prime)", note: "Unbeatable for Amazon. Free card." },
-        { card: "sbi-simplyclick", rate: "5% (online)", note: "Works if you don't have Amazon ICICI." },
+        { card: "sbi-simplyclick", rate: "1.25% (5X online)", note: "Decent if you don't have Amazon ICICI." },
         { card: "sbi-cashback", rate: "5% (online)", note: "Auto-credited cashback." },
       ], proTip: "Amazon Pay ICICI + Prime = 5%. ₹50 back per ₹1,000. At ₹5K/month that's ₹3,000/year in rewards." },
       { id: "flipkart", name: "Flipkart / Myntra", icon: "🛍️", cat: "online", tips: [
         { card: "axis-flipkart", rate: "5% (Flipkart/Myntra)", note: "Dedicated card for Flipkart ecosystem." },
-        { card: "sbi-simplyclick", rate: "5% (online)", note: "Same rate on Flipkart." },
+        { card: "sbi-simplyclick", rate: "1.25% (5X online)", note: "Same 5X rate on Flipkart." },
         { card: "hdfc-millennia", rate: "5% (partner merchant)", note: "Amazon is a listed partner. Cap ₹1000/mo across all partners." },
       ], proTip: "During Big Billion Days, Axis Flipkart gives extra 5% on top of sale prices. Stack with exchange offers." },
       { id: "nykaa", name: "Nykaa / Ajio", icon: "💄", cat: "online", tips: [
-        { card: "sbi-simplyclick", rate: "5% (online)", note: "Online shopping category." },
+        { card: "sbi-simplyclick", rate: "2.5% (10X partner)", note: "Myntra is a 10X partner brand." },
         { card: "axis-ace", rate: "4% (online)", note: "Good online rate, free card." },
         { card: "hdfc-millennia", rate: "5% (partner merchant)", note: "Flipkart is a listed partner. Cap ₹1000/mo across all partners." },
       ], proTip: "Check payment page for bank-specific offers — HDFC/ICICI often have extra 10-15% off." },
