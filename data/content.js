@@ -74,9 +74,9 @@ export const BLOG_POSTS = [
     content: [
       { type: "p", text: "Amazon Pay ICICI gives 5% on Amazon — but what about Flipkart, Myntra, Nykaa, and everything else? Here's a two-card combo that covers all your online shopping at maximum rewards." },
       { type: "h2", text: "The Combo: Amazon ICICI + SBI SimplyCLICK" },
-      { type: "p", text: "Amazon Pay ICICI: 5% on Amazon (with Prime). SBI SimplyCLICK: 5% on Flipkart, 10x on Cleartrip, and solid rates on most other online merchants. Both cards are cheap (free and ₹499/year respectively)." },
+      { type: "p", text: "Amazon Pay ICICI: 5% on Amazon (with Prime). SBI SimplyCLICK: 2.5% on partner brands (Myntra, Cleartrip, BookMyShow, etc.) and 1.25% on all other online. Both cards are cheap (free and ₹499/year respectively). Note: SimplyCLICK's rates are in reward points (1pt = ₹0.25), not direct cashback." },
       { type: "h2", text: "How to Use Them" },
-      { type: "p", text: "Simple rule: Amazon purchase → Amazon ICICI. Everything else online → SBI SimplyCLICK. Between these two cards, you're earning 5% on virtually all online shopping. Total cost: ₹499/year in fees." },
+      { type: "p", text: "Simple rule: Amazon purchase → Amazon ICICI (5%). Everything else online → SBI SimplyCLICK (1.25% general, 2.5% on partners like Myntra/Cleartrip). The Amazon card does the heavy lifting; SimplyCLICK covers the rest at a decent rate. Total cost: ₹499/year in fees." },
       { type: "h2", text: "What About Flipkart?" },
       { type: "p", text: "If Flipkart is your primary platform (not Amazon), swap Amazon ICICI for Axis Flipkart (₹500/year, 5% on Flipkart/Myntra). The principle stays the same: one card for your primary platform, SBI SimplyCLICK for everything else." },
     ]
