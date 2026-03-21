@@ -22,7 +22,7 @@ export const BLOG_POSTS = [
     content: [
       { type: "p", text: "If you eat out even twice a week or order on Swiggy/Zomato regularly, you're probably spending ₹5,000-10,000 a month on food. At the wrong card's 1% rate, you're earning ₹50-100. At the right card's 5%, that's ₹250-500. Over a year, that's ₹3,000-6,000 difference — just from swiping the right card." },
       { type: "h2", text: "The 5% Dining Cards" },
-      { type: "p", text: "Four cards currently offer 5% rewards on dining in India: HDFC Regalia (₹2,500/year), HDFC Diners Black (₹10,000/year), ICICI Coral (₹500/year), and SBI Card ELITE (₹4,999/year). For Swiggy specifically, the HDFC Swiggy Card gives 5% on all Swiggy orders." },
+      { type: "p", text: "Several cards offer strong dining rewards: HDFC Diners Black (1.66% cashback / 3.33% travel), BOB Eterna (3.75%), SBI Card ELITE (2.5%), and ICICI Coral (dining perks + BOGO movies). For Swiggy specifically, the HDFC Swiggy Card gives 10% on all Swiggy ecosystem orders." },
       { type: "h2", text: "Which One Should You Pick?" },
       { type: "p", text: "If dining is your ONLY priority and you want the cheapest option, go with ICICI Coral at ₹500/year. You get 5% dining + Buy 1 Get 1 movies as a bonus. If you also travel frequently, HDFC Regalia gives you 5% on both dining AND travel — much better value for the ₹2,500 fee." },
       { type: "h2", text: "The Swiggy/Zomato Gotcha" },
