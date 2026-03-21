@@ -65,12 +65,12 @@ export const MERCHANTS = {
       { id: "flipkart", name: "Flipkart / Myntra", icon: "🛍️", cat: "online", tips: [
         { card: "axis-flipkart", rate: "5% (Flipkart/Myntra)", note: "Dedicated card for Flipkart ecosystem." },
         { card: "sbi-simplyclick", rate: "5% (online)", note: "Same rate on Flipkart." },
-        { card: "hdfc-millennia", rate: "2.5% (online)", note: "Lower but versatile." },
+        { card: "hdfc-millennia", rate: "5% (partner merchant)", note: "Amazon is a listed partner. Cap ₹1000/mo across all partners." },
       ], proTip: "During Big Billion Days, Axis Flipkart gives extra 5% on top of sale prices. Stack with exchange offers." },
       { id: "nykaa", name: "Nykaa / Ajio", icon: "💄", cat: "online", tips: [
         { card: "sbi-simplyclick", rate: "5% (online)", note: "Online shopping category." },
         { card: "axis-ace", rate: "4% (online)", note: "Good online rate, free card." },
-        { card: "hdfc-millennia", rate: "2.5% (online)", note: "Works on all online merchants." },
+        { card: "hdfc-millennia", rate: "5% (partner merchant)", note: "Flipkart is a listed partner. Cap ₹1000/mo across all partners." },
       ], proTip: "Check payment page for bank-specific offers — HDFC/ICICI often have extra 10-15% off." },
       { id: "electronics", name: "Electronics / Apple", icon: "🍎", cat: "shopping", tips: [
         { card: "au-zenith", rate: "3.5% (flat)", note: "Big purchases = flat rate is king." },
