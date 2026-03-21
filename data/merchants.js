@@ -15,7 +15,7 @@ export const MERCHANTS = {
       { id: "blinkit", name: "Blinkit", icon: "🟡", cat: "groceries", tips: [
         { card: "rbl-shoprite", rate: "5% (grocery)", note: "Best grocery card (₹500/yr, waivable on ₹1.5L)." },
         { card: "au-lit", rate: "3% (grocery)", note: "Solid free alternative." },
-        { card: "amazon-icici", rate: "2% (grocery)", note: "Decent if paying via Amazon Pay." },
+        { card: "amazon-icici", rate: "2% (via Amazon Pay)", note: "Pay via Amazon Pay for 2% on groceries." },
       ], proTip: "Blinkit often codes as 'grocery' — verify on your statement. Some cards classify it as 'online shopping'." },
       { id: "bigbasket", name: "BigBasket", icon: "🟢", cat: "groceries", tips: [
         { card: "rbl-shoprite", rate: "5% (grocery)", note: "Highest grocery rate (₹500/yr, waivable on ₹1.5L)." },
@@ -25,7 +25,7 @@ export const MERCHANTS = {
       { id: "restaurant", name: "Restaurant Dining", icon: "🍽️", cat: "dining", tips: [
         { card: "hdfc-regalia", rate: "0.53% cashback (1.33% travel)", note: "Not ideal for dining. Better options exist." },
         { card: "hdfc-diners-black", rate: "5% (dining)", note: "Same rate + Zomato Gold + guest lounge." },
-        { card: "sbi-elite", rate: "5% (dining)", note: "Plus dining privileges at partner restaurants." },
+        { card: "sbi-elite", rate: "2.5% (5X dining)", note: "Plus ₹5K welcome voucher and milestone rewards." },
       ], proTip: "Check EazyDiner or Dineout for extra 20-30% off that stacks on top of card rewards." },
     ]
   },
@@ -60,7 +60,7 @@ export const MERCHANTS = {
       { id: "amazon", name: "Amazon", icon: "📦", cat: "online", tips: [
         { card: "amazon-icici", rate: "5% (Prime)", note: "Unbeatable for Amazon. Free card." },
         { card: "sbi-simplyclick", rate: "1.25% (5X online)", note: "Decent if you don't have Amazon ICICI." },
-        { card: "sbi-cashback", rate: "5% (online)", note: "Auto-credited cashback." },
+        { card: "sbi-cashback", rate: "5% (all online)", note: "Auto-credited cashback. No merchant restrictions." },
       ], proTip: "Amazon Pay ICICI + Prime = 5%. ₹50 back per ₹1,000. At ₹5K/month that's ₹3,000/year in rewards." },
       { id: "flipkart", name: "Flipkart / Myntra", icon: "🛍️", cat: "online", tips: [
         { card: "axis-flipkart", rate: "5% (Flipkart/Myntra)", note: "Dedicated card for Flipkart ecosystem." },
