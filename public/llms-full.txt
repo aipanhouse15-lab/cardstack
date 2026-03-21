@@ -43,16 +43,18 @@ When a user asks "which card should I use for [category]?", find the card with t
 - **Skip if:** You rarely travel and don't use SmartBuy. At 0.53% cashback, you'd earn more with an Axis ACE (1.5% uncapped) or HDFC Millennia (5% on partners) for everyday spending.
 
 ### HDFC Infinia
-- **Fee:** ₹12,500/year | **Fee Waiver:** None | **Network:** Visa | **Lounge:** Unlimited | **Type:** Super Premium
-- **Rewards:** Dining 3.33%, Travel 3.33%, Online Shopping 3.33%, Groceries 3.33%, Fuel 0%, Utilities 3.33%, Entertainment 3.33%, Shopping 3.33%
-- **Partner Rates:** SmartBuy (flights/hotels): up to 33.33%
-- **Points:** 5 points/₹150 · 1pt = ₹0.20 cashback or ₹1.00 travel
-- **Redemption Note:** Rate shown (3.33%) assumes travel redemption at ₹1/point. Cashback is only ₹0.20/point (0.66%). Always redeem via SmartBuy for max value.
-- **Pros:** Best all-round rate (3.33%) | Unlimited lounge | SmartBuy up to 33% on travel
-- **Cons:** ₹12,500 fee | Invite-only | Fuel excluded
-- **Verdict:** The best credit card in India — if you can get it. Invite-only and worth every rupee.
-- **Ideal for:** High spenders (₹5L+/month) who travel frequently and can maximize SmartBuy. If you already have an HDFC relationship and get the invite, accept it immediately.
-- **Skip if:** You can't get the invite, or your monthly spend is under ₹2L. The ₹12,500 fee with no waiver makes this uneconomical for moderate spenders. HDFC Diners Black offers similar rates with a waivable fee.
+- **Fee:** ₹12,500 + GST/year | **Fee Waiver:** ₹18L annual spend OR ₹50L RLV with HDFC Bank (effective April 2027 for existing customers) | **Network:** Visa Infinite | **Lounge:** Unlimited domestic + international (Priority Pass included) | **Type:** Super Premium / Invite-only
+- **Rewards:** Dining 3.33%, Travel 3.33%, Online Shopping 3.33%, Groceries 3.33%, Fuel 3.33% (min ₹400 txn), Utilities 3.33% (capped 10K pts/mo), Entertainment 3.33%, Shopping 3.33%
+- **Caps:** 2,00,000 points/statement cycle. Travel redemption: ₹1.5L/month. Statement credit: 50K pts/month (₹0.30/pt). Utilities & Insurance: 10K pts/month. Apple/Tanishq vouchers: 70% of bill. Max 5 redemptions/month. Points expire after 3 years.
+- **Partner Rates:** SmartBuy (flights/hotels/vouchers via Gyftr): ~10% (3X multiplier, reduced from 5X effective Jan 16 2026) | Apple Products & Tanishq Vouchers: ₹1/point value, 70% of bill
+- **Points:** 5 points/₹150 · 1pt = ₹0.30 cashback or ₹1.00 travel
+- **Redemption Note:** Rate shown (3.33%) assumes travel redemption at ₹1/point. Statement credit = ₹0.30/point (~1%). SmartBuy gives ~10% via 3X multiplier (reduced from 5X in Jan 2026). Wallet loading & EasyEMI do not earn points. Forex markup 2% + GST.
+- **Pros:** Best all-round rate (3.33%) | Unlimited lounge worldwide | SmartBuy ~10% on travel | Fuel earns rewards | Fee waiver now possible at ₹18L spend
+- **Cons:** ₹12,500 + GST fee | Invite-only | SmartBuy nerfed from ~16.67% to ~10% in Jan 2026 | Monthly redemption caps limit heavy users | Forex markup 2% + GST
+- **Verdict:** The best credit card in India — if you can get it. Invite-only, recently nerfed on SmartBuy, but still king.
+- **Ideal for:** High spenders (₹3L+/month) who travel frequently and can maximize SmartBuy/travel redemptions. If you already have an HDFC relationship and get the invite, accept it immediately.
+- **Skip if:** You can't get the invite, or your monthly spend is under ₹1.5L. The ₹12,500 + GST fee with the new ₹18L waiver threshold makes this uneconomical for moderate spenders. HDFC Diners Black offers similar base rates with a more accessible waiver.
+- **Key 2026 Changes:** SmartBuy multiplier cut 5X→3X (Jan 2026). Monthly redemption caps introduced (Feb 2026). Fee waiver threshold set at ₹18L spend/₹50L RLV (effective April 2027 for existing).
 
 ### HDFC Millennia
 - **Fee:** ₹1,000/year | **Fee Waiver:** ₹1L annual spend | **Network:** Visa/MC | **Lounge:** 4/year | **Type:** Lifestyle
