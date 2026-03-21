@@ -30,17 +30,17 @@ When a user asks "which card should I use for [category]?", find the card with t
 ## Full Card Database (25 cards)
 
 ### HDFC Regalia
-- **Fee:** ₹2,500/year | **Fee Waiver:** ₹4L annual spend | **Network:** Visa/MC | **Lounge:** 18/year | **Type:** Premium
-- **Rewards:** Dining 1.33%, Travel 1.33%, Online Shopping 1.33%, Groceries 1.33%, Fuel 0%, Utilities 1.33%, Entertainment 1.33%, Shopping 1.33%
-- **Cap:** 50,000 points/month (₹10,000 value).
+- **Fee:** ₹2,500/year | **Fee Waiver:** ₹3L annual spend | **Network:** Visa/MC | **Lounge:** 12 domestic/yr (2/quarter) + 6 intl via Priority Pass | **Type:** Premium
+- **Rewards:** Dining 0.53%, Travel 0.53%, Online Shopping 0.53%, Groceries 0.53%, Fuel 0%, Utilities 0.53%, Entertainment 0.53%, Shopping 0.53%
+- **Cap:** 50,000 points/month (₹10,000 cashback value). Grocery points capped at 2,000/month. Insurance points capped at 2,000/day.
 - **Partner Rates:** SmartBuy (flights/hotels): up to 13.33% | Myntra, Nykaa, Reliance Digital: 5x points (~3.33%)
 - **Points:** 4 points/₹150 · 1pt = ₹0.20 cashback or ₹0.50 travel
-- **Redemption Note:** Rate shown (1.33%) assumes cashback at ₹0.20/point. Travel redemption via SmartBuy = ₹0.50/point (3.33% base). SmartBuy flights/hotels can reach 13.33%.
-- **Pros:** Excellent lounge access (18/yr total) | SmartBuy gives up to 13% on travel | Partner brands 5x rewards
-- **Cons:** Base rate only 1.33% | Fuel excluded from rewards | ₹2,500 + GST fee
+- **Redemption Note:** Rates shown (0.53%) are cashback-equivalent at ₹0.20/point. Travel redemption via SmartBuy = ₹0.50/point (1.33% base). SmartBuy accelerated rewards can yield up to 13.33% on flights/hotels.
+- **Pros:** Good lounge access (12 domestic + 6 intl via Priority Pass) | SmartBuy gives up to 13% on travel | Partner brands 5x rewards
+- **Cons:** Base cashback rate only 0.53% | Fuel excluded from rewards | ₹2,500 + GST fee | Intl lounge requires separate Priority Pass application
 - **Verdict:** India's most popular premium card — but only worth it if you travel or use SmartBuy.
-- **Ideal for:** Frequent travelers who book through SmartBuy, or anyone spending ₹4L+/year who values lounge access. If you fly 3+ times a year domestically, the lounge visits alone justify the fee.
-- **Skip if:** You rarely travel and don't use SmartBuy. At 1.33% base, you'd earn more with an Axis ACE (1.5% uncapped) or HDFC Millennia (5% on partners) for everyday spending.
+- **Ideal for:** Frequent travelers who book through SmartBuy, or anyone spending ₹3L+/year who values lounge access. If you fly 3+ times a year domestically, the lounge visits alone justify the fee.
+- **Skip if:** You rarely travel and don't use SmartBuy. At 0.53% cashback, you'd earn more with an Axis ACE (1.5% uncapped) or HDFC Millennia (5% on partners) for everyday spending.
 
 ### HDFC Infinia
 - **Fee:** ₹12,500/year | **Fee Waiver:** None | **Network:** Visa | **Lounge:** Unlimited | **Type:** Super Premium
@@ -169,7 +169,7 @@ When a user asks "which card should I use for [category]?", find the card with t
 - **Cons:** ₹12K + GST fee | Only 1% domestic | Fee waiver needs ₹15L spend
 - **Verdict:** India's best card for international spenders — 2% on forex plus unlimited global lounge access.
 - **Ideal for:** Frequent international travelers spending ₹2L+/year abroad. The 2% on forex + unlimited global lounge access makes every international trip more rewarding and comfortable.
-- **Skip if:** You primarily spend domestically. 1% at a ₹12K fee is poor value. HDFC Regalia gives 1.33% with better lounge and SmartBuy perks for a lower fee.
+- **Skip if:** You primarily spend domestically. 1% at a ₹12K fee is poor value. HDFC Regalia gives up to 1.33% (travel redemption) with better lounge and SmartBuy perks for a lower fee.
 
 ### Axis Flipkart
 - **Fee:** ₹500/year | **Fee Waiver:** ₹3.5L annual spend | **Network:** Visa | **Lounge:** 4/year | **Type:** Cashback
@@ -227,7 +227,7 @@ When a user asks "which card should I use for [category]?", find the card with t
 - **Cons:** ₹4,999 fee | Only 0.5% on general spends | AU Bank less established
 - **Verdict:** Unlimited lounge access and 2.5% on international — a value play for AU Bank customers.
 - **Ideal for:** AU Bank customers who travel frequently (domestic lounge access unlimited) and make international purchases. The 2.5% on forex spending is competitive with much pricier cards.
-- **Skip if:** You primarily spend domestically. 0.5% base rate on a ₹4,999 card is poor value. HDFC Regalia gives 1.33% with better domestic perks for a similar fee.
+- **Skip if:** You primarily spend domestically. 0.5% base rate on a ₹4,999 card is poor value. HDFC Regalia gives up to 1.33% (travel redemption) with better domestic perks for a similar fee.
 
 ### IDFC FIRST WOW
 - **Fee:** Lifetime free | **Fee Waiver:** Lifetime free | **Network:** Visa | **Lounge:** None | **Type:** Travel
@@ -306,7 +306,7 @@ When a user asks "which card should I use for [category]?", find the card with t
 - **Cons:** ₹10K + GST fee | Low reward rates overall | Fuel/rent excluded | 50K pts cap
 - **Verdict:** Unlimited lounge access on a card with mediocre rewards — only worth it for ultra-frequent flyers.
 - **Ideal for:** Ultra-frequent domestic travelers (20+ flights/year) who use airport lounges regularly. If lounge visits are your primary credit card benefit, the unlimited access justifies the fee.
-- **Skip if:** You fly less than 15 times a year. HDFC Regalia (18 lounge visits) or BOB Eterna (18 visits) offer similar lounge access with significantly better reward rates.
+- **Skip if:** You fly less than 15 times a year. HDFC Regalia (12 domestic + 6 intl lounge visits) or BOB Eterna (18 visits) offer similar lounge access with significantly better reward rates.
 
 ### RBL ShopRite
 - **Fee:** ₹500/year | **Fee Waiver:** ₹1.5L annual spend | **Network:** Visa/MC | **Lounge:** None | **Type:** Cashback
