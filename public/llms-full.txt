@@ -70,15 +70,15 @@ When a user asks "which card should I use for [category]?", find the card with t
 - **Ideal for:** Anyone who spends ₹5,000–20,000/month on partner merchants (Swiggy, Amazon, Flipkart, etc.). At ₹15,000/month partner spend, you're earning ₹750/month — that's ₹9,000/year from a card with a waivable ₹1,000 fee.
 - **Skip if:** You're a heavy spender above ₹20,000/month on partners (cap hit), or you primarily spend offline/non-partner (1% base is below average and also capped).
 
-### HDFC Diners Black
-- **Fee:** ₹10,000/year | **Fee Waiver:** ₹5L annual spend | **Network:** Diners Club | **Lounge:** Unlimited | **Type:** Super Premium
-- **Rewards:** Dining 3.33%, Travel 3.33%, Online Shopping 3.33%, Groceries 3.33%, Fuel 0%, Utilities 3.33%, Entertainment 3.33%, Shopping 3.33%
-- **Cap:** 75,000 points/month (₹37,500 value).
-- **Partner Rates:** SmartBuy (flights/hotels/vouchers): up to 33.33%
-- **Points:** 5 points/₹150 · 1pt = ₹0.50 cashback or ₹1.00 travel · 10x SmartBuy · 75K pts cap/cycle
-- **Redemption Note:** Rate shown (3.33%) assumes travel redemption at ₹1/point via SmartBuy. Cashback value is ₹0.50/point (1.66%). SmartBuy bookings can reach 33%.
-- **Pros:** 3.33% on everything | Unlimited lounge access | Free memberships (Prime, Swiggy One, MMT)
-- **Cons:** Diners Club acceptance limited in India | ₹10K + GST fee | Fuel excluded
+### HDFC Diners Club Black Credit Card
+- **Fee:** ₹10,000/year | **Fee Waiver:** ₹5L annual spend | **Network:** Diners Club | **Lounge:** Unlimited (spend-based conditions may apply) | **Type:** Super Premium
+- **Rewards:** Dining 1.66%, Travel 3.33%, Online Shopping 1.66%, Groceries 1.66%, Fuel 0%, Utilities 1.66%, Entertainment 1.66%, Shopping 1.66% (cashback rates; travel redemption doubles these)
+- **Cap:** 75,000 points/month (₹75,000 travel value or ₹37,500 cashback value). Points expire ~3 years.
+- **SmartBuy Multipliers:** Hotels: 10X (33.33%) | Flights: 5X (16.5%) | Vouchers: 3X (~10% gross, ~6% net after fees) | Amazon Pay vouchers: ~5.77%
+- **Points:** 5 points/₹150 · 1pt = ₹0.50 cashback or ₹1.00 travel
+- **Redemption Note:** Base cashback = ₹0.50/point (1.66%). Travel = ₹1/point (3.33%). SmartBuy Hotels = 33.33% (best case, capped by 75K monthly points). Flights = 16.5%. Vouchers = ~6% net.
+- **Pros:** Up to 33.33% on SmartBuy hotels | 3.33% travel on all spends | Unlimited lounge | Free memberships (Prime, Swiggy One, MMT)
+- **Cons:** Diners Club acceptance limited in India | ₹10K + GST fee | Fuel excluded | Cashback rate only 1.66% | SmartBuy voucher fees reduce net rate
 - **Verdict:** The best value super-premium card in India — if you can live with Diners Club acceptance.
 - **Ideal for:** Anyone spending ₹5L+/year who values lounge access and travel rewards. The free Prime + Swiggy One memberships alone save ₹3,000-4,000/year before you even count reward points.
 - **Skip if:** You need a single card that works everywhere. Diners Club acceptance gaps mean you'll be embarrassed at a toll booth or small restaurant at least once a month.
