@@ -57,16 +57,18 @@ When a user asks "which card should I use for [category]?", find the card with t
 - **Key 2026 Changes:** SmartBuy multiplier cut 5X→3X (Jan 2026). Monthly redemption caps introduced (Feb 2026). Fee waiver threshold set at ₹18L spend/₹50L RLV (effective April 2027 for existing).
 
 ### HDFC Millennia
-- **Fee:** ₹1,000/year | **Fee Waiver:** ₹1L annual spend | **Network:** Visa/MC | **Lounge:** 4/year | **Type:** Lifestyle
-- **Rewards:** Dining 5%, Travel 1%, Online Shopping 5%, Groceries 1%, Fuel 0%, Utilities 1%, Entertainment 5%, Shopping 5%
-- **Cap:** ₹1,000/month cashback cap on dining, online, entertainment, shopping. Max beneficial spend: ₹20,000/month. Falls to 1% after cap.
-- **Partner Rates:** Swiggy, Zomato: 5% cashback | Amazon, Flipkart, Myntra: 5% cashback | Tata CLiQ, Uber, BookMyShow, Sony LIV, Cult.fit: 5% cashback
-- **Points:** 5% on partners (cap ₹1000/mo), 1% on all other
-- **Pros:** 5% on Swiggy/Zomato/Amazon/Flipkart | Low ₹1000 fee (waivable) | 4 lounge visits
-- **Cons:** Only 1% on non-partner spends | ₹1000/mo cap on 5% cashback | Fuel excluded
-- **Verdict:** The best entry-level card for online spenders — if you understand the the monthly cap monthly cap.
-- **Ideal for:** Anyone who spends ₹5,000–20,000/month on food delivery, online shopping, or entertainment platforms. At ₹15,000/month partner spend, you're earning ₹750/month — that's ₹9,000/year from a card with a waivable ₹12,500 fee.
-- **Skip if:** You're a heavy online spender above ₹20,000/month on partner categories. You'll hit the cap halfway through the month, and the 1% fallback rate is below average. You need a second card for the overflow, or a card with higher caps altogether.
+- **Fee:** ₹1,000/year | **Fee Waiver:** ₹1L annual spend | **Network:** Visa/MC/Diners Club | **Lounge:** 4/year (₹1L quarterly spend required) | **Type:** Lifestyle / Cashback
+- **Reward Model:** Merchant-based (NOT category-based). 5% applies ONLY to 10 specific partner merchants, not entire spending categories.
+- **Partner Merchants (5%):** Amazon, Flipkart, Myntra, Swiggy, Zomato, Uber, BookMyShow, Tata CLiQ, Sony LIV, Cult.fit. Also 20% off via Swiggy Dineout.
+- **Base Rate:** 1% on all non-partner spends.
+- **Caps:** 5% partner cashback capped at ₹1,000/month. 1% base cashback ALSO capped at ₹1,000/month. Total monthly cap: ₹2,000. Max beneficial partner spend: ₹20,000/month. Redemption fees: ₹50 statement credit, ₹99+taxes catalogue. Max ₹3,000 redemption/month.
+- **Points:** CashPoints (1 CP = ₹1). Posts in statement cycle after next month.
+- **Exclusions:** No cashback on fuel, EMI, rent, govt payments, wallet loading, education apps. Fuel surcharge waiver: 1% on ₹400–₹5,000, max ₹250/cycle.
+- **Pros:** 5% on 10 major partner brands | Low ₹1,000 fee (waivable) | 20% off Swiggy Dineout | Welcome 1,000 CashPoints
+- **Cons:** 1% on ALL non-partner spends (merchant-based) | Both 5% and 1% caps (₹2,000 total) | Lounge requires ₹1L quarterly spend | Redemption fees ₹50-₹99
+- **Verdict:** The best entry-level card for online spenders — if you understand the caps and that it's merchant-based, not category-based.
+- **Ideal for:** Anyone who spends ₹5,000–20,000/month on partner merchants (Swiggy, Amazon, Flipkart, etc.). At ₹15,000/month partner spend, you're earning ₹750/month — that's ₹9,000/year from a card with a waivable ₹1,000 fee.
+- **Skip if:** You're a heavy spender above ₹20,000/month on partners (cap hit), or you primarily spend offline/non-partner (1% base is below average and also capped).
 
 ### HDFC Diners Black
 - **Fee:** ₹10,000/year | **Fee Waiver:** ₹5L annual spend | **Network:** Diners Club | **Lounge:** Unlimited | **Type:** Super Premium
