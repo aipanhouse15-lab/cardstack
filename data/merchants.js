@@ -40,7 +40,7 @@ export const MERCHANTS = {
       { id: "cleartrip", name: "Cleartrip", icon: "🟣", cat: "travel", tips: [
         { card: "sbi-simplyclick", rate: "10x points", note: "Best rate for Cleartrip — 10x reward points." },
         { card: "axis-atlas", rate: "5% (travel)", note: "Solid travel rate across all platforms." },
-        { card: "hdfc-infinia", rate: "5% (travel)", note: "Premium rate + lounge + concierge." },
+        { card: "hdfc-infinia", rate: "~10% via SmartBuy", note: "3X multiplier on travel bookings. Premium rate + lounge + concierge." },
       ], proTip: "SBI SimplyCLICK gives 10x on Cleartrip — effectively 5%+ value. Best Cleartrip-specific deal in India." },
       { id: "uber", name: "Uber / Ola", icon: "🚕", cat: "travel", tips: [
         { card: "axis-atlas", rate: "5% (travel)", note: "Cab rides count as travel." },
@@ -49,7 +49,7 @@ export const MERCHANTS = {
       ], proTip: "Uber/Ola sometimes code as 'transport' not 'travel.' Check your first statement to confirm." },
       { id: "airlines", name: "Airlines", icon: "🛫", cat: "travel", tips: [
         { card: "axis-atlas", rate: "5% + mile transfers", note: "Only Indian card that transfers to airline miles." },
-        { card: "hdfc-infinia", rate: "5% (travel)", note: "Points convertible to airline miles too." },
+        { card: "hdfc-infinia", rate: "~10% via SmartBuy", note: "Book via SmartBuy for 3X multiplier." },
         { card: "hdfc-regalia", rate: "Up to 13.33% via SmartBuy", note: "Use SmartBuy portal, not direct airline booking." },
       ], proTip: "Axis Atlas points transfer to Vistara/Air India/Singapore Airlines. If you fly 4+ times a year, this is the card." },
     ]
@@ -74,7 +74,7 @@ export const MERCHANTS = {
       ], proTip: "Check payment page for bank-specific offers — HDFC/ICICI often have extra 10-15% off." },
       { id: "electronics", name: "Electronics / Apple", icon: "🍎", cat: "shopping", tips: [
         { card: "au-zenith", rate: "3.5% (flat)", note: "Big purchases = flat rate is king." },
-        { card: "hdfc-infinia", rate: "3.3% (shopping)", note: "Strong rate + airline mile conversion." },
+        { card: "hdfc-infinia", rate: "3.33% (travel redemption)", note: "Strong rate on all categories." },
         { card: "axis-flipkart", rate: "4% (shopping)", note: "If buying via Flipkart stores." },
       ], proTip: "For ₹50K+ purchases, check if your card gives points on EMI — many cards claw back points after first EMI." },
     ]
@@ -83,7 +83,7 @@ export const MERCHANTS = {
     label: "Entertainment", icon: "🎬",
     items: [
       { id: "streaming", name: "Netflix / Hotstar / Spotify", icon: "📺", cat: "entertainment", tips: [
-        { card: "hdfc-infinia", rate: "5% (entertainment)", note: "Premium entertainment rate." },
+        { card: "hdfc-infinia", rate: "3.33% (travel redemption)", note: "Premium flat rate on all entertainment." },
         { card: "hdfc-diners-black", rate: "5% (entertainment)", note: "Same rate + free memberships." },
         { card: "indusind-legend", rate: "3.5% (entertainment)", note: "Good entertainment-focused card." },
       ], proTip: "OTT subscriptions are recurring — 2% extra on ₹500/month = ₹120/year per subscription. Multiply by 3-4 subs." },
@@ -109,7 +109,7 @@ export const MERCHANTS = {
       ], proTip: "Annual prepaid recharges (₹2-3K) give bigger cashback in one shot. Axis ACE at 5% = ₹150 back." },
       { id: "insurance", name: "Insurance Premiums", icon: "🛡️", cat: "utilities", tips: [
         { card: "au-zenith", rate: "3.5% (flat)", note: "₹50K premium = ₹1,750 reward." },
-        { card: "hdfc-infinia", rate: "3.3% (default)", note: "High default covers insurance." },
+        { card: "hdfc-infinia", rate: "3.33% (capped 10K pts/mo)", note: "Utilities & insurance capped at 10,000 points/month." },
         { card: "idfc-select", rate: "3% (online)", note: "If paying online." },
       ], proTip: "Insurance premiums are huge transactions. ₹50K at 3.5% = ₹1,750. Always use best default-rate card." },
     ]
@@ -124,7 +124,7 @@ export const MERCHANTS = {
       ], proTip: "Most cards waive fuel surcharge (1%) on ₹400-5,000. But the real win is cashback on top. OneCard's 5% is best if fuel is your top category." },
       { id: "fastag", name: "FASTag / Toll", icon: "🛣️", cat: "fuel", tips: [
         { card: "au-zenith", rate: "3.5% (flat)", note: "FASTag = general category. Flat rate safest." },
-        { card: "hdfc-infinia", rate: "3.3% (default)", note: "High default covers FASTag." },
+        { card: "hdfc-infinia", rate: "3.33% (fuel, min ₹400)", note: "One of few HDFC cards earning on fuel. Surcharge waiver up to ₹1K/cycle." },
         { card: "axis-ace", rate: "2% (default)", note: "Decent free option." },
       ], proTip: "FASTag recharges don't count as 'fuel' — they code as 'transport' or 'general.' Use your best default-rate card." },
     ]
