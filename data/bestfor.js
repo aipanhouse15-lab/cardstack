@@ -228,14 +228,14 @@ We ranked cards by effective return on ₹20,000/month travel spend, factoring i
       { cardId: "hdfc-infinia", badge: "Best overall (invite-only)", note: "Up to 33.33% via SmartBuy, 3.33% base, unlimited lounge. The ultimate travel card — if you can get the invite." },
       { cardId: "hdfc-diners-black", badge: "Best accessible premium", note: "Same SmartBuy rates as Infinia (up to 33.33%), unlimited lounge, waivable ₹10K fee. The best travel card you can actually apply for." },
       { cardId: "axis-atlas", badge: "Best for airline miles", note: "5% on travel + transferable miles to Singapore Airlines, Qatar, and more. Best for premium cabin redemptions. 18 lounge visits." },
-      { cardId: "hdfc-regalia", badge: "Best mid-tier travel card", note: "Up to 13.33% via SmartBuy, 18 lounge visits. Lower fee (₹2,500, waivable) makes it accessible for moderate travelers." },
+      { cardId: "hdfc-regalia", badge: "Best mid-tier travel card", note: "Up to 13.33% via SmartBuy, 12 domestic + 6 intl lounge visits (Priority Pass). Lower fee (₹2,500, waivable at ₹3L) makes it accessible for moderate travelers." },
       { cardId: "idfc-wow", badge: "Best free travel card", note: "Zero forex markup on a free card. Won't earn high rewards, but saves 1.5-3.5% on every international transaction." },
     ],
     verdict: "For domestic travel: **HDFC Diners Black or Regalia** with SmartBuy bookings. For international: add **IDFC FIRST WOW** for zero forex. For airline mile enthusiasts: **Axis Atlas** with transfers to premium carriers.",
     faq: [
-      { q: "What's SmartBuy and why does it matter?", a: "HDFC SmartBuy is a booking portal that gives 10x reward points on flights and hotels. It turns Regalia's 1.33% into 13.33% and Infinia's 3.33% into 33.33%. If you have an HDFC card, always book travel through SmartBuy." },
+      { q: "What's SmartBuy and why does it matter?", a: "HDFC SmartBuy is a booking portal that gives 10x reward points on flights and hotels. It turns Regalia's 0.53% cashback into up to 13.33% (travel redemption) and Infinia's 3.33% into 33.33%. If you have an HDFC card, always book travel through SmartBuy." },
       { q: "Are airline mile transfers worth it?", a: "For economy tickets, usually not — you get roughly 1:1 value. For business/first class, miles can deliver 3-5x value. If you ever fly premium cabins, mile transfers from Axis Atlas are extremely valuable." },
-      { q: "Which card has the best lounge access?", a: "Unlimited: HDFC Infinia, HDFC Diners Black, ICICI Emeralde, AU Zenith+. 18/year: HDFC Regalia, Axis Atlas, BOB Eterna. 14/year: SBI ELITE. For most travelers, 18/year is more than enough." },
+      { q: "Which card has the best lounge access?", a: "Unlimited: HDFC Infinia, HDFC Diners Black, ICICI Emeralde, AU Zenith+. 18/year: Axis Atlas, BOB Eterna. HDFC Regalia: 12 domestic + 6 intl (Priority Pass). 14/year: SBI ELITE. For most travelers, 12-18/year is more than enough." },
     ],
   },
 
