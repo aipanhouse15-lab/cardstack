@@ -333,35 +333,40 @@ Cashback is credited as statement credit (since June 2024). No rewards on fuel, 
 },
   },
 
-  { id: "sbi-simplyclick", name: "SBI SimplyCLICK", bank: "SBI", img: "🛒", color: "#1d4ed8", fee: 499, feeWaiver: "₹1L annual spend", type: "Online", verified: true,
+  { id: "sbi-simplyclick", name: "SBI SimplyCLICK Credit Card", bank: "SBI", img: "🛒", color: "#1d4ed8", fee: 499, feeWaiver: "₹1L annual spend", type: "Rewards", verified: true,
     rewards: { dining: 0.25, travel: 0.25, online: 1.25, groceries: 0.25, fuel: 0, utilities: 0.25, entertainment: 0.25, shopping: 0.25, default: 0.25 },
+    caps: { acceleratedPointsCap: 10000, acceleratedCapValue: 2500 },
+    // Cap math: Accelerated points (10X partner + 5X online) capped at 10,000/month. At ₹0.25/pt = ₹2,500 max accelerated reward/month. 1X offline has no explicit cap.
     partnerRates: [
-      { name: "Apollo 24/7, BookMyShow, Cleartrip, Dominos, Myntra, Swiggy, Yatra", rate: "10x = 2.5%" },
+      { name: "Apollo 24/7, BookMyShow, Cleartrip, Dominos, IGP, Myntra, Netmeds, Yatra", rate: "10x = 2.5%" },
+      { name: "Swiggy (demoted from 10X to 5X effective Apr 2025)", rate: "5x = 1.25%" },
     ],
-    pointsInfo: "10x (2.5%) partners, 5x (1.25%) online, 1x (0.25%) other · 1pt = ₹0.25",
-    highlights: ["2.5% on 9 partner brands", "1.25% all online", "Fee waiver ₹1L", "E-voucher redemption"],
-    pros: ["2.5% on Swiggy/Cleartrip/Myntra/BookMyShow", "1.25% on all online", "Easy fee waiver"],
-    cons: ["Only 0.25% offline", "No lounge access", "Point redemption limited to e-vouchers"],
+    pointsInfo: "10x (2.5%) on 8 partners, 5x (1.25%) all online incl. Swiggy, 1x (0.25%) offline · 1pt = ₹0.25 · Accelerated cap 10K pts/mo",
+    highlights: ["2.5% on 8 partner brands (Myntra, BookMyShow, Cleartrip, etc.)", "1.25% all online (incl. Swiggy at 5X since Apr 2025)", "Fee waiver ₹1L", "Welcome: ₹500 Amazon voucher", "Milestones: ₹2K vouchers at ₹1L & ₹2L online spend"],
+    pros: ["2.5% on Cleartrip/Myntra/BookMyShow/Apollo + 4 more", "1.25% on all online incl. Swiggy", "Easy fee waiver", "Welcome + milestone vouchers"],
+    cons: ["Only 0.25% offline", "No lounge access", "Accelerated points capped at 10K/month", "No rewards on rent, wallet, fuel, EMI, govt, insurance", "1% fuel surcharge waiver only (₹500–₹3,000)"],
+    
+    redemptionNote: "1 RP = ₹0.25. Accelerated points (10X + 5X) capped at 10,000/month. Welcome: ₹500 Amazon voucher. Milestones: ₹2,000 Cleartrip/Yatra voucher each at ₹1L and ₹2L annual online spend. Fuel surcharge waiver: 1% on ₹500–₹3,000. No rewards on rent, wallet loads, fuel, EMI, govt, insurance spends.",
     network: "Visa/MC", lounge: "None",
 
     editorial: {
   verdict: {
     headline: "A decent starter card for online shoppers, but outclassed by newer options in 2026.",
-    body: `SBI SimplyCLICK was one of the first cards to offer meaningful online rewards in India. 2.5% on 9 partner brands and 1.25% on all online purchases still sounds reasonable. But the landscape has changed — HDFC Millennia gives 5% on partners, Amazon Pay ICICI gives 5% on Amazon, and Axis ACE gives 1.5% uncapped everywhere.
+    body: `SBI SimplyCLICK was one of the first cards to offer meaningful online rewards in India. 2.5% on 8 partner brands (Myntra, BookMyShow, Cleartrip, Apollo 24/7, Yatra, Dominos, IGP, Netmeds) and 1.25% on all online purchases (including Swiggy, demoted from 10X to 5X in Apr 2025) still sounds reasonable. But the landscape has changed — HDFC Millennia gives 5% on partners, Amazon Pay ICICI gives 5% on Amazon, and Axis ACE gives 1.5% uncapped everywhere.
 
-The card's main remaining advantage is its low ₹499 fee (waivable at ₹1L) and SBI's wide acceptance. For SBI customers who want a simple online rewards card without switching banks, it works. For everyone else, there are better options.`,
+Accelerated points are capped at 10,000/month (₹2,500 value). The welcome ₹500 Amazon voucher and milestone vouchers (₹2,000 at ₹1L and ₹2L online spend) add value. No rewards on rent, wallet loads, fuel, EMI, govt, or insurance. For SBI customers who want a simple online card without switching banks, it works. For everyone else, better options exist.`,
     idealFor: "Existing SBI customers who want a low-fee online rewards card and regularly shop on partners like Cleartrip, Myntra, or BookMyShow. Good starter card for building credit history with SBI.",
-    skipIf: "You want the best online rewards available. At 1.25% online and 0.25% offline, this card is significantly behind HDFC Millennia (5% on partners) and Axis ACE (1.5% uncapped).",
+    skipIf: "You want the best online rewards available. At 1.25% online and 0.25% offline with a 10K pts/month cap, this card is behind HDFC Millennia (5% on partners) and Axis ACE (1.5% uncapped).",
   },
   bestFor: [
-    { category: "SBI partner brands", reason: "2.5% on Apollo 24/7, BookMyShow, Cleartrip, Dominos, Myntra, Swiggy, Yatra. If you use 3+ of these regularly, the partner rate adds up." },
+    { category: "SBI partner brands", reason: "2.5% on Apollo 24/7, BookMyShow, Cleartrip, Dominos, IGP, Myntra, Netmeds, Yatra. Note: Swiggy was demoted to 5X (1.25%) in Apr 2025." },
     { category: "General online shopping", reason: "1.25% on all online purchases is automatic — no partner restrictions. Better than many entry cards' online rates." },
-    { category: "Building SBI credit history", reason: "Easy approval for SBI account holders. Good stepping stone to SBI ELITE or SBI Cashback cards." },
+    { category: "Building SBI credit history", reason: "Easy approval for SBI account holders. Good stepping stone to SBI ELITE or SBI Cashback cards. Welcome ₹500 Amazon voucher helps offset the fee." },
   ],
   avoidFor: [
     { category: "Offline spending", reason: "0.25% offline is nearly worthless. A ₹5,000 grocery run earns ₹12.50. Use virtually any other card for offline purchases.", altCard: "axis-ace" },
     { category: "Amazon shopping", reason: "1.25% on Amazon vs 5% with Amazon Pay ICICI (free card). No contest.", altCard: "amazon-icici" },
-    { category: "Food delivery", reason: "2.5% on Swiggy via partner rate, but HDFC Millennia gives 5% and HDFC Swiggy gives 10%.", altCard: "hdfc-millennia" },
+    { category: "Food delivery", reason: "Swiggy was demoted from 10X to 5X (1.25%) in Apr 2025. HDFC Millennia gives 5% on Swiggy and HDFC Swiggy gives 10%.", altCard: "hdfc-millennia" },
   ],
   pairWith: [
     { combo: "SimplyCLICK + Amazon Pay ICICI", fee: "₹499/year", reason: "Amazon card for Amazon (5%), SimplyCLICK for other online partners (2.5%). Both have low/no fees.", cardId: "amazon-icici" },
@@ -370,6 +375,7 @@ The card's main remaining advantage is its low ₹499 fee (waivable at ₹1L) an
   faq: [
     { q: "Is SBI SimplyCLICK worth it in 2026?", a: "Only if you're an SBI customer who uses 3+ partner brands regularly. Otherwise, HDFC Millennia or Axis ACE offer better value for similar or lower fees." },
     { q: "How do I redeem SimplyCLICK reward points?", a: "Points can be redeemed as e-vouchers for partner brands. 1 point = ₹0.25. The voucher-only redemption is a limitation — no direct statement credit." },
+    { q: "What's the accelerated points cap?", a: "10,000 accelerated points per month (worth ₹2,500). This covers both 10X partner and 5X online earning. After the cap, you still earn 1X (0.25%) on all spends." },
     { q: "Can I upgrade from SimplyCLICK to SBI Cashback?", a: "Yes, SBI allows upgrades based on your credit history and spending pattern. Contact SBI Cards customer service to request an upgrade." },
   ],
 },
