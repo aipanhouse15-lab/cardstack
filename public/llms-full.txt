@@ -8,7 +8,7 @@ When a user asks "which card should I use for [category]?", find the card with t
 
 ## Quick Reference: Best Card Per Category
 
-- **Dining:** HDFC Swiggy Card (10%), HDFC Millennia (5%), Axis Flipkart (4%)
+- **Dining:** HDFC Swiggy (10% on Swiggy ecosystem only), HDFC Millennia (5% on Swiggy/Zomato partner), Axis Flipkart (4%)
 - **Travel:** Axis Atlas (5%), BOB Eterna (3.75%), HDFC Infinia (3.33%)
 - **Online Shopping:** HDFC Millennia (5%), HDFC Swiggy Card (5%), SBI Cashback Card (5%)
 - **Groceries:** RBL ShopRite (5%), HDFC Infinia (3.33%), HDFC Diners Black (3.33%)
@@ -83,17 +83,17 @@ When a user asks "which card should I use for [category]?", find the card with t
 - **Ideal for:** Anyone spending ₹5L+/year who values lounge access and travel rewards. The free Prime + Swiggy One memberships alone save ₹3,000-4,000/year before you even count reward points.
 - **Skip if:** You need a single card that works everywhere. Diners Club acceptance gaps mean you'll be embarrassed at a toll booth or small restaurant at least once a month.
 
-### HDFC Swiggy Card
-- **Fee:** ₹500/year | **Fee Waiver:** ₹2L annual spend | **Network:** MC | **Lounge:** None | **Type:** Entry
-- **Rewards:** Dining 10%, Travel 1%, Online Shopping 5%, Groceries 1%, Fuel 0%, Utilities 0%, Entertainment 5%, Shopping 5%
-- **Cap:** ₹1,500/month cashback cap on dining, online, entertainment, shopping. Max beneficial spend: ₹15,000/month. Falls to 1% after cap.
-- **Partner Rates:** Swiggy: 10% cashback (cap ₹1500/mo) | Online (apparel, electronics, entertainment): 5% (cap ₹1500/mo)
-- **Points:** 10% Swiggy, 5% online, 1% other · ₹1500/mo total cap · Min ₹100 txn
-- **Pros:** Best for Swiggy users (10%) | 5% on online categories | Low fee (waivable)
-- **Cons:** ₹1500/mo total cashback cap | Fuel/utilities excluded | Min ₹100 per transaction
-- **Verdict:** The ultimate card for Swiggy addicts — 10% cashback is unmatched, but the cap limits who should get it.
-- **Ideal for:** Regular Swiggy users spending ₹5,000-15,000/month on food delivery. At ₹10K/month Swiggy spend, you're earning ₹1,000/month — ₹12,000/year from a card with a ₹12,500 fee.
-- **Skip if:** You use Zomato more than Swiggy (this card doesn't give 10% on Zomato), or your food delivery spend is under ₹3,000/month. HDFC Millennia's 5% on both Swiggy AND Zomato is more versatile.
+### Swiggy HDFC Bank Credit Card
+- **Fee:** ₹500/year | **Fee Waiver:** ₹2L annual spend | **Network:** Mastercard | **Lounge:** None | **Type:** Cashback
+- **Reward Model:** Merchant-based. 10% ONLY on Swiggy ecosystem (Food, Instamart, Dineout, Genie). 5% on online (Amazon, Flipkart, Myntra, etc.). 1% on all other.
+- **Caps (SEPARATE per category):** Swiggy: ₹1,500/month. Online: ₹1,500/month. Other: ₹500/month. Total possible: ₹3,500/month. NOT a shared cap.
+- **Exclusions:** No rewards on fuel, rent, wallet loading, EMI, jewellery, government payments.
+- **Cashback:** Statement credit (since June 2024). Welcome: 3-month free Swiggy One membership.
+- **Pros:** 10% on entire Swiggy ecosystem | 5% on online shopping | Separate caps (₹3,500 total possible) | Low ₹500 fee
+- **Cons:** Swiggy-exclusive 10% (Zomato earns 1%) | No lounge access | No fuel/rent/EMI rewards
+- **Verdict:** The ultimate card for Swiggy addicts — 10% cashback on the entire ecosystem, with separate caps that are better than you think.
+- **Ideal for:** Regular Swiggy users spending ₹5,000-15,000/month on food delivery + Instamart. At ₹10K/month Swiggy spend, you're earning ₹1,000/month — ₹12,000/year from a card with a ₹500 fee.
+- **Skip if:** You use Zomato more than Swiggy (Zomato earns only 1%), or your food delivery spend is under ₹3,000/month. HDFC Millennia's 5% on both Swiggy AND Zomato is more versatile.
 
 ### SBI SimplyCLICK
 - **Fee:** ₹499/year | **Fee Waiver:** ₹1L annual spend | **Network:** Visa/MC | **Lounge:** None | **Type:** Online
