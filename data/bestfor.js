@@ -226,7 +226,7 @@ One card changes this equation dramatically — and it works through a payment m
 We ranked cards by effective return on ₹20,000/month travel spend, factoring in all the variables.`,
     picks: [
       { cardId: "hdfc-infinia", badge: "Best overall (invite-only)", note: "~10% via SmartBuy (3X, reduced from 5X in Jan 2026), 3.33% base, unlimited lounge, earns on fuel. The ultimate card — if you can get the invite." },
-      { cardId: "hdfc-diners-black", badge: "Best accessible premium", note: "Same SmartBuy rates as Infinia (~10% post-Jan 2026), unlimited lounge, waivable ₹10K fee. The best travel card you can actually apply for." },
+      { cardId: "hdfc-diners-black", badge: "Best accessible premium", note: "SmartBuy Hotels 33.33% (10X), Flights 16.5% (5X), Vouchers ~6% net (3X). 1.66% cashback / 3.33% travel base. Unlimited lounge, waivable ₹10K fee." },
       { cardId: "axis-atlas", badge: "Best for airline miles", note: "5% on travel + transferable miles to Singapore Airlines, Qatar, and more. Best for premium cabin redemptions. 18 lounge visits." },
       { cardId: "hdfc-regalia", badge: "Best mid-tier travel card", note: "Up to 13.33% via SmartBuy, 12 domestic + 6 intl lounge visits (Priority Pass). Lower fee (₹2,500, waivable at ₹3L) makes it accessible for moderate travelers." },
       { cardId: "idfc-wow", badge: "Best free travel card", note: "Zero forex markup on a free card. Won't earn high rewards, but saves 1.5-3.5% on every international transaction." },
