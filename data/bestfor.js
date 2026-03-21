@@ -44,7 +44,7 @@ We ran the numbers at ₹15,000/month online spend across every card in our data
 
 We calculated effective cashback at ₹8,000/month food delivery spend — the average for urban professionals ordering 4-5 times per week.`,
     picks: [
-      { cardId: "hdfc-swiggy", badge: "Highest rate: 10% on Swiggy", note: "10% cashback on Swiggy is unmatched. But it's Swiggy-only (not Zomato), capped at ₹1,500/month combined across all accelerated categories, and requires ₹100 minimum per order." },
+      { cardId: "hdfc-swiggy", badge: "Highest rate: 10% on Swiggy ecosystem", note: "10% on Swiggy Food, Instamart, Dineout, Genie. Separate caps: ₹1,500/mo Swiggy + ₹1,500/mo online + ₹500/mo other = ₹3,500 total possible. Swiggy-only (Zomato earns 1%)." },
       { cardId: "hdfc-millennia", badge: "Best for Swiggy + Zomato", note: "5% on both Swiggy AND Zomato (plus Amazon, Flipkart, etc.). More versatile than the Swiggy card but lower rate. ₹1,000/month shared cap." },
       { cardId: "axis-ace", badge: "Best backup after cap", note: "4% on Swiggy/Zomato/Ola with a ₹500/month accelerated cap. Once your primary card's cap is hit, switch to ACE for the overflow at 4%." },
       { cardId: "axis-flipkart", badge: "Strong alternative", note: "4% on Swiggy with no explicit cap on the 4% tier. If you've hit Millennia's ₹1K cap, Flipkart card continues earning 4%." },
@@ -54,7 +54,7 @@ We calculated effective cashback at ₹8,000/month food delivery spend — the a
     faq: [
       { q: "Does HDFC Swiggy card work on Zomato?", a: "The 10% rate is Swiggy-exclusive. Zomato orders earn the standard rate (1%). If you use both platforms, HDFC Millennia's 5% on both is more versatile." },
       { q: "Do food delivery orders always count as dining?", a: "It depends on the MCC code. Swiggy/Zomato may code as dining, online, or food delivery depending on the card issuer and platform. Check your statement to confirm which category your orders fall under." },
-      { q: "What about Swiggy Instamart?", a: "Most cards treat Swiggy Instamart as a Swiggy transaction. The HDFC Swiggy card's 10% typically applies, subject to the same ₹1,500/month cap." },
+      { q: "What about Swiggy Instamart?", a: "Yes, Instamart is part of the Swiggy ecosystem and earns 10%. Also Dineout and Genie. All under the ₹1,500/month Swiggy cap (separate from online and other caps)." },
     ],
   },
 
