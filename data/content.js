@@ -94,7 +94,6 @@ export const BLOG_POSTS = [
       { type: "p", text: "After 6-12 months with your first card, look at your spending patterns. Where do you spend the most? Get a second card that gives the best rewards in that category. Two well-chosen cards cover 80% of most people's needs." },
     ]
   },
-];
 // ═══════════════════════════════════════════════════════════════════
 // ASSURE FINTECH — 30 NEW BLOG POSTS (Full Length, No Trimming)
 // Add these entries to your BLOG_POSTS array in data/content.js
@@ -888,3 +887,4 @@ export const BLOG_POSTS = [
     { type: "p", text: "Lock in free cards that currently offer strong rewards (they might add fees later). Build credit history with premium banks (HDFC, ICICI) for future card access. Don't over-invest in any single card's ecosystem — stay flexible. And start using optimization tools now so you're comfortable with dynamic switching when it becomes the default way to manage cards. Our Stack Builder and Smart Swipe Guide are designed for exactly this evolving landscape." },
   ]
 },
+];
