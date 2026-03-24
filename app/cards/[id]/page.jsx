@@ -1,5 +1,4 @@
 import { CARDS, CATEGORIES } from "@/data/cards";
-import { processEditorial } from "@/data/editorial-helper";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ReportForm from "@/components/ReportForm";
@@ -12,12 +11,26 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const card = CARDS.find(c => c.id === params.id);
   if (!card) return { title: "Card Not Found" };
-  const editorial = processEditorial(card.editorial, card);
+  const editorial = card.editorial;
+  const pageTitle = `${card.name} Review — Rewards, Fees, Caps & Best Combos (2026)`;
+  const pageDesc = editorial?.verdict?.headline
+    ? `${card.name}: ${editorial.verdict.headline} Full review with cap math, best uses, what to avoid, and ideal card pairings.`
+    : `${card.name} by ${card.bank}: ${card.fee === 0 ? "Lifetime free" : `₹${card.fee}/year`}. Best for ${Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1])[0][0]} at ${Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1])[0][1]}%. Full review with pros, cons, and reward breakdown.`;
   return {
-    title: `${card.name} Review — Rewards, Fees, Caps & Best Combos (2026)`,
-    description: editorial?.verdict?.headline
-      ? `${card.name}: ${editorial.verdict.headline} Full review with cap math, best uses, what to avoid, and ideal card pairings.`
-      : `${card.name} by ${card.bank}: ${card.fee === 0 ? "Lifetime free" : `₹${card.fee}/year`}. Best for ${Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1])[0][0]} at ${Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1])[0][1]}%. Full review with pros, cons, and reward breakdown.`,
+    title: pageTitle,
+    description: pageDesc,
+    alternates: { canonical: `/cards/${params.id}` },
+    openGraph: {
+      title: pageTitle,
+      description: pageDesc,
+      type: "article",
+      siteName: "Assure Fintech",
+    },
+    twitter: {
+      card: "summary",
+      title: pageTitle,
+      description: pageDesc,
+    },
   };
 }
 
@@ -28,7 +41,7 @@ export default function CardPage({ params }) {
   const sorted = Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1]);
   const maxRate = sorted[0][1];
   const bestCategory = sorted[0][0];
-  const ed = processEditorial(card.editorial, card);
+  const ed = card.editorial;
 
   // JSON-LD: Product schema for credit card
   const cardSchema = {
@@ -64,7 +77,7 @@ export default function CardPage({ params }) {
   const reviewSchema = {
     "@context": "https://schema.org",
     "@type": "Review",
-    itemReviewed: { "@type": "Product", name: card.name },
+    itemReviewed: { "@type": "FinancialProduct", name: card.name },
     author: { "@type": "Organization", name: "Assure Fintech" },
     reviewBody: ed?.verdict?.headline
       ? `${card.name}: ${ed.verdict.headline} ${ed.verdict.idealFor}`
