@@ -15,6 +15,18 @@ export async function generateMetadata({ params }) {
   return {
     title: cat.title,
     description: cat.description,
+    alternates: { canonical: `/best/${params.slug}` },
+    openGraph: {
+      title: cat.title,
+      description: cat.description,
+      type: "article",
+      siteName: "Assure Fintech",
+    },
+    twitter: {
+      card: "summary",
+      title: cat.title,
+      description: cat.description,
+    },
   };
 }
 
