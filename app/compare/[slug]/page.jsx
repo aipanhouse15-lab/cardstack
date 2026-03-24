@@ -14,9 +14,23 @@ export async function generateMetadata({ params }) {
   const c1 = CARDS.find(c => c.id === comp.card1);
   const c2 = CARDS.find(c => c.id === comp.card2);
   if (!c1 || !c2) return { title: "Not Found" };
+  const pageTitle = `${c1.name} vs ${c2.name} — Which Credit Card is Better? (2026)`;
+  const pageDesc = `${c1.name} vs ${c2.name}: detailed comparison of rewards, fees, caps, and cashback across 8 spending categories. Cap-aware calculations show which card actually earns more.`;
   return {
-    title: `${c1.name} vs ${c2.name} — Which Credit Card is Better? (2026)`,
-    description: `${c1.name} vs ${c2.name}: detailed comparison of rewards, fees, caps, and cashback across 8 spending categories. Cap-aware calculations show which card actually earns more.`,
+    title: pageTitle,
+    description: pageDesc,
+    alternates: { canonical: `/compare/${params.slug}` },
+    openGraph: {
+      title: pageTitle,
+      description: pageDesc,
+      type: "article",
+      siteName: "Assure Fintech",
+    },
+    twitter: {
+      card: "summary",
+      title: pageTitle,
+      description: pageDesc,
+    },
   };
 }
 
