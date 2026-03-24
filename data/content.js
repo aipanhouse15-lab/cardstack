@@ -99,7 +99,54 @@ export const BLOG_POSTS = [
 // Add these entries to your BLOG_POSTS array in data/content.js
 // Posts selected: 17, 18, 20, 25-52 from the original 52-post doc
 // ═══════════════════════════════════════════════════════════════════
+// ADD THIS TO YOUR data/content.js → BLOG_POSTS array
+// Place it near the top (after featured posts) since it's new
 
+{
+  id: "cashback-rate-is-a-lie",
+  title: "Your Credit Card's Cashback Rate Is a Lie. Here's Why.",
+  excerpt: "Banks advertise 5% cashback but hide the monthly cap. Once you hit it, your real rate drops to near zero.",
+  category: "Guides",
+  color: "#dc2626",
+  date: "Mar 24, 2026",
+  readTime: "8 min",
+  featured: true,
+  content: [
+    { type: "p", text: "Every credit card ad in India leads with a big number. '5% cashback!' '10x reward points!' 'Earn ₹500 every month!' I fell for this. For over a year, I was convinced my card stack was earning me solid returns. Then I checked. Like, actually checked — statement by statement, month by month. And the numbers didn't match. Not even close." },
+    { type: "p", text: "Turns out, the cashback rate printed on your card's benefits page is almost never what you actually earn. And the reason is something banks are very good at hiding in the fine print." },
+    { type: "h2", text: "It's Called a Cap. And It Changes Everything." },
+    { type: "p", text: "Here's how it works. Let's say you have the SBI Cashback card. The headline benefit is 5% cashback on all online transactions. Sounds incredible, right? Five percent on everything you buy online." },
+    { type: "p", text: "But there's a quarterly cap of ₹5,000 on that cashback. Which means once you've spent about ₹1 lakh in a quarter on online transactions, the 5% stops. After that, every additional rupee you spend earns you nothing. Zero." },
+    { type: "p", text: "And from April 2026, that cap drops to ₹2,000 per quarter. So the window of 'good' cashback shrinks even further." },
+    { type: "p", text: "Now think about your own spending. If you spend ₹40K-₹50K online per month — which is pretty common if you count subscriptions, food delivery, grocery apps, and occasional shopping — you'll blow past that cap by the middle of the second month. For the rest of the quarter, you're carrying a card that gives you literally zero cashback. But you feel like you have a '5% card.' That's the trap." },
+    { type: "h2", text: "This Isn't Just SBI. Everyone Does It." },
+    { type: "p", text: "The Axis ACE gives 5% on bill payments through Google Pay and 4% on select merchants. Solid numbers. But it has a ₹500/month cap on those accelerated categories. After that, you drop to 1%." },
+    { type: "p", text: "So if you pay ₹12,000 in bills through Google Pay in a month, the first ₹10,000 earns 5%. The remaining ₹2,000? It earns 1%. Your effective rate on that ₹12K isn't 5% — it's about 4.3%. Not terrible, but already lower than what you thought." },
+    { type: "p", text: "Now do ₹25,000 in bills. Your effective rate drops to about 2.6%. Not quite the '5% bill payment card' anymore, is it?" },
+    { type: "p", text: "HDFC Millennia is another classic. 5% cashback on Amazon, Flipkart, and a bunch of other partners. People love this card. But the cap is ₹1,000 per month across ALL those partners combined. If you spend more than ₹20,000 a month across those platforms — and who doesn't during a sale month? — you're getting way less than 5%." },
+    { type: "p", text: "And then there's the minimum transaction requirement on some HDFC cards. On certain variants, transactions below ₹100 or ₹150 don't earn any reward points at all. So your daily ₹50 chai order on Swiggy? Zero points. That ₹80 auto ride? Zero. These small spends add up over the year and none of them count." },
+    { type: "h2", text: "The Math Nobody Wants to Do" },
+    { type: "p", text: "Here's a real example from my own spending. I have six credit cards. Last month, I tracked everything." },
+    { type: "p", text: "My total spending was about ₹65,000 across all cards. Based on the headline rates, I should've earned roughly ₹1,800 in cashback and rewards. What I actually earned? About ₹940." },
+    { type: "p", text: "Almost half. Gone. Eaten by caps." },
+    { type: "p", text: "And I'm someone who actively thinks about which card to use for what. Imagine someone who just swipes whatever's on top of their wallet. They're probably earning 0.3%-0.5% effective cashback across their entire spending and thinking they have a '5% card.'" },
+    { type: "h2", text: "Why Banks Design It This Way" },
+    { type: "p", text: "This isn't a bug. It's the business model." },
+    { type: "p", text: "Banks advertise the headline rate because it gets you to apply. The cap ensures they don't actually pay out that rate to most users. The gap between what you think you're earning and what you actually earn — that's their margin." },
+    { type: "p", text: "I'm not saying these are bad cards. The SBI Cashback card IS genuinely good if your online spending is under ₹33K/month. The Axis ACE IS a great bill payment card if your bills are under ₹10K/month. But the moment your spending exceeds the cap threshold, you need to know what happens next." },
+    { type: "p", text: "Most people don't. And that's by design." },
+    { type: "h2", text: "So What Do You Actually Do About This?" },
+    { type: "p", text: "Three things that worked for me." },
+    { type: "p", text: "First, know your caps. Like, actually memorize them. For every card you carry, know the monthly or quarterly cap and what happens after you hit it. This single piece of information changes how you use each card." },
+    { type: "p", text: "Second, use a combination of cards. No single card in India gives you the best rate on everything. The trick is having 2-3 cards where each one handles a specific category. When one card hits its cap in a category, you switch to the next one. I know this sounds like effort, but once you set it up, it becomes automatic." },
+    { type: "p", text: "Third, do the actual math on your spending. Not the headline rate. The cap-adjusted rate. Take your real monthly spend in each category, apply the cap, and see what you actually earn. Most people have never done this and are shocked when they see the real number." },
+    { type: "p", text: "I got so frustrated doing this math manually that I ended up building a calculator for it. It takes your monthly spending across categories and shows you the real effective cashback after caps — not the marketing number. It also tests different card combinations to find the best stack for your specific spending pattern. You can try it free at assurefintech.com." },
+    { type: "h2", text: "The One Question That Matters" },
+    { type: "p", text: "Next time you see a credit card ad saying '5% cashback,' ask yourself one thing: Five percent... on how much?" },
+    { type: "p", text: "That's it. That one question will save you more money than any rewards program ever will. Because the answer is almost never 'unlimited.' And the gap between the advertised rate and your actual rate is where banks quietly make their money." },
+    { type: "p", text: "Your credit card isn't lying to you exactly. It's just not telling you the whole truth." },
+  ]
+},
 // ─── POST 1 of 30: Best Credit Card for Students ───
 {
   id: "best-card-students-2026",
