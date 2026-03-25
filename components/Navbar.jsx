@@ -56,17 +56,17 @@ const NAV_CATEGORIES = [
       {
         title: "Guides",
         links: [
-          { href: "/learn/loans", label: "Home loan: true cost" },
-          { href: "/learn/loans", label: "Personal loan traps" },
-          { href: "/learn/loans", label: "Prepayment penalty math" },
+          { href: "/learn/loans/home-loan-true-cost", label: "Home loan: true cost" },
+          { href: "/learn/loans/personal-loan-actual-apr", label: "Personal loan traps" },
+          { href: "/learn/loans/prepayment-penalty-trap", label: "Prepayment penalty math" },
         ],
       },
       {
         title: "Compare",
         links: [
-          { href: "/learn/loans", label: "SBI vs HDFC home loan" },
-          { href: "/learn/loans", label: "Fixed vs floating rate" },
-          { href: "/learn/loans", label: "Bank vs NBFC" },
+          { href: "/learn/loans/sbi-vs-hdfc-vs-icici-home-loan", label: "SBI vs HDFC home loan" },
+          { href: "/learn/loans/fixed-vs-floating-rate", label: "Fixed vs floating rate" },
+          { href: "/learn/loans/education-loan-real-cost", label: "Education loan cost" },
         ],
       },
     ],
@@ -79,16 +79,16 @@ const NAV_CATEGORIES = [
       {
         title: "Health insurance",
         links: [
-          { href: "/learn/insurance", label: "Effective coverage breakdown" },
-          { href: "/learn/insurance", label: "Claim settlement rankings" },
-          { href: "/learn/insurance", label: "Room rent trap explained" },
+          { href: "/learn/insurance/health-insurance-effective-coverage", label: "Effective coverage breakdown" },
+          { href: "/learn/insurance/claim-settlement-ratios-2026", label: "Claim settlement rankings" },
+          { href: "/learn/insurance/room-rent-trap", label: "Room rent trap explained" },
         ],
       },
       {
         title: "Term life",
         links: [
-          { href: "/learn/insurance", label: "₹1Cr cover = ₹92L payout" },
-          { href: "/learn/insurance", label: "Co-pay vs no co-pay" },
+          { href: "/learn/insurance/term-insurance-real-value", label: "₹1Cr cover = ₹92L payout" },
+          { href: "/learn/insurance/copay-vs-no-copay", label: "Co-pay vs no co-pay" },
         ],
       },
     ],
@@ -101,9 +101,9 @@ const NAV_CATEGORIES = [
       {
         title: "Guides",
         links: [
-          { href: "/learn/savings", label: "FD real return after tax" },
-          { href: "/learn/savings", label: "PPF vs FD vs debt fund" },
-          { href: "/learn/savings", label: "Best FD rates 2026" },
+          { href: "/learn/savings/fd-real-return", label: "FD real return after tax" },
+          { href: "/learn/savings/ppf-vs-fd-vs-debt-fund", label: "PPF vs FD vs debt fund" },
+          { href: "/learn/savings/best-fd-rates-2026", label: "Best FD rates 2026" },
         ],
       },
     ],
@@ -126,8 +126,8 @@ const NAV_CATEGORIES = [
         title: "Popular",
         links: [
           { href: "/blog", label: "Your 5% card earns 2.8%" },
-          { href: "/learn/loans", label: "Home loan hidden costs" },
-          { href: "/learn/insurance", label: "₹10L policy = ₹4.2L cover" },
+          { href: "/learn/loans/home-loan-true-cost", label: "Home loan hidden costs" },
+          { href: "/learn/insurance/health-insurance-effective-coverage", label: "₹10L policy = ₹4.2L cover" },
           { href: "/whats-changed", label: "What changed →", bold: true },
         ],
       },
