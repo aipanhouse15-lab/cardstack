@@ -6,12 +6,12 @@ export const metadata = {
 };
 
 const GUIDES = [
-  { title: "Your ₹10L health policy covers ₹4.2L — the full breakdown", desc: "Co-pay, room rent sub-limits, disease-specific caps, consumable exclusions, and pre-existing waiting periods. Every deduction explained with math.", time: "7 min", tag: "Health" },
-  { title: "Claim settlement ratios 2026: which insurer actually pays?", desc: "We ranked every major health insurer by the percentage of claims they approve. Some 'cheap' policies reject 15% of claims.", time: "6 min", tag: "Rankings" },
+  { title: "Your ₹10L health policy covers ₹4.2L — the full breakdown", desc: "Co-pay, room rent sub-limits, disease-specific caps, consumable exclusions, and pre-existing waiting periods. Every deduction explained with math.", time: "7 min", tag: "Health", href: "/learn/insurance/health-insurance-effective-coverage" },
+  { title: "Claim settlement ratios 2026: which insurer actually pays?", desc: "We ranked every major health insurer by the percentage of claims they approve. Some 'cheap' policies reject 15% of claims.", time: "6 min", tag: "Rankings", href: "/learn/insurance/claim-settlement-ratios-2026" },
   { title: "Term insurance: ₹1Cr cover is actually worth ₹92L", desc: "Claim settlement ratio × sum insured = what your family actually gets. We calculated it for every major term plan.", time: "5 min", tag: "Term life" , href: "/learn/insurance/term-insurance-real-value" },
   { title: "Room rent trap: how ₹8K sub-limit turns a ₹5L surgery into ₹3L", desc: "Room rent caps don't just limit room cost — they proportionally reduce every other charge. The math is worse than you think.", time: "5 min", tag: "Health" , href: "/learn/insurance/room-rent-trap" },
-  { title: "Health insurance for parents: what to check before buying", desc: "Pre-existing waiting periods, co-pay clauses, and network hospitals matter more than the headline sum insured.", time: "6 min", tag: "Guide" },
-  { title: "Co-pay vs no co-pay: is the premium difference worth it?", desc: "A 20% co-pay saves you ₹3K/year in premium but costs ₹1.6L if you make a claim. We run the expected value math.", time: "5 min", tag: "Analysis" },
+  { title: "Health insurance for parents: what to check before buying", desc: "Pre-existing waiting periods, co-pay clauses, and network hospitals matter more than the headline sum insured.", time: "6 min", tag: "Guide", href: "/learn/insurance/health-insurance-for-parents" },
+  { title: "Co-pay vs no co-pay: is the premium difference worth it?", desc: "A 20% co-pay saves you ₹3K/year in premium but costs ₹1.6L if you make a claim. We run the expected value math.", time: "5 min", tag: "Analysis", href: "/learn/insurance/copay-vs-no-copay" },
 ];
 
 export default function InsurancePage() {

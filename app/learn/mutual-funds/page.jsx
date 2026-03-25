@@ -6,9 +6,9 @@ export const metadata = {
 };
 
 const GUIDES = [
-  { title: "Your 15% CAGR fund gives 11.8% after expense ratio + LTCG", desc: "A 1.5% expense ratio compounded over 10 years costs you ₹12L on a ₹50L portfolio. Add 12.5% LTCG tax and the real return drops further.", time: "5 min", tag: "Guide" },
-  { title: "Direct vs regular: the 1% that costs you ₹12L over 20 years", desc: "Regular plans pay distributors 0.5-1.5% annually from your returns. On a ₹10K SIP over 20 years, that's ₹8-12L less in your pocket.", time: "6 min", tag: "Analysis" },
-  { title: "SIP returns: advertised vs actual after all charges", desc: "Fund houses show pre-expense, pre-tax CAGR. We show post-expense, post-tax XIRR — the number you actually earn.", time: "5 min", tag: "Guide" },
+  { title: "Your 15% CAGR fund gives 11.8% after expense ratio + LTCG", desc: "A 1.5% expense ratio compounded over 10 years costs you ₹12L on a ₹50L portfolio. Add 12.5% LTCG tax and the real return drops further.", time: "5 min", tag: "Guide", href: "/learn/mutual-funds/cagr-vs-actual-return" },
+  { title: "Direct vs regular: the 1% that costs you ₹12L over 20 years", desc: "Regular plans pay distributors 0.5-1.5% annually from your returns. On a ₹10K SIP over 20 years, that's ₹8-12L less in your pocket.", time: "6 min", tag: "Analysis", href: "/learn/mutual-funds/direct-vs-regular" },
+  { title: "SIP returns: advertised vs actual after all charges", desc: "Fund houses show pre-expense, pre-tax CAGR. We show post-expense, post-tax XIRR — the number you actually earn.", time: "5 min", tag: "Guide", href: "/learn/mutual-funds/sip-advertised-vs-actual" },
 ];
 
 export default function MutualFundsPage() {

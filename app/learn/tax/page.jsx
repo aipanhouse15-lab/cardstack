@@ -6,10 +6,10 @@ export const metadata = {
 };
 
 const GUIDES = [
-  { title: "Old regime vs new regime: which saves you more?", desc: "We calculated the breakeven for salaried individuals across ₹8L to ₹25L income. The answer depends on your deductions, not your salary.", time: "6 min", tag: "Guide" },
-  { title: "80C beyond the obvious: NPS, ELSS, tuition fees ranked", desc: "Everyone knows about PPF and ELSS. But NPS gives extra ₹50K under 80CCD. We rank every 80C option by real after-tax return.", time: "7 min", tag: "Analysis" },
-  { title: "HRA calculation: what you actually save vs what you think", desc: "HRA exemption is the minimum of three formulas. Most people don't calculate all three. We walk through it with real numbers.", time: "5 min", tag: "Guide" },
-  { title: "Tax on credit card rewards: do you need to worry?", desc: "Short answer: probably not. Long answer involves Section 56(2)(x) and gift tax provisions. We break down the actual legal position.", time: "4 min", tag: "Guide" },
+  { title: "Old regime vs new regime: which saves you more?", desc: "We calculated the breakeven for salaried individuals across ₹8L to ₹25L income. The answer depends on your deductions, not your salary.", time: "6 min", tag: "Guide", href: "/learn/tax/old-vs-new-regime" },
+  { title: "80C beyond the obvious: NPS, ELSS, tuition fees ranked", desc: "Everyone knows about PPF and ELSS. But NPS gives extra ₹50K under 80CCD. We rank every 80C option by real after-tax return.", time: "7 min", tag: "Analysis", href: "/learn/tax/80c-beyond-the-obvious" },
+  { title: "HRA calculation: what you actually save vs what you think", desc: "HRA exemption is the minimum of three formulas. Most people don't calculate all three. We walk through it with real numbers.", time: "5 min", tag: "Guide", href: "/learn/tax/hra-calculation" },
+  { title: "Tax on credit card rewards: do you need to worry?", desc: "Short answer: probably not. Long answer involves Section 56(2)(x) and gift tax provisions. We break down the actual legal position.", time: "4 min", tag: "Guide", href: "/learn/tax/tax-on-credit-card-rewards" },
 ];
 
 export default function TaxPage() {

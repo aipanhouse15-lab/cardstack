@@ -6,11 +6,11 @@ export const metadata = {
 };
 
 const GUIDES = [
-  { title: "FD at 7.5%? Your real return is 0.15% after tax and inflation", desc: "We break down a typical FD: 7.5% advertised → 5.25% after TDS (30% bracket) → 0.15% after 5.1% inflation. Your money barely keeps up.", time: "4 min", tag: "Guide" },
-  { title: "PPF vs FD vs debt fund: real post-tax returns compared", desc: "PPF is tax-free but locked 15 years. FDs are taxed heavily. Debt funds have indexation. We compare actual take-home across all three.", time: "7 min", tag: "Compare" },
-  { title: "Best FD rates 2026: bank-wise comparison with honest returns", desc: "We list every major bank's FD rate, then calculate the real return after TDS and inflation. The rankings change completely.", time: "6 min", tag: "Rankings" },
-  { title: "Senior citizen FD: is the extra 0.5% worth locking in?", desc: "Seniors get 0.25-0.5% extra. After tax, that's ₹375/year extra on ₹5L. Worth the lock-in? We do the math.", time: "4 min", tag: "Analysis" },
-  { title: "Tax-saving FD vs ELSS vs PPF: which actually wins after 5 years?", desc: "All three get 80C deduction. But returns after lock-in, tax, and inflation vary wildly. Side-by-side comparison.", time: "6 min", tag: "Compare" },
+  { title: "FD at 7.5%? Your real return is 0.15% after tax and inflation", desc: "We break down a typical FD: 7.5% advertised → 5.25% after TDS (30% bracket) → 0.15% after 5.1% inflation. Your money barely keeps up.", time: "4 min", tag: "Guide", href: "/learn/savings/fd-real-return" },
+  { title: "PPF vs FD vs debt fund: real post-tax returns compared", desc: "PPF is tax-free but locked 15 years. FDs are taxed heavily. Debt funds have indexation. We compare actual take-home across all three.", time: "7 min", tag: "Compare", href: "/learn/savings/ppf-vs-fd-vs-debt-fund" },
+  { title: "Best FD rates 2026: bank-wise comparison with honest returns", desc: "We list every major bank's FD rate, then calculate the real return after TDS and inflation. The rankings change completely.", time: "6 min", tag: "Rankings", href: "/learn/savings/best-fd-rates-2026" },
+  { title: "Senior citizen FD: is the extra 0.5% worth locking in?", desc: "Seniors get 0.25-0.5% extra. After tax, that's ₹375/year extra on ₹5L. Worth the lock-in? We do the math.", time: "4 min", tag: "Analysis", href: "/learn/savings/senior-citizen-fd" },
+  { title: "Tax-saving FD vs ELSS vs PPF: which actually wins after 5 years?", desc: "All three get 80C deduction. But returns after lock-in, tax, and inflation vary wildly. Side-by-side comparison.", time: "6 min", tag: "Compare", href: "/learn/savings/tax-saving-fd-vs-elss-vs-ppf" },
 ];
 
 export default function SavingsPage() {
