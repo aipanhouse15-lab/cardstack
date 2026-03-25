@@ -8,10 +8,10 @@ export const metadata = {
 const GUIDES = [
   { title: "Home loan true cost: what banks hide from you", desc: "Processing fees, mandatory insurance bundling, prepayment penalties, and documentation charges — calculated into your real effective APR.", time: "6 min", tag: "Guide", href: "/learn/loans/home-loan-true-cost" },
   { title: "Personal loan: advertised 10.5%, actual 13.1%", desc: "Origination fees, late payment charges, and foreclosure penalties turn a cheap personal loan expensive.", time: "5 min", tag: "Guide", href: "/learn/loans/personal-loan-actual-apr" },
-  { title: "Fixed vs floating rate: which actually saves more?", desc: "We ran the numbers across 10 years of RBI rate changes. The answer isn't what banks tell you.", time: "7 min", tag: "Analysis" },
+  { title: "Fixed vs floating rate: which actually saves more?", desc: "We ran the numbers across 10 years of RBI rate changes. The answer isn't what banks tell you.", time: "7 min", tag: "Analysis", href: "/learn/loans/fixed-vs-floating-rate" },
   { title: "SBI vs HDFC vs ICICI home loan — honest comparison 2026", desc: "Not just rates. Processing fees, insurance costs, prepayment terms, and effective APR compared side by side.", time: "8 min", tag: "Compare", href: "/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" },
   { title: "Prepayment penalty trap: why no lock-in does not mean free", desc: "Banks advertise zero prepayment penalty but charge 2-4% if you switch lenders. Here is how to spot the trap.", time: "5 min", tag: "Guide", href: "/learn/loans/prepayment-penalty-trap" },
-  { title: "Education loan: real cost after moratorium interest", desc: "Interest piling during the moratorium period adds 15-25% to your total repayment. We break down the math.", time: "6 min", tag: "Guide" },
+  { title: "Education loan: real cost after moratorium interest", desc: "Interest piling during the moratorium period adds 15-25% to your total repayment. We break down the math.", time: "6 min", tag: "Guide", href: "/learn/loans/education-loan-real-cost" },
 ];
 
 export default function LoansPage() {
