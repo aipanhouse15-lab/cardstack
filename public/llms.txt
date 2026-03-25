@@ -1,20 +1,20 @@
 # Assure Fintech
 
-> India's smartest credit card optimization tool. Free, no sign-up, zero tracking. 25+ Indian credit cards, real savings math, merchant-level recommendations.
+> India's financial truth platform. We show you the honest number on every financial product — credit cards, loans, insurance, savings, tax, and mutual funds. Free, no sign-up, zero tracking.
 
-Assure Fintech helps Indian credit card holders maximize their rewards by telling them exactly which card to use for every purchase. We maintain accurate reward rate data for 25+ popular Indian credit cards across 8 spending categories.
+Assure Fintech calculates the gap between what banks advertise and what you actually get. Credit card "5% cashback" is really 2.8% after caps. Your "8.5% home loan" costs 9.35% after fees. Your "₹10L health insurance" pays out ₹4.2L after fine print. We do the math banks won't.
 
-## Tools
+## Credit Card Tools
 
-- [Smart Swipe Guide](/smart-swipe): Select your cards, enter your monthly spending, and see which card gives the highest reward for each category (dining, travel, groceries, fuel, online shopping, utilities, entertainment, shopping). Calculates real annual savings vs a basic 1% card.
-- [Card Gap Finder](/gap-finder): Analyzes your current card stack and identifies categories where better cards exist. Shows exactly how much money you're leaving on the table per year.
-- [Swipe Check](/swipe-check): Merchant-level recommendations. Pick a specific merchant (Swiggy, Amazon, Zomato, Flipkart, etc.) and get the top 3 cards to use with pro tips and gotchas.
-- [Compare](/compare): Head-to-head comparison of any two Indian credit cards across all 8 spending categories with winner scoring.
-- [Stack Builder](/stack-builder): Find the optimal 2 or 3 card combo. Tests every possible combination from 25 cards for max savings.
+- [Smart Swipe Guide](/smart-swipe): Select your cards, enter spending, see the best card for every category with cap-adjusted math.
+- [Card Gap Finder](/gap-finder): Find categories where better cards exist. See exact ₹ you're leaving on the table.
+- [Swipe Check](/swipe-check): Merchant-level recommendations — pick Swiggy, Amazon, etc. and get top 3 cards with pro tips.
+- [Compare](/compare): Head-to-head card comparison across 8 spending categories with auto-verdict.
+- [Stack Builder](/stack-builder): Find the optimal 2-3 card combo from 75 cards for maximum savings.
 
-## Card Reviews (25 cards)
+## Card Reviews (75 cards, 25 verified)
 
-Every card has a detailed review page with: editorial verdict, cap math explained in plain English, "best used for" and "don't use this for" sections with cross-links, recommended card pairings, and FAQ. All numbers auto-update from our verified database.
+Every card has a detailed review with editorial verdict, cap math in plain English, "best used for" and "don't use this for" sections, recommended pairings, and FAQ.
 
 - [HDFC Millennia](/cards/hdfc-millennia), [HDFC Regalia](/cards/hdfc-regalia), [HDFC Infinia](/cards/hdfc-infinia), [HDFC Diners Black](/cards/hdfc-diners-black), [HDFC Swiggy](/cards/hdfc-swiggy)
 - [Axis ACE](/cards/axis-ace), [Axis Flipkart](/cards/axis-flipkart), [Axis Atlas](/cards/axis-atlas)
@@ -23,10 +23,11 @@ Every card has a detailed review page with: editorial verdict, cap math explaine
 - [AU LIT](/cards/au-lit), [AU Zenith+](/cards/au-zenith), [IDFC FIRST WOW](/cards/idfc-wow), [IDFC FIRST Select](/cards/idfc-select)
 - [OneCard](/cards/onecard), [BOB Eterna](/cards/bob-eterna), [Kotak 811 Dream](/cards/kotak-811)
 - [IndusInd Legend](/cards/indusind-legend), [YES Private Ace](/cards/yes-ace), [RBL ShopRite](/cards/rbl-shoprite)
+- Plus 50 additional cards tracked (marked unverified)
 
 ## Best Credit Card by Category (10 guides)
 
-Cap-aware picks for every major spending category. Each page shows calculated cashback at realistic monthly spending, with cap warnings and verdicts.
+Cap-aware picks with calculated cashback at realistic monthly spending, cap warnings, and verdicts.
 
 - [Best for Online Shopping](/best/credit-card-for-online-shopping)
 - [Best for Swiggy & Zomato](/best/credit-card-for-swiggy-zomato)
@@ -41,8 +42,6 @@ Cap-aware picks for every major spending category. Each page shows calculated ca
 
 ## Card vs Card Comparisons (10 matchups)
 
-Auto-generated head-to-head comparisons with cap-aware cashback across 8 categories, auto-verdict, and "pick this card if" advice.
-
 - [HDFC Millennia vs Axis ACE](/compare/hdfc-millennia-vs-axis-ace)
 - [HDFC Millennia vs Amazon Pay ICICI](/compare/hdfc-millennia-vs-amazon-pay-icici)
 - [SBI Cashback vs Amazon Pay ICICI](/compare/sbi-cashback-vs-amazon-pay-icici)
@@ -54,40 +53,75 @@ Auto-generated head-to-head comparisons with cap-aware cashback across 8 categor
 - [HDFC Millennia vs Axis Flipkart](/compare/hdfc-millennia-vs-axis-flipkart)
 - [IDFC FIRST WOW vs IDFC FIRST Select](/compare/idfc-first-wow-vs-idfc-first-select)
 
+## Loan Guides (6 articles)
+
+The honest number on loans — what banks don't advertise about the true cost of borrowing.
+
+- [Home Loan True Cost](/learn/loans/home-loan-true-cost): Your 8.5% loan actually costs 9.35% after processing fees, insurance, and lock-in.
+- [Personal Loan Actual APR](/learn/loans/personal-loan-actual-apr): Advertised 10.5%, actual 13.1% after origination fees and foreclosure penalty.
+- [Fixed vs Floating Rate](/learn/loans/fixed-vs-floating-rate): 10-year comparison shows floating saves ₹4.4L — but with volatility.
+- [SBI vs HDFC vs ICICI Home Loan](/learn/loans/sbi-vs-hdfc-vs-icici-home-loan): Honest comparison including fees, insurance, and effective APR.
+- [Prepayment Penalty Trap](/learn/loans/prepayment-penalty-trap): "No lock-in" doesn't mean free — NBFCs charge 2-4% foreclosure penalty.
+- [Education Loan Real Cost](/learn/loans/education-loan-real-cost): Moratorium interest adds 15-25% to total repayment.
+
+## Insurance Guides (6 articles)
+
+The honest number on insurance — what your policy actually pays when you need it.
+
+- [Health Insurance Effective Coverage](/learn/insurance/health-insurance-effective-coverage): Your ₹10L policy pays out ₹4.2L after co-pay, room rent, sub-limits.
+- [Claim Settlement Ratios 2026](/learn/insurance/claim-settlement-ratios-2026): Every major insurer ranked by claims approved.
+- [Term Insurance Real Value](/learn/insurance/term-insurance-real-value): ₹1Cr cover is worth ₹92L after claim settlement ratio.
+- [Room Rent Trap](/learn/insurance/room-rent-trap): ₹8K sub-limit turns ₹5L surgery into ₹3L payout via proportional reduction.
+- [Health Insurance for Parents](/learn/insurance/health-insurance-for-parents): Pre-existing waiting, co-pay, and network hospitals for 55+ age group.
+- [Co-pay vs No Co-pay](/learn/insurance/copay-vs-no-copay): 20% co-pay saves ₹3K/year but costs ₹1.6L in one hospitalization.
+
+## Savings & FD Guides (5 articles)
+
+The honest number on savings — what your money actually earns after tax and inflation.
+
+- [FD Real Return](/learn/savings/fd-real-return): 7.5% FD returns 0.15% after TDS and inflation in the 30% bracket.
+- [PPF vs FD vs Debt Fund](/learn/savings/ppf-vs-fd-vs-debt-fund): Post-tax, post-inflation returns compared across all three.
+- [Best FD Rates 2026](/learn/savings/best-fd-rates-2026): Bank-wise FD rates with honest returns — big banks have negative real returns.
+- [Senior Citizen FD](/learn/savings/senior-citizen-fd): Extra 0.5% yields ₹4,750/year on ₹10L — plus 80TTB benefit.
+- [Tax-saving FD vs ELSS vs PPF](/learn/savings/tax-saving-fd-vs-elss-vs-ppf): All three get 80C. Returns after lock-in, tax, and inflation vary wildly.
+
+## Tax Planning Guides (4 articles)
+
+The honest number on taxes — which regime, deductions, and strategies actually save you money.
+
+- [Old vs New Tax Regime](/learn/tax/old-vs-new-regime): Breakeven at ~₹3.75L deductions. Below that, new regime wins.
+- [80C Beyond the Obvious](/learn/tax/80c-beyond-the-obvious): NPS gives extra ₹50K deduction. ELSS beats FD. Life insurance is worst option.
+- [HRA Calculation](/learn/tax/hra-calculation): Exemption is minimum of three formulas — most people only check one.
+- [Tax on Credit Card Rewards](/learn/tax/tax-on-credit-card-rewards): Cashback on purchases is not taxable. Welcome bonuses technically are above ₹50K.
+
+## Mutual Fund Guides (3 articles)
+
+The honest number on mutual funds — what you actually earn after expenses and tax.
+
+- [CAGR vs Actual Return](/learn/mutual-funds/cagr-vs-actual-return): 15% CAGR becomes 11.8% after expense ratio + LTCG tax.
+- [Direct vs Regular Plans](/learn/mutual-funds/direct-vs-regular): 1% expense difference costs ₹12L over 20 years on ₹10K/month SIP.
+- [SIP Advertised vs Actual](/learn/mutual-funds/sip-advertised-vs-actual): Use XIRR not CAGR for SIP returns — actual is 2-3% lower than advertised.
+
 ## API
 
-Assure Fintech provides a free, public API for accessing Indian credit card reward data.
+Free, public API for Indian credit card reward data.
 
-- [All Cards](/api/cards): Returns all 25+ cards with reward rates, fees, pros, cons, lounge access, network
-- [Single Card](/api/cards/hdfc-regalia): Full details for a specific card with computed insights (best category, average rate, breakeven spend)
-- [Recommendations](/api/recommend): Smart recommendations engine
-  - Best card for a category: `/api/recommend?for=dining`
-  - Best free cards: `/api/recommend?budget=free`
-  - Best cards under ₹5000/yr: `/api/recommend?budget=under5000`
-  - Optimize a card stack: `/api/recommend?cards=hdfc-regalia,amazon-icici`
+- [All Cards](/api/cards): Returns all 75 cards with reward rates, fees, pros, cons, lounge access
+- [Single Card](/api/cards/hdfc-regalia): Full details for a specific card
+- [Recommendations](/api/recommend): Best card for a category, best free cards, stack optimization
 
-API is open, requires no authentication, and returns JSON with CORS enabled.
-
-## Card Database
-
-We track reward rates for 25 Indian credit cards from 12 banks: HDFC, SBI, ICICI, Axis, AU Bank, IDFC, OneCard, BOB, Kotak, IndusInd, YES Bank, RBL.
-
-## Spending Categories
-
-We track rewards across 8 categories: Dining (restaurants, Swiggy, Zomato), Travel (flights, hotels, MakeMyTrip), Online Shopping (Amazon, Flipkart, Myntra), Groceries (BigBasket, Blinkit, stores), Fuel (petrol pumps, EV charging), Utilities (electricity, water, broadband), Entertainment (Netflix, movies, concerts), Shopping (malls, fashion, electronics).
-
-## Merchants Covered
-
-Swipe Check covers 20+ merchants: Swiggy, Zomato, Blinkit, BigBasket, restaurants, MakeMyTrip, Cleartrip, Uber/Ola, airlines, Amazon, Flipkart/Myntra, Nykaa/Ajio, electronics/Apple, Netflix/Hotstar/Spotify, BookMyShow/PVR, electricity/gas/water, mobile/broadband/DTH, insurance premiums, petrol pumps, FASTag/toll.
+API is open, requires no authentication, returns JSON with CORS enabled.
 
 ## Key Facts
 
-- All tools are free, no sign-up required
-- We do not collect user data or track users
-- Data is updated monthly
-- We may earn affiliate commissions when users apply for cards through our links
-- We are not financial advisors — Assure Fintech is a tool, not advice
-- Based in India, built for Indian credit card holders
+- 75 credit cards tracked, 25 verified from bank documents
+- 5 live credit card tools, all free
+- 24 financial guides across loans, insurance, savings, tax, and mutual funds
+- Zero user data collected, no tracking, no cookies
+- Data updated monthly; banks change terms without notice and we catch it
+- We may earn affiliate commissions — clearly labeled
+- We are a tool, not financial advice
+- Based in India, built for Indian consumers
 
 ## Contact
 
