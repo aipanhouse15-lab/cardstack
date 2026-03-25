@@ -10,14 +10,20 @@ export const metadata = {
     canonical: "/",
   },
   title: {
-    default: "Assure Fintech — India's Smartest Credit Card Tool",
+    default: "Assure Fintech — The Honest Number on Every Financial Product",
     template: "%s | Assure Fintech",
   },
-  description: "Stop leaving rewards on the table. Assure Fintech tells you exactly which credit card to swipe for every purchase. 25+ Indian cards, real savings math, zero tracking.",
-  keywords: ["credit card comparison India", "best credit card India 2026", "credit card rewards optimizer", "which credit card to use", "Assure Fintech"],
+  description: "Banks advertise one number. You take home another. Assure Fintech shows you the honest number on credit cards, loans, insurance, and savings. 75+ cards, real math, zero tracking.",
+  keywords: [
+    "credit card comparison India", "best credit card India 2026", "credit card rewards optimizer",
+    "which credit card to use", "Assure Fintech", "honest number fintech",
+    "home loan true cost India", "health insurance effective coverage",
+    "FD real return after tax", "loan truth calculator India",
+    "credit card cashback after caps", "financial truth platform India",
+  ],
   openGraph: {
-    title: "Assure Fintech — India's Smartest Credit Card Tool",
-    description: "Tell us which cards you have. We'll tell you exactly which one to swipe — for every purchase, every time.",
+    title: "Assure Fintech — The Honest Number on Every Financial Product",
+    description: "Banks advertise one number. You take home another. We calculate the gap — across credit cards, loans, insurance, and savings.",
     type: "website",
     locale: "en_IN",
     siteName: "Assure Fintech",
@@ -33,7 +39,7 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Assure Fintech",
-    description: "India's smartest credit card optimization tool. Compare 25+ Indian credit cards, find the best card for every purchase, and maximize your rewards.",
+    description: "India's financial truth platform. We show you the honest number on every financial product — credit cards, loans, insurance, and savings. Cap-adjusted math, verified data, zero tracking.",
     url: "https://www.assurefintech.com",
     foundingDate: "2026",
     areaServed: { "@type": "Country", name: "India" },
@@ -41,7 +47,11 @@ export default function RootLayout({ children }) {
     knowsAbout: [
       "Credit Cards", "Credit Card Rewards", "Cashback", "Indian Banking",
       "HDFC Credit Cards", "SBI Credit Cards", "ICICI Credit Cards", "Axis Credit Cards",
-      "Credit Card Comparison", "Reward Optimization"
+      "Credit Card Comparison", "Reward Optimization",
+      "Home Loans", "Personal Loans", "Loan Interest Rates", "Effective APR",
+      "Health Insurance", "Term Insurance", "Claim Settlement Ratio",
+      "Fixed Deposits", "PPF", "Tax Planning", "Mutual Funds",
+      "Financial Literacy India", "Honest Financial Advice",
     ],
   };
 
@@ -50,7 +60,7 @@ export default function RootLayout({ children }) {
     "@type": "WebSite",
     name: "Assure Fintech",
     url: "https://www.assurefintech.com",
-    description: "Compare 25+ Indian credit cards. Find the best card for every purchase with real savings math.",
+    description: "The honest number on every financial product in India. Compare credit cards, loans, insurance, and savings with real math — not advertised rates.",
     potentialAction: {
       "@type": "SearchAction",
       target: "https://www.assurefintech.com/compare?q={search_term_string}",
