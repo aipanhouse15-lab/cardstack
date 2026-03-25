@@ -47,7 +47,7 @@ export default function Article() {
 
         <div>
           <h2 className="text-lg font-extrabold mb-2" style={{color:"var(--text)"}}>Salary-wise breakeven</h2>
-          <p>₹8–10L CTC: new regime almost always wins (not enough deductions to matter). ₹12–15L CTC: depends — if HRA + 80C + 80D > ₹3.75L, old regime wins. ₹18–25L CTC: old regime usually wins if you have HRA + home loan + NPS + insurance. ₹25L+ CTC: old regime wins decisively with full deductions.</p>
+          <p>₹8–10L CTC: new regime almost always wins (not enough deductions to matter). ₹12–15L CTC: depends — if HRA + 80C + 80D {'>'} ₹3.75L, old regime wins. ₹18–25L CTC: old regime usually wins if you have HRA + home loan + NPS + insurance. ₹25L+ CTC: old regime wins decisively with full deductions.</p>
         </div>
 
         <div>

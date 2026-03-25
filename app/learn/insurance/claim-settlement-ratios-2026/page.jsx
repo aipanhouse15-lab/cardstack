@@ -57,7 +57,7 @@ export default function Article() {
 
         <div>
           <h2 className="text-lg font-extrabold mb-2" style={{color:"var(--text)"}}>What to do</h2>
-          <p>1. **Prioritize CSR above 88%** — New India, Star Health, HDFC Ergo, Care Health are consistently strong.\n\n2. **Don't chase the cheapest premium** — the ₹2K–₹3K you save annually costs ₹50K–₹3L in a rejected claim.\n\n3. **Check network hospitals in your city** — cashless > reimbursement always.\n\n4. **Read rejection reasons on consumer forums** — PolicyBazaar reviews and MouthShut.com show real rejection patterns.</p>
+          <p>1. **Prioritize CSR above 88%** — New India, Star Health, HDFC Ergo, Care Health are consistently strong.\n\n2. **Don't chase the cheapest premium** — the ₹2K–₹3K you save annually costs ₹50K–₹3L in a rejected claim.\n\n3. **Check network hospitals in your city** — cashless {'>'} reimbursement always.\n\n4. **Read rejection reasons on consumer forums** — PolicyBazaar reviews and MouthShut.com show real rejection patterns.</p>
         </div>
       </div>
 

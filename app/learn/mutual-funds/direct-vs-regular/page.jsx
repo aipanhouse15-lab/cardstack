@@ -52,7 +52,7 @@ export default function Article() {
 
         <div>
           <h2 className="text-lg font-extrabold mb-2" style={{color:"var(--text)"}}>What to do</h2>
-          <p>1. **Switch all existing funds to direct plans** — you can do this online via the AMC website or Groww/Kuvera. No exit load on the switch if held >1 year.\n\n2. **Use Groww, Kuvera, or MF Central for direct plan purchases** — zero commission platforms.\n\n3. **If you want advice, pay a fee-only financial planner** (₹5,000–₹15,000/year) instead of the perpetual 1% trail commission.\n\n4. **Check your portfolio on MF Central** — it shows your exact expense ratio for each fund.</p>
+          <p>1. **Switch all existing funds to direct plans** — you can do this online via the AMC website or Groww/Kuvera. No exit load on the switch if held {'>'} 1 year.\n\n2. **Use Groww, Kuvera, or MF Central for direct plan purchases** — zero commission platforms.\n\n3. **If you want advice, pay a fee-only financial planner** (₹5,000–₹15,000/year) instead of the perpetual 1% trail commission.\n\n4. **Check your portfolio on MF Central** — it shows your exact expense ratio for each fund.</p>
         </div>
       </div>
 
