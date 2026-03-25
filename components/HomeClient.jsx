@@ -1,468 +1,355 @@
 "use client";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { CARDS, CATEGORIES, calcReward } from "@/data/cards";
 
 /*
-  FINAL HOMEPAGE — 12 sections
-  1. Dark hero + live demo
-  2. Quick answers ticker
-  3. How It Works (3 steps)
-  4. Award-style card picks
-  5. Four Tools (2×2)
-  6. Why Trust Us (6 cards)
-  7. Testimonials
-  8. Monthly Updates
-  9. Did You Know (rotating)
-  10. Methodology + worked example
-  11. Trust bar (compact)
-  12. Dark CTA
+  REVAMPED HOMEPAGE — Financial Truth Platform
+  1. Violet hero (split: tagline left, tool picker right)
+  2. Category grid (6 categories, floating up from hero)
+  3. What Changed banner
+  4. Credit card tools (5 tools)
+  5. Popular cards + best-for tags
+  6. Latest guides (cross-category)
+  7. Trust section
+  8. Dark CTA
 */
 
 // ─── DATA ───
-// Hero demo uses real cards from database
-const HERO_CARD_IDS = ["amazon-icici", "axis-ace", "hdfc-millennia", "hdfc-regalia", "au-lit", "onecard"];
-const HERO_CARDS = HERO_CARD_IDS.map(id => CARDS.find(c => c.id === id)).filter(Boolean);
-const HERO_CATS = CATEGORIES.filter(c => ["dining", "online", "utilities", "groceries"].includes(c.id));
-const HERO_SPEND = { dining: 5000, online: 8000, utilities: 4000, groceries: 6000 };
-const AWARD_CARDS = [
-  { badge: "Best Free All-Rounder 2026", name: "Axis ACE Credit Card", bank: "Axis Bank", img: "🎯", color: "#7c3aed", grad: "linear-gradient(135deg,#7c3aed,#6d28d9)", fee: "₹499/yr", feeNote: "Waived on ₹2L", rate: "5%", rateCat: "Bills via GPay", base: "1.5%", lounge: "4/yr", cap: "₹500/mo cap", verdict: "Unmatched 5% on utility bills via Google Pay. 4% back on Swiggy, Zomato, and Ola. Solid 1.5% base. ₹500/mo cap means pair with another card for heavy spend.", pros: ["5% bills via GPay","4% food delivery","4 lounge visits"], cons: ["₹500/mo total cap","Fuel excluded"], id: "axis-ace" },
-  { badge: "Best for Amazon Shoppers 2026", name: "Amazon Pay ICICI Card", bank: "ICICI Bank", img: "📦", color: "#d97706", grad: "linear-gradient(135deg,#d97706,#b45309)", fee: "Lifetime Free", feeNote: "", rate: "5%", rateCat: "Amazon Prime", base: "1%", lounge: "None", cap: null, verdict: "5% with Prime, 3% without. Rewards as Amazon Pay balance — no points to convert. No fee, no cap, instant issuance. Only 1% outside Amazon.", pros: ["5% Amazon Prime","No fee ever","No cap"], cons: ["1% non-Amazon","Locked to Amazon Pay"], id: "amazon-icici" },
-  { badge: "Best Premium Card 2026", name: "HDFC Infinia", bank: "HDFC Bank", img: "💎", color: "#1e293b", grad: "linear-gradient(135deg,#1e293b,#0f172a)", fee: "₹12,500/yr", feeNote: "Not waivable", rate: "3.33%", rateCat: "Everything", base: "3.33%", lounge: "Unlimited", cap: null, verdict: "Highest flat rate in India. Up to 33% on SmartBuy travel. Unlimited lounge worldwide. Invite-only, ₹8L+ income, fuel excluded.", pros: ["3.33% flat","Unlimited lounge","33% SmartBuy"], cons: ["₹12.5K fee","Invite only"], id: "hdfc-infinia" },
-  { badge: "Best for Partner Brands 2026", name: "HDFC Millennia", bank: "HDFC Bank", img: "✨", color: "#8b5cf6", grad: "linear-gradient(135deg,#8b5cf6,#7c3aed)", fee: "₹1,000/yr", feeNote: "Waived ₹1L", rate: "5%", rateCat: "10+ brands", base: "1%", lounge: "4/yr", cap: "₹1K/mo on 5%", verdict: "5% on Swiggy, Zomato, Amazon, Flipkart, Myntra, Uber, BookMyShow + more. Widest partner list in India. ₹1K/mo cap on 5% categories.", pros: ["5% on 10+ brands","Low fee waivable","4 lounge"], cons: ["₹1K/mo cap","1% non-partner"], id: "hdfc-millennia" },
+const TOOL_PICKER = [
+  { name: "Smart swipe guide", desc: "Which card to use for every purchase", href: "/smart-swipe", color: "#8B5CF6", iconPath: "M13 2L3 14h9l-1 8 10-12h-9l1-8z", featured: true },
+  { name: "Find my card gaps", desc: "Categories where you're losing rewards", href: "/gap-finder", color: "#8B5CF6", iconPath: "M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.35-4.35" },
+  { name: "Compare cards", desc: "Side-by-side with honest rates", href: "/compare", color: "#8B5CF6", iconPath: "M16 3h5v5M8 3H3v5M3 16v5h5M21 16v5h-5" },
+  { name: "Loan truth calculator", desc: "Real cost of your home or personal loan", href: "/learn/loans", color: "#60A5FA", iconPath: "M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6", badge: "NEW" },
+  { name: "Insurance coverage check", desc: "What your policy actually covers", href: "/learn/insurance", color: "#F472B6", iconPath: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z", badge: "SOON" },
 ];
-const QUICK_PICKS = [
-  { q: "Best for Swiggy?", a: "HDFC Millennia (5%)", c: "#8b5cf6" },
-  { q: "Best free card?", a: "Axis ACE (5% bills)", c: "#7c3aed" },
-  { q: "Best for Amazon?", a: "Amazon ICICI (5%)", c: "#d97706" },
-  { q: "Best for fuel?", a: "OneCard (5x auto)", c: "#18181b" },
-  { q: "Best for groceries?", a: "RBL ShopRite (5%)", c: "#c026d3" },
-  { q: "Best for travel?", a: "Axis Atlas (5%)", c: "#0f766e" },
+
+const CATEGORIES_GRID = [
+  { name: "Credit cards", desc: "Cap-adjusted reward math shows your real effective rate.", honest: "5% advertised → 2.8% actual", href: "/cards", cta: "5 tools · 75 cards", color: "#7C3AED", bg: "#EDE9FE", text: "#5B21B6", iconPath: "M1 4h22v16H1zM1 10h22", live: true },
+  { name: "Loans", desc: "Your \"8.5%\" home loan costs 9.4% after hidden fees.", honest: "₹4.7L extra over 20 years", href: "/learn/loans", cta: "Guides + calculator", color: "#2563EB", bg: "#DBEAFE", text: "#1E40AF", iconPath: "M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" },
+  { name: "Insurance", desc: "Your ₹10L policy pays out ~₹4.2L after fine print.", honest: "58% lost to co-pay & sub-limits", href: "/learn/insurance", cta: "Read the breakdown", color: "#DB2777", bg: "#FCE7F3", text: "#9D174D", iconPath: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" },
+  { name: "Savings & FDs", desc: "Your 7.5% FD returns 0.15% after TDS and inflation.", honest: "Real return: almost zero", href: "/learn/savings", cta: "See the math", color: "#D97706", bg: "#FEF3C7", text: "#92400E", iconPath: "M2 6h20v12H2zM12 12a3 3 0 100-6 3 3 0 000 6z" },
+  { name: "Tax planning", desc: "Old vs new regime — which actually saves more?", honest: "80C beyond the obvious", href: "/learn/tax", cta: "Compare regimes", color: "#16A34A", bg: "#DCFCE7", text: "#166534", iconPath: "M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" },
+  { name: "Mutual funds", desc: "15% CAGR becomes 11.8% after expense ratio and tax.", honest: "Net investor return", href: "/learn/mutual-funds", cta: "Coming soon", color: "#0891B2", bg: "#CFFAFE", text: "#155E75", iconPath: "M22 12h-4l-3 9L9 3l-3 9H2" },
 ];
-const TOOLS = [
-  { icon: "🎯", name: "Smart Swipe Guide", desc: "Select your cards and spending. See the best card for every category — with real cashback after caps.", color: "#6366f1", tag: "Most popular", cta: "Try it free →", href: "/smart-swipe" },
-  { icon: "🏗️", name: "Stack Builder", desc: "Find the optimal 2 or 3 card combo. We test every possible combination from 25 cards for max savings.", color: "#8b5cf6", tag: "New", cta: "Build stack →", href: "/stack-builder" },
-  { icon: "💡", name: "Card Gap Finder", desc: "Find categories where better cards exist. See the exact ₹ you're leaving on the table per year.", color: "#f59e0b", tag: "Eye-opener", cta: "Find gaps →", href: "/gap-finder" },
-  { icon: "🔍", name: "Swipe Check", desc: "Pick a merchant — Swiggy, Amazon, Zomato, petrol — get top 3 cards with pro tips.", color: "#ec4899", tag: "Merchant-level", cta: "Check merchant →", href: "/swipe-check" },
-  { icon: "⚖️", name: "Compare Cards", desc: "Visual head-to-head with bar charts, category scores, and auto-generated verdict.", color: "#06b6d4", tag: "Popular", cta: "Compare now →", href: "/compare" },
+
+const CC_TOOLS = [
+  { name: "Smart Swipe", desc: "Best card per purchase", href: "/smart-swipe", iconPath: "M13 2L3 14h9l-1 8 10-12h-9l1-8z" },
+  { name: "Stack Builder", desc: "Optimize your combo", href: "/stack-builder", iconPath: "M2 7h20v14H2zM16 7V5a4 4 0 00-8 0v2" },
+  { name: "Gap Finder", desc: "Missing categories", href: "/gap-finder", iconPath: "M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.35-4.35" },
+  { name: "Swipe Check", desc: "Verify your pick", href: "/swipe-check", iconPath: "M22 11.08V12a10 10 0 11-5.93-9.14M22 4L12 14.01l-3-3" },
+  { name: "Compare", desc: "Side by side", href: "/compare", iconPath: "M16 3h5v5M8 3H3v5M3 16v5h5M21 16v5h-5" },
 ];
-const TRUST_CARDS = [
-  { icon: "📊", title: "Real Math, Not Ads", text: "We calculate effective cashback after caps. No inflated numbers." },
-  { icon: "🔒", title: "Zero Data Collected", text: "No name, email, phone. No cookies. No tracking whatsoever." },
-  { icon: "🧠", title: "Smart, Not Salesy", text: "We optimize your rewards — not our commissions." },
-  { icon: "🇮🇳", title: "Built for India", text: "25 Indian cards. Indian spending patterns. Rupee calculations." },
-  { icon: "⚡", title: "Cap-Aware Savings", text: "Only site showing effective rate after cashback caps. Real ₹ savings." },
-  { icon: "🆓", title: "Free Forever", text: "All tools free. We earn only through optional affiliate links." },
+
+const POP_CARDS_IDS = ["hdfc-regalia", "sbi-cashback", "axis-ace", "amazon-icici"];
+const POP_CARDS_DATA = POP_CARDS_IDS.map(id => CARDS.find(c => c.id === id)).filter(Boolean);
+const POP_CARD_GRADS = ["linear-gradient(135deg,#1e3a5f,#3b82f6)", "linear-gradient(135deg,#1a365d,#2563eb)", "linear-gradient(135deg,#5C3A0E,#C8820A)", "linear-gradient(135deg,#2E2E2E,#6B6B6B)"];
+
+const BEST_FOR = [
+  { label: "Online shopping", href: "/best/credit-card-for-online-shopping" },
+  { label: "Swiggy & Zomato", href: "/best/credit-card-for-swiggy-zomato" },
+  { label: "Amazon", href: "/best/credit-card-for-amazon" },
+  { label: "Travel", href: "/best/credit-card-for-travel" },
+  { label: "No annual fee", href: "/best/best-cashback-credit-card-no-annual-fee" },
+  { label: "Groceries", href: "/best/credit-card-for-groceries" },
+  { label: "Fuel", href: "/best/credit-card-for-fuel" },
 ];
-const TESTIMONIALS = [
-  { name: "Priya S.", loc: "Mumbai", text: "Finally someone showing REAL cashback rates. 1.33% on Regalia was a shock — but I trust this more than sites showing 5%.", avatar: "👩‍💼", accent: "#6366f1" },
-  { name: "Arjun M.", loc: "Bangalore", text: "The cap calculator is brilliant. I was spending ₹20K on bills thinking I'm earning 5% — turns out only first ₹10K counts.", avatar: "👨‍💻", accent: "#f59e0b" },
-  { name: "Sneha R.", loc: "Delhi", text: "Showed my husband we were losing ₹8K/year using wrong cards. He applied for Axis ACE that same evening.", avatar: "👩‍🎓", accent: "#ec4899" },
+
+const GUIDES = [
+  { tag: "Credit cards", tagColor: "#7C3AED", tagBg: "#EDE9FE", title: "Your \"5% cashback\" card gives you 2.8%. Here's the exact math.", time: "8 min", date: "March 2026", href: "/blog" },
+  { tag: "Loans", tagColor: "#1E40AF", tagBg: "#DBEAFE", title: "Home loan true cost: what banks hide from you", time: "6 min", date: "March 2026", href: "/learn/loans" },
+  { tag: "Insurance", tagColor: "#9D174D", tagBg: "#FCE7F3", title: "Your ₹10L policy covers ₹4.2L. Here's why.", time: "7 min", date: "March 2026", href: "/learn/insurance" },
+  { tag: "Savings", tagColor: "#92400E", tagBg: "#FEF3C7", title: "FD at 7.5%? Your real return is 0.15%.", time: "4 min", date: "March 2026", href: "/learn/savings" },
+  { tag: "Loans", tagColor: "#1E40AF", tagBg: "#DBEAFE", title: "Personal loan: 10.5% advertised, 13.1% actual", time: "5 min", date: "March 2026", href: "/learn/loans" },
+  { tag: "Credit cards", tagColor: "#7C3AED", tagBg: "#EDE9FE", title: "SBI Cashback cap cut — your new effective rate", time: "3 min", date: "April 2026", href: "/blog" },
 ];
+
 const UPDATES = [
-  { icon: "📊", card: "HDFC Regalia", text: "Base rate confirmed at 1.33% effective. SmartBuy up to 13.33% on travel.", type: "verified", date: "Mar 2026", color: "#6366f1" },
-  { icon: "⚠️", card: "Axis ACE", text: "Monthly cashback cap is ₹500. After ₹10K utility spend, effective rate drops to 1.5%.", type: "alert", date: "Mar 2026", color: "#7c3aed" },
-  { icon: "🆕", card: "HDFC Swiggy", text: "10% on Swiggy with ₹1500/mo cap. 5% on online categories. Better than originally listed.", type: "new", date: "Mar 2026", color: "#fc8019" },
-  { icon: "✅", card: "11 Cards Verified", text: "Effective cashback rates now verified from bank product pages, including cap calculations.", type: "update", date: "Mar 2026", color: "#16a34a" },
-  { icon: "📦", card: "Amazon Pay ICICI", text: "Confirmed: 5% Prime, 3% non-Prime, 2% partners, 1% other. No cap. Lifetime free.", type: "verified", date: "Mar 2026", color: "#d97706" },
+  { type: "nerf", text: "SBI Cashback monthly cap reduced to ₹4,000", cat: "Credit cards", catColor: "#7C3AED", catBg: "#EDE9FE" },
+  { type: "nerf", text: "Axis Airtel card benefits downgraded", cat: "Credit cards", catColor: "#7C3AED", catBg: "#EDE9FE" },
+  { type: "new", text: "HDFC launched Swiggy co-branded card", cat: "Credit cards", catColor: "#7C3AED", catBg: "#EDE9FE" },
+  { type: "rate", text: "SBI home loan rate revised to 8.5% (was 8.7%)", cat: "Loans", catColor: "#1E40AF", catBg: "#DBEAFE" },
 ];
-const DID_YOU_KNOW_TIPS = [
-  { tip: "Swiggy orders under ₹150 don't qualify for credit card cashback on most cards. Always check minimum transaction limits.", icon: "🍕" },
-  { tip: "Fuel surcharge waiver only applies at fuel stations — not EV charging or toll payments.", icon: "⛽" },
-  { tip: "Paying your credit card bill with another card (via CRED, etc.) doesn't earn rewards on most cards.", icon: "🔁" },
-  { tip: "Annual fee waiver is usually based on spending in the previous year, not the current year. Plan ahead.", icon: "📅" },
-  { tip: "Reward points earned on EMI purchases are often reversed after the first EMI. Read the fine print.", icon: "⚡" },
-  { tip: "HDFC Regalia's advertised '5x rewards' is actually 1.33% effective cashback. The real value is SmartBuy at 13%.", icon: "💳" },
-  { tip: "Axis ACE gives 5% on bills via GPay — but only up to ₹500/month. After ₹10K spend, rate drops to 1.5%.", icon: "🎯" },
-  { tip: "International transactions on most Indian cards have 1-3.5% forex markup — even 'premium' cards. Only IDFC WOW and Axis Atlas waive it.", icon: "🌍" },
-];
-const TRUST_BAR = [["📊","Cap-aware math"],["🔒","Zero tracking"],["✅","11 verified"],["🆓","Free forever"],["🇮🇳","India-built"],["🤖","AI-ready API"]];
 
-// ─── HERO DEMO ───
-function HeroDemoCard() {
-  const [selected, setSelected] = useState(["amazon-icici", "axis-ace", "hdfc-millennia"]);
-  const [step, setStep] = useState(0);
-  const bdr = "rgba(255,255,255,0.08)";
-  const muted = "rgba(255,255,255,0.35)";
-
-  const toggle = (id) => setSelected(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
-
-  // Live calculate results from selected cards
-  const results = HERO_CATS.map(cat => {
-    let bestCard = null;
-    let bestResult = { cashback: 0, effectiveRate: 0, capped: false, capNote: null };
-    const spend = HERO_SPEND[cat.id] || 5000;
-    selected.forEach(cid => {
-      const card = CARDS.find(x => x.id === cid);
-      if (!card) return;
-      const result = calcReward(card, cat.id, spend);
-      if (result.cashback > bestResult.cashback) { bestCard = card; bestResult = result; }
-    });
-    return { cat, card: bestCard, result: bestResult };
-  });
-  const totalMonthly = results.reduce((s, r) => s + r.result.cashback, 0);
-  const baselineMonthly = Object.values(HERO_SPEND).reduce((s, v) => s + Math.round(v * 0.01), 0);
-  const annualSavings = (totalMonthly - baselineMonthly) * 12;
-
+// ─── SVG Icon helper ───
+function SvgIcon({ path, color = "currentColor", size = 22, strokeWidth = 2 }) {
   return (
-    <div style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${bdr}`, borderRadius: 16, overflow: "hidden", backdropFilter: "blur(12px)", boxShadow: "0 8px 40px rgba(0,0,0,0.3)" }}>
-      <div style={{ background: "rgba(255,255,255,0.03)", borderBottom: "1px solid rgba(255,255,255,0.06)", padding: "10px 14px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <span style={{ fontSize: 12, fontWeight: 700, color: "#fff" }}>Smart Swipe Guide</span>
-        <div style={{ display: "flex", gap: 2 }}>
-          {["Select", "Results"].map((l, i) => (
-            <button key={l} onClick={() => setStep(i)} style={{ background: step === i ? "#fff" : "transparent", color: step === i ? "#111" : muted, border: "none", borderRadius: 6, padding: "4px 12px", fontSize: 10, fontWeight: 600, cursor: "pointer" }}>{l}</button>
-          ))}
-        </div>
-      </div>
-      <div style={{ padding: "14px" }}>
-        {step === 0 ? (
-          <div>
-            <div style={{ fontSize: 10, color: muted, marginBottom: 6 }}>Tap to select/deselect · {selected.length} selected</div>
-            {HERO_CARDS.map(c => {
-              const isSel = selected.includes(c.id);
-              return (
-                <div key={c.id} onClick={() => toggle(c.id)} style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 10px", borderRadius: 8, marginBottom: 4, cursor: "pointer", transition: "all 0.15s", background: isSel ? `${c.color}18` : "transparent", border: isSel ? `1.5px solid ${c.color}40` : `1px solid ${bdr}` }}>
-                  <span style={{ fontSize: 16 }}>{c.img}</span>
-                  <span style={{ flex: 1, fontSize: 12, fontWeight: 600, color: "#fff" }}>{c.name}</span>
-                  <span style={{ width: 18, height: 18, borderRadius: 5, fontSize: 9, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", background: isSel ? c.color : "rgba(255,255,255,0.1)", transition: "all 0.15s" }}>{isSel ? "✓" : ""}</span>
-                </div>
-              );
-            })}
-            <button onClick={() => { if (selected.length) setStep(1); }} style={{ width: "100%", marginTop: 8, background: selected.length ? "#fff" : "rgba(255,255,255,0.1)", color: selected.length ? "#111" : "rgba(255,255,255,0.3)", border: "none", borderRadius: 8, padding: "10px", fontSize: 12, fontWeight: 700, cursor: selected.length ? "pointer" : "default" }}>
-              {selected.length ? `Show Results (${selected.length} cards) →` : "Select at least 1 card"}
-            </button>
-          </div>
-        ) : (
-          <div>
-            {selected.length === 0 ? (
-              <div style={{ textAlign: "center", padding: "20px 0", color: muted, fontSize: 12 }}>Select cards first</div>
-            ) : (<>
-              <div style={{ fontSize: 10, color: muted, marginBottom: 6 }}>Best card per category · Live calculation</div>
-              {results.map((r, i) => {
-                if (!r.card) return <div key={i} style={{ padding: "10px", borderRadius: 8, marginBottom: 4, border: `1px solid ${bdr}`, display: "flex", alignItems: "center", gap: 6 }}><span style={{ fontSize: 16 }}>{r.cat.icon}</span><span style={{ fontSize: 12, color: muted }}>{r.cat.label} — no match</span></div>;
-                return (
-                  <div key={i} style={{ padding: "10px", borderRadius: 8, marginBottom: 4, border: r.result.capped ? "1px solid rgba(251,191,36,0.2)" : `1px solid ${bdr}`, background: r.result.capped ? "rgba(251,191,36,0.06)" : "transparent" }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                        <span style={{ fontSize: 16 }}>{r.cat.icon}</span>
-                        <div><div style={{ fontSize: 12, fontWeight: 700, color: "#fff" }}>{r.cat.label}</div><div style={{ fontSize: 10, color: muted }}>{r.card.name}</div></div>
-                      </div>
-                      <div style={{ textAlign: "right" }}>
-                        <div style={{ fontSize: 16, fontWeight: 800, color: "#4ade80" }}>{r.result.effectiveRate}%</div>
-                        <div style={{ fontSize: 9, color: muted }}>₹{r.result.cashback}/mo</div>
-                      </div>
-                    </div>
-                    {r.result.capped && <div style={{ marginTop: 6, fontSize: 10, color: "#fbbf24", padding: "4px 6px", background: "rgba(251,191,36,0.06)", borderRadius: 4, lineHeight: 1.4 }}>⚡ {r.result.capNote}</div>}
-                  </div>
-                );
-              })}
-              <div style={{ marginTop: 10, padding: "12px", border: "1.5px solid rgba(255,255,255,0.15)", borderRadius: 8, textAlign: "center" }}>
-                <div style={{ fontSize: 10, color: muted, textTransform: "uppercase", letterSpacing: "0.06em" }}>Extra savings vs 1% card</div>
-                <div style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>₹{annualSavings.toLocaleString()}/yr</div>
-                <div style={{ fontSize: 10, color: "#4ade80" }}>Cap-aware · {selected.length} cards</div>
-              </div>
-            </>)}
-            <button onClick={() => setStep(0)} style={{ width: "100%", marginTop: 8, background: "rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.5)", border: `1px solid ${bdr}`, borderRadius: 8, padding: "8px", fontSize: 11, fontWeight: 600, cursor: "pointer" }}>← Change cards</button>
-          </div>
-        )}
-      </div>
-      <a href="/smart-swipe" style={{ display: "block", textAlign: "center", padding: "10px", fontSize: 11, fontWeight: 600, color: "#818cf8", textDecoration: "none", borderTop: "1px solid rgba(255,255,255,0.06)", background: "rgba(255,255,255,0.02)" }}>Try full tool with all 25 cards + custom spending →</a>
-    </div>
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round">
+      {path.split(/(?=[A-Z])/).length > 3
+        ? <path d={path} />
+        : path.includes("z") || path.includes("Z")
+          ? <path d={path} />
+          : <path d={path} />
+      }
+    </svg>
   );
 }
 
-// ─── MAIN ───
+// ─── MAIN COMPONENT ───
 export default function HomeClient() {
-  const [quickIdx, setQuickIdx] = useState(0);
-  const [tipIdx, setTipIdx] = useState(0);
   const [vis, setVis] = useState(false);
+  useEffect(() => { setTimeout(() => setVis(true), 150); }, []);
 
-  useEffect(() => { setTimeout(() => setVis(true), 200); }, []);
-  useEffect(() => { const t = setInterval(() => setQuickIdx(i => (i+1) % QUICK_PICKS.length), 2500); return () => clearInterval(t); }, []);
-  useEffect(() => { const t = setInterval(() => setTipIdx(i => (i+1) % DID_YOU_KNOW_TIPS.length), 5000); return () => clearInterval(t); }, []);
+  const v = { // violet palette
+    hero: "#1E1042", heroBdr: "rgba(255,255,255,0.08)", heroMuted: "rgba(255,255,255,0.4)",
+    accent: "#8B5CF6", accentLight: "#A78BFA", accentBg: "rgba(139,92,246,0.08)",
+    accentBorder: "rgba(139,92,246,0.18)", accentText: "#7C3AED",
+  };
 
   return (
     <div>
-      {/* ═══ 1. DARK HERO + DEMO ═══ */}
-      <section style={{ background: "linear-gradient(135deg,#0f172a,#1e293b,#0f172a)", position: "relative", overflow: "hidden", marginTop: 64 }}>
-        <div style={{ position:"absolute",top:-120,right:-80,width:450,height:450,borderRadius:"50%",background:"radial-gradient(circle,rgba(99,102,241,0.1),transparent 70%)",filter:"blur(60px)",pointerEvents:"none" }}/>
-        <div style={{ position:"absolute",bottom:-60,left:-40,width:300,height:300,borderRadius:"50%",background:"radial-gradient(circle,rgba(168,85,247,0.06),transparent 70%)",filter:"blur(50px)",pointerEvents:"none" }}/>
-        <div className="max-w-[1060px] mx-auto px-6 py-16 md:py-[72px] grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr] gap-10 md:gap-12 items-center relative z-[2]">
-          <div style={{ transition:"all 0.7s", opacity:vis?1:0, transform:vis?"translateY(0)":"translateY(20px)" }}>
-            <div style={{ display:"inline-flex", alignItems:"center", gap:6, background:"rgba(255,255,255,0.05)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:100, padding:"5px 14px", marginBottom:22, fontSize:11, fontWeight:700, color:"rgba(255,255,255,0.5)" }}>
-              <span style={{ width:6,height:6,borderRadius:"50%",background:"#4ade80" }}/> Live tool — try it right now
+      {/* ═══ 1. HERO — Split: tagline left, tool picker right ═══ */}
+      <section style={{
+        background: `linear-gradient(135deg, ${v.hero}, #2A1557, ${v.hero})`,
+        position: "relative", overflow: "hidden", marginTop: 64,
+      }}>
+        {/* Glow effects */}
+        <div style={{ position: "absolute", top: -150, left: "50%", width: 700, height: 700, background: "radial-gradient(circle, rgba(139,92,246,0.15), transparent 65%)", pointerEvents: "none", transform: "translateX(-50%)" }} />
+        <div style={{ position: "absolute", bottom: -80, right: -40, width: 400, height: 400, background: "radial-gradient(circle, rgba(167,139,250,0.1), transparent 60%)", pointerEvents: "none" }} />
+
+        <div className="max-w-[1060px] mx-auto px-6 py-14 md:py-16 grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-10 md:gap-12 items-center relative z-[2]">
+          {/* Left: tagline */}
+          <div style={{ transition: "all 0.6s", opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(18px)" }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.06)", border: `1px solid ${v.heroBdr}`, borderRadius: 50, padding: "5px 14px", marginBottom: 20, fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)" }}>
+              <span style={{ width: 6, height: 6, borderRadius: "50%", background: v.accentLight, animation: "pulse 2s infinite" }} />
+              India's financial truth platform
             </div>
-            <h1 style={{ fontSize:"clamp(30px,4.5vw,48px)", fontWeight:800, lineHeight:1.08, letterSpacing:"-0.035em", marginBottom:16, color:"#f1f5f9" }}>
-              See what your cards <span style={{color:"#818cf8"}}>actually</span> earn you
+            <h1 style={{ fontSize: "clamp(28px,4.2vw,44px)", fontWeight: 800, lineHeight: 1.1, letterSpacing: "-0.035em", marginBottom: 14, color: "#F1F5F9" }}>
+              The <span style={{ color: v.accentLight }}>honest number</span> on every financial product
             </h1>
-            <p style={{ fontSize:16, color:"#94a3b8", lineHeight:1.7, marginBottom:28, maxWidth:440 }}>
-              We calculate <strong style={{color:"#e2e8f0"}}>effective cashback after reward caps</strong> — the number banks don't advertise. 25 Indian cards. Verified. Free.
+            <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, marginBottom: 28, maxWidth: 420 }}>
+              Banks advertise one number. You take home another. We calculate the gap — across credit cards, loans, insurance, and savings.
             </p>
-            <div style={{ display:"flex", gap:10, marginBottom:32, flexWrap:"wrap" }}>
-              <a href="/smart-swipe" style={{ background:"#fff", color:"#111", borderRadius:10, padding:"14px 28px", fontSize:14, fontWeight:700, textDecoration:"none" }}>Try Smart Swipe →</a>
-              <a href="/compare" style={{ background:"rgba(255,255,255,0.06)", color:"#cbd5e1", border:"1px solid rgba(255,255,255,0.1)", borderRadius:10, padding:"14px 28px", fontSize:14, fontWeight:600, textDecoration:"none" }}>Compare cards</a>
-            </div>
-            <div style={{ display:"flex", gap:36, flexWrap:"wrap" }}>
-              {[["25+","Cards analyzed"],["11","Verified from banks"],["₹15K+","Avg savings/year"]].map(([n,l],i)=>(
-                <div key={i}><div style={{fontSize:22,fontWeight:800,color:"#e2e8f0"}}>{n}</div><div style={{fontSize:11,color:"rgba(255,255,255,0.3)"}}>{l}</div></div>
+            <div style={{ display: "flex", gap: 32, flexWrap: "wrap" }}>
+              {[["75+", "Cards tracked"], ["5", "Live tools"], ["₹0", "Always free"]].map(([n, l], i) => (
+                <div key={i}>
+                  <div style={{ fontSize: 20, fontWeight: 800, color: "#E2E8F0" }}>{n}</div>
+                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.25)" }}>{l}</div>
+                </div>
               ))}
             </div>
           </div>
-          <div style={{ transition:"all 0.7s 0.2s", opacity:vis?1:0, transform:vis?"translateY(0)":"translateY(20px)" }}><HeroDemoCard/></div>
-        </div>
-      </section>
 
-      {/* ═══ 2. QUICK ANSWERS MARQUEE ═══ */}
-      <section style={{ background:"var(--bg-section-slate)", borderBottom:"1px solid var(--border-section-slate)", padding:"12px 0", overflow:"hidden" }}>
-        <style>{`
-          @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-          .marquee-track { display: flex; gap: 8px; animation: marquee 25s linear infinite; width: max-content; }
-          .marquee-track:hover { animation-play-state: paused; }
-        `}</style>
-        <div className="marquee-track">
-          {[...QUICK_PICKS, ...QUICK_PICKS].map((q, i) => (
-            <div key={i} style={{ display:"flex", gap:8, alignItems:"center", padding:"6px 16px", borderRadius:8, background:`${q.c}06`, border:`1px solid ${q.c}15`, flexShrink:0, cursor:"pointer" }}>
-              <span className="text-xs font-bold" style={{color:"var(--text)"}}>{q.q}</span>
-              <span className="text-xs font-semibold" style={{color:q.c}}>{q.a}</span>
+          {/* Right: tool picker */}
+          <div style={{ transition: "all 0.6s 0.2s", opacity: vis ? 1 : 0, transform: vis ? "translateY(0)" : "translateY(18px)" }}>
+            <div style={{ fontSize: 12, color: "rgba(255,255,255,0.3)", fontWeight: 600, marginBottom: 8, letterSpacing: 0.5, textTransform: "uppercase" }}>
+              What do you want to do?
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ═══ 3. HOW IT WORKS ═══ */}
-      <section style={{ maxWidth:900, margin:"0 auto", padding:"56px 24px" }}>
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-sm font-medium" style={{background:"var(--accent-light)",border:"1px solid var(--accent-border)",color:"var(--accent-text)"}}>✨ Simple & Powerful</div>
-          <h2 className="text-3xl font-extrabold tracking-tight mb-2" style={{color:"var(--text)"}}>Three steps to maximize every swipe</h2>
-          <p className="text-sm" style={{color:"var(--text-muted)"}}>No sign-up needed. Select your cards and get instant recommendations.</p>
-        </div>
-        <div className="grid gap-3" style={{gridTemplateColumns:"repeat(auto-fit, minmax(250px, 1fr))"}}>
-          {[["01","Select Your Cards","Pick from 25+ popular Indian credit cards","🃏"],["02","Enter Your Spending","Monthly spend per category for real savings math","🎯"],["03","Get Recommendations","Best card per swipe with cap-aware calculations","💡"]].map(([step,title,desc,icon],i)=>(
-            <div key={i} className="rounded-2xl p-6 text-left transition-all" style={{background:"var(--bg-card)",border:"1px solid var(--border)",boxShadow:"var(--shadow)"}}>
-              <div className="text-4xl mb-4">{icon}</div>
-              <div className="text-xs font-bold font-mono mb-2" style={{color:"var(--accent-text)"}}>STEP {step}</div>
-              <div className="text-lg font-bold mb-2" style={{color:"var(--text)"}}>{title}</div>
-              <div className="text-sm leading-relaxed" style={{color:"var(--text-muted)"}}>{desc}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ═══ 4. AWARD CARDS ═══ */}
-      <section style={{ background:"var(--bg-section-blue)", borderTop:"1px solid var(--border-section-blue)", borderBottom:"1px solid var(--border-section-blue)", padding:"56px 24px" }}>
-        <div style={{ maxWidth:860, margin:"0 auto" }}>
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-1" style={{color:"var(--text)"}}>Best credit cards of 2026</h2>
-          <p className="text-sm mb-8" style={{color:"var(--text-muted)"}}>Real cashback math — not bank-advertised rates. One winner per category.</p>
-          {AWARD_CARDS.map((c,i)=>(
-            <div key={i} className="mb-5 rounded-2xl overflow-hidden transition-all" style={{border:"1px solid var(--border)",boxShadow:"var(--shadow)"}}>
-              <div style={{background:c.grad,padding:"12px 20px",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                <span style={{fontSize:12,fontWeight:800,color:"#fff",textTransform:"uppercase",letterSpacing:"0.06em"}}>🏆 {c.badge}</span>
-                <span style={{fontSize:11,color:"rgba(255,255,255,0.6)"}}>Verified</span>
-              </div>
-              <div className="p-5" style={{background:"var(--bg-card)"}}>
-                <div className="flex gap-5 flex-wrap">
-                  <div className="flex-shrink-0 rounded-xl flex items-center justify-center text-4xl" style={{width:88,height:56,background:`${c.color}0a`,border:`1.5px solid ${c.color}18`}}>{c.img}</div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-xl font-extrabold" style={{color:"var(--text)"}}>{c.name}</h3>
-                    <p className="text-sm mt-0.5 mb-3" style={{color:"var(--text-muted)"}}>{c.bank}</p>
-                    <div className="grid grid-cols-3 md:grid-cols-5 gap-3 py-3 mb-3" style={{borderTop:"1px solid var(--border-light)",borderBottom:"1px solid var(--border-light)"}}>
-                      {[["Fee",c.fee,c.feeNote,false],["Best",c.rate,c.rateCat,true],["Base",c.base,null,false],["Lounge",c.lounge,null,false],["Cap",c.cap||"None",null,false]].map(([l,v,s,ig],j)=>(
-                        <div key={j}><div className="text-[10px] font-semibold uppercase tracking-wider" style={{color:"var(--text-faint)"}}>{l}</div><div className="text-[15px] font-extrabold mt-0.5" style={{color:ig?"var(--green)":(l==="Cap"&&v!=="None"?"var(--orange)":"var(--text)")}}>{v}</div>{s&&<div className="text-[10px] mt-0.5" style={{color:ig?"var(--green)":"var(--text-faint)"}}>{s}</div>}</div>
-                      ))}
+            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+              {TOOL_PICKER.map((t, i) => (
+                <Link key={i} href={t.href} style={{ textDecoration: "none" }}>
+                  <div style={{
+                    display: "flex", alignItems: "center", gap: 14,
+                    background: t.featured ? "rgba(139,92,246,0.18)" : "rgba(255,255,255,0.04)",
+                    border: `1px solid ${t.featured ? "rgba(139,92,246,0.25)" : v.heroBdr}`,
+                    borderRadius: 12, padding: "12px 16px", cursor: "pointer",
+                    transition: "all 0.2s", position: "relative",
+                  }}
+                    onMouseEnter={e => { e.currentTarget.style.background = t.featured ? "rgba(139,92,246,0.25)" : "rgba(255,255,255,0.08)"; e.currentTarget.style.transform = "translateX(4px)"; }}
+                    onMouseLeave={e => { e.currentTarget.style.background = t.featured ? "rgba(139,92,246,0.18)" : "rgba(255,255,255,0.04)"; e.currentTarget.style.transform = "translateX(0)"; }}
+                  >
+                    <div style={{ width: 38, height: 38, borderRadius: 10, background: `${t.color}22`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                      <SvgIcon path={t.iconPath} color={t.color} size={20} />
                     </div>
-                    <div className="rounded-lg p-3.5 mb-3" style={{background:"var(--bg-muted)"}}><div className="text-[10px] font-extrabold uppercase tracking-wider mb-1.5" style={{color:c.color}}>OUR TAKE</div><p className="text-sm leading-relaxed" style={{color:"var(--text-secondary)"}}>{c.verdict}</p></div>
-                    <div className="grid grid-cols-2 gap-3">
-                      <div>{c.pros.map((p,j)=><div key={j} className="text-xs mb-1 flex gap-1.5" style={{color:"var(--text-secondary)"}}><span style={{color:"var(--green)"}}>✓</span>{p}</div>)}</div>
-                      <div>{c.cons.map((x,j)=><div key={j} className="text-xs mb-1 flex gap-1.5" style={{color:"var(--text-muted)"}}><span style={{color:"var(--orange)"}}>✕</span>{x}</div>)}</div>
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontSize: 13, fontWeight: 700, color: "#fff", marginBottom: 1 }}>{t.name}</div>
+                      <div style={{ fontSize: 11, color: "rgba(255,255,255,0.35)" }}>{t.desc}</div>
                     </div>
+                    <span style={{ color: "rgba(255,255,255,0.15)", fontSize: 16 }}>→</span>
+                    {t.badge && (
+                      <span style={{ position: "absolute", top: 7, right: 10, fontSize: 9, background: t.badge === "NEW" ? v.accent : "rgba(255,255,255,0.1)", color: "#fff", padding: "2px 7px", borderRadius: 50, fontWeight: 700, letterSpacing: 0.3 }}>{t.badge}</span>
+                    )}
                   </div>
-                </div>
-              </div>
+                </Link>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </section>
 
-      {/* ═══ 5. FOUR TOOLS ═══ */}
-      <section style={{ maxWidth:900, margin:"0 auto", padding:"56px 24px" }}>
-        <div className="text-center mb-9">
-          <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-1.5" style={{color:"var(--text)"}}>Four free tools. Real math.</h2>
-          <p className="text-sm" style={{color:"var(--text-muted)"}}>Each one answers a different credit card question.</p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-          {TOOLS.map((t,i)=>(
-            <a key={i} href={t.href} style={{textDecoration:"none",color:"inherit"}}>
-              <div className="rounded-2xl overflow-hidden transition-all cursor-pointer" style={{border:"1px solid var(--border)",boxShadow:"var(--shadow)",background:"var(--bg-card)"}}>
-                <div style={{height:4,background:t.color}}/>
-                <div className="p-5">
-                  <div className="flex justify-between items-start mb-3">
-                    <div className="w-11 h-11 rounded-xl flex items-center justify-center text-xl" style={{background:`${t.color}08`,border:`1px solid ${t.color}15`}}>{t.icon}</div>
-                    <span className="text-[10px] font-bold rounded-md px-2.5 py-1" style={{color:t.color,background:`${t.color}08`}}>{t.tag}</span>
-                  </div>
-                  <h3 className="text-base font-extrabold mb-1.5" style={{color:"var(--text)"}}>{t.name}</h3>
-                  <p className="text-xs leading-relaxed mb-3.5" style={{color:"var(--text-muted)"}}>{t.desc}</p>
-                  <span className="text-sm font-bold" style={{color:t.color}}>{t.cta}</span>
+      {/* ═══ 2. CATEGORY GRID — floating up from hero ═══ */}
+      <section className="max-w-[1060px] mx-auto px-6" style={{ transform: "translateY(-32px)", position: "relative", zIndex: 3 }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {CATEGORIES_GRID.map((cat, i) => (
+            <Link key={i} href={cat.href} style={{ textDecoration: "none", color: "inherit" }}>
+              <div className="rounded-2xl p-5 transition-all cursor-pointer relative overflow-hidden"
+                style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}
+                onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "var(--shadow-hover)"; e.currentTarget.style.borderColor = cat.bg; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "var(--shadow)"; e.currentTarget.style.borderColor = "var(--border)"; }}
+              >
+                {cat.live && <div style={{ position: "absolute", top: 12, right: 12, width: 8, height: 8, borderRadius: "50%", background: cat.color, boxShadow: `0 0 0 3px ${cat.color}25`, animation: "pulse 2s infinite" }} />}
+                <div style={{ width: 48, height: 48, borderRadius: 12, background: cat.bg, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 14 }}>
+                  <SvgIcon path={cat.iconPath} color={cat.color} size={24} />
+                </div>
+                <h3 className="text-base font-extrabold mb-1 tracking-tight" style={{ color: "var(--text)" }}>{cat.name}</h3>
+                <p className="text-xs leading-relaxed mb-3" style={{ color: "var(--text-muted)", minHeight: 32 }}>{cat.desc}</p>
+                <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-semibold mb-3" style={{ background: cat.bg, color: cat.text }}>{cat.honest}</div>
+                <div className="text-xs font-semibold flex items-center gap-1" style={{ color: cat.color }}>
+                  {cat.cta} <span className="transition-transform inline-block">→</span>
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
-      </section>
 
-      {/* ═══ 6. WHY TRUST US ═══ */}
-      <section style={{ background:"var(--bg-section-green)", borderTop:"1px solid var(--border-section-green)", borderBottom:"1px solid var(--border-section-green)", padding:"56px 24px" }}>
-        <div style={{ maxWidth:900, margin:"0 auto" }}>
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-sm font-medium" style={{background:"var(--green-bg)",border:"1px solid var(--green-border)",color:"var(--green)"}}>🛡️ Trust</div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight" style={{color:"var(--text)"}}>Why people trust Assure Fintech</h2>
+        {/* What Changed banner */}
+        <div className="mt-3 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4"
+          style={{ background: "var(--bg-section-violet)", border: "1px solid var(--border-section-violet)" }}
+        >
+          <div style={{ flex: 1 }}>
+            <div className="text-sm font-extrabold mb-1" style={{ color: v.accentText }}>What changed — April 2026</div>
+            <div className="text-xs" style={{ color: "var(--text-muted)" }}>SBI Cashback cap cut · Axis Airtel downgraded · HDFC Swiggy card launched</div>
           </div>
-          <div className="grid gap-3" style={{gridTemplateColumns:"repeat(auto-fit, minmax(220px, 1fr))"}}>
-            {TRUST_CARDS.map((t,i)=>(
-              <div key={i} className="rounded-2xl p-5 transition-all" style={{background:"var(--bg-card)",border:"1px solid var(--border)",boxShadow:"var(--shadow)"}}>
-                <div className="text-3xl mb-3">{t.icon}</div>
-                <div className="text-base font-bold mb-1.5" style={{color:"var(--text)"}}>{t.title}</div>
-                <div className="text-sm leading-relaxed" style={{color:"var(--text-muted)"}}>{t.text}</div>
-              </div>
-            ))}
-          </div>
+          <Link href="/whats-changed" className="flex-shrink-0 no-underline">
+            <div className="rounded-lg px-4 py-2 text-xs font-bold text-white cursor-pointer" style={{ background: v.accentText }}>View changelog →</div>
+          </Link>
         </div>
       </section>
 
-      {/* ═══ 7. TESTIMONIALS ═══ */}
-      <section style={{ background:"var(--bg-section-violet)", borderTop:"1px solid var(--border-section-violet)", borderBottom:"1px solid var(--border-section-violet)", padding:"56px 24px" }}>
-        <div style={{ maxWidth:800, margin:"0 auto" }}>
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-sm font-medium" style={{background:"var(--blue-bg)",border:"1px solid var(--blue-border)",color:"var(--blue)"}}>💬 Users</div>
-          <h2 className="text-2xl font-extrabold tracking-tight" style={{color:"var(--text)"}}>What our users say</h2>
-        </div>
-        <div className="grid gap-3.5" style={{gridTemplateColumns:"repeat(auto-fit, minmax(230px, 1fr))"}}>
-          {TESTIMONIALS.map((t,i)=>(
-            <div key={i} className="rounded-xl p-5" style={{background:"var(--bg-card)",borderLeft:`4px solid ${t.accent}`,boxShadow:"var(--shadow)"}}>
-              <div style={{fontSize:14,color:"#f59e0b",letterSpacing:2,marginBottom:10}}>★★★★★</div>
-              <p className="text-sm leading-relaxed mb-3.5" style={{color:"var(--text-secondary)"}}>"{t.text}"</p>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg flex items-center justify-center text-base" style={{background:`${t.accent}10`}}>{t.avatar}</div>
-                <div><div className="text-xs font-bold" style={{color:"var(--text)"}}>{t.name}</div><div className="text-[10px]" style={{color:"var(--text-faint)"}}>{t.loc}</div></div>
-              </div>
-            </div>
-          ))}
-        </div>
-        </div>
-      </section>
-
-      {/* ═══ 8. MONTHLY UPDATES ═══ */}
-      <section style={{ background:"var(--bg-section-amber)", borderTop:"1px solid var(--border-section-amber)", borderBottom:"1px solid var(--border-section-amber)", padding:"56px 24px" }}>
-        <div style={{ maxWidth:800, margin:"0 auto" }}>
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-sm font-medium" style={{background:"var(--orange-bg)",border:"1px solid var(--orange-border)",color:"var(--orange)"}}>📢 March 2026</div>
-            <h2 className="text-2xl font-extrabold tracking-tight" style={{color:"var(--text)"}}>What changed this month</h2>
-            <p className="text-sm mt-1.5" style={{color:"var(--text-muted)"}}>We track reward changes so you don't have to.</p>
-          </div>
-          <div className="flex flex-col gap-2.5">
-            {UPDATES.map((u,i)=>(
-              <div key={i} className="rounded-xl p-4 flex items-start gap-3.5" style={{background:"var(--bg-card)",border:"1px solid var(--border)",boxShadow:"var(--shadow)"}}>
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center text-xl flex-shrink-0" style={{background:`${u.color}18`}}>{u.icon}</div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1 flex-wrap">
-                    <span className="text-sm font-bold" style={{color:"var(--text)"}}>{u.card}</span>
-                    <span className="text-[11px] font-semibold uppercase rounded px-2 py-0.5" style={{
-                      color:u.type==="alert"?"var(--orange)":u.type==="new"?"var(--green)":u.type==="verified"?"var(--blue)":"var(--text-muted)",
-                      background:u.type==="alert"?"var(--orange-bg)":u.type==="new"?"var(--green-bg)":u.type==="verified"?"var(--blue-bg)":"var(--bg-muted)"
-                    }}>{u.type}</span>
-                    <span className="text-[11px]" style={{color:"var(--text-faint)"}}>{u.date}</span>
-                  </div>
-                  <p className="text-sm leading-relaxed" style={{color:"var(--text-secondary)"}}>{u.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ 9. DID YOU KNOW ═══ */}
-      <section style={{ maxWidth:800, margin:"0 auto", padding:"40px 24px" }}>
-        <div className="rounded-2xl p-6 flex items-start gap-4" style={{background:"linear-gradient(135deg, rgba(251,191,36,0.08), rgba(251,191,36,0.02))",border:"1px solid rgba(251,191,36,0.2)"}}>
-          <div className="text-3xl flex-shrink-0" key={tipIdx}>{DID_YOU_KNOW_TIPS[tipIdx].icon}</div>
+      {/* ═══ 3. CREDIT CARD TOOLS ═══ */}
+      <section style={{ maxWidth: 1060, margin: "24px auto 0", padding: "0 24px 48px" }}>
+        <div className="flex items-end justify-between mb-6 flex-wrap gap-2">
           <div>
-            <div className="text-xs font-bold uppercase tracking-wider mb-1.5" style={{color:"#d97706"}}>💡 Did you know?</div>
-            <p className="text-sm leading-relaxed" style={{color:"var(--text-secondary)"}} key={tipIdx}>{DID_YOU_KNOW_TIPS[tipIdx].tip}</p>
-            <p className="text-[11px] mt-2" style={{color:"var(--text-faint)"}}>New tip every few seconds</p>
+            <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight" style={{ color: "var(--text)" }}>Credit card tools</h2>
+            <p className="text-sm mt-1" style={{ color: "var(--text-muted)" }}>Five tools that show you the real number behind every swipe.</p>
           </div>
+          <Link href="/cards" className="text-sm font-semibold no-underline" style={{ color: v.accentText }}>All 75 cards →</Link>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 mb-6">
+          {CC_TOOLS.map((t, i) => (
+            <Link key={i} href={t.href} style={{ textDecoration: "none", color: "inherit" }}>
+              <div className="rounded-xl p-4 text-center transition-all cursor-pointer"
+                style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}
+                onMouseEnter={e => { e.currentTarget.style.background = "var(--bg-section-violet)"; e.currentTarget.style.borderColor = "var(--border-section-violet)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseLeave={e => { e.currentTarget.style.background = "var(--bg-card)"; e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = "translateY(0)"; }}
+              >
+                <div className="w-10 h-10 rounded-xl mx-auto mb-2.5 flex items-center justify-center" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
+                  <SvgIcon path={t.iconPath} color={v.accentText} size={18} />
+                </div>
+                <div className="text-sm font-bold" style={{ color: "var(--text)" }}>{t.name}</div>
+                <div className="text-[11px] mt-0.5" style={{ color: "var(--text-muted)" }}>{t.desc}</div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Popular cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 mb-5">
+          {POP_CARDS_DATA.map((c, i) => (
+            <Link key={c.id} href={`/cards/${c.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+              <div className="rounded-xl p-4 transition-all cursor-pointer"
+                style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}
+                onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "var(--shadow-hover)"; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "var(--shadow)"; }}
+              >
+                <div className="w-full h-12 rounded-lg mb-3" style={{ background: POP_CARD_GRADS[i] }} />
+                <div className="text-sm font-bold" style={{ color: "var(--text)" }}>{c.name}</div>
+                <div className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
+                  Best: {c.rates?.[0]?.rate || "—"}% · {c.fee === 0 ? "Free" : `₹${c.fee?.toLocaleString()}/yr`}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Best-for tags */}
+        <div className="flex gap-2 flex-wrap">
+          {BEST_FOR.map((b, i) => (
+            <Link key={i} href={b.href} style={{ textDecoration: "none" }}>
+              <div className="rounded-full px-4 py-2 text-xs font-medium cursor-pointer transition-all"
+                style={{ background: "var(--accent-light)", color: "var(--accent-text)", border: "1px solid var(--accent-border)" }}
+                onMouseEnter={e => { e.currentTarget.style.background = v.accentText; e.currentTarget.style.color = "#fff"; e.currentTarget.style.borderColor = v.accentText; }}
+                onMouseLeave={e => { e.currentTarget.style.background = "var(--accent-light)"; e.currentTarget.style.color = "var(--accent-text)"; e.currentTarget.style.borderColor = "var(--accent-border)"; }}
+              >{b.label}</div>
+            </Link>
+          ))}
         </div>
       </section>
 
-      {/* ═══ 9B. BEST CARDS BY CATEGORY ═══ */}
-      <section style={{ background:"var(--bg-section-violet)", borderTop:"1px solid var(--border-section-violet)", borderBottom:"1px solid var(--border-section-violet)", padding:"56px 24px" }}>
-        <div style={{ maxWidth:800, margin:"0 auto" }}>
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-extrabold tracking-tight" style={{color:"var(--text)"}}>Best credit cards by category</h2>
-            <p className="text-sm mt-1.5" style={{color:"var(--text-muted)"}}>Cap-aware picks — not just advertised rates, but what you actually earn.</p>
+      {/* ═══ 4. LATEST GUIDES ═══ */}
+      <section style={{ background: "var(--bg-section-slate)", borderTop: "1px solid var(--border-section-slate)", borderBottom: "1px solid var(--border-section-slate)", padding: "48px 24px" }}>
+        <div style={{ maxWidth: 1060, margin: "0 auto" }}>
+          <div className="flex items-end justify-between mb-6 flex-wrap gap-2">
+            <div>
+              <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight" style={{ color: "var(--text)" }}>Latest guides</h2>
+              <p className="text-sm mt-1" style={{ color: "var(--text-muted)" }}>The honest number, explained — across every category.</p>
+            </div>
+            <Link href="/blog" className="text-sm font-semibold no-underline" style={{ color: v.accentText }}>All guides →</Link>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-2.5">
-            {[
-              { icon: "🛒", label: "Online Shopping", href: "/best/credit-card-for-online-shopping" },
-              { icon: "🍕", label: "Swiggy & Zomato", href: "/best/credit-card-for-swiggy-zomato" },
-              { icon: "📦", label: "Amazon", href: "/best/credit-card-for-amazon" },
-              { icon: "🛍️", label: "Flipkart", href: "/best/credit-card-for-flipkart" },
-              { icon: "💸", label: "No Annual Fee", href: "/best/best-cashback-credit-card-no-annual-fee" },
-              { icon: "🥦", label: "Groceries", href: "/best/credit-card-for-groceries" },
-              { icon: "⛽", label: "Fuel", href: "/best/credit-card-for-fuel" },
-              { icon: "💡", label: "Utility Bills", href: "/best/credit-card-for-utility-bills" },
-              { icon: "✈️", label: "Travel", href: "/best/credit-card-for-travel" },
-              { icon: "🌍", label: "International", href: "/best/credit-card-for-international-spending" },
-            ].map((item, i) => (
-              <a key={i} href={item.href} className="rounded-xl p-3.5 text-center no-underline transition-all" style={{background:"var(--bg-card)",border:"1px solid var(--border)",boxShadow:"var(--shadow)"}}>
-                <div className="text-2xl mb-1.5">{item.icon}</div>
-                <div className="text-xs font-semibold" style={{color:"var(--text)"}}>{item.label}</div>
-              </a>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {GUIDES.map((g, i) => (
+              <Link key={i} href={g.href} style={{ textDecoration: "none", color: "inherit" }}>
+                <div className="rounded-xl p-5 transition-all cursor-pointer h-full"
+                  style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}
+                  onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "var(--shadow-hover)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "var(--shadow)"; }}
+                >
+                  <span className="inline-block text-[11px] font-semibold px-2.5 py-1 rounded-full mb-3" style={{ background: g.tagBg, color: g.tagColor }}>{g.tag}</span>
+                  <div className="text-sm font-bold leading-snug mb-2.5" style={{ color: "var(--text)", letterSpacing: "-0.2px" }}>{g.title}</div>
+                  <div className="text-xs" style={{ color: "var(--text-faint)" }}>{g.time} · {g.date}</div>
+                </div>
+              </Link>
             ))}
           </div>
-          <div className="text-center mt-6">
-            <p className="text-xs" style={{color:"var(--text-faint)"}}>Each page shows real cashback calculations with cap math — not just rankings.</p>
-          </div>
         </div>
       </section>
 
-      {/* ═══ 10. METHODOLOGY ═══ */}
-      <section style={{ maxWidth:720, margin:"0 auto", padding:"40px 24px 56px" }}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* ═══ 5. WHAT CHANGED (detailed) ═══ */}
+      <section style={{ maxWidth: 800, margin: "0 auto", padding: "48px 24px" }}>
+        <div className="flex items-end justify-between mb-5 flex-wrap gap-2">
           <div>
-            <h2 className="text-xl font-extrabold tracking-tight mb-3.5" style={{color:"var(--text)"}}>How we calculate</h2>
-            <p className="text-sm leading-relaxed mb-2.5" style={{color:"var(--text-muted)"}}><strong style={{color:"var(--text)"}}>Formula:</strong> (Points × Value) ÷ Spend × 100 = Effective %</p>
-            <p className="text-sm leading-relaxed mb-2.5" style={{color:"var(--text-muted)"}}>When a card has a cap, we calculate your <strong style={{color:"var(--text)"}}>actual rate at your spending level</strong>.</p>
-            <p className="text-sm leading-relaxed" style={{color:"var(--text-muted)"}}>11 of 25 cards verified from bank pages. Unverified clearly labeled.</p>
+            <h2 className="text-xl font-extrabold tracking-tight" style={{ color: "var(--text)" }}>What changed</h2>
+            <p className="text-sm mt-1" style={{ color: "var(--text-muted)" }}>Banks change terms quietly. We catch it.</p>
           </div>
-          <div className="rounded-2xl p-5" style={{background:"var(--bg-muted)",border:"1px solid var(--border)"}}>
-            <h3 className="text-sm font-extrabold mb-3" style={{color:"var(--text)"}}>Example: Axis ACE</h3>
-            <div className="text-xs leading-relaxed" style={{color:"var(--text-muted)"}}>
-              <div className="mb-1.5"><strong style={{color:"var(--text)"}}>Advertised:</strong> 5% on utilities</div>
-              <div className="mb-1.5"><strong style={{color:"var(--text)"}}>Cap:</strong> ₹500/mo cashback</div>
-              <div className="mb-1.5"><strong style={{color:"var(--text)"}}>Your spend:</strong> ₹20K/mo on bills</div>
-              <div className="rounded-lg p-3 mt-3" style={{background:"var(--orange-bg)",border:"1px solid var(--orange-border)"}}>
-                <div className="text-[10px] font-extrabold uppercase mb-1" style={{color:"var(--orange)"}}>REAL EFFECTIVE RATE</div>
-                <div className="text-[11px]" style={{color:"var(--orange)"}}>₹10K at 5% = ₹500 (cap hit)</div>
-                <div className="text-[11px]" style={{color:"var(--orange)"}}>₹10K at 1.5% = ₹150</div>
-                <div className="text-sm font-extrabold mt-1.5" style={{color:"var(--orange)"}}>₹650 total → Effective: 3.25%</div>
-              </div>
+          <Link href="/whats-changed" className="text-sm font-semibold no-underline" style={{ color: v.accentText }}>Full changelog →</Link>
+        </div>
+        <div className="flex flex-col gap-2">
+          {UPDATES.map((u, i) => (
+            <div key={i} className="flex items-center gap-3 rounded-xl px-4 py-3.5 transition-all"
+              style={{ background: "var(--bg-muted)" }}
+              onMouseEnter={e => e.currentTarget.style.background = "var(--bg-input)"}
+              onMouseLeave={e => e.currentTarget.style.background = "var(--bg-muted)"}
+            >
+              <span className="text-[11px] font-bold px-2.5 py-1 rounded-full flex-shrink-0 text-center min-w-[42px]"
+                style={{
+                  background: u.type === "nerf" ? "#FEF2F2" : u.type === "new" ? "#DCFCE7" : "#DBEAFE",
+                  color: u.type === "nerf" ? "#DC2626" : u.type === "new" ? "#16A34A" : "#2563EB",
+                }}
+              >{u.type === "nerf" ? "Nerf" : u.type === "new" ? "New" : "Rate"}</span>
+              <span className="flex-1 text-sm" style={{ color: "var(--text-secondary)" }}>{u.text}</span>
+              <span className="text-[11px] font-medium px-2.5 py-1 rounded-full flex-shrink-0" style={{ background: u.catBg, color: u.catColor }}>{u.cat}</span>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ═══ 6. TRUST ═══ */}
+      <section style={{ background: "var(--bg-section-violet)", borderTop: "1px solid var(--border-section-violet)", borderBottom: "1px solid var(--border-section-violet)", padding: "48px 24px", textAlign: "center" }}>
+        <div style={{ maxWidth: 520, margin: "0 auto" }}>
+          <div className="grid grid-cols-4 gap-6 mb-5">
+            {[["75", "Cards tracked"], ["25", "Verified"], ["5", "Live tools"], ["0", "Ads"]].map(([n, l], i) => (
+              <div key={i}>
+                <div className="text-3xl font-extrabold" style={{ color: v.accentText, letterSpacing: -1 }}>{n}</div>
+                <div className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>{l}</div>
+              </div>
+            ))}
           </div>
+          <p className="text-sm" style={{ color: "var(--text-muted)", lineHeight: 1.6 }}>Every number is manually verified against bank documents. No sponsored rankings. Just math.</p>
         </div>
       </section>
 
-      {/* ═══ 11. TRUST BAR ═══ */}
-      <section style={{borderTop:"1px solid var(--border-section-slate)",borderBottom:"1px solid var(--border-section-slate)",background:"var(--bg-section-slate)",padding:"18px 24px"}}>
-        <div style={{maxWidth:900,margin:"0 auto",display:"flex",justifyContent:"center",gap:28,flexWrap:"wrap"}}>
-          {TRUST_BAR.map(([icon,text],i)=>(<div key={i} className="flex items-center gap-1.5 text-xs font-semibold" style={{color:"var(--text-secondary)"}}><span>{icon}</span>{text}</div>))}
-        </div>
-      </section>
-
-      {/* ═══ 12. DARK CTA ═══ */}
-      <section style={{background:"linear-gradient(135deg,#0f172a,#1e293b)",padding:"72px 24px",textAlign:"center",position:"relative",overflow:"hidden"}}>
-        <div style={{position:"absolute",top:-60,left:"50%",transform:"translateX(-50%)",width:500,height:300,borderRadius:"50%",background:"radial-gradient(circle,rgba(129,140,248,0.08),transparent 70%)",filter:"blur(50px)",pointerEvents:"none"}}/>
-        <div style={{position:"relative",zIndex:2,maxWidth:500,margin:"0 auto"}}>
-          <h2 style={{fontSize:"clamp(26px,4vw,36px)",fontWeight:800,color:"#f1f5f9",letterSpacing:"-0.03em",lineHeight:1.15,marginBottom:14}}>Stop guessing.<br/>Start <span style={{color:"#818cf8"}}>knowing</span>.</h2>
-          <p style={{fontSize:15,color:"#64748b",lineHeight:1.6,marginBottom:28}}>30 seconds. No sign-up. No tracking. Real math that banks don't show you.</p>
-          <a href="/smart-swipe" style={{display:"inline-block",background:"#fff",color:"#111",borderRadius:12,padding:"16px 40px",fontSize:16,fontWeight:700,textDecoration:"none",boxShadow:"0 4px 16px rgba(0,0,0,0.2)"}}>Try Smart Swipe — it's free →</a>
-          <div style={{marginTop:16,fontSize:12,color:"rgba(255,255,255,0.3)"}}>Free forever · Works on mobile · No app needed</div>
+      {/* ═══ 7. DARK CTA ═══ */}
+      <section style={{ background: `linear-gradient(135deg, ${v.hero}, #2A1557)`, padding: "64px 24px", textAlign: "center", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: -60, left: "50%", transform: "translateX(-50%)", width: 500, height: 300, borderRadius: "50%", background: "radial-gradient(circle,rgba(139,92,246,0.1),transparent 70%)", pointerEvents: "none" }} />
+        <div style={{ position: "relative", zIndex: 2, maxWidth: 500, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(24px,3.5vw,34px)", fontWeight: 800, color: "#F1F5F9", letterSpacing: "-0.03em", lineHeight: 1.15, marginBottom: 14 }}>
+            Stop guessing.<br />Start <span style={{ color: v.accentLight }}>knowing</span>.
+          </h2>
+          <p style={{ fontSize: 15, color: "rgba(255,255,255,0.35)", lineHeight: 1.6, marginBottom: 28 }}>30 seconds. No sign-up. No tracking. Real math that banks don't show you.</p>
+          <Link href="/smart-swipe" style={{ display: "inline-block", background: "#fff", color: "#111", borderRadius: 12, padding: "14px 36px", fontSize: 15, fontWeight: 700, textDecoration: "none", boxShadow: "0 4px 16px rgba(0,0,0,0.2)" }}>Try Smart Swipe — it's free →</Link>
+          <div style={{ marginTop: 14, fontSize: 12, color: "rgba(255,255,255,0.2)" }}>Free forever · Works on mobile · No app needed</div>
         </div>
       </section>
     </div>
