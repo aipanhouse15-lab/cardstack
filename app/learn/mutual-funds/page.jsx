@@ -60,7 +60,8 @@ export default function MutualFundsPage() {
       <h2 className="text-xl font-extrabold tracking-tight mb-5" style={{ color: "var(--text)" }}>Mutual fund guides</h2>
       <div className="flex flex-col gap-3 mb-10">
         {GUIDES.map((g, i) => (
-          <div key={i} className="rounded-xl p-5 transition-all" style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}>
+          <Link key={i} href={g.href || "#"} className="block no-underline" style={{ color: "inherit" }}>
+          <div className="rounded-xl p-5 transition-all" style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full" style={{ background: "var(--blue-bg)", color: "var(--blue)" }}>{g.tag}</span>
               <span className="text-xs" style={{ color: "var(--text-faint)" }}>{g.time} read</span>
@@ -68,6 +69,7 @@ export default function MutualFundsPage() {
             <h3 className="text-sm font-bold mb-1.5" style={{ color: "var(--text)" }}>{g.title}</h3>
             <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>{g.desc}</p>
           </div>
+          </Link>
         ))}
       </div>
 
