@@ -77,6 +77,21 @@ export default function SmartSwipeClient() {
             <div className="text-sm mb-1" style={{ color: "var(--text-muted)" }}>Extra rewards vs a basic 1% card</div>
             <div className="text-4xl font-extrabold" style={{ color: "var(--green)" }}>₹{savings.toLocaleString()}<span className="text-lg" style={{ color: "var(--text-muted)" }}>/year</span></div>
             <div className="text-sm mt-2" style={{ color: "var(--text-faint)" }}>Monthly spend: ₹{Object.values(spend).reduce((a,b) => a+b, 0).toLocaleString()} · {sel.length} card{sel.length > 1 ? "s" : ""}</div>
+            <button
+              className="mt-4 rounded-lg px-5 py-2.5 text-sm font-semibold cursor-pointer border-none"
+              style={{ background: "var(--accent)", color: "#fff" }}
+              onClick={() => {
+                const url = `${window.location.origin}/stack/${sel.join("-and-")}`;
+                if (navigator.share) {
+                  navigator.share({ title: `My ${sel.length}-Card Stack — ₹${savings.toLocaleString()}/yr savings`, url });
+                } else {
+                  navigator.clipboard.writeText(url);
+                  alert("Stack link copied! Share it with friends.");
+                }
+              }}
+            >
+              📤 Share this stack
+            </button>
           </div>
         </div>
       )}
