@@ -6,15 +6,15 @@ const TOOL_LINKS = [
   { href: "/gap-finder", label: "Card Gap Finder" },
   { href: "/swipe-check", label: "Swipe Check" },
   { href: "/compare", label: "Compare Cards" },
-  { href: "/blog", label: "Blog" },
+  { href: "/cards", label: "All 75 Cards" },
 ];
 
 const CARD_LINKS = [
-  { href: "/cards/hdfc-millennia", label: "HDFC Millennia" },
+  { href: "/cards/hdfc-regalia", label: "HDFC Regalia" },
   { href: "/cards/axis-ace", label: "Axis ACE" },
   { href: "/cards/amazon-icici", label: "Amazon Pay ICICI" },
-  { href: "/cards/hdfc-regalia", label: "HDFC Regalia" },
   { href: "/cards/sbi-cashback", label: "SBI Cashback" },
+  { href: "/cards/hdfc-millennia", label: "HDFC Millennia" },
 ];
 
 const BEST_FOR_LINKS = [
@@ -25,12 +25,20 @@ const BEST_FOR_LINKS = [
   { href: "/best/credit-card-for-travel", label: "Best for Travel" },
 ];
 
-const COMPARE_LINKS = [
-  { href: "/compare/hdfc-millennia-vs-axis-ace", label: "Millennia vs ACE" },
-  { href: "/compare/hdfc-millennia-vs-amazon-pay-icici", label: "Millennia vs Amazon ICICI" },
-  { href: "/compare/hdfc-regalia-vs-hdfc-diners-black", label: "Regalia vs Diners Black" },
-  { href: "/compare/sbi-cashback-vs-amazon-pay-icici", label: "SBI Cashback vs Amazon ICICI" },
-  { href: "/compare/axis-ace-vs-axis-flipkart", label: "ACE vs Flipkart" },
+const EXPLORE_LINKS = [
+  { href: "/learn/loans", label: "Loan Guides" },
+  { href: "/learn/insurance", label: "Insurance Guides" },
+  { href: "/learn/savings", label: "Savings Guides" },
+  { href: "/learn/tax", label: "Tax Planning" },
+  { href: "/whats-changed", label: "What Changed" },
+  { href: "/blog", label: "Blog" },
+];
+
+const COMPANY_LINKS = [
+  { href: "/about", label: "About" },
+  { href: "/how-we-earn", label: "How We Earn" },
+  { href: "/editorial-policy", label: "Editorial Policy" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Footer() {
@@ -38,22 +46,22 @@ export default function Footer() {
 
   return (
     <footer className="py-14 px-6" style={{ borderTop: "1px solid var(--border)", background: "var(--bg-alt)" }}>
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-[1060px] mx-auto">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-10 mb-12">
           {/* Brand */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-[10px] font-extrabold">AF</div>
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-purple-500 flex items-center justify-center text-white text-[10px] font-extrabold shadow-sm">AF</div>
               <span className="text-lg font-bold" style={{ color: "var(--text)" }}>Assure Fintech</span>
             </div>
             <p className="text-sm leading-relaxed max-w-[220px]" style={{ color: "var(--text-muted)" }}>
-              India's smartest credit card tool. 25+ cards, real savings, zero tracking.
+              The honest number on every financial product in India.
             </p>
           </div>
 
-          {/* Tools */}
+          {/* CC Tools */}
           <div>
-            <div className="text-xs font-bold uppercase tracking-wider mb-4" style={{ color: "var(--text-faint)" }}>Tools</div>
+            <div className="text-xs font-bold uppercase tracking-wider mb-4" style={{ color: "var(--text-faint)" }}>CC Tools</div>
             {TOOL_LINKS.map(l => (
               <Link key={l.href} href={l.href} className={linkClass} style={{ color: "var(--text-muted)" }}>{l.label}</Link>
             ))}
@@ -75,24 +83,18 @@ export default function Footer() {
             ))}
           </div>
 
-          {/* Comparisons */}
+          {/* Explore — NEW */}
           <div>
-            <div className="text-xs font-bold uppercase tracking-wider mb-4" style={{ color: "var(--text-faint)" }}>Comparisons</div>
-            {COMPARE_LINKS.map(l => (
-              <Link key={l.href} href={l.href} className={linkClass} style={{ color: "var(--text-muted)" }}>{l.label}</Link>
+            <div className="text-xs font-bold uppercase tracking-wider mb-4" style={{ color: "var(--text-faint)" }}>Explore</div>
+            {EXPLORE_LINKS.map(l => (
+              <Link key={l.href + l.label} href={l.href} className={linkClass} style={{ color: "var(--text-muted)" }}>{l.label}</Link>
             ))}
           </div>
 
           {/* Company */}
           <div>
             <div className="text-xs font-bold uppercase tracking-wider mb-4" style={{ color: "var(--text-faint)" }}>Company</div>
-            {[
-              { href: "/about", label: "About" },
-              { href: "/whats-changed", label: "What Changed" },
-              { href: "/how-we-earn", label: "How We Earn" },
-              { href: "/editorial-policy", label: "Editorial Policy" },
-              { href: "/contact", label: "Contact" },
-            ].map(l => (
+            {COMPANY_LINKS.map(l => (
               <Link key={l.href} href={l.href} className={linkClass} style={{ color: "var(--text-muted)" }}>{l.label}</Link>
             ))}
           </div>
