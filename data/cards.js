@@ -183,7 +183,7 @@ The 1% rate on non-partner spends (groceries, travel, offline shopping) has no c
     pointsInfo: "5 points/₹150 · 1pt = ₹0.50 cashback or ₹1.00 travel · 10x SmartBuy · 75K pts cap/cycle",
     highlights: ["Unlimited domestic + intl lounge", "Amazon Prime/Swiggy One/MMT Black", "10x SmartBuy", "Fee waiver ₹5L"],
     pros: ["3.33% on everything", "Unlimited lounge access", "Free memberships (Prime, Swiggy One, MMT)"],
-    cons: ["Diners Club acceptance limited in India", "₹10K + GST fee", "Fuel excluded"],
+    cons: ["Diners Club acceptance limited in India", "₹10K + GST fee", "Fuel excluded", "₹99 per reward redemption request"],
     
     redemptionNote: "Rate shown (3.33%) assumes travel redemption at ₹1/point via SmartBuy. Cashback value is ₹0.50/point (1.66%). SmartBuy bookings can reach 33%.",
     network: "Diners Club", lounge: "Unlimited",
@@ -441,7 +441,7 @@ The downsides are real: ₹4,999 annual fee with a ₹10L spend waiver threshold
     pointsInfo: "5% Amazon Prime, 3% non-Prime, 2% partners, 1% other · Credited as Amazon Pay balance",
     highlights: ["5% on Amazon (Prime)", "3% non-Prime", "Lifetime free", "No cashback cap"],
     pros: ["Best for Amazon shopping", "Lifetime free", "Instant issuance", "No cap"],
-    cons: ["Rewards locked to Amazon Pay balance", "Only 1% non-Amazon", "Fuel surcharge waiver only"],
+    cons: ["Rewards locked to Amazon Pay balance", "Only 1% non-Amazon", "Fuel surcharge waiver only", "1% fee on wallet loads ₹5K+ (Jan 2026)"],
     network: "Visa", lounge: "None",
 
     editorial: {
@@ -486,7 +486,7 @@ The catch is that rewards are credited as Amazon Pay balance, not real cashback.
     pointsInfo: "2 points/₹100 retail (0.5%), 1 point/₹100 utility (0.25%) · 1pt = ₹0.25",
     highlights: ["BookMyShow 25% off (up to ₹100, 2x/mo)", "Culinary Treats 15% off dining", "Lounge: 1 domestic/quarter (₹75K spend req) + 1 railway/quarter", "Fee waiver ₹1.5L"],
     pros: ["BookMyShow discount saves up to ₹200/month", "Lounge (conditional on ₹75K quarterly spend)", "Dining discounts", "Low fee"],
-    cons: ["Very low reward rate (0.5%)", "Fuel excluded", "Points redemption limited"],
+    cons: ["Very low reward rate (0.5%)", "Fuel excluded (but 1% HPCL surcharge waiver on ₹400-₹4K)", "₹10K/mo cap on transportation rewards (Feb 2026)", "Points redemption limited"],
     network: "Visa/MC/RuPay", lounge: "4/year (conditional)",
 
     editorial: {
@@ -520,7 +520,7 @@ But the reward rate — 0.5% on most purchases — is genuinely low. On ₹50,00
 },
   },
 
-  { id: "icici-sapphiro", name: "ICICI Sapphiro", bank: "ICICI", img: "💠", color: "#0891b2", fee: 3500, feeWaiver: "₹6L annual spend", type: "Premium", verified: true,
+  { id: "icici-sapphiro", name: "ICICI Sapphiro", bank: "ICICI", img: "💠", color: "#0891b2", fee: 3500, feeWaiver: "₹6L annual spend (joining fee ₹6,500+GST)", type: "Premium", verified: true,
     rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.25, entertainment: 0.5, shopping: 0.5, default: 0.5 },
     partnerRates: [
       { name: "International spends", rate: "4 points/₹100 (1%)" },
@@ -720,7 +720,7 @@ In practice: ₹500 accelerated cap means optimal bill+food spending is about �
     cons: ["₹5K fee", "~3.5% forex markup (no zero forex)", "Fuel excluded"],
     
     redemptionNote: "1 EDGE Mile ≈ ₹1 (typical). Actual value varies ₹0.80–₹1.50 by airline partner and route. Best value on premium cabin redemptions.",
-    network: "Visa Infinite", lounge: "18/year",
+    network: "Visa Infinite", lounge: "Tier-based (4 intl Silver, 8 intl Gold)",
 
     editorial: {
   verdict: {
@@ -929,13 +929,13 @@ The base rate of 0.5% is low, but the card has several accelerators: 2.5% on spe
   },
 
   { id: "onecard", name: "OneCard", bank: "OneCard", img: "⚡", color: "#18181b", fee: 0, feeWaiver: "Lifetime free", type: "Lifestyle", verified: true,
-    rewards: { dining: 0.2, travel: 0.2, online: 0.2, groceries: 0.2, fuel: 1, utilities: 0.2, entertainment: 0.2, shopping: 0.2, default: 0.2 },
+    rewards: { dining: 0.2, travel: 0.2, online: 0.2, groceries: 0.2, fuel: 0.2, utilities: 0.2, entertainment: 0.2, shopping: 0.2, default: 0.2 },
     partnerRates: [
       { name: "Top 2 spending categories (auto-detected)", rate: "5x points (~1%)" },
     ],
     pointsInfo: "5x on top 2 categories (~1%), 1x others (~0.2%) · 1pt = ₹0.10 · Points never expire",
     highlights: ["Metal card", "5x on top 2 categories", "Lifetime free", "Points never expire"],
-    pros: ["Metal card (premium feel)", "Auto-optimizes for your spending", "Free forever"],
+    pros: ["Metal card (premium feel)", "Low 1% forex markup", "Auto-optimizes for your spending", "Free forever"],
     cons: ["Effective rate only ~1% even at 5x", "0.2% on non-top categories", "No lounge"],
     
     redemptionNote: "Top 2 spending categories auto-detected monthly at 5x (~1%). Other categories 1x (~0.2%). Algorithm picks based on actual spend — not manually selectable.",
@@ -971,7 +971,7 @@ The metal card looks and feels premium, and the app is genuinely excellent. But 
 },
   },
 
-  { id: "bob-eterna", name: "BOB Eterna", bank: "BOB", img: "🏛️", color: "#1e40af", fee: 2499, feeWaiver: "₹2.5L annual spend", type: "Premium", verified: true,
+  { id: "bob-eterna", name: "BOB Eterna", bank: "BOB", img: "🏛️", color: "#1e40af", fee: 2499, feeWaiver: "₹2.5L annual spend (was LTF until Mar 2026)", type: "Premium", verified: true,
     rewards: { dining: 3.75, travel: 3.75, online: 3.75, groceries: 0.75, fuel: 0, utilities: 0.75, entertainment: 0.75, shopping: 0.75, default: 0.75 },
     partnerRates: [
       { name: "Dining/travel/online", rate: "15 pts/₹100 (3.75%)" },
@@ -1132,7 +1132,7 @@ But 0.5-0.75% reward rates on a ₹10,000/year card are hard to justify on spend
 },
   },
 
-  { id: "rbl-shoprite", name: "RBL ShopRite", bank: "RBL", img: "🧺", color: "#c026d3", fee: 500, feeWaiver: "None", type: "Cashback", verified: true,
+  { id: "rbl-shoprite", name: "RBL ShopRite", bank: "RBL", img: "🧺", color: "#c026d3", fee: 500, feeWaiver: "None (₹500 fixed)", type: "Cashback", verified: true,
     rewards: { dining: 0, travel: 0, online: 1.25, groceries: 5, fuel: 5, utilities: 0, entertainment: 2.5, shopping: 0, default: 0.25 },
     caps: { monthlyPoints: 5000, pointValue: 0.25, spendPer: 100, pointsPer: 20 },
     partnerRates: [
@@ -1446,7 +1446,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
 
   // ═══ SBI ═══
 
-  { id: "sbi-bpcl-octane", name: "SBI BPCL Octane Credit Card", bank: "SBI", img: "⛽", color: "#dc2626", fee: 1499, feeWaiver: "₹3L annual spend", type: "Fuel", verified: false,
+  { id: "sbi-bpcl-octane", name: "SBI BPCL Octane Credit Card", bank: "SBI", img: "⛽", color: "#dc2626", fee: 1499, feeWaiver: "₹2L annual spend", type: "Fuel", verified: false,
     rewards: { dining: 1.25, travel: 0.25, online: 0.25, groceries: 1.25, fuel: 6.25, utilities: 0.25, entertainment: 0.25, shopping: 0.25, default: 0.25 },
     caps: { monthlyCashback: 250, capRate: 6.25, fallbackRate: 0.25, capAppliesTo: ["fuel"] },
     partnerRates: [
@@ -1749,7 +1749,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     cons: ["₹1,000/mo cap on dining", "Weekend-only for 5%", "StanC limited presence"],
     network: "Visa", lounge: "4/year" },
 
-  { id: "amex-mrcc", name: "Amex Membership Rewards Credit Card", bank: "Amex", img: "💳", color: "#006fcf", fee: 3500, feeWaiver: "₹4L annual spend", type: "Premium", verified: false,
+  { id: "amex-mrcc", name: "Amex Membership Rewards Credit Card", bank: "Amex", img: "💳", color: "#006fcf", fee: 1000, feeWaiver: "₹1.5L spend (Year 2+: ₹4,500)", type: "Premium", verified: false,
     rewards: { dining: 2, travel: 2, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 1 },
     partnerRates: [
       { name: "Taj Hotels", rate: "Up to 20% discount" },
