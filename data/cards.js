@@ -6,181 +6,158 @@
 export const CARDS = [
   // ═══ VERIFIED CARDS (March 2026) ═══
 
-  { id: "hdfc-regalia", name: "HDFC Regalia", bank: "HDFC", img: "💳", color: "#1a3c6e", fee: 2500, feeWaiver: "₹3L annual spend", type: "Premium", verified: true,
-    rewards: { dining: 0.53, travel: 0.53, online: 0.53, groceries: 0.53, fuel: 0, utilities: 0.53, entertainment: 0.53, shopping: 0.53, default: 0.53 },
-    caps: { monthlyPoints: 50000, groceryPointsMonthlyCap: 2000, insurancePointsDailyCap: 2000, pointValueCashback: 0.2, pointValueTravel: 0.5, spendPer: 150, pointsPer: 4 },
-    // Cap math: 50000 pts × ₹0.20 = ₹10,000 max cashback/month. Grocery points capped at 2000/month. Insurance points capped at 2000/day. At 4pts/₹150, need ₹18.75L spend to hit overall cap. Unlikely for most users.
+  { id: "hdfc-regalia", name: "HDFC Regalia", bank: "HDFC", img: "💳", color: "#1a3c6e", fee: 2500, feeWaiver: "₹4L annual spend", type: "Premium", verified: true,
+    rewards: { dining: 1.33, travel: 1.33, online: 1.33, groceries: 1.33, fuel: 0, utilities: 1.33, entertainment: 1.33, shopping: 1.33, default: 1.33 },
+    caps: { monthlyPoints: 50000, pointValue: 0.20, spendPer: 150, pointsPer: 4 },
+    // Cap math: 50000 pts × ₹0.20 = ₹10,000 max cashback/month. At 4pts/₹150, need ₹18.75L spend to hit cap. Unlikely for most users.
     partnerRates: [
       { name: "SmartBuy (flights/hotels)", rate: "up to 13.33%" },
       { name: "Myntra, Nykaa, Reliance Digital", rate: "5x points (~3.33%)" },
     ],
     pointsInfo: "4 points/₹150 · 1pt = ₹0.20 cashback or ₹0.50 travel",
-    highlights: ["12 domestic lounge/yr (2/quarter) + 6 intl via Priority Pass", "Up to 10x on SmartBuy", "5x on select partners", "Fee waiver on ₹3L spend"],
-    pros: ["Good lounge access (12 domestic + 6 intl via Priority Pass)", "SmartBuy gives up to 13% on travel", "Partner brands 5x rewards"],
-    cons: ["Base cashback rate only 0.53%", "Fuel excluded from rewards", "₹2,500 + GST fee", "Intl lounge requires separate Priority Pass application"],
+    highlights: ["12 domestic + 6 intl lounge/yr", "Up to 10x on SmartBuy", "5x on select partners", "Fee waiver on ₹4L spend"],
+    pros: ["Excellent lounge access (18/yr total)", "SmartBuy gives up to 13% on travel", "Partner brands 5x rewards"],
+    cons: ["Base rate only 1.33%", "Fuel excluded from rewards", "₹2,500 + GST fee"],
     
-    redemptionNote: "Rates shown (0.53%) are cashback-equivalent at ₹0.20/point. Travel redemption via SmartBuy = ₹0.50/point (1.33% base). SmartBuy accelerated rewards can yield up to 13.33% on flights/hotels.",
-    network: "Visa/MC", lounge: "12 domestic/yr + 6 intl (Priority Pass)",
+    redemptionNote: "Rate shown (1.33%) assumes cashback at ₹0.20/point. Travel redemption via SmartBuy = ₹0.50/point (3.33% base). SmartBuy flights/hotels can reach 13.33%.",
+    network: "Visa/MC", lounge: "18/year",
     editorial: {
       verdict: {
         headline: "India's most popular premium card — but only worth it if you travel or use SmartBuy.",
-        body: `HDFC Regalia looks underwhelming on paper at 0.53% cashback. But that number is misleading — it's the cashback-equivalent rate at ₹0.20/point. The real value is hidden in SmartBuy, where travel bookings earn up to 13.33%, and partner brands earn 3.33%. If you book even 2-3 flights a year through SmartBuy, the rewards easily outpace cards with higher base rates.
+        body: `HDFC Regalia looks average on paper at 1.33% cashback. But that number is misleading. The real value is hidden in SmartBuy, where travel bookings earn up to 13.33%, and partner brands earn 3.33%. If you book even 2-3 flights a year through SmartBuy, the rewards easily outpace cards with higher base rates.
 
-The lounge access — 12 domestic visits/year (2 per quarter) plus 6 international via Priority Pass (requires separate application) — is worth ₹12,000-15,000 alone if you travel regularly. The ₹2,500 annual fee is waivable at ₹3 lakh spend — roughly ₹25,000/month, achievable for most premium card holders. For non-travelers, though, 0.53% cashback is poor.`,
-        idealFor: "Frequent travelers who book through SmartBuy, or anyone spending ₹3L+/year who values lounge access. If you fly 3+ times a year domestically, the lounge visits alone justify the fee.",
-        skipIf: "You rarely travel and don't use SmartBuy. At 0.53% cashback, you'd earn more with an Axis ACE (1.5% uncapped) or HDFC Millennia (5% on partners) for everyday spending.",
+The 18 lounge visits per year (12 domestic + 6 international) are worth ₹15,000-20,000 alone if you travel regularly. The ₹2,500 annual fee is waivable at ₹4 lakh spend — roughly ₹33,000/month, which is achievable for most premium card holders. For non-travelers, though, 1.33% flat is mediocre.`,
+        idealFor: "Frequent travelers who book through SmartBuy, or anyone spending ₹4L+/year who values lounge access. If you fly 3+ times a year domestically, the lounge visits alone justify the fee.",
+        skipIf: "You rarely travel and don't use SmartBuy. At 1.33% base, you'd earn more with an Axis ACE (1.5% uncapped) or HDFC Millennia (5% on partners) for everyday spending.",
       },
       capMath: {
         title: "Understanding Regalia's point value — cashback vs travel",
         body: `This is where most people get confused. Regalia earns 4 points per ₹150 spent. But those points have two very different values:
 
-Cashback redemption: 1 point = ₹0.20 → effective rate 0.53%. This is what most people experience.
+Cashback redemption: 1 point = ₹0.20 → effective rate 1.33%. This is what most people experience.
 
-Travel via SmartBuy: 1 point = ₹0.50 → effective rate 1.33%. This is the intended use case. Book flights or hotels through HDFC SmartBuy and your effective rate jumps to 1.33% base, with 10x accelerators pushing it to 13.33%.
+Travel via SmartBuy: 1 point = ₹0.50 → effective rate 3.33%. This is the intended use case. Book flights or hotels through HDFC SmartBuy and your effective rate jumps to 3.33% base, with 10x accelerators pushing it to 13.33%.
 
-Additional caps to know: Grocery points are capped at 2,000 per month. Insurance points are capped at 2,000 per day. Fuel, rent, government payments, wallet loading, and EMI transactions do not earn points. Utilities earn base rewards.
-
-The monthly cap of 50,000 points (worth ₹10,000 in cashback or ₹25,000 in travel) requires ₹18.75 lakh in monthly spend to hit — virtually impossible for individuals. So the overall cap is effectively irrelevant. The grocery and insurance sub-caps, however, can matter.`,
+The monthly cap of 50,000 points (worth ₹10,000 in cashback or ₹25,000 in travel) requires ₹18.75 lakh in monthly spend to hit — virtually impossible for individuals. So the cap is effectively irrelevant.`,
       },
       bestFor: [
         { category: "Flight and hotel bookings via SmartBuy", reason: "Up to 13.33% back on travel bookings is the highest effective rate among non-invite-only cards. Even base travel via SmartBuy gives 3.33%." },
-        { category: "Lounge access", reason: "12 domestic visits/year (2 per quarter) plus 6 international via Priority Pass is strong for a ₹2,500 fee card." },
+        { category: "Lounge access", reason: "18 visits/year (12 domestic + 6 international) is the best ratio of lounge access to annual fee in the premium segment." },
         { category: "Partner brand shopping", reason: "5x points on Myntra, Nykaa, Reliance Digital gives 3.33% — competitive with dedicated shopping cards." },
-        { category: "All-round premium spending", reason: "0.53% cashback (or 1.33% via travel redemption) on everything with no category restrictions (except fuel) works as a default card for non-partner spends." },
+        { category: "All-round premium spending", reason: "1.33% on everything with no category restrictions (except fuel) is reliable as a default card for non-partner spends." },
       ],
       avoidFor: [
-        { category: "Food delivery", reason: "0.53% on Swiggy/Zomato is terrible. HDFC Millennia gives 5% and even Axis ACE gives 4%.", altCard: "hdfc-millennia" },
-        { category: "Utility bills", reason: "0.53% vs Axis ACE's 5% on bills via Google Pay. If your monthly bills are ₹5K, that's ₹250 vs ₹27.", altCard: "axis-ace" },
+        { category: "Food delivery", reason: "1.33% on Swiggy/Zomato is poor. HDFC Millennia gives 5% and even Axis ACE gives 4%.", altCard: "hdfc-millennia" },
+        { category: "Utility bills", reason: "1.33% vs Axis ACE's 5% on bills via Google Pay. If your monthly bills are ₹5K, that's ₹250 vs ₹67.", altCard: "axis-ace" },
         { category: "Fuel", reason: "0% rewards on fuel. No Regalia points earned at petrol pumps.", altCard: "axis-ace" },
-        { category: "Online shopping (non-partner)", reason: "0.53% on Amazon/Flipkart is well below average. Amazon Pay ICICI gives 5% on Amazon, HDFC Millennia gives 5% on both.", altCard: "hdfc-millennia" },
+        { category: "Online shopping (non-partner)", reason: "1.33% on Amazon/Flipkart is below average. Amazon Pay ICICI gives 5% on Amazon, HDFC Millennia gives 5% on both.", altCard: "hdfc-millennia" },
       ],
       pairWith: [
         { combo: "Regalia + HDFC Millennia", fee: "₹3,500/year", reason: "Regalia for travel/SmartBuy/lounges, Millennia for Swiggy/Amazon/Flipkart at 5%. Covers both premium travel and everyday online spending.", cardId: "hdfc-millennia" },
         { combo: "Regalia + Axis ACE", fee: "₹2,999/year", reason: "Regalia for travel and partner brands, ACE for utility bills (5%) and all-round spending (1.5% uncapped). The ACE fills Regalia's biggest gaps.", cardId: "axis-ace" },
-        { combo: "Regalia + Amazon Pay ICICI", fee: "₹2,500/year", reason: "If you're a heavy Amazon shopper. Amazon card's 5% with no cap beats Regalia's 0.53% on Amazon. Use Regalia for travel/SmartBuy.", cardId: "amazon-icici" },
+        { combo: "Regalia + Amazon Pay ICICI", fee: "₹2,500/year", reason: "If you're a heavy Amazon shopper. Amazon card's 5% with no cap beats Regalia's 1.33% on Amazon. Use Regalia for everything else.", cardId: "amazon-icici" },
       ],
       faq: [
-        { q: "Is HDFC Regalia worth the ₹2,500 annual fee?", a: "Yes, if you travel 2+ times a year. The lounge visits (12 domestic + 6 intl via Priority Pass) are worth ₹12K+. The fee is waivable at ₹3L annual spend (₹25K/month). If you don't travel, there are better options." },
-        { q: "How do I maximize Regalia rewards?", a: "Always book travel through HDFC SmartBuy for 10x points (up to 13.33%). For non-travel, use partner brands (Myntra, Nykaa) for 5x points. Never redeem points as cashback (0.53%) — travel redemption gives 2.5x more value (1.33%)." },
-        { q: "HDFC Regalia vs Infinia — which is better?", a: "Infinia is objectively better (3.33% vs 0.53% cashback, unlimited lounge) but it's invite-only and costs ₹12,500. If you can get Infinia, get it. If not, Regalia is the best accessible HDFC premium card." },
+        { q: "Is HDFC Regalia worth the ₹2,500 annual fee?", a: "Yes, if you travel 2+ times a year. The 18 lounge visits alone are worth ₹15K+. The fee is waivable at ₹4L annual spend (₹33K/month). If you don't travel, there are better options." },
+        { q: "How do I maximize Regalia rewards?", a: "Always book travel through HDFC SmartBuy for 10x points (up to 13.33%). For non-travel, use partner brands (Myntra, Nykaa) for 5x points. Never redeem points as cashback — travel redemption gives 2.5x more value." },
+        { q: "HDFC Regalia vs Infinia — which is better?", a: "Infinia is objectively better (3.33% vs 1.33% base, unlimited lounge) but it's invite-only and costs ₹12,500. If you can get Infinia, get it. If not, Regalia is the best accessible HDFC premium card." },
         { q: "Does Regalia earn points on rent payments?", a: "Yes, but only if processed as a normal transaction. Rent paid via third-party platforms may not earn points depending on the MCC code." },
         { q: "Can I use Regalia lounge access for guests?", a: "Guest access depends on the specific lounge program (Priority Pass, Visa, domestic). Generally, you can bring 1 guest per visit but the guest visit counts toward your annual limit." },
       ],
     },
   },
 
-  { id: "hdfc-infinia", name: "HDFC Infinia Metal Credit Card", bank: "HDFC", img: "💎", color: "#1a1a2e", fee: 12500, feeWaiver: "₹18L annual spend OR ₹50L RLV with HDFC Bank (effective April 2027 for existing customers)", type: "Super Premium / Invite-only", verified: true,
-    rewards: { dining: 3.33, travel: 3.33, online: 3.33, groceries: 3.33, fuel: 3.33, utilities: 3.33, entertainment: 3.33, shopping: 3.33, default: 3.33 },
-    caps: { maxPointsPerCycle: 200000, redemptionsPerMonth: 5, travelRedemptionCap: 150000, statementCreditCap: 50000, statementCreditPointValue: 0.30, appleVoucherMaxPercent: 70, utilitiesInsuranceCap: 10000, pointsExpiry: "3 years", fuelSurchargeWaiverCap: 1000, pointValueTravel: 1.0, pointValueCashback: 0.30, spendPer: 150, pointsPer: 5 },
-    // Cap math: 2L pts/cycle. Travel capped at ₹1.5L/month. Statement credit 50K pts × ₹0.30 = ₹15,000/month. Utilities & insurance 10K pts/month. Points expire after 3 years.
+  { id: "hdfc-infinia", name: "HDFC Infinia", bank: "HDFC", img: "💎", color: "#1a1a2e", fee: 12500, feeWaiver: "None", type: "Super Premium", verified: true,
+    rewards: { dining: 3.33, travel: 3.33, online: 3.33, groceries: 3.33, fuel: 0, utilities: 3.33, entertainment: 3.33, shopping: 3.33, default: 3.33 },
     partnerRates: [
-      { name: "SmartBuy (flights/hotels/vouchers)", rate: "~10% (3X multiplier, reduced from 5X effective Jan 16 2026)" },
-      { name: "Apple Products & Tanishq Vouchers", rate: "₹1/point value, 70% of bill payable via points" },
+      { name: "SmartBuy (flights/hotels)", rate: "up to 33.33%" },
     ],
-    pointsInfo: "5 points/₹150 · 1pt = ₹0.30 cashback or ₹1.00 travel",
-    highlights: ["Unlimited domestic + intl lounge (Priority Pass included)", "24/7 concierge", "3X on SmartBuy vouchers via Gyftr", "Golf 100+ courses", "Fee waiver at ₹18L spend (from April 2027)"],
-    pros: ["Best all-round rate (3.33%)", "Unlimited lounge worldwide", "SmartBuy ~10% on travel", "Fuel earns rewards (unlike most HDFC cards)", "Fee waiver now possible at ₹18L spend"],
-    cons: ["₹12,500 + GST fee", "Invite-only", "SmartBuy nerfed from ~16.67% to ~10% in Jan 2026", "Monthly redemption caps limit heavy users", "Forex markup 2% + GST"],
+    pointsInfo: "5 points/₹150 · 1pt = ₹0.20 cashback or ₹1.00 travel",
+    highlights: ["Unlimited lounge worldwide", "24/7 concierge", "10x on SmartBuy", "Golf 100+ courses"],
+    pros: ["Best all-round rate (3.33%)", "Unlimited lounge", "SmartBuy up to 33% on travel"],
+    cons: ["₹12,500 fee", "Invite-only", "Fuel excluded"],
     
-    redemptionNote: "Rate shown (3.33%) assumes travel redemption at ₹1/point. Cashback/statement credit = ₹0.30/point (~1%). SmartBuy gives ~10% via 3X multiplier (reduced from 5X in Jan 2026). Wallet loading & EasyEMI do not earn points.",
-    network: "Visa Infinite", lounge: "Unlimited (Priority Pass included)",
+    redemptionNote: "Rate shown (3.33%) assumes travel redemption at ₹1/point. Cashback is only ₹0.20/point (0.66%). Always redeem via SmartBuy for max value.",
+    network: "Visa", lounge: "Unlimited",
     editorial: {
       verdict: {
-        headline: "The best credit card in India — if you can get it. Invite-only, recently nerfed on SmartBuy, but still king.",
-        body: `HDFC Infinia Metal is the gold standard of Indian credit cards. 3.33% on everything (via travel redemption at ₹1/point), unlimited worldwide lounge access with Priority Pass included, 24/7 concierge, and the only mainstream HDFC card that earns rewards on fuel.
+        headline: "The best credit card in India — if you can get it. Invite-only and worth every rupee.",
+        body: `HDFC Infinia is the gold standard of Indian credit cards. 3.33% on everything (via travel redemption), unlimited worldwide lounge access, 24/7 concierge, and SmartBuy rates that can hit 33.33%. No other card comes close on all-round value.
 
-2026 brought some changes: SmartBuy multiplier was cut from 5X to 3X (effective Jan 16, 2026), dropping the best rate from ~16.67% to ~10%. Monthly redemption caps were introduced in Feb 2026 — travel capped at ₹1.5L/month, statement credit at 50K points/month. And the fee waiver threshold was set at ₹18L annual spend or ₹50L relationship value (effective April 2027 for existing customers).
-
-Despite the nerfs, Infinia remains the best all-round card in India. The 3.33% flat rate on everything, unlimited lounge, and Apple/Tanishq redemptions at ₹1/point keep it ahead of every competitor.`,
-        idealFor: "High spenders (₹3L+/month) who travel frequently and can maximize SmartBuy/travel redemptions. If you already have an HDFC relationship and get the invite, accept it immediately.",
-        skipIf: "You can't get the invite, or your monthly spend is under ₹1.5L. The ₹12,500 + GST fee with the new ₹18L waiver threshold makes this uneconomical for moderate spenders. HDFC Diners Black offers similar base rates with a more accessible waiver.",
+The catch? It's invite-only. HDFC offers it to customers with high savings balances (typically ₹10L+) or significant relationship value. The ₹12,500 annual fee has no waiver option, but if you spend ₹5L+/year on travel via SmartBuy, the rewards alone pay for the fee multiple times over.`,
+        idealFor: "High spenders (₹5L+/month) who travel frequently and can maximize SmartBuy. If you already have an HDFC relationship and get the invite, accept it immediately.",
+        skipIf: "You can't get the invite, or your monthly spend is under ₹2L. The ₹12,500 fee with no waiver makes this uneconomical for moderate spenders. HDFC Diners Black offers similar rates with a waivable fee.",
       },
       bestFor: [
-        { category: "Everything (via travel redemption)", reason: "3.33% on all spends when redeemed via travel at ₹1/point. This is the highest flat rate available on any Indian card." },
-        { category: "SmartBuy travel/vouchers", reason: "~10% on flights, hotels, and brand vouchers via Gyftr (3X multiplier). Reduced from ~16.67% in Jan 2026 but still the best SmartBuy rate." },
-        { category: "Apple Products & Tanishq", reason: "₹1/point value with 70% of bill payable via points. One of the best redemption options for high-value purchases." },
-        { category: "International travel", reason: "Unlimited worldwide Priority Pass lounge access, concierge, travel insurance, and fuel rewards (unlike Regalia)." },
-        { category: "Fuel", reason: "3.33% on fuel (min ₹400 transaction) with surcharge waiver up to ₹1,000/cycle. One of the few HDFC cards that earns on fuel." },
+        { category: "Everything (via travel redemption)", reason: "3.33% on all spends when redeemed via SmartBuy travel. This is the highest flat rate available on any Indian card." },
+        { category: "SmartBuy travel bookings", reason: "Up to 33.33% on flights and hotels. Book a ₹30,000 flight and effectively pay ₹20,000. No other card matches this." },
+        { category: "International travel", reason: "Unlimited worldwide Priority Pass lounge access, concierge, and strong travel insurance." },
+        { category: "High-value purchases", reason: "3.33% on a ₹1L purchase = ₹3,330 back. No monthly cap means big spenders earn proportionally." },
       ],
       avoidFor: [
-        { category: "Cashback/statement credit redemption", reason: "At ₹0.30/point, statement credit gives ~1% — decent but wastes the card's potential. Travel redemption at ₹1/point (3.33%) is 3x better.", altCard: "sbi-cashback" },
-        { category: "Heavy monthly redeemers", reason: "New caps limit travel redemption to ₹1.5L/month and statement credit to 50K pts/month. If you consistently need more, the caps will bite.", altCard: "hdfc-diners-black" },
-        { category: "Small everyday purchases", reason: "If you're spending ₹50K/month total, the ₹12,500 + GST fee eats a significant chunk of your rewards. This card needs volume.", altCard: "axis-ace" },
-        { category: "Wallet loading & EasyEMI", reason: "These transactions earn zero points. If you rely heavily on wallets, the 3.33% rate doesn't apply.", altCard: "axis-ace" },
+        { category: "Cashback redemption", reason: "If you redeem as cashback (₹0.20/point), the effective rate drops to 0.66% — terrible for a premium card. Always redeem via travel.", altCard: "sbi-cashback" },
+        { category: "Fuel", reason: "0% on fuel, same as every HDFC card.", altCard: "rbl-shoprite" },
+        { category: "Small everyday purchases", reason: "If you're spending ₹5K/month total, the ₹12,500 fee eats all your rewards. This card needs volume to justify itself.", altCard: "axis-ace" },
       ],
       pairWith: [
-        { combo: "Infinia + Axis ACE", fee: "₹12,999/year", reason: "Infinia for high-value spends and travel, ACE for utility bills (5% via GPay) and small everyday purchases (1.5% uncapped). ACE also covers the wallet loading gap.", cardId: "axis-ace" },
+        { combo: "Infinia + Axis ACE", fee: "₹12,999/year", reason: "Infinia for high-value spends and travel, ACE for utility bills (5% via GPay) and small everyday purchases (1.5% uncapped).", cardId: "axis-ace" },
         { combo: "Infinia + Amazon Pay ICICI", fee: "₹12,500/year", reason: "Amazon card's 5% with no cap beats Infinia's 3.33% on Amazon specifically. Use Infinia for everything else.", cardId: "amazon-icici" },
       ],
       faq: [
-        { q: "How do I get an HDFC Infinia invite?", a: "Maintain a high HDFC savings balance (₹10L+ reported by most cardholders), have a strong HDFC relationship (₹50L+ RLV), or hold a Regalia/Diners Black and spend heavily. There's no public application — HDFC reaches out." },
-        { q: "Is the ₹12,500 fee worth it now that there's a waiver?", a: "The waiver requires ₹18L annual spend (₹1.5L/month) or ₹50L relationship value — achievable for the target user. At ₹18L spend with 3.33% travel redemption, you'd earn ₹60,000+ in rewards. Even without the waiver, the fee pays for itself at ₹5L+ annual spend." },
-        { q: "HDFC Infinia vs Diners Black — which is better?", a: "Infinia has a higher point value (₹1 vs ₹0.50 travel), earns on fuel, and includes Priority Pass. Diners Black has free memberships (Prime, Swiggy One) and an easier fee waiver. If you can afford the Infinia fee or hit ₹18L spend, it wins on pure rewards math." },
-        { q: "What changed with Infinia in 2026?", a: "Three big changes: SmartBuy multiplier cut from 5X to 3X (Jan 2026), monthly redemption caps introduced (Feb 2026), and fee waiver threshold set at ₹18L spend/₹50L RLV (effective April 2027 for existing customers). The base 3.33% rate is unchanged." },
-        { q: "Does Infinia earn points on fuel?", a: "Yes — 3.33% on fuel with min ₹400 transaction. Fuel surcharge waiver up to ₹1,000/statement cycle. This is a key advantage over Regalia and most other HDFC cards." },
-        { q: "What are the redemption caps?", a: "Travel: ₹1.5L/month. Statement credit: 50K pts/month (₹15,000 at ₹0.30/pt). Apple/Tanishq: 70% of bill via points. Utilities & Insurance: 10K pts/month. Max 5 redemptions/month. Points expire after 3 years." },
+        { q: "How do I get an HDFC Infinia invite?", a: "Maintain a high HDFC savings balance (₹10L+ reported by most cardholders), have a strong HDFC relationship, or hold a Regalia/Diners Black and spend heavily. There's no public application — HDFC reaches out." },
+        { q: "Is the ₹12,500 fee worth it with no waiver?", a: "If you spend ₹10L+/year and redeem via SmartBuy travel, you'll earn ₹33,000+ in rewards — the fee pays for itself nearly 3x over. If you spend less than ₹5L/year, consider Diners Black instead." },
+        { q: "HDFC Infinia vs Diners Black — which is better?", a: "Infinia has a higher point value (₹1 vs ₹0.50 travel) and better concierge. Diners Black has free memberships (Prime, Swiggy One) and a waivable fee. If you can afford the Infinia fee, it wins on pure rewards math." },
+        { q: "Does Infinia have a cashback cap?", a: "No explicit monthly cashback cap for most users. There's a theoretical points cap but it requires spending levels that virtually no individual hits." },
       ],
     },
   },
 
-  { id: "hdfc-millennia", name: "HDFC Millennia", bank: "HDFC", img: "✨", color: "#7c3aed", fee: 1000, feeWaiver: "₹1L annual spend", type: "Lifestyle / Cashback", verified: true,
-    rewardModel: "merchant-based",
-    rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
-    // NOTE: This card is merchant-based, NOT category-based. The 5% rate applies ONLY to specific partner merchants (Amazon, Flipkart, Myntra, Swiggy, Zomato, Uber, BookMyShow, Tata CLiQ, Sony LIV, Cult.fit). All non-partner spends earn 1%. The rewards object above reflects non-partner rates.
-    caps: { monthlyCashback5pct: 1000, monthlyCashback1pct: 1000, totalMonthlyCap: 2000, optimalSpendFor5pct: 20000, redemptionFees: { statementCredit: 50, catalogue: 99 }, maxRedemptionPerMonth: 3000, capAppliesTo: ["partner merchants only"] },
-    // Cap math: ₹1000/mo at 5% = max beneficial partner spend ₹20,000/mo. 1% cashback also capped at ₹1000/mo. Total cap ₹2000/mo. Redemption: ₹50 for statement credit, ₹99+taxes for catalogue. Max ₹3000 redemption/month.
+  { id: "hdfc-millennia", name: "HDFC Millennia", bank: "HDFC", img: "✨", color: "#7c3aed", fee: 1000, feeWaiver: "₹1L annual spend", type: "Lifestyle", verified: true,
+    rewards: { dining: 5, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 1, entertainment: 5, shopping: 5, default: 1 },
+    caps: { monthlyCashback: 1000, capRate: 5, fallbackRate: 1, capAppliesTo: ["dining", "online", "entertainment", "shopping"] },
+    // Cap math: ₹1000/mo at 5% = max beneficial spend ₹20,000/mo across partner categories. After that, drops to 1%.
     partnerRates: [
-      { name: "Amazon, Flipkart, Myntra", rate: "5% cashback" },
       { name: "Swiggy, Zomato", rate: "5% cashback" },
-      { name: "Uber, BookMyShow, Tata CLiQ, Sony LIV, Cult.fit", rate: "5% cashback" },
-      { name: "Swiggy Dineout", rate: "20% discount (dining)" },
+      { name: "Amazon, Flipkart, Myntra", rate: "5% cashback" },
+      { name: "Tata CLiQ, Uber, BookMyShow, Sony LIV, Cult.fit", rate: "5% cashback" },
     ],
-    pointsInfo: "5% on 10 partner brands (cap ₹1000/mo), 1% on all other (cap ₹1000/mo), total cap ₹2000/mo",
-    highlights: ["5% on Amazon/Flipkart/Swiggy/Zomato + 7 more", "Total cap ₹2000/mo (₹1000 partner + ₹1000 base)", "4 domestic lounge/yr (₹1L quarterly spend required)", "Fee waiver ₹1L spend", "Welcome: 1000 CashPoints"],
-    pros: ["5% on 10 major partner brands", "Low ₹1000 fee (waivable at ₹1L)", "20% off Swiggy Dineout"],
-    cons: ["1% on ALL non-partner spends (merchant-based, not category-based)", "₹1000/mo cap on 5% cashback", "₹1000/mo cap on 1% cashback too", "Fuel excluded", "Lounge requires ₹1L quarterly spend", "Redemption fees: ₹50-₹99"],
-    
-    redemptionNote: "Cashback posts as CashPoints (1 CP = ₹1) in statement cycle after next month. Redemption fees: ₹50 for statement credit, ₹99+taxes for catalogue. Max ₹3,000 redemption/month. No cashback on fuel, EMI, rent, govt payments, wallet loads, education apps.",
-    network: "Visa/MC/Diners Club", lounge: "4/year (₹1L quarterly spend required)",
+    pointsInfo: "5% on partners (cap ₹1000/mo), 1% on all other",
+    highlights: ["5% on 10+ partner brands", "₹1000/mo cashback cap on 5%", "4 domestic lounge/yr", "Fee waiver ₹1L spend"],
+    pros: ["5% on Swiggy/Zomato/Amazon/Flipkart", "Low ₹1000 fee (waivable)", "4 lounge visits"],
+    cons: ["Only 1% on non-partner spends", "₹1000/mo cap on 5% cashback", "Fuel excluded"],
+    network: "Visa/MC", lounge: "Milestone-based (₹1L quarterly spend)",
 
     editorial: {
       verdict: {
-        headline: "The best entry-level card for online spenders — if you understand the caps and that it's merchant-based, not category-based.",
-        body: `At face value, 5% cashback on Swiggy, Zomato, Amazon, Flipkart, Myntra, BookMyShow, and 4 other platforms sounds unbeatable. And for most people spending under ₹20,000/month on these partners, it genuinely is. But there are two caps most sites don't mention: the 5% partner cashback is capped at ₹1,000/month AND the 1% base cashback is also capped at ₹1,000/month. Total monthly cap: ₹2,000.
+        headline: "The best entry-level card for online spenders — if you understand the ₹1,000 monthly cap.",
+        body: `At face value, 5% cashback on Swiggy, Zomato, Amazon, Flipkart, Myntra, BookMyShow, and a dozen other platforms sounds unbeatable. And for most people spending under ₹20,000/month on these platforms, it genuinely is. The problem starts when you cross that ₹20,000 threshold — because every rupee after that earns just 1%. Most review sites mention the 5% but bury the cap, and that's how people end up disappointed.
 
-Critical misconception: this card is merchant-based, NOT category-based. Ordering from a random restaurant on Zomato earns 5%, but dining at that same restaurant in person earns 1%. Shopping on Amazon earns 5%, but shopping at a local store earns 1%. The 5% only works on the 10 listed partner merchants.
-
-The fee of ₹1,000 is waivable at ₹1L annual spend (~₹8,300/month). Lounge access requires ₹1L spend in the previous quarter — it's milestone-based, not automatic. Welcome benefit: 1,000 CashPoints on fee payment.`,
-        idealFor: "Anyone who spends ₹5,000–20,000/month on partner merchants (Swiggy, Amazon, Flipkart, etc.). At ₹15,000/month partner spend, you're earning ₹750/month — that's ₹9,000/year from a card with a waivable ₹1,000 fee.",
-        skipIf: "You're a heavy online spender above ₹20,000/month on partners. You'll hit the ₹1,000 partner cap, and the 1% base is also capped at ₹1,000. Also skip if you primarily spend offline or on non-partner merchants — 1% base is below average.",
+The card's annual fee of ₹1,000 is easily waivable at ₹1 lakh annual spend — roughly ₹8,300/month, which most working professionals hit without trying. If you're spending on Swiggy and Amazon anyway, this card essentially pays for itself within the first two months.`,
+        idealFor: "Anyone who spends ₹5,000–20,000/month on food delivery, online shopping, or entertainment platforms. At ₹15,000/month partner spend, you're earning ₹750/month — that's ₹9,000/year from a card with a waivable ₹1,000 fee.",
+        skipIf: "You're a heavy online spender above ₹20,000/month on partner categories. You'll hit the cap halfway through the month, and the 1% fallback rate is below average. You need a second card for the overflow, or a card with higher caps altogether.",
       },
       capMath: {
-        title: "Understanding the dual ₹1,000 monthly cashback caps",
-        body: `This is the single most important detail about this card, and most review sites only mention half of it.
+        title: "Understanding the ₹1,000 monthly cashback cap",
+        body: `This is the single most important detail about this card, and it's the one most sites gloss over.
 
-The 5% cashback on partner merchants — Amazon, Flipkart, Myntra, Swiggy, Zomato, Uber, BookMyShow, Tata CLiQ, Sony LIV, Cult.fit — is capped at ₹1,000 total cashback per month across ALL partners combined. Not ₹1,000 per brand. Combined. That means max beneficial partner spend is ₹20,000/month.
+The 5% cashback on partner brands — Swiggy, Zomato, Amazon, Flipkart, Myntra, BookMyShow, Tata CLiQ, Uber, Sony LIV, Cult.fit — is capped at ₹1,000 total cashback per month across all these brands combined. Not ₹1,000 per brand. Combined.
 
-But here's what most people miss: the 1% cashback on non-partner spends is ALSO capped at ₹1,000/month. That means max beneficial non-partner spend is ₹1,00,000/month at 1%.
+Here's what that means in practice: ₹1,000 cashback at 5% means your maximum beneficial partner spend is ₹20,000/month. Spend ₹10,000 on Amazon and ₹10,000 on Swiggy? You've hit the cap. Everything after that drops to 1%.
 
-Total monthly cap: ₹2,000 (₹1,000 partner + ₹1,000 base). After hitting both caps, you earn nothing.
-
-Also important: cashback posts as CashPoints in the statement cycle after next month (not immediately). Redemption fees apply — ₹50 for statement credit, ₹99+taxes for rewards catalogue. Max redemption: ₹3,000/month.
-
-Exclusions: fuel, EMI, rent, government payments, wallet loading, and education apps earn zero cashback.`,
+The 1% rate on non-partner spends (groceries, travel, offline shopping) has no cap, but 1% is below average for those categories. You're better off using a different card for non-partner spends entirely.`,
       },
       bestFor: [
-        { category: "Swiggy & Zomato orders", reason: "5% is the highest cashback rate on food delivery among entry-level cards. Also 20% off via Swiggy Dineout for restaurant dining." },
+        { category: "Swiggy & Zomato orders", reason: "5% is the highest cashback rate on food delivery among entry-level cards. Even the Axis Flipkart card only gives 4% on Swiggy." },
         { category: "Amazon & Flipkart purchases", reason: "5% matches the Amazon Pay ICICI card on Amazon (for Prime members), and beats it on Flipkart. If you shop on both platforms, Millennia is more versatile." },
-        { category: "Myntra, BookMyShow, Uber, Tata CLiQ, Sony LIV, Cult.fit", reason: "5% on lifestyle and entertainment spends that most cards give 1% on. Genuine found money." },
-        { category: "Monthly partner spend under ₹20,000", reason: "This is the sweet spot where this card is unbeatable at its fee level." },
+        { category: "BookMyShow, Sony LIV, Cult.fit", reason: "Entertainment and lifestyle spends that most cards give 1% on. Getting 5% here is genuine found money." },
+        { category: "Monthly spends under ₹20,000 on partner platforms", reason: "This is the sweet spot where this card is unbeatable at its fee level." },
       ],
       avoidFor: [
-        { category: "Offline dining/groceries", reason: "Millennia is merchant-based — dining at a restaurant in person earns 1%, not 5%. Only Swiggy/Zomato orders get 5%. SBI ELITE gives 2.5% on dining/groceries.", altCard: "sbi-elite" },
-        { category: "Fuel", reason: "0% rewards. Fuel surcharge waiver exists (1% on ₹400–₹5000, max ₹250/cycle) but no cashback. Axis ACE's 1.5% base covers fuel.", altCard: "axis-ace" },
+        { category: "Groceries", reason: "Millennia gives 1% on groceries. SBI Card ELITE gives 2.5%. Even ICICI Coral's Culinary Treats gives better dining/grocery value.", altCard: "sbi-elite" },
+        { category: "Fuel", reason: "0% rewards. No card gives great fuel rewards, but at least Axis ACE's 1.5% base covers fuel.", altCard: "axis-ace" },
         { category: "Utility bills", reason: "1% on Millennia vs 5% on Axis ACE via Google Pay. If your electricity bill is ₹3,000/month, that's ₹150 vs ₹30.", altCard: "axis-ace" },
-        { category: "Spending after caps hit", reason: "Once you hit ₹1,000 partner cap AND ₹1,000 base cap (₹2,000 total), you earn nothing. Switch to Axis ACE (1.5% uncapped) for overflow.", altCard: "axis-ace" },
-        { category: "Travel", reason: "1% is poor for travel. HDFC Regalia gives up to 13% via SmartBuy (1.33% base travel redemption).", altCard: "hdfc-regalia" },
-        { category: "Non-partner online shopping", reason: "Shopping on sites NOT in the partner list earns only 1%. The 5% is merchant-specific, not category-wide.", altCard: "axis-ace" },
+        { category: "Spending after ₹20K/month cap", reason: "Once the cap hits, switch to a flat-rate card like Axis ACE (1.5% uncapped) for the rest of the month.", altCard: "axis-ace" },
+        { category: "Travel", reason: "1% is poor for travel. HDFC Regalia gives 1.33% base and up to 13% via SmartBuy.", altCard: "hdfc-regalia" },
       ],
       pairWith: [
         { combo: "Millennia + Axis ACE", fee: "₹1,499/year, both waivable", reason: "The most popular budget combo. Use Millennia for partner platforms, ACE for utility bills (5% via GPay), food delivery overflow (4%), and everything else (1.5% uncapped).", cardId: "axis-ace" },
@@ -189,38 +166,32 @@ Exclusions: fuel, EMI, rent, government payments, wallet loading, and education 
       ],
       faq: [
         { q: "Does HDFC Millennia cashback work on Swiggy orders under ₹150?", a: "Yes, there is no minimum transaction amount for the 5% cashback on Swiggy. However, the ₹1,000 monthly cap across all partner brands still applies." },
-        { q: "Is HDFC Millennia cashback real cashback or reward points?", a: "It's CashPoints, which are HDFC's version of cashback. They post in the statement cycle after next month (not immediately). Redemption fees: ₹50 for statement credit, ₹99+taxes for catalogue. Max ₹3,000 redemption/month." },
-        { q: "Can I get the HDFC Millennia fee waived?", a: "Yes. Spend ₹1 lakh in a year (roughly ₹8,300/month) and the ₹1,000 annual fee is waived for the next year. You also get 1,000 CashPoints as a welcome benefit on fee payment." },
-        { q: "Is HDFC Millennia better than Amazon Pay ICICI?", a: "For Amazon-only shopping, the Amazon Pay ICICI card wins because its 5% has no monthly cap. But Millennia covers 10 partner brands — Swiggy, Zomato, Flipkart, Myntra, BookMyShow, etc. — all at 5%. If you shop across multiple platforms, Millennia is more versatile." },
-        { q: "What happens after I hit the ₹1,000 monthly cap?", a: "Partner spending drops from 5% to 1% for the rest of that month. But the 1% base is ALSO capped at ₹1,000/month. Total monthly cap is ₹2,000. After that, you earn nothing. Caps reset on the 1st of the next month." },
-        { q: "Does Millennia give 5% on all online shopping?", a: "No — this is the biggest misconception. Millennia is merchant-based, not category-based. Only the 10 listed partner merchants (Amazon, Flipkart, Myntra, Swiggy, Zomato, Uber, BookMyShow, Tata CLiQ, Sony LIV, Cult.fit) get 5%. All other online shopping earns 1%." },
-        { q: "How does lounge access work on Millennia?", a: "4 domestic lounge visits per year, but it's milestone-based: you need ₹1L spend in the previous quarter to qualify. It's not automatic like premium cards." },
+        { q: "Is HDFC Millennia cashback real cashback or reward points?", a: "It's CashPoints, which are HDFC's version of cashback. They're automatically credited and can be redeemed against your statement or converted to rewards. The effective value is 1:1 — ₹1 CashPoint = ₹1." },
+        { q: "Can I get the HDFC Millennia fee waived?", a: "Yes. Spend ₹1 lakh in a year (roughly ₹8,300/month) and the ₹1,000 annual fee is waived for the next year. Most regular users hit this without trying." },
+        { q: "Is HDFC Millennia better than Amazon Pay ICICI?", a: "For Amazon-only shopping, the Amazon Pay ICICI card wins because its 5% has no monthly cap. But Millennia covers a broader range of platforms — Swiggy, Zomato, Flipkart, Myntra, BookMyShow — all at 5%. If you shop across multiple platforms, Millennia is more versatile." },
+        { q: "What happens after I hit the ₹1,000 monthly cap?", a: "All partner category spending drops from 5% to 1% for the rest of that month. The cap resets on the 1st of the next month. Non-partner spends are always at 1% regardless of the cap." },
       ],
     },
   },
 
-  { id: "hdfc-diners-black", name: "HDFC Diners Club Black Credit Card", bank: "HDFC", img: "🖤", color: "#111827", fee: 10000, feeWaiver: "₹5L annual spend", type: "Super Premium", verified: true,
-    rewards: { dining: 1.66, travel: 3.33, online: 1.66, groceries: 1.66, fuel: 0, utilities: 1.66, entertainment: 1.66, shopping: 1.66, default: 1.66 },
-    caps: { monthlyPoints: 75000, spendPer: 150, pointsPer: 5, pointValueTravel: 1.0, pointValueCashback: 0.5, pointsExpiry: "3 years" },
-    // Cap math: 75K pts/cycle. At travel value (₹1/pt) = ₹75,000 max/cycle. At cashback (₹0.50/pt) = ₹37,500 max/cycle. Need ₹22.5L spend to hit cap. Points expire ~3 years.
+  { id: "hdfc-diners-black", name: "HDFC Diners Black", bank: "HDFC", img: "🖤", color: "#111827", fee: 10000, feeWaiver: "₹5L annual spend", type: "Super Premium", verified: true,
+    rewards: { dining: 3.33, travel: 3.33, online: 3.33, groceries: 3.33, fuel: 0, utilities: 3.33, entertainment: 3.33, shopping: 3.33, default: 3.33 },
+    caps: { monthlyPoints: 75000, pointValue: 0.50, spendPer: 150, pointsPer: 5 },
     partnerRates: [
-      { name: "SmartBuy Hotels", rate: "33.33% (10X multiplier)" },
-      { name: "SmartBuy Flights", rate: "16.5% (5X multiplier)" },
-      { name: "SmartBuy Vouchers", rate: "~10% gross / ~6% net after fees (3X multiplier)" },
-      { name: "Amazon Pay vouchers", rate: "~5.77%" },
+      { name: "SmartBuy (flights/hotels/vouchers)", rate: "up to 33.33%" },
     ],
-    pointsInfo: "5 points/₹150 · 1pt = ₹0.50 cashback or ₹1.00 travel · SmartBuy: Hotels 10X, Flights 5X, Vouchers 3X · 75K pts cap/cycle",
-    highlights: ["Unlimited domestic + intl lounge", "Amazon Prime/Swiggy One/MMT Black", "SmartBuy Hotels 33.33% (10X)", "Fee waiver ₹5L", "Points expire in 3 years"],
-    pros: ["Up to 33.33% on SmartBuy hotels", "3.33% travel redemption on all spends", "Unlimited lounge access", "Free memberships (Prime, Swiggy One, MMT)"],
-    cons: ["Diners Club acceptance limited in India", "₹10K + GST fee", "Fuel excluded", "Cashback rate only 1.66% (travel redemption gives 3.33%)", "SmartBuy voucher fees reduce net rate to ~6%"],
+    pointsInfo: "5 points/₹150 · 1pt = ₹0.50 cashback or ₹1.00 travel · 10x SmartBuy · 75K pts cap/cycle",
+    highlights: ["Unlimited domestic + intl lounge", "Amazon Prime/Swiggy One/MMT Black", "10x SmartBuy", "Fee waiver ₹5L"],
+    pros: ["3.33% on everything", "Unlimited lounge access", "Free memberships (Prime, Swiggy One, MMT)"],
+    cons: ["Diners Club acceptance limited in India", "₹10K + GST fee", "Fuel excluded"],
     
-    redemptionNote: "Base earn: 5 points/₹150. Travel redemption: ₹1/point (3.33% base). Cashback: ₹0.50/point (1.66% base). SmartBuy Hotels: 10X = 33.33%. Flights: 5X = 16.5%. Vouchers: 3X = ~10% gross, ~6% net after ~4.1% fees. Amazon Pay vouchers: ~5.77%. 75K monthly cap. Points expire ~3 years.",
-    network: "Diners Club", lounge: "Unlimited (spend-based conditions may apply)",
+    redemptionNote: "Rate shown (3.33%) assumes travel redemption at ₹1/point via SmartBuy. Cashback value is ₹0.50/point (1.66%). SmartBuy bookings can reach 33%.",
+    network: "Diners Club", lounge: "Unlimited",
 
     editorial: {
   verdict: {
     headline: "The best value super-premium card in India — if you can live with Diners Club acceptance.",
-    body: `HDFC Diners Club Black delivers serious rewards at a waivable ₹10,000 fee. The base rate is 1.66% (cashback) or 3.33% (travel redemption at ₹1/point). But the real value is SmartBuy: 33.33% on hotels (10X), 16.5% on flights (5X), and ~6% net on vouchers (3X after fees). Add unlimited lounge access, free Amazon Prime, Swiggy One, and MakeMyTrip Black memberships, and this is arguably the best overall value proposition in Indian credit cards.
+    body: `HDFC Diners Black delivers Infinia-level rewards (3.33% via travel) at a waivable ₹10,000 fee. Throw in unlimited lounge access, free Amazon Prime, Swiggy One, and MakeMyTrip Black memberships, and you have arguably the best overall value proposition in Indian credit cards.
 
 The one real problem: Diners Club network acceptance. While it works at most large merchants and online, smaller shops, toll plazas, and some POS terminals don't accept it. You'll need a backup Visa/Mastercard for those situations. If you can tolerate carrying two cards, Diners Black is phenomenal.`,
     idealFor: "Anyone spending ₹5L+/year who values lounge access and travel rewards. The free Prime + Swiggy One memberships alone save ₹3,000-4,000/year before you even count reward points.",
@@ -228,23 +199,16 @@ The one real problem: Diners Club network acceptance. While it works at most lar
   },
   capMath: {
     title: "Understanding the 75,000 points/cycle cap",
-    body: `Diners Black earns 5 points per ₹150, capped at 75,000 points per statement cycle. At travel redemption value (₹1/point), that's ₹75,000 in rewards per cycle. At cashback (₹0.50/point), that's ₹37,500.
+    body: `Diners Black earns 5 points per ₹150, capped at 75,000 points per statement cycle. At travel redemption value (₹1/point), that's ₹75,000 in rewards per cycle.
 
-To hit the cap, you'd need to spend ₹22.5 lakh in a single statement cycle. For almost everyone, this cap is irrelevant — you'll never hit it with base spend. But SmartBuy accelerated earning can hit the cap faster.
+To hit the cap, you'd need to spend ₹22.5 lakh in a single statement cycle. For almost everyone, this cap is irrelevant — you'll never hit it. The effective rate remains 3.33% (travel) or 1.66% (cashback) on all spending.
 
-SmartBuy multipliers (this is where the card shines):
-Hotels: 10X = 33.33% back. A ₹50,000 hotel booked through SmartBuy earns ~₹16,650 in travel value.
-Flights: 5X = 16.5% back. A ₹30,000 flight = ~₹4,950 back.
-Vouchers: 3X = ~10% gross, but ~6% net after ~4.1% Gyftr fees.
-Amazon Pay vouchers: ~5.77%.
-
-Important: the 33% on hotels applies ONLY via SmartBuy and is limited by the 75K monthly points cap. Points expire after approximately 3 years.`,
+The real math to focus on: SmartBuy bookings earn 10x points. A ₹50,000 flight booked through SmartBuy earns 16,666 points (worth ₹16,666 in travel). That's effectively 33% back. This is where the card's value explodes.`,
   },
   bestFor: [
-    { category: "SmartBuy Hotels", reason: "33.33% on hotel bookings (10X multiplier) is the highest accelerated rate on any accessible HDFC card. Book ₹1L in hotels = ₹33,330 back." },
-    { category: "SmartBuy Flights", reason: "16.5% on flights (5X multiplier). Significantly better than base earning. Book ₹2L in flights = ₹33,000 back." },
+    { category: "Travel via SmartBuy", reason: "Up to 33.33% on flights and hotels — identical to Infinia. Book ₹2L in annual travel and you've earned ₹66,000+ in points." },
     { category: "Subscriptions (via free memberships)", reason: "Amazon Prime (₹1,499), Swiggy One (₹899), MMT Black — ₹3,000+ in annual subscriptions included free." },
-    { category: "All-round premium spending (travel redemption)", reason: "3.33% on everything via travel redemption at ₹1/point. Or 1.66% cashback. No category restrictions except fuel." },
+    { category: "All-round premium spending", reason: "3.33% on everything (travel redemption) with no category restrictions except fuel. Flat, simple, powerful." },
     { category: "Lounge access", reason: "Unlimited domestic and international — no visit caps. Best lounge access per rupee of annual fee." },
   ],
   avoidFor: [
@@ -258,115 +222,95 @@ Important: the 33% on hotels applies ONLY via SmartBuy and is limited by the 75K
   ],
   faq: [
     { q: "Where does Diners Club NOT work in India?", a: "Toll plazas (FASTag works on all networks but POS doesn't), some small restaurants, local shops, and a few government payment portals. Most large retailers and all major online merchants accept it." },
-    { q: "Is Diners Black better than Regalia?", a: "Yes, significantly. 1.66% cashback (3.33% travel) vs Regalia's 0.53% cashback (1.33% travel). Unlimited vs 12 domestic lounge visits. Plus free Prime/Swiggy One memberships. SmartBuy hotels give 33.33% (10X) vs Regalia's ~13.33%. The only advantage Regalia has is wider Visa/MC acceptance." },
+    { q: "Is Diners Black better than Regalia?", a: "Yes, significantly. 3.33% vs 1.33% base rate, unlimited vs 18 lounge visits, plus free memberships. The only advantage Regalia has is wider Visa/MC acceptance." },
     { q: "Can I get the ₹10,000 fee waived?", a: "Yes. Spend ₹5 lakh in a year and the fee is waived. That's roughly ₹42,000/month — achievable for most premium card users if it's their primary card." },
     { q: "Does Diners Black work for international payments?", a: "Diners Club/Discover network works at most international merchants, especially in the US, Japan, and Europe. Coverage is similar to Amex — good but not as universal as Visa/MC." },
   ],
 },
   },
 
-  { id: "hdfc-swiggy", name: "Swiggy HDFC Bank Credit Card", bank: "HDFC", img: "🍕", color: "#fc8019", fee: 500, feeWaiver: "₹2L annual spend", type: "Cashback", verified: true,
-    rewardModel: "merchant-based",
-    rewards: { dining: 1, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
-    // NOTE: Merchant-based card. 10% applies ONLY to Swiggy ecosystem (Food, Instamart, Dineout, Genie). 5% on online spends (Amazon, Flipkart, Myntra, etc.). 1% on all other. Separate caps per category.
-    caps: { swiggyCashbackCap: 1500, onlineCashbackCap: 1500, otherCashbackCap: 500, totalMaxCashback: 3500 },
-    // Cap math: Swiggy cap ₹1500/mo (at 10% = max ₹15K Swiggy spend). Online cap ₹1500/mo (at 5% = max ₹30K online spend). Other cap ₹500/mo (at 1% = max ₹50K other spend). Total possible: ₹3500/mo.
+  { id: "hdfc-swiggy", name: "HDFC Swiggy Card", bank: "HDFC", img: "🍕", color: "#fc8019", fee: 500, feeWaiver: "₹2L annual spend", type: "Entry", verified: true,
+    rewards: { dining: 10, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 0, entertainment: 5, shopping: 5, default: 1 },
+    caps: { monthlyCashback: 1500, capRate: 10, fallbackRate: 1, capAppliesTo: ["dining", "online", "entertainment", "shopping"] },
     partnerRates: [
-      { name: "Swiggy ecosystem (Food, Instamart, Dineout, Genie)", rate: "10% cashback (cap ₹1500/mo)" },
-      { name: "Online (Amazon, Flipkart, Myntra, etc.)", rate: "5% cashback (cap ₹1500/mo)" },
-      { name: "All other spends", rate: "1% cashback (cap ₹500/mo)" },
+      { name: "Swiggy", rate: "10% cashback (cap ₹1500/mo)" },
+      { name: "Online (apparel, electronics, entertainment)", rate: "5% (cap ₹1500/mo)" },
     ],
-    pointsInfo: "10% Swiggy (cap ₹1500), 5% online (cap ₹1500), 1% other (cap ₹500) · Separate caps per category",
-    highlights: ["10% on entire Swiggy ecosystem", "5% on online shopping", "Separate caps (₹3500 total possible)", "Fee waiver on ₹2L", "Welcome: 3-month free Swiggy One"],
-    pros: ["Best for Swiggy users (10%)", "5% on online shopping", "Low fee (waivable)", "Separate category caps — not shared", "Swiggy Dineout included in 10%"],
-    cons: ["Swiggy-exclusive 10% (Zomato earns 1%)", "No lounge access", "No fuel/rent/wallet/EMI/jewellery/govt rewards", "Cashback as statement credit"],
-    
-    redemptionNote: "Cashback credited as statement credit (since June 2024). Separate monthly caps: ₹1500 Swiggy, ₹1500 online, ₹500 other. No rewards on fuel, rent, wallet loading, EMI, jewellery, govt payments.",
+    pointsInfo: "10% Swiggy, 5% online, 1% other · ₹1500/mo total cap · Min ₹100 txn",
+    highlights: ["10% on Swiggy", "5% on online shopping", "Fee waiver on ₹2L", "₹500 joining voucher"],
+    pros: ["Best for Swiggy users (10%)", "5% on online categories", "Low fee (waivable)"],
+    cons: ["₹1500/mo total cashback cap", "Fuel/utilities excluded", "Min ₹100 per transaction"],
     network: "MC", lounge: "None",
+    upcoming: { date: "April 2026", changes: ["10% cashback only on orders ≥₹249", "Card splitting into BLCK (10%) and ORNGE (5%) variants"] },
 
     editorial: {
   verdict: {
-    headline: "The ultimate card for Swiggy addicts — 10% cashback on the entire ecosystem, with separate caps that are better than you think.",
-    body: `10% cashback on the entire Swiggy ecosystem — Food, Instamart, Dineout, and Genie — is the highest food delivery reward rate on any Indian credit card. If you order Swiggy regularly, no other card comes close. The card also gives 5% on online shopping (Amazon, Flipkart, Myntra, etc.).
+    headline: "The ultimate card for Swiggy addicts — 10% cashback is unmatched, but the cap limits who should get it.",
+    body: `10% cashback on Swiggy is the highest food delivery reward rate on any Indian credit card. If you order Swiggy regularly, no other card comes close. The card also gives 5% on online shopping, entertainment, and apparel — making it a strong contender for the online lifestyle segment.
 
-The caps are better than most sites report: they're SEPARATE per category, not shared. ₹1,500/month on Swiggy, ₹1,500/month on online, and ₹500/month on other spends. Total possible cashback: ₹3,500/month, not the ₹1,500 many reviews claim. Cashback is credited as statement credit.
-
-Welcome benefit: 3-month free Swiggy One membership. No lounge access. No rewards on fuel, rent, wallet loading, EMI, jewellery, or government payments.`,
-    idealFor: "Regular Swiggy users spending ₹5,000-15,000/month on food delivery + Instamart. At ₹10K/month Swiggy spend, you're earning ₹1,000/month — ₹12,000/year from a card with a ₹500 fee.",
-    skipIf: "You use Zomato more than Swiggy (Zomato earns only 1%), or your food delivery spend is under ₹3,000/month. HDFC Millennia's 5% on both Swiggy AND Zomato is more versatile.",
+But there's a hard ceiling: ₹1,500/month total cashback cap across all accelerated categories combined. At 10% on Swiggy, that's maxed out at ₹15,000 in Swiggy orders. If you also shop online (5%), the cap is eaten even faster. The ₹100 minimum transaction requirement also means your ₹80 chai orders earn nothing.`,
+    idealFor: "Regular Swiggy users spending ₹5,000-15,000/month on food delivery. At ₹10K/month Swiggy spend, you're earning ₹1,000/month — ₹12,000/year from a card with a ₹500 fee.",
+    skipIf: "You use Zomato more than Swiggy (this card doesn't give 10% on Zomato), or your food delivery spend is under ₹3,000/month. HDFC Millennia's 5% on both Swiggy AND Zomato is more versatile.",
   },
   capMath: {
-    title: "The caps are SEPARATE — not shared (this is better than most sites report)",
-    body: `Most reviews say this card has a ₹1,500/month cap. That's misleading. The caps are separate per category:
+    title: "Understanding the ₹1,500/month combined cap",
+    body: `The ₹1,500/month cashback cap is shared across ALL accelerated categories — Swiggy (10%), online shopping (5%), entertainment (5%), and apparel (5%). Not ₹1,500 per category. Combined.
 
-Swiggy ecosystem (10%): ₹1,500/month cap → max beneficial Swiggy spend: ₹15,000/month
-Online shopping (5%): ₹1,500/month cap → max beneficial online spend: ₹30,000/month
-Other spends (1%): ₹500/month cap → max beneficial other spend: ₹50,000/month
+At 10% on Swiggy alone, you hit the cap at ₹15,000/month in orders. But if you also shop online, the cap fills faster. Example: ₹10,000 Swiggy (₹1,000 cashback) + ₹10,000 online shopping (₹500 cashback) = ₹1,500 cap reached. Everything after that earns 1%.
 
-Total possible cashback: ₹3,500/month (₹42,000/year). That's from a card with a ₹500 annual fee.
-
-Example: ₹12,000 Swiggy (₹1,200 cashback, within cap) + ₹20,000 online (₹1,000 cashback, within cap) + ₹30,000 other (₹300 cashback, within cap) = ₹2,500/month total. All three caps are independent.
-
-Cashback is credited as statement credit (since June 2024). No rewards on fuel, rent, wallet loading, EMI, jewellery, or government payments.`,
+Minimum transaction: ₹100. Orders below ₹100 earn zero cashback. This matters for quick snack or chai orders.`,
   },
   bestFor: [
-    { category: "Swiggy ecosystem (Food, Instamart, Dineout, Genie)", reason: "10% is double what any competitor offers. HDFC Millennia gives 5%, Axis Flipkart gives 4%. Covers the entire Swiggy ecosystem including groceries via Instamart and dining out via Dineout." },
-    { category: "Online shopping", reason: "5% on Amazon, Flipkart, Myntra, etc. with a separate ₹1500/mo cap — doesn't eat into your Swiggy cap." },
-    { category: "Budget-conscious food delivery users", reason: "₹500 annual fee waivable at ₹2L spend. Welcome: 3-month free Swiggy One. The rewards far exceed the fee for any regular Swiggy user." },
+    { category: "Swiggy orders above ₹100", reason: "10% is double what any competitor offers. HDFC Millennia gives 5%, Axis Flipkart gives 4%." },
+    { category: "Online shopping", reason: "5% on online purchases is competitive with HDFC Millennia when you haven't hit the shared cap." },
+    { category: "Budget-conscious food delivery users", reason: "₹500 annual fee waivable at ₹2L spend. If Swiggy is your primary spend, the rewards far exceed the fee." },
   ],
   avoidFor: [
-    { category: "Zomato orders", reason: "Zomato earns only 1% (falls under 'other'). If you use both platforms, HDFC Millennia's 5% on both is better.", altCard: "hdfc-millennia" },
-    { category: "Offline dining", reason: "Restaurant bills in person earn only 1%. But Swiggy Dineout (dining via Swiggy app) does get 10%. For non-Swiggy restaurant spending, SBI ELITE's 2.5% or BOB Eterna's 3.75% is better.", altCard: "sbi-elite" },
-    { category: "Fuel, rent, wallet, EMI, jewellery, govt", reason: "Zero cashback on all of these. Need a separate card.", altCard: "axis-ace" },
+    { category: "Zomato orders", reason: "The 10% rate is Swiggy-exclusive. Zomato falls under general dining at lower rates. If you use both platforms, HDFC Millennia's 5% on both is better.", altCard: "hdfc-millennia" },
+    { category: "Offline dining", reason: "Restaurant bills don't get 10% — only Swiggy orders do. For restaurant spending, look at SBI ELITE's 2.5% or BOB Eterna's 3.75%.", altCard: "sbi-elite" },
+    { category: "Groceries and utilities", reason: "1% on groceries and 0% on utilities. You need a separate card for these categories.", altCard: "axis-ace" },
   ],
   pairWith: [
     { combo: "HDFC Swiggy + Axis ACE", fee: "₹999/year", reason: "Swiggy card for food delivery, ACE for utilities (5%), Zomato overflow (4%), and everything else (1.5% uncapped). Total fee under ₹1K.", cardId: "axis-ace" },
     { combo: "HDFC Swiggy + Amazon Pay ICICI", fee: "₹500/year", reason: "Swiggy card for food delivery, Amazon card for Amazon shopping (5%, no cap). Both low-cost, high-value for online spenders.", cardId: "amazon-icici" },
   ],
   faq: [
-    { q: "Does HDFC Swiggy card give 10% on Swiggy Instamart?", a: "Yes — the 10% covers the entire Swiggy ecosystem: Food, Instamart, Dineout, and Genie. All under the same ₹1,500/month Swiggy cap." },
-    { q: "Are the cashback caps shared or separate?", a: "Separate. ₹1,500/month for Swiggy, ₹1,500/month for online, ₹500/month for other. Total possible: ₹3,500/month. Many review sites incorrectly report a single shared ₹1,500 cap." },
-    { q: "HDFC Swiggy vs HDFC Millennia for food delivery?", a: "If you use only Swiggy and spend under ₹15K/month on it, the Swiggy card wins (10% vs 5%). If you use Swiggy AND Zomato, Millennia is more versatile since it covers both at 5%. Swiggy card has separate caps (better); Millennia has a shared partner cap." },
-    { q: "How is cashback credited?", a: "As statement credit (since June 2024). Not as reward points or CashPoints." },
-    { q: "Does Swiggy Dineout get 10%?", a: "Yes. Dining out through Swiggy Dineout is part of the Swiggy ecosystem and earns 10%. But dining at the same restaurant directly (not via Swiggy app) earns only 1%." },
+    { q: "Does HDFC Swiggy card give 10% on Swiggy Instamart?", a: "Swiggy Instamart orders generally qualify as Swiggy transactions, but cashback depends on the MCC code. Most users report getting 10% on Instamart as well." },
+    { q: "Is the ₹100 minimum per order or per day?", a: "Per transaction. Each Swiggy order must be ₹100+ to earn the 10% cashback. Multiple small orders below ₹100 won't earn anything regardless of daily total." },
+    { q: "HDFC Swiggy vs HDFC Millennia for food delivery?", a: "If you use only Swiggy and spend under ₹15K/month on it, the Swiggy card wins (10% vs 5%). If you use Swiggy AND Zomato, Millennia is more versatile since it covers both at 5%." },
   ],
 },
   },
 
-  { id: "sbi-simplyclick", name: "SBI SimplyCLICK Credit Card", bank: "SBI", img: "🛒", color: "#1d4ed8", fee: 499, feeWaiver: "₹1L annual spend", type: "Rewards", verified: true,
+  { id: "sbi-simplyclick", name: "SBI SimplyCLICK", bank: "SBI", img: "🛒", color: "#1d4ed8", fee: 499, feeWaiver: "₹1L annual spend", type: "Online", verified: true,
     rewards: { dining: 0.25, travel: 0.25, online: 1.25, groceries: 0.25, fuel: 0, utilities: 0.25, entertainment: 0.25, shopping: 0.25, default: 0.25 },
-    caps: { acceleratedPointsCap: 10000, acceleratedCapValue: 2500 },
-    // Cap math: Accelerated points (10X partner + 5X online) capped at 10,000/month. At ₹0.25/pt = ₹2,500 max accelerated reward/month. 1X offline has no explicit cap.
     partnerRates: [
-      { name: "Apollo 24/7, BookMyShow, Cleartrip, Dominos, IGP, Myntra, Netmeds, Yatra", rate: "10x = 2.5%" },
-      { name: "Swiggy (demoted from 10X to 5X effective Apr 2025)", rate: "5x = 1.25%" },
+      { name: "Apollo 24/7, BookMyShow, Cleartrip, Dominos, Myntra, Swiggy, Yatra", rate: "10x = 2.5%" },
     ],
-    pointsInfo: "10x (2.5%) on 8 partners, 5x (1.25%) all online incl. Swiggy, 1x (0.25%) offline · 1pt = ₹0.25 · Accelerated cap 10K pts/mo",
-    highlights: ["2.5% on 8 partner brands (Myntra, BookMyShow, Cleartrip, etc.)", "1.25% all online (incl. Swiggy at 5X since Apr 2025)", "Fee waiver ₹1L", "Welcome: ₹500 Amazon voucher", "Milestones: ₹2K vouchers at ₹1L & ₹2L online spend"],
-    pros: ["2.5% on Cleartrip/Myntra/BookMyShow/Apollo + 4 more", "1.25% on all online incl. Swiggy", "Easy fee waiver", "Welcome + milestone vouchers"],
-    cons: ["Only 0.25% offline", "No lounge access", "Accelerated points capped at 10K/month", "No rewards on rent, wallet, fuel, EMI, govt, insurance", "1% fuel surcharge waiver only (₹500–₹3,000)"],
-    
-    redemptionNote: "1 RP = ₹0.25. Accelerated points (10X + 5X) capped at 10,000/month. Welcome: ₹500 Amazon voucher. Milestones: ₹2,000 Cleartrip/Yatra voucher each at ₹1L and ₹2L annual online spend. Fuel surcharge waiver: 1% on ₹500–₹3,000. No rewards on rent, wallet loads, fuel, EMI, govt, insurance spends.",
+    pointsInfo: "10x (2.5%) partners, 5x (1.25%) online, 1x (0.25%) other · 1pt = ₹0.25",
+    highlights: ["2.5% on 9 partner brands", "1.25% all online", "Fee waiver ₹1L", "E-voucher redemption"],
+    pros: ["2.5% on Swiggy/Cleartrip/Myntra/BookMyShow", "1.25% on all online", "Easy fee waiver"],
+    cons: ["Only 0.25% offline", "No lounge access", "Point redemption limited to e-vouchers"],
     network: "Visa/MC", lounge: "None",
 
     editorial: {
   verdict: {
     headline: "A decent starter card for online shoppers, but outclassed by newer options in 2026.",
-    body: `SBI SimplyCLICK was one of the first cards to offer meaningful online rewards in India. 2.5% on 8 partner brands (Myntra, BookMyShow, Cleartrip, Apollo 24/7, Yatra, Dominos, IGP, Netmeds) and 1.25% on all online purchases (including Swiggy, demoted from 10X to 5X in Apr 2025) still sounds reasonable. But the landscape has changed — HDFC Millennia gives 5% on partners, Amazon Pay ICICI gives 5% on Amazon, and Axis ACE gives 1.5% uncapped everywhere.
+    body: `SBI SimplyCLICK was one of the first cards to offer meaningful online rewards in India. 2.5% on 9 partner brands and 1.25% on all online purchases still sounds reasonable. But the landscape has changed — HDFC Millennia gives 5% on partners, Amazon Pay ICICI gives 5% on Amazon, and Axis ACE gives 1.5% uncapped everywhere.
 
-Accelerated points are capped at 10,000/month (₹2,500 value). The welcome ₹500 Amazon voucher and milestone vouchers (₹2,000 at ₹1L and ₹2L online spend) add value. No rewards on rent, wallet loads, fuel, EMI, govt, or insurance. For SBI customers who want a simple online card without switching banks, it works. For everyone else, better options exist.`,
+The card's main remaining advantage is its low ₹499 fee (waivable at ₹1L) and SBI's wide acceptance. For SBI customers who want a simple online rewards card without switching banks, it works. For everyone else, there are better options.`,
     idealFor: "Existing SBI customers who want a low-fee online rewards card and regularly shop on partners like Cleartrip, Myntra, or BookMyShow. Good starter card for building credit history with SBI.",
-    skipIf: "You want the best online rewards available. At 1.25% online and 0.25% offline with a 10K pts/month cap, this card is behind HDFC Millennia (5% on partners) and Axis ACE (1.5% uncapped).",
+    skipIf: "You want the best online rewards available. At 1.25% online and 0.25% offline, this card is significantly behind HDFC Millennia (5% on partners) and Axis ACE (1.5% uncapped).",
   },
   bestFor: [
-    { category: "SBI partner brands", reason: "2.5% on Apollo 24/7, BookMyShow, Cleartrip, Dominos, IGP, Myntra, Netmeds, Yatra. Note: Swiggy was demoted to 5X (1.25%) in Apr 2025." },
+    { category: "SBI partner brands", reason: "2.5% on Apollo 24/7, BookMyShow, Cleartrip, Dominos, Myntra, Swiggy, Yatra. If you use 3+ of these regularly, the partner rate adds up." },
     { category: "General online shopping", reason: "1.25% on all online purchases is automatic — no partner restrictions. Better than many entry cards' online rates." },
-    { category: "Building SBI credit history", reason: "Easy approval for SBI account holders. Good stepping stone to SBI ELITE or SBI Cashback cards. Welcome ₹500 Amazon voucher helps offset the fee." },
+    { category: "Building SBI credit history", reason: "Easy approval for SBI account holders. Good stepping stone to SBI ELITE or SBI Cashback cards." },
   ],
   avoidFor: [
     { category: "Offline spending", reason: "0.25% offline is nearly worthless. A ₹5,000 grocery run earns ₹12.50. Use virtually any other card for offline purchases.", altCard: "axis-ace" },
     { category: "Amazon shopping", reason: "1.25% on Amazon vs 5% with Amazon Pay ICICI (free card). No contest.", altCard: "amazon-icici" },
-    { category: "Food delivery", reason: "Swiggy was demoted from 10X to 5X (1.25%) in Apr 2025. HDFC Millennia gives 5% on Swiggy and HDFC Swiggy gives 10%.", altCard: "hdfc-millennia" },
+    { category: "Food delivery", reason: "2.5% on Swiggy via partner rate, but HDFC Millennia gives 5% and HDFC Swiggy gives 10%.", altCard: "hdfc-millennia" },
   ],
   pairWith: [
     { combo: "SimplyCLICK + Amazon Pay ICICI", fee: "₹499/year", reason: "Amazon card for Amazon (5%), SimplyCLICK for other online partners (2.5%). Both have low/no fees.", cardId: "amazon-icici" },
@@ -375,41 +319,37 @@ Accelerated points are capped at 10,000/month (₹2,500 value). The welcome ₹5
   faq: [
     { q: "Is SBI SimplyCLICK worth it in 2026?", a: "Only if you're an SBI customer who uses 3+ partner brands regularly. Otherwise, HDFC Millennia or Axis ACE offer better value for similar or lower fees." },
     { q: "How do I redeem SimplyCLICK reward points?", a: "Points can be redeemed as e-vouchers for partner brands. 1 point = ₹0.25. The voucher-only redemption is a limitation — no direct statement credit." },
-    { q: "What's the accelerated points cap?", a: "10,000 accelerated points per month (worth ₹2,500). This covers both 10X partner and 5X online earning. After the cap, you still earn 1X (0.25%) on all spends." },
     { q: "Can I upgrade from SimplyCLICK to SBI Cashback?", a: "Yes, SBI allows upgrades based on your credit history and spending pattern. Contact SBI Cards customer service to request an upgrade." },
   ],
 },
   },
 
-  { id: "sbi-cashback", name: "CASHBACK SBI Card", bank: "SBI", img: "💰", color: "#0369a1", fee: 999, feeWaiver: "₹2L annual spend", type: "Cashback", verified: true,
+  { id: "sbi-cashback", name: "SBI Cashback Card", bank: "SBI", img: "💰", color: "#0369a1", fee: 999, feeWaiver: "₹2L annual spend", type: "Cashback", verified: true,
     rewards: { dining: 1, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 0, entertainment: 1, shopping: 1, default: 1 },
-    caps: { monthlyCashback: 5000, capRate: 5, fallbackRate: 0, capAppliesTo: ["online"], updatedCap: { effectiveFrom: "April 2026", totalCashback: 4000, onlineSubCap: 2000, offlineSubCap: 2000 } },
-    // Cap math: Until Mar 2026: ₹5000/cycle at 5% = max beneficial online ₹1L/cycle. From Apr 2026: ₹4000 total (₹2000 online + ₹2000 offline). Online max drops to ₹40K/cycle.
+    caps: { monthlyCashback: 5000, capRate: 5, fallbackRate: 0, capAppliesTo: ["online"] },
+    // Cap math: ₹5000/statement cycle at 5% = max beneficial online spend ₹1,00,000/cycle. After cap, no more cashback earned.
     partnerRates: [],
-    pointsInfo: "5% online, 1% offline · Direct cashback (auto-credited) · ₹5K cap/cycle (₹4K from Apr 2026) · No welcome benefits",
-    highlights: ["5% online cashback (no merchant restrictions)", "Auto-credited to statement", "Fee waiver ₹2L spend", "No points/redemption hassle"],
-    pros: ["Simple 5% on all online spends", "Cashback auto-credited (no redemption)", "No partner restrictions — works on any online merchant", "Fee waiver on ₹2L spend"],
-    cons: ["₹5K cap/cycle (dropping to ₹4K with sub-caps from Apr 2026)", "No cashback on fuel, utilities, insurance, rent, wallet, education, jewellery, railways, EMI", "Only 1% offline", "No lounge access", "No welcome benefits", "From Apr 2026: digital gaming, tolls, govt also excluded"],
+    pointsInfo: "5% online, 1% offline · Direct cashback (no points) · ₹5K cap/cycle · Fuel surcharge waiver ₹500-₹3K",
+    highlights: ["5% online cashback", "Auto-credited to statement", "Fee waiver ₹2L spend", "No point conversion needed"],
+    pros: ["Simple 5% on all online spends", "Cashback auto-credited (no redemption hassle)", "Fee waiver on ₹2L spend"],
+    cons: ["₹5K cashback cap per cycle", "Fuel/utilities excluded from cashback", "Only 1% offline"],
     upcoming: {
       date: "April 2026",
       changes: [
         "Total cashback cap reduced: ₹5,000 → ₹4,000 per statement cycle",
         "Online cashback capped at ₹2,000 per cycle (currently no sub-cap)",
         "Offline cashback capped at ₹2,000 per cycle (currently no sub-cap)",
-        "New exclusions: digital gaming, tolls, government transactions",
       ],
       impact: "At 5% online, max beneficial online spend drops from ₹1L to ₹40K per cycle. Heavy online spenders should consider pairing with another card after April.",
     },
-    
-    redemptionNote: "Real cashback auto-credited as statement credit after statement generation. No points, no vouchers, no redemption. No welcome benefits. Exclusions: fuel, utilities, insurance, rent, wallet, education, jewellery, railways, EMI. From Apr 2026: digital gaming, tolls, govt also excluded. Fuel surcharge waiver: 1% on ₹500–₹3,000 (max ₹100/cycle).",
     network: "Visa", lounge: "None",
 
     editorial: {
   verdict: {
     headline: "The simplest 5% online cashback card in India — real cashback, auto-credited, no points hassle. But changes are coming.",
-    body: `CASHBACK SBI Card does one thing and does it well: 5% real cashback on all online purchases, automatically credited to your statement. No points to track, no vouchers to redeem, no partner restrictions. If it's online, you get 5%. That simplicity is its biggest strength.
+    body: `SBI Cashback Card does one thing and does it well: 5% real cashback on all online purchases, automatically credited to your statement. No points to track, no vouchers to redeem, no partner restrictions. If it's online, you get 5%. That simplicity is its biggest strength.
 
-But there's a ₹5,000 per statement cycle cap (combined), and importantly, changes coming in April 2026 will reduce this to ₹4,000 with sub-caps of ₹2,000 each for online and offline. New exclusions in April: digital gaming, tolls, and government transactions join the existing excluded list (fuel, utilities, insurance, rent, wallet, education, jewellery, railways, EMI). No welcome benefits. No lounge access. Heavy online spenders should plan for the cap reduction.`,
+But there's a ₹5,000 per statement cycle cap, and importantly, changes coming in April 2026 will reduce this to ₹4,000 with sub-caps of ₹2,000 each for online and offline. Heavy online spenders should plan for this. The card remains excellent for online spends under ₹40K/cycle post-April (previously ₹1L/cycle).`,
     idealFor: "Online shoppers spending ₹20,000-80,000/month who hate dealing with reward points. The auto-credited cashback is genuinely hassle-free — no redemption required.",
     skipIf: "You want rewards on offline spending (1% is below average) or you spend over ₹1L/month online (you'll hit the cap and the effective rate drops). Also reconsider if you mainly shop on Amazon — the Amazon Pay ICICI card gives 5% with no cap.",
   },
@@ -422,9 +362,9 @@ After April 2026: Total cap drops to ₹4,000, split into ₹2,000 online + ₹2
 If you currently spend ₹60K-₹1L online per cycle, you'll need a second card to cover the overflow after April. HDFC Millennia or Amazon Pay ICICI can absorb the excess at 5%.`,
   },
   bestFor: [
-    { category: "All online purchases (pre-April 2026)", reason: "5% on everything online with no partner restrictions. Amazon, Flipkart, Myntra, Swiggy, niche stores, SaaS subscriptions — all at 5%. Excludes utility/insurance/rent/education." },
-    { category: "People who hate points systems", reason: "Real cashback, auto-credited as statement credit. No points to track, no vouchers to redeem, no expiry to worry about. The simplest rewards system available." },
-    { category: "Online shopping diversity", reason: "Unlike HDFC Millennia (5% on 10 partners only) or Amazon ICICI (5% on Amazon only), SBI Cashback gives 5% on ANY online merchant. Best for people who shop across many different sites." },
+    { category: "All online purchases (pre-April 2026)", reason: "5% on everything online with no partner restrictions. Amazon, Flipkart, Myntra, Swiggy, bill payments — all at 5%." },
+    { category: "People who hate points systems", reason: "Real cashback, auto-credited. No points to track, no vouchers to redeem, no expiry to worry about. The simplest rewards system available." },
+    { category: "Online bill payments", reason: "5% on online utility payments is rare. Most cards give 1% or exclude utilities entirely." },
   ],
   avoidFor: [
     { category: "Offline shopping", reason: "1% offline is below average. Axis ACE gives 1.5% uncapped offline.", altCard: "axis-ace" },
@@ -446,91 +386,76 @@ If you currently spend ₹60K-₹1L online per cycle, you'll need a second card 
 
   { id: "sbi-elite", name: "SBI Card ELITE", bank: "SBI", img: "👑", color: "#4338ca", fee: 4999, feeWaiver: "₹10L annual spend", type: "Premium", verified: true,
     rewards: { dining: 2.5, travel: 0.5, online: 0.5, groceries: 2.5, fuel: 0, utilities: 0.5, entertainment: 2.5, shopping: 2.5, default: 0.5 },
-    caps: { fuelSurchargeWaiverMax: 250, milestoneMaxPoints: 50000 },
-    // Reward math: 10 RP/₹100 on dining/grocery/dept stores (5X). 2 RP/₹100 on other (1X). 4 RP = ₹1 (1 RP = ₹0.25). So 5X = 2.5%, 1X = 0.5%.
     partnerRates: [
-      { name: "Dining/grocery/department stores", rate: "5X = 2.5% (10 RP/₹100)" },
-      { name: "BookMyShow", rate: "₹250 off per ticket (max 2 tickets/month, ₹6,000/year)" },
+      { name: "BookMyShow", rate: "Buy 1 Get 1 (2/month)" },
+      { name: "Dining/grocery/dept stores", rate: "5x = 2.5%" },
     ],
-    pointsInfo: "5X (2.5%) dining/grocery/dept stores, 1X (0.5%) other · 4 RP = ₹1 · 8 domestic + 6 intl lounge",
-    highlights: ["2.5% on dining/grocery/dept stores", "₹250 off movies (2/month, ₹6K/yr)", "8 domestic + 6 intl lounge", "Welcome: ₹5,000 e-gift voucher", "Milestones: up to 50K bonus pts/year"],
-    pros: ["2.5% on dining/grocery/dept stores", "Movie benefit: ₹250 off per ticket (₹6K/year)", "14 lounge visits (8 domestic + 6 intl)", "₹5,000 welcome voucher", "Milestone rewards up to ₹12,500/year"],
-    cons: ["₹4,999 fee (waiver needs ₹10L)", "Only 0.5% on non-accelerated spends", "High fee waiver threshold", "Forex markup 1.99%", "No rewards on fuel, rent, wallet, select govt"],
+    pointsInfo: "5x (2.5%) dining/grocery/dept stores, 2x (1%) other · 1pt = ₹0.50 · Fuel 1% surcharge waiver",
+    highlights: ["BookMyShow 25% off (up to ₹100, 2x/mo)", "2.5% dining/grocery", "14 lounge visits/yr", "Milestone rewards"],
+    pros: ["2.5% on dining/grocery/dept stores", "BookMyShow discount saves up to ₹200/month", "14 lounge visits"],
+    cons: ["₹4,999 fee (waiver needs ₹10L)", "Only 1% on other spends", "High fee waiver threshold"],
     
-    redemptionNote: "10 RP/₹100 on dining, groceries, dept stores (5X = 2.5%). 2 RP/₹100 on all other (1X = 0.5%). 4 RP = ₹1 (1 RP = ₹0.25). Welcome: ₹5,000 e-gift voucher. Movie: ₹250 off per ticket, max 2/month, up to ₹6,000/year. Milestones: up to 50,000 bonus RP/year (₹12,500). Fuel surcharge waiver: 1% on ₹500–₹4,000, max ₹250/cycle. Forex: 1.99%. Concierge available. No rewards on fuel, rent, wallet loads, select govt.",
-    network: "Visa/MC/Amex", lounge: "8 domestic + 6 international",
+    redemptionNote: "Point value ₹0.50 (higher than most SBI cards). Real value is BookMyShow BOGO (2 tickets/month) — worth ₹300-600/mo for regular moviegoers.",
+    network: "Visa/MC/Amex", lounge: "14/year",
 
     editorial: {
   verdict: {
-    headline: "The best card for foodies and moviegoers — 2.5% on dining plus ₹250 off movie tickets.",
-    body: `SBI ELITE occupies a unique niche: it's the best card for people who eat out frequently and watch movies regularly. 2.5% on dining, groceries, and department stores is strong (10 RP/₹100 at ₹0.25/RP). The movie benefit gives ₹250 off per ticket, max 2 tickets/month — up to ₹6,000/year in savings.
+    headline: "The best card for foodies and moviegoers — 2.5% on dining plus BookMyShow Buy 1 Get 1.",
+    body: `SBI ELITE occupies a unique niche: it's the best card for people who eat out frequently and watch movies regularly. 2.5% on dining and groceries is strong, and the BookMyShow Buy 1 Get 1 offer (twice a month) can save ₹300-600/month for regular moviegoers. That's ₹3,600-7,200/year in movie savings alone.
 
-Welcome benefit: ₹5,000 e-gift voucher. Milestone rewards: up to 50,000 bonus points/year (₹12,500 value). Lounge: 8 domestic + 6 international visits. Concierge service available. Forex markup: 1.99%.
-
-The downsides: ₹4,999 annual fee with a ₹10L spend waiver threshold is steep. 0.5% on non-accelerated categories (2 RP/₹100) is poor. No rewards on fuel, rent, wallet loads, or select govt transactions. But if dining and entertainment are your primary spends, no other card delivers this combination at this price.`,
-    idealFor: "People who eat out 3+ times/week and watch 2+ movies/month. The dining rewards + movie discount make this card pay for itself quickly. Also strong for grocery shoppers at 2.5%. The ₹5K welcome voucher + milestone rewards add ₹17,500+ value annually.",
-    skipIf: "You rarely eat out or watch movies. At 0.5% on non-dining spends and ₹4,999 fee, this card is poor value for online shoppers or general spenders. HDFC Millennia or Axis ACE are better all-rounders.",
+The downsides are real: ₹4,999 annual fee with a ₹10L spend waiver threshold is steep. 1% on non-dining categories is below average. But if dining and entertainment are your primary discretionary spends, no other card delivers this combination of rewards and perks at this price point.`,
+    idealFor: "People who eat out 3+ times/week and watch 2+ movies/month. The dining rewards + BOGO movies make this card pay for itself quickly. Also strong for grocery shoppers at 2.5%.",
+    skipIf: "You rarely eat out or watch movies. At 1% on non-dining spends and ₹4,999 fee, this card is poor value for online shoppers or general spenders. HDFC Millennia or Axis ACE are better all-rounders.",
   },
   bestFor: [
     { category: "Restaurant dining", reason: "2.5% on dining is among the best in the mid-premium segment. On ₹10K/month restaurant spending, that's ₹250/month or ₹3,000/year." },
-    { category: "Grocery shopping", reason: "2.5% on groceries (BigBasket, Blinkit, stores) is rare. Most cards give 0.5-1% on groceries." },
-    { category: "Movies via BookMyShow", reason: "₹250 off per ticket, max 2 tickets/month. For couples watching 2 movies/month, that's up to ₹6,000/year in savings." },
-    { category: "Lounge access", reason: "8 domestic + 6 international visits/year is generous for the fee bracket. Good for moderate travelers." },
+    { category: "Grocery shopping", reason: "2.5% on groceries (BigBasket, Blinkit, stores) is rare. Most cards give 1% or less on groceries." },
+    { category: "Movies via BookMyShow", reason: "Buy 1 Get 1, twice per month. For couples seeing 2 movies/month, that's 24 free tickets/year — easily worth ₹3,600+." },
+    { category: "Lounge access", reason: "14 visits/year is generous for the fee bracket. Good for moderate travelers." },
   ],
   avoidFor: [
-    { category: "Online shopping", reason: "0.5% on online purchases. HDFC Millennia gives 5% on partner merchants — 10x the return.", altCard: "hdfc-millennia" },
-    { category: "Utility bills", reason: "0.5% on utilities. Axis ACE gives 5% via Google Pay — ten times the return.", altCard: "axis-ace" },
-    { category: "Travel bookings", reason: "0.5% on travel. HDFC Regalia gives up to 13% via SmartBuy (1.33% base travel redemption). Axis Atlas gives 5% on travel.", altCard: "hdfc-regalia" },
-    { category: "Fuel, rent, wallet", reason: "No rewards at all. Need a separate card for these.", altCard: "axis-ace" },
+    { category: "Online shopping", reason: "1% on online purchases. HDFC Millennia gives 5x more on the same platforms.", altCard: "hdfc-millennia" },
+    { category: "Utility bills", reason: "1% on utilities. Axis ACE gives 5% via Google Pay — five times the return.", altCard: "axis-ace" },
+    { category: "Travel bookings", reason: "1% on travel. HDFC Regalia gives 1.33% base and up to 13% via SmartBuy. Axis Atlas gives 5% on travel.", altCard: "hdfc-regalia" },
   ],
   pairWith: [
     { combo: "SBI ELITE + HDFC Millennia", fee: "₹5,999/year", reason: "ELITE for dining/groceries/movies, Millennia for online shopping at 5%. This combo covers eating in, eating out, and shopping online.", cardId: "hdfc-millennia" },
     { combo: "SBI ELITE + Axis ACE", fee: "₹5,498/year", reason: "ELITE for dining/grocery/movies, ACE for utility bills (5%) and everything else (1.5% uncapped).", cardId: "axis-ace" },
   ],
   faq: [
-    { q: "Is the BookMyShow movie benefit really worth it?", a: "₹250 off per ticket, max 2 tickets/month. For a couple watching 2 movies/month, that's up to ₹500/month or ₹6,000/year — more than the annual fee by itself." },
-    { q: "Can I get the ₹4,999 fee waived?", a: "Yes, but you need ₹10 lakh annual spend — roughly ₹83,000/month. This is a high threshold. Most people pay the fee and justify it through dining rewards + movie discount + ₹5K welcome voucher." },
+    { q: "Is the BookMyShow BOGO offer really worth it?", a: "If you watch 2 movies/month as a couple, you save ₹300-600/month (₹150-300 per ticket saved). That's ₹3,600-7,200/year — more than the annual fee." },
+    { q: "Can I get the ₹4,999 fee waived?", a: "Yes, but you need ₹10 lakh annual spend — roughly ₹83,000/month. This is a high threshold. Most people pay the fee and justify it through dining rewards + BOGO." },
     { q: "Does 2.5% apply to Swiggy/Zomato?", a: "Swiggy/Zomato may code as dining or online depending on the platform. The 2.5% dining rate typically applies, but check your statements to confirm." },
-    { q: "SBI ELITE vs HDFC Millennia?", a: "Different strengths. ELITE wins on dining (2.5% vs 1%), groceries (2.5% vs 1%), and movies. Millennia wins on partner merchants (Amazon/Flipkart/Swiggy at 5%) and lower fee. ELITE's non-dining rate is just 0.5% vs Millennia's 1%. Pick based on whether you eat out more or shop on partner platforms." },
-    { q: "What are the milestone rewards?", a: "Up to 50,000 bonus reward points per year (₹12,500 value) based on annual spending milestones. Check SBI Card website for current milestone thresholds." },
+    { q: "SBI ELITE vs HDFC Millennia?", a: "Different strengths. ELITE wins on dining (2.5% vs 1%), groceries (2.5% vs 1%), and movies (BOGO). Millennia wins on online shopping (5% vs 1%) and lower fee. Pick based on whether you eat out more or shop online more." },
   ],
 },
   },
 
-  { id: "amazon-icici", name: "Amazon Pay ICICI Bank Credit Card", bank: "ICICI", img: "📦", color: "#d97706", fee: 0, feeWaiver: "Lifetime free", type: "Cashback", verified: true,
-    rewards: { dining: 1, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 2, entertainment: 1, shopping: 1, default: 1 },
-    // NOTE: 5% is Amazon-only (Prime). 3% Amazon (non-Prime). 2% on Amazon Pay partner merchants + utilities + insurance via Amazon Pay. 1% on other eligible spends (excludes fuel, rent, tax, education, utilities outside Amazon Pay, intl spends outside Amazon). Digital products/gift cards earn 2% only.
-    caps: { cashback: "unlimited" },
+  { id: "amazon-icici", name: "Amazon Pay ICICI", bank: "ICICI", img: "📦", color: "#d97706", fee: 0, feeWaiver: "Lifetime free", type: "Cashback", verified: true,
+    rewards: { dining: 1, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
     partnerRates: [
-      { name: "Amazon (Prime member)", rate: "5% (excl. gold, digital products, gift cards)" },
-      { name: "Amazon (non-Prime)", rate: "3% (excl. gold, digital products, gift cards)" },
-      { name: "Amazon Pay partner merchants (100+ sites)", rate: "2%" },
-      { name: "Utilities & insurance via Amazon Pay", rate: "2%" },
-      { name: "Amazon digital products & gift cards", rate: "2% (not 5%/3%)" },
+      { name: "Amazon (Prime member)", rate: "5%" },
+      { name: "Amazon (non-Prime)", rate: "3%" },
+      { name: "Amazon Pay partners", rate: "2%" },
     ],
-    pointsInfo: "5% Amazon Prime / 3% non-Prime / 2% Amazon Pay partners & utilities / 1% other · Unlimited · Amazon Pay balance",
-    highlights: ["5% on Amazon (Prime)", "3% non-Prime", "Lifetime free", "No cashback cap", "Forex 1.99% (from Oct 2025)", "2% on utilities via Amazon Pay"],
-    pros: ["Best for Amazon shopping (5% uncapped)", "Lifetime free", "Instant issuance", "Forex markup reduced to 1.99%", "2% on 100+ Amazon Pay partners + utilities + insurance"],
-    cons: ["Rewards locked to Amazon Pay balance", "Only 1% on non-Amazon/non-partner spends", "1% excludes fuel, rent, tax, education, utilities (outside Amazon Pay), intl spends", "Digital products/gift cards only 2%", "Jan 2026: 1% fee on wallet loads >₹5K and utility/transport >₹50K"],
-    
-    redemptionNote: "Cashback unlimited, auto-credited as Amazon Pay balance within 2 days of statement, never expires. 5%/3% excludes gold, digital products, gift cards (those earn 2%). 1% base excludes fuel, rent, tax, education, utilities (outside Amazon Pay), intl spends (outside Amazon). Forex: 1.99% (reduced from 3.5% effective Oct 11, 2025). 1% fuel surcharge waiver. Jan 2026: 1% fee on wallet loads >₹5,000 and utility/transportation >₹50,000.",
+    pointsInfo: "5% Amazon Prime, 3% non-Prime, 2% partners, 1% other · Credited as Amazon Pay balance",
+    highlights: ["5% on Amazon (Prime)", "3% non-Prime", "Lifetime free", "No cashback cap"],
+    pros: ["Best for Amazon shopping", "Lifetime free", "Instant issuance", "No cap"],
+    cons: ["Rewards locked to Amazon Pay balance", "Only 1% non-Amazon", "Fuel surcharge waiver only"],
     network: "Visa", lounge: "None",
 
     editorial: {
   verdict: {
-    headline: "If you shop on Amazon, this card is mandatory. Lifetime free, 5% with no cap, and now a travel companion too.",
-    body: `Amazon Pay ICICI Bank Credit Card is the easiest recommendation in Indian credit cards. It's lifetime free, gives 5% on Amazon for Prime members (3% without Prime), and has no monthly cashback cap. If you spend even ₹5,000/month on Amazon, that's ₹250/month or ₹3,000/year in rewards — from a free card.
+    headline: "If you shop on Amazon, this card is mandatory. Lifetime free, 5% with no cap, instant approval.",
+    body: `Amazon Pay ICICI is the easiest recommendation in Indian credit cards. It's lifetime free, gives 5% on Amazon for Prime members (3% without Prime), and has no monthly cashback cap. If you spend even ₹5,000/month on Amazon, that's ₹250/month or ₹3,000/year in rewards — from a free card.
 
-The 2% tier covers Amazon Pay partner merchants (100+ sites), utility bills via Amazon Pay, and insurance premiums — broader than most people realize. Since Oct 2025, forex markup dropped from 3.5% to 1.99%, making it viable for international purchases too.
-
-Rewards are credited as Amazon Pay balance (not real cashback), auto-credited within 2 days of statement, never expire. Important exclusions on the 5%/3% tier: gold purchases, digital products, and gift cards only earn 2%. The 1% base rate excludes fuel, rent, tax, education, utilities (outside Amazon Pay), and international spends outside Amazon. From Jan 2026: 1% fee on wallet loads >₹5K and utility/transportation >₹50K.`,
-    idealFor: "Anyone who shops on Amazon regularly. Even ₹3,000/month Amazon spend earns ₹1,800/year from a card that costs nothing. Also strong for Amazon Pay ecosystem users (2% on 100+ partners + utilities + insurance).",
-    skipIf: "You don't shop on Amazon, or you want real cashback (not Amazon Pay balance). The 1% base rate excludes many common categories (fuel, rent, utilities outside Amazon Pay). Not great as a standalone primary card.",
+The catch is that rewards are credited as Amazon Pay balance, not real cashback. You can use Amazon Pay at many merchants (offline and online), but you can't transfer it to your bank account. For most Amazon shoppers, this is a non-issue since you'll spend it on Amazon anyway.`,
+    idealFor: "Anyone who shops on Amazon regularly. Even ₹3,000/month Amazon spend earns ₹1,800/year from a card that costs nothing. It's essentially free money with zero effort.",
+    skipIf: "You don't shop on Amazon, or you want real cashback (not Amazon Pay balance). Also not great as a primary card — 1% on non-Amazon is below average.",
   },
   bestFor: [
-    { category: "Amazon shopping (Prime member)", reason: "5% with no monthly cap is the highest uncapped reward rate on any single-merchant card. Excludes gold, digital products, gift cards (those earn 2%)." },
-    { category: "Amazon Pay ecosystem", reason: "2% on 100+ Amazon Pay partner merchants, utility bills via Amazon Pay, and insurance premiums. Broader than most people realize." },
-    { category: "International purchases", reason: "Forex markup reduced to 1.99% (from 3.5%) in Oct 2025. For a free card, this is competitive. 5% cashback on travel bookings via Amazon Pay (Prime) stacks with this." },
+    { category: "Amazon shopping (Prime member)", reason: "5% with no monthly cap is the highest uncapped reward rate on any single-merchant card. No other card beats this for Amazon." },
+    { category: "Amazon Pay merchants", reason: "2% on Amazon Pay partner merchants — restaurants, fuel, groceries that accept Amazon Pay. Decent secondary rate." },
     { category: "First credit card", reason: "Instant approval for Amazon customers, lifetime free, no complex reward structure. Perfect starter card that builds credit history." },
   ],
   avoidFor: [
@@ -545,11 +470,9 @@ Rewards are credited as Amazon Pay balance (not real cashback), auto-credited wi
   ],
   faq: [
     { q: "Do I need Amazon Prime to get 5%?", a: "No. Without Prime you get 3% on Amazon. With Prime (₹1,499/year) you get 5%. If you spend ₹3,000+/month on Amazon, Prime pays for itself through the extra 2%." },
-    { q: "Can I convert Amazon Pay balance to cash?", a: "Not directly. Amazon Pay balance can be used on Amazon and at 100+ Amazon Pay partner merchants. But you can't transfer it to a bank account." },
+    { q: "Can I convert Amazon Pay balance to cash?", a: "Not directly. Amazon Pay balance can be used on Amazon and at Amazon Pay partner merchants (many restaurants, fuel stations, grocery stores). But you can't transfer it to a bank account." },
     { q: "Is there a cashback cap?", a: "No. This is one of the few cards with no monthly or annual cashback cap. Spend ₹1 lakh on Amazon and get ₹5,000 back (with Prime)." },
-    { q: "What about the forex markup?", a: "Reduced from 3.5% to 1.99% effective Oct 11, 2025. For a free card, this is very competitive. Prime members also get 5% on flight/hotel bookings via Amazon Pay." },
-    { q: "Do gift cards and digital products earn 5%?", a: "No. Amazon digital products and gift cards only earn 2%, not 5%/3%. Gold purchases are also excluded from cashback entirely." },
-    { q: "Amazon Pay ICICI vs HDFC Millennia for Amazon?", a: "For Amazon specifically, Amazon Pay ICICI wins — 5% with no cap vs Millennia's 5% with a ₹1,000/month shared cap across all partners. Millennia covers more platforms (Swiggy, Flipkart, Myntra)." },
+    { q: "Amazon Pay ICICI vs HDFC Millennia for Amazon?", a: "For Amazon specifically, the Amazon Pay ICICI card wins — 5% with no cap vs Millennia's 5% with a ₹1,000/month shared cap. But Millennia covers more platforms (Swiggy, Flipkart, Myntra)." },
   ],
 },
   },
@@ -557,14 +480,14 @@ Rewards are credited as Amazon Pay balance (not real cashback), auto-credited wi
   { id: "icici-coral", name: "ICICI Coral", bank: "ICICI", img: "🪸", color: "#dc2626", fee: 500, feeWaiver: "₹1.5L annual spend", type: "Entry Premium", verified: true,
     rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.25, entertainment: 0.5, shopping: 0.5, default: 0.5 },
     partnerRates: [
-      { name: "BookMyShow", rate: "Buy 1 Get 1" },
+      { name: "BookMyShow", rate: "25% off up to ₹100 on 2+ tickets, 2x/month" },
       { name: "Culinary Treats dining", rate: "15% off at partner restaurants" },
     ],
     pointsInfo: "2 points/₹100 retail (0.5%), 1 point/₹100 utility (0.25%) · 1pt = ₹0.25",
-    highlights: ["Movie BOGO BookMyShow", "Culinary Treats 15% off dining", "4+4 lounge (domestic+railway)", "Fee waiver ₹1.5L"],
-    pros: ["Movie BOGO excellent value", "8 total lounge visits", "Dining discounts", "Low fee"],
+    highlights: ["BookMyShow 25% off (up to ₹100, 2x/mo)", "Culinary Treats 15% off dining", "Lounge: 1 domestic/quarter (₹75K spend req) + 1 railway/quarter", "Fee waiver ₹1.5L"],
+    pros: ["BookMyShow discount saves up to ₹200/month", "Lounge (conditional on ₹75K quarterly spend)", "Dining discounts", "Low fee"],
     cons: ["Very low reward rate (0.5%)", "Fuel excluded", "Points redemption limited"],
-    network: "Visa/MC/RuPay/Amex", lounge: "8/year",
+    network: "Visa/MC/RuPay", lounge: "4/year (conditional)",
 
     editorial: {
   verdict: {
@@ -592,7 +515,7 @@ But the reward rate — 0.5% on most purchases — is genuinely low. On ₹50,00
   faq: [
     { q: "Is ICICI Coral worth it just for BookMyShow BOGO?", a: "If you watch 1+ movie/month, yes. One BOGO saves ₹150-300 per visit. Two movies/month means ₹300-600/month saved, far exceeding the ₹500 annual fee." },
     { q: "How does Culinary Treats work?", a: "Book through the Culinary Treats app/website, dine at partner restaurants, and get 15% off the bill. Works at 1,000+ restaurants across India." },
-    { q: "ICICI Coral vs SBI ELITE for movies?", a: "Both offer BookMyShow benefits. Coral costs ₹500, ELITE costs ₹4,999. ELITE adds 2.5% on dining/groceries, ₹5K welcome voucher, milestone rewards, and 14 lounge visits. Coral is better on value-for-money if movies are your main perk." },
+    { q: "ICICI Coral vs SBI ELITE for movies?", a: "Both offer BookMyShow BOGO. Coral costs ₹500, ELITE costs ₹4,999. ELITE adds 2.5% on dining/groceries and 14 lounge visits. Coral is better on value-for-money if movies are your main perk." },
   ],
 },
   },
@@ -658,7 +581,7 @@ For golfers, the 4 rounds/year (worth ₹4,000-8,000 depending on the course) ju
 
 Domestically, though, it's average at best. 1% on everything and ₹12,000 annual fee with a ₹15L spend waiver makes it hard to justify unless you travel internationally frequently. This is not an everyday spending card — it's a travel card you activate when crossing borders.`,
     idealFor: "Frequent international travelers spending ₹2L+/year abroad. The 2% on forex + unlimited global lounge access makes every international trip more rewarding and comfortable.",
-    skipIf: "You primarily spend domestically. 1% at a ₹12K fee is poor value. HDFC Regalia gives up to 1.33% (travel redemption) with better lounge and SmartBuy perks for a lower fee.",
+    skipIf: "You primarily spend domestically. 1% at a ₹12K fee is poor value. HDFC Regalia gives 1.33% with better lounge and SmartBuy perks for a lower fee.",
   },
   bestFor: [
     { category: "International purchases", reason: "2% on all international transactions — shopping, dining, and hotel payments abroad. Among the highest forex reward rates in India." },
@@ -666,7 +589,7 @@ Domestically, though, it's average at best. 1% on everything and ₹12,000 annua
     { category: "International online subscriptions", reason: "Subscriptions billed in foreign currency (Netflix US, Spotify, SaaS tools) earn 2% instead of the domestic 1%." },
   ],
   avoidFor: [
-    { category: "Domestic spending", reason: "1% on domestic purchases doesn't justify the ₹12K fee. HDFC Regalia gives up to 1.33% (travel redemption) with better domestic perks at lower cost.", altCard: "hdfc-regalia" },
+    { category: "Domestic spending", reason: "1% on domestic purchases doesn't justify the ₹12K fee. HDFC Regalia gives 1.33% with better domestic perks at lower cost.", altCard: "hdfc-regalia" },
     { category: "Online shopping (domestic)", reason: "1% on Amazon/Flipkart is poor. HDFC Millennia gives 5% on the same platforms.", altCard: "hdfc-millennia" },
     { category: "People who need zero forex", reason: "2% rewards doesn't mean zero forex. Forex markup is separate. IDFC FIRST WOW has actual zero forex markup.", altCard: "idfc-wow" },
   ],
@@ -691,10 +614,10 @@ Domestically, though, it's average at best. 1% on everything and ₹12,000 annua
       { name: "Swiggy, Uber, PVR, Cure.fit", rate: "4% cashback" },
     ],
     pointsInfo: "5% Flipkart/Myntra/Cleartrip, 4% preferred, 1.25% dining, 1% other",
-    highlights: ["5% Flipkart/Myntra/Cleartrip", "4% Swiggy/Uber/PVR", "4 lounge visits/yr", "No cashback cap"],
-    pros: ["Best for Flipkart ecosystem", "4% on Swiggy/dining", "Now has lounge access"],
+    highlights: ["5% Flipkart/Myntra/Cleartrip", "4% Swiggy/Uber/PVR", "Lounge discontinued (June 2025)", "No cashback cap"],
+    pros: ["Best for Flipkart ecosystem", "4% on Swiggy/dining", "Low ₹500 fee (waivable)"],
     cons: ["₹500 fee", "1% on non-partner spends", "Fuel excluded"],
-    network: "Visa", lounge: "4/year",
+    network: "Visa", lounge: "None (discontinued Jun 2025)",
 
     editorial: {
   verdict: {
@@ -737,10 +660,10 @@ Unlike Amazon Pay ICICI, the Axis Flipkart card has a ₹500 annual fee (waivabl
       { name: "Swiggy, Zomato, Ola", rate: "4%" },
     ],
     pointsInfo: "5% bills (GPay), 4% Swiggy/Zomato/Ola, 1.5% all other · ₹500/mo cap on 5%+4% only · 1.5% base uncapped",
-    highlights: ["5% on bills via GPay", "4% Swiggy/Zomato", "4 lounge visits/yr", "₹500/mo cap on accelerated only"],
+    highlights: ["5% on bills via GPay", "4% Swiggy/Zomato", "Lounge discontinued (June 2025)", "₹500/mo cap on accelerated only"],
     pros: ["5% on utility bills (rare)", "4% on food delivery", "1.5% base is uncapped", "Lounge access at low fee"],
     cons: ["₹500/mo cap on 5%+4% categories", "After cap, accelerated → 0%", "Fuel excluded"],
-    network: "Visa", lounge: "4/year",
+    network: "Visa", lounge: "4/year (₹50K quarterly spend req from Jun 2025)",
 
     editorial: {
   verdict: {
@@ -792,7 +715,7 @@ In practice: ₹500 accelerated cap means optimal bill+food spending is about �
       { name: "Airline transfers", rate: "Air India, Vistara, Singapore Airlines, Etihad, Qatar, Accor" },
     ],
     pointsInfo: "5 EDGE Miles/₹100 travel (5%), 2 other (2%) · 1 Mile ≈ ₹1 · Transferable to airlines",
-    highlights: ["5% on travel", "18 lounge visits/yr", "Airline mile transfers", "Fee waiver ₹10L"],
+    highlights: ["5% on travel", "Lounge: tier-based (4 intl at Silver, more at higher tiers)", "Airline mile transfers", "Fee waiver ₹10L"],
     pros: ["Best Indian travel rewards card", "Airline mile transfers (6 partners)", "2% on non-travel"],
     cons: ["₹5K fee", "~3.5% forex markup (no zero forex)", "Fuel excluded"],
     
@@ -812,7 +735,7 @@ The 2% base rate on non-travel spending is strong enough that Atlas works as a p
     { category: "Flight and hotel bookings", reason: "5% on travel is the highest travel rate outside of SmartBuy. Book ₹3L in annual travel and earn 15,000 EDGE Miles (worth ₹15K+ in flights)." },
     { category: "Airline mile transfers", reason: "Transfer to Air India, Vistara, Singapore Airlines, Etihad, Qatar, Accor. Premium cabin redemptions can give 3-5x value per mile." },
     { category: "All-round spending", reason: "2% base on non-travel is above average. Unlike most travel cards that give 0.5-1% on non-travel, Atlas remains competitive for everyday purchases." },
-    { category: "Lounge access", reason: "18 visits/year at a similar fee point. Excellent for domestic and international transit." },
+    { category: "Lounge access", reason: "18 visits/year (comparable to HDFC Regalia) at a similar fee point. Excellent for domestic and international transit." },
   ],
   avoidFor: [
     { category: "International transactions", reason: "~3.5% forex markup eats into rewards. For international spending, IDFC FIRST WOW (zero forex) or ICICI Emeralde (2% forex rewards) are better.", altCard: "idfc-wow" },
@@ -895,7 +818,7 @@ The catch is that you need to actively manage it. Select the wrong Feature Pack 
 
 Domestically, 1.25% on dining/travel and 0.5% on everything else is underwhelming for a ₹4,999 card. This card makes sense primarily for AU Bank customers who value lounge access and travel internationally. For domestic spending, there are much better options.`,
     idealFor: "AU Bank customers who travel frequently (domestic lounge access unlimited) and make international purchases. The 2.5% on forex spending is competitive with much pricier cards.",
-    skipIf: "You primarily spend domestically. 0.5% base rate on a ₹4,999 card is poor value. HDFC Regalia gives up to 1.33% (travel redemption) with better domestic perks for a similar fee.",
+    skipIf: "You primarily spend domestically. 0.5% base rate on a ₹4,999 card is poor value. HDFC Regalia gives 1.33% with better domestic perks for a similar fee.",
   },
   bestFor: [
     { category: "Airport lounges", reason: "Unlimited domestic and international lounge access. No visit caps — use it every time you fly." },
@@ -971,7 +894,8 @@ The domestic reward rate of 0.66% is low, and there's no lounge access. This isn
     cons: ["Low base rate (0.5%)", "Fuel excluded", "No zero forex"],
     
     redemptionNote: "Base rate (0.5%) is for normal spends. Jumps to 2.5% above ₹20K/mo and 5% in birthday month. UPI earns 1%. Effective rate depends on spending pattern.",
-    network: "Visa", lounge: "4/year",
+    network: "Visa", lounge: "1 domestic/quarter (devalued April 2026)",
+    upcoming: { date: "April 2026", changes: ["Lounge reduced to 1 domestic/quarter", "International lounge removed", "Spend conditions added"] },
 
     editorial: {
   verdict: {
@@ -1053,7 +977,7 @@ The metal card looks and feels premium, and the app is genuinely excellent. But 
       { name: "Dining/travel/online", rate: "15 pts/₹100 (3.75%)" },
     ],
     pointsInfo: "15 pts/₹100 dining/travel/online (3.75%), 3 pts other (0.75%) · 1pt = ₹0.25 · Fuel surcharge waiver",
-    highlights: ["3.75% on dining/travel/online", "18 lounge visits/yr", "Golf access", "BookMyShow discount"],
+    highlights: ["3.75% on dining/travel/online", "Lounge: tier-based (4 intl at Silver, more at higher tiers)", "Golf access", "BookMyShow discount"],
     pros: ["Excellent 3.75% on dining/travel/online", "18 lounge visits", "Golf access", "Low fee waiver ₹2.5L"],
     cons: ["0.75% on general spends", "BOB app mediocre", "Point redemption limited"],
     network: "Visa", lounge: "18/year",
@@ -1061,9 +985,9 @@ The metal card looks and feels premium, and the app is genuinely excellent. But 
     editorial: {
   verdict: {
     headline: "A hidden gem — 3.75% on dining, travel, and online from a bank nobody expects.",
-    body: `BOB Eterna flies under the radar because Bank of Baroda isn't the first name in credit cards. But 3.75% on dining, travel, and online shopping is the highest non-HDFC rate in India at this price point. Add 18 lounge visits/year and golf access, and Eterna competes directly with HDFC Regalia — and wins on base rate.
+    body: `BOB Eterna flies under the radar because Bank of Baroda isn't the first name in credit cards. But 3.75% on dining, travel, and online shopping is the highest non-HDFC rate in India at this price point. Add 18 lounge visits/year and golf access, and Eterna competes directly with HDFC Regalia.
 
-The fee waiver at ₹2.5L is more achievable than Regalia's ₹3L. The main downsides: 0.75% on general spends, BOB's mobile app is dated, and point redemption options are limited. But for the three categories where it shines, Eterna is genuinely excellent.`,
+The fee waiver at ₹2.5L is more achievable than Regalia's ₹4L. The main downsides: 0.75% on general spends, BOB's mobile app is dated, and point redemption options are limited. But for the three categories where it shines, Eterna is genuinely excellent.`,
     idealFor: "Frequent diners, travelers, and online shoppers looking for premium-level rewards without HDFC's ecosystem. If you spend ₹20K+/month across dining/travel/online, the 3.75% rate makes this one of the best value cards available.",
     skipIf: "You want a great mobile app experience or need wide redemption options. BOB's digital experience lags behind HDFC and Axis. Also skip if most spending is groceries/fuel/utilities (0.75% is below average).",
   },
@@ -1071,7 +995,7 @@ The fee waiver at ₹2.5L is more achievable than Regalia's ₹3L. The main down
     { category: "Dining", reason: "3.75% on restaurants — among the highest dining rates available. On ₹10K/month restaurant spending, that's ₹375/month or ₹4,500/year." },
     { category: "Travel", reason: "3.75% on travel bookings. Competitive with HDFC Regalia's SmartBuy rates without needing a specific booking portal." },
     { category: "Online shopping", reason: "3.75% on online shopping is exceptional — only HDFC Millennia's 5% on partners beats it, and that has a ₹1K/month cap." },
-    { category: "Lounge access", reason: "18 visits/year vs HDFC Regalia's 12 domestic + 6 intl (Priority Pass), at a lower effective fee (easier waiver)." },
+    { category: "Lounge access", reason: "18 visits/year matches HDFC Regalia, at a lower effective fee (easier waiver)." },
   ],
   avoidFor: [
     { category: "Groceries and utilities", reason: "0.75% on both. SBI ELITE gives 2.5% on groceries, Axis ACE gives 5% on utility bills.", altCard: "axis-ace" },
@@ -1085,7 +1009,7 @@ The fee waiver at ₹2.5L is more achievable than Regalia's ₹3L. The main down
   faq: [
     { q: "Is BOB Eterna easy to get?", a: "BOB has lower approval thresholds than HDFC for premium cards. If you have an existing BOB relationship or salary account, approval is typically straightforward." },
     { q: "How do I redeem BOB Eterna points?", a: "Points can be redeemed through the BOB rewards portal for gift vouchers, merchandise, or catalogue items. Direct statement credit may be available but check current options — redemption is more limited than HDFC." },
-    { q: "BOB Eterna vs HDFC Regalia?", a: "Eterna gives 3.75% on dining/travel/online vs Regalia's 0.53% cashback (1.33% travel redemption). Eterna wins on raw rate. Regalia wins on SmartBuy (up to 13%), app experience, and wider redemption options. If you don't use SmartBuy, Eterna is better value." },
+    { q: "BOB Eterna vs HDFC Regalia?", a: "Eterna gives 3.75% on dining/travel/online vs Regalia's 1.33% base. Eterna wins on raw rate. Regalia wins on SmartBuy (up to 13%), app experience, and wider redemption options. If you don't use SmartBuy, Eterna is better value." },
   ],
 },
   },
@@ -1187,14 +1111,14 @@ The milestone bonus of 10,000 points (₹2,500) at ₹5L annual spend is nice, b
 
 But 0.5-0.75% reward rates on a ₹10,000/year card are hard to justify on spending alone. The 50K points/month cap further limits earning potential. This is purely a lounge card — if you need rewards, look elsewhere.`,
     idealFor: "Ultra-frequent domestic travelers (20+ flights/year) who use airport lounges regularly. If lounge visits are your primary credit card benefit, the unlimited access justifies the fee.",
-    skipIf: "You fly less than 15 times a year. HDFC Regalia (12 domestic + 6 intl lounge visits) or BOB Eterna (18 visits) offer similar lounge access with significantly better reward rates.",
+    skipIf: "You fly less than 15 times a year. HDFC Regalia (18 lounge visits) or BOB Eterna (18 visits) offer similar lounge access with significantly better reward rates.",
   },
   bestFor: [
     { category: "Unlimited lounge access", reason: "No visit caps, domestic or international. For someone flying weekly, this is unmatched." },
     { category: "Online spending", reason: "0.75% online is the highest rate this card offers — modest but slightly above its offline rate." },
   ],
   avoidFor: [
-    { category: "Earning rewards", reason: "0.5% base on a ₹10K card. HDFC Regalia gives up to 1.33% (travel redemption) with better perks for a lower effective fee.", altCard: "hdfc-regalia" },
+    { category: "Earning rewards", reason: "0.5% base on a ₹10K card. HDFC Regalia gives 1.33% with better perks for a lower effective fee.", altCard: "hdfc-regalia" },
     { category: "Online shopping", reason: "0.75% when competitors offer 5%+. The gap is enormous.", altCard: "hdfc-millennia" },
   ],
   pairWith: [
@@ -1467,11 +1391,11 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
   { id: "icici-rubyx", name: "ICICI Rubyx Credit Card", bank: "ICICI", img: "💎", color: "#b91c1c", fee: 5000, feeWaiver: "₹3L annual spend", type: "Premium", verified: false,
     rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.25, entertainment: 0.5, shopping: 0.5, default: 0.25 },
     partnerRates: [
-      { name: "BookMyShow", rate: "Buy 1 Get 1" },
+      { name: "BookMyShow", rate: "25% off up to ₹100 on 2+ tickets, 2x/month" },
       { name: "EazyDiner", rate: "15% discount" },
     ],
     pointsInfo: "2 pts/₹100 retail (0.5%), 1 pt/₹100 utility (0.25%) · 1pt = ₹0.25 · 2,500 welcome points",
-    highlights: ["BookMyShow BOGO", "EazyDiner 15% off", "4 lounge visits/yr", "2,500 welcome points"],
+    highlights: ["BookMyShow BOGO", "EazyDiner 15% off", "Lounge discontinued (June 2025)", "2,500 welcome points"],
     pros: ["Movie BOGO", "Dining discounts", "Decent lounge access"],
     cons: ["₹5,000 fee is high for 0.5% rate", "Low utility rate", "Better options available at lower fees"],
     network: "Visa/MC", lounge: "4/year" },
@@ -1529,7 +1453,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
       { name: "BPCL fuel stations", rate: "6.25% value back" },
     ],
     pointsInfo: "6.25% at BPCL (cap ₹250/mo), 1.25% dining/grocery, 0.25% other · 10,000 welcome points",
-    highlights: ["6.25% at BPCL", "10,000 welcome points", "4 lounge visits/yr", "1.25% on dining/grocery"],
+    highlights: ["6.25% at BPCL", "10,000 welcome points", "Lounge discontinued (June 2025)", "1.25% on dining/grocery"],
     pros: ["Highest fuel reward rate among major bank cards", "Strong dining/grocery rate", "Generous welcome benefit"],
     cons: ["₹1,499 fee", "Fuel cap at ₹250/month", "Low rate on non-fuel/dining categories"],
     network: "Visa", lounge: "4/year" },
@@ -1609,7 +1533,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 0.5, entertainment: 1, shopping: 1, default: 0.5 },
     partnerRates: [],
     pointsInfo: "4 pts/₹100 on select categories (~1%), 2 pts other (~0.5%) · 5,000 welcome points",
-    highlights: ["1% on broad categories", "4 lounge visits/yr", "5,000 welcome points"],
+    highlights: ["1% on broad categories", "Lounge discontinued (June 2025)", "5,000 welcome points"],
     pros: ["Decent all-round rate", "Good lounge access for the fee", "Generous welcome benefit"],
     cons: ["Limited partner ecosystem", "BOB app not great", "0.5% on utilities/general"],
     network: "Visa", lounge: "4/year" },
@@ -1621,7 +1545,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     caps: { monthlyCashback: 500, capRate: 2, fallbackRate: 1, capAppliesTo: ["dining", "travel", "online", "groceries", "utilities", "entertainment", "shopping"] },
     partnerRates: [],
     pointsInfo: "2% cashback on most categories (cap ₹500/mo combined), 1% on other · Auto-credited · Zero forex",
-    highlights: ["2% cashback (cap ₹500/mo)", "Zero forex markup", "4 lounge visits/yr", "₹500 welcome cashback"],
+    highlights: ["2% cashback (cap ₹500/mo)", "Zero forex markup", "Lounge discontinued (June 2025)", "₹500 welcome cashback"],
     pros: ["Simple 2% cashback", "Zero forex", "Easy fee waiver at ₹50K", "Lounge access"],
     cons: ["₹500/mo cashback cap is low", "1% fallback rate", "Cap limits heavy spenders"],
     network: "Visa", lounge: "4/year" },
@@ -1647,16 +1571,16 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
   // ═══ FEDERAL BANK ═══
 
   { id: "scapia", name: "Scapia Credit Card", bank: "Federal Bank", img: "🚀", color: "#6366f1", fee: 0, feeWaiver: "Lifetime free", type: "Travel", verified: false,
-    rewards: { dining: 5, travel: 5, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 2 },
+    rewards: { dining: 2, travel: 2, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 2 },
     partnerRates: [
       { name: "Scapia Travel", rate: "5% Scapia Coins" },
       { name: "Partner restaurants", rate: "5% Scapia Coins" },
     ],
-    pointsInfo: "5% on travel/dining, 2% on everything else · 1 Scapia Coin = ₹1 · Zero forex · Unlimited lounge (spend-based)",
-    highlights: ["Lifetime free", "5% on travel/dining", "2% on everything else", "Zero forex", "Unlimited lounge (with spend criteria)"],
-    pros: ["No fee with excellent rewards", "Zero forex markup", "High base rate (2%)", "Unlimited lounge potential"],
+    pointsInfo: "~2% effective on all spends (10 Scapia Coins/₹100, 5 coins = ₹1) · Zero forex · Unlimited domestic lounge (₹20K/mo spend)",
+    highlights: ["Lifetime free", "~2% on all spends", "2% on everything else", "Zero forex", "Unlimited lounge (with spend criteria)"],
+    pros: ["No fee with excellent rewards", "Zero forex markup", "Decent 2% flat rate", "Unlimited lounge potential"],
     cons: ["Lounge access requires minimum spend", "Coins redeemable only via Scapia app", "Newer card, less established"],
-    network: "Visa", lounge: "Unlimited (conditional)" },
+    network: "Visa", lounge: "Unlimited domestic (₹20K/mo spend req, no intl)" },
 
   // ═══ HSBC ═══
 
@@ -1701,7 +1625,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
   // ═══ AU BANK ═══
 
   { id: "au-xcite-ace", name: "AU Xcite ACE Credit Card", bank: "AU Bank", img: "🎯", color: "#ea580c", fee: 0, feeWaiver: "Lifetime free", type: "Cashback", verified: false,
-    rewards: { dining: 5, travel: 5, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 2 },
+    rewards: { dining: 2, travel: 2, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 2 },
     caps: { monthlyCashback: 1000, capRate: 5, fallbackRate: 2, capAppliesTo: ["dining", "travel"] },
     partnerRates: [
       { name: "Partner restaurants", rate: "5% cashback" },
@@ -1714,13 +1638,13 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     network: "Visa", lounge: "None" },
 
   { id: "au-ixigo", name: "AU Ixigo Credit Card", bank: "AU Bank", img: "🧳", color: "#f59e0b", fee: 0, feeWaiver: "Lifetime free", type: "Travel", verified: false,
-    rewards: { dining: 2, travel: 10, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 2 },
+    rewards: { dining: 1.25, travel: 1.25, online: 1.25, groceries: 1.25, fuel: 0, utilities: 1.25, entertainment: 1.25, shopping: 1.25, default: 1.25 },
     caps: { monthlyCashback: 1000, capRate: 10, fallbackRate: 2, capAppliesTo: ["travel"] },
     partnerRates: [
       { name: "ixigo bookings", rate: "10% discount (cap ₹1,000)" },
     ],
-    pointsInfo: "10% on ixigo (cap ₹1K), 2% on everything else · Zero forex · 17 lounge visits/yr · Lifetime free",
-    highlights: ["Lifetime free", "10% on ixigo", "2% on everything", "Zero forex", "17 lounge visits/yr"],
+    pointsInfo: "~1.25% effective on all spends (10 pts/₹200, ₹0.25/pt) · ixigo 10% discount (cap ₹1K) · Zero forex · 17 lounge visits/yr · Lifetime free",
+    highlights: ["Lifetime free", "ixigo 10% discount (cap ₹1K)", "2% on everything", "Zero forex", "17 lounge visits/yr"],
     pros: ["No fee with excellent perks", "17 lounge visits (16 domestic + 1 intl)", "Zero forex markup", "2% base rate"],
     cons: ["ixigo discount capped at ₹1K", "Travel benefits tied to ixigo platform"],
     network: "Visa", lounge: "17/year" },
@@ -1772,7 +1696,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.25 },
     partnerRates: [],
     pointsInfo: "2 pts/₹100 on select categories (~0.5%), 1 pt other (~0.25%) · 5,000 welcome points",
-    highlights: ["0.5% on select categories", "4 lounge visits/yr", "5,000 welcome points"],
+    highlights: ["0.5% on select categories", "Lounge discontinued (June 2025)", "5,000 welcome points"],
     pros: ["Decent from a smaller bank", "Some lounge access"],
     cons: ["Low reward rate", "Limited partner ecosystem", "CSB has fewer branches"],
     network: "Visa", lounge: "4/year" },
@@ -1799,7 +1723,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     rewards: { dining: 1, travel: 2, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 0.5 },
     partnerRates: [],
     pointsInfo: "8 pts/₹100 travel (~2%), 4 pts other (~1%), 2 pts default (~0.5%) · 25,000 welcome points",
-    highlights: ["2% on travel", "18 lounge visits/yr", "25,000 welcome points"],
+    highlights: ["2% on travel", "Lounge: tier-based (4 intl at Silver, more at higher tiers)", "25,000 welcome points"],
     pros: ["Good travel rate", "Excellent lounge access (12 domestic + 6 intl)", "Generous welcome points"],
     cons: ["₹9,999 fee is very high", "Low non-travel rates for the price", "Better options available"],
     network: "Visa", lounge: "18/year" },
@@ -1808,7 +1732,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     rewards: { dining: 1.25, travel: 2.5, online: 1.25, groceries: 1.25, fuel: 0, utilities: 1.25, entertainment: 1.25, shopping: 1.25, default: 0.75 },
     partnerRates: [],
     pointsInfo: "10 pts/₹100 travel (~2.5%), 5 pts other (~1.25%), 3 pts default (~0.75%) · 20,000 welcome points",
-    highlights: ["2.5% on travel", "18 lounge visits/yr", "20,000 welcome points"],
+    highlights: ["2.5% on travel", "Lounge: tier-based (4 intl at Silver, more at higher tiers)", "20,000 welcome points"],
     pros: ["Good travel rewards", "Excellent lounge access", "Strong base rate (1.25%)"],
     cons: ["₹4,999 fee", "StanC limited presence in India"],
     network: "Visa", lounge: "18/year" },
@@ -1820,7 +1744,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
       { name: "Weekend dining", rate: "5% cashback" },
     ],
     pointsInfo: "5% weekend dining (cap ₹1K/mo), 2% on everything else · Auto-credited · ₹1,000 welcome cashback",
-    highlights: ["5% weekend dining", "2% base cashback", "₹1K/mo cap on dining", "4 lounge visits/yr"],
+    highlights: ["5% weekend dining", "2% base cashback", "₹1K/mo cap on dining", "Lounge discontinued (June 2025)"],
     pros: ["Strong weekend dining rate", "2% base is excellent", "Cashback auto-credited"],
     cons: ["₹1,000/mo cap on dining", "Weekend-only for 5%", "StanC limited presence"],
     network: "Visa", lounge: "4/year" },
