@@ -181,7 +181,7 @@ export default function Navbar() {
       ref={navRef}
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0.97)",
+        background: scrolled ? "var(--nav-bg-scrolled)" : "var(--nav-bg)",
         backdropFilter: "blur(16px)",
         borderBottom: "1px solid var(--border)",
       }}
