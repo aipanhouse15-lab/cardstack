@@ -120,6 +120,8 @@ const NAV_CATEGORIES = [
           { href: "/learn/loans", label: "Loan guides" },
           { href: "/learn/insurance", label: "Insurance guides" },
           { href: "/learn/savings", label: "Savings guides" },
+          { href: "/learn/tax", label: "Tax planning" },
+          { href: "/learn/mutual-funds", label: "Mutual funds" },
         ],
       },
       {
