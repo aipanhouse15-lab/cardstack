@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { CARDS, CATEGORIES, calcReward } from "@/data/cards";
+import BankLogo from "@/components/BankLogo";
 
 /*
   REVAMPED HOMEPAGE — Financial Truth Platform
@@ -169,7 +170,7 @@ export default function HomeClient() {
 
       {/* ═══ 2. CATEGORY GRID — floating up from hero ═══ */}
       <section className="max-w-[1060px] mx-auto px-6" style={{ transform: "translateY(-32px)", position: "relative", zIndex: 3 }}>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {CATEGORIES_GRID.map((cat, i) => (
             <Link key={i} href={cat.href} style={{ textDecoration: "none", color: "inherit" }}>
               <div className="rounded-2xl p-5 transition-all cursor-pointer relative overflow-hidden"
@@ -243,10 +244,16 @@ export default function HomeClient() {
                 onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "var(--shadow-hover)"; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "var(--shadow)"; }}
               >
-                <div className="w-full h-12 rounded-lg mb-3" style={{ background: POP_CARD_GRADS[i] }} />
-                <div className="text-sm font-bold" style={{ color: "var(--text)" }}>{c.name}</div>
-                <div className="text-xs mt-0.5" style={{ color: "var(--text-muted)" }}>
-                  Best: {c.rates?.[0]?.rate || "—"}% · {c.fee === 0 ? "Free" : `₹${c.fee?.toLocaleString()}/yr`}
+                <div className="flex items-center gap-3 mb-2.5">
+                  <BankLogo bank={c.bank} cardId={c.id} size={36} rounded={8} fontSize={10} />
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-bold truncate" style={{ color: "var(--text)" }}>{c.name}</div>
+                    <div className="text-[11px]" style={{ color: "var(--text-faint)" }}>{c.bank}</div>
+                  </div>
+                </div>
+                <div className="flex gap-3 text-xs">
+                  <div><span style={{ color: "var(--text-faint)" }}>Best </span><span className="font-bold" style={{ color: "var(--green)" }}>{Math.max(...Object.values(c.rewards))}%</span></div>
+                  <div><span style={{ color: "var(--text-faint)" }}>Fee </span><span className="font-semibold" style={{ color: "var(--text)" }}>{c.fee === 0 ? "Free" : `₹${c.fee?.toLocaleString()}`}</span></div>
                 </div>
               </div>
             </Link>
