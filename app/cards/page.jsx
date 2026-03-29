@@ -3,8 +3,9 @@ import Link from "next/link";
 import CardCatalogClient from "./CardCatalogClient";
 
 export const metadata = {
-  title: "Best Credit Cards in India 2026 — Compare 25+ Cards | Assure Fintech",
-  description: "Browse and compare 25+ Indian credit cards by category. Best free cards, best cashback, best for dining, travel, fuel, and more. Real cashback rates after caps.",
+  title: "Best Credit Cards in India 2026 — Compare 75 Cards | Assure Fintech",
+  description: "Browse and compare 75 Indian credit cards with cap-adjusted cashback math. Best free cards, best cashback, best for dining, travel, fuel, and more. The honest number on every card.",
+  alternates: { canonical: "/cards" },
 };
 
 // Define category winners
@@ -50,18 +51,18 @@ export default function CardsPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: "Best Credit Cards in India 2026",
-    description: "Compare 25+ Indian credit cards. Best free cards, cashback cards, travel cards, dining cards and more.",
+    description: "Compare 75 Indian credit cards with cap-adjusted cashback math. Best free, cashback, travel, dining cards and more.",
     mainEntity: {
       "@type": "ItemList",
       numberOfItems: CARDS.length,
-      itemListElement: CARDS.map((c, i) => ({
+      itemListElement: CARDS.slice(0, 25).map((c, i) => ({
         "@type": "ListItem",
         position: i + 1,
         item: {
           "@type": "FinancialProduct",
           name: c.name,
           provider: { "@type": "Organization", name: c.bank },
-          url: `https://assurefintech.com/cards/${c.id}`,
+          url: `https://www.assurefintech.com/cards/${c.id}`,
         },
       })),
     },
