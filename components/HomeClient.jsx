@@ -207,6 +207,28 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* ═══ 2B. HOW IT WORKS ═══ */}
+      <section style={{ maxWidth: 1060, margin: "0 auto", padding: "16px 24px 48px" }}>
+        <div className="text-center mb-8">
+          <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight mb-2" style={{ color: "var(--text)" }}>How Assure Fintech works</h2>
+          <p className="text-sm" style={{ color: "var(--text-muted)", maxWidth: 500, margin: "0 auto" }}>Three steps to see the number banks hide from you.</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            { step: "1", icon: "🔍", title: "Pick a product", desc: "Credit card, home loan, FD, insurance — choose what you want the truth on." },
+            { step: "2", icon: "🧮", title: "We do the math", desc: "Cap-adjusted cashback, effective APR, post-tax returns, real coverage — calculated automatically." },
+            { step: "3", icon: "💡", title: "See the honest number", desc: "The actual number you take home. Not the one in the ad." },
+          ].map((s, i) => (
+            <div key={i} className="text-center px-4 py-5">
+              <div className="w-14 h-14 rounded-2xl mx-auto mb-3.5 flex items-center justify-center text-2xl" style={{ background: "var(--accent-light)", border: "2px solid var(--accent-border)" }}>{s.icon}</div>
+              <div className="text-[10px] font-extrabold uppercase tracking-widest mb-1.5" style={{ color: v.accentText }}>Step {s.step}</div>
+              <div className="text-base font-bold mb-1.5" style={{ color: "var(--text)" }}>{s.title}</div>
+              <div className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>{s.desc}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ═══ 3. CREDIT CARD TOOLS ═══ */}
       <section style={{ maxWidth: 1060, margin: "24px auto 0", padding: "0 24px 48px" }}>
         <div className="flex items-end justify-between mb-6 flex-wrap gap-2">
@@ -271,6 +293,49 @@ export default function HomeClient() {
               >{b.label}</div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* ═══ 3B. ADVERTISED VS ACTUAL SHOWCASE ═══ */}
+      <section style={{ background: "linear-gradient(135deg, #0F0F1A, #1A1A2E)", padding: "56px 24px", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: -80, right: -40, width: 400, height: 400, background: "radial-gradient(circle, rgba(124,58,237,0.08), transparent 60%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 1060, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div className="text-center mb-9">
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.4)", marginBottom: 14 }}>
+              <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#A78BFA" }} /> The gap is real
+            </div>
+            <h2 style={{ fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 800, color: "#F1F5F9", letterSpacing: "-1px", marginBottom: 8 }}>What they advertise vs what you get</h2>
+            <p style={{ fontSize: 14, color: "rgba(255,255,255,0.3)", maxWidth: 460, margin: "0 auto" }}>Every financial product has a gap. We measure it.</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {[
+              { cat: "Credit Cards", adv: "5.0%", advLabel: "Advertised cashback", real: "2.8%", realLabel: "After monthly caps", gap: "44% lost", color: "#A78BFA", href: "/cards" },
+              { cat: "Home Loan", adv: "8.50%", advLabel: "Advertised rate", real: "9.35%", realLabel: "After all fees", gap: "₹4.7L extra", color: "#60A5FA", href: "/learn/loans" },
+              { cat: "Health Insurance", adv: "₹10L", advLabel: "Sum insured", real: "₹4.2L", realLabel: "Effective coverage", gap: "58% lost", color: "#F472B6", href: "/learn/insurance" },
+              { cat: "Fixed Deposit", adv: "7.50%", advLabel: "Bank rate", real: "0.15%", realLabel: "After tax + inflation", gap: "98% lost", color: "#FBBF24", href: "/learn/savings" },
+            ].map((c, i) => (
+              <Link key={i} href={c.href} style={{ textDecoration: "none", color: "inherit" }}>
+                <div style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.06)", borderRadius: 16, padding: 24, transition: "all 0.2s", cursor: "pointer" }}
+                  onMouseEnter={e => { e.currentTarget.style.background = "rgba(255,255,255,0.07)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                  onMouseLeave={e => { e.currentTarget.style.background = "rgba(255,255,255,0.04)"; e.currentTarget.style.transform = ""; }}
+                >
+                  <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: c.color, marginBottom: 16 }}>{c.cat}</div>
+                  <div className="flex items-center gap-4 mb-3">
+                    <div>
+                      <div style={{ fontSize: 28, fontWeight: 800, color: "rgba(255,255,255,0.15)", textDecoration: "line-through", textDecorationColor: "rgba(255,255,255,0.08)" }}>{c.adv}</div>
+                      <div style={{ fontSize: 10, color: "rgba(255,255,255,0.2)" }}>{c.advLabel}</div>
+                    </div>
+                    <div style={{ fontSize: 18, color: "rgba(255,255,255,0.1)" }}>→</div>
+                    <div>
+                      <div style={{ fontSize: 28, fontWeight: 800, color: "#F87171" }}>{c.real}</div>
+                      <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)" }}>{c.realLabel}</div>
+                    </div>
+                  </div>
+                  <div style={{ display: "inline-block", background: "rgba(248,113,113,0.1)", border: "1px solid rgba(248,113,113,0.15)", borderRadius: 8, padding: "4px 12px", fontSize: 11, fontWeight: 700, color: "#F87171" }}>{c.gap}</div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -344,6 +409,27 @@ export default function HomeClient() {
             ))}
           </div>
           <p className="text-sm" style={{ color: "var(--text-muted)", lineHeight: 1.6 }}>Every number is manually verified against bank documents. No sponsored rankings. Just math.</p>
+        </div>
+      </section>
+
+      {/* ═══ 6B. CREDIBILITY ═══ */}
+      <section style={{ maxWidth: 800, margin: "0 auto", padding: "32px 24px 48px", textAlign: "center" }}>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--accent-light)", border: "1px solid var(--accent-border)", borderRadius: 50, padding: "6px 18px", fontSize: 12, fontWeight: 600, color: v.accentText, marginBottom: 20 }}>
+          🔒 Independent. No ads. No affiliate bias.
+        </div>
+        <h2 className="text-xl sm:text-2xl font-extrabold tracking-tight mb-2.5" style={{ color: "var(--text)" }}>Built for people who read the fine print</h2>
+        <p className="text-sm mb-6" style={{ color: "var(--text-muted)", maxWidth: 500, margin: "0 auto", lineHeight: 1.6 }}>Every number on Assure Fintech is verified against bank terms and conditions. We do not accept sponsored placements or paid rankings. The math is the math.</p>
+        <div className="flex justify-center gap-8 flex-wrap">
+          {[
+            { icon: "📄", label: "Source: bank T&C documents" },
+            { icon: "🔄", label: "Updated within 48hrs of changes" },
+            { icon: "🚫", label: "Zero sponsored content" },
+          ].map((s, i) => (
+            <div key={i} className="flex items-center gap-2">
+              <span className="text-base">{s.icon}</span>
+              <span className="text-xs font-semibold" style={{ color: "var(--text-secondary)" }}>{s.label}</span>
+            </div>
+          ))}
         </div>
       </section>
 
