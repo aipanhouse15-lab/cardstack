@@ -3,6 +3,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import BankLogo from "@/components/BankLogo";
 
+// ─── DATA ───
 const AWARD_CATEGORIES = [
   { id: "free", label: "Best Free Cards", icon: "🆓", desc: "No annual fee, no catches", color: "#16a34a" },
   { id: "cashback", label: "Best Cashback", icon: "💰", desc: "Highest effective cashback", color: "#d97706" },
@@ -15,24 +16,61 @@ const AWARD_CATEGORIES = [
 ];
 
 const BADGE_MAP = {
-  "free": "BEST FREE CARD",
-  "cashback": "BEST CASHBACK",
-  "dining": "BEST FOR DINING",
-  "online": "BEST FOR ONLINE",
-  "travel": "BEST FOR TRAVEL",
-  "fuel": "BEST FOR FUEL",
-  "groceries": "BEST FOR GROCERIES",
-  "premium": "BEST PREMIUM",
+  "free": "BEST FREE CARD", "cashback": "BEST CASHBACK", "dining": "BEST FOR DINING",
+  "online": "BEST FOR ONLINE", "travel": "BEST FOR TRAVEL", "fuel": "BEST FOR FUEL",
+  "groceries": "BEST FOR GROCERIES", "premium": "BEST PREMIUM",
 };
 
-// ─── STYLE A: Editorial Card (for category view) ───
+const CC_TOOLS = [
+  { name: "Smart Swipe", desc: "Best card per purchase", href: "/smart-swipe", icon: "⚡", color: "#7C3AED" },
+  { name: "Stack Builder", desc: "Optimize your combo", href: "/stack-builder", icon: "🏗️", color: "#8B5CF6" },
+  { name: "Gap Finder", desc: "Missing categories", href: "/gap-finder", icon: "💡", color: "#D97706" },
+  { name: "Swipe Check", desc: "Verify your pick", href: "/swipe-check", icon: "🔍", color: "#EC4899" },
+  { name: "Compare", desc: "Side by side", href: "/compare", icon: "⚖️", color: "#0891B2" },
+];
+
+const BEST_FOR_LINKS = [
+  { label: "Online Shopping", href: "/best/credit-card-for-online-shopping" },
+  { label: "Swiggy & Zomato", href: "/best/credit-card-for-swiggy-zomato" },
+  { label: "Amazon", href: "/best/credit-card-for-amazon" },
+  { label: "Flipkart", href: "/best/credit-card-for-flipkart" },
+  { label: "No Annual Fee", href: "/best/best-cashback-credit-card-no-annual-fee" },
+  { label: "Groceries", href: "/best/credit-card-for-groceries" },
+  { label: "Fuel", href: "/best/credit-card-for-fuel" },
+  { label: "Utility Bills", href: "/best/credit-card-for-utility-bills" },
+  { label: "Travel", href: "/best/credit-card-for-travel" },
+  { label: "International", href: "/best/credit-card-for-international-spending" },
+  { label: "Under ₹500 Fee", href: "/best/best-credit-card-under-500-annual-fee" },
+  { label: "Beginners", href: "/best/best-credit-card-for-beginners-india" },
+  { label: "Students", href: "/best/best-credit-card-for-students-india" },
+  { label: "UPI Payments", href: "/best/best-credit-card-for-upi-payments" },
+  { label: "Dining", href: "/best/best-credit-card-for-dining-restaurants" },
+  { label: "Entertainment", href: "/best/best-credit-card-for-movie-entertainment" },
+  { label: "Bill Payments", href: "/best/best-credit-card-for-bill-payments" },
+  { label: "Rent Payment", href: "/best/best-credit-card-for-rent-payment" },
+  { label: "Lounge Access", href: "/best/best-credit-card-for-lounge-access" },
+  { label: "Zero Forex", href: "/best/best-credit-card-with-no-forex-markup" },
+  { label: "EMI Purchases", href: "/best/best-credit-card-for-emi-purchases" },
+  { label: "Insurance Premium", href: "/best/best-credit-card-for-insurance-premium" },
+  { label: "Women", href: "/best/best-credit-card-for-women-india" },
+  { label: "High Income ₹15L+", href: "/best/best-credit-card-for-high-income-earners" },
+];
+
+const COMPARE_LINKS = [
+  { label: "Millennia vs ACE", href: "/compare/hdfc-millennia-vs-axis-ace" },
+  { label: "Millennia vs Amazon", href: "/compare/hdfc-millennia-vs-amazon-pay-icici" },
+  { label: "SBI vs Amazon", href: "/compare/sbi-cashback-vs-amazon-pay-icici" },
+  { label: "Regalia vs Diners", href: "/compare/hdfc-regalia-vs-hdfc-diners-black" },
+  { label: "ACE vs Flipkart", href: "/compare/axis-ace-vs-axis-flipkart" },
+];
+
+// ─── STYLE A: Editorial Card ───
 function EditorialCard({ card, rank, badgeLabel, badgeColor }) {
   return (
     <Link href={`/cards/${card.id}`} className="no-underline block mb-5" style={{ color: "inherit" }}>
       <div className="rounded-2xl overflow-hidden transition-all cursor-pointer" style={{ border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}
         onMouseOver={e => e.currentTarget.style.boxShadow = "0 8px 32px rgba(0,0,0,0.08)"}
         onMouseOut={e => e.currentTarget.style.boxShadow = "var(--shadow)"}>
-        {/* Badge header */}
         <div style={{ background: `linear-gradient(135deg, ${badgeColor}, ${badgeColor}cc)`, padding: "11px 20px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <div className="flex items-center gap-2">
             <span className="w-6 h-6 rounded-md flex items-center justify-center text-xs font-extrabold" style={{ background: "rgba(255,255,255,0.2)", color: "#fff" }}>#{rank}</span>
@@ -43,7 +81,6 @@ function EditorialCard({ card, rank, badgeLabel, badgeColor }) {
             <span style={{ fontSize: 10, color: "rgba(255,255,255,0.5)" }}>View details →</span>
           </div>
         </div>
-        {/* Body */}
         <div className="p-5" style={{ background: "var(--bg-card)" }}>
           <div className="flex gap-5 flex-wrap">
             <div className="flex-shrink-0 rounded-xl flex items-center justify-center" style={{ width: 80, height: 52 }}>
@@ -52,7 +89,6 @@ function EditorialCard({ card, rank, badgeLabel, badgeColor }) {
             <div className="flex-1 min-w-0">
               <h3 className="text-lg sm:text-xl font-extrabold" style={{ color: "var(--text)" }}>{card.name}</h3>
               <p className="text-sm mt-0.5 mb-3" style={{ color: "var(--text-muted)" }}>{card.bank} · {card.network} · {card.type}</p>
-              {/* Stats */}
               <div className="grid grid-cols-3 md:grid-cols-5 gap-3 py-3 mb-3" style={{ borderTop: "1px solid var(--border-light)", borderBottom: "1px solid var(--border-light)" }}>
                 {[["Fee", card.fee === 0 ? "Free" : `₹${card.fee.toLocaleString()}`, card.feeWaiver, false],
                   ["Best rate", `${Math.max(...Object.values(card.rewards))}%`, null, true],
@@ -67,14 +103,12 @@ function EditorialCard({ card, rank, badgeLabel, badgeColor }) {
                   </div>
                 ))}
               </div>
-              {/* Verdict */}
               <div className="rounded-lg p-3.5 mb-3" style={{ background: "var(--bg-muted)" }}>
                 <div className="text-[10px] font-extrabold uppercase tracking-wider mb-1" style={{ color: badgeColor }}>OUR TAKE</div>
                 <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
                   {card.pros.join(". ")}. {card.cons.length > 0 ? `Watch out: ${card.cons[0].toLowerCase()}.` : ""}
                 </p>
               </div>
-              {/* Pros/Cons inline */}
               <div className="grid grid-cols-2 gap-3">
                 <div>{card.pros.map((p, j) => <div key={j} className="text-xs mb-1 flex gap-1.5" style={{ color: "var(--text-secondary)" }}><span style={{ color: "var(--green)" }}>✓</span>{p}</div>)}</div>
                 <div>{card.cons.map((c, j) => <div key={j} className="text-xs mb-1 flex gap-1.5" style={{ color: "var(--text-muted)" }}><span style={{ color: "var(--orange)" }}>✕</span>{c}</div>)}</div>
@@ -87,10 +121,9 @@ function EditorialCard({ card, rank, badgeLabel, badgeColor }) {
   );
 }
 
-// ─── STYLE B: Compact Tile (for all cards grid) ───
+// ─── STYLE B: Compact Tile ───
 function CardTile({ card }) {
   const maxEntry = Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1])[0];
-
   return (
     <Link href={`/cards/${card.id}`} className="no-underline" style={{ color: "inherit" }}>
       <div className="rounded-xl overflow-hidden transition-all cursor-pointer h-full" style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}
@@ -98,7 +131,6 @@ function CardTile({ card }) {
         onMouseOut={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = ""; e.currentTarget.style.boxShadow = "var(--shadow)"; }}>
         <div style={{ height: 3, background: card.color }} />
         <div className="p-4">
-          {/* Header */}
           <div className="flex items-center gap-3 mb-3">
             <BankLogo bank={card.bank} cardId={card.id} size={40} rounded={10} fontSize={11} />
             <div className="flex-1 min-w-0">
@@ -107,19 +139,16 @@ function CardTile({ card }) {
             </div>
             {card.verified && <span className="text-[10px] font-semibold rounded px-1.5 py-0.5 flex-shrink-0" style={{ background: "var(--green-bg)", color: "var(--green)" }}>✅</span>}
           </div>
-          {/* Stats */}
           <div className="flex gap-4 mb-3 pb-3" style={{ borderBottom: "1px solid var(--border-light)" }}>
             <div><div className="text-[10px] uppercase" style={{ color: "var(--text-faint)" }}>Best</div><div className="text-lg font-extrabold" style={{ color: "var(--green)" }}>{maxEntry[1]}%</div><div className="text-[10px]" style={{ color: "var(--green)" }}>{maxEntry[0]}</div></div>
             <div><div className="text-[10px] uppercase" style={{ color: "var(--text-faint)" }}>Base</div><div className="text-lg font-extrabold" style={{ color: "var(--text)" }}>{card.rewards.default || 0}%</div></div>
             <div><div className="text-[10px] uppercase" style={{ color: "var(--text-faint)" }}>Lounge</div><div className="text-sm font-bold" style={{ color: "var(--text)" }}>{card.lounge}</div></div>
           </div>
-          {/* Type + Cap */}
           <div className="flex items-center gap-2 flex-wrap">
             <span className="text-[10px] font-semibold rounded px-2 py-0.5" style={{ background: "var(--bg-muted)", color: "var(--text-muted)" }}>{card.type}</span>
             <span className="text-[10px] font-semibold rounded px-2 py-0.5" style={{ background: "var(--bg-muted)", color: "var(--text-muted)" }}>{card.network}</span>
             {card.caps && <span className="text-[10px] font-bold rounded px-2 py-0.5" style={{ background: "var(--orange-bg)", color: "var(--orange)" }}>⚡ Has cap</span>}
           </div>
-          {/* Pros as pills */}
           <div className="flex flex-wrap gap-1 mt-3">
             {card.pros.slice(0, 2).map((p, j) => (
               <span key={j} className="text-[10px] font-semibold rounded-md px-2 py-0.5" style={{ color: "var(--green)", background: "var(--green-bg)", border: "1px solid var(--green-border)" }}>{p}</span>
@@ -137,6 +166,7 @@ export default function CardCatalogClient({ winners, allCards, banks }) {
   const [bankFilter, setBankFilter] = useState("All");
   const [feeFilter, setFeeFilter] = useState("All");
   const [activeCategory, setActiveCategory] = useState(null);
+  const [showAllBestFor, setShowAllBestFor] = useState(false);
 
   const filtered = useMemo(() => {
     return allCards.filter(c => {
@@ -150,17 +180,99 @@ export default function CardCatalogClient({ winners, allCards, banks }) {
     });
   }, [allCards, search, bankFilter, feeFilter]);
 
+  const visibleBestFor = showAllBestFor ? BEST_FOR_LINKS : BEST_FOR_LINKS.slice(0, 12);
+
   return (
-    <section className="pt-24 pb-20 px-6" style={{ maxWidth: 1000, margin: "0 auto" }}>
-      {/* Header */}
-      <div className="mb-10">
-        <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-sm font-medium" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)", color: "var(--accent-text)" }}>💳 Card Directory</div>
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2" style={{ color: "var(--text)" }}>Best Credit Cards in India 2026</h1>
-        <p className="text-base" style={{ color: "var(--text-muted)", maxWidth: 560 }}>25 cards with real cashback math. Browse by category or search. Click any card for full details.</p>
+    <section className="pt-24 pb-20 px-6" style={{ maxWidth: 1060, margin: "0 auto" }}>
+
+      {/* ═══ HEADER ═══ */}
+      <div className="mb-6">
+        <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-sm font-medium" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)", color: "var(--accent-text)" }}>💳 Credit Cards</div>
+        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2" style={{ color: "var(--text)" }}>Credit Cards — The Honest Number</h1>
+        <p className="text-base" style={{ color: "var(--text-muted)", maxWidth: 600 }}>{allCards.length} Indian credit cards with cap-adjusted cashback math. 5 free tools. Every number verified against bank documents.</p>
       </div>
 
+      {/* ═══ TOOLS BAR ═══ */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-6">
+        {CC_TOOLS.map((t, i) => (
+          <Link key={i} href={t.href} className="no-underline" style={{ color: "inherit" }}>
+            <div className="rounded-xl p-3.5 text-center transition-all cursor-pointer"
+              style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}
+              onMouseEnter={e => { e.currentTarget.style.background = "var(--bg-section-violet)"; e.currentTarget.style.borderColor = "var(--border-section-violet)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "var(--bg-card)"; e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = ""; }}
+            >
+              <div className="text-xl mb-1">{t.icon}</div>
+              <div className="text-xs font-bold" style={{ color: "var(--text)" }}>{t.name}</div>
+              <div className="text-[10px] mt-0.5" style={{ color: "var(--text-faint)" }}>{t.desc}</div>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* ═══ WHAT CHANGED BANNER ═══ */}
+      <Link href="/whats-changed" className="block no-underline mb-6" style={{ color: "inherit" }}>
+        <div className="rounded-xl p-4 flex items-center justify-between gap-3 transition-all"
+          style={{ background: "var(--bg-section-violet)", border: "1px solid var(--border-section-violet)" }}
+          onMouseEnter={e => e.currentTarget.style.borderColor = "var(--accent)"}
+          onMouseLeave={e => e.currentTarget.style.borderColor = "var(--border-section-violet)"}
+        >
+          <div>
+            <div className="text-sm font-bold" style={{ color: "var(--accent-text)" }}>What changed — April 2026</div>
+            <div className="text-xs" style={{ color: "var(--text-muted)" }}>SBI Cashback cap cut · Axis Airtel downgraded · HDFC Swiggy card launched</div>
+          </div>
+          <span className="text-xs font-semibold flex-shrink-0" style={{ color: "var(--accent-text)" }}>View →</span>
+        </div>
+      </Link>
+
+      {/* ═══ BEST CARD FOR [X] — pSEO links ═══ */}
+      <div className="mb-8">
+        <h2 className="text-lg font-extrabold tracking-tight mb-3" style={{ color: "var(--text)" }}>Best credit card for...</h2>
+        <div className="flex gap-2 flex-wrap">
+          {visibleBestFor.map((b, i) => (
+            <Link key={i} href={b.href} className="no-underline">
+              <div className="rounded-full px-3.5 py-1.5 text-xs font-medium cursor-pointer transition-all"
+                style={{ background: "var(--accent-light)", color: "var(--accent-text)", border: "1px solid var(--accent-border)" }}
+                onMouseEnter={e => { e.currentTarget.style.background = "var(--accent)"; e.currentTarget.style.color = "#fff"; e.currentTarget.style.borderColor = "var(--accent)"; }}
+                onMouseLeave={e => { e.currentTarget.style.background = "var(--accent-light)"; e.currentTarget.style.color = "var(--accent-text)"; e.currentTarget.style.borderColor = "var(--accent-border)"; }}
+              >{b.label}</div>
+            </Link>
+          ))}
+          {!showAllBestFor && BEST_FOR_LINKS.length > 12 && (
+            <button onClick={() => setShowAllBestFor(true)} className="rounded-full px-3.5 py-1.5 text-xs font-medium cursor-pointer border-none"
+              style={{ background: "var(--bg-muted)", color: "var(--text-muted)" }}>
+              +{BEST_FOR_LINKS.length - 12} more
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* ═══ POPULAR COMPARISONS ═══ */}
+      <div className="mb-8">
+        <h2 className="text-lg font-extrabold tracking-tight mb-3" style={{ color: "var(--text)" }}>Popular comparisons</h2>
+        <div className="flex gap-2 flex-wrap">
+          {COMPARE_LINKS.map((c, i) => (
+            <Link key={i} href={c.href} className="no-underline">
+              <div className="rounded-lg px-3.5 py-2 text-xs font-medium cursor-pointer transition-all"
+                style={{ background: "var(--bg-card)", color: "var(--text-secondary)", border: "1px solid var(--border)" }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = "var(--accent)"; e.currentTarget.style.color = "var(--accent-text)"; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.color = "var(--text-secondary)"; }}
+              >⚖️ {c.label}</div>
+            </Link>
+          ))}
+          <Link href="/compare" className="no-underline">
+            <div className="rounded-lg px-3.5 py-2 text-xs font-semibold cursor-pointer" style={{ color: "var(--accent-text)" }}>All comparisons →</div>
+          </Link>
+        </div>
+      </div>
+
+      {/* ═══ DIVIDER ═══ */}
+      <div className="my-8" style={{ borderTop: "1px solid var(--border)" }} />
+
+      {/* ═══ CARD CATALOG ═══ */}
+      <h2 className="text-xl font-extrabold tracking-tight mb-4" style={{ color: "var(--text)" }}>All {allCards.length} cards</h2>
+
       {/* Category tabs */}
-      <div className="mb-8 flex gap-2 flex-wrap">
+      <div className="mb-6 flex gap-2 flex-wrap">
         <button onClick={() => setActiveCategory(null)} className="rounded-lg px-3.5 py-2 text-xs font-semibold cursor-pointer border-none transition-all"
           style={{ background: activeCategory === null ? "var(--accent)" : "var(--bg-muted)", color: activeCategory === null ? "#fff" : "var(--text-muted)", border: activeCategory === null ? "none" : "1px solid var(--border)" }}>
           All Cards ({allCards.length})
@@ -174,7 +286,7 @@ export default function CardCatalogClient({ winners, allCards, banks }) {
         ))}
       </div>
 
-      {/* ═══ CATEGORY VIEW (Style A: Editorial) ═══ */}
+      {/* CATEGORY VIEW (Editorial) */}
       {activeCategory && (() => {
         const cat = AWARD_CATEGORIES.find(c => c.id === activeCategory);
         const cards = winners[activeCategory] || [];
@@ -188,11 +300,9 @@ export default function CardCatalogClient({ winners, allCards, banks }) {
               </div>
             </div>
             <p className="text-sm mb-6" style={{ color: "var(--text-faint)" }}>Ranked by effective cashback rate. Click any card for full breakdown, caps, and partner rates.</p>
-
             {cards.map((c, i) => (
               <EditorialCard key={c.id} card={c} rank={i + 1} badgeLabel={i === 0 ? BADGE_MAP[activeCategory] || "TOP PICK" : `#${i + 1} ${cat.label.toUpperCase()}`} badgeColor={cat.color} />
             ))}
-
             <div className="mt-6 text-center">
               <Link href="/smart-swipe" className="text-sm font-semibold no-underline" style={{ color: "var(--accent-text)" }}>
                 → Not sure? Use Smart Swipe to find the best card for YOUR spending
@@ -202,10 +312,9 @@ export default function CardCatalogClient({ winners, allCards, banks }) {
         );
       })()}
 
-      {/* ═══ ALL CARDS VIEW (Style B: Compact Tiles) ═══ */}
+      {/* ALL CARDS VIEW (Tiles) */}
       {!activeCategory && (
         <>
-          {/* Filters */}
           <div className="flex gap-3 mb-6 flex-wrap items-center">
             <input type="text" placeholder="Search cards..." value={search} onChange={e => setSearch(e.target.value)}
               className="rounded-lg px-3.5 py-2.5 text-sm border-none outline-none flex-1"
@@ -228,7 +337,6 @@ export default function CardCatalogClient({ winners, allCards, banks }) {
             <div className="text-xs font-semibold" style={{ color: "var(--text-faint)" }}>{filtered.length} cards</div>
           </div>
 
-          {/* Card tiles grid */}
           <div className="grid gap-3" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))" }}>
             {filtered.map(c => <CardTile key={c.id} card={c} />)}
           </div>
@@ -274,11 +382,36 @@ export default function CardCatalogClient({ winners, allCards, banks }) {
         </>
       )}
 
-      {/* CTA */}
-      <div className="mt-16 rounded-2xl p-8 text-center" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)" }}>
+      {/* ═══ EXPLORE OTHER CATEGORIES ═══ */}
+      <div className="mt-16 rounded-2xl p-6" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
+        <h2 className="text-lg font-extrabold mb-1" style={{ color: "var(--text)" }}>The honest number on more than just credit cards</h2>
+        <p className="text-sm mb-4" style={{ color: "var(--text-muted)" }}>We calculate the gap between advertised and actual across every financial product.</p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+          {[
+            { name: "Loans", desc: "8.5% → 9.35% after fees", href: "/learn/loans", color: "#2563EB", bg: "var(--blue-bg)" },
+            { name: "Insurance", desc: "₹10L → ₹4.2L coverage", href: "/learn/insurance", color: "#DB2777", bg: "var(--pink-bg)" },
+            { name: "Savings & FDs", desc: "7.5% → 0.15% real return", href: "/learn/savings", color: "#D97706", bg: "var(--orange-bg)" },
+            { name: "Tax Planning", desc: "Old vs new regime math", href: "/learn/tax", color: "#16A34A", bg: "var(--green-bg)" },
+          ].map((cat, i) => (
+            <Link key={i} href={cat.href} className="no-underline" style={{ color: "inherit" }}>
+              <div className="rounded-xl p-4 transition-all cursor-pointer h-full"
+                style={{ background: "var(--bg-card)", border: "1px solid var(--border)" }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = cat.color; e.currentTarget.style.transform = "translateY(-2px)"; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = "var(--border)"; e.currentTarget.style.transform = ""; }}
+              >
+                <div className="text-sm font-bold mb-1" style={{ color: cat.color }}>{cat.name}</div>
+                <div className="text-xs" style={{ color: "var(--text-muted)" }}>{cat.desc}</div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* ═══ CTA ═══ */}
+      <div className="mt-8 rounded-2xl p-8 text-center" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)" }}>
         <h2 className="text-xl font-extrabold mb-2" style={{ color: "var(--text)" }}>Not sure which card is best for you?</h2>
         <p className="text-sm mb-4" style={{ color: "var(--text-muted)" }}>Smart Swipe Guide calculates your real savings with cap-aware math.</p>
-        <Link href="/smart-swipe" className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white no-underline rounded-xl px-8 py-3 text-sm font-bold">Try Smart Swipe →</Link>
+        <Link href="/smart-swipe" className="inline-block text-white no-underline rounded-xl px-8 py-3 text-sm font-bold" style={{ background: "linear-gradient(135deg, #7C3AED, #6D28D9)" }}>Try Smart Swipe →</Link>
       </div>
     </section>
   );
