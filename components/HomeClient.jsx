@@ -21,8 +21,8 @@ const TOOL_PICKER = [
   { name: "Smart swipe guide", desc: "Which card to use for every purchase", href: "/smart-swipe", color: "#8B5CF6", iconPath: "M13 2L3 14h9l-1 8 10-12h-9l1-8z", featured: true },
   { name: "Find my card gaps", desc: "Categories where you're losing rewards", href: "/gap-finder", color: "#8B5CF6", iconPath: "M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.35-4.35" },
   { name: "Compare cards", desc: "Side-by-side with honest rates", href: "/compare", color: "#8B5CF6", iconPath: "M16 3h5v5M8 3H3v5M3 16v5h5M21 16v5h-5" },
-  { name: "Loan truth calculator", desc: "Real cost of your home or personal loan", href: "/learn/loans", color: "#60A5FA", iconPath: "M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6", badge: "NEW" },
-  { name: "Insurance coverage check", desc: "What your policy actually covers", href: "/learn/insurance", color: "#F472B6", iconPath: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z", badge: "SOON" },
+  { name: "Loan truth calculator", desc: "Real cost of your home or personal loan", href: "/loan-calculator", color: "#60A5FA", iconPath: "M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6", badge: "NEW" },
+  { name: "Insurance coverage check", desc: "What your policy actually covers", href: "/insurance-calculator", color: "#F472B6", iconPath: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0016.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 002 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z", badge: "NEW" },
 ];
 
 const CATEGORIES_GRID = [

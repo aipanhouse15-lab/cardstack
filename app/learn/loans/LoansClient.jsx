@@ -32,7 +32,7 @@ const HERO_LOANS = [
 ];
 
 const QUICK_NAV = [
-  { icon: "🧮", name: "Loan Calculator", desc: "Coming April 2026", href: "#" },
+  { icon: "🧮", name: "Loan Calculator", desc: "Calculate your honest APR", href: "/loan-calculator" },
   { icon: "🏠", name: "Home Loan Guide", desc: "True cost breakdown", href: "/learn/loans/home-loan-true-cost" },
   { icon: "⚖️", name: "Bank Comparison", desc: "SBI vs HDFC vs ICICI", href: "/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" },
   { icon: "⚠️", name: "Prepayment Trap", desc: "Hidden penalties", href: "/learn/loans/prepayment-penalty-trap" },
@@ -162,7 +162,7 @@ export default function LoansClient() {
           <div className="text-2xl mb-2">🧮</div>
           <h3 className="text-lg font-extrabold mb-2" style={{ color: "var(--text)" }}>Loan Truth Calculator</h3>
           <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>Input your loan amount, rate, and fees — get your honest effective APR + exact extra cost over tenure.</p>
-          <div className="inline-block rounded-lg px-5 py-2.5 text-sm font-bold" style={{ background: "var(--bg-muted)", color: "var(--text-muted)" }}>Launching April 2026</div>
+          <Link href="/loan-calculator" className="inline-block rounded-lg px-5 py-2.5 text-sm font-bold no-underline" style={{ background: "linear-gradient(135deg, \#2563eb, \#1E40AF)", color: "\#fff" }}>Try Loan Calculator →</Link>
         </div>
 
         {/* Guides */}

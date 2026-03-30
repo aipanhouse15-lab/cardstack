@@ -8,6 +8,7 @@ const HERO_ITEMS = [
 ];
 
 const QUICK_NAV = [
+  { icon: "🧮", name: "Tax Regime Calculator", desc: "Old vs new — your number", href: "/tax-calculator" },
   { icon: "⚖️", name: "Old vs New Regime", desc: "Which saves more", href: "/learn/tax/old-vs-new-regime" },
   { icon: "💰", name: "80C Guide", desc: "Beyond the obvious", href: "/learn/tax/80c-beyond-the-obvious" },
   { icon: "🏠", name: "HRA Calculation", desc: "3-formula math", href: "/learn/tax/hra-calculation" },

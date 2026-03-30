@@ -8,6 +8,7 @@ const HERO_ITEMS = [
 ];
 
 const QUICK_NAV = [
+  { icon: "🧮", name: "Coverage Calculator", desc: "What your claim pays", href: "/insurance-calculator" },
   { icon: "📊", name: "Coverage Breakdown", desc: "What your policy pays", href: "/learn/insurance/health-insurance-effective-coverage" },
   { icon: "🏆", name: "Claim Rankings", desc: "Which insurer pays", href: "/learn/insurance/claim-settlement-ratios-2026" },
   { icon: "🏥", name: "Room Rent Trap", desc: "Proportional reduction", href: "/learn/insurance/room-rent-trap" },

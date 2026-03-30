@@ -8,7 +8,7 @@ const HERO_ITEMS = [
 ];
 
 const QUICK_NAV = [
-  { icon: "🧮", name: "FD Return Calculator", desc: "Coming soon", href: "#" },
+  { icon: "🧮", name: "FD Return Calculator", desc: "See your real return", href: "/fd-calculator" },
   { icon: "🏦", name: "FD Real Return", desc: "After tax + inflation", href: "/learn/savings/fd-real-return" },
   { icon: "⚖️", name: "PPF vs FD vs Debt", desc: "Post-tax comparison", href: "/learn/savings/ppf-vs-fd-vs-debt-fund" },
   { icon: "🏆", name: "Best FD Rates 2026", desc: "Bank-wise ranking", href: "/learn/savings/best-fd-rates-2026" },

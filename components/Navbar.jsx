@@ -50,7 +50,7 @@ const NAV_CATEGORIES = [
       {
         title: "Tools",
         links: [
-          { href: "/learn/loans", label: "Loan truth calculator", badge: "Soon" },
+          { href: "/loan-calculator", label: "Loan truth calculator", badge: "New" },
         ],
       },
       {
@@ -77,6 +77,12 @@ const NAV_CATEGORIES = [
     color: "#DB2777",
     sections: [
       {
+        title: "Tools",
+        links: [
+          { href: "/insurance-calculator", label: "Coverage calculator", badge: "New" },
+        ],
+      },
+      {
         title: "Health insurance",
         links: [
           { href: "/learn/insurance/health-insurance-effective-coverage", label: "Effective coverage breakdown" },
@@ -98,6 +104,13 @@ const NAV_CATEGORIES = [
     href: "/learn/savings",
     color: "#D97706",
     sections: [
+      {
+        title: "Tools",
+        links: [
+          { href: "/fd-calculator", label: "FD real return calculator", badge: "New" },
+          { href: "/tax-calculator", label: "Tax regime calculator", badge: "New" },
+        ],
+      },
       {
         title: "Guides",
         links: [
