@@ -91,5 +91,5 @@ Swipe Check covers 20+ merchants: Swiggy, Zomato, Blinkit, BigBasket, restaurant
 
 ## Contact
 
-Website: https://assurefintech.com
-API: https://assurefintech.com/api/recommend
+Website: https://www.assurefintech.com
+API: https://www.assurefintech.com/api/recommend
