@@ -16,8 +16,8 @@ export default function WhatsChangedPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com" },
-      { "@type": "ListItem", position: 2, name: "What Changed", item: "https://assurefintech.com/whats-changed" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com" },
+      { "@type": "ListItem", position: 2, name: "What Changed", item: "https://www.assurefintech.com/whats-changed" },
     ],
   };
 
