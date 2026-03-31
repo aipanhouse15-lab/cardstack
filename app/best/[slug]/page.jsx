@@ -58,9 +58,9 @@ export default function BestForPage({ params }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best" },
-      { "@type": "ListItem", position: 3, name: cat.shortTitle, item: `https://assurefintech.com/best/${cat.slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best" },
+      { "@type": "ListItem", position: 3, name: cat.shortTitle, item: `https://www.assurefintech.com/best/${cat.slug}` },
     ],
   };
 
