@@ -91,9 +91,9 @@ export default function CardPage({ params }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com" },
-      { "@type": "ListItem", position: 2, name: "Cards", item: "https://assurefintech.com/cards" },
-      { "@type": "ListItem", position: 3, name: card.name, item: `https://assurefintech.com/cards/${card.id}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com" },
+      { "@type": "ListItem", position: 2, name: "Cards", item: "https://www.assurefintech.com/cards" },
+      { "@type": "ListItem", position: 3, name: card.name, item: `https://www.assurefintech.com/cards/${card.id}` },
     ],
   };
 
