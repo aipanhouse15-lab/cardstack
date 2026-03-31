@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://assurefintech.com/sitemap.xml
+Sitemap: https://www.assurefintech.com/sitemap.xml
