@@ -50,9 +50,9 @@ export default function SharedStackPage({ params }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com" },
-      { "@type": "ListItem", position: 2, name: "Stack Builder", item: "https://assurefintech.com/stack-builder" },
-      { "@type": "ListItem", position: 3, name: names, item: `https://assurefintech.com/stack/${params.cards}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com" },
+      { "@type": "ListItem", position: 2, name: "Stack Builder", item: "https://www.assurefintech.com/stack-builder" },
+      { "@type": "ListItem", position: 3, name: names, item: `https://www.assurefintech.com/stack/${params.cards}` },
     ],
   };
 
