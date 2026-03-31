@@ -123,7 +123,7 @@ export async function GET(request) {
     name: "Assure Fintech API",
     version: "1.0",
     description: "Real-time Indian credit card reward data and recommendations. Free to use.",
-    base_url: "https://assurefintech.com/api",
+    base_url: "https://www.assurefintech.com/api",
     endpoints: {
       "GET /api/cards": {
         description: "List all 25+ Indian credit cards with reward rates",
