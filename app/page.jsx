@@ -22,7 +22,7 @@ export default function HomePage() {
     offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
     description: "Free credit card optimization tool for India. Compare 25+ cards, find the best card for every purchase, and discover how much you could save.",
     featureList: "Smart Swipe Guide, Card Gap Finder, Swipe Check, Head-to-Head Comparison, 25+ Indian credit cards, Real savings calculator",
-    screenshot: "https://assurefintech.com/og-image.png",
+    screenshot: "https://www.assurefintech.com/og-image.png",
     author: { "@type": "Organization", name: "Assure Fintech" },
   };
 
