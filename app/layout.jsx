@@ -6,9 +6,6 @@ import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   metadataBase: new URL("https://www.assurefintech.com"),
-  alternates: {
-    canonical: "/",
-  },
   title: {
     default: "Assure Fintech — The Honest Number on Every Financial Product",
     template: "%s | Assure Fintech",
