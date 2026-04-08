@@ -130,7 +130,7 @@ export default function CardPage({ params }) {
         <div className="flex items-center gap-4 flex-wrap mb-5">
           <BankLogo bank={card.bank} cardId={card.id} size={64} rounded={16} fontSize={16} />
           <div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight" style={{ color: "var(--text)" }}>{card.name}</h1>
+            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight" style={{ color: "var(--text)" }}>{card.name}{!/credit card/i.test(card.name) ? " Credit Card" : ""}</h1>
             <p className="text-sm mt-1" style={{ color: "var(--text-muted)" }}>{card.bank} · {card.type} · {card.network}</p>
           </div>
         </div>

@@ -24,6 +24,24 @@ export const metadata = {
     type: "website",
     locale: "en_IN",
     siteName: "Assure Fintech",
+    url: "https://www.assurefintech.com",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Assure Fintech — The Honest Number on Every Financial Product",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Assure Fintech — The Honest Number on Every Financial Product",
+    description: "Banks advertise one number. You take home another. We calculate the gap.",
+    images: ["/opengraph-image"],
+  },
+  alternates: {
+    canonical: "/",
   },
   robots: {
     index: true,
