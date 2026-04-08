@@ -492,16 +492,16 @@ The catch is that rewards are credited as Amazon Pay balance, not real cashback.
     editorial: {
   verdict: {
     headline: "A solid entry-level card for movies and dining — but the 0.5% reward rate hurts for everything else.",
-    body: `ICICI Coral's headline feature is the BookMyShow Buy 1 Get 1 offer and 15% Culinary Treats dining discount. For movie lovers and restaurant-goers, these perks alone can justify the ₹500 fee. Add 8 lounge visits (4 domestic + 4 railway), and Coral delivers surprising premium perks at an entry-level price.
+    body: `ICICI Coral's headline feature is the BookMyShow 25% off (up to ₹100, twice monthly) and 15% Culinary Treats dining discount. For movie lovers and restaurant-goers, these perks alone can justify the ₹500 fee. Add conditional lounge access (requires ₹75K quarterly spend), and Coral delivers premium perks at an entry-level price.
 
 But the reward rate — 0.5% on most purchases — is genuinely low. On ₹50,000 monthly spending, you earn ₹250 in rewards. That's below what free cards like Amazon Pay ICICI or AU LIT offer on their respective strong categories. Coral is a perks card, not a rewards card.`,
-    idealFor: "Movie lovers who watch 2+ movies/month and dine out regularly. The BOGO + dining discounts easily exceed the ₹500 fee. Also good for beginners wanting lounge access on a budget.",
+    idealFor: "Movie lovers who watch 2+ movies/month and dine out regularly. The BookMyShow discount + dining offers easily exceed the ₹500 fee. Also good for beginners wanting lounge access on a budget.",
     skipIf: "You care about maximizing cashback on spending. 0.5% is half of what Axis ACE gives on everything. Get Coral only if the movie and dining perks matter to you.",
   },
   bestFor: [
-    { category: "Movies via BookMyShow", reason: "Buy 1 Get 1 on movies is the card's killer feature. 2 movies/month = 24 free tickets/year." },
+    { category: "Movies via BookMyShow", reason: "25% off up to ₹100, twice a month. 2 movies/month = ₹200 saved (₹2,400/year)." },
     { category: "Restaurant dining (Culinary Treats)", reason: "15% off at Culinary Treats partner restaurants. On a ₹2,000 dinner, that's ₹300 saved per visit." },
-    { category: "Budget lounge access", reason: "8 lounge visits/year (including railway lounges) at just ₹500 annual fee is the best lounge-to-fee ratio available." },
+    { category: "Budget premium perks", reason: "Conditional lounge + BookMyShow + dining discounts at just ₹500 annual fee makes it a solid entry-level premium card." },
   ],
   avoidFor: [
     { category: "Online shopping", reason: "0.5% is very low. HDFC Millennia gives 10x more (5%) on the same purchases.", altCard: "hdfc-millennia" },
@@ -513,9 +513,9 @@ But the reward rate — 0.5% on most purchases — is genuinely low. On ₹50,00
     { combo: "ICICI Coral + Axis ACE", fee: "₹999/year", reason: "Coral for movie BOGO and lounge, ACE for everything else (1.5-5%). Both at low fees.", cardId: "axis-ace" },
   ],
   faq: [
-    { q: "Is ICICI Coral worth it just for BookMyShow BOGO?", a: "If you watch 1+ movie/month, yes. One BOGO saves ₹150-300 per visit. Two movies/month means ₹300-600/month saved, far exceeding the ₹500 annual fee." },
+    { q: "Is ICICI Coral worth it just for BookMyShow discount?", a: "If you watch 2+ movies/month, yes. 25% off up to ₹100 twice a month saves up to ₹200/month — ₹2,400/year, well above the ₹500 fee." },
     { q: "How does Culinary Treats work?", a: "Book through the Culinary Treats app/website, dine at partner restaurants, and get 15% off the bill. Works at 1,000+ restaurants across India." },
-    { q: "ICICI Coral vs SBI ELITE for movies?", a: "Both offer BookMyShow BOGO. Coral costs ₹500, ELITE costs ₹4,999. ELITE adds 2.5% on dining/groceries and 14 lounge visits. Coral is better on value-for-money if movies are your main perk." },
+    { q: "ICICI Coral vs SBI ELITE for movies?", a: "Both offer BookMyShow discounts. Coral costs ₹500, ELITE costs ₹4,999. ELITE adds 2.5% on dining/groceries and 14 lounge visits. Coral is better on value-for-money if movie perks are your main use case." },
   ],
 },
   },
@@ -526,10 +526,10 @@ But the reward rate — 0.5% on most purchases — is genuinely low. On ₹50,00
       { name: "International spends", rate: "4 points/₹100 (1%)" },
     ],
     pointsInfo: "2 pts/₹100 domestic (0.5%), 4 pts intl (1%), 1 pt utility (0.25%) · 1pt = ₹0.25",
-    highlights: ["Golf 4 rounds/year", "6 lounge visits/yr", "Concierge", "1% on international"],
-    pros: ["Golf privileges", "Decent lounge access", "1% on international spends"],
-    cons: ["Low domestic rate (0.5%)", "₹3,500 fee", "No zero forex markup"],
-    network: "Visa/MC/Amex", lounge: "6/year",
+    highlights: ["Golf 4 rounds/year", "Lounge: 4 domestic/quarter (₹75K spend req) + 2 intl/year", "Concierge", "1% on international"],
+    pros: ["Golf privileges", "Conditional domestic + 2 international lounges/year", "1% on international spends"],
+    cons: ["Low domestic rate (0.5%)", "₹6,500 joining + ₹3,500 renewal fee", "Lounge conditional on ₹75K quarterly spend", "No zero forex markup"],
+    network: "Visa/MC/Amex", lounge: "4 dom/qtr (conditional) + 2 intl/yr",
 
     editorial: {
   verdict: {
@@ -613,18 +613,18 @@ Domestically, though, it's average at best. 1% on everything and ₹12,000 annua
       { name: "Cleartrip", rate: "5% cashback" },
       { name: "Swiggy, Uber, PVR, Cure.fit", rate: "4% cashback" },
     ],
-    pointsInfo: "5% Flipkart/Myntra/Cleartrip, 4% preferred, 1.25% dining, 1% other",
-    highlights: ["5% Flipkart/Myntra/Cleartrip", "4% Swiggy/Uber/PVR", "Lounge discontinued (June 2025)", "No cashback cap"],
+    pointsInfo: "5% Flipkart/Myntra/Cleartrip (capped ₹4K/quarter per category), 4% preferred, 1.25% dining, 1% other",
+    highlights: ["5% Flipkart/Myntra/Cleartrip (₹4K quarterly cap per category)", "4% Swiggy/Uber/PVR", "Lounge discontinued (June 2025)", "Cap reset quarterly"],
     pros: ["Best for Flipkart ecosystem", "4% on Swiggy/dining", "Low ₹500 fee (waivable)"],
-    cons: ["₹500 fee", "1% on non-partner spends", "Fuel excluded"],
+    cons: ["₹500 fee", "1% on non-partner spends", "Fuel excluded", "₹4K quarterly cap per partner category", "Lounge access discontinued June 2025"],
     network: "Visa", lounge: "None (discontinued Jun 2025)",
 
     editorial: {
   verdict: {
-    headline: "The essential card for Flipkart and Myntra shoppers — 5% with no cashback cap.",
-    body: `Axis Flipkart card is the mirror image of Amazon Pay ICICI — it gives 5% on Flipkart, Myntra, and Cleartrip with no monthly cap. If Flipkart is your primary shopping platform, this card is a no-brainer. The 4% on Swiggy, Uber, and PVR adds a solid everyday spending layer.
+    headline: "The essential card for Flipkart and Myntra shoppers — 5% with ₹4K quarterly cap per category.",
+    body: `Axis Flipkart card is similar to Amazon Pay ICICI — it gives 5% on Flipkart, Myntra, and Cleartrip, though with a ₹4,000 quarterly cap per category (meaning ₹80,000 of partner spend is fully rewarded per quarter before you hit the cap). If Flipkart is your primary shopping platform, this card is essential. The 4% on Swiggy, Uber, and PVR adds a solid everyday spending layer.
 
-Unlike Amazon Pay ICICI, the Axis Flipkart card has a ₹500 annual fee (waivable at ₹3.5L spend) and 4 lounge visits — making it a more well-rounded card for the price. The 1% on non-partner spends is average but acceptable as a secondary card.`,
+The Axis Flipkart card has a ₹500 annual fee (waivable at ₹3.5L spend). Note: lounge access was discontinued in June 2025, so this is now purely a rewards card. The 1% on non-partner spends is average but acceptable as a secondary card.`,
     idealFor: "Flipkart and Myntra shoppers spending ₹5,000+/month on these platforms. Also strong for Swiggy users at 4%. The no-cap 5% on Flipkart makes this essential for sale season shopping.",
     skipIf: "You shop primarily on Amazon (get Amazon Pay ICICI instead). If you use both Flipkart and Amazon equally, you might want both dedicated cards rather than this one alone.",
   },
@@ -724,8 +724,8 @@ In practice: ₹500 accelerated cap means optimal bill+food spending is about �
 
     editorial: {
   verdict: {
-    headline: "India's best dedicated travel rewards card — 5% on travel, airline mile transfers, 18 lounges.",
-    body: `Axis Atlas is built from the ground up for travelers. 5% on travel bookings, transferable EDGE Miles to 6 airline partners (including Singapore Airlines and Qatar Airways), and 18 lounge visits make it the most complete travel card available in India.
+    headline: "India's best dedicated travel rewards card — 5% on travel, airline mile transfers, tier-based lounges.",
+    body: `Axis Atlas is built from the ground up for travelers. 5% on travel bookings, transferable EDGE Miles to 6 airline partners (including Singapore Airlines and Qatar Airways), and tier-based lounge access (4 international at Silver tier, more at Gold/Platinum) make it the most complete travel card available in India.
 
 The 2% base rate on non-travel spending is strong enough that Atlas works as a primary card, not just a travel card. The ₹5,000 annual fee is waivable at ₹10L spend, and the value from airline transfers alone can far exceed this. The main downside is the ~3.5% forex markup — no zero forex means international transactions are penalized.`,
     idealFor: "Frequent travelers who value airline miles and premium cabin redemptions. If you fly 4+ times a year and are willing to learn the miles game, Atlas delivers exceptional value.",
@@ -1644,9 +1644,9 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
       { name: "ixigo bookings", rate: "10% discount (cap ₹1,000)" },
     ],
     pointsInfo: "~1.25% effective on all spends (10 pts/₹200, ₹0.25/pt) · ixigo 10% discount (cap ₹1K) · Zero forex · 17 lounge visits/yr · Lifetime free",
-    highlights: ["Lifetime free", "ixigo 10% discount (cap ₹1K)", "2% on everything", "Zero forex", "17 lounge visits/yr"],
-    pros: ["No fee with excellent perks", "17 lounge visits (16 domestic + 1 intl)", "Zero forex markup", "2% base rate"],
-    cons: ["ixigo discount capped at ₹1K", "Travel benefits tied to ixigo platform"],
+    highlights: ["Lifetime free", "ixigo 10% discount (cap ₹1K)", "1.25% effective on all spends", "Zero forex", "17 lounge visits/yr"],
+    pros: ["No fee with excellent perks", "17 lounge visits (16 domestic + 1 intl)", "Zero forex markup", "1.25% effective base rate"],
+    cons: ["ixigo discount capped at ₹1K", "Travel benefits tied to ixigo platform", "Reward rate misleading: 10 pts/₹200 = 1.25% effective, not 5%"],
     network: "Visa", lounge: "17/year" },
 
   // ═══ YES BANK ═══

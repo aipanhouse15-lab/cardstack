@@ -135,20 +135,21 @@ export default function CardPage({ params }) {
           </div>
         </div>
         <div className="flex gap-6 flex-wrap">
-          {[["Annual Fee", card.fee === 0 ? "FREE" : `₹${card.fee.toLocaleString()}`],
-            ["Fee Waiver", card.feeWaiver || "N/A"],
-            ["Lounge Access", card.lounge],
-            ["Best Rate", `${maxRate}%`],
-            ["Network", card.network],
-          ].map(([label, value], i) => (
+          {[["Annual Fee", card.fee === 0 ? "FREE" : `₹${card.fee.toLocaleString()}`, card.fee > 0 ? `+18% GST = ₹${Math.round(card.fee * 1.18).toLocaleString()}` : null],
+            ["Fee Waiver", card.feeWaiver || "N/A", null],
+            ["Lounge Access", card.lounge, null],
+            ["Best Rate", `${maxRate}%`, null],
+            ["Network", card.network, null],
+          ].map(([label, value, subvalue], i) => (
             <div key={i}>
               <div className="text-[11px] uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>{label}</div>
               <div className="text-lg font-bold font-mono" style={{ color: i === 3 ? "var(--green)" : "var(--text)" }}>{value}</div>
+              {subvalue && <div className="text-[10px] font-mono mt-0.5" style={{ color: "var(--text-faint)" }}>{subvalue}</div>}
             </div>
           ))}
         </div>
         {card.verified && (
-          <div className="mt-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)", color: "var(--green)" }}>✅ Data verified March 2026</div>
+          <div className="mt-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)", color: "var(--green)" }}>✅ Data verified April 2026</div>
         )}
         {!card.verified && (
           <div className="mt-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)", color: "var(--orange)" }}>⚠️ Data being verified</div>
