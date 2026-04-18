@@ -40,9 +40,6 @@ export const metadata = {
     description: "Banks advertise one number. You take home another. We calculate the gap.",
     images: ["/opengraph-image"],
   },
-  alternates: {
-    canonical: "/",
-  },
   robots: {
     index: true,
     follow: true,

@@ -1,5 +1,9 @@
 import HomeClient from "@/components/HomeClient";
 
+export const metadata = {
+  alternates: { canonical: "/" },
+};
+
 export default function HomePage() {
   const faqSchema = {
     "@context": "https://schema.org",
