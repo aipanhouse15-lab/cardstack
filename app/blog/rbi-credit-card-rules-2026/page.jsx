@@ -312,10 +312,9 @@ export default function RbiCreditCardRulesPage() {
   };
 
   return (
-    <article style={{ maxWidth: 820, margin: "0 auto", padding: "0 0 80px", fontSize: "17px", lineHeight: 1.7, color: "var(--text)" }}>
-
-      {/* ══ HERO BANNER ══ */}
-      <div style={{ background: "linear-gradient(135deg, #1E1042, #2A1557, #1E1042)", padding: "48px 32px 52px", position: "relative", overflow: "hidden" }}>
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1E1042, #2A1557, #1E1042)", padding: "48px 32px 52px", position: "relative", overflow: "hidden", marginTop: 64 }}>
         <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #A78BFA22, transparent 65%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 820, margin: "0 auto", position: "relative", zIndex: 2 }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 16 }}>
@@ -334,15 +333,12 @@ export default function RbiCreditCardRulesPage() {
           </div>
         </div>
       </div>
-
-      {/* ══ ARTICLE BODY ══ */}
-      <div style={{ maxWidth: 820, margin: "0 auto", padding: "36px 28px 0" }}>
-
+      <article style={{ maxWidth: 820, margin: "0 auto", padding: "0 0 80px", fontSize: "17px", lineHeight: 1.7, color: "var(--text)" }}>
       <Script id="ld-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 30 }}>
+      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/">Home</Link> / <Link href="/blog">Blog</Link> / 7 RBI Credit Card Rules 2026
       </nav>
 
@@ -354,7 +350,7 @@ export default function RbiCreditCardRulesPage() {
         7 RBI Credit Card Rules Banks Hope You Never Read
       </h1>
 
-      <p style={{ fontSize: "1.22rem", color: "var(--text-muted)", marginBottom: 30, lineHeight: 1.5 }}>
+      <p style={{ fontSize: "1.22rem", color: "var(--text-muted)", marginBottom: 18, lineHeight: 1.5 }}>
         Your bank is probably violating at least two of these. Not because it's malicious — because nobody pushes back. Here are the seven RBI rules with real rupee-value penalties, the exact clause numbers, and the 3-step escalation ladder that resolves 95% of disputes without a lawyer.
       </p>
 
@@ -535,8 +531,7 @@ export default function RbiCreditCardRulesPage() {
         <strong>Last updated:</strong> April 20, 2026 · Reviewed by Ash K, Assure Fintech. All circular references cross-checked against rbi.org.in on April 19, 2026.<br />
         <strong>Disclaimer:</strong> This is general consumer information, not legal advice. Dispute outcomes depend on facts and documentation. For significant disputes involving large sums or serious harassment, consult a consumer lawyer. The RBI Ombudsman is a free, binding grievance forum — most cases resolve without legal representation.
       </div>
-    </div>
-          </div>
     </article>
+    </>
   );
 }

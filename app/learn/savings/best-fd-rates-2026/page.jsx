@@ -384,10 +384,9 @@ export default function BestFdRates2026Page() {
   };
 
   return (
-    <article style={{ maxWidth: 820, margin: "0 auto", padding: "0 0 80px", fontSize: "17px", lineHeight: 1.7, color: "var(--text)" }}>
-
-      {/* ══ HERO BANNER ══ */}
-      <div style={{ background: "linear-gradient(135deg, #422006, #92400E, #422006)", padding: "48px 32px 52px", position: "relative", overflow: "hidden" }}>
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #422006, #92400E, #422006)", padding: "48px 32px 52px", position: "relative", overflow: "hidden", marginTop: 64 }}>
         <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #FBBF2422, transparent 65%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: 820, margin: "0 auto", position: "relative", zIndex: 2 }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 16 }}>
@@ -406,16 +405,13 @@ export default function BestFdRates2026Page() {
           </div>
         </div>
       </div>
-
-      {/* ══ ARTICLE BODY ══ */}
-      <div style={{ maxWidth: 820, margin: "0 auto", padding: "36px 28px 0" }}>
-
+      <article style={{ maxWidth: 820, margin: "0 auto", padding: "0 0 80px", fontSize: "17px", lineHeight: 1.7, color: "var(--text)" }}>
       <Script id="ld-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="ld-dataset" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
 
-      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 30 }}>
+      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/">Home</Link> / <Link href="/learn">Learn</Link> / <Link href="/learn/savings">Savings</Link> / Best FD Rates 2026
       </nav>
 
@@ -427,7 +423,7 @@ export default function BestFdRates2026Page() {
         Best FD Rates in India — April 2026 <span style={{ color: "var(--text-muted)", fontWeight: 400, fontSize: "1.3rem", display: "block", marginTop: 4 }}>The post-tax real return edition</span>
       </h1>
 
-      <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", marginBottom: 36 }}>
+      <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", marginBottom: 24 }}>
         Every bank screams their FD rate like it's a lottery win. "Earn 9.00% guaranteed!" hollers the billboard outside Unity SFB. HDFC advertises 7.00%. SBI a demure 6.80%. The inconvenient truth: after TDS, slab tax and 4.7% inflation, most FDs in the 30% bracket return 0.06% to 0.20% real. Per year. Not per decade.
       </p>
 
@@ -650,8 +646,7 @@ export default function BestFdRates2026Page() {
         <strong>Last updated:</strong> April 20, 2026 · Reviewed by Ash K, Assure Fintech. Rates cross-verified against each bank's April 2026 website listings.<br />
         <strong>Disclaimer:</strong> This is not financial advice. FD rates change weekly. DICGC insurance is limited to ₹5 lakh per depositor per bank. NBFC fixed deposits are not DICGC-insured. Consult a financial advisor for personal allocation.
       </div>
-    </div>
-          </div>
     </article>
+    </>
   );
 }
