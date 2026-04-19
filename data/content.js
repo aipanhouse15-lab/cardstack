@@ -730,8 +730,8 @@ export const BLOG_POSTS = [
 // ─── POST 23 of 30: RBI Credit Card Rules ───
 {
   id: "rbi-credit-card-rules-2026",
-  title: "RBI Credit Card Rules Every Indian Should Know (2026)",
-  excerpt: "The rules that protect you — and the ones banks hope you never read. Updated for 2026.",
+  title: "7 RBI Credit Card Rules Banks Hope You Never Read (2026 Update)",
+  excerpt: "These 7 RBI rules protect you from hidden fees, forced upgrades, and unfair charges — but most Indians don't know they exist. Updated April 2026.",
   category: "Strategy",
   color: "#6366f1",
   date: "Mar 22, 2026",
