@@ -219,8 +219,8 @@ export default function Navbar() {
             <div
               key={idx}
               className="relative"
-              onMouseEnter={() => handleMouseEnter(idx)}
-              onMouseLeave={handleMouseLeave}
+              onMouseEnter={() => cat.sections && handleMouseEnter(idx)}
+              onMouseLeave={cat.sections ? handleMouseLeave : undefined}
             >
               <Link
                 href={cat.href}
@@ -231,13 +231,15 @@ export default function Navbar() {
                 }}
               >
                 {cat.label}
+                {cat.sections && (
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" style={{ opacity: 0.4, transition: "transform 0.2s", transform: openMenu === idx ? "rotate(180deg)" : "rotate(0)" }}>
                   <path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
+                )}
               </Link>
 
               {/* Mega menu dropdown */}
-              {openMenu === idx && (
+              {openMenu === idx && cat.sections && (
                 <div
                   className="absolute top-full left-0 mt-1 rounded-xl overflow-hidden"
                   style={{
