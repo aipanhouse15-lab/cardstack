@@ -346,14 +346,6 @@ export default function RbiCreditCardRulesPage() {
         By <Link href="/about"><strong>Ash K</strong></Link> · Last updated April 20, 2026 · Verified against RBI Master Direction and circulars · 11 min read
       </div>
 
-      <h1 style={{ fontSize: "2.6rem", lineHeight: 1.1, fontWeight: 800, margin: "6px 0 18px", letterSpacing: "-0.02em" }}>
-        7 RBI Credit Card Rules Banks Hope You Never Read
-      </h1>
-
-      <p style={{ fontSize: "1.22rem", color: "var(--text-muted)", marginBottom: 18, lineHeight: 1.5 }}>
-        Your bank is probably violating at least two of these. Not because it's malicious — because nobody pushes back. Here are the seven RBI rules with real rupee-value penalties, the exact clause numbers, and the 3-step escalation ladder that resolves 95% of disputes without a lawyer.
-      </p>
-
       <div style={{
         border: "2px solid #7C3AED", borderRadius: 10, padding: "20px 24px",
         margin: "22px 0", background: "rgba(124,58,237,0.06)",

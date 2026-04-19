@@ -419,15 +419,6 @@ export default function BestFdRates2026Page() {
         By <Link href="/about"><strong>Ash K</strong></Link> · Last updated April 20, 2026 · Reviewed against BankBazaar and individual bank websites · 14 min read
       </div>
 
-      <h1 style={{ fontSize: "2.4rem", lineHeight: 1.15, fontWeight: 800, margin: "6px 0 18px" }}>
-        Best FD Rates in India — April 2026 <span style={{ color: "var(--text-muted)", fontWeight: 400, fontSize: "1.3rem", display: "block", marginTop: 4 }}>The post-tax real return edition</span>
-      </h1>
-
-      <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", marginBottom: 24 }}>
-        Every bank screams their FD rate like it's a lottery win. "Earn 9.00% guaranteed!" hollers the billboard outside Unity SFB. HDFC advertises 7.00%. SBI a demure 6.80%. The inconvenient truth: after TDS, slab tax and 4.7% inflation, most FDs in the 30% bracket return 0.06% to 0.20% real. Per year. Not per decade.
-      </p>
-
-      <SafetyCheck>
         <p style={{ margin: 0 }}>
           <strong>Bottom line before you scroll:</strong> a 7% FD in the 30% tax bracket loses you about 0.45% of purchasing power every year. The only way FDs win is (a) you're a senior citizen using 80TTB, (b) you're below the ₹12L Section 87A rebate line, or (c) you're using an SFB paying 9%+ and splitting within the ₹5 lakh DICGC cap. Otherwise, you're renting safety from the bank at a negative real yield.
         </p>

@@ -403,12 +403,7 @@ export default function OldVsNewRegimePage() {
         By <Link href="/about"><strong>Ash K</strong></Link> · Last updated April 20, 2026 · 12 min read
       </div>
 
-      <h1 style={{ fontSize: "2.4rem", lineHeight: 1.15, fontWeight: 800, margin: "6px 0 18px" }}>
-        Old vs New Tax Regime — The ₹3.75 Lakh Breakeven Rule
-      </h1>
-      <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", marginBottom: 24 }}>
-        Budget 2025 moved the goalposts. If you earn up to ₹12.75 lakh, you owe ₹0 in the new regime — no receipts, no 80C, nothing. Above that, the regime that saves you money depends almost entirely on your deductions, not your salary. We ran the math for every income from ₹8 lakh to ₹25 lakh.
-      </p>
+
 
       <Verdict>
         <p style={{ margin: 0 }}>
