@@ -43,7 +43,7 @@ export default function AboutPage() {
 
         <h2 className="text-lg font-extrabold mt-2" style={{ color: "var(--text)" }}>The numbers</h2>
         <div className="grid grid-cols-3 gap-4 text-center">
-          {[["25+", "Cards analyzed"], ["11", "With cashback caps"], ["4", "Free tools"]].map(([n, l], i) => (
+          {[["75", "Cards listed"], ["11", "With cashback caps"], ["4", "Free tools"]].map(([n, l], i) => (
             <div key={i} className="rounded-xl p-4" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
               <div className="text-2xl font-extrabold" style={{ color: "var(--accent-text)" }}>{n}</div>
               <div className="text-xs mt-1" style={{ color: "var(--text-faint)" }}>{l}</div>

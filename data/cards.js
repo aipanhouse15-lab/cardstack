@@ -326,43 +326,44 @@ The card's main remaining advantage is its low ₹499 fee (waivable at ₹1L) an
 
   { id: "sbi-cashback", name: "SBI Cashback Card", bank: "SBI", img: "💰", color: "#0369a1", fee: 999, feeWaiver: "₹2L annual spend", type: "Cashback", verified: true,
     rewards: { dining: 1, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 0, entertainment: 1, shopping: 1, default: 1 },
-    caps: { monthlyCashback: 5000, capRate: 5, fallbackRate: 0, capAppliesTo: ["online"] },
-    // Cap math: ₹5000/statement cycle at 5% = max beneficial online spend ₹1,00,000/cycle. After cap, no more cashback earned.
+    caps: { monthlyCashback: 4000, capRate: 5, fallbackRate: 0, capAppliesTo: ["online"] },
+    // Cap math: ₹4,000/statement cycle (effective Apr 1 2026), split ₹2K online + ₹2K offline. At 5% online, max beneficial online spend = ₹40K/cycle.
     partnerRates: [],
-    pointsInfo: "5% online, 1% offline · Direct cashback (no points) · ₹5K cap/cycle · Fuel surcharge waiver ₹500-₹3K",
-    highlights: ["5% online cashback", "Auto-credited to statement", "Fee waiver ₹2L spend", "No point conversion needed"],
+    pointsInfo: "5% online, 1% offline · Direct cashback (no points) · ₹4K cap/cycle (₹2K online + ₹2K offline, effective Apr 2026) · Fuel surcharge waiver ₹500-₹3K",
+    highlights: ["5% online cashback", "Auto-credited to statement", "Fee waiver ₹2L spend", "₹4K cap (Apr 2026: was ₹5K)"],
     pros: ["Simple 5% on all online spends", "Cashback auto-credited (no redemption hassle)", "Fee waiver on ₹2L spend"],
-    cons: ["₹5K cashback cap per cycle", "Fuel/utilities excluded from cashback", "Only 1% offline"],
-    upcoming: {
-      date: "April 2026",
+    cons: ["₹4K cashback cap per cycle (reduced from ₹5K, Apr 2026)", "₹2K sub-cap on online + ₹2K on offline", "Fuel/utilities excluded", "New exclusions: digital gaming, tolls, govt transactions (Apr 2026)"],
+    recentChanges: {
+      date: "April 1, 2026",
       changes: [
         "Total cashback cap reduced: ₹5,000 → ₹4,000 per statement cycle",
-        "Online cashback capped at ₹2,000 per cycle (currently no sub-cap)",
-        "Offline cashback capped at ₹2,000 per cycle (currently no sub-cap)",
+        "Online cashback sub-cap: ₹2,000 per cycle (new)",
+        "Offline cashback sub-cap: ₹2,000 per cycle (new)",
+        "New exclusions: digital gaming, tolls, government transactions",
       ],
-      impact: "At 5% online, max beneficial online spend drops from ₹1L to ₹40K per cycle. Heavy online spenders should consider pairing with another card after April.",
+      impact: "At 5% online, max beneficial online spend dropped from ₹1L to ₹40K per cycle. Heavy online spenders should pair with another card.",
     },
     network: "Visa", lounge: "None",
 
     editorial: {
   verdict: {
-    headline: "The simplest 5% online cashback card in India — real cashback, auto-credited, no points hassle. But changes are coming.",
+    headline: "The simplest 5% online cashback card in India — real cashback, auto-credited, no points hassle. But April 2026 cuts hurt.",
     body: `SBI Cashback Card does one thing and does it well: 5% real cashback on all online purchases, automatically credited to your statement. No points to track, no vouchers to redeem, no partner restrictions. If it's online, you get 5%. That simplicity is its biggest strength.
 
-But there's a ₹5,000 per statement cycle cap, and importantly, changes coming in April 2026 will reduce this to ₹4,000 with sub-caps of ₹2,000 each for online and offline. Heavy online spenders should plan for this. The card remains excellent for online spends under ₹40K/cycle post-April (previously ₹1L/cycle).`,
+However, as of April 1, 2026, the monthly cap was reduced from ₹5,000 to ₹4,000 with sub-caps of ₹2,000 each for online and offline. New exclusions were added: digital gaming, tolls, and government transactions. Heavy online spenders should plan accordingly. The card remains excellent for online spends under ₹40K/cycle (previously ₹1L/cycle).`,
     idealFor: "Online shoppers spending ₹20,000-80,000/month who hate dealing with reward points. The auto-credited cashback is genuinely hassle-free — no redemption required.",
     skipIf: "You want rewards on offline spending (1% is below average) or you spend over ₹1L/month online (you'll hit the cap and the effective rate drops). Also reconsider if you mainly shop on Amazon — the Amazon Pay ICICI card gives 5% with no cap.",
   },
   capMath: {
-    title: "Understanding the cashback cap — and what changes in April 2026",
-    body: `Currently: ₹5,000 cashback cap per statement cycle on online purchases at 5%. That means your maximum beneficial online spend is ₹1,00,000/cycle.
+    title: "Understanding the cashback cap — what changed on April 1, 2026",
+    body: `Before April 2026: ₹5,000 cashback cap per statement cycle on online purchases at 5%. Maximum beneficial online spend was ₹1,00,000/cycle.
 
-After April 2026: Total cap drops to ₹4,000, split into ₹2,000 online + ₹2,000 offline sub-caps. Your maximum beneficial online spend drops to ₹40,000/cycle at 5%. This is a 60% reduction in the useful spending range.
+Since April 1, 2026: Total cap is now ₹4,000, split into ₹2,000 online + ₹2,000 offline sub-caps. Maximum beneficial online spend is now ₹40,000/cycle at 5%. This is a 60% reduction in the useful spending range. Digital gaming, tolls, and government transactions are now excluded entirely.
 
-If you currently spend ₹60K-₹1L online per cycle, you'll need a second card to cover the overflow after April. HDFC Millennia or Amazon Pay ICICI can absorb the excess at 5%.`,
+If you spend ₹60K-₹1L online per cycle, you need a second card for the overflow. HDFC Millennia or Amazon Pay ICICI can absorb the excess at 5%.`,
   },
   bestFor: [
-    { category: "All online purchases (pre-April 2026)", reason: "5% on everything online with no partner restrictions. Amazon, Flipkart, Myntra, Swiggy, bill payments — all at 5%." },
+    { category: "Online purchases under ₹40K/cycle", reason: "5% on everything online with no partner restrictions. Amazon, Flipkart, Myntra, Swiggy, bill payments — all at 5%. Max ₹2K cashback per cycle on online." },
     { category: "People who hate points systems", reason: "Real cashback, auto-credited. No points to track, no vouchers to redeem, no expiry to worry about. The simplest rewards system available." },
     { category: "Online bill payments", reason: "5% on online utility payments is rare. Most cards give 1% or exclude utilities entirely." },
   ],
@@ -660,8 +661,8 @@ The Axis Flipkart card has a ₹500 annual fee (waivable at ₹3.5L spend). Note
       { name: "Swiggy, Zomato, Ola", rate: "4%" },
     ],
     pointsInfo: "5% bills (GPay), 4% Swiggy/Zomato/Ola, 1.5% all other · ₹500/mo cap on 5%+4% only · 1.5% base uncapped",
-    highlights: ["5% on bills via GPay", "4% Swiggy/Zomato", "Lounge discontinued (June 2025)", "₹500/mo cap on accelerated only"],
-    pros: ["5% on utility bills (rare)", "4% on food delivery", "1.5% base is uncapped", "Lounge access at low fee"],
+    highlights: ["5% on bills via GPay", "4% Swiggy/Zomato", "Lounge: 4/yr (₹50K spend req)", "₹500/mo cap on accelerated only"],
+    pros: ["5% on utility bills (rare)", "4% on food delivery", "1.5% base is uncapped", "Lounge: 4/year (conditional on ₹50K prev-3mo spend)"],
     cons: ["₹500/mo cap on 5%+4% categories", "After cap, accelerated → 0%", "Fuel excluded"],
     network: "Visa", lounge: "4/year (₹50K quarterly spend req from Jun 2025)",
 

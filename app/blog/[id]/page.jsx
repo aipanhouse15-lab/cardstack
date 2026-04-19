@@ -53,6 +53,7 @@ export default function BlogPostPage({ params }) {
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
             <span className="text-xs font-semibold rounded-md px-2.5 py-1" style={{ color: post.color, background: `${post.color}12` }}>{post.category}</span>
+            <span className="text-sm" style={{ color: "var(--text-faint)" }}>By <span className="font-semibold" style={{ color: "var(--text-muted)" }}>Ashutosh</span></span>
             <span className="text-sm" style={{ color: "var(--text-faint)" }}>{post.date}</span>
             <span className="text-sm" style={{ color: "var(--text-faint)" }}>· {post.readTime} read</span>
           </div>

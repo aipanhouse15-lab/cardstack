@@ -1,8 +1,8 @@
 # Assure Fintech
 
-> India's smartest credit card optimization tool. Free, no sign-up, zero tracking. 25+ Indian credit cards, real savings math, merchant-level recommendations.
+> India's smartest credit card optimization tool. Free, no sign-up, zero tracking. 75+ Indian credit cards, real savings math, merchant-level recommendations.
 
-Assure Fintech helps Indian credit card holders maximize their rewards by telling them exactly which card to use for every purchase. We maintain accurate reward rate data for 25+ popular Indian credit cards across 8 spending categories.
+Assure Fintech helps Indian credit card holders maximize their rewards by telling them exactly which card to use for every purchase. We maintain accurate reward rate data for 75 Indian credit cards across 8 spending categories.
 
 ## Tools
 
@@ -10,9 +10,9 @@ Assure Fintech helps Indian credit card holders maximize their rewards by tellin
 - [Card Gap Finder](/gap-finder): Analyzes your current card stack and identifies categories where better cards exist. Shows exactly how much money you're leaving on the table per year.
 - [Swipe Check](/swipe-check): Merchant-level recommendations. Pick a specific merchant (Swiggy, Amazon, Zomato, Flipkart, etc.) and get the top 3 cards to use with pro tips and gotchas.
 - [Compare](/compare): Head-to-head comparison of any two Indian credit cards across all 8 spending categories with winner scoring.
-- [Stack Builder](/stack-builder): Find the optimal 2 or 3 card combo. Tests every possible combination from 25 cards for max savings.
+- [Stack Builder](/stack-builder): Find the optimal 2 or 3 card combo. Tests every possible combination from 75 cards (25 verified) for max savings.
 
-## Card Reviews (25 cards)
+## Card Reviews (75 cards (25 verified))
 
 Every card has a detailed review page with: editorial verdict, cap math explained in plain English, "best used for" and "don't use this for" sections with cross-links, recommended card pairings, and FAQ. All numbers auto-update from our verified database.
 
@@ -58,7 +58,7 @@ Auto-generated head-to-head comparisons with cap-aware cashback across 8 categor
 
 Assure Fintech provides a free, public API for accessing Indian credit card reward data.
 
-- [All Cards](/api/cards): Returns all 25+ cards with reward rates, fees, pros, cons, lounge access, network
+- [All Cards](/api/cards): Returns all 75 cards with reward rates, fees, pros, cons, lounge access, network
 - [Single Card](/api/cards/hdfc-regalia): Full details for a specific card with computed insights (best category, average rate, breakeven spend)
 - [Recommendations](/api/recommend): Smart recommendations engine
   - Best card for a category: `/api/recommend?for=dining`
@@ -70,7 +70,7 @@ API is open, requires no authentication, and returns JSON with CORS enabled.
 
 ## Card Database
 
-We track reward rates for 25 Indian credit cards from 12 banks: HDFC, SBI, ICICI, Axis, AU Bank, IDFC, OneCard, BOB, Kotak, IndusInd, YES Bank, RBL.
+We track reward rates for 75 Indian credit cards from 12 banks: HDFC, SBI, ICICI, Axis, AU Bank, IDFC, OneCard, BOB, Kotak, IndusInd, YES Bank, RBL.
 
 ## Spending Categories
 

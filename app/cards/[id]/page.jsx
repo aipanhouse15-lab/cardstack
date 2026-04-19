@@ -132,6 +132,7 @@ export default function CardPage({ params }) {
           <div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight" style={{ color: "var(--text)" }}>{card.name}{!/credit card/i.test(card.name) ? " Credit Card" : ""}</h1>
             <p className="text-sm mt-1" style={{ color: "var(--text-muted)" }}>{card.bank} · {card.type} · {card.network}</p>
+            <p className="text-xs mt-2" style={{ color: "var(--text-faint)" }}>By <span className="font-semibold" style={{ color: "var(--text-muted)" }}>Ashutosh</span> · Last updated April 2026</p>
           </div>
         </div>
         <div className="flex gap-6 flex-wrap">
