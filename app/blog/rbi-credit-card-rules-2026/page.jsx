@@ -502,17 +502,20 @@ export default function RbiCreditCardRulesPage() {
         </details>
       ))}
 
-      <h2>Related reading</h2>
-      <ul>
+      <h2 style={{ marginTop: 56 }}>Related reading</h2>
+      <div style={{ borderRadius: 12, border: "1px solid var(--border)", overflow: "hidden", marginBottom: 36 }}>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
         <li><Link href="/blog/cashback-rate-is-a-lie">The cashback rate on your card is a lie — how caps eat your rewards</Link></li>
         <li><Link href="/blog/credit-utilization-ratio-guide">Credit utilisation and your CIBIL score — the optimal ratio</Link></li>
         <li><Link href="/blog/right-way-pay-credit-card-bill">The right way to pay your credit card bill (and why auto-debit to the wrong date hurts)</Link></li>
         <li><Link href="/blog/get-annual-fee-waived-scripts">Scripts to get your annual fee waived (based on the 30-day notice rule)</Link></li>
         <li><Link href="/blog/should-you-close-old-credit-card">Should you close an old credit card? (Impact on credit age)</Link></li>
       </ul>
+      </div>
 
-      <h2>Sources &amp; circulars</h2>
-      <ul style={{ fontSize: "14.5px" }}>
+      <h2 style={{ marginTop: 56 }}>Sources &amp; circulars</h2>
+      <div style={{ borderRadius: 12, border: "1px solid var(--border)", padding: "20px 24px", background: "var(--bg-muted, rgba(0,0,0,0.02))", marginBottom: 36 }}>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "14px", color: "var(--text-muted)" }}>
         <li>RBI Master Direction — Credit Card and Debit Card (Issuance and Conduct) Directions, 2022. <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12300" target="_blank" rel="noopener">rbi.org.in</a></li>
         <li>RBI Amendment dated March 7, 2024 — cooling-off period, billing cycle choice, Key Fact Statement. <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12620" target="_blank" rel="noopener">rbi.org.in notification</a></li>
         <li>RBI Compensation Framework — Circular RBI/2023-24/72 dated October 26, 2023 — ₹100/day for delayed dispute resolution.</li>
@@ -520,6 +523,7 @@ export default function RbiCreditCardRulesPage() {
         <li>RBI Integrated Ombudsman Scheme, 2021 (expanded January 2025). <a href="https://cms.rbi.org.in" target="_blank" rel="noopener">cms.rbi.org.in</a></li>
         <li>RBI Circular 2026/06 — reaffirmation of card closure timelines and ₹500/day penalty, April 2026.</li>
       </ul>
+      </div>
 
       <div style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14, marginTop: 30 }}>
         <strong>Last updated:</strong> April 20, 2026 · Reviewed by Ash K, Assure Fintech. All circular references cross-checked against rbi.org.in on April 19, 2026.<br />

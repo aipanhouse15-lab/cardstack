@@ -148,6 +148,11 @@ const NAV_CATEGORIES = [
       },
     ],
   },
+  {
+    label: "Blog",
+    href: "/blog",
+    color: "#7C3AED",
+  },
 ];
 
 export default function Navbar() {

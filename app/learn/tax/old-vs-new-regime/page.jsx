@@ -614,22 +614,26 @@ export default function OldVsNewRegimePage() {
         </details>
       ))}
 
-      <h2>Related reading</h2>
-      <ul>
+      <h2 style={{ marginTop: 56 }}>Related reading</h2>
+      <div style={{ borderRadius: 12, border: "1px solid var(--border)", overflow: "hidden", marginBottom: 36 }}>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
         <li><Link href="/learn/tax/80c-beyond-the-obvious">80C beyond the obvious — ranking the 10 instruments by real return</Link></li>
         <li><Link href="/learn/tax/hra-calculation">How HRA exemption is actually calculated (with 3 worked examples)</Link></li>
         <li><Link href="/learn/tax/tax-on-credit-card-rewards">Are credit card rewards taxable in India?</Link></li>
         <li><Link href="/tools/tax-calculator">Tax Regime Calculator — runs both regimes in parallel</Link></li>
         <li><Link href="/learn/savings/tax-saving-fd-vs-elss-vs-ppf">Tax-saving FD vs ELSS vs PPF — the real post-tax returns</Link></li>
       </ul>
+      </div>
 
-      <h2>Sources</h2>
-      <ul style={{ fontSize: "14.5px" }}>
+      <h2 style={{ marginTop: 56 }}>Sources</h2>
+      <div style={{ borderRadius: 12, border: "1px solid var(--border)", padding: "20px 24px", background: "var(--bg-muted, rgba(0,0,0,0.02))", marginBottom: 36 }}>
+      <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "14px", color: "var(--text-muted)" }}>
         <li>Press Information Bureau — Budget 2025 announcement (Feb 1 2025), regime restructuring and ₹12L rebate. <a href="https://pib.gov.in/PressReleasePage.aspx?PRID=2098353" target="_blank" rel="noopener">pib.gov.in</a></li>
         <li>Income Tax Department — Finance Act 2025, Section 115BAC (new regime), Section 87A rebate. <a href="https://incometaxindia.gov.in/Pages/acts/finance-act.aspx" target="_blank" rel="noopener">incometaxindia.gov.in</a></li>
         <li>CBDT Circular No. 01/2025 — Standard deduction of ₹75,000 in new regime, ₹50,000 in old regime.</li>
         <li>ClearTax — FY 2025-26 slab reckoner, cross-verified against Budget Memorandum 2025.</li>
       </ul>
+      </div>
 
       <div style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14, marginTop: 30 }}>
         <strong>Last updated:</strong> April 20, 2026 · Reviewed by Ash K, Assure Fintech.<br />
