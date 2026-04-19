@@ -617,27 +617,25 @@ export default function BestFdRates2026Page() {
         </details>
       ))}
 
-      <h2 style={{ marginTop: 56 }}>Related reading</h2>
-      <div style={{ borderRadius: 12, border: "1px solid var(--border)", overflow: "hidden", marginBottom: 36 }}>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-        <li><Link href="/learn/savings/fd-real-return">FD real return by tax bracket — the full walk-through</Link></li>
-        <li><Link href="/learn/savings/ppf-vs-fd-vs-debt-fund">PPF vs FD vs Debt MF — 15 years of returns, compared</Link></li>
-        <li><Link href="/learn/savings/senior-citizen-fd">Senior citizen FD rates — how 80TTB changes everything</Link></li>
-        <li><Link href="/learn/savings/tax-saving-fd-vs-elss-vs-ppf">Tax-saving FD vs ELSS vs PPF — post-tax returns</Link></li>
-        <li><Link href="/learn/tax/old-vs-new-regime">Old vs New Tax Regime — FY 2025-26 breakeven</Link></li>
-        <li><Link href="/tools/fd-calculator">FD Real Return Calculator</Link></li>
-      </ul>
+      <h2 style={{ marginTop: 56, marginBottom: 22 }}>Related reading</h2>
+      <div style={{ display: "grid", gap: 10, marginBottom: 44 }}>
+        <Link href="/learn/savings/fd-real-return" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>FD real return by tax bracket — the full walk-through <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
+        <Link href="/learn/savings/ppf-vs-fd-vs-debt-fund" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>PPF vs FD vs Debt MF — 15 years of returns, compared <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
+        <Link href="/learn/savings/senior-citizen-fd" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>Senior citizen FD rates — how 80TTB changes everything <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
+        <Link href="/learn/savings/tax-saving-fd-vs-elss-vs-ppf" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>Tax-saving FD vs ELSS vs PPF — post-tax returns <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
+        <Link href="/learn/tax/old-vs-new-regime" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>Old vs New Tax Regime — FY 2025-26 breakeven <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
+        <Link href="/tools/fd-calculator" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>FD Real Return Calculator <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
       </div>
 
-      <h2 style={{ marginTop: 56 }}>Sources</h2>
-      <div style={{ borderRadius: 12, border: "1px solid var(--border)", padding: "20px 24px", background: "var(--bg-muted, rgba(0,0,0,0.02))", marginBottom: 36 }}>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: "14px", color: "var(--text-muted)" }}>
-        <li>BankBazaar — consolidated bank FD rate data, accessed April 19, 2026. <a href="https://www.bankbazaar.com/fixed-deposit-rate.html" target="_blank" rel="noopener">bankbazaar.com</a></li>
-        <li>Reserve Bank of India — Monetary Policy Committee resolution, April 2026 (repo rate 5.25%, CPI forecast 4.70%). <a href="https://www.rbi.org.in" target="_blank" rel="noopener">rbi.org.in</a></li>
-        <li>DICGC — Deposit Insurance and Credit Guarantee Corporation, coverage limit ₹5 lakh per depositor per bank. <a href="https://www.dicgc.org.in" target="_blank" rel="noopener">dicgc.org.in</a></li>
-        <li>Individual bank websites — SBI, HDFC, ICICI, Axis, Kotak, IndusInd, Unity SFB, AU SFB, Utkarsh SFB, Equitas, Bajaj Finance, Shriram Finance, as of April 19, 2026.</li>
-        <li>Income Tax Department — Section 80TTB (senior citizen interest deduction) and Section 194A (TDS on interest). <a href="https://incometaxindia.gov.in" target="_blank" rel="noopener">incometaxindia.gov.in</a></li>
-      </ul>
+      <h2 style={{ marginTop: 56, marginBottom: 22 }}>Sources &amp; circulars</h2>
+      <div style={{ borderRadius: 12, background: "var(--bg-muted, rgba(0,0,0,0.02))", padding: "8px 24px", marginBottom: 36 }}>
+        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>BankBazaar — consolidated bank FD rate data, accessed April 19, 2026. <a href="https://www.bankbazaar.com/fixed-deposit-rate.html" target="_blank" rel="noopener">bankbazaar.com</a></li>
+        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>Reserve Bank of India — Monetary Policy Committee resolution, April 2026 (repo rate 5.25%, CPI forecast 4.70%). <a href="https://www.rbi.org.in" target="_blank" rel="noopener">rbi.org.in</a></li>
+        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>DICGC — Deposit Insurance and Credit Guarantee Corporation, coverage limit ₹5 lakh per depositor per bank. <a href="https://www.dicgc.org.in" target="_blank" rel="noopener">dicgc.org.in</a></li>
+        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>Individual bank websites — SBI, HDFC, ICICI, Axis, Kotak, IndusInd, Unity SFB, AU SFB, Utkarsh SFB, Equitas, Bajaj Finance, Shriram Finance, as of April 19, 2026.</li>
+        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>Income Tax Department — Section 80TTB (senior citizen interest deduction) and Section 194A (TDS on interest). <a href="https://incometaxindia.gov.in" target="_blank" rel="noopener">incometaxindia.gov.in</a></li>
+        </ul>
       </div>
 
       <div style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14, marginTop: 30 }}>
