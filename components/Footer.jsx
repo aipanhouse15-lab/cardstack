@@ -7,6 +7,10 @@ const TOOL_LINKS = [
   { href: "/swipe-check", label: "Swipe Check" },
   { href: "/compare", label: "Compare Cards" },
   { href: "/cards", label: "All 75 Cards" },
+  { href: "/loan-calculator", label: "Loan Calculator" },
+  { href: "/fd-calculator", label: "FD Calculator" },
+  { href: "/tax-calculator", label: "Tax Calculator" },
+  { href: "/insurance-calculator", label: "Insurance Calculator" },
 ];
 
 const CARD_LINKS = [
@@ -30,6 +34,7 @@ const EXPLORE_LINKS = [
   { href: "/learn/insurance", label: "Insurance Guides" },
   { href: "/learn/savings", label: "Savings Guides" },
   { href: "/learn/tax", label: "Tax Planning" },
+  { href: "/learn/mutual-funds", label: "Mutual Funds" },
   { href: "/whats-changed", label: "What Changed" },
   { href: "/blog", label: "Blog" },
 ];
@@ -39,6 +44,8 @@ const COMPANY_LINKS = [
   { href: "/how-we-earn", label: "How We Earn" },
   { href: "/editorial-policy", label: "Editorial Policy" },
   { href: "/contact", label: "Contact" },
+  { href: "/privacy", label: "Privacy Policy" },
+  { href: "/terms", label: "Terms of Service" },
 ];
 
 export default function Footer() {
