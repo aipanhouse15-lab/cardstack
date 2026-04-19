@@ -267,7 +267,7 @@ function Verdict({ children }) {
   return (
     <div style={{
       borderLeft: "4px solid #16A34A", background: "rgba(22,163,74,0.07)",
-      padding: "22px 26px", margin: "24px 0", borderRadius: "6px",
+      padding: "28px 30px", margin: "32px 0", borderRadius: "6px",
     }}>
       <div style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "1.2px", color: "#16A34A", marginBottom: "6px" }}>VERDICT</div>
       {children}
@@ -278,7 +278,7 @@ function MathBox({ children, title = "THE MATH" }) {
   return (
     <div style={{
       border: "1px dashed var(--border)", background: "rgba(124,58,237,0.04)",
-      padding: "22px 26px", margin: "20px 0", borderRadius: "6px", fontFamily: "system-ui, -apple-system, sans-serif", fontSize: "14.5px",
+      padding: "28px 30px", margin: "30px 0", borderRadius: "6px", fontFamily: "system-ui, -apple-system, sans-serif", fontSize: "14.5px",
     }}>
       <div style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "1.2px", color: "#7C3AED", marginBottom: "8px", fontFamily: "system-ui" }}>{title}</div>
       {children}
@@ -289,7 +289,7 @@ function Warn({ children }) {
   return (
     <div style={{
       borderLeft: "4px solid #f59e0b", background: "rgba(245,158,11,0.08)",
-      padding: "20px 24px", margin: "20px 0", borderRadius: "6px",
+      padding: "28px 30px", margin: "30px 0", borderRadius: "6px",
     }}>
       <div style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "1.2px", color: "#b45309", marginBottom: "4px" }}>⚠ TRAP</div>
       {children}
@@ -300,7 +300,7 @@ function PullQuote({ children, by }) {
   return (
     <blockquote style={{
       borderTop: "2px solid var(--text)", borderBottom: "2px solid var(--text)",
-      padding: "18px 0", margin: "28px 0", fontSize: "1.35rem", fontStyle: "italic", lineHeight: 1.4, fontWeight: 500,
+      padding: "18px 0", margin: "36px 0", fontSize: "1.6rem", fontStyle: "italic", lineHeight: 1.4, fontWeight: 500,
     }}>
       "{children}"
       {by && <div style={{ fontSize: "12px", fontStyle: "normal", marginTop: "10px", color: "var(--text-muted)" }}>— {by}</div>}
@@ -371,11 +371,11 @@ export default function OldVsNewRegimePage() {
       {/* HERO BANNER */}
       <div style={{ background: "linear-gradient(135deg, #052E16, #166534, #052E16)", padding: "48px 32px 52px", position: "relative", overflow: "hidden", marginTop: 64 }}>
         <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #4ADE8022, transparent 65%)", pointerEvents: "none" }} />
-        <div style={{ maxWidth: 820, margin: "0 auto", position: "relative", zIndex: 2 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 16 }}>
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 22 }}>
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#4ADE80" }} /> Tax Planning Guide
           </div>
-          <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 12 }}>
+          <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 22 }}>
             Old vs New Tax Regime — The ₹3.75 Lakh Breakeven Rule
           </h1>
           <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 24 }}>
@@ -388,18 +388,18 @@ export default function OldVsNewRegimePage() {
           </div>
         </div>
       </div>
-      <article style={{ maxWidth: 820, margin: "0 auto", padding: "0 0 80px", fontSize: "17px", lineHeight: 1.7, color: "var(--text)" }}>
+      <article style={{ maxWidth: 700, margin: "0 auto", padding: "0 0 100px", fontSize: "18px", lineHeight: 1.85, color: "var(--text)" }}>
       <Script id="ld-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Breadcrumb */}
-      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 18 }}>
+      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 22 }}>
         <Link href="/">Home</Link> / <Link href="/learn">Learn</Link> / <Link href="/learn/tax">Tax</Link> / Old vs New Regime
       </nav>
 
       {/* Byline */}
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 6 }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 14 }}>
         By <Link href="/about"><strong>Ash K</strong></Link> · Last updated April 20, 2026 · 12 min read
       </div>
 
@@ -631,7 +631,7 @@ export default function OldVsNewRegimePage() {
         <li>ClearTax — FY 2025-26 slab reckoner, cross-verified against Budget Memorandum 2025.</li>
       </ul>
 
-      <div style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14, marginTop: 30 }}>
+      <div style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14, marginTop: 46 }}>
         <strong>Last updated:</strong> April 20, 2026 · Reviewed by Ash K, Assure Fintech.<br />
         <strong>Disclaimer:</strong> This is not financial or tax advice. Tax treatment depends on individual circumstances and may change. We are not chartered accountants. Consult a CA for your specific situation, particularly if you have business income, capital gains, or are an NRI.
       </div>

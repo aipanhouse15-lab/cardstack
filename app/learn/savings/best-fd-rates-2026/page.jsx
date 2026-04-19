@@ -264,7 +264,7 @@ function RateCard({ bank, rate, senior, note }) {
   return (
     <div style={{
       border: "1px solid var(--border)", borderLeft: "6px solid #D97706",
-      background: "var(--bg-soft, rgba(217,119,6,0.04))", padding: "20px 24px",
+      background: "var(--bg-soft, rgba(217,119,6,0.04))", padding: "28px 30px",
       margin: "14px 0", borderRadius: "8px", display: "grid", gridTemplateColumns: "1fr auto",
       gap: "8px 14px", alignItems: "center",
     }}>
@@ -273,7 +273,7 @@ function RateCard({ bank, rate, senior, note }) {
         {note && <div style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 4 }}>{note}</div>}
       </div>
       <div style={{ textAlign: "right" }}>
-        <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#D97706", lineHeight: 1 }}>{rate}</div>
+        <div style={{ fontSize: "1.75rem", fontWeight: 800, color: "#D97706", lineHeight: 1 }}>{rate}</div>
         {senior && <div style={{ fontSize: 11, color: "var(--text-muted)" }}>Senior: {senior}</div>}
       </div>
     </div>
@@ -283,9 +283,9 @@ function SafetyCheck({ children }) {
   return (
     <div style={{
       borderTop: "3px solid #ef4444", borderBottom: "3px solid #ef4444",
-      padding: "20px 24px", margin: "22px 0",
+      padding: "28px 30px", margin: "22px 0",
     }}>
-      <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: "1.2px", color: "#b91c1c", marginBottom: 6 }}>SAFETY CHECK</div>
+      <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: "1.2px", color: "#b91c1c", marginBottom: 14 }}>SAFETY CHECK</div>
       {children}
     </div>
   );
@@ -293,8 +293,8 @@ function SafetyCheck({ children }) {
 function InsightQuote({ children }) {
   return (
     <div style={{
-      fontSize: "1.3rem", fontStyle: "italic", lineHeight: 1.4, fontWeight: 500,
-      padding: "22px 0 22px 22px", margin: "28px 0",
+      fontSize: "1.55rem", fontStyle: "italic", lineHeight: 1.4, fontWeight: 500,
+      padding: "22px 0 22px 22px", margin: "36px 0",
       borderLeft: "5px solid #D97706",
     }}>
       {children}
@@ -304,7 +304,7 @@ function InsightQuote({ children }) {
 function Persona({ title, verdict, color, body }) {
   return (
     <div style={{
-      border: "1px solid var(--border)", borderRadius: 10, padding: "22px 26px", margin: "16px 0",
+      border: "1px solid var(--border)", borderRadius: 10, padding: "28px 30px", margin: "16px 0",
     }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 10 }}>
         <strong style={{ fontSize: "1.1rem" }}>{title}</strong>
@@ -388,11 +388,11 @@ export default function BestFdRates2026Page() {
       {/* HERO BANNER */}
       <div style={{ background: "linear-gradient(135deg, #422006, #92400E, #422006)", padding: "48px 32px 52px", position: "relative", overflow: "hidden", marginTop: 64 }}>
         <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #FBBF2422, transparent 65%)", pointerEvents: "none" }} />
-        <div style={{ maxWidth: 820, margin: "0 auto", position: "relative", zIndex: 2 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 16 }}>
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 22 }}>
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#FBBF24" }} /> Savings & FD Guide
           </div>
-          <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 12 }}>
+          <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 22 }}>
             Best FD Rates in India — April 2026
           </h1>
           <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 24 }}>
@@ -405,17 +405,17 @@ export default function BestFdRates2026Page() {
           </div>
         </div>
       </div>
-      <article style={{ maxWidth: 820, margin: "0 auto", padding: "0 0 80px", fontSize: "17px", lineHeight: 1.7, color: "var(--text)" }}>
+      <article style={{ maxWidth: 700, margin: "0 auto", padding: "0 0 100px", fontSize: "18px", lineHeight: 1.85, color: "var(--text)" }}>
       <Script id="ld-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="ld-dataset" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
 
-      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 18 }}>
+      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 22 }}>
         <Link href="/">Home</Link> / <Link href="/learn">Learn</Link> / <Link href="/learn/savings">Savings</Link> / Best FD Rates 2026
       </nav>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 6 }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 14 }}>
         By <Link href="/about"><strong>Ash K</strong></Link> · Last updated April 20, 2026 · Reviewed against BankBazaar and individual bank websites · 14 min read
       </div>
 
@@ -479,7 +479,7 @@ export default function BestFdRates2026Page() {
         Here is where the glossy bar chart turns into a math problem. Your FD doesn't earn what the billboard says. It earns:
       </p>
       <p style={{
-        fontFamily: "system-ui, -apple-system, sans-serif", fontSize: "1.05rem", padding: "18px 22px",
+        fontFamily: "system-ui, -apple-system, sans-serif", fontSize: "1.05rem", padding: "26px 28px",
         border: "1px solid var(--border)", borderRadius: 8, background: "var(--bg-soft, rgba(0,0,0,0.02))",
       }}>
         Real return = Advertised rate × (1 − tax rate) − inflation
@@ -560,7 +560,7 @@ export default function BestFdRates2026Page() {
       <p>
         <strong>Three-tranche example, ₹15L corpus:</strong>
       </p>
-      <p style={{ fontFamily: "system-ui, -apple-system, sans-serif", fontSize: "15px", padding: "20px 24px", border: "1px solid var(--border)", borderRadius: 8, background: "var(--bg-soft, rgba(0,0,0,0.02))" }}>
+      <p style={{ fontFamily: "system-ui, -apple-system, sans-serif", fontSize: "15px", padding: "28px 30px", border: "1px solid var(--border)", borderRadius: 8, background: "var(--bg-soft, rgba(0,0,0,0.02))" }}>
         ₹5L at HDFC · 1-yr @ 7.00%  →  matures Apr 2027<br />
         ₹5L at AU SFB · 2-yr @ 8.25%  →  matures Apr 2028<br />
         ₹5L at Unity SFB · 3-yr @ 9.00%  →  matures Apr 2029<br /><br />
@@ -633,7 +633,7 @@ export default function BestFdRates2026Page() {
         <li>Income Tax Department — Section 80TTB (senior citizen interest deduction) and Section 194A (TDS on interest). <a href="https://incometaxindia.gov.in" target="_blank" rel="noopener">incometaxindia.gov.in</a></li>
       </ul>
 
-      <div style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14, marginTop: 30 }}>
+      <div style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14, marginTop: 46 }}>
         <strong>Last updated:</strong> April 20, 2026 · Reviewed by Ash K, Assure Fintech. Rates cross-verified against each bank's April 2026 website listings.<br />
         <strong>Disclaimer:</strong> This is not financial advice. FD rates change weekly. DICGC insurance is limited to ₹5 lakh per depositor per bank. NBFC fixed deposits are not DICGC-insured. Consult a financial advisor for personal allocation.
       </div>

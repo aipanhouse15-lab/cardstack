@@ -209,7 +209,7 @@ function SvgImpactCalc() {
 function RuleHead({ num, title }) {
   return (
     <div style={{
-      display: "flex", alignItems: "baseline", gap: 14, marginTop: 36, marginBottom: 10,
+      display: "flex", alignItems: "baseline", gap: 14, marginTop: 50, marginBottom: 10,
       paddingBottom: 10, borderBottom: "3px solid #7C3AED",
     }}>
       <div style={{
@@ -236,10 +236,10 @@ function Stakes({ children }) {
 function ActionBox({ children }) {
   return (
     <div style={{
-      border: "1px solid var(--border)", borderRadius: 8, padding: "20px 24px", margin: "16px 0",
+      border: "1px solid var(--border)", borderRadius: 8, padding: "28px 30px", margin: "16px 0",
       background: "var(--bg-soft, rgba(0,0,0,0.02))",
     }}>
-      <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1.1, color: "#16A34A", marginBottom: 6 }}>
+      <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1.1, color: "#16A34A", marginBottom: 14 }}>
         → DO THIS
       </div>
       {children}
@@ -316,11 +316,11 @@ export default function RbiCreditCardRulesPage() {
       {/* HERO BANNER */}
       <div style={{ background: "linear-gradient(135deg, #1E1042, #2A1557, #1E1042)", padding: "48px 32px 52px", position: "relative", overflow: "hidden", marginTop: 64 }}>
         <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #A78BFA22, transparent 65%)", pointerEvents: "none" }} />
-        <div style={{ maxWidth: 820, margin: "0 auto", position: "relative", zIndex: 2 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 16 }}>
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 22 }}>
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#A78BFA" }} /> Credit Card Guide
           </div>
-          <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 12 }}>
+          <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 22 }}>
             7 RBI Credit Card Rules Banks Hope You Never Read
           </h1>
           <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 24 }}>
@@ -333,21 +333,21 @@ export default function RbiCreditCardRulesPage() {
           </div>
         </div>
       </div>
-      <article style={{ maxWidth: 820, margin: "0 auto", padding: "0 0 80px", fontSize: "17px", lineHeight: 1.7, color: "var(--text)" }}>
+      <article style={{ maxWidth: 700, margin: "0 auto", padding: "0 0 100px", fontSize: "18px", lineHeight: 1.85, color: "var(--text)" }}>
       <Script id="ld-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 18 }}>
+      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 22 }}>
         <Link href="/">Home</Link> / <Link href="/blog">Blog</Link> / 7 RBI Credit Card Rules 2026
       </nav>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 6 }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 14 }}>
         By <Link href="/about"><strong>Ash K</strong></Link> · Last updated April 20, 2026 · Verified against RBI Master Direction and circulars · 11 min read
       </div>
 
       <div style={{
-        border: "2px solid #7C3AED", borderRadius: 10, padding: "20px 24px",
+        border: "2px solid #7C3AED", borderRadius: 10, padding: "28px 30px",
         margin: "22px 0", background: "rgba(124,58,237,0.06)",
       }}>
         <p style={{ margin: 0 }}>
@@ -519,7 +519,7 @@ export default function RbiCreditCardRulesPage() {
         <li>RBI Circular 2026/06 — reaffirmation of card closure timelines and ₹500/day penalty, April 2026.</li>
       </ul>
 
-      <div style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14, marginTop: 30 }}>
+      <div style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14, marginTop: 46 }}>
         <strong>Last updated:</strong> April 20, 2026 · Reviewed by Ash K, Assure Fintech. All circular references cross-checked against rbi.org.in on April 19, 2026.<br />
         <strong>Disclaimer:</strong> This is general consumer information, not legal advice. Dispute outcomes depend on facts and documentation. For significant disputes involving large sums or serious harassment, consult a consumer lawyer. The RBI Ombudsman is a free, binding grievance forum — most cases resolve without legal representation.
       </div>
