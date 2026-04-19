@@ -264,7 +264,7 @@ function RateCard({ bank, rate, senior, note }) {
   return (
     <div style={{
       border: "1px solid var(--border)", borderLeft: "6px solid #D97706",
-      background: "var(--bg-soft, rgba(217,119,6,0.04))", padding: "14px 18px",
+      background: "var(--bg-soft, rgba(217,119,6,0.04))", padding: "20px 24px",
       margin: "14px 0", borderRadius: "8px", display: "grid", gridTemplateColumns: "1fr auto",
       gap: "8px 14px", alignItems: "center",
     }}>
@@ -283,7 +283,7 @@ function SafetyCheck({ children }) {
   return (
     <div style={{
       borderTop: "3px solid #ef4444", borderBottom: "3px solid #ef4444",
-      padding: "14px 18px", margin: "22px 0",
+      padding: "20px 24px", margin: "22px 0",
     }}>
       <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: "1.2px", color: "#b91c1c", marginBottom: 6 }}>SAFETY CHECK</div>
       {children}
@@ -304,7 +304,7 @@ function InsightQuote({ children }) {
 function Persona({ title, verdict, color, body }) {
   return (
     <div style={{
-      border: "1px solid var(--border)", borderRadius: 10, padding: "16px 20px", margin: "16px 0",
+      border: "1px solid var(--border)", borderRadius: 10, padding: "22px 26px", margin: "16px 0",
     }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 10 }}>
         <strong style={{ fontSize: "1.1rem" }}>{title}</strong>
@@ -384,13 +384,38 @@ export default function BestFdRates2026Page() {
   };
 
   return (
-    <article style={{ maxWidth: 780, margin: "0 auto", padding: "40px 20px", fontSize: "17px", lineHeight: 1.7, color: "var(--text)" }}>
+    <article style={{ maxWidth: 820, margin: "0 auto", padding: "0 0 80px", fontSize: "17px", lineHeight: 1.7, color: "var(--text)" }}>
+
+      {/* ══ HERO BANNER ══ */}
+      <div style={{ background: "linear-gradient(135deg, #422006, #92400E, #422006)", padding: "48px 32px 52px", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #FBBF2422, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 820, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 16 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#FBBF24" }} /> Savings & FD Guide
+          </div>
+          <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 12 }}>
+            Best FD Rates in India — April 2026
+          </h1>
+          <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 24 }}>
+            Your 7.5% FD returns 0.15% after tax and inflation. I compared 25 banks.
+          </p>
+          <div style={{ display: "flex", gap: 36, flexWrap: "wrap" }}>
+            <div><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>8.60%</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>Best SFB rate</div></div>
+            <div><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>6.50%</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>Avg big bank</div></div>
+            <div><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>5.25%</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>RBI repo rate</div></div>
+          </div>
+        </div>
+      </div>
+
+      {/* ══ ARTICLE BODY ══ */}
+      <div style={{ maxWidth: 820, margin: "0 auto", padding: "36px 28px 0" }}>
+
       <Script id="ld-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Script id="ld-dataset" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
 
-      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 18 }}>
+      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 30 }}>
         <Link href="/">Home</Link> / <Link href="/learn">Learn</Link> / <Link href="/learn/savings">Savings</Link> / Best FD Rates 2026
       </nav>
 
@@ -402,7 +427,7 @@ export default function BestFdRates2026Page() {
         Best FD Rates in India — April 2026 <span style={{ color: "var(--text-muted)", fontWeight: 400, fontSize: "1.3rem", display: "block", marginTop: 4 }}>The post-tax real return edition</span>
       </h1>
 
-      <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", marginBottom: 24 }}>
+      <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", marginBottom: 36 }}>
         Every bank screams their FD rate like it's a lottery win. "Earn 9.00% guaranteed!" hollers the billboard outside Unity SFB. HDFC advertises 7.00%. SBI a demure 6.80%. The inconvenient truth: after TDS, slab tax and 4.7% inflation, most FDs in the 30% bracket return 0.06% to 0.20% real. Per year. Not per decade.
       </p>
 
@@ -467,7 +492,7 @@ export default function BestFdRates2026Page() {
         Here is where the glossy bar chart turns into a math problem. Your FD doesn't earn what the billboard says. It earns:
       </p>
       <p style={{
-        fontFamily: "ui-monospace, monospace", fontSize: "1.05rem", padding: "12px 16px",
+        fontFamily: "system-ui, -apple-system, sans-serif", fontSize: "1.05rem", padding: "18px 22px",
         border: "1px solid var(--border)", borderRadius: 8, background: "var(--bg-soft, rgba(0,0,0,0.02))",
       }}>
         Real return = Advertised rate × (1 − tax rate) − inflation
@@ -548,7 +573,7 @@ export default function BestFdRates2026Page() {
       <p>
         <strong>Three-tranche example, ₹15L corpus:</strong>
       </p>
-      <p style={{ fontFamily: "ui-monospace, monospace", fontSize: "15px", padding: "14px 18px", border: "1px solid var(--border)", borderRadius: 8, background: "var(--bg-soft, rgba(0,0,0,0.02))" }}>
+      <p style={{ fontFamily: "system-ui, -apple-system, sans-serif", fontSize: "15px", padding: "20px 24px", border: "1px solid var(--border)", borderRadius: 8, background: "var(--bg-soft, rgba(0,0,0,0.02))" }}>
         ₹5L at HDFC · 1-yr @ 7.00%  →  matures Apr 2027<br />
         ₹5L at AU SFB · 2-yr @ 8.25%  →  matures Apr 2028<br />
         ₹5L at Unity SFB · 3-yr @ 9.00%  →  matures Apr 2029<br /><br />
@@ -625,6 +650,8 @@ export default function BestFdRates2026Page() {
         <strong>Last updated:</strong> April 20, 2026 · Reviewed by Ash K, Assure Fintech. Rates cross-verified against each bank's April 2026 website listings.<br />
         <strong>Disclaimer:</strong> This is not financial advice. FD rates change weekly. DICGC insurance is limited to ₹5 lakh per depositor per bank. NBFC fixed deposits are not DICGC-insured. Consult a financial advisor for personal allocation.
       </div>
+    </div>
+          </div>
     </article>
   );
 }

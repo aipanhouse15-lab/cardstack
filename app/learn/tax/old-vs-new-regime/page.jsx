@@ -267,7 +267,7 @@ function Verdict({ children }) {
   return (
     <div style={{
       borderLeft: "4px solid #16A34A", background: "rgba(22,163,74,0.07)",
-      padding: "16px 20px", margin: "24px 0", borderRadius: "6px",
+      padding: "22px 26px", margin: "36px 0", borderRadius: "6px",
     }}>
       <div style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "1.2px", color: "#16A34A", marginBottom: "6px" }}>VERDICT</div>
       {children}
@@ -278,7 +278,7 @@ function MathBox({ children, title = "THE MATH" }) {
   return (
     <div style={{
       border: "1px dashed var(--border)", background: "rgba(124,58,237,0.04)",
-      padding: "16px 20px", margin: "20px 0", borderRadius: "6px", fontFamily: "ui-monospace, monospace", fontSize: "13.5px",
+      padding: "22px 26px", margin: "28px 0", borderRadius: "6px", fontFamily: "system-ui, -apple-system, sans-serif", fontSize: "14.5px",
     }}>
       <div style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "1.2px", color: "#7C3AED", marginBottom: "8px", fontFamily: "system-ui" }}>{title}</div>
       {children}
@@ -289,7 +289,7 @@ function Warn({ children }) {
   return (
     <div style={{
       borderLeft: "4px solid #f59e0b", background: "rgba(245,158,11,0.08)",
-      padding: "14px 18px", margin: "20px 0", borderRadius: "6px",
+      padding: "20px 24px", margin: "28px 0", borderRadius: "6px",
     }}>
       <div style={{ fontSize: "11px", fontWeight: 800, letterSpacing: "1.2px", color: "#b45309", marginBottom: "4px" }}>⚠ TRAP</div>
       {children}
@@ -367,13 +367,38 @@ export default function OldVsNewRegimePage() {
   };
 
   return (
-    <article style={{ maxWidth: 780, margin: "0 auto", padding: "40px 20px", fontSize: "17px", lineHeight: 1.7, color: "var(--text)" }}>
+    <article style={{ maxWidth: 820, margin: "0 auto", padding: "0 0 80px", fontSize: "17px", lineHeight: 1.7, color: "var(--text)" }}>
+
+      {/* ══ HERO BANNER ══ */}
+      <div style={{ background: "linear-gradient(135deg, #052E16, #166534, #052E16)", padding: "48px 32px 52px", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #4ADE8022, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 820, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 16 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#4ADE80" }} /> Tax Planning Guide
+          </div>
+          <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 12 }}>
+            Old vs New Tax Regime — The ₹3.75 Lakh Breakeven Rule
+          </h1>
+          <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 24 }}>
+            Budget 2025 moved the goalposts. Income up to ₹12.75L is tax-free under new regime.
+          </p>
+          <div style={{ display: "flex", gap: 36, flexWrap: "wrap" }}>
+            <div><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>₹12.75L</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>Tax-free (new regime)</div></div>
+            <div><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>₹3.75L</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>Breakeven deductions</div></div>
+            <div><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>7</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>New regime slabs</div></div>
+          </div>
+        </div>
+      </div>
+
+      {/* ══ ARTICLE BODY ══ */}
+      <div style={{ maxWidth: 820, margin: "0 auto", padding: "36px 28px 0" }}>
+
       <Script id="ld-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       {/* Breadcrumb */}
-      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 18 }}>
+      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 30 }}>
         <Link href="/">Home</Link> / <Link href="/learn">Learn</Link> / <Link href="/learn/tax">Tax</Link> / Old vs New Regime
       </nav>
 
@@ -385,7 +410,7 @@ export default function OldVsNewRegimePage() {
       <h1 style={{ fontSize: "2.4rem", lineHeight: 1.15, fontWeight: 800, margin: "6px 0 18px" }}>
         Old vs New Tax Regime — The ₹3.75 Lakh Breakeven Rule
       </h1>
-      <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", marginBottom: 24 }}>
+      <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", marginBottom: 36 }}>
         Budget 2025 moved the goalposts. If you earn up to ₹12.75 lakh, you owe ₹0 in the new regime — no receipts, no 80C, nothing. Above that, the regime that saves you money depends almost entirely on your deductions, not your salary. We ran the math for every income from ₹8 lakh to ₹25 lakh.
       </p>
 
@@ -619,6 +644,8 @@ export default function OldVsNewRegimePage() {
         <strong>Last updated:</strong> April 20, 2026 · Reviewed by Ash K, Assure Fintech.<br />
         <strong>Disclaimer:</strong> This is not financial or tax advice. Tax treatment depends on individual circumstances and may change. We are not chartered accountants. Consult a CA for your specific situation, particularly if you have business income, capital gains, or are an NRI.
       </div>
+    </div>
+          </div>
     </article>
   );
 }
