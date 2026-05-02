@@ -1,9 +1,24 @@
 import { BLOG_POSTS } from "@/data/content";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import fs from "fs";
+import path from "path";
+
+// Auto-detect standalone article folders so they take priority
+function getStandaloneSlugs() {
+  try {
+    const blogDir = path.join(process.cwd(), "app", "blog");
+    return fs.readdirSync(blogDir, { withFileTypes: true })
+      .filter(e => e.isDirectory() && e.name !== "[id]")
+      .map(e => e.name);
+  } catch { return []; }
+}
 
 export async function generateStaticParams() {
-  return BLOG_POSTS.map(post => ({ id: post.id }));
+  const standalone = getStandaloneSlugs();
+  return BLOG_POSTS
+    .filter(post => !standalone.includes(post.id))
+    .map(post => ({ id: post.id }));
 }
 
 export async function generateMetadata({ params }) {
@@ -25,7 +40,7 @@ export default function BlogPostPage({ params }) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    author: { "@type": "Organization", name: "Assure Fintech" },
+    author: { "@type": "Person", name: "Ash K" },
     publisher: { "@type": "Organization", name: "Assure Fintech" },
     articleSection: post.category,
   };
@@ -53,7 +68,7 @@ export default function BlogPostPage({ params }) {
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
             <span className="text-xs font-semibold rounded-md px-2.5 py-1" style={{ color: post.color, background: `${post.color}12` }}>{post.category}</span>
-            <span className="text-sm" style={{ color: "var(--text-faint)" }}>By <span className="font-semibold" style={{ color: "var(--text-muted)" }}>Ashutosh</span></span>
+            <span className="text-sm" style={{ color: "var(--text-faint)" }}>By <span className="font-semibold" style={{ color: "var(--text-muted)" }}>Ash K</span></span>
             <span className="text-sm" style={{ color: "var(--text-faint)" }}>{post.date}</span>
             <span className="text-sm" style={{ color: "var(--text-faint)" }}>· {post.readTime} read</span>
           </div>
