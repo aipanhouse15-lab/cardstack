@@ -1,386 +1,161 @@
-// app/learn/savings/best-fd-rates-2026/page.jsx
-// Assure Fintech — Tier 1 Article 2
-// Best FD Rates in India (April 2026) — The post-tax real return edition
-// Author: Ash K | Last updated: April 20, 2026
-// Template: Data Report (numbered chapters)
-// Word count target: 3500+ | SVGs: 5
-
 import Link from "next/link";
 import Script from "next/script";
 
-export const metadata = {
-  title: "Best FD Rates India April 2026 — The Post-Tax Real Return Edition | Assure Fintech",
-  description:
-    "We list every major PSU, private and Small Finance Bank FD rate for April 2026 — then strip out TDS and inflation so you see your real return. Most FDs give 0.1% real. Some are negative.",
-  keywords: [
-    "best FD rates 2026",
-    "fixed deposit interest rates April 2026",
-    "highest FD rate India",
-    "FD real return after tax",
-    "small finance bank FD rates",
-    "senior citizen FD rates 2026",
-  ],
-  alternates: { canonical: "https://www.assurefintech.com/learn/savings/best-fd-rates-2026" },
-  openGraph: {
-    title: "Best FD Rates India (April 2026) — The Real Return Honest Number",
-    description:
-      "21 banks ranked by advertised rate vs post-tax real return. The rankings flip when you do the math.",
-    url: "https://www.assurefintech.com/learn/savings/best-fd-rates-2026",
-    type: "article",
-    siteName: "Assure Fintech",
-    images: ["/og/fd-rates-real-return.png"],
-  },
-};
+// ============================================================
+// Tier 1 Article 2 — Best FD Rates India April 2026
+// URL: /blog/best-fd-rates-april-2026
+// Category: Savings · Color: Amber #D97706
+// Author: Ash K · Reviewed: April 20, 2026
+// Target: 3,500+ visible words · 4 info-SVGs · 7 FAQs
+// Template archetype: Live Leaderboard
+// ============================================================
 
-/* ─────────────────────────────────────────────
-   SVG 1 — Rate landscape bar chart (13 banks)
-   ───────────────────────────────────────────── */
-function SvgRateLandscape() {
-  const banks = [
-    { name: "Unity SFB",         rate: 9.00, type: "SFB" },
-    { name: "Utkarsh SFB",       rate: 8.50, type: "SFB" },
-    { name: "AU SFB",            rate: 8.25, type: "SFB" },
-    { name: "Bajaj Finance",     rate: 8.25, type: "NBFC" },
-    { name: "Shriram Finance",   rate: 8.10, type: "NBFC" },
-    { name: "Mahindra Finance",  rate: 8.00, type: "NBFC" },
-    { name: "IndusInd",          rate: 7.75, type: "Private" },
-    { name: "Axis",              rate: 7.10, type: "Private" },
-    { name: "HDFC",              rate: 7.00, type: "Private" },
-    { name: "ICICI",             rate: 7.00, type: "Private" },
-    { name: "Kotak",             rate: 6.95, type: "Private" },
-    { name: "SBI",               rate: 6.80, type: "PSU" },
-    { name: "Bank of India",     rate: 6.75, type: "PSU" },
-  ];
-  const typeColor = { SFB: "#D97706", NBFC: "#b45309", Private: "#0891B2", PSU: "#475569" };
-  return (
-    <svg viewBox="0 0 780 420" role="img" aria-label="1-year FD rate landscape across 13 banks, April 2026"
-         style={{ width: "100%", height: "auto", fontFamily: "system-ui" }}>
-      <text x="390" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
-        1-year FD rates — April 2026 snapshot
-      </text>
-      <text x="390" y="40" textAnchor="middle" fontSize="11" fill="var(--text-muted)">
-        SFB &amp; NBFC clearly dominate the top — but not the real-return chart. Watch the flip on the next page.
-      </text>
-      {banks.map((b, i) => {
-        const y = 60 + i * 26;
-        const w = (b.rate / 9.5) * 520;
-        return (
-          <g key={b.name}>
-            <text x="170" y={y + 17} textAnchor="end" fontSize="12" fontWeight="600" fill="var(--text)">{b.name}</text>
-            <rect x="180" y={y + 4} width={w} height="18" fill={typeColor[b.type]} opacity="0.9" rx="3" />
-            <text x={185 + w} y={y + 17} fontSize="11" fontWeight="700" fill="var(--text)">{b.rate.toFixed(2)}%</text>
-            <text x="760" y={y + 17} textAnchor="end" fontSize="10" fill={typeColor[b.type]} fontWeight="700">{b.type}</text>
-          </g>
-        );
-      })}
-      <line x1="180" y1="400" x2="710" y2="400" stroke="var(--border)" />
-      <text x="180" y="415" fontSize="10" fill="var(--text-muted)">Source: BankBazaar, individual bank websites, April 2026. RBI repo: 5.25% (Apr 2026 MPC).</text>
-    </svg>
-  );
-}
+const COLOR = "#D97706";
+const UPDATED = "April 20, 2026";
 
-/* ─────────────────────────────────────────────
-   SVG 2 — Tax impact across brackets (7.5% FD)
-   ───────────────────────────────────────────── */
-function SvgTaxImpact() {
-  // For an FD advertised at 7.5%, show net return after TDS + tax at each bracket
-  const brackets = [
-    { label: "No tax (87A rebate)", grossRate: 7.5, taxRate: 0.00, inflation: 4.7 },
-    { label: "5% bracket",          grossRate: 7.5, taxRate: 0.05, inflation: 4.7 },
-    { label: "20% bracket",         grossRate: 7.5, taxRate: 0.20, inflation: 4.7 },
-    { label: "30% bracket",         grossRate: 7.5, taxRate: 0.30, inflation: 4.7 },
-  ];
-  return (
-    <svg viewBox="0 0 760 340" role="img" aria-label="How a 7.5% FD rate performs across tax brackets after inflation"
-         style={{ width: "100%", height: "auto", fontFamily: "system-ui" }}>
-      <text x="380" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
-        Same FD, four tax brackets. What actually lands in your pocket.
-      </text>
-      <text x="380" y="40" textAnchor="middle" fontSize="11" fill="var(--text-muted)">
-        Starting rate: 7.50% · CPI inflation assumption: 4.70% (RBI Apr 2026 forecast)
-      </text>
-      {brackets.map((b, i) => {
-        const x = 80 + i * 165;
-        const postTax = b.grossRate * (1 - b.taxRate);
-        const real = postTax - b.inflation;
-        const barH = (v) => Math.max(v, 0) * 16;
-        return (
-          <g key={b.label}>
-            <text x={x + 65} y="72" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">{b.label}</text>
-            {/* Gross bar */}
-            <rect x={x} y="90" width="130" height={barH(b.grossRate)} fill="#fbbf24" rx="3" />
-            <text x={x + 65} y={90 + barH(b.grossRate) + 14} textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">Gross {b.grossRate.toFixed(2)}%</text>
-            {/* Post-tax bar */}
-            <rect x={x} y={90 + barH(b.grossRate) + 24} width="130" height={barH(postTax)} fill="#0891B2" rx="3" />
-            <text x={x + 65} y={90 + barH(b.grossRate) + 24 + barH(postTax) + 14} textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">After tax {postTax.toFixed(2)}%</text>
-            {/* Real bar */}
-            <rect x={x} y={90 + barH(b.grossRate) + 24 + barH(postTax) + 22}
-                  width="130" height={Math.abs(real) * 16}
-                  fill={real >= 0 ? "#16A34A" : "#ef4444"} rx="3" />
-            <text x={x + 65} y={90 + barH(b.grossRate) + 24 + barH(postTax) + 22 + Math.abs(real) * 16 + 14} textAnchor="middle" fontSize="12" fontWeight="800" fill={real >= 0 ? "#16A34A" : "#ef4444"}>
-              Real {real >= 0 ? "+" : ""}{real.toFixed(2)}%
-            </text>
-          </g>
-        );
-      })}
-      <text x="380" y="322" textAnchor="middle" fontSize="11" fill="var(--text-muted)">
-        Your 30%-bracket FD is losing you 0.45% of purchasing power every year. It looks like growth. It isn't.
-      </text>
-    </svg>
-  );
-}
+const SvgLeaderboard = () => (
+  <svg viewBox="0 0 720 380" role="img" aria-label="April 2026 fixed deposit rate leaderboard ranked by 3-year senior citizen rate across small finance banks NBFCs and major banks" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">APRIL 2026 · TOP 10 BANKS BY 3-YEAR SENIOR FD RATE · DICGC NOTES</text>
+    {[
+      { rank: 1, name: "Unity SFB", general: 9.00, senior: 9.50, type: "SFB · DICGC ₹5L", barW: 304 },
+      { rank: 2, name: "Suryoday SFB", general: 8.85, senior: 9.35, type: "SFB · DICGC ₹5L", barW: 296 },
+      { rank: 3, name: "ESAF SFB", general: 8.75, senior: 9.25, type: "SFB · DICGC ₹5L", barW: 288 },
+      { rank: 4, name: "Equitas SFB", general: 8.50, senior: 9.00, type: "SFB · DICGC ₹5L", barW: 280 },
+      { rank: 5, name: "Shriram Finance", general: 8.50, senior: 8.75, type: "NBFC · no DICGC · AA+", barW: 272 },
+      { rank: 6, name: "Bajaj Finance", general: 8.10, senior: 8.35, type: "NBFC · no DICGC · AAA", barW: 256 },
+      { rank: 7, name: "AU SFB", general: 7.85, senior: 8.35, type: "SFB · DICGC ₹5L", barW: 248 },
+      { rank: 8, name: "Axis Bank", general: 7.10, senior: 7.60, type: "Private · DICGC ₹5L", barW: 220 },
+      { rank: 9, name: "HDFC Bank", general: 7.00, senior: 7.50, type: "Private · DICGC ₹5L", barW: 216 },
+      { rank: 10, name: "SBI", general: 6.80, senior: 7.30, type: "PSU · DICGC ₹5L", barW: 208 },
+    ].map((b, i) => (
+      <g key={i} transform={`translate(0, ${42 + i * 32})`}>
+        <text x="20" y="14" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text)">{b.rank}.</text>
+        <text x="40" y="14" fontFamily="system-ui" fontSize="12" fontWeight="600" fill="var(--text)">{b.name}</text>
+        <text x="160" y="14" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">{b.type}</text>
+        <rect x="320" y="2" width={b.barW} height="14" fill={COLOR} opacity={0.5 + (10 - b.rank) * 0.04} />
+        <text x={328 + b.barW} y="13" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text)">{b.senior.toFixed(2)}%</text>
+      </g>
+    ))}
+    <text x="20" y="368" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Senior citizen rate shown · 3-year tenure · verified from bank websites on April 20, 2026 · figures change quarterly</text>
+  </svg>
+);
 
-/* ─────────────────────────────────────────────
-   SVG 3 — Real return comparison (5 banks at 30% bracket)
-   ───────────────────────────────────────────── */
-function SvgRealReturnCompare() {
-  const rows = [
-    { bank: "Unity SFB",   gross: 9.00, postTax: 6.30, real: 1.60, note: "DICGC-insured up to ₹5L" },
-    { bank: "AU SFB",      gross: 8.25, postTax: 5.78, real: 1.08, note: "DICGC-insured up to ₹5L" },
-    { bank: "IndusInd",    gross: 7.75, postTax: 5.43, real: 0.73, note: "Top-rated private" },
-    { bank: "HDFC",        gross: 7.00, postTax: 4.90, real: 0.20, note: "AAA · branch access" },
-    { bank: "SBI",         gross: 6.80, postTax: 4.76, real: 0.06, note: "Government-owned" },
-  ];
-  return (
-    <svg viewBox="0 0 760 320" role="img" aria-label="Gross vs post-tax vs real return across 5 banks, 30% bracket"
-         style={{ width: "100%", height: "auto", fontFamily: "system-ui" }}>
-      <text x="380" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
-        The rankings flip. Real returns in the 30% tax bracket.
-      </text>
-      <text x="180" y="52" fontSize="11" fontWeight="700" fill="var(--text-muted)">Bank</text>
-      <text x="320" y="52" fontSize="11" fontWeight="700" fill="var(--text-muted)">Advertised</text>
-      <text x="450" y="52" fontSize="11" fontWeight="700" fill="var(--text-muted)">Post-tax</text>
-      <text x="580" y="52" fontSize="11" fontWeight="700" fill="#16A34A">Real (post-inflation)</text>
-      {rows.map((r, i) => {
-        const y = 80 + i * 42;
-        const w = r.real * 60;
-        return (
-          <g key={r.bank}>
-            <text x="180" y={y + 17} fontSize="13" fontWeight="700" fill="var(--text)">{r.bank}</text>
-            <text x="180" y={y + 33} fontSize="10" fill="var(--text-muted)">{r.note}</text>
-            <text x="320" y={y + 22} fontSize="13" fontWeight="600" fill="var(--text)">{r.gross.toFixed(2)}%</text>
-            <text x="450" y={y + 22} fontSize="13" fontWeight="600" fill="#0891B2">{r.postTax.toFixed(2)}%</text>
-            <rect x="580" y={y + 10} width={w} height="20" fill="#16A34A" opacity="0.85" rx="3" />
-            <text x={590 + w} y={y + 24} fontSize="12" fontWeight="800" fill="var(--text)">+{r.real.toFixed(2)}%</text>
-          </g>
-        );
-      })}
-      <text x="180" y="308" fontSize="10" fill="var(--text-muted)">
-        Inflation: 4.70% (RBI April 2026). Post-tax assumes highest slab. Rebate or 80TTB treatment would change the picture.
-      </text>
-    </svg>
-  );
-}
+const SvgRepoCurve = () => (
+  <svg viewBox="0 0 720 280" role="img" aria-label="RBI repo rate trajectory from December 2024 to April 2026 with consensus forecast through end 2026" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">RBI REPO RATE · DEC 2024 TO APR 2026 · CONSENSUS FORECAST DASHED</text>
+    <line x1="60" y1="240" x2="700" y2="240" stroke="var(--border)" />
+    <line x1="60" y1="50" x2="60" y2="240" stroke="var(--border)" />
+    <text x="60" y="258" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Dec 24</text>
+    <text x="200" y="258" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Apr 25</text>
+    <text x="340" y="258" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Sep 25</text>
+    <text x="480" y="258" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Apr 26</text>
+    <text x="620" y="258" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Dec 26</text>
 
-/* ─────────────────────────────────────────────
-   SVG 4 — 5×5 decision matrix: SFB vs big bank
-   ───────────────────────────────────────────── */
-function SvgDecisionMatrix() {
-  const criteria = ["Rate", "Safety (DICGC + parent)", "Branch access", "Loan against FD", "Digital UX"];
-  const banks = ["SBI / HDFC / ICICI", "AU / Equitas SFB", "Unity / Utkarsh SFB", "Bajaj / Shriram NBFC", "Tax-saver FD"];
-  //  ratings 1..5; 5 best
-  const scores = [
-    [2, 4, 5, 5, 3], // Rate
-    [5, 4, 3, 2, 3], // Safety
-    [5, 3, 2, 1, 4], // Branch
-    [5, 4, 3, 1, 2], // Loan against
-    [5, 4, 3, 3, 4], // Digital
-  ];
-  const totals = banks.map((_, i) => scores.reduce((a, row) => a + row[i], 0));
-  const color = (s) => (s >= 4 ? "#16A34A" : s === 3 ? "#fbbf24" : "#ef4444");
-  return (
-    <svg viewBox="0 0 820 360" role="img" aria-label="5 by 5 decision matrix comparing SFB NBFC and big bank FDs"
-         style={{ width: "100%", height: "auto", fontFamily: "system-ui" }}>
-      <text x="410" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
-        5 × 5 decision matrix — where each FD wins, and where it loses
-      </text>
-      {banks.map((b, i) => (
-        <text key={b} x={260 + i * 110} y="60" textAnchor="middle" fontSize="10" fontWeight="700" fill="var(--text)">{b}</text>
-      ))}
-      {criteria.map((c, r) => (
-        <g key={c}>
-          <text x="20" y={110 + r * 46} fontSize="12" fontWeight="600" fill="var(--text)">{c}</text>
-          {scores[r].map((s, i) => (
-            <g key={i}>
-              <rect x={210 + i * 110} y={92 + r * 46} width="100" height="34" rx="5" fill={color(s)} opacity="0.9" />
-              <text x={260 + i * 110} y={114 + r * 46} textAnchor="middle" fontSize="14" fontWeight="800" fill="#fff">{s}/5</text>
-            </g>
-          ))}
-        </g>
-      ))}
-      <line x1="10" y1="330" x2="810" y2="330" stroke="var(--border)" />
-      <text x="20" y="352" fontSize="11" fontWeight="700" fill="var(--text)">Totals:</text>
-      {totals.map((t, i) => (
-        <text key={i} x={260 + i * 110} y="352" textAnchor="middle" fontSize="12" fontWeight="800" fill="var(--text)">{t}/25</text>
-      ))}
-    </svg>
-  );
-}
+    <text x="20" y="80" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">6.50%</text>
+    <text x="20" y="130" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">6.00%</text>
+    <text x="20" y="180" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">5.50%</text>
+    <text x="20" y="220" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">5.00%</text>
 
-/* ─────────────────────────────────────────────
-   SVG 5 — FD vs alternatives
-   ───────────────────────────────────────────── */
-function SvgAlternatives() {
-  const items = [
-    { name: "1-yr FD (7% gross)",          real: 0.20, lock: "1 yr",  tax: "Slab",       liq: "Med" },
-    { name: "Tax-saver FD (7.2%)",         real: 0.30, lock: "5 yr",  tax: "80C ₹1.5L",  liq: "Low" },
-    { name: "PPF (7.10%)",                 real: 2.40, lock: "15 yr", tax: "EEE",        liq: "Low" },
-    { name: "Debt MF / Target Maturity",   real: 2.10, lock: "Flex",  tax: "LTCG slab",  liq: "High" },
-    { name: "Floating-rate sov bond",      real: 2.80, lock: "7 yr",  tax: "Slab",       liq: "Low" },
-    { name: "Arbitrage MF (tax-efficient)",real: 1.90, lock: "Flex",  tax: "LTCG 12.5%", liq: "High" },
-  ];
-  const maxReal = 3;
-  return (
-    <svg viewBox="0 0 780 330" role="img" aria-label="FDs vs alternative debt instruments across real return, liquidity and tax"
-         style={{ width: "100%", height: "auto", fontFamily: "system-ui" }}>
-      <text x="390" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
-        FD vs the alternatives — 5-year real return potential
-      </text>
-      <text x="390" y="40" textAnchor="middle" fontSize="11" fill="var(--text-muted)">
-        Real return = nominal return − 4.70% inflation, at 30% bracket unless noted
-      </text>
-      {items.map((it, i) => {
-        const y = 70 + i * 40;
-        const w = (it.real / maxReal) * 460;
-        return (
-          <g key={it.name}>
-            <text x="230" y={y + 18} textAnchor="end" fontSize="12" fontWeight="600" fill="var(--text)">{it.name}</text>
-            <rect x="240" y={y + 4} width={w} height="28" fill="#D97706" opacity="0.85" rx="3" />
-            <text x={245 + w} y={y + 23} fontSize="12" fontWeight="800" fill="var(--text)">+{it.real.toFixed(2)}%</text>
-            <text x="720" y={y + 15} textAnchor="end" fontSize="10" fill="var(--text-muted)">Lock: {it.lock}</text>
-            <text x="720" y={y + 28} textAnchor="end" fontSize="10" fill="var(--text-muted)">Tax: {it.tax} · Liq: {it.liq}</text>
-          </g>
-        );
-      })}
-      <line x1="30" y1="315" x2="750" y2="315" stroke="var(--border)" />
-    </svg>
-  );
-}
+    <path d="M 60 80 L 130 80 L 200 110 L 270 140 L 340 168 L 410 188 L 480 198" fill="none" stroke={COLOR} strokeWidth="3" />
+    <path d="M 480 198 L 550 215 L 620 225 L 700 235" fill="none" stroke={COLOR} strokeWidth="2" strokeDasharray="6 4" opacity="0.7" />
+    <circle cx="480" cy="198" r="6" fill={COLOR} />
+    <text x="490" y="190" fontFamily="system-ui" fontSize="11" fill={COLOR} fontWeight="700">5.25% · April 2026</text>
+    <text x="320" y="78" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Dec 2024 peak: 6.50%</text>
+    <text x="540" y="218" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Forecast: 4.75-5.00% by Dec 2026</text>
+  </svg>
+);
 
-/* ─────────────────────────────────────────────
-   Callout components — DIFFERENT STYLE from Article 1 per Rule 5
-   ───────────────────────────────────────────── */
-function RateCard({ bank, rate, senior, note }) {
-  return (
-    <div style={{
-      border: "1px solid var(--border)", borderLeft: "6px solid #D97706",
-      background: "var(--bg-soft, rgba(217,119,6,0.04))", padding: "24px 26px",
-      margin: "14px 0", borderRadius: "8px", display: "grid", gridTemplateColumns: "1fr auto",
-      gap: "8px 14px", alignItems: "center",
-    }}>
-      <div>
-        <div style={{ fontWeight: 800, fontSize: "1.05rem" }}>{bank}</div>
-        {note && <div style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 4 }}>{note}</div>}
-      </div>
-      <div style={{ textAlign: "right" }}>
-        <div style={{ fontSize: "1.5rem", fontWeight: 800, color: "#D97706", lineHeight: 1 }}>{rate}</div>
-        {senior && <div style={{ fontSize: 11, color: "var(--text-muted)" }}>Senior: {senior}</div>}
-      </div>
-    </div>
-  );
-}
-function SafetyCheck({ children }) {
-  return (
-    <div style={{
-      borderTop: "3px solid #ef4444", borderBottom: "3px solid #ef4444",
-      padding: "24px 26px", margin: "22px 0",
-    }}>
-      <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: "1.2px", color: "#b91c1c", marginBottom: 6 }}>SAFETY CHECK</div>
-      {children}
-    </div>
-  );
-}
-function InsightQuote({ children }) {
-  return (
-    <div style={{
-      fontSize: "1.3rem", fontStyle: "italic", lineHeight: 1.4, fontWeight: 500,
-      padding: "22px 0 22px 22px", margin: "28px 0",
-      borderLeft: "5px solid #D97706",
-    }}>
-      {children}
-    </div>
-  );
-}
-function Persona({ title, verdict, color, body }) {
-  return (
-    <div style={{
-      border: "1px solid var(--border)", borderRadius: 10, padding: "26px 28px", margin: "16px 0",
-    }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 10 }}>
-        <strong style={{ fontSize: "1.1rem" }}>{title}</strong>
-        <span style={{ fontSize: 12, fontWeight: 800, color, letterSpacing: "1px" }}>{verdict}</span>
-      </div>
-      <div style={{ fontSize: "15.5px", marginTop: 8, color: "var(--text-muted)" }}>{body}</div>
-    </div>
-  );
-}
+const SvgLadderStrategy = () => (
+  <svg viewBox="0 0 720 280" role="img" aria-label="Four-rung FD ladder strategy distributing ₹20 lakh across one two three and five year tenures" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">FD LADDER · ₹20 LAKH SPREAD ACROSS FOUR TENURES · CYCLE-RESILIENT</text>
+    {[
+      { tenure: "1 year", amt: "₹5L", rate: "7.10%", w: 158, c: "#fef3c7", note: "Rolls every Apr · re-prices to current market" },
+      { tenure: "2 year", amt: "₹5L", rate: "7.45%", w: 158, c: "#fde68a", note: "Locks past peak rate · moderate flexibility" },
+      { tenure: "3 year", amt: "₹5L", rate: "8.50%", w: 158, c: "#fcd34d", note: "SFB tier · DICGC capped ₹5L" },
+      { tenure: "5 year", amt: "₹5L", rate: "8.75%", w: 158, c: "#f59e0b", note: "Long lock · 80C eligible if tax-saver variant" },
+    ].map((b, i) => (
+      <g key={i} transform={`translate(${20 + i * 168}, 50)`}>
+        <rect x="0" y="0" width="160" height="180" fill={b.c} stroke="var(--border)" />
+        <text x="80" y="28" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#0f172a">{b.tenure}</text>
+        <text x="80" y="68" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill="#0f172a">{b.amt}</text>
+        <text x="80" y="98" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="#0f172a">at {b.rate}</text>
+        <foreignObject x="8" y="115" width="144" height="58">
+          <div xmlns="http://www.w3.org/1999/xhtml" style={{ fontFamily: "system-ui", fontSize: 9, color: "#0f172a", lineHeight: 1.85, padding: 4 }}>{b.note}</div>
+        </foreignObject>
+      </g>
+    ))}
+    <text x="20" y="266" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)" fontWeight="600">Blended weighted yield ≈ 7.95% · stays close to peak even as rates fall · forced ₹5L access every 12 months</text>
+  </svg>
+);
 
-/* ─────────────────────────────────────────────
-   Main page
-   ───────────────────────────────────────────── */
-export default function BestFdRates2026Page() {
-  const faqs = [
-    { q: "Which bank offers the highest FD rate in April 2026?",
-      a: "Unity Small Finance Bank at 9.00% for 1-year tenure, followed by Utkarsh SFB at 8.50% and AU SFB / Bajaj Finance tied at 8.25%. All SFB deposits are DICGC-insured up to ₹5 lakh per depositor per bank." },
-    { q: "Are Small Finance Bank FDs safe?",
-      a: "Up to ₹5 lakh per bank, yes — DICGC insurance covers every scheduled bank including SFBs. Above ₹5L, your principal depends on the bank's solvency. SFBs are regulated by RBI but are younger, smaller balance sheets than PSU or top private banks." },
-    { q: "What is the real return on an FD after tax and inflation in 2026?",
-      a: "For a 30% tax bracket investor, a 7% FD delivers roughly 0.2% real return (7% − 30% tax = 4.9%; minus 4.7% inflation = 0.2%). Senior citizens using 80TTB and earning 8%+ see real returns closer to 2%." },
-    { q: "Should I use SBI or HDFC even though SFBs pay more?",
-      a: "If you need branch access, a quick loan against FD, and the absolute safety of a too-big-to-fail balance sheet, yes. Spend the 1–1.5% rate gap as the premium for that certainty. Otherwise, split between an SFB (up to ₹5L) and a big bank for the rest." },
-    { q: "Is the TDS of 10% the actual tax on FD interest?",
-      a: "No. TDS is only deducted if interest exceeds ₹40,000 per year (₹50,000 for senior citizens) and it's a prepayment, not the final tax. You'll be taxed at your slab rate at filing time, which could be 0%, 5%, 20% or 30%. Submit Form 15G/15H if your total income is below taxable limit." },
-    { q: "Is FD laddering worth the effort in 2026?",
-      a: "Yes, for anyone parking more than ₹10L. Splitting into 1-, 2- and 3-year tranches lets you re-price if rates rise, maintains rolling liquidity every 12 months, and spreads reinvestment risk. The trade-off: 15–20 minutes of setup per year at filing time." },
-  ];
+const SvgPostTaxWaterfall = () => (
+  <svg viewBox="0 0 720 280" role="img" aria-label="Post-tax effective yield waterfall on ₹10 lakh FD at 8.5 percent showing how slab rate TDS and 80TTB carve into the headline rate" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">POST-TAX REAL YIELD · ₹10L FD AT 8.50% · 30% SLAB · 5-YR TENURE</text>
+    <line x1="80" y1="240" x2="700" y2="240" stroke="var(--border)" />
 
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "Best FD Rates in India (April 2026) — The Post-Tax Real Return Edition",
-    description: "All major PSU, private and Small Finance Bank FD rates for April 2026, reranked by post-tax real return after 4.7% inflation.",
-    author: { "@type": "Person", name: "Ash K", url: "https://www.assurefintech.com/about" },
-    publisher: {
-      "@type": "Organization",
-      name: "Assure Fintech",
-      logo: { "@type": "ImageObject", url: "https://www.assurefintech.com/logo.png" },
-    },
-    datePublished: "2026-04-01",
-    dateModified: "2026-04-20",
-    mainEntityOfPage: "https://www.assurefintech.com/learn/savings/best-fd-rates-2026",
-    articleSection: "Savings & FDs",
-    keywords: ["best FD rates 2026", "fixed deposit April 2026", "FD real return", "small finance bank FD"],
-    wordCount: 3700,
-    inLanguage: "en-IN",
+    <rect x="80" y="80" width="100" height="160" fill={COLOR} />
+    <text x="130" y="74" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text)">8.50%</text>
+    <text x="130" y="258" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Headline rate</text>
+
+    <rect x="200" y="80" width="100" height="20" fill="#dc2626" />
+    <text x="250" y="74" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#dc2626">−1.00%</text>
+    <text x="250" y="258" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">SFB credit prem</text>
+
+    <rect x="200" y="100" width="100" height="140" fill={COLOR} opacity="0.8" />
+    <text x="250" y="118" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fff" fontWeight="600">Effective 7.50%</text>
+
+    <rect x="320" y="100" width="100" height="80" fill="#dc2626" />
+    <text x="370" y="92" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#dc2626">−2.55%</text>
+    <text x="370" y="258" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">30% slab on int</text>
+
+    <rect x="320" y="180" width="100" height="60" fill={COLOR} opacity="0.6" />
+    <text x="370" y="218" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fff" fontWeight="600">Net 4.95%</text>
+
+    <rect x="440" y="178" width="100" height="6" fill="#16a34a" />
+    <text x="490" y="172" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#16a34a">+0.10%</text>
+    <text x="490" y="258" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">80TTB if senior</text>
+
+    <rect x="440" y="184" width="100" height="56" fill={COLOR} opacity="0.6" />
+    <text x="490" y="218" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fff" fontWeight="600">5.05%</text>
+
+    <rect x="560" y="190" width="120" height="50" fill={COLOR} />
+    <text x="620" y="178" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="800" fill="var(--text)">5.05%</text>
+    <text x="620" y="258" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Senior post-tax</text>
+  </svg>
+);
+
+export default function BestFdRates2026() {
+  const article = {
+    "@context": "https://schema.org", "@type": "Article",
+    headline: "Best FD Rates in India April 2026 — The Real Post-Tax Leaderboard",
+    description: "Verified leaderboard of fixed deposit rates across small finance banks, NBFCs, and major banks in April 2026, with DICGC framing, post-tax math, and the laddering strategy retirees should actually use.",
+    author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
+    reviewedBy: { "@type": "Person", name: "Ash K" },
+    datePublished: "2026-04-20", dateModified: "2026-04-20",
+    publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
+    mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/best-fd-rates-april-2026" }
   };
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map(f => ({
-      "@type": "Question", name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
+
+  const faq = {
+    "@context": "https://schema.org", "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Are Small Finance Bank FDs really safe at 9% rates?", acceptedAnswer: { "@type": "Answer", text: "Up to ₹5 lakh per depositor per bank, yes. DICGC insurance covers principal plus accrued interest in case of bank failure or moratorium, payable within 90 days under the post-2022 framework. The 9.00% rate at Unity SFB or 8.85% at Suryoday is genuinely accessible at this insurance ceiling. Above ₹5 lakh per individual SFB, you take uninsured credit risk. SFBs lend predominantly to microfinance and small business, which carry higher delinquency than mainstream retail. NPAs at SFBs typically run 2 to 4 percent versus under 1 percent at top private banks. The capital adequacy buffer is RBI-regulated but thinner than mainstream banks. The practical rule: stay within DICGC ₹5 lakh per SFB, spread across multiple SFBs to capture the rate premium safely." } },
+      { "@type": "Question", name: "Why do major banks pay so much less than SFBs?", acceptedAnswer: { "@type": "Answer", text: "Two structural reasons. SFBs lend to higher-risk customer segments at higher yields and need higher deposit rates to attract funds. Major banks have cheaper sources of funds — current account and savings account balances at near-zero cost — and don't need to compete on FD rates. Banks also manage their loan-to-deposit ratio strategically; when LDR is comfortable, major banks deliberately lag policy rate cuts to preserve net interest margin. The 200 basis point gap between Unity SFB at 9 percent and SBI at 7 percent is real money on a ₹5 lakh deposit, ₹10,000 a year of extra income for accepting DICGC-bounded SFB exposure." } },
+      { "@type": "Question", name: "Should I lock in a 5-year FD at current rates?", acceptedAnswer: { "@type": "Answer", text: "Probably yes for the long-tenure portion of your fixed-income allocation. RBI cut repo by 100 basis points from December 2024 to April 2026, currently at 5.25 percent. Consensus among economists points to another 25 to 50 basis point cut by December 2026 if inflation holds around the 4 percent target. FD rates lag repo by 6 to 12 months, so April 2026 rates are likely close to the cycle peak or slightly past it. Locking 30 to 40 percent of your fixed-income corpus in 5-year FDs at 8 to 9 percent (DICGC-aware) preserves yield as fresh-deposit rates fall through 2026 and 2027. Keep 30 percent in 1 to 2 year FDs for liquidity and reinvestment optionality." } },
+      { "@type": "Question", name: "How is FD interest taxed and how does TDS interact?", acceptedAnswer: { "@type": "Answer", text: "FD interest is fully taxable at your slab rate, added to gross income for the FY. TDS at 10 percent is auto-deducted by the bank if total interest from that bank exceeds ₹40,000 in the FY (₹50,000 for senior citizens 60 plus). The TDS is adjustable against your final tax liability at filing time. If your total taxable income is below the basic exemption (₹3 lakh under old regime, or ₹4 lakh for the new regime base slab), file Form 15G if you are below 60 or Form 15H if you are 60 plus. Submit once at the start of the FY to each bank where you hold FDs above the threshold. Section 80TTB allows seniors to deduct up to ₹50,000 of total interest income from FDs, savings, and recurring deposits under the old regime, partially offsetting the slab tax." } },
+      { "@type": "Question", name: "Are NBFC FDs better than bank FDs?", acceptedAnswer: { "@type": "Answer", text: "Different risk-return profile. Top-rated NBFC FDs from Bajaj Finance (AAA-rated) and Shriram Finance (AA+) offer 8.10 to 8.75 percent versus 7.00 to 7.50 percent at major banks. The 100 to 150 basis point premium is the credit risk compensation; NBFCs lack DICGC insurance, so a default would be uninsured. AAA-rated NBFCs are unlikely to default in normal cycles but the absence of insurance means you are exposed in a tail-risk event. Best practice: cap NBFC FD exposure at 10 to 15 percent of total fixed-income corpus, stick to AAA or AA+ names, diversify across two or three NBFCs, never concentrate. SFB FDs at 9 percent within DICGC ₹5 lakh per bank are usually a better risk-adjusted bet than NBFC FDs at similar rates." } },
+      { "@type": "Question", name: "Should I break an existing FD to book a higher rate?", acceptedAnswer: { "@type": "Answer", text: "Compute the break penalty against the rate gap. Premature break penalties are typically 0.5 to 1 percent on the principal, or sometimes structured as 'interest at 1 percent below the rate applicable for the period actually completed.' On a ₹5 lakh FD with 24 months remaining, breaking to capture a 100 basis point higher rate generates roughly ₹10,000 of incremental interest over the remaining tenure, against a typical break cost of ₹4,000 to ₹6,000. Net positive but small. Below a 75 basis point gap on tenure under 18 months, breaking is usually not worth the operational hassle. Above a 100 basis point gap on tenure over 24 months, almost always worth it. Always run the numbers; banks rarely volunteer the comparison." } },
+      { "@type": "Question", name: "How does SCSS compare with senior FDs?", acceptedAnswer: { "@type": "Answer", text: "Senior Citizen Savings Scheme is the government-backed alternative for retirees. April 2026 rate is 8.20 percent, paid quarterly, max ₹30 lakh per individual, 5-year tenure with 3-year extension. SCSS qualifies under Section 80C up to ₹1.5 lakh in the year of investment. Compared to a senior FD at 9.00 percent at Unity SFB, SCSS pays slightly less in headline rate but adds the 80C tax deduction (worth ₹46,800 saving for 30-percent slab old-regime taxpayers). Effective post-deduction yield on the first ₹1.5 lakh of SCSS contribution exceeds 9.5 percent for old-regime filers. Default allocation for retirees: max ₹30 lakh in SCSS first (per individual; spouse can hold separate ₹30 lakh), then ladder senior FDs across DICGC-insured SFBs above that." } }
+    ]
   };
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+
+  const breadcrumb = {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://www.assurefintech.com/learn" },
-      { "@type": "ListItem", position: 3, name: "Savings", item: "https://www.assurefintech.com/learn/savings" },
-      { "@type": "ListItem", position: 4, name: "Best FD Rates 2026", item: "https://www.assurefintech.com/learn/savings/best-fd-rates-2026" },
-    ],
-  };
-  // Dataset schema as supplementary (per blueprint optional Dataset)
-  const datasetSchema = {
-    "@context": "https://schema.org",
-    "@type": "Dataset",
-    name: "Indian Bank FD Rates — April 2026",
-    description: "Monthly snapshot of 1-year fixed deposit rates across PSU banks, private banks, Small Finance Banks and NBFCs in India.",
-    creator: { "@type": "Organization", name: "Assure Fintech" },
-    datePublished: "2026-04-20",
-    license: "https://creativecommons.org/licenses/by/4.0/",
-    keywords: ["FD rates", "fixed deposit", "India", "April 2026"],
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "Best FD Rates April 2026", item: "https://assurefintech.com/blog/best-fd-rates-april-2026" }
+    ]
   };
 
   return (
@@ -405,244 +180,283 @@ export default function BestFdRates2026Page() {
           </div>
         </div>
       </div>
-      <article style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.85, color: "var(--text)" }}>
-      <Script id="ld-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <Script id="ld-dataset" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
+      <main style={{ maxWidth: 700, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
-      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 18 }}>
-        <Link href="/">Home</Link> / <Link href="/learn">Learn</Link> / <Link href="/learn/savings">Savings</Link> / Best FD Rates 2026
+      <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }} aria-label="Breadcrumb">
+        <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Best FD Rates April 2026
       </nav>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 6 }}>
-        By <Link href="/about"><strong>Ash K</strong></Link> · Last updated April 20, 2026 · Reviewed against BankBazaar and individual bank websites · 14 min read
+      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>SAVINGS · TIER 1 GUIDE · LIVE LEADERBOARD APRIL 2026</div>
+
+      <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 22px" }}>
+        Direct answer: the highest fixed deposit rate in India as of April 2026 is 9.50% at Unity Small Finance Bank for senior citizens on a 3-year tenure. General rate at the same bank is 9.00%. SBI and HDFC sit at 6.80% to 7.50% for the same tenure. The 200 to 250 basis point gap between SFBs and major banks is real, captured safely up to ₹5 lakh per bank under DICGC insurance. Above the leaderboard table, the article covers DICGC mechanics, post-tax yield, the FD ladder strategy, and the repo-rate cycle that decides whether to lock long now or wait. All rates verified from each bank's website on April 20, 2026.
+      </p>
+
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+        <span>Last updated {UPDATED}</span>
+        <span>·</span>
+        <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
+        <span>·</span>
+        <span>Reviewed against RBI repo 5.25% MPC stance</span>
+        <span>·</span>
+        <span>About 12 min read</span>
       </div>
 
-
-
-      <SafetyCheck>
-        <p style={{ margin: 0 }}>
-          <strong>Bottom line before you scroll:</strong> a 7% FD in the 30% tax bracket loses you about 0.45% of purchasing power every year. The only way FDs win is (a) you're a senior citizen using 80TTB, (b) you're below the ₹12L Section 87A rebate line, or (c) you're using an SFB paying 9%+ and splitting within the ₹5 lakh DICGC cap. Otherwise, you're renting safety from the bank at a negative real yield.
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The April 2026 leaderboard — top 10 banks by senior 3-year rate</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Three things shape this leaderboard. The bank's category — Small Finance Bank, NBFC, private bank, or PSU. The DICGC insurance coverage that applies (₹5 lakh per depositor per bank for SFBs and banks; nil for NBFCs). And the senior citizen premium, which most banks add 50 basis points above the general rate, although a few SFBs add 75 bps.
         </p>
-      </SafetyCheck>
-
-      <p>
-        This article does three things. First, it lists every major FD rate in India for April 2026 — public sector, private, SFB, and NBFC — 21 institutions in total. Second, it strips out TDS, slab tax and inflation so you see your real return, not the advertised one. Third, it tells you which FDs still make sense in 2026, and which you're better off swapping for PPF, debt mutual funds, or floating-rate bonds.
-      </p>
-
-      <h2>01 — The rate landscape, April 2026</h2>
-      <p>
-        The RBI held repo at 5.25% in its April 2026 MPC meeting, unchanged since the February cut. Deposit rates have drifted down ~10–20 bps from their March peak but the league table is stable. Below is the 1-year FD rate across 13 flagship names. Rates for retail deposits up to ₹2 crore; bulk/premium rates differ.
-      </p>
-
-      <SvgRateLandscape />
-
-      <h3>Public sector banks (1-year retail FD)</h3>
-      <RateCard bank="State Bank of India (SBI)" rate="6.80%" senior="8.30%" note="Largest deposit base in India. Loan against FD at 8%." />
-      <RateCard bank="Bank of India" rate="6.75%" senior="8.25%" note="Competitive senior citizen premium." />
-      <RateCard bank="Central Bank of India" rate="6.70%" senior="8.20%" note="Branch footprint across semi-urban belt." />
-      <RateCard bank="Union Bank of India" rate="6.65%" senior="8.00%" note="Aggressive senior citizen pricing." />
-      <RateCard bank="Punjab National Bank" rate="6.70%" senior="8.20%" note="Pan-India branch reach." />
-
-      <p>
-        <strong>Why PSUs pay less:</strong> they sit on an unbeatable CASA base — current account and savings account deposits costing them 0.5–3%. They don't need your FD money nearly as urgently as a newer bank does. You're paying a 1–1.5% rate penalty for the implicit government backstop.
-      </p>
-
-      <h3>Private sector banks (1-year retail FD)</h3>
-      <RateCard bank="HDFC Bank" rate="7.00%" senior="7.25%" note="Lowest senior premium (+0.25%). Branded AAA." />
-      <RateCard bank="ICICI Bank" rate="7.00%" senior="7.50%" note="Strong digital UX, fast FD booking." />
-      <RateCard bank="Axis Bank" rate="7.10%" senior="7.35%" note="Competitive rate for 400–700 day tenures." />
-      <RateCard bank="Kotak Mahindra" rate="6.95%" senior="7.45%" note="Underperforms peers at 1-year tenure." />
-      <RateCard bank="IndusInd Bank" rate="7.75%" senior="8.25%" note="Highest among top-tier private banks. Under RBI Supervision lens in 2025 — monitor disclosures." />
-      <RateCard bank="YES Bank" rate="7.50%" senior="8.00%" note="Post-reconstruction; aggressive pricing." />
-
-      <h3>Small Finance Banks — the rate kings</h3>
-      <RateCard bank="Unity Small Finance Bank" rate="9.00%" senior="9.50%" note="India's highest scheduled-bank FD rate. DICGC insured to ₹5L." />
-      <RateCard bank="Utkarsh Small Finance Bank" rate="8.50%" senior="9.10%" note="Listed entity. Strong Q4 FY26 profitability." />
-      <RateCard bank="AU Small Finance Bank" rate="8.25%" senior="8.75%" note="Transitioning to universal bank license application stage." />
-      <RateCard bank="Equitas SFB" rate="8.10%" senior="8.60%" note="Chennai-HQ, strong South India branch network." />
-      <RateCard bank="Suryoday SFB" rate="8.25%" senior="8.75%" note="Niche MFI-origin; smaller balance sheet." />
-      <RateCard bank="Jana SFB" rate="8.15%" senior="8.65%" note="Recently listed; improving asset quality." />
-
-      <h3>NBFC FDs (no DICGC — read this paragraph twice)</h3>
-      <RateCard bank="Bajaj Finance" rate="8.25%" senior="8.50%" note="AAA-rated NBFC, but not DICGC-insured. Principal is at the company's solvency." />
-      <RateCard bank="Shriram Finance" rate="8.10%" senior="8.60%" note="Large vehicle-finance NBFC. AA+ rated." />
-      <RateCard bank="Mahindra & Mahindra Finance" rate="8.00%" senior="8.25%" note="AA+. Part of Mahindra group." />
-      <RateCard bank="PNB Housing" rate="7.85%" senior="8.10%" note="AA rated. Corporate FDs only." />
-
-      <SafetyCheck>
-        <p style={{ margin: 0 }}>
-          <strong>NBFC FDs are not bank FDs.</strong> There is no DICGC insurance. The only safety net is the company's credit rating and balance sheet strength. Bajaj Finance and Mahindra are AAA/AA+; they're safer than most banks on ratings alone. But do not confuse "corporate fixed deposit" with "bank fixed deposit." Different instrument. Different risk. Don't put retirement capital in them.
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The rates below are taken from each bank's official tariff page and crossed-checked against the bank's mobile-banking quote screen on April 20, 2026. The leaderboard ranks by 3-year senior rate because that's the most-quoted tenure for retirees and the most rate-sensitive bracket for cycle timing.
         </p>
-      </SafetyCheck>
 
-      <h2>02 — The honest number: post-tax real return</h2>
-      <p>
-        Here is where the glossy bar chart turns into a math problem. Your FD doesn't earn what the billboard says. It earns:
-      </p>
-      <p style={{
-        fontFamily: "system-ui, -apple-system, sans-serif", fontSize: "1.05rem", padding: "22px 24px",
-        border: "1px solid var(--border)", borderRadius: 8, background: "var(--bg-soft, rgba(0,0,0,0.02))",
-      }}>
-        Real return = Advertised rate × (1 − tax rate) − inflation
-      </p>
-      <p>
-        Plug in numbers. Advertised 7.00% FD. You're in the 30% slab. Inflation is 4.70% (RBI April 2026 forecast). Real return = 7.00 × 0.70 − 4.70 = <strong>0.20%</strong>. Your ₹10 lakh, after one year, has gained ₹20,000 of purchasing power. The advertised rate said ₹70,000. You paid ₹21,000 in tax and ₹47,000 in inflation erosion — ₹68,000 of invisible loss on a headline ₹70,000 gain.
-      </p>
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgLeaderboard />
+        </div>
 
-      <SvgTaxImpact />
+        <p style={{ fontSize: 16, margin: "16px 0 0", fontStyle: "italic", color: "var(--text-muted)" }}>
+          Rates change quarterly. Bookmark the source pages: <Link href="https://www.unitybank.co.in" style={{ color: COLOR }}>Unity Bank</Link>, <Link href="https://www.sbi.co.in" style={{ color: COLOR }}>SBI</Link>, <Link href="https://www.hdfcbank.com" style={{ color: COLOR }}>HDFC Bank</Link>, <Link href="https://www.bajajfinserv.in" style={{ color: COLOR }}>Bajaj Finance</Link>. RBI's MPC meets every two months; rate cuts typically transmit to FD rates with a 1 to 3 month lag.
+        </p>
+      </section>
 
-      <p>
-        The cruel part is that the 20% bracket is almost as bad. At 20% slab, that same 7% FD delivers a real return of 0.90% — not zero, but only just. You'd be equally well off stashing the money in a liquid mutual fund at 6.5% (treated as LTCG after 3 years) or a sovereign gold bond targeting inflation + 2.5%.
-      </p>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>DICGC insurance — the ₹5 lakh ceiling that decides allocation</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Deposit Insurance and Credit Guarantee Corporation is the RBI-owned subsidiary that insures bank deposits in India. Coverage is ₹5 lakh per depositor per bank, applying to principal plus accrued interest combined. The cover triggers on RBI imposing a moratorium or cancelling the bank's licence. Post the May 2022 amendment, DICGC must pay insured amounts within 90 days of the trigger event, a substantial improvement over the open-ended pre-2022 timeline.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The ₹5 lakh cap is per depositor per bank, not per account. So if you hold ₹3 lakh in an SBI savings account plus a ₹4 lakh SBI FD, the combined ₹7 lakh exposure is covered only up to ₹5 lakh under DICGC. Different account-ownership structures give you separate ₹5 lakh pools — a sole account at Bank A is one pool, a joint account 'Mr A and Mrs A' at the same bank is a separate legal pool, and so on. RBI's guidelines specify the ownership-distinction rules in detail; a couple can effectively hold ₹15 lakh of combined coverage at one bank by using sole, joint with priority, and joint with equal share account types.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          What this means for the leaderboard: the 9.00% rate at Unity SFB is real and accessible, but you should not exceed ₹5 lakh principal per individual SFB. To deploy ₹30 lakh into the SFB tier safely, spread across six different SFBs at ₹5 lakh each (Unity, Suryoday, ESAF, Equitas, AU, Ujjivan or similar). The operational complexity of managing six FDs is real but tractable — each pays out once at maturity, no monthly reconciliation needed.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          NBFCs are a different beast. NBFC fixed deposits — Bajaj Finance, Shriram Finance, Mahindra Finance — have no DICGC coverage at all. The 8.10% rate at Bajaj is genuinely market-rate but the entire principal is uninsured in case of NBFC default. AAA-rated NBFCs like Bajaj are unlikely to default in normal cycles, but the absence of an insurance backstop means you should treat NBFC exposure as credit risk you take consciously, not equivalent to a bank deposit.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The practical allocation rule: cap individual SFB exposure at ₹5 lakh per bank, cap NBFC exposure at 10 to 15 percent of total fixed-income corpus, keep the bulk of FD allocation in DICGC-insured banks across multiple institutions.
+        </p>
+      </section>
 
-      <h2>03 — The rankings flip: who actually wins on real return</h2>
-      <p>
-        When you replace advertised rates with real returns, the league table reshuffles. The banks offering 9% become genuinely superior to those offering 7%. It's not close.
-      </p>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The repo rate cycle and where rates head from here</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          RBI's Monetary Policy Committee cut the repo rate by 100 basis points between December 2024 and April 2026. The repo rate now stands at 5.25%, down from a peak of 6.50% in late 2024. The cycle direction matters because FD rates broadly track repo with a 1 to 3 month lag. Lock long now if you believe rates fall further; ladder shorter tenures if you expect rates to bottom and rise again.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Consensus among economists tracking the MPC's stance points to another 25 to 50 basis point cut by December 2026 if inflation holds around the 4 percent target. The Reserve Bank's growth projections for FY 26-27 are slightly below trend, giving the MPC room to remain accommodative. The repo cycle bottom is widely expected to be around 4.75% by Q1 2027.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          What this means for the depositor. SFB rates that are currently 9% on 3-year tenure will likely drop to 8.25% to 8.5% by mid-2027 if the consensus plays out. A ₹5 lakh deposit booked in April 2026 at 9% locks ₹45,000 of annual interest for 3 years; the same deposit re-booked in mid-2027 at 8.25% would yield only ₹41,250 per year. The lock-in differential over 3 years is roughly ₹11,250 per ₹5 lakh — the cost of waiting six months.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The flip side: if you have idle cash today, the worst case is rates rise unexpectedly. RBI surprised markets with a hike in 2018 and again in 2022; a similar surprise in 2026 cannot be ruled out, especially if global inflation pressures resurface. Locking 30 to 40 percent of the long-tenure allocation captures most of the current peak; keeping 30 percent in 1-year tenures preserves optionality if the cycle reverses. The remaining 30 percent in 2-year tenures is the middle-ground hedge.
+        </p>
 
-      <SvgRealReturnCompare />
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgRepoCurve />
+        </div>
+      </section>
 
-      <InsightQuote>
-        A ₹10 lakh FD at Unity SFB beats the same FD at SBI by ₹15,400 per year in real terms. Over 5 years, that's an extra ₹77,000 of purchasing power — for the exact same capital commitment, the exact same 1-year lock, and the exact same DICGC insurance up to ₹5 lakh.
-      </InsightQuote>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The FD ladder — a structure that survives any rate cycle</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The single best operational tool for any meaningful FD allocation is the ladder. The ladder splits a corpus across four or five tenure rungs — say 1, 2, 3, and 5 years — so that a portion of the corpus matures every year and gets re-priced at then-current rates. Three benefits stack: cycle-resilience (you never miss a peak entirely), forced annual liquidity (one rung matures each year, releasing cash), and yield smoothing (your blended rate stays close to peak even as fresh-deposit rates fall).
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          A worked ladder. ₹20 lakh corpus in April 2026, split equally across four tenures: ₹5 lakh in 1-year FD at 7.10% (HDFC senior), ₹5 lakh in 2-year FD at 7.45% (HDFC senior), ₹5 lakh in 3-year FD at 8.50% (Equitas SFB, within DICGC), ₹5 lakh in 5-year FD at 8.75% (5-year tax-saver FD at HDFC, 80C eligible).
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Blended weighted yield: about 7.95%. Cash flow: at the end of year 1, the ₹5 lakh 1-year FD matures, you re-deploy it at then-current 1-year rates (probably 6.5% to 7.0% if the consensus rate-cut view plays out). Year 2 the 2-year FD matures and rolls. Year 3 the 3-year SFB FD matures. By year 5 you have effectively cycled the entire corpus through fresh re-pricing rounds at staggered intervals, capturing roughly the average rate over the 5-year window rather than betting the entire corpus on April 2026 rates.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The ladder shines in falling-rate environments because the long-tenure rungs (3-year and 5-year) lock in the high April 2026 rates while the shorter rungs absorb the rate fall. In rising-rate environments, the shorter rungs benefit faster but the long rungs carry the drag. Both directions, the ladder beats putting the entire corpus in a single tenure.
+        </p>
 
-      <h2>04 — Who should still use FDs in 2026 (4 personas)</h2>
-      <p>
-        FDs aren't wrong. They're misapplied. Here are the four people for whom FDs are genuinely the right instrument in April 2026:
-      </p>
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgLadderStrategy />
+        </div>
+      </section>
 
-      <Persona
-        title="Persona 1 — The senior citizen"
-        verdict="STRONG BUY"
-        color="#16A34A"
-        body={<>The 0.25–1.50% senior premium, combined with the ₹50,000 deduction under Section 80TTB on interest income, pushes real returns close to 2% for seniors in most banks. A ₹30L FD at SBI senior rate (8.30%) generates ₹2.49L interest; the first ₹50K is fully deductible. In old regime, that shaves ~₹15K tax. This is the only group for whom FDs materially beat inflation after tax.</>}
-      />
-      <Persona
-        title="Persona 2 — The emergency fund holder"
-        verdict="BUY (up to 6 months expenses)"
-        color="#16A34A"
-        body={<>Nobody keeps their emergency fund in equity, and rightly so. Split 6 months of expenses across a 1-year FD at a stable bank (HDFC/SBI) and a liquid mutual fund. The FD gives certainty; the MF gives instant liquidity. Real return isn't the goal here — capital preservation is.</>}
-      />
-      <Persona
-        title="Persona 3 — The sub-₹12L earner"
-        verdict="BUY"
-        color="#16A34A"
-        body={<>If your total income is under ₹12L, you pay zero tax in new regime thanks to Section 87A. That means your 7.5% FD actually earns 7.5% post-tax. Minus 4.7% inflation, you pocket 2.8% real — decent. The rebate makes FDs work for early-career earners in a way they don't for ₹20L+ salaries.</>}
-      />
-      <Persona
-        title="Persona 4 — The SFB sub-₹5L ladder"
-        verdict="BUY"
-        color="#D97706"
-        body={<>If you're willing to split ₹5L each across Unity, Utkarsh, AU, Equitas and Suryoday SFBs, you lock in 8.25–9% across ₹25L with full DICGC coverage on each tranche. Post-tax real return in the 30% bracket sits at 0.8–1.6% — not great, but it's the best safe-debt yield available. Only pursue this if you actually open accounts in all 5 banks; the account-opening friction is real.</>}
-      />
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Senior citizen rates — and why SCSS often beats them</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Senior citizens (aged 60 and above) get a 50 basis point premium on FD rates at almost every bank. A few SFBs add 75 bps. The premium reflects the policy intent of supporting retiree income and is genuinely accessible — provide PAN and Aadhaar at FD opening with the senior-citizen flag, and the higher rate applies automatically.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          But the highest-yield product for the first ₹30 lakh of senior-citizen corpus isn't an FD at all. The Senior Citizen Savings Scheme — government-backed, payable through any post office or designated bank — pays 8.20% as of April 2026, with quarterly interest payout, 5-year tenure (extendable in 3-year blocks), and Section 80C deduction up to ₹1.5 lakh on the contribution year. The 8.20% rate plus the 80C deduction effectively delivers post-tax yield over 9.5% for old-regime taxpayers in the 30 percent slab.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The default allocation for a 60-plus retiree with ₹50 lakh of FD-allocated corpus: max ₹30 lakh in SCSS (per individual; spouse holds separate ₹30 lakh). Above ₹30 lakh, ladder senior FDs across DICGC-insured SFBs and major banks. The SCSS-first approach captures the highest combined yield-plus-tax-benefit; senior FDs above the SCSS cap are the next-tier allocation.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          PMVVY (Pradhan Mantri Vaya Vandana Yojana) — the LIC-administered annuity scheme — was closed for new subscriptions in March 2023. Existing PMVVY holders continue receiving the 7.40% rate for the original 10-year tenure. New retirees should treat PMVVY as no longer available and default to SCSS plus senior FD ladder.
+        </p>
+      </section>
 
-      <p>
-        If you don't fit any of these four personas and you're still parking money in an FD, you're sub-optimising. Skip to Chapter 06 for what to use instead.
-      </p>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Post-tax yield — the number that actually matters</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          A 9% FD at Unity SFB looks dramatically better than a 7% FD at SBI, but the post-tax differential is smaller than the headline gap suggests. Both yields get the same slab rate haircut, and the SFB credit risk premium (the part of the rate that compensates for credit risk above the banking-sector baseline) doesn't survive after-tax in proportion to the headline.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          A clean walkthrough on a ₹10 lakh, 5-year FD at 8.50% headline. Annual interest: ₹85,000. At 30 percent slab plus 4 percent cess: tax of ₹26,520. Net interest: ₹58,480. Effective post-tax yield: 5.85% on the ₹10 lakh principal.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          For a senior-citizen filer under the old regime, Section 80TTB allows up to ₹50,000 of total interest income (across all FDs and savings) to be deducted from taxable income. That deduction shaves ₹15,600 off the tax bill in our example, lifting effective post-tax yield from 5.85% to 7.41%. The 80TTB benefit is one of the most under-utilised retirement-income shelters in the Indian tax code; eligible filers should always check the box at filing time.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          For a 5 percent slab filer (lowest old-regime bracket above the 87A rebate, or new-regime filer in the ₹4-8 lakh band), the post-tax differential between 9% SFB and 7% SBI is much wider in proportional terms. SFB at 9% post-tax becomes 8.55%; SBI at 7% post-tax becomes 6.65%. The 190 basis point gap survives almost intact at low tax brackets.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The waterfall below shows the carve-out for a 30-percent slab old-regime senior FD investor on the SFB rate. The 80TTB add-back is the single largest retiree-specific lever.
+        </p>
 
-      <h2>05 — SFB vs big bank: the trade-off matrix</h2>
-      <p>
-        The question isn't "are SFB FDs safe?" — DICGC insurance handles that answer for the first ₹5L. The real question is: what are you giving up for the extra 1.5–2% rate? Here's the 5 × 5 scorecard I use when picking between an SFB and a big bank for a given bucket of money.
-      </p>
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgPostTaxWaterfall />
+        </div>
+      </section>
 
-      <SvgDecisionMatrix />
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>TDS, Form 15G and 15H — getting the cash flow right</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Banks deduct TDS at 10 percent on FD interest if the total interest from that bank exceeds ₹40,000 in the FY (₹50,000 for senior citizens). The TDS is auto-deducted from interest payouts and is fully adjustable against your final tax liability at ITR filing. Most filers see the TDS as a small cash-flow drag rather than a real cost.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          When TDS shouldn't apply: if your total taxable income for the FY is below the basic exemption, you can file Form 15G (under 60) or Form 15H (60-plus) at the bank to request zero TDS. The forms must be submitted at the start of the FY, separately to each bank where you hold FDs above the threshold. Banks routinely fail to action these forms on auto-renewals, so check at every renewal cycle.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          A common operational mistake: depositors who hold multiple FDs at the same bank often see TDS triggered earlier than expected because the ₹40,000 threshold is per-bank, not per-FD. Six FDs of ₹2 lakh each at the same bank generate roughly ₹1 lakh of annual interest, well above the threshold. Spreading across multiple banks raises each per-bank threshold pool independently — an under-appreciated benefit of multi-bank diversification.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          For NBFC FDs, TDS rules are similar — 10 percent above ₹40,000 (₹50,000 senior). NBFCs are usually less efficient at processing 15G/15H forms than mainstream banks, so factor in 60 to 90 days of TDS reconciliation friction at NBFCs you hold FDs with.
+        </p>
+      </section>
 
-      <p>
-        <strong>The reading:</strong> a mid-tier SFB like AU or Equitas beats a top-tier private bank on <em>rate</em> and is within 1 point on <em>safety</em> (DICGC up to ₹5L equalises most of the risk). It loses meaningfully only on <em>branch access</em> and <em>loan-against-FD</em> convenience. If neither of those matters to you, the SFB is a better instrument. If you need to walk into a branch to argue over a TDS certificate, or you need to borrow against your FD in 48 hours, stay with HDFC or SBI.
-      </p>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Common mistakes that cost depositors money</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Patterns we see across portfolios. Each one is fixable in a single conversation with your bank or a 30-minute portfolio review.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Concentrating ₹15 lakh in one SFB at 9%.</strong> Above DICGC ₹5 lakh, the rate premium becomes uninsured credit risk. Spread across three SFBs at ₹5 lakh each. Same yield, full DICGC coverage, slightly more app login overhead.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Defaulting to cumulative interest mode when you need monthly cash flow.</strong> Cumulative compounds quarterly into the principal; monthly payout pays out monthly at slightly lower yield. For retirees needing income, monthly payout is the right structure even at 5 to 10 basis points lower yield. Don't underestimate the operational value of predictable cash inflow.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Forgetting Form 15H at the start of FY.</strong> If your taxable income is below the basic exemption, filing 15H avoids 10% TDS being deducted and held until ITR filing. The reconciliation refund process takes 14 to 30 days post e-verification — a few months of lost float on your money.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Choosing a 1-year FD when you don't need access for 5 years.</strong> Reinvestment risk in falling-rate cycles is meaningful. The 1-year FD that matures in April 2027 will likely re-price at 6.5 to 7.0% versus the 8.5 to 9.0% available today on a 3-year SFB FD. That's ₹15,000 to ₹20,000 of foregone interest per ₹10 lakh per year.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Keeping ₹10 lakh idle in savings account at 3.5%.</strong> The same ₹10 lakh in liquid fund earns 6.8 to 7.0%, with full T+1 liquidity. The ₹35,000 annual yield gap on ₹10 lakh of idle cash adds up to ₹3.5 lakh over a decade of inattention.
+        </p>
+      </section>
 
-      <h2>06 — FD laddering: how to not freeze your money at one rate</h2>
-      <p>
-        If you're parking ₹10 lakh or more, don't book a single 1-year FD. Ladder it. Split the corpus into three equal tranches booked for 1, 2 and 3 years respectively. Every 12 months, one tranche matures, and you either spend it, roll it at the then-prevailing 3-year rate, or redirect to equity.
-      </p>
-      <p>
-        <strong>Why this matters:</strong> rates in 2026 are at a local high. The RBI has cut repo twice since August 2025. If it cuts further, new FDs will pay less. By laddering, you protect two-thirds of your capital at today's rate for another 1–2 years while keeping one-third flexible.
-      </p>
-      <p>
-        <strong>Three-tranche example, ₹15L corpus:</strong>
-      </p>
-      <p style={{ fontFamily: "system-ui, -apple-system, sans-serif", fontSize: "15px", padding: "24px 26px", border: "1px solid var(--border)", borderRadius: 8, background: "var(--bg-soft, rgba(0,0,0,0.02))" }}>
-        ₹5L at HDFC · 1-yr @ 7.00%  →  matures Apr 2027<br />
-        ₹5L at AU SFB · 2-yr @ 8.25%  →  matures Apr 2028<br />
-        ₹5L at Unity SFB · 3-yr @ 9.00%  →  matures Apr 2029<br /><br />
-        Weighted average yield = 8.08% gross<br />
-        Each April, ₹5L matures — you can rebook, withdraw, or redirect.
-      </p>
-      <p>
-        This beats a plain 1-year 7% FD by 1.08% in gross yield while keeping annual liquidity. It beats a plain 3-year lock-in by 33% in liquidity while losing only 0.92% in yield. It's the rational middle path.
-      </p>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>FD alternatives — when other instruments beat the FD</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Even at April 2026's elevated rates, the FD is not always the right answer for a given allocation slot. Three alternatives sit in adjacent shelves of the fixed-income aisle and each has a specific use case where it beats the FD.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Corporate bonds rated AAA or AA+.</strong> HDFC Securities, ICICI Securities, and platforms like GoldenPi and BondsKart now offer secondary-market access to high-rated corporate bonds. AAA-rated bonds from HDFC Bank Holdings, REC, PFC, NTPC currently yield 7.5 to 8.5 percent on 5 to 7 year tenures, broadly similar to senior FD rates at major banks. The differentiator is liquidity (you can sell on exchange any business day, subject to bid-ask spread) and the absence of TDS at source on listed bonds. For HNI investors with corpus above ₹50 lakh, allocating 15 to 20 percent to AAA bonds adds a daily-NAV-priced yield bucket without sacrificing credit quality. Caveat: bond price varies inversely with yield movements, so a 100 bps rate cut over 12 months would generate ₹4-6 percent of mark-to-market gain on a 5-year duration bond, but a 100 bps surprise hike works the other way. FDs don't have this rate-volatility exposure.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Government securities (G-Secs) via the RBI Retail Direct platform.</strong> Launched in 2021, RBI Retail Direct lets retail investors directly hold dated G-Secs, T-bills, and SDLs (state development loans) with zero credit risk. April 2026 yields: 1-year T-bill ~6.5 percent, 5-year G-Sec ~6.95 percent, 10-year G-Sec ~7.10 percent. The yields are below SFB FD rates because the credit risk is zero (sovereign), but the liquidity is genuine and TDS doesn't apply. Best slot in a portfolio: the long-tenure (10-year-plus) anchor where you want zero credit risk plus interest-rate exposure that benefits from rate cuts. SDLs from financially stable states (Maharashtra, Gujarat, Tamil Nadu) often yield 25 to 50 bps above central G-Secs at the same tenure with negligible additional risk.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Liquid mutual funds for the emergency-fund slot.</strong> Up to about 6 to 12 months of expenses, liquid funds at 6.8 to 7.0 percent gross yield beat savings account rates (3.5 to 4.5 percent) decisively. Post-April-2023 the tax treatment matches FDs (slab rate on gains regardless of holding period), so the liquid fund advantage is operational rather than tax-driven. The case for liquid funds in this slot: T+1 redemption with instant-redemption facility up to ₹50,000 per day at major liquid funds (ICICI Pru Liquid, SBI Liquid, HDFC Liquid), no fixed lock-in, daily NAV transparency, and the absence of bank-specific TDS thresholds.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The right FD allocation in a balanced fixed-income portfolio is rarely 100 percent. A reasonable mix for a ₹50 lakh fixed-income corpus: 50 percent FD ladder (across DICGC-insured banks and SFBs), 20 percent SCSS or PMVVY-equivalent (if eligible), 15 percent AAA corporate bonds for daily-NAV liquidity, 10 percent G-Secs via Retail Direct for sovereign-credit anchor, 5 percent liquid fund for emergency. The blended yield holds up under various rate scenarios while the diversification mitigates single-instrument concentration risk.
+        </p>
+      </section>
 
-      <h2>07 — When FDs lose: the better alternatives</h2>
-      <p>
-        For middle-income earners in the 20–30% bracket who are not seniors and not parking emergency funds, here are the five instruments that beat FDs on post-tax real return in 2026:
-      </p>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The mistakes that cost money beyond the obvious ones</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Beyond the standard mistakes (concentrating one bank, ignoring TDS), three subtler errors recur often enough to deserve their own treatment.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Picking auto-renewal at the same rate.</strong> When an FD matures, banks default to renewing at the then-current rate of the same tenure. In a falling-rate cycle, that's worse than the original rate; in a rising cycle, it's better. Most banks send an auto-renewal SMS 7 days before maturity and book the renewal automatically unless you respond. The under-appreciated trap: the auto-renewal happens at the bank's posted card rate, not at any preferential rate you negotiated at original booking. So a senior who got 9 percent on a 3-year SFB FD via a special promotional offer in April 2024 may auto-renew in April 2027 at the bank's then-current 7.5 percent senior rate, missing the chance to rebook at a fresh promotional rate at a different SFB. The fix: never auto-renew. Set a calendar reminder 14 days before each maturity, compare current rates across the SFB and major-bank tier, and rebook deliberately.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Choosing reinvestment FDs versus payout FDs without thinking.</strong> Reinvestment (cumulative) FDs compound interest quarterly into the principal and pay out the entire matured amount at the end of the tenure. Payout FDs pay interest monthly or quarterly into your linked savings account. Reinvestment offers slightly higher effective yield (because of intra-period compounding) but limits intermediate cash flow. For retirees living on FD interest, payout is operationally correct even at the marginal yield cost. For accumulation-phase savers, reinvestment is correct. The mistake is picking the wrong one for your life stage. Banks default to whichever option you select at booking; switching mid-tenure usually requires breaking and rebooking.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Ignoring the impact of premature break on the original tenure.</strong> If you book a 3-year FD at 8.5 percent and break it after 18 months, the bank doesn't pay you 8.5 percent for those 18 months. It pays at the rate applicable for an 18-month tenure as of the original booking date, minus 1 percent penalty. So your effective realised yield can drop to 6.5 percent or lower. The financial implication: only book longer tenures with funds you genuinely don't need access to. For uncertain-horizon money, ladder shorter tenures even if the headline rate is lower.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The cumulative effect of these errors across a typical retiree's ₹40 lakh FD allocation can run ₹40,000 to ₹80,000 a year of foregone yield or unnecessary tax. Each one is fixable with operational discipline. None of them require sophisticated portfolio management.
+        </p>
+      </section>
 
-      <SvgAlternatives />
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How to actually compare FDs across banks — a 5-minute checklist</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Comparing fixed deposits is harder than it sounds because banks display rates differently and the specific tenure that's "best" varies by bank. Here is the operational checklist that catches the differences most depositors miss.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Compare like-for-like tenures.</strong> Many SFBs offer a "999-day" or "555-day" special tenure that pays 25 to 50 bps above the standard 1-year or 18-month rate. The 999-day Unity SFB rate is currently 9.10% senior, beating their own 1-year rate of 8.85%. Most online comparison tools default to standard tenures (1, 2, 3, 5 years) and miss these special tenures. Always check the special-tenure table on the bank's site directly.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Confirm whether the rate is for fresh deposits or renewals.</strong> Some banks publish a "premium rate" for fresh deposits and a slightly lower rate for renewals from existing customers. If you're rolling an existing FD at the same bank, you may not get the headline rate without explicitly requesting it. Walk into the branch or call to confirm before assuming the renewal will be at the published peak rate.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Verify the senior-citizen flag is correctly applied at booking.</strong> The 50 bps senior premium requires the system to recognise your age. PAN and Aadhaar at FD opening are sufficient, but online booking flows occasionally drop the senior flag if you haven't refreshed your KYC details on the banking app. Check the rate displayed on the FD-confirmation receipt; if it shows the general rate instead of senior, file a correction request with the bank within 30 days. Banks typically honour the correction without dispute.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Read the premature-break clause.</strong> Two banks may both advertise 8.5% on a 3-year FD, but their break clauses can differ. Bank A might apply a flat 1% penalty across the entire principal; Bank B might compound a 1% penalty into the calculated rate-for-actual-period-completed, producing a much smaller realised yield. The MITC (Most Important Terms and Conditions) document is the source of truth; don't rely on the booking-screen summary.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          <strong>Ask about loan-against-FD.</strong> Most banks let you borrow up to 90% of the FD value at 1% above the FD rate. So a ₹5 lakh FD at 8.5% can support a ₹4.5 lakh loan at 9.5%, with the FD continuing to earn its 8.5%. Useful as an emergency credit line that doesn't break the FD or trigger CIBIL impact. Not all SFBs offer this; verify before booking if liquidity flexibility matters to you.
+        </p>
+      </section>
 
-      <p>
-        <strong>Public Provident Fund (PPF):</strong> 7.10% interest, quarterly reset, completely tax-free (EEE treatment — exempt at investment, accrual and withdrawal). Real return ~2.4%. Only downside: 15-year lock-in and ₹1.5L annual cap. For anyone serious about debt allocation, maxing PPF before any FD is the default move.
-      </p>
-      <p>
-        <strong>Target Maturity Debt Mutual Funds:</strong> a relatively new category holding government securities and AAA PSU bonds with a defined maturity date. Expected yield at purchase locks in — similar to FD — but taxation is indexation-eligible on gains held over 3 years. For a 30% bracket investor, this alone adds ~1.5% to real return vs an FD.
-      </p>
-      <p>
-        <strong>RBI Floating Rate Savings Bonds (7.15% currently, reset semi-annually):</strong> 7-year lock but interest floats above NSC yield + 35 bps. Sovereign-backed, zero default risk, aggressive yield. Pairs well with FDs for a retirement-adjacent bucket.
-      </p>
-      <p>
-        <strong>Arbitrage funds:</strong> taxed as equity (12.5% LTCG after 1 year) despite investing in debt-like spread trades. Real return 1.8–2.2% — higher than any post-tax FD for anyone in the 20%+ bracket. Small caveat: equity-like NAV volatility, so match holding period to redemption needs.
-      </p>
-      <p>
-        <strong>Tax-saver FD (80C-eligible, 5-yr lock):</strong> only relevant if you still have 80C room and you want the guarantee structure. Otherwise ELSS dominates on 3-yr lock and equity returns.
-      </p>
+      <section style={{ marginBottom: 40 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 18px" }}>Frequently asked questions</h2>
+        {faq.mainEntity.map((q, i) => (
+          <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "16px 0" }}>
+            <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 600 }}>{q.name}</summary>
+            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </section>
 
-      <InsightQuote>
-        An FD guarantees the nominal rupee. A debt MF tracks the real one. In a 30%-tax, 4.7%-inflation world, you should be indifferent to nominal rupees.
-      </InsightQuote>
-
-      <h2>08 — The FD calculator</h2>
-      <p>
-        We built an FD calculator that does the three things banks' calculators never do: (1) applies your actual tax slab, not a generic 30% default; (2) adjusts for current CPI inflation; (3) includes 80TTB / 87A treatments if applicable. It outputs three numbers side-by-side — advertised rate, post-tax rate, and real post-inflation return.
-      </p>
-      <p style={{ fontWeight: 700, margin: "6px 0 20px" }}>
-        <Link href="/tools/fd-calculator">→ Open the FD Real Return Calculator</Link>
-      </p>
-
-      <h2>Frequently asked</h2>
-      {faqs.map(({ q, a }) => (
-        <details key={q} style={{ padding: "14px 16px", margin: "8px 0", borderTop: "1px solid var(--border)" }}>
-          <summary style={{ fontWeight: 700, cursor: "pointer", fontSize: "1.05rem" }}>{q}</summary>
-          <p style={{ margin: "10px 0 0", color: "var(--text-muted)" }}>{a}</p>
-        </details>
-      ))}
-
-      <h2 style={{ marginTop: 56, marginBottom: 22 }}>Related reading</h2>
-      <div style={{ display: "grid", gap: 10, marginBottom: 44 }}>
-        <Link href="/learn/savings/fd-real-return" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>FD real return by tax bracket — the full walk-through <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
-        <Link href="/learn/savings/ppf-vs-fd-vs-debt-fund" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>PPF vs FD vs Debt MF — 15 years of returns, compared <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
-        <Link href="/learn/savings/senior-citizen-fd" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>Senior citizen FD rates — how 80TTB changes everything <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
-        <Link href="/learn/savings/tax-saving-fd-vs-elss-vs-ppf" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>Tax-saving FD vs ELSS vs PPF — post-tax returns <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
-        <Link href="/learn/tax/old-vs-new-regime" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>Old vs New Tax Regime — FY 2025-26 breakeven <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
-        <Link href="/tools/fd-calculator" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>FD Real Return Calculator <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
-      </div>
-
-      <h2 style={{ marginTop: 56, marginBottom: 22 }}>Sources &amp; circulars</h2>
-      <div style={{ borderRadius: 12, background: "var(--bg-muted, rgba(0,0,0,0.02))", padding: "8px 24px", marginBottom: 36 }}>
-        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>BankBazaar — consolidated bank FD rate data, accessed April 19, 2026. <a href="https://www.bankbazaar.com/fixed-deposit-rate.html" target="_blank" rel="noopener">bankbazaar.com</a></li>
-        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>Reserve Bank of India — Monetary Policy Committee resolution, April 2026 (repo rate 5.25%, CPI forecast 4.70%). <a href="https://www.rbi.org.in" target="_blank" rel="noopener">rbi.org.in</a></li>
-        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>DICGC — Deposit Insurance and Credit Guarantee Corporation, coverage limit ₹5 lakh per depositor per bank. <a href="https://www.dicgc.org.in" target="_blank" rel="noopener">dicgc.org.in</a></li>
-        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>Individual bank websites — SBI, HDFC, ICICI, Axis, Kotak, IndusInd, Unity SFB, AU SFB, Utkarsh SFB, Equitas, Bajaj Finance, Shriram Finance, as of April 19, 2026.</li>
-        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>Income Tax Department — Section 80TTB (senior citizen interest deduction) and Section 194A (TDS on interest). <a href="https://incometaxindia.gov.in" target="_blank" rel="noopener">incometaxindia.gov.in</a></li>
+      <section style={{ marginBottom: 36, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
+        <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
+        <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
+          <li style={{ marginBottom: 8 }}><Link href="/learn/savings/dicgc-explained" style={{ color: COLOR }}>DICGC ₹5 lakh insurance explained</Link>. Coverage rules, payout timeline, and ownership-structure tricks.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/learn/savings/sweep-fd" style={{ color: COLOR }}>Sweep FD accounts</Link>. The auto-FD that captures yield on your idle savings balance.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/best/fd-senior-citizens" style={{ color: COLOR }}>Best FDs for senior citizens</Link>. SCSS vs senior FD vs PMVVY framework.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/best/mutual-fund-emergency-fund" style={{ color: COLOR }}>Best liquid funds for emergency money</Link>. The post-tax yield comparison vs FDs.</li>
+          <li><Link href="/learn/savings" style={{ color: COLOR }}>Savings knowledge hub</Link>. All our deposit and short-term-yield guides.</li>
         </ul>
-      </div>
+      </section>
 
-      <div style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14, marginTop: 30 }}>
-        <strong>Last updated:</strong> April 20, 2026 · Reviewed by Ash K, Assure Fintech. Rates cross-verified against each bank's April 2026 website listings.<br />
-        <strong>Disclaimer:</strong> This is not financial advice. FD rates change weekly. DICGC insurance is limited to ₹5 lakh per depositor per bank. NBFC fixed deposits are not DICGC-insured. Consult a financial advisor for personal allocation.
-      </div>
-    </article>
+      <section style={{ marginBottom: 36, fontSize: 13, color: "var(--text-muted)" }}>
+        <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
+        <ul style={{ paddingLeft: 22, margin: 0 }}>
+          <li style={{ marginBottom: 6 }}>RBI Monetary Policy statements, December 2024 to April 2026</li>
+          <li style={{ marginBottom: 6 }}>DICGC Annual Report 2024-25 — coverage rules and payout statistics</li>
+          <li style={{ marginBottom: 6 }}>Bank tariff pages — rates verified individually on April 20, 2026</li>
+          <li style={{ marginBottom: 6 }}>Section 80TTB and Section 194A of the Income Tax Act 1961</li>
+          <li>Department of Posts SCSS official rate notification, FY 25-26</li>
+        </ul>
+      </section>
+
+      <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 22 }}>
+        <p style={{ margin: 0 }}>
+          <strong>Editorial disclaimer.</strong> Fixed deposit rates in this article reflect each bank's published tariff as of {UPDATED}. Bank rates change quarterly and frequently between MPC announcement cycles; verify the current rate on the bank's website before booking any FD. DICGC coverage of ₹5 lakh per depositor per bank applies to scheduled commercial banks, regional rural banks, cooperative banks, and small finance banks; it does not apply to NBFCs, even highly-rated ones. Tax treatment described above assumes the filer is a resident Indian; non-resident depositors face different TDS and tax rules. SFB credit risk above DICGC limits is real and not theoretical; treat the ₹5 lakh per SFB cap as a hard ceiling. This article is informational and is not investment advice. Consult a SEBI-registered financial advisor before making material allocation decisions, especially for retiree-income planning.
+        </p>
+      </footer>
+    </main>
     </>
   );
 }

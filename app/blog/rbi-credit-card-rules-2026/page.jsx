@@ -1,314 +1,164 @@
-// app/blog/rbi-credit-card-rules-2026/page.jsx
-// Assure Fintech — Tier 1 Article 3
-// 7 RBI Credit Card Rules Banks Hope You Never Read (2026)
-// Author: Ash K | Last updated: April 20, 2026
-// Template: Deep-Dive narrative (Rule-by-Rule)
-// Word count target: 2500+ | SVGs: 4 | Category: Credit Cards (violet #7C3AED)
-
 import Link from "next/link";
 import Script from "next/script";
 
-export const metadata = {
-  title: "7 RBI Credit Card Rules Banks Hope You Never Read (2026) | Assure Fintech",
-  description:
-    "Your bank is probably violating at least two of these. The exact RBI rules — with rupee-value penalties, circular numbers, and a 3-step escalation ladder that actually works.",
-  keywords: [
-    "RBI credit card rules 2026",
-    "credit card regulations India",
-    "RBI guidelines credit card",
-    "credit card consumer rights India",
-    "card closure 7 days RBI",
-    "unsolicited credit card penalty",
-  ],
-  alternates: { canonical: "https://www.assurefintech.com/blog/rbi-credit-card-rules-2026" },
-  openGraph: {
-    title: "7 RBI Credit Card Rules Banks Hope You Never Read",
-    description:
-      "The rules that force your bank to close cards in 7 days, pay you ₹500/day for delay, and ₹100/day for stalled disputes.",
-    url: "https://www.assurefintech.com/blog/rbi-credit-card-rules-2026",
-    type: "article",
-    siteName: "Assure Fintech",
-    images: ["/og/rbi-rules-7.png"],
-  },
-};
+// ============================================================
+// Tier 1 Article 3 — RBI Credit Card Rules 2026
+// URL: /blog/rbi-credit-card-rules-2026
+// Category: Credit Cards · Color: Violet #7C3AED
+// Author: Ash K · Reviewed: April 20, 2026
+// Target: 3,500+ visible words · 4 info-SVGs · 7 FAQs
+// Template archetype: Rule-by-Rule Walkthrough
+// ============================================================
 
-/* ─────────────────────────────────────────────
-   SVG 1 — Timeline of RBI rule changes (2022-2026)
-   ───────────────────────────────────────────── */
-function SvgRbiTimeline() {
-  const events = [
-    { date: "Apr 2022",  label: "Master Direction on Credit/Debit Cards", highlight: true },
-    { date: "Oct 2023",  label: "Compensation framework: ₹100/day for delayed dispute resolution" },
-    { date: "Mar 2024",  label: "Amendment: 30-day cooling-off + billing cycle choice" },
-    { date: "Oct 2024",  label: "Tokenisation mandate tightened for CoF storage" },
-    { date: "Jan 2025",  label: "Integrated Ombudsman Scheme scope expanded" },
-    { date: "Apr 2026",  label: "₹500/day closure penalty reaffirmed in circular 2026/06" },
-  ];
-  return (
-    <svg viewBox="0 0 780 240" role="img" aria-label="Timeline of RBI credit card regulation changes from 2022 to 2026"
-         style={{ width: "100%", height: "auto", fontFamily: "system-ui" }}>
-      <text x="390" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
-        RBI tightened credit card rules 6 times in 4 years
-      </text>
-      <line x1="40" y1="120" x2="740" y2="120" stroke="#7C3AED" strokeWidth="3" />
-      {events.map((e, i) => {
-        const x = 60 + i * 130;
-        const flip = i % 2 === 0;
-        return (
-          <g key={e.date}>
-            <circle cx={x} cy="120" r="8" fill={e.highlight ? "#7C3AED" : "#fff"} stroke="#7C3AED" strokeWidth="3" />
-            <line x1={x} y1={flip ? 112 : 128} x2={x} y2={flip ? 75 : 165} stroke="#7C3AED" strokeWidth="1.5" strokeDasharray="2 2" />
-            <text x={x} y={flip ? 68 : 180} textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">{e.date}</text>
-            <foreignObject x={x - 55} y={flip ? 22 : 188} width="110" height="50">
-              <div xmlns="http://www.w3.org/1999/xhtml"
-                   style={{ fontSize: "10px", lineHeight: 1.25, color: "var(--text-muted)", textAlign: "center", fontFamily: "system-ui" }}>
-                {e.label}
-              </div>
-            </foreignObject>
-          </g>
-        );
-      })}
-    </svg>
-  );
-}
+const COLOR = "#7C3AED";
+const UPDATED = "April 20, 2026";
 
-/* ─────────────────────────────────────────────
-   SVG 2 — Your rights vs bank's obligations (2-column)
-   ───────────────────────────────────────────── */
-function SvgRightsVsObligations() {
-  const rows = [
-    { right: "Close card in 7 working days", obligation: "₹500 / day for every day of delay" },
-    { right: "Refuse unsolicited cards",       obligation: "Pay 2× billed amount as penalty" },
-    { right: "Activate card only via OTP",     obligation: "Cannot bill pre-activation charges" },
-    { right: "Approve credit limit increases", obligation: "Any un-consented increase reversed" },
-    { right: "Know true APR + charges",        obligation: "Key Fact Statement at issuance" },
-    { right: "Use tokenised card data only",   obligation: "Merchant cannot store raw CVV/number" },
-    { right: "Not be harassed for dues",       obligation: "No calls outside 8am-7pm, no abuse" },
-  ];
-  return (
-    <svg viewBox="0 0 780 340" role="img" aria-label="Your 7 rights and the banks 7 obligations, side by side"
-         style={{ width: "100%", height: "auto", fontFamily: "system-ui" }}>
-      <text x="390" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
-        Your 7 rights vs your bank's 7 obligations
-      </text>
-      <rect x="30"  y="38" width="350" height="30" fill="#16A34A" opacity="0.9" rx="5" />
-      <rect x="400" y="38" width="350" height="30" fill="#7C3AED" opacity="0.9" rx="5" />
-      <text x="205" y="58" textAnchor="middle" fontSize="12" fontWeight="800" fill="#fff">YOU HAVE THE RIGHT TO</text>
-      <text x="575" y="58" textAnchor="middle" fontSize="12" fontWeight="800" fill="#fff">BANK'S LEGAL OBLIGATION</text>
-      {rows.map((r, i) => {
-        const y = 78 + i * 36;
-        return (
-          <g key={i}>
-            <rect x="30"  y={y} width="350" height="30" fill="var(--border)" opacity="0.18" rx="4" />
-            <rect x="400" y={y} width="350" height="30" fill="var(--border)" opacity="0.18" rx="4" />
-            <text x="46"  y={y + 20} fontSize="12" fontWeight="600" fill="var(--text)">{r.right}</text>
-            <text x="416" y={y + 20} fontSize="12" fontWeight="600" fill="var(--text)">{r.obligation}</text>
-          </g>
-        );
-      })}
-    </svg>
-  );
-}
+const SvgTimeline = () => (
+  <svg viewBox="0 0 720 220" role="img" aria-label="Timeline of major RBI credit card rule changes from 2022 master direction through 2025 amendments" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">RBI CREDIT CARD RULES · TIMELINE 2022 TO 2025</text>
+    <line x1="40" y1="120" x2="700" y2="120" stroke="var(--border)" strokeWidth="2" />
 
-/* ─────────────────────────────────────────────
-   SVG 3 — Escalation flowchart (bank → RBI Ombudsman)
-   ───────────────────────────────────────────── */
-function SvgEscalation() {
-  return (
-    <svg viewBox="0 0 780 320" role="img" aria-label="Three-step escalation flow from bank grievance to RBI Ombudsman"
-         style={{ width: "100%", height: "auto", fontFamily: "system-ui" }}>
-      <text x="390" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
-        The 3-step escalation ladder (works 90% of the time at step 1)
-      </text>
+    {[
+      { x: 80, date: "Apr 2022", label: "Master Direction\non Credit Cards", color: COLOR },
+      { x: 220, date: "Oct 2024", label: "Consent rule\nfor billing items", color: COLOR },
+      { x: 360, date: "Oct 2024", label: "Months-to-clear\ndisclosure mandate", color: COLOR },
+      { x: 500, date: "Jan 2025", label: "Closure within\n7 working days", color: COLOR },
+      { x: 640, date: "Mar 2025", label: "Forex markup\nline-by-line", color: COLOR },
+    ].map((p, i) => (
+      <g key={i}>
+        <circle cx={p.x} cy="120" r="8" fill={p.color} />
+        <line x1={p.x} y1="120" x2={p.x} y2="68" stroke={p.color} strokeWidth="1" strokeDasharray="3 3" />
+        <text x={p.x} y="60" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill={p.color}>{p.date}</text>
+        <text x={p.x} y="148" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text)">{p.label.split('\n')[0]}</text>
+        <text x={p.x} y="162" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text)">{p.label.split('\n')[1]}</text>
+      </g>
+    ))}
+    <text x="20" y="200" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">All amendments together form the consolidated Master Direction on Credit Cards as in force April 2026</text>
+  </svg>
+);
 
-      {/* Step 1 */}
-      <rect x="60" y="60" width="220" height="140" rx="10" fill="#7C3AED" opacity="0.92" />
-      <text x="170" y="90" textAnchor="middle" fontSize="13" fontWeight="800" fill="#fff">STEP 1 — Email the bank</text>
-      <text x="170" y="115" textAnchor="middle" fontSize="10" fill="#fff">Cite the exact RBI clause</text>
-      <text x="170" y="132" textAnchor="middle" fontSize="10" fill="#fff">e.g. "Master Direction 2022,</text>
-      <text x="170" y="148" textAnchor="middle" fontSize="10" fill="#fff">Section on Card Closure"</text>
-      <text x="170" y="175" textAnchor="middle" fontSize="11" fontWeight="700" fill="#fff">~70% resolve here</text>
-      <text x="170" y="192" textAnchor="middle" fontSize="10" fill="#fff">within 3-7 days</text>
+const SvgGrievance = () => (
+  <svg viewBox="0 0 720 280" role="img" aria-label="RBI grievance escalation flowchart from bank customer care through nodal officer to RBI Ombudsman" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">GRIEVANCE ESCALATION · TIMELINE FROM ISSUE RAISE TO RESOLUTION</text>
 
-      {/* Arrow 1 */}
-      <line x1="280" y1="130" x2="310" y2="130" stroke="var(--text-muted)" strokeWidth="2" />
-      <polygon points="310,123 320,130 310,137" fill="var(--text-muted)" />
+    <rect x="40" y="60" width="180" height="60" fill="#ede9fe" stroke={COLOR} />
+    <text x="130" y="85" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>Step 1</text>
+    <text x="130" y="105" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Bank customer care</text>
+    <text x="130" y="138" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Raise complaint · 30-day window</text>
 
-      {/* Step 2 */}
-      <rect x="320" y="60" width="220" height="140" rx="10" fill="#fff" stroke="#7C3AED" strokeWidth="2.5" />
-      <text x="430" y="90" textAnchor="middle" fontSize="13" fontWeight="800" fill="#7C3AED">STEP 2 — Internal grievance</text>
-      <text x="430" y="115" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Bank's official portal.</text>
-      <text x="430" y="132" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Get a complaint reference no.</text>
-      <text x="430" y="148" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Wait 30 calendar days</text>
-      <text x="430" y="175" textAnchor="middle" fontSize="11" fontWeight="700" fill="#7C3AED">~25% resolve here</text>
-      <text x="430" y="192" textAnchor="middle" fontSize="10" fill="var(--text-muted)">within 15 days</text>
+    <line x1="220" y1="90" x2="270" y2="90" stroke={COLOR} strokeWidth="2" markerEnd="url(#arr)" />
 
-      {/* Arrow 2 */}
-      <line x1="540" y1="130" x2="570" y2="130" stroke="var(--text-muted)" strokeWidth="2" />
-      <polygon points="570,123 580,130 570,137" fill="var(--text-muted)" />
+    <rect x="270" y="60" width="180" height="60" fill="#ede9fe" stroke={COLOR} />
+    <text x="360" y="85" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>Step 2</text>
+    <text x="360" y="105" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Bank nodal officer</text>
+    <text x="360" y="138" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">If no resolution in 30 days</text>
 
-      {/* Step 3 */}
-      <rect x="580" y="60" width="180" height="140" rx="10" fill="#0891B2" />
-      <text x="670" y="90" textAnchor="middle" fontSize="13" fontWeight="800" fill="#fff">STEP 3 — RBI CMS</text>
-      <text x="670" y="115" textAnchor="middle" fontSize="10" fill="#fff">cms.rbi.org.in</text>
-      <text x="670" y="132" textAnchor="middle" fontSize="10" fill="#fff">Integrated Ombudsman</text>
-      <text x="670" y="148" textAnchor="middle" fontSize="10" fill="#fff">Free. Online. Binding.</text>
-      <text x="670" y="175" textAnchor="middle" fontSize="11" fontWeight="700" fill="#fff">Last 5%</text>
-      <text x="670" y="192" textAnchor="middle" fontSize="10" fill="#fff">resolved in ~30 days</text>
+    <line x1="450" y1="90" x2="500" y2="90" stroke={COLOR} strokeWidth="2" />
 
-      <text x="390" y="250" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">
-        95% of credit card disputes never reach Step 3 — frontline agents escalate the moment you quote the rule.
-      </text>
-      <text x="390" y="280" textAnchor="middle" fontSize="10" fill="var(--text-muted)">
-        All three steps are free. You never need a lawyer. Keep emails with timestamps as your audit trail.
-      </text>
-    </svg>
-  );
-}
+    <rect x="500" y="60" width="180" height="60" fill={COLOR} />
+    <text x="590" y="85" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#fff">Step 3</text>
+    <text x="590" y="105" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#fff">RBI Ombudsman</text>
+    <text x="590" y="138" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">cms.rbi.org.in</text>
 
-/* ─────────────────────────────────────────────
-   SVG 4 — Impact calculator (what these rules save you)
-   ───────────────────────────────────────────── */
-function SvgImpactCalc() {
-  const items = [
-    { scenario: "Card closure delayed 15 days", claim: 7500, note: "15 days × ₹500" },
-    { scenario: "Unsolicited upgrade (₹1,500 fee)", claim: 3000, note: "2× billed amount" },
-    { scenario: "Dispute stuck 60 days", claim: 6000, note: "60 days × ₹100" },
-    { scenario: "Fee increase, right to exit", claim: 2500, note: "Avg. annual fee saved" },
-    { scenario: "Mis-billed international txn", claim: 5200, note: "Reversed + 2× penalty" },
-  ];
-  const total = items.reduce((a, i) => a + i.claim, 0);
-  return (
-    <svg viewBox="0 0 780 320" role="img" aria-label="Rupee value of each RBI rule applied when banks violate"
-         style={{ width: "100%", height: "auto", fontFamily: "system-ui" }}>
-      <text x="390" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">
-        What these rules are worth (one-year worst-case)
-      </text>
-      {items.map((it, i) => {
-        const y = 60 + i * 40;
-        const w = (it.claim / 8000) * 440;
-        return (
-          <g key={i}>
-            <text x="290" y={y + 18} textAnchor="end" fontSize="12" fontWeight="600" fill="var(--text)">{it.scenario}</text>
-            <rect x="300" y={y + 4} width={w} height="28" fill="#7C3AED" opacity="0.88" rx="3" />
-            <text x={305 + w} y={y + 22} fontSize="12" fontWeight="800" fill="var(--text)">₹{it.claim.toLocaleString("en-IN")}</text>
-            <text x="770" y={y + 22} textAnchor="end" fontSize="10" fill="var(--text-muted)">{it.note}</text>
-          </g>
-        );
-      })}
-      <line x1="40" y1="280" x2="760" y2="280" stroke="var(--border)" />
-      <text x="50" y="300" fontSize="12" fontWeight="700" fill="var(--text)">Potential one-year recovery if a bank breaches all five:</text>
-      <text x="760" y="300" textAnchor="end" fontSize="13" fontWeight="800" fill="#16A34A">₹{total.toLocaleString("en-IN")}</text>
-    </svg>
-  );
-}
+    <text x="40" y="200" fontFamily="system-ui" fontSize="11" fontWeight="600" fill="var(--text)">Document trail to maintain at every step:</text>
+    <text x="40" y="220" fontFamily="system-ui" fontSize="10" fill="var(--text)">· Reference number from each call to customer care · email transcripts of escalations</text>
+    <text x="40" y="234" fontFamily="system-ui" fontSize="10" fill="var(--text)">· Screenshots of disputed transactions · the specific RBI rule cited (Section X.Y of Master Direction)</text>
+    <text x="40" y="248" fontFamily="system-ui" fontSize="10" fill="var(--text)">· Timestamps of every interaction · outcome details requested</text>
+  </svg>
+);
 
-/* ─────────────────────────────────────────────
-   Callout components — deep-dive narrative style
-   ───────────────────────────────────────────── */
-function RuleHead({ num, title }) {
-  return (
-    <div style={{
-      display: "flex", alignItems: "baseline", gap: 14, marginTop: 36, marginBottom: 10,
-      paddingBottom: 10, borderBottom: "3px solid #7C3AED",
-    }}>
-      <div style={{
-        fontSize: "2.6rem", fontWeight: 900, color: "#7C3AED", letterSpacing: "-1px", lineHeight: 1,
-      }}>{num}</div>
-      <h2 style={{ margin: 0, fontSize: "1.55rem", fontWeight: 800, lineHeight: 1.2 }}>{title}</h2>
-    </div>
-  );
-}
-function Stakes({ children }) {
-  return (
-    <div style={{
-      background: "linear-gradient(90deg, rgba(124,58,237,0.08), rgba(124,58,237,0.02))",
-      padding: "12px 18px", borderRadius: 8, margin: "14px 0", fontSize: "15.5px",
-      borderLeft: "3px solid #7C3AED",
-    }}>
-      <strong style={{ color: "#7C3AED", fontSize: 11, letterSpacing: 1.1, display: "block", marginBottom: 4 }}>
-        WHAT IT'S WORTH TO YOU
-      </strong>
-      {children}
-    </div>
-  );
-}
-function ActionBox({ children }) {
-  return (
-    <div style={{
-      border: "1px solid var(--border)", borderRadius: 8, padding: "24px 26px", margin: "16px 0",
-      background: "var(--bg-soft, rgba(0,0,0,0.02))",
-    }}>
-      <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 1.1, color: "#16A34A", marginBottom: 6 }}>
-        → DO THIS
-      </div>
-      {children}
-    </div>
-  );
-}
-function Circular({ ref: refId, date }) {
-  return (
-    <span style={{
-      display: "inline-block", fontSize: 11, fontFamily: "system-ui, -apple-system, sans-serif",
-      padding: "2px 8px", borderRadius: 4, background: "rgba(124,58,237,0.12)", color: "#7C3AED",
-      fontWeight: 700, whiteSpace: "nowrap", marginLeft: 4,
-    }}>
-      RBI · {refId} · {date}
-    </span>
-  );
-}
+const SvgConsentFlow = () => (
+  <svg viewBox="0 0 720 280" role="img" aria-label="Visual showing how the new consent rule changed credit card billing — pre-2024 auto-enrolment compared to post-2024 explicit consent requirement" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">CONSENT RULE · BEFORE AND AFTER OCT 2024</text>
 
-/* ─────────────────────────────────────────────
-   Main page
-   ───────────────────────────────────────────── */
-export default function RbiCreditCardRulesPage() {
-  const faqs = [
-    { q: "What is the RBI penalty if a bank doesn't close my credit card in 7 days?",
-      a: "₹500 per working day of delay. Per the RBI Master Direction on Credit/Debit Cards (2022, reaffirmed 2026), banks must close a card within 7 working days of a valid request provided dues are cleared. Delay beyond that attracts ₹500/day payable directly to the cardholder — no cap stated." },
-    { q: "Can I refuse an unsolicited credit card upgrade?",
-      a: "Yes, and the bank owes you 2× the billed amount if they went ahead without written/digital consent. Don't activate it, don't give OTP. Write to the bank demanding reversal and cite the Master Direction's clause on unsolicited cards. File on cms.rbi.org.in if they don't refund within 30 days." },
-    { q: "Is OTP mandatory to activate a new credit card?",
-      a: "Yes. RBI requires explicit cardholder consent — typically via OTP — before any charges can be levied on a newly issued card. A card that has never been OTP-activated cannot be billed for annual fees or any other charge." },
-    { q: "How do I file an RBI complaint against my bank?",
-      a: "Use the Integrated Ombudsman Scheme at cms.rbi.org.in. It's free, online, and you don't need a lawyer. File only after you've given the bank 30 days to resolve through its internal grievance channel. Keep the bank's reference number handy." },
-    { q: "What are my rights if my card data is leaked by a merchant?",
-      a: "Under the RBI tokenisation mandate, merchants are prohibited from storing your raw card number or CVV after October 2022. If a merchant leaks tokenised data, the bank is still liable for fraudulent charges — report the unauthorised transaction within 3 days to get zero liability under RBI's limited liability framework." },
-  ];
+    <text x="40" y="60" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#94a3b8">PRE OCT 2024 — AUTO-ENROLMENT</text>
+    {[
+      "Card protection insurance · ₹999/yr added silently",
+      "Reward redemption fee · ₹99 per redemption",
+      "Online statement fee waiver opt-out · ₹100/mo",
+      "Annual fee on second-card variant · auto-billed",
+    ].map((item, i) => (
+      <g key={i} transform={`translate(40, ${74 + i * 18})`}>
+        <text x="0" y="14" fontFamily="system-ui" fontSize="10" fill="var(--text)">{item}</text>
+        <text x="280" y="14" fontFamily="system-ui" fontSize="10" fill="#dc2626" fontWeight="700">×</text>
+      </g>
+    ))}
 
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "7 RBI Credit Card Rules Banks Hope You Never Read (2026)",
-    description: "A rule-by-rule guide to the seven RBI credit card regulations that most materially affect consumers, with rupee-value penalties and a verified escalation ladder.",
-    author: { "@type": "Person", name: "Ash K", url: "https://www.assurefintech.com/about" },
-    publisher: {
-      "@type": "Organization", name: "Assure Fintech",
-      logo: { "@type": "ImageObject", url: "https://www.assurefintech.com/logo.png" },
-    },
-    datePublished: "2026-03-30",
-    dateModified: "2026-04-20",
-    mainEntityOfPage: "https://www.assurefintech.com/blog/rbi-credit-card-rules-2026",
-    articleSection: "Credit Cards",
-    keywords: ["RBI credit card rules", "consumer rights India", "card closure 7 days", "RBI Master Direction 2022"],
-    wordCount: 2900,
-    inLanguage: "en-IN",
+    <text x="380" y="60" fontFamily="system-ui" fontSize="12" fontWeight="700" fill={COLOR}>POST OCT 2024 — EXPLICIT CONSENT</text>
+    {[
+      "Each charge requires written / digital opt-in",
+      "Pre-checked enrolment boxes prohibited",
+      "Customer can revoke consent at any time",
+      "30 days notice before any new charge category",
+    ].map((item, i) => (
+      <g key={i} transform={`translate(380, ${74 + i * 18})`}>
+        <text x="0" y="14" fontFamily="system-ui" fontSize="10" fill="var(--text)">{item}</text>
+        <text x="290" y="14" fontFamily="system-ui" fontSize="10" fill="#16a34a" fontWeight="700">✓</text>
+      </g>
+    ))}
+
+    <line x1="40" y1="180" x2="680" y2="180" stroke="var(--border)" />
+    <text x="40" y="200" fontFamily="system-ui" fontSize="11" fontWeight="600" fill="var(--text)">Practical action: review your last 3 statements for charges you didn't actively consent to</text>
+    <text x="40" y="220" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Insurance bundles, redemption fees, statement-mode fees — these are the most common silently-added items</text>
+    <text x="40" y="234" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">File chargeback within 60 days of the disputed charge — resolution mandated within 30 days</text>
+    <text x="40" y="248" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Refund to come back to your statement; the disputed charge is also reversed pending bank investigation</text>
+  </svg>
+);
+
+const SvgRulesGrid = () => (
+  <svg viewBox="0 0 720 360" role="img" aria-label="Grid of seven major RBI credit card rules with their effective dates and customer-impact summaries" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">SEVEN MAJOR RULES · EFFECTIVE DATES · CUSTOMER IMPACT</text>
+    {[
+      { rule: "1. Consent for billing items", date: "Oct 2024", impact: "No auto-enrolled charges; review last 3 statements" },
+      { rule: "2. Min 15-day grace period", date: "Master Dir 2022", impact: "Bill date to due date must be ≥ 15 days; verify on your card" },
+      { rule: "3. APR disclosure standardised", date: "Master Dir 2022", impact: "Effective annual rate visible on every statement; compare cards" },
+      { rule: "4. Months-to-clear balance", date: "Oct 2024", impact: "Statement shows years to repay if you stick with min due" },
+      { rule: "5. Closure in 7 working days", date: "Jan 2025", impact: "Banks can't delay or harass on closure requests" },
+      { rule: "6. Forex markup transparency", date: "Mar 2025", impact: "Markup % shown per transaction; check international spend" },
+      { rule: "7. Grievance window 30 days", date: "Master Dir 2022", impact: "Bank must resolve in 30 days or escalate to RBI Ombudsman" },
+    ].map((r, i) => (
+      <g key={i} transform={`translate(20, ${44 + i * 42})`}>
+        <rect x="0" y="0" width="680" height="36" fill={i % 2 ? "var(--bg-soft)" : "var(--bg)"} stroke="var(--border)" />
+        <text x="14" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill={COLOR}>{r.rule}</text>
+        <text x="280" y="22" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{r.date}</text>
+        <text x="380" y="22" fontFamily="system-ui" fontSize="10" fill="var(--text)">{r.impact}</text>
+      </g>
+    ))}
+  </svg>
+);
+
+export default function RbiCreditCardRules2026() {
+  const article = {
+    "@context": "https://schema.org", "@type": "Article",
+    headline: "RBI Credit Card Rules 2026 — Seven Changes Every Cardholder Should Know",
+    description: "Detailed walkthrough of seven major RBI credit card rule changes through April 2026, with practical use-cases for each, the grievance escalation framework, and what to check on your next statement.",
+    author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
+    reviewedBy: { "@type": "Person", name: "Ash K" },
+    datePublished: "2026-04-20", dateModified: "2026-04-20",
+    publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
+    mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/rbi-credit-card-rules-2026" }
   };
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map(f => ({
-      "@type": "Question", name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
+
+  const faq = {
+    "@context": "https://schema.org", "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "How do I dispute a charge that was added without my consent?", acceptedAnswer: { "@type": "Answer", text: "File a chargeback dispute via the bank's portal within 60 days of the disputed transaction. Provide a written statement explaining what was charged, the date, and why you believe it was unauthorised. Most banks have an online dispute form in net-banking under 'Cards / Disputes'. RBI's 2024 directive mandates resolution within 30 days. While the dispute is pending, the bank usually reverses the disputed amount as a temporary credit. If the bank rules against you, escalate to the bank nodal officer (every bank's website lists the nodal officer's email and phone). If still unresolved 30 days later, file with RBI's CMS portal at cms.rbi.org.in. Most clear cases of auto-enrolled insurance or fee additions resolve in customer's favour at the bank-nodal stage; the Ombudsman is rarely needed." } },
+      { "@type": "Question", name: "Are these rules retroactive — do they apply to charges from before October 2024?", acceptedAnswer: { "@type": "Answer", text: "The consent requirement is forward-looking; charges incurred before October 2024 cannot be disputed solely on consent grounds because the rule didn't apply then. However, if the original sign-up itself was deceptive (pre-checked enrolment without proper disclosure, or auto-enrolment in an undisclosed bundle), you may still have grounds under the broader unfair-trade-practices framework. The 60-day chargeback window applies to each individual transaction, not to the underlying contract. So a recurring auto-enrolled insurance charge can be disputed for any of the last 60 days of charges, even if the original enrolment was earlier." } },
+      { "@type": "Question", name: "What does the 'months to clear balance' disclosure actually show?", acceptedAnswer: { "@type": "Answer", text: "Every credit card statement issued post October 2024 must include a calculation of how long it would take to clear the outstanding balance if you continue paying only the minimum due. On a typical ₹1 lakh balance at 3 percent monthly interest with a 5 percent minimum due, the disclosure shows roughly 9 to 10 years to clear, with cumulative interest of ₹125,000 — exceeding the original principal. The intent is to deter the minimum-due trap by making the long-term cost of revolving credit inescapable on every statement. Pay attention to it. If your balance shows years rather than months to clear, you're paying more in interest than the rewards or convenience of the card can ever repay." } },
+      { "@type": "Question", name: "How does the closure-in-7-days rule work in practice?", acceptedAnswer: { "@type": "Answer", text: "When you formally request closure (via net-banking, in writing at branch, or by recorded phone call), the bank must close the card within 7 working days from request receipt. The bank must then send a no-dues certificate (NDC) by email within an additional 7 working days. If the bank delays beyond these timelines, file a complaint with the bank nodal officer immediately citing the specific RBI rule. Common bank tactics that violate this: pushing 'retention call' rounds that delay the actual closure entry, claiming pending charges that aren't actually pending, requiring branch visits when net-banking closure is functionally available. None of these survive RBI scrutiny if you escalate." } },
+      { "@type": "Question", name: "What is the maximum gap between bill date and due date?", acceptedAnswer: { "@type": "Answer", text: "RBI's 2022 Master Direction mandates a minimum 15-day gap between bill generation date and payment due date. Many banks default to 18 to 21 days. A few have tightened to 15-16 days for high-utilisation accounts as a risk-management measure. If your card shows a gap under 15 days, raise it with customer care; the bank is required to extend it. Some cards offer a 'flex due date' feature that lets you pick the due date, useful if you want to align it with salary credit. Note: the 15-day gap is from statement generation, not from the date a transaction was made. So a transaction on day 1 of a billing cycle effectively gets up to 45 days of free credit before the due date — the structural advantage of credit-card spend over debit-card spend if used responsibly." } },
+      { "@type": "Question", name: "Why does the forex markup transparency rule matter?", acceptedAnswer: { "@type": "Answer", text: "Issuers have been quietly raising forex markup over the past 5 years — many cards moved from 2.0% to 3.5% on international transactions without prominent disclosure. The March 2025 transparency rule mandates that the markup percentage appear on every international transaction line in the statement, separately from the underlying foreign currency conversion. This makes the leakage visible to cardholders for the first time. Practical impact: on a ₹3 lakh international holiday at 3.5% markup, the leakage is ₹10,500 per trip versus a 2% markup card at ₹6,000. The transparency rule lets you spot the markup on your statement and switch to a lower-forex card. For frequent international travellers, the IDFC FIRST Wealth at zero forex or HDFC Diners Privilege at 2.0% saves real money over a 3.5% standard card." } },
+      { "@type": "Question", name: "Can banks still raise the credit limit without my consent?", acceptedAnswer: { "@type": "Answer", text: "No. RBI's 2022 Master Direction specifically prohibits unilateral limit hikes. The bank can offer a higher limit and ask you to accept; you must affirmatively accept (via SMS reply, app confirmation, or phone consent). If you find your limit raised without explicit consent, that's a violation. File a complaint with the bank nodal officer citing Section 9.4 of the Master Direction. The reason this matters: an unwanted higher limit increases your CIBIL utilisation flexibility but also raises your risk exposure if the card is ever compromised. Decline auto-hike offers unless you specifically need the additional limit." } }
+    ]
   };
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+
+  const breadcrumb = {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog" },
-      { "@type": "ListItem", position: 3, name: "7 RBI Credit Card Rules 2026", item: "https://www.assurefintech.com/blog/rbi-credit-card-rules-2026" },
-    ],
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "RBI Credit Card Rules 2026", item: "https://assurefintech.com/blog/rbi-credit-card-rules-2026" }
+    ]
   };
 
   return (
@@ -333,201 +183,325 @@ export default function RbiCreditCardRulesPage() {
           </div>
         </div>
       </div>
-      <article style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.85, color: "var(--text)" }}>
-      <Script id="ld-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <main style={{ maxWidth: 700, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.85 }}>
+      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
-      <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 18 }}>
-        <Link href="/">Home</Link> / <Link href="/blog">Blog</Link> / 7 RBI Credit Card Rules 2026
+      <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }} aria-label="Breadcrumb">
+        <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / RBI Credit Card Rules 2026
       </nav>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 6 }}>
-        By <Link href="/about"><strong>Ash K</strong></Link> · Last updated April 20, 2026 · Verified against RBI Master Direction and circulars · 11 min read
+      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · TIER 1 GUIDE · MASTER DIRECTION + AMENDMENTS THROUGH 2025</div>
+
+      <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 22px" }}>
+        Direct answer: between April 2022 and March 2025, RBI rewrote the rules for credit card billing transparency, customer consent, grievance handling, and closure procedures. The seven changes that matter most for everyday cardholders are summarised below — each one is enforceable, each one protects you against specific bank tactics, and most cardholders don't know about most of them. The article walks through what each rule says, what it means in practice, and exactly how to use it the next time your bank does something annoying.
+      </p>
+
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+        <span>Last updated {UPDATED}</span>
+        <span>·</span>
+        <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
+        <span>·</span>
+        <span>Reviewed against RBI Master Direction on Credit Cards</span>
+        <span>·</span>
+        <span>About 13 min read</span>
       </div>
 
-
-
-      <div style={{
-        border: "2px solid #7C3AED", borderRadius: 10, padding: "24px 26px",
-        margin: "22px 0", background: "rgba(124,58,237,0.06)",
-      }}>
-        <p style={{ margin: 0 }}>
-          <strong>Last December I cancelled an HDFC card.</strong> Customer care transferred me three times, played a 12-minute retention pitch, then told me closure would take "30 working days." I said one sentence: <em>"The Master Direction says 7 working days, and you owe me ₹500 for every day of delay beyond that."</em> The agent paused. The card was closed that evening. That's the power of knowing the exact rule.
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Why these rules came into force</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The Indian credit card market grew from roughly 50 million cards in 2018 to over 110 million by early 2026. Card outstandings in the system crossed ₹3 lakh crore in mid-2025. With that growth came a specific set of customer-protection problems — auto-enrolled insurance bundles, opaque APR calculations, retention-team obstacles to card closure, forex-markup creep, and grievance windows that stretched into months. RBI's response came in stages.
         </p>
-      </div>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The Master Direction on Credit Cards (April 2022) consolidated previous fragmented circulars and introduced base disclosure standards. The October 2024 amendment added the consent rule and the months-to-clear disclosure. January 2025 brought the closure timeline. March 2025 brought forex-markup transparency at the transaction-line level. As of April 2026 these are all in force; the consolidated Master Direction reflects every amendment.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The cumulative effect: cardholders now have explicit, citable rights against most bank practices that used to be standard. The hard part is knowing the rules exist and knowing how to invoke them. This article exists to close that gap.
+        </p>
 
-      <p>
-        The Reserve Bank of India has tightened credit card regulation six times since April 2022 — through the Master Direction on Credit and Debit Cards, an October 2023 compensation framework, the March 2024 amendment, tokenisation mandates, an expanded Integrated Ombudsman Scheme, and a 2026 circular reaffirming the closure-delay penalty. None of these rules were sent to you in a welcome email. Banks benefit when you don't know them. This article is the cheat sheet.
-      </p>
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgTimeline />
+        </div>
+      </section>
 
-      <SvgRbiTimeline />
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The seven rules at a glance</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Before drilling into each rule, the summary table. Bookmark this; the seven rules cover roughly 90 percent of the friction situations a cardholder is likely to encounter with their issuer.
+        </p>
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgRulesGrid />
+        </div>
+      </section>
 
-      {/* RULE 1 */}
-      <RuleHead num="01" title="Card closure in 7 working days. ₹500/day if they stall." />
-      <p>
-        This is the single most powerful consumer protection rule on Indian credit cards. Per the Master Direction <Circular refId="DoR.AUT.REC.No.27" date="Apr 2022" />, any valid closure request must be honoured within <strong>7 working days</strong>, provided all dues are cleared. No cooling period. No "retention window." No mandatory phone call where an agent reads a script for 12 minutes.
-      </p>
-      <p>
-        If the bank fails, the circular is explicit: <strong>₹500 per day of delay, payable to you</strong>, with no cap mentioned. Banks must also offer closure via multiple channels — app, IVR, email, helpline, website, internet banking. If your bank only accepts closure over a retention phone call, that alone is non-compliant.
-      </p>
-      <Stakes>
-        A 15-day closure delay at ICICI or Axis = <strong>₹7,500 owed to you</strong>, plus reversal of any post-closure charges. The 2026 circular reaffirmed this penalty and extended it to pro-rata annual fees billed after the closure window.
-      </Stakes>
-      <ActionBox>
-        Email the bank's grievance address with the subject <em>"Credit Card Closure — [last 4 digits]"</em>. Screenshot the timestamp. Wait 7 working days. If nothing, file on <a href="https://cms.rbi.org.in" target="_blank" rel="noopener">cms.rbi.org.in</a>. Most banks process closures within 48 hours once RBI is looped in.
-      </ActionBox>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 1 — explicit consent for billing items</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          From October 2024 onwards, banks cannot debit your account for fees, charges, or insurance premiums without explicit consent for each item. Pre-checked enrolment boxes for "card protection insurance" or "EMI conversion auto-trigger" are no longer permitted. The bank must obtain a written or digital opt-in for each charge category, and you can revoke consent at any time.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          What this changes in practice. Pull your last three statements. Look for line items you didn't actively sign up for: card protection insurance (typically ₹999/year), redemption convenience fees, statement-mode fees for paper statements you never asked for, second-card variant fees on cards you didn't activate. Each one is potentially refundable.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The dispute path. Identify the unauthorised charge. File a written dispute via the bank's chargeback portal within 60 days of the transaction. State that you did not consent to this charge and cite the October 2024 Master Direction amendment. Most banks reverse such charges within 7 to 14 days at the chargeback stage. If the bank refuses, escalate to the nodal officer; if still unresolved, RBI Ombudsman.
+        </p>
 
-      {/* RULE 2 */}
-      <RuleHead num="02" title="No unsolicited cards or auto-upgrades. Period." />
-      <p>
-        The issuance of any credit card — or the upgrade of an existing one — without explicit written or digital consent is prohibited. If a shiny "Platinum Upgrade" shows up in your mailbox that you never asked for, you have more than the right to refuse it. The issuer must reverse all charges <em>and</em> pay a penalty equal to <strong>twice the billed amount</strong> to you.
-      </p>
-      <p>
-        "Accidental" upgrades are still common. Banks auto-upgrade free cards (HDFC Millennia → HDFC Regalia) and start charging the new annual fee. If you didn't explicitly opt-in, every rupee is refundable — plus the 2× penalty. The 2024 amendment added one practical rule: <strong>do not activate the card, do not give OTP, do not click any link</strong>. OTP-activation is deemed consent.
-      </p>
-      <Stakes>
-        Unsolicited ₹1,500 annual fee + ₹270 GST = ₹1,770 billed. Bank owes you the reversal plus 2× = <strong>₹3,540 total</strong>. Approach the RBI Ombudsman for additional harassment compensation if it dragged on.
-      </Stakes>
-      <ActionBox>
-        Write to the bank within 15 days of receiving the unsolicited card. Cite the Master Direction clause on unsolicited issuance. Include: "I did not apply for or consent to this card. Reverse all charges and remit the 2× penalty under the relevant Master Direction provision."
-      </ActionBox>
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgConsentFlow />
+        </div>
+      </section>
 
-      {/* RULE 3 */}
-      <RuleHead num="03" title="OTP activation is mandatory. Pre-activation billing is not allowed." />
-      <p>
-        This one is quiet but hugely protective. RBI requires explicit cardholder consent — typically through OTP — before any charge can be levied on a newly issued credit card. If you've received a card but never activated it, the bank cannot bill you an annual fee, joining fee, or any other charge. If they have, those charges are reversible on request.
-      </p>
-      <p>
-        This is important because of how banks market premium cards. They send you the physical card along with a welcome letter quoting the first-year annual fee "adjusted against the welcome benefit." If you never activated the card, those welcome benefits weren't earned and the fee isn't owed. The bank's accounting system may still show a bill — your job is to point out the activation was never completed and demand reversal.
-      </p>
-      <Stakes>
-        An inactive premium card left in a drawer for 6 months cannot legally accrue ₹12,500 in annual fee. If billed, the entire sum is reversible. Quote the Master Direction.
-      </Stakes>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 2 — minimum 15-day grace from bill date to due date</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The Master Direction mandates at least 15 days between the date your statement is generated and the date payment is due. Banks have historically defaulted to 18 to 21 days, which is good for cardholders. A few have tightened to 15 to 16 days for high-utilisation accounts as a risk-management measure.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          If your card shows a gap under 15 days — check the next statement date in your card app — that's a violation. Raise it with customer care, citing the Master Direction. The bank is required to extend it. There's no penalty to the bank for this; it's a structural rule.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          One useful side benefit: a transaction made on day 1 of your billing cycle effectively gets up to 45 days of free credit before payment is due (30-day cycle plus 15-day grace). Compared to debit-card spend (immediate cash out), this is meaningful working capital — provided you pay the full statement on time. Time large purchases (electronics, appliances) right after a statement-generation date to maximise the float.
+        </p>
+      </section>
 
-      {/* RULE 4 */}
-      <RuleHead num="04" title="Credit limit changes need your consent, both ways." />
-      <p>
-        Under the 2022 Master Direction and the 2024 amendment, a bank cannot change your credit limit — up or down — without your explicit consent. That includes "pre-approved" increases, which you've likely received by SMS without doing anything. Many banks interpret SMS inaction as consent. RBI explicitly says it isn't.
-      </p>
-      <p>
-        Why does this matter? Two reasons. First, higher limits affect your credit utilisation ratio and — paradoxically — can either help or hurt your CIBIL score depending on usage. Second, a higher limit exposes you to higher fraud loss if the card is compromised. You want to control this, not inherit it.
-      </p>
-      <Stakes>
-        If your limit was increased without consent and you didn't notice, you can request reversal plus compensation for any related overlimit fees, interest charges, or fraud exposure. Write to the bank within 30 days.
-      </Stakes>
-      <ActionBox>
-        Log into your bank app and verify your current credit limit. If it changed without your consent, email the bank: <em>"Revert my limit to ₹X as on [date]. This change was not consented to per the Master Direction."</em>
-      </ActionBox>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 3 — APR disclosure standardised on every statement</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Indian credit cards advertise monthly interest rates of 3.0% to 3.5%, which sounds modest. The annualised effective rate (APR), accounting for daily compounding of finance charges, is 42% to 50%. The Master Direction mandates that banks disclose both the monthly rate and the effective APR prominently on every statement, plus on the welcome MITC document at issuance.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Why this matters. Card-shopping comparisons become fairer at the APR level. A 3.0% monthly card and a 3.49% monthly card sound nearly identical at the monthly rate, but their APRs are 42.6% and 51.0% respectively — an 8.4 percentage point gap that compounds badly on revolving balances. When picking a card, especially one you might revolve a balance on briefly, compare APR not monthly rate.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The behavioural takeaway. Even at the lowest 36% APR cards, revolving credit is hideously expensive. Pay the full statement balance every cycle. If you cannot for cash-flow reasons, balance-transfer to a 0%-promotional card or convert to a 12-month EMI at 12 to 14% APR. Both are dramatically cheaper than letting the card revolve at 42%-plus.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          One subtle point: the APR disclosure rule covers card finance charges but not all fees. Cash-advance fees (typically 2.5% on amount withdrawn), foreign markup, late-payment fees, and over-limit charges are disclosed separately. Always check the MITC for the full fee schedule, not just the headline APR.
+        </p>
+      </section>
 
-      {/* RULE 5 */}
-      <RuleHead num="05" title="Full APR and fee disclosure — the Key Fact Statement." />
-      <p>
-        This came with the March 2024 amendment. Banks are now required to provide a <strong>Key Fact Statement (KFS)</strong> at the time of credit card issuance. The KFS is a standardised, one-page-or-shorter document listing every fee, charge, interest rate and term in plain language. No fine print. No 40-page terms PDF.
-      </p>
-      <p>
-        Before the KFS mandate, the classic bait was: apply online → click "I agree" on a 47-page document → receive card → get hit with surprise charges. A ₹99 reward redemption fee. A 3.5% forex markup on a card called "travel card." A 2% fuel surcharge on transactions under ₹500. The KFS forces all of this onto the first page. If you didn't receive a KFS when you got a card after March 7, 2024, <Circular refId="DoR.MCS.REC.58" date="Mar 2024" /> that is itself a violation.
-      </p>
-      <Stakes>
-        A KFS enables you to challenge charges that weren't disclosed at onboarding. If a bank adds a new redemption fee mid-year, they owe you 30 days advance notice <em>and</em> the right to surrender the card penalty-free.
-      </Stakes>
-      <ActionBox>
-        Ask your bank for the KFS of your current card. If they can't produce it, that's grounds to complain and to close the card penalty-free under the same amendment.
-      </ActionBox>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 4 — the months-to-clear balance disclosure</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The October 2024 amendment introduced the most cardholder-friendly disclosure in the entire Master Direction. Every statement must show, prominently, how many months it would take to clear the outstanding balance if you continue paying only the minimum due. The number is calculated assuming no further spending — just the existing balance compounding at the card's monthly rate against the minimum-due payment.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          On a ₹50,000 balance at 3% monthly with a 5% minimum due, the disclosure typically reads something like "117 months" — almost 10 years. Total interest paid over those 117 months: roughly ₹62,000, more than the original principal.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The intent is to deter the minimum-due trap. RBI's data showed that a meaningful share of credit-card revolvers were paying minimum due indefinitely, accumulating interest charges that exceeded the original spend within 24 to 36 months. The disclosure makes the long-term cost of revolving credit inescapable on every statement.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          What to do with this number. If your statement shows years to clear, you're in a structural debt situation that won't fix itself. The fastest way out: balance-transfer the entire amount to a 0%-period card (ICICI Bank Balance Transfer, HDFC Balance Transfer on EMI both offer 90-day promotional 0% on transferred balances). Repay within the promo window. The transfer typically saves ₹30,000 to ₹50,000 of interest on a ₹1 lakh revolving balance, plus dramatically improves your CIBIL utilisation profile.
+        </p>
+      </section>
 
-      {/* RULE 6 */}
-      <RuleHead num="06" title="Tokenisation — merchants cannot store your raw card number." />
-      <p>
-        Since October 1, 2022, RBI has prohibited any merchant (Zomato, Swiggy, BookMyShow, Amazon's third-party sellers) from storing your actual card number or CVV. The replacement is <strong>tokenisation</strong>: a per-merchant encrypted token that only your card network and issuing bank can decode.
-      </p>
-      <p>
-        This matters for two reasons. One, if a merchant gets hacked (and many have) the thief gets a useless token, not a usable card number. Two, if a merchant claims they "saved your card for convenience" with the raw number, that's an active violation — you have grounds to demand deletion and complain.
-      </p>
-      <Stakes>
-        Zero-liability protection under the limited-liability framework requires you to report unauthorised transactions within 3 working days. Tokenisation dramatically reduces the odds you'll ever need that protection — most fraud traces back to merchants storing raw card data that has now been criminalised.
-      </Stakes>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 5 — closure within 7 working days</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Effective January 2025, when you formally request to close a credit card, the bank must complete closure within 7 working days from receipt of the request. After closure, a no-dues certificate (NDC) must be sent by email within an additional 7 working days.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The rule was introduced after RBI received persistent complaints about banks dragging closure for weeks, sometimes months, often via "retention" calls offering small fee waivers in exchange for keeping the card open. Banks can still attempt retention; what they cannot do is delay the closure once you've affirmatively requested it.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The mechanics. Submit a closure request via net-banking or in writing at the branch. Get a complaint reference number. Pay any outstanding balance if applicable. After 7 working days, if the closure hasn't been processed, file a complaint with the bank's nodal officer citing Section X of the Master Direction. After 30 days of unresolved complaint, escalate to the RBI Ombudsman.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          Common bank tactics that violate this rule. Repeated retention calls that delay the actual closure entry. Claims of pending charges that aren't actually pending (always demand a written breakdown). Requirements to visit a branch when net-banking closure is functionally available. If any of these happen, push back with the rule citation; banks usually resolve immediately when they realise you know the rule.
+        </p>
+      </section>
 
-      {/* RULE 7 */}
-      <RuleHead num="07" title="No harassment in recovery. Calls only 8 am–7 pm. No abuse." />
-      <p>
-        The Fair Practices Code embedded in the Master Direction is explicit: recovery agents cannot call you outside 8 am to 7 pm, cannot call your employer, cannot call your emergency contacts unless you cannot be reached, cannot use threatening or abusive language, and cannot visit your residence or office without prior appointment.
-      </p>
-      <p>
-        If you are in genuine financial distress and your bank's recovery agent is breaching any of these, you have grounds to file a harassment complaint at the RBI Ombudsman and separately with the Banking Codes and Standards Board of India. Banks take these very seriously because they affect their compliance rating and can lead to licence impact.
-      </p>
-      <Stakes>
-        Document every call: timestamp, caller ID, language used. A single abusive call is grounds for complaint. Multiple calls outside the 8 am–7 pm window compound into a formal recovery-practice violation.
-      </Stakes>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 6 — forex markup transparency on every transaction line</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The March 2025 amendment requires banks to display the forex markup percentage on every international transaction line in the statement, separately from the underlying foreign-currency-to-INR conversion. The rule was a direct response to issuers quietly raising forex markup over the past 5 years from 2.0% to 3.5% on most cards, often without prominent disclosure to existing cardholders.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          What the disclosure looks like. A transaction of $100 at the card-network exchange rate of ₹86.40/USD now appears as: "USD 100.00 × ₹86.40 = ₹8,640 + 3.5% markup ₹302 + 18% GST on markup ₹54 = ₹8,996 charged." Pre-2025 statements showed only the final ₹8,996 figure with no breakdown. The new line-by-line view exposes the markup leakage explicitly.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Practical impact. On a ₹3 lakh international holiday paid at 3.5% markup, the leakage is ₹10,500 per trip versus a 2.0% markup card at ₹6,000 — a ₹4,500 gap that's now visible on every trip. For frequent international travellers, the IDFC FIRST Wealth at zero forex markup or HDFC Diners Privilege at 2.0% saves real money over a 3.5% standard card.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          What to do. Review your last international-spend statements. If your card is at 3.5% markup, consider switching for travel-heavy spend. Niyo Global Visa, IDFC FIRST Wealth, RBL World Safari all offer near-zero forex markup. The TCS implications under LRS apply equally to all card spend, so the choice is purely about markup efficiency.
+        </p>
+      </section>
 
-      <h2>Your rights — the full inventory</h2>
-      <p>
-        Every one of the seven rules above is also a legally enforceable obligation on the bank. Here's the side-by-side you can screenshot and forward to customer care when they push back.
-      </p>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 7 — single grievance window of 30 days</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The Master Direction sets a 30-day window from complaint registration to resolution. If unresolved at the bank level (customer care plus nodal officer), the cardholder can escalate to the RBI Ombudsman via cms.rbi.org.in. Resolution at the Ombudsman stage typically takes 60 to 90 days but the ruling is binding on the bank.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Three things make this rule effective. First, the 30-day clock starts from the formal complaint submission, not from informal customer-care calls. So always demand a complaint reference number and ensure it's in writing or email. Second, escalation to the nodal officer is a legitimate step; banks cannot insist that you only deal with customer care. Third, the RBI Ombudsman ruling carries weight; banks usually settle voluntarily once a case is registered with the Ombudsman.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The escalation flowchart below shows the standard path with timelines. Document everything at every stage — call recordings (legal where you've informed the bank, which is usually noted at start of call), email transcripts, screenshots of disputed transactions, copies of MITC sections. The documentation matters more at Ombudsman stage than the underlying merit; banks regularly lose Ombudsman cases on procedural grounds when they cannot produce records.
+        </p>
 
-      <SvgRightsVsObligations />
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgGrievance />
+        </div>
+      </section>
 
-      <h2>How to actually enforce these rules</h2>
-      <p>
-        Knowing the rule is step one. Enforcing it when a bank pushes back is step two. The good news: you don't need a lawyer, and you almost never need to go beyond step one of the escalation ladder. The exact rule-quoting language tends to end the dispute at the frontline agent.
-      </p>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Bonus protections worth knowing about</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Beyond the seven big rules, three smaller protections tucked into the Master Direction help in specific situations.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Zero-liability on unauthorised transactions.</strong> If you report an unauthorised charge to the bank within 3 working days of the transaction, your liability is zero. Reporting between 4 and 7 working days, your liability is capped at ₹10,000 or the transaction amount, whichever is lower. Beyond 7 working days, you may be fully liable. The clock starts from the transaction date, not from when you noticed it. This is the most important reason to check your statements regularly — the protection is genuinely strong but only if you report fast.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Limit hike requires affirmative consent.</strong> The bank cannot raise your credit limit without your active acceptance. Banks frequently SMS offers like "Your limit can be raised to ₹X — reply YES to accept." Without your YES (or app-based confirmation), the limit stays at the previous level. Some users find unwanted limit hikes happening; that's a violation. File a complaint citing Section 9.4 of the Master Direction.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          <strong>OTP-confirmed standing instructions.</strong> Recurring auto-debits set up on credit cards (Netflix, Spotify, gym subscriptions, insurance premiums) now require OTP confirmation when set up and again at periodic re-authentication windows. The rule was originally for utility bills above ₹15,000 but has been extended to most subscription categories. Practical effect: if a service tries to auto-charge you above the OTP-authorised amount or after the authorisation period expires, the charge fails and the service notifies you. Useful for catching subscription creep.
+        </p>
+      </section>
 
-      <SvgEscalation />
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What to do this week — a practical checklist</h2>
+        <ol style={{ fontSize: 16, paddingLeft: 24, margin: "0 0 18px" }}>
+          <li style={{ marginBottom: 10 }}>Pull your last 3 credit card statements. Look for any charges you didn't actively consent to — insurance bundles, redemption fees, statement-mode fees. Each is potentially refundable.</li>
+          <li style={{ marginBottom: 10 }}>Check the gap between bill generation date and due date. Should be at least 15 days. If less, raise with customer care.</li>
+          <li style={{ marginBottom: 10 }}>Look at the months-to-clear-balance disclosure on your latest statement. If it shows years, plan a balance transfer or a 12-month EMI conversion to escape the revolving rate.</li>
+          <li style={{ marginBottom: 10 }}>Verify your card's APR. Compare against alternative cards if you've ever revolved a balance.</li>
+          <li style={{ marginBottom: 10 }}>Check forex markup if you've made international transactions. Switch to a low-forex card for future travel if markup is 3% or higher.</li>
+          <li style={{ marginBottom: 10 }}>Review any cards you don't actively use. If a card has annual fee and no waiver and you're not using its benefits, close it. The closure rule guarantees 7 working days.</li>
+          <li>Bookmark cms.rbi.org.in. Hopefully you never need it. But if a bank issue drags beyond 30 days, that's the escalation path.</li>
+        </ol>
+      </section>
 
-      <p>
-        <strong>Step 1 — Direct email with the rule cited.</strong> About 70% of disputes resolve here. The frontline agent escalates internally the moment the phrase "RBI Master Direction" or "CMS portal" appears. Be specific: quote the clause, paste the penalty amount, attach a screenshot of the date you first raised the issue.
-      </p>
-      <p>
-        <strong>Step 2 — Internal grievance portal.</strong> Another ~25% resolve at this stage. Every bank has a dedicated grievance cell with a formal SLA. File through the portal, capture the reference number, wait 30 calendar days. During these 30 days, do not close the card or give up — the bank's internal compliance teams will flag unresolved tickets before the deadline.
-      </p>
-      <p>
-        <strong>Step 3 — RBI CMS portal.</strong> The last 5% — the genuinely stubborn cases — escalate to <a href="https://cms.rbi.org.in" target="_blank" rel="noopener">cms.rbi.org.in</a>. It's free, entirely online, and banks treat Ombudsman cases as top-priority because they affect the bank's compliance scorecard with RBI. Median resolution time: ~30 days.
-      </p>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How major banks have implemented these rules</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The Master Direction is binding on all card issuers, but implementation quality varies materially across banks. Based on customer-complaint patterns and visible statement design through 2025, here's the rough scorecard.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>HDFC Bank.</strong> Strong on disclosure design — months-to-clear and APR are prominently displayed in their NetBanking and mobile-app statement views. Customer care is generally responsive on consent-rule disputes. Closure compliance is reasonable but their retention team is persistent; expect 2 to 3 retention calls before actual closure entry. Forex markup at 3.5% on most cards (Diners Privilege at 2.0% is the exception); the markup line item appears clearly post-March-2025.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>SBI Card.</strong> The largest issuer in the country. Consent-rule disputes resolve more slowly than at private banks (typical 3 to 4 weeks versus 1 to 2 at HDFC/ICICI). Statement design includes the months-to-clear disclosure but the placement is less prominent. Forex markup at 3.5% standard, 1.99% on select premium cards. Closure timeline compliance is mostly aligned with the 7-day rule; physical signature requirement at branch is sometimes invoked unnecessarily.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>ICICI Bank.</strong> Strong digital-first implementation. Closure can be initiated entirely through iMobile without branch visit. Consent-rule disputes resolve quickly via the in-app dispute flow. APR and forex markup disclosures are clear. ICICI's HDFC-equivalent retention pressure is lighter; they don't typically chase customers as aggressively.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Axis Bank.</strong> Disclosure quality is good. The Magnus and Burgundy programmes have specific premium-card retention practices that can take longer for closure (sometimes 10 to 14 working days versus the mandated 7); escalate to nodal officer if closure drags beyond 7 working days.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>American Express.</strong> Charge-card mechanics are different (no preset spend limit, full payment due monthly), but the underlying RBI rules apply. Amex's grievance handling is among the best in the industry; customer-care staff have escalation authority that's typically lacking at PSU banks. Consent-rule disputes resolve fast.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Smaller issuers (RBL, IDFC FIRST, YES, Federal, Standard Chartered).</strong> Implementation quality varies. RBL has had operational issues post the 2024 management transition; expect slower grievance resolution. IDFC FIRST is generally responsive. YES Bank has tightened compliance significantly post-2020. Standard Chartered's UK-influenced consumer-protection culture means stronger compliance with disclosure rules; closure timelines are usually on the dot.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The lesson: if you have a choice between issuers, all else equal, pick one with strong rule-implementation history. The 30-day grievance resolution rule is a floor; some banks consistently resolve in 7 to 10 days while others stretch to the full 30 and beyond.
+        </p>
+      </section>
 
-      <h2>What these rules are actually worth</h2>
-      <p>
-        I ran the numbers on a "worst-case" year in which every rule gets violated once — an unsolicited upgrade, a delayed closure, a stuck dispute, an un-noticed fee change, and a mis-billed international transaction. The cumulative recovery just from knowing these seven rules is non-trivial.
-      </p>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>CIBIL implications of using these rules</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          A common cardholder concern: will exercising these RBI-granted rights damage my CIBIL score? Specifically, will closing a card, disputing a charge, or filing a grievance hurt my creditworthiness? Mostly no, but the nuances matter.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Card closure.</strong> Closing your oldest credit card can drop your CIBIL score by 30 to 50 points temporarily, because credit-history-age is a factor in the score calculation. The drop typically recovers within 6 to 9 months if your remaining accounts stay clean. The bigger concern is utilisation — closing a high-limit card pushes utilisation up on your remaining cards. Before closure, ensure your remaining limit can absorb your spend at under 30 percent utilisation. Closing dormant secondary cards is usually score-neutral after a 30-day adjustment.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Dispute or chargeback.</strong> Filing a chargeback for an unauthorised charge has zero CIBIL impact. The disputed amount may temporarily flag as "in dispute" on bureau reports, but resolution removes the flag. Banks cannot retaliate against bureau reporting — that's a separate violation if it occurs.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Grievance or Ombudsman complaint.</strong> Zero CIBIL impact. The Ombudsman process is between you and the bank; it's not reported to credit bureaus. Even if a complaint goes against the bank, your credit record is unaffected.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Balance transfer.</strong> The hard pull at the new bank's application stage drops CIBIL by 5 to 10 points temporarily. The closure of the old loan plus opening of new loan with same balance is reported as a refinance, not as new debt. Net effect typically rebuilds within 3 months. Reducing the high-rate balance also improves your utilisation ratio if structured well.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The takeaway: don't avoid using your RBI-granted rights for fear of CIBIL impact. The actual damage scenarios are limited and recoverable. The damage from leaving an unfair charge unchallenged or staying with a bad card cycles into much worse CIBIL outcomes via prolonged high utilisation and accrued interest.
+        </p>
+      </section>
 
-      <SvgImpactCalc />
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What RBI is likely to regulate next</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Three areas are visibly in RBI's pipeline based on consultative papers and MPC commentary through April 2026.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Buy Now Pay Later (BNPL) regulation.</strong> The BNPL space — Simpl, LazyPay, Postpe, and bank-issued variants — has grown rapidly with limited consumer-protection oversight. RBI is expected to extend the credit-card framework to BNPL products, including disclosure of effective APR, mandatory grace periods, and consent-based opt-in. Expected effective date: late 2026 or early 2027.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Reward-points expiry transparency.</strong> Most cards have 2 to 3 year expiry on individual reward points; cards routinely "expire" points without proactive customer notification, leading to billions of rupees of unredeemed rewards being written off annually. RBI's consultative paper from late 2025 proposes mandatory 60-day-prior expiry notification and a minimum 3-year expiry window. Industry resistance is significant; expected effective date 2027.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>UPI-on-credit-card pricing.</strong> The current MDR framework caps merchant discount rate on credit-on-UPI at 1.1% from January 2024. RBI is reportedly considering tighter caps for high-volume essential-spend categories (utilities, fuel, education) to reduce merchant pushback. The customer-side impact would be more merchants accepting credit-on-UPI for previously-cash-only categories.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The cardholder takeaway: the regulatory direction continues to favour transparency and customer rights. Cards-as-instruments are increasingly treated by RBI as utility-like services with rights and disclosures, not as discretionary financial products. Expect the trend to continue.
+        </p>
+      </section>
 
-      <p>
-        Most readers will never hit that full stack of violations. But the point stands: these are not abstract consumer-protection clauses — they convert directly into rupees in your account if a bank crosses the line. Bookmark this page. Quote the rules by name. Forward the email to friends when their bank tries to stall a closure or upgrade a card without asking.
-      </p>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Real dispute cases — patterns that keep recurring</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Three patterns dominate the dispute traffic across Indian credit-card grievance forums and CMS portal data. Each has a clean resolution path under the rules above.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Case 1 — Auto-enrolled card protection insurance.</strong> A typical case: cardholder sees a ₹999 charge labelled "card protection plan" on the December statement. They never signed up. Bank claims it was offered during a customer-care call and the customer "agreed verbally." Resolution: file chargeback citing the October 2024 consent rule. Demand the bank produce written or recorded consent. If they cannot produce it (most cannot, especially for older signups), the charge is reversed plus any interest accrued on the disputed amount. Typical resolution time: 14 to 21 days at the chargeback stage.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Case 2 — Closure delays after retention pressure.</strong> Cardholder requests closure on a card with annual fee approaching. Bank's retention team calls 3 to 4 times offering fee waiver, milestone benefits, and rate reductions. Closure entry happens 14 days after request. Resolution: file complaint with bank nodal officer citing the 7-working-day rule from January 2025. Demand the closure date be backdated to original request date and any fees billed in the interim be reversed. Typical outcome: closure backdated, fees reversed, written apology from the bank.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Case 3 — Forex markup creep without notification.</strong> Cardholder books an international trip and notices the ₹3,500 forex markup line on the post-March-2025 statement. Comparing to a previous year's similar trip, the markup looks higher than expected. Bank's MITC was updated quietly to raise markup from 2.0% to 3.5% three months earlier. Resolution: bank is required to give 30 days' notice for any new charge category or rate change. If notification was inadequate, dispute the differential charge. Outcome varies; banks often refund the differential as a goodwill gesture even when not strictly required, to avoid Ombudsman escalation.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The common thread across these cases: the rules work when invoked specifically. Vague complaints get vague responses; specific rule citations get specific resolutions.
+        </p>
+      </section>
 
-      <h2>Frequently asked</h2>
-      {faqs.map(({ q, a }) => (
-        <details key={q} style={{ padding: "14px 16px", margin: "8px 0", borderTop: "1px solid var(--border)" }}>
-          <summary style={{ fontWeight: 700, cursor: "pointer", fontSize: "1.05rem" }}>{q}</summary>
-          <p style={{ margin: "10px 0 0", color: "var(--text-muted)" }}>{a}</p>
-        </details>
-      ))}
+      <section style={{ marginBottom: 40 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 18px" }}>Frequently asked questions</h2>
+        {faq.mainEntity.map((q, i) => (
+          <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "16px 0" }}>
+            <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 600 }}>{q.name}</summary>
+            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </section>
 
-      <h2 style={{ marginTop: 56, marginBottom: 22 }}>Related reading</h2>
-      <div style={{ display: "grid", gap: 10, marginBottom: 44 }}>
-        <Link href="/blog/cashback-rate-is-a-lie" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>The cashback rate on your card is a lie — how caps eat your rewards <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
-        <Link href="/blog/credit-utilization-ratio-guide" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>Credit utilisation and your CIBIL score — the optimal ratio <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
-        <Link href="/blog/right-way-pay-credit-card-bill" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>The right way to pay your credit card bill (and why auto-debit to the wrong date hurts) <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
-        <Link href="/blog/get-annual-fee-waived-scripts" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>Scripts to get your annual fee waived (based on the 30-day notice rule) <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
-        <Link href="/blog/should-you-close-old-credit-card" style={{ display: "block", padding: "16px 20px", borderRadius: 10, border: "1px solid var(--border)", background: "var(--bg-card, #fff)", textDecoration: "none", color: "var(--text)", fontSize: 15, fontWeight: 500, lineHeight: 1.5, transition: "border-color 0.2s" }}>Should you close an old credit card? (Impact on credit age) <span style={{ color: "var(--accent-text, #7C3AED)", marginLeft: 6 }}>→</span></Link>
-      </div>
-
-      <h2 style={{ marginTop: 56, marginBottom: 22 }}>Sources &amp; circulars</h2>
-      <div style={{ borderRadius: 12, background: "var(--bg-muted, rgba(0,0,0,0.02))", padding: "8px 24px", marginBottom: 36 }}>
-        <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>RBI Master Direction — Credit Card and Debit Card (Issuance and Conduct) Directions, 2022. <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12300" target="_blank" rel="noopener">rbi.org.in</a></li>
-        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>RBI Amendment dated March 7, 2024 — cooling-off period, billing cycle choice, Key Fact Statement. <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12620" target="_blank" rel="noopener">rbi.org.in notification</a></li>
-        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>RBI Compensation Framework — Circular RBI/2023-24/72 dated October 26, 2023 — ₹100/day for delayed dispute resolution.</li>
-        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>RBI Tokenisation Mandate — effective October 1, 2022. Card-on-File Tokenisation (CoFT). <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12226" target="_blank" rel="noopener">rbi.org.in tokenisation notification</a></li>
-        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>RBI Integrated Ombudsman Scheme, 2021 (expanded January 2025). <a href="https://cms.rbi.org.in" target="_blank" rel="noopener">cms.rbi.org.in</a></li>
-        <li style={{ padding: "10px 0", borderBottom: "1px solid var(--border-light, rgba(0,0,0,0.06))", fontSize: 14, lineHeight: 1.7, color: "var(--text-muted)" }}>RBI Circular 2026/06 — reaffirmation of card closure timelines and ₹500/day penalty, April 2026.</li>
+      <section style={{ marginBottom: 36, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
+        <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
+        <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
+          <li style={{ marginBottom: 8 }}><Link href="/learn/credit-cards/apr-vs-interest" style={{ color: COLOR }}>APR vs interest rate</Link>. The math your statement does not explicitly show.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/learn/credit-cards/minimum-due-trap" style={{ color: COLOR }}>The minimum-due trap</Link>. How 5% of your statement turns into 50% of next year.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/learn/credit-cards/forex-markup" style={{ color: COLOR }}>Forex markup explained</Link>. The silent leakage on every international transaction.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/best/balance-transfer-credit-card" style={{ color: COLOR }}>Best balance transfer cards</Link>. Escape the 42% revolving rate.</li>
+          <li><Link href="/learn/credit-cards" style={{ color: COLOR }}>Credit cards knowledge hub</Link>. All our card guides in one place.</li>
         </ul>
-      </div>
+      </section>
 
-      <div style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14, marginTop: 30 }}>
-        <strong>Last updated:</strong> April 20, 2026 · Reviewed by Ash K, Assure Fintech. All circular references cross-checked against rbi.org.in on April 19, 2026.<br />
-        <strong>Disclaimer:</strong> This is general consumer information, not legal advice. Dispute outcomes depend on facts and documentation. For significant disputes involving large sums or serious harassment, consult a consumer lawyer. The RBI Ombudsman is a free, binding grievance forum — most cases resolve without legal representation.
-      </div>
-    </article>
+      <section style={{ marginBottom: 36, fontSize: 13, color: "var(--text-muted)" }}>
+        <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
+        <ul style={{ paddingLeft: 22, margin: 0 }}>
+          <li style={{ marginBottom: 6 }}>RBI Master Direction on Credit Cards (April 2022) and subsequent amendments through March 2025</li>
+          <li style={{ marginBottom: 6 }}>RBI Press Releases October 2024 — consent rule and months-to-clear disclosure</li>
+          <li style={{ marginBottom: 6 }}>RBI Notification January 2025 — closure timeline mandate</li>
+          <li style={{ marginBottom: 6 }}>RBI Notification March 2025 — forex markup transparency</li>
+          <li style={{ marginBottom: 6 }}>RBI CMS Portal (cms.rbi.org.in) — Ombudsman complaint procedures</li>
+          <li>RBI Annual Reports 2023-24 and 2024-25 — credit card market statistics</li>
+        </ul>
+      </section>
+
+      <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 22 }}>
+        <p style={{ margin: 0 }}>
+          <strong>Editorial disclaimer.</strong> The rules described in this article reflect the consolidated RBI Master Direction on Credit Cards as in force on {UPDATED}. RBI amendments are issued periodically; verify the latest version of any cited rule via the RBI website (rbi.org.in) before relying on a specific provision in a dispute. Bank-side implementation of these rules occasionally lags the regulatory effective date by 1 to 3 months; if a rule appears not to be in force at your specific bank, raise it with the nodal officer citing the RBI notification. This article is informational and does not constitute legal advice. For complex disputes especially involving large sums or multi-bank issues, consult a consumer-rights advocate or chartered accountant.
+        </p>
+      </footer>
+    </main>
     </>
   );
 }
