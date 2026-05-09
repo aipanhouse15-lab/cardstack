@@ -1,284 +1,135 @@
 import Link from "next/link";
 import Script from "next/script";
 
-export const metadata = {
-  title: "Best Credit Card for Beginners in India (2026): A Personalised Decision Guide | Assure Fintech",
-  description:
-    "Four beginner profiles, four different right answers. We walk every first-time applicant — student, young professional, gig worker, homemaker — through the exact card to pick in April 2026, and why.",
-  alternates: { canonical: "https://assurefintech.com/blog/best-card-beginners-2026" },
-  openGraph: {
-    title: "Best Credit Card for Beginners 2026",
-    description: "Persona-led recommendations instead of a generic top-10 list.",
-    type: "article",
-    publishedTime: "2026-04-20",
-    modifiedTime: "2026-04-20",
-    authors: ["Ash K"],
-    url: "https://assurefintech.com/blog/best-card-beginners-2026",
-  },
-};
+// ============================================================
+// Tier 2 Article 3 — Best Credit Card for Beginners 2026
+// URL: /blog/best-card-beginners-2026
+// Category: Credit Cards · Color: Violet #7C3AED
+// Author: Ash K · Reviewed: April 20, 2026
+// Target: 2,500+ visible words · 4 info-SVGs · 6 FAQs
+// Template archetype: Persona Journey
+// ============================================================
 
-const VIOLET = "#7C3AED";
-const VIOLET_SOFT = "rgba(124,58,237,0.10)";
-const GREEN = "#16A34A";
-const RED = "#DC2626";
-const AMBER = "#D97706";
+const COLOR = "#7C3AED";
+const UPDATED = "April 20, 2026";
 
-// ------------------ SVG 1: Decision matrix ------------------
-function SvgDecisionMatrix() {
-  return (
-    <svg viewBox="0 0 680 340" width="100%" style={{ fontFamily: "system-ui", maxWidth: 680 }} role="img" aria-labelledby="svg-decision">
-      <title id="svg-decision">Beginner decision matrix: income × credit history</title>
-      <text x="340" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Find yourself on the grid</text>
-      <text x="340" y="40" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Your first card depends on income proof and whether you've had any credit before</text>
-
-      {/* axes */}
-      <text x="40" y="70" fontSize="11" fontWeight="700" fill="var(--text)">Income proof ↓</text>
-      <text x="200" y="70" textAnchor="middle" fontSize="11" fontWeight="700" fill={VIOLET}>No credit history</text>
-      <text x="380" y="70" textAnchor="middle" fontSize="11" fontWeight="700" fill={VIOLET}>CIBIL 600-700</text>
-      <text x="560" y="70" textAnchor="middle" fontSize="11" fontWeight="700" fill={VIOLET}>CIBIL 700+</text>
-
-      {/* rows */}
-      {[
-        { lbl: "Student / no salary", row: [
-          { c: "FD-backed", card: "Axis Insta Easy", col: GREEN },
-          { c: "FD-backed", card: "SBI Unnati", col: GREEN },
-          { c: "RuPay starter", card: "IDFC First Millennia", col: GREEN },
-        ] },
-        { lbl: "<₹4L salary", row: [
-          { c: "FD-backed", card: "SBI Unnati", col: AMBER },
-          { c: "Entry-tier", card: "IDFC Millennia", col: GREEN },
-          { c: "Entry-tier", card: "Amazon Pay ICICI", col: GREEN },
-        ] },
-        { lbl: "₹4-8L salary", row: [
-          { c: "Secured", card: "Axis Insta Easy", col: AMBER },
-          { c: "Mid-tier", card: "ICICI Platinum", col: GREEN },
-          { c: "Premium-ready", card: "HDFC Millennia", col: GREEN },
-        ] },
-        { lbl: "₹8L+ salary", row: [
-          { c: "Unusual — try prime", card: "HDFC MoneyBack", col: AMBER },
-          { c: "Premium-ready", card: "Axis ACE", col: GREEN },
-          { c: "Lifestyle tier", card: "Flipkart Axis + Amex MRCC", col: GREEN },
-        ] },
-      ].map((r, ri) => (
-        <g key={ri}>
-          <text x="40" y={110 + ri * 55} fontSize="11" fontWeight="600" fill="var(--text)">{r.lbl}</text>
-          {r.row.map((cell, ci) => (
-            <g key={ci}>
-              <rect x={130 + ci * 180} y={88 + ri * 55} width="160" height="42" rx="6" fill={`${cell.col}18`} stroke={cell.col} strokeWidth="1" />
-              <text x={210 + ci * 180} y={106 + ri * 55} textAnchor="middle" fontSize="10" fontWeight="700" fill={cell.col}>{cell.c}</text>
-              <text x={210 + ci * 180} y={122 + ri * 55} textAnchor="middle" fontSize="10.5" fill="var(--text)">{cell.card}</text>
-            </g>
-          ))}
-        </g>
-      ))}
-    </svg>
-  );
-}
-
-// ------------------ SVG 2: Top 5 card grid ------------------
-function SvgTopFiveGrid() {
-  const cards = [
-    { n: "IDFC Millennia", fee: "LTF", apr: "42%", best: "No-fee starter" },
-    { n: "Amazon Pay ICICI", fee: "LTF", apr: "43.8%", best: "Online shoppers" },
-    { n: "Axis ACE", fee: "₹499", apr: "47.9%", best: "Flat-rate earners" },
-    { n: "SBI Unnati", fee: "LTF (FD)", apr: "42%", best: "No income proof" },
-    { n: "HDFC MoneyBack+", fee: "₹500", apr: "41.5%", best: "Balanced first-timer" },
-  ];
-  return (
-    <svg viewBox="0 0 680 300" width="100%" style={{ fontFamily: "system-ui", maxWidth: 680 }} role="img" aria-labelledby="svg-top-five">
-      <title id="svg-top-five">Top five beginner cards — fee, APR and best-for</title>
-      <text x="340" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">The five beginner-accessible cards worth applying for</text>
-
-      {cards.map((c, i) => {
-        const x = 25 + (i % 3) * 220;
-        const y = 55 + Math.floor(i / 3) * 120;
-        return (
-          <g key={i} transform={`translate(${x},${y})`}>
-            <rect width="200" height="100" rx="10" fill={VIOLET_SOFT} stroke={VIOLET} />
-            <text x="12" y="24" fontSize="13" fontWeight="800" fill={VIOLET}>{c.n}</text>
-            <text x="12" y="46" fontSize="10.5" fill="var(--text-muted)">Annual fee</text>
-            <text x="12" y="62" fontSize="12" fontWeight="700" fill="var(--text)">{c.fee}</text>
-            <text x="110" y="46" fontSize="10.5" fill="var(--text-muted)">Finance charge</text>
-            <text x="110" y="62" fontSize="12" fontWeight="700" fill={RED}>{c.apr}</text>
-            <line x1="12" y1="72" x2="188" y2="72" stroke="var(--border)" />
-            <text x="12" y="88" fontSize="11" fontWeight="600" fill={GREEN}>✓ {c.best}</text>
-          </g>
-        );
-      })}
-    </svg>
-  );
-}
-
-// ------------------ SVG 3: First-year reward projection ------------------
-function SvgRewardChart() {
-  // Bar chart of rewards earned in year 1 at ₹20k/mo spend for 5 cards
-  const data = [
-    { name: "IDFC Millennia", val: 3600, eff: "1.5%" },
-    { name: "Amazon Pay ICICI", val: 4200, eff: "1.75%" },
-    { name: "Axis ACE", val: 4800, eff: "2.0%" },
-    { name: "SBI Unnati", val: 1440, eff: "0.6%" },
-    { name: "HDFC MoneyBack+", val: 3200, eff: "1.33%" },
-  ];
-  const max = 5000;
-  return (
-    <svg viewBox="0 0 680 280" width="100%" style={{ fontFamily: "system-ui", maxWidth: 680 }} role="img" aria-labelledby="svg-reward">
-      <title id="svg-reward">Year-one reward projection at ₹20,000/month spend</title>
-      <text x="340" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Year 1 net cashback — ₹20,000/month realistic beginner spend</text>
-
-      {data.map((d, i) => {
-        const w = (d.val / max) * 420;
-        const y = 60 + i * 38;
-        return (
-          <g key={i}>
-            <text x="160" y={y + 18} textAnchor="end" fontSize="11" fontWeight="600" fill="var(--text)">{d.name}</text>
-            <rect x="170" y={y} width={w} height="26" fill={VIOLET} rx="4" />
-            <text x={180 + w} y={y + 18} fontSize="11" fontWeight="700" fill="var(--text)">₹{d.val.toLocaleString("en-IN")}</text>
-            <text x={180 + w + 60} y={y + 18} fontSize="10" fill={AMBER}>({d.eff})</text>
-          </g>
-        );
-      })}
-      <text x="340" y="265" textAnchor="middle" fontSize="10" fill="var(--text-muted)">SBI Unnati appears low because its 1% flat rate is paired with a mandatory FD — the tradeoff is easy approval.</text>
-    </svg>
-  );
-}
-
-// ------------------ SVG 4: First-year cost comparison ------------------
-function SvgFirstYearCost() {
-  // Stacked view: fee + interest if one 3-month revolve vs rewards
-  return (
-    <svg viewBox="0 0 680 320" width="100%" style={{ fontFamily: "system-ui", maxWidth: 680 }} role="img" aria-labelledby="svg-first-cost">
-      <title id="svg-first-cost">True year-one cost of a beginner card if you revolve once</title>
-      <text x="340" y="22" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">The hidden cost: revolving ₹30,000 for three months</text>
-      <text x="340" y="40" textAnchor="middle" fontSize="10" fill="var(--text-muted)">What happens to a first-timer who treats the card like a short-term loan</text>
-
-      {/* three scenarios */}
-      {[
-        { lbl: "Pay in full every month", fee: 0, int: 0, reward: 4800, net: 4800 },
-        { lbl: "Revolve ₹30k for 3 months", fee: 499, int: 4500, reward: 4800, net: -199 },
-        { lbl: "Pay minimum due for 6 months", fee: 499, int: 10800, reward: 4800, net: -6499 },
-      ].map((s, i) => {
-        const y = 70 + i * 80;
-        return (
-          <g key={i}>
-            <text x="30" y={y + 22} fontSize="12" fontWeight="600" fill="var(--text)">{s.lbl}</text>
-            {/* Fee */}
-            {s.fee > 0 && <g>
-              <rect x="260" y={y} width={s.fee / 20} height="18" fill={AMBER} />
-              <text x={265 + s.fee / 20} y={y + 14} fontSize="10" fill="var(--text-muted)">Fee ₹{s.fee}</text>
-            </g>}
-            {/* Interest */}
-            {s.int > 0 && <g>
-              <rect x="260" y={y + 22} width={s.int / 40} height="18" fill={RED} />
-              <text x={265 + s.int / 40} y={y + 36} fontSize="10" fill="var(--text-muted)">Interest ₹{s.int.toLocaleString("en-IN")}</text>
-            </g>}
-            {/* Reward */}
-            <rect x="260" y={y + 44} width={s.reward / 20} height="18" fill={GREEN} />
-            <text x={265 + s.reward / 20} y={y + 58} fontSize="10" fill="var(--text-muted)">Rewards ₹{s.reward.toLocaleString("en-IN")}</text>
-            {/* Net */}
-            <text x="600" y={y + 30} textAnchor="end" fontSize="15" fontWeight="800" fill={s.net >= 0 ? GREEN : RED}>
-              Net: {s.net >= 0 ? "+" : ""}₹{s.net.toLocaleString("en-IN")}
-            </text>
-          </g>
-        );
-      })}
-
-      <text x="340" y="305" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Interest compounded monthly at 3% (36% APR) for the full revolving period.</text>
-    </svg>
-  );
-}
-
-// ------------------ Inline components ------------------
-const Persona = ({ name, age, income, city, note }) => (
-  <div style={{
-    border: `1.5px solid ${VIOLET}`, borderRadius: 14,
-    padding: "16px 18px", margin: "20px 0 12px",
-    background: VIOLET_SOFT,
-  }}>
-    <div style={{ fontSize: 11, letterSpacing: 1.5, fontWeight: 700, color: VIOLET, marginBottom: 6 }}>PERSONA</div>
-    <div style={{ fontSize: 17, fontWeight: 700, color: "var(--text)" }}>{name}, {age}</div>
-    <div style={{ fontSize: 13, color: "var(--text-muted)", marginTop: 4 }}>
-      {income} • {city}
-    </div>
-    <div style={{ fontSize: 14, color: "var(--text)", marginTop: 8, lineHeight: 1.55 }}>{note}</div>
-  </div>
-);
-
-const PickCard = ({ card, reason }) => (
-  <div style={{
-    background: VIOLET, color: "white",
-    padding: "24px 26px", borderRadius: 10, margin: "10px 0 24px",
-  }}>
-    <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, opacity: 0.85, marginBottom: 4 }}>PICK FOR THIS PROFILE</div>
-    <div style={{ fontSize: 18, fontWeight: 800, marginBottom: 6 }}>→ {card}</div>
-    <div style={{ fontSize: 13.5, lineHeight: 1.55, opacity: 0.95 }}>{reason}</div>
-  </div>
-);
-
-const FirstYearMath = ({ items, total }) => (
-  <div style={{
-    border: "1px dashed var(--border)", background: "var(--bg-soft)",
-    borderRadius: 8, padding: "24px 26px", margin: "14px 0",
-    fontFamily: "'JetBrains Mono', monospace", fontSize: 13.5,
-  }}>
-    <div style={{ fontSize: 11, letterSpacing: 1.5, fontWeight: 700, color: VIOLET, marginBottom: 8, fontFamily: "system-ui" }}>FIRST-YEAR MATH</div>
-    {items.map((r, i) => (
-      <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "3px 0" }}>
-        <span>{r[0]}</span><span style={{ color: r[2] || "var(--text)" }}>{r[1]}</span>
-      </div>
+const SvgPersonaMatrix = () => (
+  <svg viewBox="0 0 720 280" role="img" aria-label="Beginner persona matrix mapping income bracket and CIBIL band to recommended first credit card" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">PERSONA → CARD MATRIX · 4 INCOME × 3 CIBIL BANDS</text>
+    {/* x-axis CIBIL */}
+    {["No CIBIL", "650-720", "720+"].map((c, i) => (
+      <text key={c} x={170 + i * 175} y="50" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)" textAnchor="middle">{c}</text>
     ))}
-    <div style={{ borderTop: "1px solid var(--border)", marginTop: 8, paddingTop: 8, display: "flex", justifyContent: "space-between", fontWeight: 700 }}>
-      <span>Net year 1</span><span style={{ color: GREEN }}>{total}</span>
-    </div>
-  </div>
+    {[
+      { y: "No income", row: ["FD-secured Axis Insta", "FD-secured Axis Insta", "FD-secured Axis Insta"] },
+      { y: "₹2.4-3L", row: ["FD-secured", "Amazon Pay ICICI", "Amazon Pay ICICI"] },
+      { y: "₹3-5L", row: ["FD-secured", "SBI SimplyCLICK", "Amazon Pay ICICI"] },
+      { y: "₹5L+", row: ["FD-secured", "Axis Ace", "HDFC Millennia"] },
+    ].map((r, i) => (
+      <g key={i} transform={`translate(0, ${74 + i * 42})`}>
+        <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="600" fill="var(--text)">{r.y}</text>
+        {r.row.map((card, j) => (
+          <g key={j} transform={`translate(${110 + j * 175}, 0)`}>
+            <rect x="0" y="2" width="160" height="32" fill={COLOR} opacity={card === "FD-secured" || card === "FD-secured Axis Insta" ? 0.3 : 0.6} stroke={COLOR} />
+            <text x="80" y="22" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="var(--text)">{card}</text>
+          </g>
+        ))}
+      </g>
+    ))}
+  </svg>
 );
 
-const Warn = ({ children }) => (
-  <div style={{
-    borderLeft: `4px solid ${RED}`, background: "rgba(220,38,38,0.07)",
-    padding: "22px 24px", borderRadius: 8, margin: "16px 0",
-    fontSize: 14, color: "var(--text)", lineHeight: 1.55,
-  }}>
-    <strong style={{ color: RED }}>Beginner pitfall: </strong>{children}
-  </div>
+const SvgFirstYearMath = () => (
+  <svg viewBox="0 0 720 240" role="img" aria-label="First year economic outcome of three popular beginner cards under typical 25k monthly spend" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">YEAR 1 NET BENEFIT · ₹25K MONTHLY SPEND PROFILE</text>
+    {[
+      { card: "Amazon Pay ICICI", fee: 0, welcome: 1500, cashback: 4200, net: 5700, w: 285 },
+      { card: "Axis Ace", fee: 499, welcome: 0, cashback: 5800, net: 5301, w: 265 },
+      { card: "SBI SimplyCLICK", fee: 499, welcome: 500, cashback: 4500, net: 4501, w: 225 },
+    ].map((c, i) => (
+      <g key={i} transform={`translate(0, ${52 + i * 50})`}>
+        <text x="20" y="14" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="var(--text)">{c.card}</text>
+        <text x="20" y="32" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Fee ₹{c.fee} · welcome ₹{c.welcome} · cashback ₹{c.cashback.toLocaleString("en-IN")}</text>
+        <rect x="350" y="6" width={c.w} height="22" fill={COLOR} opacity={0.5 + i * 0.15} />
+        <text x={358 + c.w} y="22" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="var(--text)">₹{c.net.toLocaleString("en-IN")}</text>
+      </g>
+    ))}
+    <text x="20" y="220" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Net benefit = welcome bonus + annual cashback − annual fee · effective rate ranges 1.5-1.9% across these cards</text>
+  </svg>
 );
 
-// ------------------ Page ------------------
-export default function BestCardBeginners2026Page() {
-  const published = "2026-04-20";
-  const modified = "2026-04-20";
+const SvgBuildingScore = () => (
+  <svg viewBox="0 0 720 240" role="img" aria-label="CIBIL score progression over 24 months for a first-time cardholder following three different behavioural patterns" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">CIBIL TRAJECTORY · 24 MONTHS POST FIRST CARD · 3 BEHAVIOURS</text>
+    <line x1="60" y1="200" x2="700" y2="200" stroke="var(--border)" />
+    <line x1="60" y1="50" x2="60" y2="200" stroke="var(--border)" />
+    <text x="60" y="218" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Mo 0</text>
+    <text x="220" y="218" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Mo 6</text>
+    <text x="380" y="218" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Mo 12</text>
+    <text x="540" y="218" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Mo 18</text>
+    <text x="680" y="218" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Mo 24</text>
 
+    <path d="M 60 195 L 220 110 L 380 80 L 540 65 L 700 60" fill="none" stroke="#16a34a" strokeWidth="3" />
+    <text x="600" y="55" fontFamily="system-ui" fontSize="10" fill="#16a34a" fontWeight="700">Disciplined: 750+ by Mo 24</text>
+
+    <path d="M 60 195 L 220 145 L 380 130 L 540 110 L 700 100" fill="none" stroke={COLOR} strokeWidth="3" strokeDasharray="5 4" />
+    <text x="600" y="93" fontFamily="system-ui" fontSize="10" fill={COLOR} fontWeight="700">Average: 720 by Mo 24</text>
+
+    <path d="M 60 195 L 220 175 L 380 180 L 540 170 L 700 165" fill="none" stroke="#dc2626" strokeWidth="3" strokeDasharray="3 3" />
+    <text x="600" y="158" fontFamily="system-ui" fontSize="10" fill="#dc2626" fontWeight="700">Sloppy: 670 + dings</text>
+  </svg>
+);
+
+const SvgSpendCheck = () => (
+  <svg viewBox="0 0 720 240" role="img" aria-label="Monthly spend pattern self-test showing how to identify which beginner card matches the user's actual transaction mix" style={{ width: "100%", maxWidth: 760 }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">MATCH YOUR SPEND TO YOUR FIRST CARD</text>
+    {[
+      { profile: "Amazon Prime + grocery delivery", card: "Amazon Pay ICICI", reason: "Lifetime free · 5% Amazon Prime · 1% other" },
+      { profile: "Multi-platform online shopper", card: "SBI Cashback (after 18mo CIBIL build)", reason: "5% all online up to ₹5k/mo cap" },
+      { profile: "Utility bills via Gpay + offline", card: "Axis Ace", reason: "5% Gpay util · 1.5% base · ₹499 fee" },
+      { profile: "Swiggy + Zomato + Uber heavy", card: "HDFC Millennia (3L+ income)", reason: "5% on 10 partner apps · ₹1k voucher" },
+      { profile: "Just want to build CIBIL", card: "FD-secured Axis Insta", reason: "Pledge ₹15k · build score 18 months" },
+    ].map((p, i) => (
+      <g key={i} transform={`translate(0, ${50 + i * 36})`}>
+        <text x="20" y="16" fontFamily="system-ui" fontSize="11" fontWeight="700" fill={COLOR}>{p.profile}</text>
+        <text x="280" y="16" fontFamily="system-ui" fontSize="11" fontWeight="600" fill="var(--text)">{p.card}</text>
+        <text x="20" y="30" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">{p.reason}</text>
+      </g>
+    ))}
+  </svg>
+);
+
+export default function BestCardBeginners2026() {
   const article = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "Best Credit Card for Beginners in India (2026): A Personalised Decision Guide",
-    author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/about" },
+    "@context": "https://schema.org", "@type": "Article",
+    headline: "Best Credit Card for Beginners in India 2026 — A Persona-Based Picker",
+    description: "Five real personas mapped to first-card recommendations across income, CIBIL, and spend pattern. Detailed first-year math and CIBIL-building behaviour guide for first-time Indian cardholders.",
+    author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
+    reviewedBy: { "@type": "Person", name: "Ash K" },
+    datePublished: "2026-04-20", dateModified: "2026-04-20",
     publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
-    datePublished: published,
-    dateModified: modified,
-    mainEntityOfPage: "https://assurefintech.com/blog/best-card-beginners-2026",
-    description:
-      "Four beginner profiles, four different right answers. We walk every first-time applicant through the exact card to pick in April 2026.",
+    mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/best-card-beginners-2026" }
   };
+
   const faq = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+    "@context": "https://schema.org", "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", name: "Can I get a credit card without a CIBIL score?", acceptedAnswer: { "@type": "Answer", text: "Yes. A secured credit card issued against a fixed deposit — such as SBI Unnati or Axis Bank Insta Easy — does not require a CIBIL score because the FD acts as collateral. Most major Indian banks offer one such product." } },
-      { "@type": "Question", name: "What is the minimum income for a first credit card in India?", acceptedAnswer: { "@type": "Answer", text: "Unsecured entry-level cards usually need ₹20,000 per month net in-hand or a ₹2.5 lakh per annum declared income. Secured cards have no minimum income because they are backed by an FD." } },
-      { "@type": "Question", name: "How long does it take to build a good credit score from scratch?", acceptedAnswer: { "@type": "Answer", text: "A first-time card holder who pays in full every month typically reaches CIBIL 750 in 12 to 18 months. Missed payments reset the clock by several months and take longer to recover from." } },
-      { "@type": "Question", name: "Is it better to get a lifetime free card or pay an annual fee?", acceptedAnswer: { "@type": "Answer", text: "For a first card, a lifetime-free card is almost always better. The fee-waived cards in the beginner segment match or beat the fee-bearing ones in reward value because beginner spends rarely hit the thresholds that justify a fee." } },
-      { "@type": "Question", name: "How many cards should a beginner have?", acceptedAnswer: { "@type": "Answer", text: "Start with one, hold it for at least 12 months before applying for a second. Multiple hard credit inquiries in quick succession flag risk in the bureau's model and can suppress the score." } },
-      { "@type": "Question", name: "Can a student get a regular credit card?", acceptedAnswer: { "@type": "Answer", text: "Most regular cards require income proof. Students can apply for FD-backed cards such as SBI Unnati or can be added as add-on holders on a parent's card to begin building a history before age 21." } },
-    ],
+      { "@type": "Question", name: "Should I get a credit card if I don't have any income yet?", acceptedAnswer: { "@type": "Answer", text: "Yes, via FD-secured route. Pledge ₹15,000 to ₹50,000 as a fixed deposit at Axis Bank, ICICI Bank, or SBI; in return you get a credit card with limit at 80 to 90 percent of the FD value. The card reports to bureaus identically to unsecured cards. After 12 to 18 months of disciplined usage, you can convert to an unsecured equivalent at the same bank without re-application. The structural advantage of starting at no-income with FD-secured: you build 12 to 18 months of CIBIL history before your first job, putting you in the 720-plus band by the time you need an unsecured card. Family-funded FDs work fine; the FD doesn't need to be from your own money." } },
+      { "@type": "Question", name: "How do I avoid the credit-card-debt trap as a first-time user?", acceptedAnswer: { "@type": "Answer", text: "Three behaviours, in priority order. Set up auto-debit on the full statement balance, not minimum due — this is the single most important habit you can build. Keep utilisation under 30 percent of credit limit at statement-cut date (banks report your statement balance to bureaus monthly). Use the card every month for at least 3 small transactions to maintain active status, but don't chase rewards by over-spending. Get these three right and you'll avoid every common first-card pitfall. The 36 to 42 percent APR on revolving balances wipes out cashback economics regardless of card choice; pay in full or balance-transfer to a 0%-promo card if cash flow ever forces a roll." } },
+      { "@type": "Question", name: "Which lifetime-free cards are realistically available for a beginner?", acceptedAnswer: { "@type": "Answer", text: "The genuinely lifetime-free options for beginners with verifiable income above ₹2.4 lakh are limited but real. Amazon Pay ICICI is the standout — 5 percent Amazon Prime, 1 percent elsewhere, no annual fee ever, low ₹2.4L income approval. ICICI Platinum is older and simpler at 2 PAYBACK pts/₹100 with no acceleration, also lifetime free. IDFC FIRST Classic and Millennia are both lifetime free and offer reasonable reward structures. SBI Card has no lifetime-free entry products; their cards typically carry ₹499 to ₹999 fees with milestone-based waivers. For a no-income beginner via FD-secured route, Axis Insta Easy is ₹500 fee but the FD continues earning interest while pledged, partially offsetting the fee." } },
+      { "@type": "Question", name: "Should I close my first card after upgrading to a better one?", acceptedAnswer: { "@type": "Answer", text: "Generally no. Closing your oldest credit card account reduces credit-history-age, which can drop CIBIL by 30 to 50 points temporarily. Keep the first card open even after upgrading; make a small ₹500 to ₹1,000 transaction every 3 to 4 months to maintain active status. If the first card has annual fee that's now uneconomical, ask the bank to downgrade to a lifetime-free variant of the same product family (HDFC Millennia → MoneyBack+; SBI Elite → Prime; ICICI Coral → Platinum). Downgrade preserves credit-history-age and limit; closure does not. Only close if downgrade is unavailable and you're certain about not needing the card." } },
+      { "@type": "Question", name: "What's the realistic credit limit on a first card?", acceptedAnswer: { "@type": "Answer", text: "First-card limits typically sit at 1.5x to 3x of monthly net salary, capped initially at ₹50,000 to ₹2 lakh. So a ₹40,000/month salaried earner might get ₹60,000 to ₹1.2 lakh limit at sanction. FD-secured cards cap at 80 to 90 percent of pledged FD value. Banks usually review limits at the 6-month mark and bump by 30 to 50 percent if your utilisation has stayed under 50 percent. Don't request a manual limit increase in the first 6 months — most banks treat the request as a soft signal and may instead cap your spend. Wait for the bank-initiated limit hike around month 7 to 9, which is genuine recognition of clean behaviour." } },
+      { "@type": "Question", name: "Can I have multiple credit cards as a first-time user?", acceptedAnswer: { "@type": "Answer", text: "Apply for one card. Each application is a hard pull on your CIBIL, costing 5 to 10 points temporarily. Multiple applications in 30 to 90 days drop the score sharply, and rejections compound the damage by appearing on the bureau report for 7 years. Build 12 to 18 months of clean history on one card before adding a second. By the time you're ready for card 2, your CIBIL should be 740 plus, your salary higher, and you'll qualify for stronger products like Axis Ace, HDFC Millennia, or Flipkart Axis. The compounding benefit of patience here is meaningful — first card eligibility narrows your menu, but second and third card eligibility widens dramatically once CIBIL is established." } }
+    ]
   };
+
   const breadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog" },
-      { "@type": "ListItem", position: 3, name: "Best Card for Beginners 2026", item: "https://assurefintech.com/blog/best-card-beginners-2026" },
-    ],
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "Best Card for Beginners 2026", item: "https://assurefintech.com/blog/best-card-beginners-2026" }
+    ]
   };
 
   return (
@@ -303,301 +154,262 @@ export default function BestCardBeginners2026Page() {
           </div>
         </div>
       </div>
-      <main style={{ maxWidth: 760, margin: "0 auto", padding: "32px 20px 80px", color: "var(--text)", lineHeight: 1.7, fontFamily: "'Inter', system-ui, sans-serif" }}>
-      <Script id="jsonld-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="jsonld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="jsonld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.85, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
+      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
-      <nav aria-label="Breadcrumb" style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 16 }}>
-        <Link href="/" style={{ color: "inherit" }}>Home</Link> ›{" "}
-        <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> › <span>Best Card for Beginners 2026</span>
+      <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }} aria-label="Breadcrumb">
+        <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Best Card for Beginners 2026
       </nav>
 
-      <span style={{
-        display: "inline-block", padding: "4px 10px", background: VIOLET_SOFT,
-        color: VIOLET, fontSize: 11, letterSpacing: 2, fontWeight: 700, borderRadius: 4,
-      }}>
-        CREDIT CARDS — BEGINNERS
-      </span>
+      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · TIER 2 GUIDE · PERSONA JOURNEY</div>
 
-      <p style={{ fontSize: 19, color: "var(--text-muted)", marginBottom: 22 }}>
-        A generic top-ten list is useless for a first-time applicant, because the right first card depends
-        entirely on who you are. A 21-year-old student and a 28-year-old first-time earner in a metro
-        should apply for very different products. Below we walk four real beginner profiles through the
-        exact card that fits, and the exact math behind why.
-      </p>
-
-      <div style={{ display: "flex", gap: 14, fontSize: 13, color: "var(--text-muted)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", padding: "10px 0", marginBottom: 28 }}>
-        <span>By <strong>Ash K</strong></span>
-        <span>•</span>
-        <span>Last updated April 20, 2026</span>
-        <span>•</span>
-        <span>9 min read</span>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+        <span>Last updated {UPDATED}</span>
+        <span>·</span>
+        <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
+        <span>·</span>
+        <span>Reviewed against RBI Master Direction + 2025 amendments</span>
+        <span>·</span>
+        <span>About 9 min read</span>
       </div>
 
-      <figure style={{ margin: "20px 0 30px" }}>
-        <SvgDecisionMatrix />
-      </figure>
-
-      <p>
-        The matrix above compresses the whole article into one view. But compression cuts off the nuance —
-        income and credit history are just the first two axes. The third is spending pattern, the fourth is
-        future goals. What we walk through below is how a human picks, not what an algorithm would output.
-      </p>
-
-      <h2 style={{ fontSize: 28, marginTop: 42, marginBottom: 16, fontWeight: 700 }}>Step 1 — Understand what a first card actually needs to do</h2>
-
-      <p>
-        A first credit card has exactly two jobs. Build a credit history that opens up everything else
-        (home loan, auto loan, higher-limit cards three years later). And train the habit of settling the
-        full statement within the grace period. Every other feature — rewards, lounge access, foreign spend
-        waivers — is a rounding error on top of these two.
-      </p>
-
-      <p>
-        That reframes what "best" means. The best first card is not the card with the fattest reward, it is
-        the card you'll actually be approved for, that'll actually let you build the habits, and that won't
-        punish the inevitable beginner mistakes too severely. With that frame, the field narrows fast.
-      </p>
-
-      <Warn>
-        Applying to three or four cards in a month will tank your fledgling CIBIL score before it has a
-        chance to mature. Each hard inquiry is logged and stays on the bureau for 24 months. Apply once,
-        wait for the decision, then either use the card or try one alternative — never shotgun applications.
-      </Warn>
-
-      <h2 style={{ fontSize: 28, marginTop: 42, marginBottom: 16, fontWeight: 700 }}>Step 2 — Meet the four beginner profiles</h2>
-
-      <p>
-        Over the last year, we've audited roughly 2,400 first-card conversations in our reader comments
-        and newsletter replies. Almost every question maps back to one of four underlying personas. Find
-        the one that sounds most like you.
-      </p>
-
-      <Persona
-        name="Karthik"
-        age="21, 2nd-year engineering student"
-        income="No salary; ₹8,000/mo allowance from family"
-        city="Coimbatore"
-        note="Wants to start building a score before campus placements. No CIBIL record. Parents have a Visa Platinum and are willing to back an FD of ₹15,000 if needed."
-      />
-      <PickCard
-        card="SBI Unnati against a ₹15,000 fixed deposit"
-        reason="Lifetime free (if you hold the FD four years), no income proof, 1% on all spends, and the FD continues to earn interest at 6.75% while securing the card. Karthik's year-one goal is not cashback — it's a 12-month track record of paid-in-full statements. This card lets him build it without risking his family's credit."
-      />
-      <FirstYearMath
-        items={[
-          ["FD blocked (still earns 6.75% interest)", "₹15,000"],
-          ["Annual fee", "₹0"],
-          ["Spend ₹5,000/mo = ₹60,000 annual", "-"],
-          ["Cashback at 1%", "₹600", GREEN],
-          ["Effective reward rate", "1.0%"],
-        ]}
-        total="+₹600 plus a fresh CIBIL history"
-      />
-
-      <Persona
-        name="Riya"
-        age="24, first month at her first job"
-        income="₹38,000/mo take-home at a tech firm in Bengaluru"
-        city="Bengaluru"
-        note="Recently moved from Pune, opened a salary account with ICICI. No credit history. Shops ~₹20,000/mo — mostly Amazon, Swiggy, Uber. Doesn't know if she'll be approved as a fresher."
-      />
-      <PickCard
-        card="Amazon Pay ICICI Lifetime Free"
-        reason="Because Riya banks with ICICI, her salary account and KYC are already on file — approval odds go up significantly. The card is lifetime free, has a strong 5% return on Amazon for Prime members, and its 1% flat rate on everything else is competitive with any paid card in this segment. Her spend pattern is literally what this card was designed for."
-      />
-      <FirstYearMath
-        items={[
-          ["Amazon spend ₹8,000/mo (Prime member)", "₹96,000/yr"],
-          ["Rewards at 5%", "₹4,800", GREEN],
-          ["Other spend ₹12,000/mo", "₹1,44,000/yr"],
-          ["Rewards at 1% (non-Amazon, non-Prime)", "₹1,440", GREEN],
-          ["Annual fee", "₹0"],
-        ]}
-        total="+₹6,240 of effective cashback"
-      />
-
-      <Persona
-        name="Sagar"
-        age="26, gig worker / freelance designer"
-        income="₹55,000/mo average but highly variable"
-        city="Jaipur"
-        note="No ITR filed yet — plans to file Assessment Year 2026-27. Has been declined twice by HDFC for a MoneyBack card because of income-proof gaps. Has a ₹40,000 SBI FD already."
-      />
-      <PickCard
-        card="Axis Insta Easy against the existing SBI FD (transferred) or a new ₹25,000 Axis FD"
-        reason="Axis Insta Easy converts a ₹25,000 FD into an instant credit limit of ₹20,000 (80% of the FD) with no income proof and no CIBIL requirement. Sagar can use this for six months to build a footprint and then — with a clean repayment record — apply for the unsecured Axis ACE with much better approval odds. Chasing unsecured on day one will keep producing rejections."
-      />
-      <FirstYearMath
-        items={[
-          ["FD blocked (continues earning ~7.1%)", "₹25,000"],
-          ["Annual fee", "₹500"],
-          ["Spend ₹15,000/mo on card", "₹1,80,000/yr"],
-          ["Reward points (monetary value)", "₹1,800", GREEN],
-          ["CIBIL score after 12 months", "~745", GREEN],
-        ]}
-        total="+₹1,300 net + CIBIL runway"
-      />
-
-      <Persona
-        name="Meera"
-        age="32, homemaker with part-time consulting"
-        income="₹18,000/mo consulting income, not declared"
-        city="Pune"
-        note="Joint account with husband. Husband has an HDFC Regalia Gold. Meera wants her own card for independence and online shopping — mostly groceries via Blinkit and Amazon. No CIBIL score of her own."
-      />
-      <PickCard
-        card="HDFC MoneyBack+ as an add-on first, then a secured card in year 2"
-        reason="The fastest path for Meera is an add-on card on her husband's Regalia Gold — instant issuance, no income proof, and she gets transaction history tied to her PAN. Her spends will reflect on her CIBIL once it's activated for her. In parallel, she opens a ₹25,000 FD against which she applies for her own Axis Insta Easy in month six. By year-end she holds one primary card in her name."
-      />
-      <Warn>
-        Add-on cards do not always build the add-on holder's CIBIL score — it depends on whether the
-        issuer reports separately. HDFC and Axis do report; SBI and ICICI do not as of April 2026. Check
-        before relying on this as the sole strategy.
-      </Warn>
-
-      <h2 style={{ fontSize: 28, marginTop: 42, marginBottom: 16, fontWeight: 700 }}>Step 3 — The five cards every beginner should actually consider</h2>
-
-      <p>
-        Below, in plain English, are the five products that consistently win for first-time applicants in
-        India in 2026. Every other card in the market is either a variation of one of these or a
-        straight-up worse option.
-      </p>
-
-      <figure style={{ margin: "18px 0" }}>
-        <SvgTopFiveGrid />
-      </figure>
-
-      <p>
-        IDFC First Millennia earns its place because it is genuinely lifetime free — most "lifetime free"
-        cards have a spend threshold to maintain the waiver, this one does not. Amazon Pay ICICI is the
-        single best effective-rate card in the free tier. Axis ACE leads for anyone who dislikes category
-        dance and just wants a flat 2 percent on 70 percent of their spend. SBI Unnati is the default
-        secured-card choice because its FD-earn-while-block structure is the most depositor-friendly. HDFC
-        MoneyBack+ rounds out the list as the "middle path" option for applicants who prefer HDFC's ecosystem.
-      </p>
-
-      <figure style={{ margin: "22px 0" }}>
-        <SvgRewardChart />
-      </figure>
-
-      <h2 style={{ fontSize: 28, marginTop: 42, marginBottom: 16, fontWeight: 700 }}>Step 4 — The math that makes or breaks your first year</h2>
-
-      <p>
-        Whatever card you pick, one truth dominates: revolving balance kills every reward you could ever
-        earn. Here is the chart that every first-time cardholder should burn into their memory before they
-        sign the KYC form.
-      </p>
-
-      <figure style={{ margin: "18px 0" }}>
-        <SvgFirstYearCost />
-      </figure>
-
-      <p>
-        The top bar — paying in full every single month — shows what the card was designed to deliver:
-        positive rewards, no cost. The middle bar shows what happens if you revolve ₹30,000 for just three
-        months. You wipe out the entire year's rewards and end up in the red. The bottom bar, where the
-        cardholder pays only the minimum due for six months, is an unmitigated disaster — over ₹6,000 lost
-        in a year. This is a plurality of Indian first-time cardholders. Don't be one of them.
-      </p>
-
-      <Warn>
-        The minimum-due trap is the single biggest financial mistake Indian beginners make with their first
-        card. Banks structure the minimum at just 5% of outstanding because it maximises their interest
-        income. Treat the minimum as a bankruptcy-prevention floor, not a spending allowance.
-      </Warn>
-
-      <h2 style={{ fontSize: 28, marginTop: 42, marginBottom: 16, fontWeight: 700 }}>Step 5 — The 12-month discipline that upgrades your card tier</h2>
-
-      <p>
-        Once you have a first card and 12 clean months of paid-in-full statements behind you, doors open.
-        Your CIBIL will typically sit between 730 and 780 by month 12 if you never missed a payment. At
-        that point, issuers will start proactively inviting you for pre-approved upgrades, including
-        premium cards like Axis Vistara, HDFC Regalia, and eventually the ICICI Emeralde range.
-      </p>
-
-      <p>
-        The temptation to apply for a second card at month six is strong — don't. Each fresh hard inquiry
-        suppresses your score by 10-25 points for three to six months, and at the same time dilutes the
-        age of your overall credit profile, which is one of the bureau's weighting factors. One card, 12
-        months, clean record. That is the foundation you build everything else on.
-      </p>
-
-      <h2 style={{ fontSize: 28, marginTop: 42, marginBottom: 16, fontWeight: 700 }}>Most-asked reader questions</h2>
-
-      <div>
-        <h3 style={{ fontSize: 17, fontWeight: 700, marginTop: 18 }}>What if I get rejected?</h3>
-        <p>Wait 90 days before reapplying. Use the gap to pull your CIBIL report (one free pull a year at
-          cibil.com), check for any incorrect entries, and raise a dispute if anything is wrong. Then apply
-          for a secured card instead — rejection for an unsecured product does not mean rejection for a
-          secured one.</p>
-
-        <h3 style={{ fontSize: 17, fontWeight: 700, marginTop: 18 }}>Does a high credit limit help or hurt?</h3>
-        <p>It helps, as long as you don't use most of it. Credit utilisation — the ratio of balance to
-          limit — is the second-largest driver of your CIBIL score. A ₹1 lakh limit with ₹20,000 spent
-          (20%) scores better than a ₹40,000 limit with ₹20,000 spent (50%). Ask for a higher limit at
-          month 9 or 10 once your history is clean.</p>
-
-        <h3 style={{ fontSize: 17, fontWeight: 700, marginTop: 18 }}>How do UPI-on-credit cards fit in?</h3>
-        <p>They work but they are usually a poor first card. RuPay UPI-linked credit cards (IDFC First and
-          HDFC variants) let you spend on UPI and earn rewards, but the reward rates on UPI transactions
-          are typically half the card's headline rate. Use them as a second card after your first is
-          established.</p>
-
-        <h3 style={{ fontSize: 17, fontWeight: 700, marginTop: 18 }}>Should I fall for pre-approved offers from my bank?</h3>
-        <p>Read them carefully. A "pre-approved" offer is a soft inquiry that has been marketed to you; the
-          actual application may still involve a hard pull and a changed set of terms. Compare the
-          pre-approved product with the recommendations above before accepting. Banks push their most
-          profitable products, not your optimal one.</p>
-      </div>
-
-      <div style={{
-        marginTop: 48, padding: "24px 22px", background: "var(--bg-soft)",
-        borderRadius: 12, borderLeft: `4px solid ${VIOLET}`,
-      }}>
-        <h3 style={{ marginTop: 0, fontSize: 20, fontWeight: 700 }}>Build your starter stack, not just a card</h3>
-        <p style={{ marginBottom: 12 }}>
-          A first card is chapter one. The right second card, opened 12 months in, unlocks roughly twice
-          the annual value. Use our free stacker to see what your second card should be after your chosen
-          first.
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The persona-to-card matrix</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Two variables decide your first card more than any other: your verifiable monthly income and your existing CIBIL band. The matrix below maps the four most common income bands against three CIBIL situations (no CIBIL, sub-720 CIBIL, and 720-plus). Find your cell and the card name in it is the safe default.
         </p>
-        <Link href="/tools/card-stacker" style={{
-          display: "inline-block", padding: "10px 18px", background: VIOLET,
-          color: "white", borderRadius: 8, textDecoration: "none", fontWeight: 600,
-        }}>
-          Plan my card roadmap →
-        </Link>
-      </div>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The matrix is conservative by design. Aggressive picks (premium reward cards) work for some first-timers but the rejection cost (5 to 10 CIBIL points per hard pull, 7-year bureau record) makes them poor risk-reward bets when you can't be sure of approval. Stick to the matrix unless you have specific reason to deviate.
+        </p>
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgPersonaMatrix />
+        </div>
+      </section>
 
-      <div style={{ marginTop: 30, padding: "16px 18px", background: "var(--bg-soft)", borderRadius: 10, fontSize: 13, color: "var(--text-muted)" }}>
-        <strong>How we research this:</strong> Fee, APR and benefit data pulled from each issuer's
-        official MITC document current to 1 April 2026. Persona reward projections use an internal model
-        that accounts for GST on fees, category caps and typical first-year utilisation patterns. Spend
-        profiles reflect Assure Fintech reader survey data from February 2026 (n = 1,244).
-      </div>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 1 — Karthik, 22, final-year student, no income</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Karthik is in his final year at IIT Bombay, has a placement offer for ₹18 lakh starting July, but no income today. He wants to start building CIBIL before his first salary so that he can rent a flat in Bangalore and get an unsecured card by year-end.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The right move: FD-secured route. His parents pledge ₹25,000 as a fixed deposit at Axis Bank's Insta Easy product. Within a week, Karthik gets a credit card with ₹20,000 limit. The card reports to TransUnion CIBIL identically to an unsecured card, building his bureau record from day one.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Behavioural prescription: spend ₹2,000 to ₹4,000 per month on the card (small purchases — coffee, online subscriptions, occasional Swiggy), pay full statement balance via auto-debit on due date, never carry a balance. After 6 to 8 months of clean reporting, his first CIBIL score generates around 700 to 730. By the time his salary credits start in July, his CIBIL is established and he qualifies for unsecured products like Amazon Pay ICICI or Axis Ace as his second card.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The FD continues earning interest at the bank's standard rate (around 6.5 percent annually) while pledged. The opportunity cost is small. The CIBIL gain is meaningful — first-card builders who skip this path and apply for unsecured cards immediately at salary credit time often face rejection (no bureau history) and burn 5 to 10 points per attempt.
+        </p>
+      </section>
 
-      <div style={{ marginTop: 18, fontSize: 12, color: "var(--text-muted)", fontStyle: "italic" }}>
-        This article is editorial, not financial advice. Card availability and terms change; verify the
-        most recent MITC directly with the issuer before applying. Assure Fintech receives no issuer
-        commission on any card mentioned in this piece.
-      </div>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 2 — Riya, 24, junior consultant, ₹6 lakh, no card</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Riya works at a mid-tier consulting firm, salary ₹6 lakh per annum (₹50,000 monthly net). She has a salary account at HDFC, no existing credit card or loan, no CIBIL score yet. Her spend pattern is split: ₹15,000 monthly online (Amazon Prime, Myntra, Cleartrip), ₹8,000 Swiggy and Zomato, ₹6,000 Uber and Ola, ₹5,000 grocery delivery on BigBasket, ₹16,000 offline (rent, utilities, dining).
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The right move: Amazon Pay ICICI as the first card. Lifetime-free structure means no fee anxiety. Income approval at ₹2.4 lakh is easily cleared at her ₹6 lakh salary. The 5 percent Amazon Prime rate captures her existing Amazon spend (₹4,000 monthly = ₹2,400 annual cashback). Her remaining online spend earns 1 percent (₹1,320 annual). Total year-one cashback approximately ₹4,200. Plus ₹1,500 welcome Amazon Pay credit (Prime members). Net first-year benefit: ₹5,700.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Behavioural prescription same as Karthik. Spend regularly, pay in full, sub-30 percent utilisation. After 18 months, Riya should add a second card optimised for her partner-app spend (HDFC Millennia or Axis Ace). The two-card stack at that point delivers 2.5 to 3.5 percent effective rate across her full spend mix versus the single-card 1.5 percent at year one.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          Why not start with a higher-tier card? Two reasons. CIBIL approval risk is real for first applications without any bureau history. And the marginal cashback benefit of premium cards is small at ₹50,000 monthly spend, so the higher fee isn't justified. Lifetime-free Amazon Pay ICICI is the boring-but-correct first card for most of this persona band.
+        </p>
+      </section>
 
-      <div style={{ marginTop: 24, paddingTop: 20, borderTop: "1px solid var(--border)", fontSize: 13, color: "var(--text-muted)" }}>
-        Reviewed by the Assure Fintech card research team. Originally published April 20, 2026. Next
-        scheduled review: October 2026 or upon material change to any listed card's MITC, whichever is
-        earlier.
-      </div>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 3 — Sagar, 28, gig-economy professional, ₹4 lakh, irregular income</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Sagar is a freelance UX designer earning ₹4 lakh annually, but his monthly income varies from ₹15,000 in lean months to ₹60,000 in busy months. He has filed two years of ITRs as a self-employed individual under Section 44ADA presumptive taxation. His CIBIL is 0 — never had any credit product.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The challenge: most banks underwrite first-card applications on income predictability rather than just income level. Salaried earners at ₹4 lakh get cards easily; freelancers at the same level often face rejection. Sagar's path is structurally different.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The right move: FD-secured Axis Insta or ICICI Coral. Pledge ₹30,000 as fixed deposit, get a card with ₹25,000 limit. Build 6 to 9 months of bureau history. Then apply for an unsecured American Express SmartEarn — Amex specifically markets to self-employed and consultants, with friendlier underwriting on ITR-based income than mainstream banks.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          Behavioural prescription. Beyond the standard pay-in-full discipline, Sagar should keep utilisation low even in busy months. Spending ₹20,000 on a ₹25,000 limit card looks like high utilisation to bureaus regardless of underlying income; banks read it as financial stress. Aim for under 30 percent utilisation by paying down balances mid-month if necessary, before statement generation.
+        </p>
+      </section>
 
-      <div style={{ marginTop: 40, paddingTop: 22, borderTop: "1px solid var(--border)" }}>
-        <h3 style={{ fontSize: 17, fontWeight: 700, marginBottom: 10 }}>Read next</h3>
-        <ul style={{ listStyle: "none", padding: 0, lineHeight: 1.9 }}>
-          <li>→ <Link href="/blog/cap-adjusted-cashback-explained" style={{ color: VIOLET }}>Why your 5 percent cashback card actually pays 1.2 percent</Link></li>
-          <li>→ <Link href="/blog/rbi-credit-card-rules-2026" style={{ color: VIOLET }}>RBI credit card rules 2026: your rights when something goes wrong</Link></li>
-          <li>→ <Link href="/learn/credit-cards/cibil-score-explained" style={{ color: VIOLET }}>How CIBIL actually scores you — and what to optimise</Link></li>
-          <li>→ <Link href="/credit-cards/secured-cards-india" style={{ color: VIOLET }}>Secured credit cards: every issuer compared</Link></li>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 4 — Meera, 32, homemaker, no formal income</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Meera is a homemaker with two children, husband earns ₹15 lakh per annum at a private bank. She manages all household spend, currently using her husband's add-on card. She wants her own credit card — partly for financial autonomy, partly because the add-on card doesn't build her individual CIBIL.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The right move: same FD-secured route as no-income applicants. Pledge ₹50,000 to ₹1 lakh and get a card in her name. This builds Meera's individual CIBIL over 18 to 24 months. After that period, she can apply for an unsecured card based on her own bureau record, which now exists.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The add-on path that many homemakers default to (using husband's primary card with a supplementary card) does not build the holder's CIBIL — it builds the primary cardholder's. So 10 years on add-on usage means zero individual CIBIL history. Switch to FD-secured to build personal credit infrastructure.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          Why this matters. Personal CIBIL is independently valuable. If Meera ever needs to take a loan in her own name (small business, vehicle, eventual property), banks will need her CIBIL. Building it through 24 months of FD-secured card discipline is the cleanest path. The pledged FD continues earning interest, so the opportunity cost is small. The autonomy and creditworthiness gain is structural.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 5 — Aditya, 26, IT engineer, ₹12 lakh, building portfolio fast</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Aditya works at a mid-tier IT services company, earns ₹12 lakh annually, has held a job for 18 months. He wants to optimise cashback aggressively from day one — specifically wants the Axis Magnus or HDFC Diners Privilege premium cards within a year.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The right path is staged. First card: Axis Ace (₹499 fee, ₹2L spend waiver, 1.5 percent base, 5 percent Gpay utility). Eligible at ₹3 lakh income. Build 12 to 15 months of clean payment history; CIBIL should reach 740-plus by month 18.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Second card at month 18: HDFC Millennia (₹3.5L income requirement, 5 percent on 10 partner apps). The two-card stack now covers most spend categories at accelerated rate. Combined effective rate roughly 2.8 percent.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          Premium card at month 24 to 30: HDFC Diners Privilege if his spend has consistently exceeded ₹1.5 lakh monthly, justifying the ₹2,500 fee. Magnus is too aspirational (₹18 lakh income recommended); wait until salary crosses that bar. Skipping these stages and applying for Magnus immediately at month 6 with ₹12 lakh income usually produces rejection plus 5-10 CIBIL points lost. The staged approach builds approval certainty.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The first-year math — what you actually earn</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          On a typical first-card profile (₹25,000 monthly spend split across online and offline categories), three popular beginner cards deliver ₹4,500 to ₹5,700 of net first-year benefit. The chart below shows the breakdown.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The differences between cards are small in absolute terms. ₹1,200 of annual benefit difference between Amazon Pay ICICI and SBI SimplyCLICK is real but not transformative. The bigger benefit comes from holding any beginner card consistently for 18 to 24 months and building a 720-plus CIBIL — which then unlocks ₹15,000 to ₹30,000 of annual benefit on a stronger second card.
+        </p>
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgFirstYearMath />
+        </div>
+      </section>
+
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How CIBIL evolves on a first card — the trajectory</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          A first credit card generates your first CIBIL score around month 6 to 9 of usage. Where the score lands depends entirely on your behaviour over those months. The chart below shows three trajectories.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The disciplined trajectory (full payment, sub-30 percent utilisation, monthly active usage) produces a score around 740 to 760 by month 24. The average trajectory (occasional minimum-due payments, 40 to 60 percent utilisation, irregular usage) lands around 700 to 720. The sloppy trajectory (one or two missed due dates, 70-plus percent utilisation, late payment dings) lands around 660 to 680 — a level that can take another 12 to 18 months to repair.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The single most important behavioural rule: pay the full statement balance on time, every cycle, no exceptions. Set up auto-debit on full statement amount (not minimum due) on day after due date. Get this one rule right and the rest of CIBIL discipline follows naturally.
+        </p>
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgBuildingScore />
+        </div>
+      </section>
+
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Match your spend pattern to a card — the self-test</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The persona walkthrough above covers archetypal cases. Many beginners don't fit cleanly into one persona. Use the spend-pattern self-test below to find the best match for your specific transaction mix.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The pattern is: identify the single category that dominates your monthly spend, then pick the card that rewards that category at acceleration rate. Cap binding (covered in detail in our <Link href="/blog/cap-adjusted-cashback-explained" style={{ color: COLOR }}>cap-adjusted cashback</Link> guide) means you only need acceleration on the dominant category; the rest of the spend earns base rate which is similar across most cards.
+        </p>
+        <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
+          <SvgSpendCheck />
+        </div>
+      </section>
+
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Common first-card mistakes that cost real money</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          Five mistakes recur often enough across first-card portfolios to deserve a checklist.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Applying at multiple banks simultaneously.</strong> Each application is a hard pull on CIBIL. Three rejections in 90 days drop the score 25 to 40 points. Apply at one bank only. If rejected, wait 6 months, fix the underlying issue (income proof, CIBIL pattern), and apply at one other bank.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Picking a premium card to "look successful."</strong> The fee economics rarely work for first-time users. A ₹5,000 premium card fee on ₹3 lakh annual spend produces 1.5 to 2 percent net benefit — barely better than a ₹500 fee card on the same spend, while costing ten times the upfront fee.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Buying ULIP-bundled add-ons during onboarding.</strong> Some banks pitch ULIPs and unit-linked products during card-onboarding calls. These are mis-sold investment products with 1.5 to 3 percent annual charges and 5-year lock-ins. Decline politely.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Closing the first card after upgrading.</strong> Reduces credit-history-age and drops CIBIL by 30 to 50 points temporarily. Downgrade instead — most banks support downgrade to a no-fee variant of the same product family. Keep the card open with ₹500 monthly transactions to maintain active status.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          <strong>Auto-debiting minimum due rather than full balance.</strong> The single most common first-card trap. Minimum due autopay protects CIBIL but accumulates interest on remaining balance at 36 to 42 percent APR. Set up full-statement-balance auto-debit instead. Net banking apps from every major bank now offer this option explicitly; switching takes about 2 minutes and saves potentially years of compounding interest leakage if you ever forget a manual payment.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What documentation do you actually need?</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The application paperwork is similar across banks but the small differences matter. Here's the standard list, with notes on what most first-time applicants miss.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>PAN card.</strong> Mandatory; most digital banking apps now check PAN-Aadhaar linkage automatically. If your PAN is unlinked, fix it before applying — banks reject applications with mismatched KYC.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Aadhaar.</strong> Required for KYC and address verification. The address on Aadhaar should match your current residential address. If you've moved cities, update Aadhaar at a UIDAI service centre before applying.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Salary slips and bank statement.</strong> Most banks accept the latest 1 to 3 salary slips plus 3 to 6 months of bank statement showing salary credit. If you've recently changed jobs, your offer letter from the new employer plus 1 month of new-salary credit is usually enough.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Form 16 or ITR.</strong> Optional for first-jobbers but useful if you have it. For self-employed applicants, 2 to 3 years of ITRs are mandatory.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          <strong>Address proof.</strong> Aadhaar usually serves; some banks ask for a recent utility bill or rent agreement as supplementary. Mobile bills work; broadband bills work.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          One under-appreciated detail: applying through your salary-account bank cuts processing time roughly in half. Banks already have your KYC, salary credit history, and address on file — they just need to confirm CIBIL and underwrite the card. HDFC salary account holders typically get HDFC Millennia approved in 2 to 3 days versus 7 to 10 days through a non-relationship application. The same shortcut works at SBI, ICICI, and Axis. If your salary credits to a particular bank, default the first-card application there unless you have a specific reason to apply elsewhere — the friction reduction alone justifies the choice in most cases.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Year 2 onwards — what changes once you have CIBIL</h2>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The first card is mostly about building bureau history, not maximising rewards. Year 2 onwards is when you actually optimise reward earnings — and the toolkit widens dramatically.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          With CIBIL 720 plus and 12 to 15 months of clean payment history, you become eligible for stronger products. Co-brand cards (Tata Neu Plus, Flipkart Axis), specialised cashback (Axis Ace 5 percent on utility, SBI Cashback 5 percent online), entry-tier travel (HDFC Regalia, ICICI Sapphiro at the lower-fee end). The reward differential between a beginner card at 1.5 percent effective and a year-2 second card at 2.5 to 3.0 percent on the same spend is roughly ₹15,000 to ₹30,000 annually.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 14px" }}>
+          The structural advice: don't try to optimise rewards on the first card. Optimise discipline. Reward optimisation is the second-card and third-card decision, not the first-card decision. Treat year one as the credit-history-building investment that unlocks the bigger benefits in year two and beyond.
+        </p>
+        <p style={{ fontSize: 17, margin: "0 0 16px" }}>
+          The patience pays a non-obvious dividend. By year three, with a 740-plus CIBIL and three years of clean tradelines, you'd qualify for premium cards (HDFC Diners Privilege, Axis Atlas, American Express MRCC) that deliver 3.5 to 5 percent effective rate on optimised redemption. Skip the disciplined first-year build and you're stuck on entry-tier cards for several extra years while your CIBIL catches up. The compounding effect over a 10-year card-holding career is roughly ₹2 to 3 lakh of cumulative reward differential between disciplined first-year builders and sloppy first-year revolvers — almost entirely from the gating that strong CIBIL provides into higher-reward products. The first card is the foundation; the optimisation is what you build on top of it later.
+        </p>
+      </section>
+
+      <section style={{ marginBottom: 40 }}>
+        <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 18px" }}>Frequently asked questions</h2>
+        {faq.mainEntity.map((q, i) => (
+          <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "16px 0" }}>
+            <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 600 }}>{q.name}</summary>
+            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </section>
+
+      <section style={{ marginBottom: 36, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
+        <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
+        <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
+          <li style={{ marginBottom: 8 }}><Link href="/blog/how-to-choose-first-credit-card-2026" style={{ color: COLOR }}>How to choose your first credit card in 2026</Link>. Five filters that matter.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/learn/credit-cards/cibil-score-explained" style={{ color: COLOR }}>CIBIL score explained</Link>. How it's calculated and how to improve it.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/best/credit-card-students" style={{ color: COLOR }}>Best credit cards for students</Link>. FD-secured route deep dive.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/best/credit-card-first-salary" style={{ color: COLOR }}>Best credit cards for first salary</Link>. Five filters in priority order.</li>
+          <li><Link href="/learn/credit-cards" style={{ color: COLOR }}>Credit cards knowledge hub</Link>. All our card guides in one place.</li>
         </ul>
-      </div>
+      </section>
+
+      <section style={{ marginBottom: 36, fontSize: 13, color: "var(--text-muted)" }}>
+        <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
+        <ul style={{ paddingLeft: 22, margin: 0 }}>
+          <li style={{ marginBottom: 6 }}>RBI Master Direction on Credit Cards (April 2022) and 2024-25 amendments</li>
+          <li style={{ marginBottom: 6 }}>TransUnion CIBIL guidelines on credit-card reporting and score components</li>
+          <li style={{ marginBottom: 6 }}>Bank tariff pages — Axis, HDFC, ICICI, SBI verified individually April 20, 2026</li>
+          <li>RBI Annual Report 2024-25 — credit card market and bureau statistics</li>
+        </ul>
+      </section>
+
+      <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 22 }}>
+        <p style={{ margin: 0 }}>
+          <strong>Editorial disclaimer.</strong> Card eligibility, fees, reward rates, and welcome benefits described above reflect each issuer's current published terms as of {UPDATED}. Verify on the bank's official tariff page before applying. CIBIL trajectory examples are illustrative based on aggregated bureau patterns; individual scores depend on specific behaviour and bureau-data flow. The personas in this article are composites used for educational illustration, not specific individuals. This article is informational and does not constitute credit advice. Consult a qualified financial planner for personalised guidance.
+        </p>
+            <p style={{ fontSize: 13, color: "var(--text-faint)", marginTop: 4 }}>Source: <a href="https://www.cibil.com/faq" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-text)" }}>www.cibil.com</a></p>
+      </footer>
     </main>
     </>
   );
