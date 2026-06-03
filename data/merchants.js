@@ -51,7 +51,7 @@ export const MERCHANTS = {
         { card: "axis-atlas", rate: "5% + mile transfers", note: "Only Indian card that transfers to airline miles." },
         { card: "hdfc-infinia", rate: "~10% via SmartBuy", note: "Book via SmartBuy for 3X multiplier." },
         { card: "hdfc-regalia", rate: "Up to 13.33% via SmartBuy", note: "Use SmartBuy portal, not direct airline booking." },
-      ], proTip: "Axis Atlas points transfer to Vistara/Air India/Singapore Airlines. If you fly 4+ times a year, this is the card." },
+      ], proTip: "Axis Atlas points transfer to Air India/Singapore Airlines. If you fly 4+ times a year, this is the card." },
     ]
   },
   shopping: {

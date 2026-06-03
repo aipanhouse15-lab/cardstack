@@ -11,10 +11,10 @@ const GUIDES = [
 ];
 
 const BANKS = [
-  { name: "SBI", adv: "8.50%", fee: "0.35% (max ₹10K)", honest: "~9.20%", extra: "₹3.8L" },
-  { name: "HDFC Bank", adv: "8.75%", fee: "0.50% (up to ₹25K)", honest: "~9.45%", extra: "₹5.2L" },
-  { name: "ICICI Bank", adv: "8.65%", fee: "0.50% (negotiable)", honest: "~9.35%", extra: "₹4.7L" },
-  { name: "Axis Bank", adv: "8.70%", fee: "0.50%", honest: "~9.40%", extra: "₹4.9L" },
+  { name: "SBI", adv: "7.25%", fee: "0.35% (max ₹10K)", honest: "~8.05%", extra: "₹2.9L" },
+  { name: "HDFC Bank", adv: "7.75%", fee: "0.50% (up to ₹25K)", honest: "~8.55%", extra: "₹3.8L" },
+  { name: "ICICI Bank", adv: "7.45%", fee: "0.50% (negotiable)", honest: "~8.25%", extra: "₹3.2L" },
+  { name: "Axis Bank", adv: "7.50%", fee: "0.50%", honest: "~8.30%", extra: "₹3.3L" },
   { name: "Kotak", adv: "8.75%", fee: "0.50%", honest: "~9.50%", extra: "₹5.4L" },
 ];
 

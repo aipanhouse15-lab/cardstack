@@ -77,7 +77,7 @@ export default async function OGImage() {
         {/* Stats row */}
         <div style={{ display: "flex", gap: 60, marginTop: "auto" }}>
           {[
-            ["75+", "Cards tracked"],
+            ["76+", "Cards tracked"],
             ["9", "Live tools"],
             ["6", "Categories"],
             ["₹0", "Always free"],

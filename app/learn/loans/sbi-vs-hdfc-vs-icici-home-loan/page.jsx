@@ -17,9 +17,9 @@ export default function Article() {
         <h2 className="text-lg font-extrabold mb-4" style={{ color: "var(--text)" }}>₹50L home loan, 20 years — all three banks</h2>
         <div className="flex flex-col gap-2 text-sm">
           {[
-            ["SBI: advertised 8.50%","Effective ~9.20%",false],
-            ["HDFC Bank: advertised 8.75%","Effective ~9.45%",false],
-            ["ICICI Bank: advertised 8.65%","Effective ~9.35%",false],
+            ["SBI: advertised 7.25%","Effective ~8.05%",false],
+            ["HDFC Bank: advertised 7.75%","Effective ~8.55%",false],
+            ["ICICI Bank: advertised 7.45%","Effective ~8.25%",false],
           ].map(([l,v,neg],i)=>(
             <div key={i} className="flex justify-between items-center">
               <span style={{color:neg?"var(--text-muted)":"var(--text-secondary)"}}>{l}</span>
@@ -37,17 +37,17 @@ export default function Article() {
       <div className="flex flex-col gap-5 text-[15px] leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <div>
           <h2 className="text-lg font-extrabold mb-2" style={{color:"var(--text)"}}>SBI: lowest rate, slowest processing</h2>
-          <p>SBI consistently offers the lowest home loan rates in India because it's government-backed and has the lowest cost of funds. Current rate: 8.50% (EBLR-linked). Processing fee: 0.35% (max ₹10,000 for some schemes). No prepayment penalty on floating rate. The catch: SBI's processing is slower (15–25 days vs 7–10 for private banks), documentation requirements are stricter, and branch experience varies wildly. But on pure math, SBI wins.</p>
+          <p>SBI consistently offers the lowest home loan rates in India because it's government-backed and has the lowest cost of funds. Current rate: 7.25% (EBLR-linked). Processing fee: 0.35% (max ₹10,000 for some schemes). No prepayment penalty on floating rate. The catch: SBI's processing is slower (15–25 days vs 7–10 for private banks), documentation requirements are stricter, and branch experience varies wildly. But on pure math, SBI wins.</p>
         </div>
 
         <div>
           <h2 className="text-lg font-extrabold mb-2" style={{color:"var(--text)"}}>HDFC Bank: premium rate, premium service</h2>
-          <p>HDFC Bank charges a premium (8.75% typical) but offers faster processing (7–10 days), dedicated relationship managers, and the smoothest digital experience. Processing fee: 0.50% (up to ₹25,000). They're also the most aggressive at bundling insurance — expect heavy pushback if you refuse their policy. Effective cost after all fees: highest of the three.</p>
+          <p>HDFC Bank charges a premium (7.75% typical) but offers faster processing (7–10 days), dedicated relationship managers, and the smoothest digital experience. Processing fee: 0.50% (up to ₹25,000). They're also the most aggressive at bundling insurance — expect heavy pushback if you refuse their policy. Effective cost after all fees: highest of the three.</p>
         </div>
 
         <div>
           <h2 className="text-lg font-extrabold mb-2" style={{color:"var(--text)"}}>ICICI Bank: middle ground</h2>
-          <p>ICICI sits between SBI and HDFC on both rate and service. Current rate: 8.65% typical. Processing fee: 0.50% (often negotiable to 0.25% for existing customers). They offer a digital-first application process that's nearly as smooth as HDFC. Pre-approved offers for existing ICICI account holders can get rates 0.1–0.15% lower.</p>
+          <p>ICICI sits between SBI and HDFC on both rate and service. Current rate: 7.45% typical. Processing fee: 0.50% (often negotiable to 0.25% for existing customers). They offer a digital-first application process that's nearly as smooth as HDFC. Pre-approved offers for existing ICICI account holders can get rates 0.1–0.15% lower.</p>
         </div>
 
         <div>

@@ -237,9 +237,9 @@ The real math to focus on: SmartBuy bookings earn 10x points. A ₹50,000 flight
       { name: "Online (apparel, electronics, entertainment)", rate: "5% (cap ₹1500/mo)" },
     ],
     pointsInfo: "10% Swiggy, 5% online, 1% other · ₹1500/mo total cap · Min ₹100 txn",
-    highlights: ["10% on Swiggy", "5% on online shopping", "Fee waiver on ₹2L", "₹500 joining voucher"],
+    highlights: ["⚠️ CLOSED to new applicants (Mar 2026) — see BLCK/ORNGE variants", "10% Swiggy cashback (min ₹249/txn since Apr 17, 2026)", "5% dining", "1% base"],
     pros: ["Best for Swiggy users (10%)", "5% on online categories", "Low fee (waivable)"],
-    cons: ["₹1500/mo total cashback cap", "Fuel/utilities excluded", "Min ₹100 per transaction"],
+    cons: ["CLOSED to new applicants since Mar 12, 2026", "Min ₹249 per Swiggy transaction for 10% (Apr 17, 2026)", "Existing cardholders NOT migrated to BLCK/ORNGE", "Only 1% on non-Swiggy/dining"],
     network: "MC", lounge: "None",
     upcoming: { date: "April 2026", changes: ["10% cashback only on orders ≥₹249", "Card splitting into BLCK (10%) and ORNGE (5%) variants"] },
 
@@ -713,12 +713,12 @@ In practice: ₹500 accelerated cap means optimal bill+food spending is about �
     rewards: { dining: 2, travel: 5, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 2 },
     partnerRates: [
       { name: "Travel bookings", rate: "5 EDGE Miles/₹100 (5%)" },
-      { name: "Airline transfers", rate: "Air India, Vistara, Singapore Airlines, Etihad, Qatar, Accor" },
+      { name: "Airline transfers", rate: "Air India, Air India (merged Nov 2024), Singapore Airlines, Etihad, Qatar, " },
     ],
     pointsInfo: "5 EDGE Miles/₹100 travel (5%), 2 other (2%) · 1 Mile ≈ ₹1 · Transferable to airlines",
-    highlights: ["5% on travel", "Lounge: tier-based (4 intl at Silver, more at higher tiers)", "Airline mile transfers", "Fee waiver ₹10L"],
+    highlights: ["5 EDGE Miles/₹100 on travel (₹2L/mo cap, via Travel EDGE/direct airline/hotel only)", "17 airline/hotel transfer partners (Apr 2026 reshuffle: Qatar/Marriott/Accor removed, BA Avios/Vietnam/Finnair added at 2:1)", "Tier-based lounges (4 intl Silver, more at Gold/Platinum)", "Base 2 EDGE Miles/₹100"],
     pros: ["Best Indian travel rewards card", "Airline mile transfers (6 partners)", "2% on non-travel"],
-    cons: ["₹5K fee", "~3.5% forex markup (no zero forex)", "Fuel excluded"],
+    cons: ["₹5,000 annual fee", "5X travel cap: ₹2L cumulative monthly spend, then drops to base", "New transfer partners (BA Avios, Vietnam, Finnair) at 2:1 ratio — 4× worse than old 1:2", "Qatar Airways, Marriott Bonvoy, Accor removed Apr 2, 2026", "Vistara merged into Air India Nov 2024 — old Club Vistara miles need migration"],
     
     redemptionNote: "1 EDGE Mile ≈ ₹1 (typical). Actual value varies ₹0.80–₹1.50 by airline partner and route. Best value on premium cabin redemptions.",
     network: "Visa Infinite", lounge: "Tier-based (4 intl Silver, 8 intl Gold)",
@@ -726,15 +726,12 @@ In practice: ₹500 accelerated cap means optimal bill+food spending is about �
     editorial: {
   verdict: {
     headline: "India's best dedicated travel rewards card — 5% on travel, airline mile transfers, tier-based lounges.",
-    body: `Axis Atlas is built from the ground up for travelers. 5% on travel bookings, transferable EDGE Miles to 6 airline partners (including Singapore Airlines and Qatar Airways), and tier-based lounge access (4 international at Silver tier, more at Gold/Platinum) make it the most complete travel card available in India.
-
-The 2% base rate on non-travel spending is strong enough that Atlas works as a primary card, not just a travel card. The ₹5,000 annual fee is waivable at ₹10L spend, and the value from airline transfers alone can far exceed this. The main downside is the ~3.5% forex markup — no zero forex means international transactions are penalized.`,
-    idealFor: "Frequent travelers who value airline miles and premium cabin redemptions. If you fly 4+ times a year and are willing to learn the miles game, Atlas delivers exceptional value.",
+    body: `Axis Atlas is built from the ground up for travelers. 5% on travel bookings, transferable EDGE Miles to 6 airline partners (including Singapore Airlines and "Frequent travelers who value airline miles and premium cabin redemptions. If you fly 4+ times a year and are willing to learn the miles game, Atlas delivers exceptional value.",
     skipIf: "You rarely travel or only care about cashback. The miles system requires effort to maximize. For simple cashback, Axis ACE or HDFC Millennia are easier choices.",
   },
   bestFor: [
     { category: "Flight and hotel bookings", reason: "5% on travel is the highest travel rate outside of SmartBuy. Book ₹3L in annual travel and earn 15,000 EDGE Miles (worth ₹15K+ in flights)." },
-    { category: "Airline mile transfers", reason: "Transfer to Air India, Vistara, Singapore Airlines, Etihad, Qatar, Accor. Premium cabin redemptions can give 3-5x value per mile." },
+    { category: "Airline mile transfers", reason: "Transfer to Air India, Air India (merged Nov 2024), Singapore Airlines, Etihad, Qatar, " },
     { category: "All-round spending", reason: "2% base on non-travel is above average. Unlike most travel cards that give 0.5-1% on non-travel, Atlas remains competitive for everyday purchases." },
     { category: "Lounge access", reason: "18 visits/year (comparable to HDFC Regalia) at a similar fee point. Excellent for domestic and international transit." },
   ],
@@ -896,12 +893,12 @@ The domestic reward rate of 0.66% is low, and there's no lounge access. This isn
     
     redemptionNote: "Base rate (0.5%) is for normal spends. Jumps to 2.5% above ₹20K/mo and 5% in birthday month. UPI earns 1%. Effective rate depends on spending pattern.",
     network: "Visa", lounge: "1 domestic/quarter (devalued April 2026)",
-    upcoming: { date: "April 2026", changes: ["Lounge reduced to 1 domestic/quarter", "International lounge removed", "Spend conditions added"] },
+    recentChanges: { date: "April 2026", changes: ["Lounge reduced to 1 domestic/quarter", "International lounge removed", "Spend conditions added"], impact: "Significant downgrade — was 4/quarter with international access" },
 
     editorial: {
   verdict: {
     headline: "A free card with lounge access, zero forex, and a 5% birthday bonus — surprisingly complete for ₹0.",
-    body: `IDFC FIRST Select punches well above its price point (free). Zero forex markup, 4 lounge visits/year (airport + railway), points that never expire, and a 10x birthday month bonus (5%) — all on a lifetime free card. No other free card offers this combination.
+    body: `IDFC FIRST Select punches well above its price point (free). Zero forex markup, 1 domestic lounge/quarter (devalued Apr 2026, intl removed), points that never expire, and a 10x birthday month bonus (5%) — all on a lifetime free card. No other free card offers this combination.
 
 The base rate of 0.5% is low, but the card has several accelerators: 2.5% on spends above ₹20K/month, 1.5% on travel, 1% on UPI, and 5% during your birthday month. If you spend strategically, the effective rate is significantly higher than the base suggests.`,
     idealFor: "Budget-conscious spenders who want lounge access and zero forex without paying an annual fee. Also great for anyone with one high-spending month (put big purchases in your birthday month for 5%).",
@@ -1193,16 +1190,16 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
 // ═══ AXIS BANK ═══
 
   { id: "axis-airtel", name: "Axis Airtel Credit Card", bank: "Axis", img: "📱", color: "#e60012", fee: 500, feeWaiver: "Spend-based", type: "Cashback", verified: false,
-    rewards: { dining: 10, travel: 1, online: 1, groceries: 10, fuel: 0, utilities: 10, entertainment: 1, shopping: 1, default: 1 },
+    rewards: { "Zomato (via app, min ₹499)": "10%", "Blinkit (via app, min ₹499)": "10%", "District Movies (e-comm)": "10%", "Airtel services": "25% (capped at 2× base earned)", "All other spends": "1%" },
     caps: { monthlyCashback: 500, capRate: 10, fallbackRate: 1, capAppliesTo: ["dining", "groceries", "utilities"] },
     partnerRates: [
       { name: "Airtel Thanks app (bills)", rate: "25% cashback" },
       { name: "Zomato/Blinkit/District", rate: "10% value back" },
     ],
     pointsInfo: "25% on Airtel bills, 10% Zomato/Blinkit, 1% other · ₹500/mo cap on accelerated · Cashback card",
-    highlights: ["25% on Airtel bills", "10% on Zomato/Blinkit", "₹500 welcome voucher"],
-    pros: ["Excellent for Airtel users", "10% on food delivery and groceries", "Low fee"],
-    cons: ["Benefits downgraded from April 2026", "Lounge access removed", "Cap limits earning"],
+    highlights: ["10% only on Zomato/Blinkit/District (₹200/mo cap each, min ₹499)", "25% Airtel cashback (spend-tied, not flat)", "1% on everything else", "Lounge discontinued Apr 2026"],
+    pros: ["10% on Zomato/Blinkit orders ≥₹499", "25% on Airtel services (recharges, broadband)", "Low annual fee ₹500"],
+    cons: ["10% limited to only 3 partners (was dining/groceries/utilities)", "₹200/mo cap per 10% partner", "Min order ₹499 for 10% categories", "Lounge access discontinued Apr 12, 2026", "25% Airtel cashback tied to base spend, not flat ₹250"],
     network: "Visa", lounge: "None" },
 
   { id: "axis-cashback", name: "Axis Cashback Credit Card", bank: "Axis", img: "💵", color: "#5b21b6", fee: 1000, feeWaiver: "₹4L annual spend", type: "Cashback", verified: false,
@@ -1238,11 +1235,11 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
       { name: "Oberoi/Trident Hotels", rate: "15% off + complimentary nights" },
     ],
     pointsInfo: "12 pts/₹200 (up to ₹1.5L/mo), 35 pts/₹200 (above ₹1.5L) · 1pt = ₹0.20 catalog · Transferable to airlines at 5:2",
-    highlights: ["Transferable airline miles", "Unlimited lounge access", "₹12,500 welcome benefit", "2% forex markup"],
-    pros: ["Airline mile transfers (20+ partners)", "Unlimited Priority Pass lounge", "Higher rate above ₹1.5L/month spend"],
+    highlights: ["8 intl lounge visits/year (not unlimited)", "17 transfer partners (Qatar/Marriott/Accor removed Apr 2024)", "₹24L income eligibility (was ₹18L)", "₹25L spend waiver"],
+    pros: ["Airline mile transfers (20+ partners)", "8 intl/year Priority Pass lounge", "Higher rate above ₹1.5L/month spend"],
     cons: ["₹12,500 fee", "₹25L spend for waiver", "Many categories excluded from rewards", "Recent devaluations"],
     redemptionNote: "Best value through airline/hotel transfer partners at 5:2 ratio. Catalog redemption at ₹0.20/point gives lower effective rate.",
-    network: "Visa", lounge: "Unlimited" },
+    network: "Visa", lounge: "8 international visits/year (was unlimited pre-2023)" },
 
   { id: "axis-myzone", name: "Axis MyZone Credit Card", bank: "Axis", img: "🎭", color: "#db2777", fee: 500, feeWaiver: "Lifetime free for select channels", type: "Lifestyle", verified: false,
     rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.5 },
@@ -1320,8 +1317,18 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     cons: ["Fee structure unclear", "Cap limits heavy spenders", "Newer card, less verified data"],
     network: "Visa", lounge: "None" },
 
+  { id: "hdfc-swiggy-ornge", name: "HDFC Swiggy ORNGE Credit Card", bank: "HDFC", img: "🧡", color: "#f97316", fee: 499, feeWaiver: "Not specified", type: "Entry", verified: false,
+    rewards: { "Swiggy": "5%", "Dining": "3%", "Online": "1%", "All other": "1%" },
+    partnerRates: [],
+    pointsInfo: "5% Swiggy (min ₹249/txn), 3% dining, 1% everything else · ₹2,500/mo Swiggy cap",
+    highlights: ["5% Swiggy cashback (₹2,500/mo cap, min ₹249/txn)", "3% dining", "Lower fee than BLCK (₹499 vs ₹1,499)", "Swiggy One membership included"],
+    pros: ["5% on Swiggy orders ≥₹249", "Swiggy One included", "Low ₹499 fee"],
+    cons: ["Only 5% vs BLCK's 10%", "₹2,500/mo cap on Swiggy", "Min ₹249 per Swiggy transaction", "1% base on non-Swiggy"],
+    network: "Visa", lounge: "None",
+  },
+
   { id: "hdfc-tata-neu-plus", name: "HDFC Tata Neu Plus Credit Card", bank: "HDFC", img: "🟣", color: "#5b21b6", fee: 499, feeWaiver: "₹1L annual spend", type: "Lifestyle", verified: false,
-    rewards: { dining: 1, travel: 7, online: 1, groceries: 7, fuel: 0, utilities: 1, entertainment: 1, shopping: 7, default: 1 },
+    rewards: { "Tata brands": "2% NeuCoins (5% via NeuPass + Tata Neu app)", "All other spends": "1%", "Bill Pay, Tanishq, cult.fit, Air India, Tata Play": "2% only (NeuPass bonus excluded)" },
     caps: { monthlyCashback: 500, capRate: 7, fallbackRate: 1, capAppliesTo: ["travel", "groceries", "shopping"] },
     partnerRates: [
       { name: "Tata Neu (BigBasket/Croma/Westside)", rate: "Up to 7% NeuCoins" },
@@ -1329,22 +1336,22 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
       { name: "UPI spends", rate: "1% (cap 500 NeuCoins/mo)" },
     ],
     pointsInfo: "7% on Tata Neu brands, 1% on other, 1% on UPI (cap 500/mo) · 1 NeuCoin = ₹1 · RuPay network",
-    highlights: ["7% on Tata ecosystem", "1 NeuCoin = ₹1", "1% on UPI", "₹499 welcome NeuCoins"],
+    highlights: ["2% NeuCoins on Tata brands (5% via NeuPass + Tata Neu app)", "1% on all other spends", "No lounge access", "NeuCoins expire 12 months after issuance"],
     pros: ["Excellent for Tata shoppers (BigBasket, Croma, Westside)", "NeuCoins worth ₹1 each", "UPI rewards rare"],
     cons: ["Rewards locked to Tata Neu ecosystem", "RuPay network (limited acceptance)", "No international lounge"],
     network: "RuPay", lounge: "4/year (conditional)" },
 
   { id: "hdfc-tata-neu-infinity", name: "HDFC Tata Neu Infinity Credit Card", bank: "HDFC", img: "♾️", color: "#4c1d95", fee: 1499, feeWaiver: "₹3L annual spend", type: "Premium", verified: false,
-    rewards: { dining: 1.5, travel: 10, online: 1.5, groceries: 10, fuel: 0, utilities: 1.5, entertainment: 1.5, shopping: 10, default: 1.5 },
+    rewards: { "Tata brands (BigBasket, Croma, Westside, Taj, 1mg)": "5% NeuCoins", "Tata brands via Tata Neu app + NeuPass": "10% NeuCoins (5% base + 5% NeuPass bonus)", "All other spends / merchant EMI / UPI": "1.5%", "Bill Pay, Tanishq, cult.fit, Air India, Tata Play": "5% only (NeuPass bonus excluded since Jan 2025)" },
     partnerRates: [
       { name: "Tata Neu brands", rate: "Up to 10% NeuCoins" },
       { name: "BigBasket/Croma", rate: "Up to 10% NeuCoins" },
       { name: "Air India/IHCL", rate: "Enhanced NeuCoins" },
     ],
     pointsInfo: "Up to 10% on Tata brands, ~1.5% on other · 1 NeuCoin = ₹1 · Premium variant of Tata Neu",
-    highlights: ["10% on Tata ecosystem", "Enhanced lounge access", "Higher caps than Plus variant"],
+    highlights: ["5% NeuCoins on Tata brands (10% only via NeuPass + Tata Neu app)", "1.5% on all other spends", "Lounge: milestone-based — ₹50K/qtr spend → 2 vouchers/qtr (max 8/yr)", "NeuCoins expire 12 months after issuance (since Aug 2025)"],
     pros: ["Highest Tata ecosystem rewards", "Better lounge access than Plus", "NeuCoins worth ₹1 each"],
-    cons: ["Higher fee", "Rewards locked to Tata ecosystem", "Limited verified data"],
+    cons: ["10% requires NeuPass + Tata Neu app payment (not automatic)", "Bill Pay, Tanishq, cult.fit, Air India, Tata Play excluded from 5% NeuPass bonus", "Lounge is milestone-based: need ₹50K/qtr spend (not automatic 8/yr)", "NeuCoins expire after 12 months (since Aug 2025)", "₹1,499 annual fee"],
     network: "RuPay", lounge: "8/year" },
 
   { id: "hdfc-moneyback-plus", name: "HDFC MoneyBack+ Credit Card", bank: "HDFC", img: "💵", color: "#1e40af", fee: 500, feeWaiver: "₹50K annual spend", type: "Entry", verified: false,
@@ -1572,15 +1579,15 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
   // ═══ FEDERAL BANK ═══
 
   { id: "scapia", name: "Scapia Credit Card", bank: "Federal Bank", img: "🚀", color: "#6366f1", fee: 0, feeWaiver: "Lifetime free", type: "Travel", verified: false,
-    rewards: { dining: 2, travel: 2, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 2 },
+    rewards: { "Travel via Scapia app": "4% Scapia Coins (was 5%, reduced Feb 2026)", "All other spends": "2% Scapia Coins", "Utility bills & insurance": "0% (excluded since Feb 2026, don't count toward lounge milestone)" },
     partnerRates: [
       { name: "Scapia Travel", rate: "5% Scapia Coins" },
       { name: "Partner restaurants", rate: "5% Scapia Coins" },
     ],
     pointsInfo: "~2% effective on all spends (10 Scapia Coins/₹100, 5 coins = ₹1) · Zero forex · Unlimited domestic lounge (₹20K/mo spend)",
-    highlights: ["Lifetime free", "~2% on all spends", "2% on everything else", "Zero forex", "Unlimited lounge (with spend criteria)"],
-    pros: ["No fee with excellent rewards", "Zero forex markup", "Decent 2% flat rate", "Unlimited lounge potential"],
-    cons: ["Lounge access requires minimum spend", "Coins redeemable only via Scapia app", "Newer card, less established"],
+    highlights: ["4% on travel via Scapia app (was 5%)", "2% base on regular spends", "Utility bills & insurance excluded from rewards", "Lounge: ₹20K/mo spend milestone", "Lifetime free"],
+    pros: ["Lifetime free — no annual fee ever", "4% on travel (still competitive)", "2% base on all regular spends", "₹50K+ intl flight via app → ₹2,000 back for duty-free/dining (new perk)"],
+    cons: ["Travel rate cut from 5% to 4% (Feb 2026)", "Utility bills and insurance earn 0% AND don't count toward lounge spend milestone", "Rewards only redeemable for travel on Scapia app"],
     network: "Visa", lounge: "Unlimited domestic (₹20K/mo spend req, no intl)" },
 
   // ═══ HSBC ═══
@@ -1733,7 +1740,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     rewards: { dining: 1.25, travel: 2.5, online: 1.25, groceries: 1.25, fuel: 0, utilities: 1.25, entertainment: 1.25, shopping: 1.25, default: 0.75 },
     partnerRates: [],
     pointsInfo: "10 pts/₹100 travel (~2.5%), 5 pts other (~1.25%), 3 pts default (~0.75%) · 20,000 welcome points",
-    highlights: ["2.5% on travel", "Lounge: tier-based (4 intl at Silver, more at higher tiers)", "20,000 welcome points"],
+    highlights: ["⚠️ SC restructuring card business in 2026 — availability uncertain for new applicants", "2.5% on travel", "Lounge: tier-based (4 intl at Silver, more at higher tiers)", "20,000 welcome points"],
     pros: ["Good travel rewards", "Excellent lounge access", "Strong base rate (1.25%)"],
     cons: ["₹4,999 fee", "StanC limited presence in India"],
     network: "Visa", lounge: "18/year" },
@@ -1745,12 +1752,12 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
       { name: "Weekend dining", rate: "5% cashback" },
     ],
     pointsInfo: "5% weekend dining (cap ₹1K/mo), 2% on everything else · Auto-credited · ₹1,000 welcome cashback",
-    highlights: ["5% weekend dining", "2% base cashback", "₹1K/mo cap on dining", "Lounge discontinued (June 2025)"],
+    highlights: ["⚠️ SC restructuring card business in 2026 — availability uncertain for new applicants", "5% weekend dining", "2% base cashback", "₹1K/mo cap on dining", "Lounge discontinued (June 2025)"],
     pros: ["Strong weekend dining rate", "2% base is excellent", "Cashback auto-credited"],
     cons: ["₹1,000/mo cap on dining", "Weekend-only for 5%", "StanC limited presence"],
     network: "Visa", lounge: "4/year" },
 
-  { id: "amex-mrcc", name: "Amex Membership Rewards Credit Card", bank: "Amex", img: "💳", color: "#006fcf", fee: 1000, feeWaiver: "₹1.5L spend (Year 2+: ₹4,500)", type: "Premium", verified: false,
+  { id: "amex-mrcc", name: "Amex Membership Rewards Credit Card", bank: "Amex", img: "💳", color: "#006fcf", fee: 1000, feeWaiver: "₹1.5L spend; Renewal: ₹4,500/year", type: "Premium", verified: false,
     rewards: { dining: 2, travel: 2, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 1 },
     partnerRates: [
       { name: "Taj Hotels", rate: "Up to 20% discount" },
@@ -1759,7 +1766,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     pointsInfo: "2 MR pts/₹50 on select (~2%), 1 pt/₹50 other (~1%) · 1pt = ₹0.20-0.50 · 1,000 bonus pts for 4 txns of ₹1,500+/month · Transferable to hotel/airline partners",
     highlights: ["~2% on broad categories", "Transferable MR points", "Monthly milestone bonus", "₹10K welcome benefit", "Taj hotel discounts"],
     pros: ["Excellent rewards with milestone bonus", "Transferable points to airlines/hotels", "Premium Amex experience"],
-    cons: ["Limited Amex acceptance in India", "₹3,500 joining + ₹5,000 annual from year 2", "Fuel stations rarely accept Amex"],
+    cons: ["₹1,000 joining fee + ₹4,500 annual renewal from year 2", "Points expire after 12 months if not redeemed", "Limited acceptance vs Visa/MC in India"],
     redemptionNote: "MR points best redeemed via hotel/airline transfers (₹0.30-0.50/point). Catalog redemption gives only ₹0.20/point. Monthly milestone of 4 transactions of ₹1,500+ gives 1,000 bonus points.",
     network: "Amex", lounge: "8/year" },
 ];

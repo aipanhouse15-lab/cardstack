@@ -4,7 +4,7 @@ import Link from "next/link";
 const HERO_ITEMS = [
   { icon: "🏦", iconBg: "rgba(251,191,36,0.15)", name: "Fixed deposit", sub: "₹10L, 1 year, 30% bracket", adv: "7.50%", real: "0.15%" },
   { icon: "📈", iconBg: "rgba(96,165,250,0.15)", name: "PPF", sub: "Tax-free, 15yr lock", adv: "7.10%", real: "~2.0%" },
-  { icon: "📊", iconBg: "rgba(22,163,74,0.15)", name: "Debt fund", sub: "Post-2023, slab rate", adv: "7.00%", real: "~1.5%" },
+  { icon: "📊", iconBg: "rgba(22,163,74,0.15)", name: "Debt fund", sub: "Post-2023, slab rate", adv: "6.50%", real: "~1.5%" },
 ];
 
 const QUICK_NAV = [
@@ -23,12 +23,12 @@ const GUIDES = [
 ];
 
 const FD_RATES = [
-  { bank: "SBI", rate: "6.80%", real: "-0.34%", neg: true },
-  { bank: "HDFC Bank", rate: "7.00%", real: "-0.20%", neg: true },
-  { bank: "ICICI Bank", rate: "7.00%", real: "-0.20%", neg: true },
+  { bank: "SBI", rate: "6.25%", real: "-0.85%", neg: true },
+  { bank: "HDFC Bank", rate: "6.50%", real: "-0.20%", neg: true },
+  { bank: "ICICI Bank", rate: "6.50%", real: "-0.20%", neg: true },
   { bank: "IndusInd Bank", rate: "7.75%", real: "+0.33%", neg: false },
-  { bank: "Bajaj Finance", rate: "8.25%", real: "+0.68%", neg: false },
-  { bank: "Unity SFB", rate: "9.00%", real: "+1.20%", neg: false },
+  { bank: "Bajaj Finance", rate: "7.85%", real: "+0.68%", neg: false },
+  { bank: "Unity SFB", rate: "8.50%", real: "+1.20%", neg: false },
 ];
 
 const FAQS = [
