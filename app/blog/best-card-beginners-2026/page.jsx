@@ -5,13 +5,13 @@ import Script from "next/script";
 // Tier 2 Article 3 — Best Credit Card for Beginners 2026
 // URL: /blog/best-card-beginners-2026
 // Category: Credit Cards · Color: Violet #7C3AED
-// Author: Ash K · Reviewed: April 20, 2026
+// Author: Ash K · Reviewed: June 3, 2026
 // Target: 2,500+ visible words · 4 info-SVGs · 6 FAQs
 // Template archetype: Persona Journey
 // ============================================================
 
 const COLOR = "#7C3AED";
-const UPDATED = "April 20, 2026";
+const UPDATED = "June 3, 2026";
 
 const SvgPersonaMatrix = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Beginner persona matrix mapping income bracket and CIBIL band to recommended first credit card" style={{ width: "100%", maxWidth: 760 }}>
@@ -106,7 +106,7 @@ export default function BestCardBeginners2026() {
     description: "Five real personas mapped to first-card recommendations across income, CIBIL, and spend pattern. Detailed first-year math and CIBIL-building behaviour guide for first-time Indian cardholders.",
     author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
     reviewedBy: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-04-20", dateModified: "2026-04-20",
+    datePublished: "2026-04-20", dateModified: "2026-06-03",
     publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/best-card-beginners-2026" }
   };
@@ -399,7 +399,7 @@ export default function BestCardBeginners2026() {
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>RBI Master Direction on Credit Cards (April 2022) and 2024-25 amendments</li>
           <li style={{ marginBottom: 6 }}>TransUnion CIBIL guidelines on credit-card reporting and score components</li>
-          <li style={{ marginBottom: 6 }}>Bank tariff pages — Axis, HDFC, ICICI, SBI verified individually April 20, 2026</li>
+          <li style={{ marginBottom: 6 }}>Bank tariff pages — Axis, HDFC, ICICI, SBI verified individually June 3, 2026</li>
           <li>RBI Annual Report 2024-25 — credit card market and bureau statistics</li>
         </ul>
       </section>

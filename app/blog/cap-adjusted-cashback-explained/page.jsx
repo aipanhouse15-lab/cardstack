@@ -5,13 +5,13 @@ import Script from "next/script";
 // Tier 2 Article 2 — Cap-Adjusted Cashback Explained
 // URL: /blog/cap-adjusted-cashback-explained
 // Category: Credit Cards · Color: Violet #7C3AED
-// Author: Ash K · Reviewed: April 20, 2026
+// Author: Ash K · Reviewed: June 3, 2026
 // Target: 2,500+ visible words · 4 info-SVGs · 6 FAQs
 // Template archetype: Math Walkthrough
 // ============================================================
 
 const COLOR = "#7C3AED";
-const UPDATED = "April 20, 2026";
+const UPDATED = "June 3, 2026";
 
 const SvgCapBinding = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="How a five percent cashback rate effectively becomes 1.5 percent when monthly cap binds at typical household spend levels" style={{ width: "100%", maxWidth: 760 }}>
@@ -107,7 +107,7 @@ export default function CapAdjustedCashbackExplained() {
     description: "How cap binding turns a headline 5% cashback rate into 1.5-2.5% effective return, with the formula, worked examples across five popular cards, and a spend-profile matrix.",
     author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
     reviewedBy: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-04-20", dateModified: "2026-04-20",
+    datePublished: "2026-04-20", dateModified: "2026-06-03",
     publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/cap-adjusted-cashback-explained" }
   };
@@ -392,7 +392,7 @@ export default function CapAdjustedCashbackExplained() {
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>RBI Master Direction on Credit Cards (April 2022) and 2024-25 amendments</li>
-          <li style={{ marginBottom: 6 }}>HDFC Millennia, Axis Ace, SBI Cashback, Amazon Pay ICICI, Flipkart Axis MITC schedules verified April 20, 2026</li>
+          <li style={{ marginBottom: 6 }}>HDFC Millennia, Axis Ace, SBI Cashback, Amazon Pay ICICI, Flipkart Axis MITC schedules verified June 3, 2026</li>
           <li style={{ marginBottom: 6 }}>RBI Annual Report 2024-25 — credit card market statistics and MDR framework</li>
           <li>Card-network publications on interchange fee structures (Visa, Mastercard, RuPay)</li>
         </ul>

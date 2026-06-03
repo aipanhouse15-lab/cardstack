@@ -8,7 +8,7 @@ export default function TermsPage() {
   return (
     <div style={{ maxWidth: 720, margin: "0 auto", padding: "120px 24px 80px" }}>
       <h1 className="text-3xl font-extrabold tracking-tight mb-2" style={{ color: "var(--text)" }}>Terms of Service</h1>
-      <p className="text-sm mb-8" style={{ color: "var(--text-faint)" }}>Last updated: April 2026</p>
+      <p className="text-sm mb-8" style={{ color: "var(--text-faint)" }}>Last updated: June 2026</p>
 
       <div className="prose" style={{ color: "var(--text-secondary)", fontSize: 15, lineHeight: 1.8 }}>
         <h2 className="text-lg font-bold mt-8 mb-3" style={{ color: "var(--text)" }}>What Assure Fintech is</h2>

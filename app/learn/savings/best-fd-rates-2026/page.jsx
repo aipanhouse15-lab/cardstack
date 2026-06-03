@@ -5,13 +5,13 @@ import Script from "next/script";
 // Tier 1 Article 2 — Best FD Rates India April 2026
 // URL: /blog/best-fd-rates-april-2026
 // Category: Savings · Color: Amber #D97706
-// Author: Ash K · Reviewed: April 20, 2026
+// Author: Ash K · Reviewed: June 3, 2026
 // Target: 3,500+ visible words · 4 info-SVGs · 7 FAQs
 // Template archetype: Live Leaderboard
 // ============================================================
 
 const COLOR = "#D97706";
-const UPDATED = "April 20, 2026";
+const UPDATED = "June 3, 2026";
 
 const SvgLeaderboard = () => (
   <svg viewBox="0 0 720 380" role="img" aria-label="April 2026 fixed deposit rate leaderboard ranked by 3-year senior citizen rate across small finance banks NBFCs and major banks" style={{ width: "100%", maxWidth: 760 }}>
@@ -36,7 +36,7 @@ const SvgLeaderboard = () => (
         <text x={328 + b.barW} y="13" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text)">{b.senior.toFixed(2)}%</text>
       </g>
     ))}
-    <text x="20" y="368" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Senior citizen rate shown · 3-year tenure · verified from bank websites on April 20, 2026 · figures change quarterly</text>
+    <text x="20" y="368" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Senior citizen rate shown · 3-year tenure · verified from bank websites on June 3, 2026 · figures change quarterly</text>
   </svg>
 );
 
@@ -131,7 +131,7 @@ export default function BestFdRates2026() {
     description: "Verified leaderboard of fixed deposit rates across small finance banks, NBFCs, and major banks in April 2026, with DICGC framing, post-tax math, and the laddering strategy retirees should actually use.",
     author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
     reviewedBy: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-04-20", dateModified: "2026-04-20",
+    datePublished: "2026-04-20", dateModified: "2026-06-03",
     publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/best-fd-rates-april-2026" }
   };
@@ -192,7 +192,7 @@ export default function BestFdRates2026() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>SAVINGS · TIER 1 GUIDE · LIVE LEADERBOARD APRIL 2026</div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 22px" }}>
-        Direct answer: the highest fixed deposit rate in India as of April 2026 is 9.50% at Unity Small Finance Bank for senior citizens on a 3-year tenure. General rate at the same bank is 9.00%. SBI and HDFC sit at 6.80% to 7.50% for the same tenure. The 200 to 250 basis point gap between SFBs and major banks is real, captured safely up to ₹5 lakh per bank under DICGC insurance. Above the leaderboard table, the article covers DICGC mechanics, post-tax yield, the FD ladder strategy, and the repo-rate cycle that decides whether to lock long now or wait. All rates verified from each bank's website on April 20, 2026.
+        Direct answer: the highest fixed deposit rate in India as of April 2026 is 9.50% at Unity Small Finance Bank for senior citizens on a 3-year tenure. General rate at the same bank is 9.00%. SBI and HDFC sit at 6.80% to 7.50% for the same tenure. The 200 to 250 basis point gap between SFBs and major banks is real, captured safely up to ₹5 lakh per bank under DICGC insurance. Above the leaderboard table, the article covers DICGC mechanics, post-tax yield, the FD ladder strategy, and the repo-rate cycle that decides whether to lock long now or wait. All rates verified from each bank's website on June 3, 2026.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
@@ -211,7 +211,7 @@ export default function BestFdRates2026() {
           Three things shape this leaderboard. The bank's category — Small Finance Bank, NBFC, private bank, or PSU. The DICGC insurance coverage that applies (₹5 lakh per depositor per bank for SFBs and banks; nil for NBFCs). And the senior citizen premium, which most banks add 50 basis points above the general rate, although a few SFBs add 75 bps.
         </p>
         <p style={{ fontSize: 17, margin: "0 0 16px" }}>
-          The rates below are taken from each bank's official tariff page and crossed-checked against the bank's mobile-banking quote screen on April 20, 2026. The leaderboard ranks by 3-year senior rate because that's the most-quoted tenure for retirees and the most rate-sensitive bracket for cycle timing.
+          The rates below are taken from each bank's official tariff page and crossed-checked against the bank's mobile-banking quote screen on June 3, 2026. The leaderboard ranks by 3-year senior rate because that's the most-quoted tenure for retirees and the most rate-sensitive bracket for cycle timing.
         </p>
 
         <div style={{ border: "1px solid var(--border)", borderRadius: 14, padding: 20, background: "var(--bg-soft)" }}>
@@ -445,7 +445,7 @@ export default function BestFdRates2026() {
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>RBI Monetary Policy statements, December 2024 to April 2026</li>
           <li style={{ marginBottom: 6 }}>DICGC Annual Report 2024-25 — coverage rules and payout statistics</li>
-          <li style={{ marginBottom: 6 }}>Bank tariff pages — rates verified individually on April 20, 2026</li>
+          <li style={{ marginBottom: 6 }}>Bank tariff pages — rates verified individually on June 3, 2026</li>
           <li style={{ marginBottom: 6 }}>Section 80TTB and Section 194A of the Income Tax Act 1961</li>
           <li>Department of Posts SCSS official rate notification, FY 25-26</li>
         </ul>

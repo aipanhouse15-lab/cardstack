@@ -282,7 +282,7 @@ export default function OldVsNewClient() {
         <span className="text-xs font-semibold rounded-full px-3 py-1" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)", color: "var(--green)" }}>Tax Guide</span>
         <span className="text-xs" style={{ color: "var(--text-faint)" }}>By <span className="font-semibold" style={{ color: "var(--text-muted)" }}>Ash K</span></span>
         <span className="text-xs" style={{ color: "var(--text-faint)" }}>· 12 min read</span>
-        <span className="text-xs" style={{ color: "var(--text-faint)" }}>· Updated April 2026</span>
+        <span className="text-xs" style={{ color: "var(--text-faint)" }}>· Updated June 2026</span>
       </div>
 
       {/* H1 */}
@@ -478,7 +478,7 @@ export default function OldVsNewClient() {
 
       {/* ─── Footer ─── */}
       <div className="mt-8 text-xs" style={{ color: "var(--text-faint)" }}>
-        <p>Last updated: April 2026 · Tax slabs verified against Budget 2025 (no changes in Budget 2026) · Sources: <a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2098352" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-text)" }}>PIB Budget 2025 press release</a>, <a href="https://incometaxindia.gov.in" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-text)" }}>incometaxindia.gov.in</a></p>
+        <p>Last updated: June 2026 · Tax slabs verified against Budget 2025 (no changes in Budget 2026) · Sources: <a href="https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2098352" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-text)" }}>PIB Budget 2025 press release</a>, <a href="https://incometaxindia.gov.in" target="_blank" rel="noopener noreferrer" style={{ color: "var(--accent-text)" }}>incometaxindia.gov.in</a></p>
       </div>
     </article>
   );

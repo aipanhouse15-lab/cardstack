@@ -5,13 +5,13 @@ import Script from "next/script";
 // Tier 2 Article 1 — Home Loan True Cost 2026
 // URL: /learn/loans/home-loan-true-cost
 // Category: Loans · Color: Blue #2563EB
-// Author: Ash K · Reviewed: April 20, 2026
+// Author: Ash K · Reviewed: June 3, 2026
 // Target: 2,500+ visible words · 4 info-SVGs · 6 FAQs
 // Template archetype: Cost Waterfall
 // ============================================================
 
 const COLOR = "#2563EB";
-const UPDATED = "April 20, 2026";
+const UPDATED = "June 3, 2026";
 
 const SvgWaterfall = () => (
   <svg viewBox="0 0 720 320" role="img" aria-label="Home loan true cost waterfall — headline EMI broken into processing fee stamp duty MOD insurance and lifetime interest layers" style={{ width: "100%", maxWidth: 760 }}>
@@ -110,7 +110,7 @@ export default function HomeLoanTrueCost() {
     description: "Detailed breakdown of all costs in an Indian home loan beyond the headline EMI — processing fees, stamp duty, MOD charges, insurance bundling, pre-EMI interest, and the lifetime interest math.",
     author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
     reviewedBy: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-04-20", dateModified: "2026-04-20",
+    datePublished: "2026-04-20", dateModified: "2026-06-03",
     publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/learn/loans/home-loan-true-cost" }
   };
@@ -395,9 +395,9 @@ export default function HomeLoanTrueCost() {
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>RBI EBLR framework circular, October 2019 — external benchmark linking</li>
           <li style={{ marginBottom: 6 }}>RBI Master Direction on Floating Rate Loans, 2024 amendments</li>
-          <li style={{ marginBottom: 6 }}>State stamp duty schedules — Maharashtra, Karnataka, Delhi (verified April 2026)</li>
+          <li style={{ marginBottom: 6 }}>State stamp duty schedules — Maharashtra, Karnataka, Delhi (verified June 2026)</li>
           <li style={{ marginBottom: 6 }}>Section 24(b), 80C, 80EEA — Income Tax Act 1961 provisions</li>
-          <li>Bank tariff pages — processing fee schedules verified individually on April 20, 2026</li>
+          <li>Bank tariff pages — processing fee schedules verified individually on June 3, 2026</li>
         </ul>
       </section>
 

@@ -5,13 +5,13 @@ import Script from "next/script";
 // Tier 2 Article 5 — Best Credit Card for Freelancers 2026
 // URL: /blog/best-card-freelancers-2026
 // Category: Credit Cards · Color: Violet #7C3AED
-// Author: Ash K · Reviewed: April 20, 2026
+// Author: Ash K · Reviewed: June 3, 2026
 // Target: 2,500+ visible words · 4 info-SVGs · 6 FAQs
 // Template archetype: Income Bracket Playbook
 // ============================================================
 
 const COLOR = "#7C3AED";
-const UPDATED = "April 20, 2026";
+const UPDATED = "June 3, 2026";
 
 const SvgBracketPlaybook = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Freelancer income bracket playbook mapping four ITR-declared income tiers to specific recommended credit cards" style={{ width: "100%", maxWidth: 760 }}>
@@ -111,7 +111,7 @@ export default function BestCardFreelancers2026() {
     description: "How freelancers and self-employed professionals should pick credit cards across four income brackets. Includes GST input credit mechanics, business-vs-personal spend separation, and the underwriting reality of self-employed applications.",
     author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
     reviewedBy: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-04-20", dateModified: "2026-04-20",
+    datePublished: "2026-04-20", dateModified: "2026-06-03",
     publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/best-card-freelancers-2026" }
   };
@@ -398,7 +398,7 @@ export default function BestCardFreelancers2026() {
           <li style={{ marginBottom: 6 }}>RBI Master Direction on Credit Cards (April 2022) and 2024-25 amendments</li>
           <li style={{ marginBottom: 6 }}>GST Act 2017 — input tax credit provisions and GSTR-1, 2A, 3B filing rules</li>
           <li style={{ marginBottom: 6 }}>Section 44ADA, Income Tax Act 1961 — presumptive taxation for professionals</li>
-          <li style={{ marginBottom: 6 }}>American Express Business Card MITC verified April 20, 2026</li>
+          <li style={{ marginBottom: 6 }}>American Express Business Card MITC verified June 3, 2026</li>
           <li>Bank tariff and underwriting policies — HDFC, ICICI, Axis, SBI, Amex verified individually</li>
         </ul>
       </section>

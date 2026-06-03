@@ -137,7 +137,7 @@ export default function LoansClient() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs mb-8" style={{ color: "var(--text-faint)" }}>Rates as of March 2026. Includes processing fee, insurance, and lock-in.</p>
+        <p className="text-xs mb-8" style={{ color: "var(--text-faint)" }}>Rates as of June 2026. Includes processing fee, insurance, and lock-in.</p>
 
         {/* Breakdown */}
         <h2 className="text-lg font-extrabold tracking-tight mb-3" style={{ color: "var(--text)" }}>The math: ₹50L home loan breakdown</h2>

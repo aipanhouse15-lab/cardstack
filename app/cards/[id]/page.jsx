@@ -132,7 +132,7 @@ export default function CardPage({ params }) {
           <div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight" style={{ color: "var(--text)" }}>{card.name}{!/credit card/i.test(card.name) ? " Credit Card" : ""}</h1>
             <p className="text-sm mt-1" style={{ color: "var(--text-muted)" }}>{card.bank} · {card.type} · {card.network}</p>
-            <p className="text-xs mt-2" style={{ color: "var(--text-faint)" }}>By <span className="font-semibold" style={{ color: "var(--text-muted)" }}>Ashutosh</span> · Last updated April 2026</p>
+            <p className="text-xs mt-2" style={{ color: "var(--text-faint)" }}>By <span className="font-semibold" style={{ color: "var(--text-muted)" }}>Ashutosh</span> · Last updated June 2026</p>
           </div>
         </div>
         <div className="flex gap-6 flex-wrap">
@@ -150,7 +150,7 @@ export default function CardPage({ params }) {
           ))}
         </div>
         {card.verified && (
-          <div className="mt-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)", color: "var(--green)" }}>✅ Data verified April 2026</div>
+          <div className="mt-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)", color: "var(--green)" }}>✅ Data verified June 2026</div>
         )}
         {!card.verified && (
           <div className="mt-4 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)", color: "var(--orange)" }}>⚠️ Data being verified</div>

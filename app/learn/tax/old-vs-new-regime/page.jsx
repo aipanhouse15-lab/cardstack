@@ -5,12 +5,12 @@ import Script from "next/script";
 // Tier 1 Article 1 — Old vs New Tax Regime 2026
 // URL: /blog/old-vs-new-tax-regime-2026
 // Category: Tax · Color: Green #16A34A
-// Author: Ash K · Reviewed: April 20, 2026
+// Author: Ash K · Reviewed: June 3, 2026
 // Target: 3,500+ visible words · 4 info-SVGs · 7 FAQs
 // ============================================================
 
 const COLOR = "#16A34A";
-const UPDATED = "April 20, 2026";
+const UPDATED = "June 3, 2026";
 
 const SvgSlabComparison = () => (
   <svg viewBox="0 0 640 280" role="img" aria-label="New regime FY 2025-26 seven-slab structure with 87A rebate band and old regime four-slab structure side by side" style={{ width: "100%", maxWidth: 720 }}>
@@ -126,7 +126,7 @@ export default function OldVsNewTaxRegime2026() {
     description: "Detailed comparison of India's old and new tax regimes for FY 2025-26 after Budget 2025's ₹12L rebate. Includes worked examples, breakeven analysis, and a decision framework.",
     author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
     reviewedBy: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-04-20", dateModified: "2026-04-20",
+    datePublished: "2026-04-20", dateModified: "2026-06-03",
     publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/old-vs-new-tax-regime-2026" }
   };
