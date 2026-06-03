@@ -119,6 +119,14 @@ const SvgDeductionStack = () => (
   </svg>
 );
 
+
+export const metadata = {
+  title: "Old vs New Tax Regime 2026: Which Actually Saves You More Tax?",
+  description: "Budget 2025 makes ₹12.75L tax-free under new regime. But if your deductions exceed ₹3.75L, old regime wins. We calculated the breakeven at every income level from ₹8L to ₹25L.",
+  alternates: { canonical: "/learn/tax/old-vs-new-regime" },
+  openGraph: { title: "Old vs New Tax Regime 2026: Which Actually Saves You More Tax?", description: "Budget 2025 makes ₹12.75L tax-free under new regime. But if your deductions exceed ₹3.75L, old regime wins. We calculated the breakeven at every income level from ₹8L to ₹25L.", type: "article" },
+};
+
 export default function OldVsNewTaxRegime2026() {
   const article = {
     "@context": "https://schema.org", "@type": "Article",

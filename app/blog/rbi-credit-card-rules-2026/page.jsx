@@ -127,6 +127,23 @@ const SvgRulesGrid = () => (
   </svg>
 );
 
+
+export const metadata = {
+  title: "7 RBI Credit Card Rules Your Bank Hopes You Never Read (2026)",
+  description: "Your bank must close your card in 7 days, can\'t charge you without consent, and owes you ₹100/day for delayed disputes. Most Indians don\'t know these RBI rules exist. Here are all 7 with exact clause numbers.",
+  alternates: { canonical: "/blog/rbi-credit-card-rules-2026" },
+  openGraph: {
+    title: "7 RBI Credit Card Rules Your Bank Hopes You Never Read",
+    description: "Card closure in 7 days, no unsolicited upgrades, ₹100/day penalty for delayed disputes. The rules that protect you — with exact RBI clause numbers.",
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "7 RBI Credit Card Rules Your Bank Hopes You Never Read",
+    description: "Card closure in 7 days, no unsolicited upgrades, ₹100/day penalty for delayed disputes.",
+  },
+};
+
 export default function RbiCreditCardRules2026() {
   const article = {
     "@context": "https://schema.org", "@type": "Article",

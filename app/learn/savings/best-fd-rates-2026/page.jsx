@@ -124,6 +124,14 @@ const SvgPostTaxWaterfall = () => (
   </svg>
 );
 
+
+export const metadata = {
+  title: "Best FD Rates in India (June 2026): 25 Banks Compared — Real Returns After Tax",
+  description: "Your 7.5% FD returns 0.15% after tax and inflation. We compared 25 banks — SBI, HDFC, ICICI, Unity SFB. Only 3 beat inflation. Bank-by-bank rates + post-tax math inside.",
+  alternates: { canonical: "/learn/savings/best-fd-rates-2026" },
+  openGraph: { title: "Best FD Rates in India (June 2026): 25 Banks Compared — Real Returns After Tax", description: "Your 7.5% FD returns 0.15% after tax and inflation. We compared 25 banks — SBI, HDFC, ICICI, Unity SFB. Only 3 beat inflation. Bank-by-bank rates + post-tax math inside.", type: "article" },
+};
+
 export default function BestFdRates2026() {
   const article = {
     "@context": "https://schema.org", "@type": "Article",
