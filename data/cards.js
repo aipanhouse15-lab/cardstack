@@ -726,12 +726,15 @@ In practice: ₹500 accelerated cap means optimal bill+food spending is about �
     editorial: {
   verdict: {
     headline: "India's best dedicated travel rewards card — 5% on travel, airline mile transfers, tier-based lounges.",
-    body: `Axis Atlas is built from the ground up for travelers. 5% on travel bookings, transferable EDGE Miles to 6 airline partners (including Singapore Airlines and "Frequent travelers who value airline miles and premium cabin redemptions. If you fly 4+ times a year and are willing to learn the miles game, Atlas delivers exceptional value.",
+    body: `Axis Atlas is built for travelers. 5 EDGE Miles per \u20b9100 on travel (capped at \u20b92L/month cumulative), transferable to 17 airline and hotel partners. The April 2026 reshuffle removed Qatar Airways, Marriott Bonvoy, and Accor, replacing them with British Airways Avios, Vietnam Airlines, and Finnair at a worse 2:1 transfer ratio.
+
+The 2% base rate on non-travel spending keeps it competitive for everyday use. But the \u20b95,000 annual fee means you need consistent travel spending to justify it. If you fly 4+ times a year and are willing to learn the miles game, Atlas delivers strong value.`,
+    idealFor: "Frequent travelers who value airline miles and premium cabin redemptions. If you fly 4+ times a year, Atlas delivers exceptional value.",
     skipIf: "You rarely travel or only care about cashback. The miles system requires effort to maximize. For simple cashback, Axis ACE or HDFC Millennia are easier choices.",
   },
   bestFor: [
     { category: "Flight and hotel bookings", reason: "5% on travel is the highest travel rate outside of SmartBuy. Book ₹3L in annual travel and earn 15,000 EDGE Miles (worth ₹15K+ in flights)." },
-    { category: "Airline mile transfers", reason: "Transfer to Air India, Air India (merged Nov 2024), Singapore Airlines, Etihad, Qatar, " },
+    { category: "Airline mile transfers", reason: "Transfer to Air India (incl. merged Vistara routes), Singapore Airlines, Etihad, British Airways Avios, and 12 more partners." },
     { category: "All-round spending", reason: "2% base on non-travel is above average. Unlike most travel cards that give 0.5-1% on non-travel, Atlas remains competitive for everyday purchases." },
     { category: "Lounge access", reason: "18 visits/year (comparable to HDFC Regalia) at a similar fee point. Excellent for domestic and international transit." },
   ],
