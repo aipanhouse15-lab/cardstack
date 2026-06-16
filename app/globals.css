@@ -487,6 +487,7 @@ footer { border-top: 1px solid var(--hair); background: #0A090D; padding: 70px 0
 .final p { margin: 24px auto 44px; color: var(--mut); max-width: 420px; }
 
 /* ── ARTICLE CONTENT SPACING ── */
+main section { padding: 0; margin-bottom: 16px; }
 main p { margin: 0 0 12px; }
 main p:last-child { margin-bottom: 0; }
 main h2 { margin: 0 0 12px; }
