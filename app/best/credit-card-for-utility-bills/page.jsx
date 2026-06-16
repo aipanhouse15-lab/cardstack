@@ -76,15 +76,15 @@ function MDRExplainerDiagram() {
     >
       <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Why Utility Rewards Are Rare: The MDR Problem</text>
-      <rect x="20" y="44" width="140" height="56" rx="8" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.2" />
+      <rect x="20" y="44" width="140" height="56" rx="8" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.2" />
       <text x="90" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>Normal Purchase</text>
       <text x="90" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">MDR: 1.5-2.5%</text>
       <text x="90" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Bank earns ₹25 per ₹1,000</text>
-      <rect x="270" y="44" width="140" height="56" rx="8" fill="var(--raise)" opacity="0.1" stroke="#f59e0b" strokeWidth="1.2" />
+      <rect x="270" y="44" width="140" height="56" rx="8" fill="var(--raise)" opacity="0.25" stroke="#f59e0b" strokeWidth="1.2" />
       <text x="340" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill="#f59e0b">Utility via BBPS</text>
       <text x="340" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">MDR: 0-0.5% (capped)</text>
       <text x="340" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Bank earns ₹0-5 per ₹1,000</text>
-      <rect x="520" y="44" width="140" height="56" rx="8" fill="var(--raise)" opacity="0.1" stroke="#ef4444" strokeWidth="1.2" />
+      <rect x="520" y="44" width="140" height="56" rx="8" fill="var(--raise)" opacity="0.25" stroke="#ef4444" strokeWidth="1.2" />
       <text x="590" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill="#ef4444">Reward Rate Needed</text>
       <text x="590" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">5% on ₹1,000 = ₹50</text>
       <text x="590" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">But bank earns only ₹5</text>
@@ -178,12 +178,12 @@ function UtilityStackDiagram() {
     >
       <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Optimal Two-Card Stack for Utility-Heavy Households</text>
-      <rect x="30" y="44" width="270" height="80" rx="10" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5" />
+      <rect x="30" y="44" width="270" height="80" rx="10" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" />
       <text x="165" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Card 1: Axis ACE (₹499/yr)</text>
       <text x="165" y="84" textAnchor="middle" fontSize="10.5" fill="var(--text)">Electricity, water, broadband</text>
       <text x="165" y="100" textAnchor="middle" fontSize="10.5" fill="var(--text)">Mobile recharge, LPG bills</text>
       <text x="165" y="116" textAnchor="middle" fontSize="10.5" fontWeight="700" fill={COLOR}>Earn 5% cashback</text>
-      <rect x="380" y="44" width="270" height="80" rx="10" fill="#0891b2" opacity="0.1" stroke="#0891b2" strokeWidth="1.5" />
+      <rect x="380" y="44" width="270" height="80" rx="10" fill="#0891b2" opacity="0.25" stroke="#0891b2" strokeWidth="1.5" />
       <text x="515" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill="#0891b2">Card 2: Amazon Pay ICICI (Free)</text>
       <text x="515" y="84" textAnchor="middle" fontSize="10.5" fill="var(--text)">Online shopping, Amazon purchases</text>
       <text x="515" y="100" textAnchor="middle" fontSize="10.5" fill="var(--text)">Amazon Pay merchant bills</text>

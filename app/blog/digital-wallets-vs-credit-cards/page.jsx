@@ -53,13 +53,13 @@ const SvgWalletLimits = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="RBI wallet limits: KYC vs non-KYC transaction and balance caps" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">RBI Wallet Limits (June 2026)</text>
-    <rect x="30" y="45" width="300" height="130" rx="8" fill={COLOR} opacity="0.08" stroke={COLOR} strokeWidth="1.5" />
+    <rect x="30" y="45" width="300" height="130" rx="8" fill={COLOR} opacity="0.22" stroke={COLOR} strokeWidth="1.5" />
     <text x="180" y="68" textAnchor="middle" fontSize="13" fontWeight="700" fill={COLOR}>Full KYC Wallet</text>
     <text x="180" y="92" textAnchor="middle" fontSize="12" fill="var(--text)">Balance limit: ₹2,00,000</text>
     <text x="180" y="112" textAnchor="middle" fontSize="12" fill="var(--text)">Monthly credit: ₹2,00,000</text>
     <text x="180" y="132" textAnchor="middle" fontSize="12" fill="var(--text)">Transfer to bank: Yes</text>
     <text x="180" y="152" textAnchor="middle" fontSize="12" fill="var(--text)">Merchant payments: Yes</text>
-    <rect x="390" y="45" width="300" height="130" rx="8" fill="#94a3b8" opacity="0.1" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="390" y="45" width="300" height="130" rx="8" fill="#94a3b8" opacity="0.25" stroke="var(--border)" strokeWidth="1.5" />
     <text x="540" y="68" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Non-KYC / Min KYC</text>
     <text x="540" y="92" textAnchor="middle" fontSize="12" fill="var(--text)">Balance limit: ₹10,000</text>
     <text x="540" y="112" textAnchor="middle" fontSize="12" fill="var(--text)">Monthly credit: ₹10,000</text>
@@ -129,13 +129,13 @@ const SvgFraudProtection = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Fraud protection comparison: RBI zero liability for credit cards, limited for wallets" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Fraud Protection: What RBI Actually Guarantees</text>
-    <rect x="30" y="44" width="310" height="120" rx="8" fill="#16a34a" opacity="0.08" stroke="#16a34a" strokeWidth="1.5" />
+    <rect x="30" y="44" width="310" height="120" rx="8" fill="#16a34a" opacity="0.22" stroke="#16a34a" strokeWidth="1.5" />
     <text x="185" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="#16a34a">Credit Card</text>
     <text x="185" y="90" textAnchor="middle" fontSize="11" fill="var(--text)">RBI Circular RBI/2017-18/15: zero liability</text>
     <text x="185" y="108" textAnchor="middle" fontSize="11" fill="var(--text)">if fraud reported within 3 working days</text>
     <text x="185" y="126" textAnchor="middle" fontSize="11" fill="var(--text)">Bank must resolve within 90 days</text>
     <text x="185" y="150" textAnchor="middle" fontSize="11" fill="var(--text)">Chargeback rights via Visa/Mastercard</text>
-    <rect x="380" y="44" width="310" height="120" rx="8" fill="#dc2626" opacity="0.08" stroke="#dc2626" strokeWidth="1.5" />
+    <rect x="380" y="44" width="310" height="120" rx="8" fill="#dc2626" opacity="0.22" stroke="#dc2626" strokeWidth="1.5" />
     <text x="535" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="#dc2626">Digital Wallet</text>
     <text x="535" y="90" textAnchor="middle" fontSize="11" fill="var(--text)">No equivalent RBI zero-liability mandate</text>
     <text x="535" y="108" textAnchor="middle" fontSize="11" fill="var(--text)">Covered by wallet provider's own policy</text>
@@ -148,17 +148,17 @@ const SvgRuPayUPI = () => (
   <svg viewBox="0 0 720 170" role="img" aria-label="RuPay credit card on UPI: the best of both worlds for small transactions" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">RuPay Credit Card on UPI: Where It Actually Works</text>
-    <rect x="30" y="44" width="200" height="100" rx="8" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5" />
+    <rect x="30" y="44" width="200" height="100" rx="8" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" />
     <text x="130" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>What Works</text>
     <text x="130" y="88" textAnchor="middle" fontSize="11" fill="var(--text)">HDFC MoneyBack+ RuPay</text>
     <text x="130" y="106" textAnchor="middle" fontSize="11" fill="var(--text)">IDFC FIRST RuPay Select</text>
     <text x="130" y="124" textAnchor="middle" fontSize="11" fill="var(--text)">SBI Cashback RuPay</text>
-    <rect x="260" y="44" width="200" height="100" rx="8" fill="#16a34a" opacity="0.08" stroke="#16a34a" strokeWidth="1.5" />
+    <rect x="260" y="44" width="200" height="100" rx="8" fill="#16a34a" opacity="0.22" stroke="#16a34a" strokeWidth="1.5" />
     <text x="360" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="#16a34a">Reward on UPI Txn</text>
     <text x="360" y="88" textAnchor="middle" fontSize="11" fill="var(--text)">Full card reward rate earned</text>
     <text x="360" y="106" textAnchor="middle" fontSize="11" fill="var(--text)">Scan and pay at any UPI QR</text>
     <text x="360" y="124" textAnchor="middle" fontSize="11" fill="var(--text)">Credit card billing cycle applies</text>
-    <rect x="490" y="44" width="200" height="100" rx="8" fill="#dc2626" opacity="0.08" stroke="#dc2626" strokeWidth="1.5" />
+    <rect x="490" y="44" width="200" height="100" rx="8" fill="#dc2626" opacity="0.22" stroke="#dc2626" strokeWidth="1.5" />
     <text x="590" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="#dc2626">Gaps to Know</text>
     <text x="590" y="88" textAnchor="middle" fontSize="11" fill="var(--text)">Only RuPay network cards work</text>
     <text x="590" y="106" textAnchor="middle" fontSize="11" fill="var(--text)">Visa/MC credit not allowed on UPI</text>

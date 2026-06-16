@@ -487,9 +487,12 @@ footer { border-top: 1px solid var(--hair); background: #0A090D; padding: 70px 0
 .final p { margin: 24px auto 44px; color: var(--mut); max-width: 420px; }
 
 /* ── ARTICLE CONTENT SPACING ── */
-main section { margin: 0 0 18px !important; }
-main p { margin: 0 0 12px !important; }
+main { display: flex !important; flex-direction: column !important; gap: 0 !important; }
+main > * { margin: 0 !important; padding-top: 0 !important; }
+main section { margin: 0 0 16px !important; }
+main p { margin: 0 0 10px !important; }
 main p:last-child { margin-bottom: 0 !important; }
-main h2 { margin: 0 0 12px !important; }
-main h3 { margin: 14px 0 8px !important; }
-main svg { margin: 14px 0 !important; display: block; }
+main h2 { margin: 0 0 10px !important; }
+main h3 { margin: 12px 0 6px !important; }
+main svg { margin: 12px 0 !important; display: block !important; }
+main nav { margin-bottom: 12px !important; }

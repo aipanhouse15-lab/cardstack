@@ -130,14 +130,14 @@ const SvgDowngradeVsClose = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Comparison of downgrading versus closing a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Downgrade vs. Close — What Happens to Your Credit Score</text>
-    <rect x="36" y="52" width="308" height="130" rx="6" fill="#16a34a" opacity="0.08" />
+    <rect x="36" y="52" width="308" height="130" rx="6" fill="#16a34a" opacity="0.22" />
     <text x="190" y="78" textAnchor="middle" fontSize="14" fontWeight="700" fill="#16a34a">Downgrade Card</text>
     <text x="190" y="98" textAnchor="middle" fontSize="12" fill="var(--text)">Credit age: Preserved</text>
     <text x="190" y="116" textAnchor="middle" fontSize="12" fill="var(--text)">Credit limit: May reduce slightly</text>
     <text x="190" y="134" textAnchor="middle" fontSize="12" fill="var(--text)">Annual fee: ₹0-500 (no-fee variant)</text>
     <text x="190" y="152" textAnchor="middle" fontSize="12" fill="var(--text)">CIBIL impact: Neutral or slight positive</text>
     <text x="190" y="170" textAnchor="middle" fontSize="11" fill="var(--text-muted)">e.g., Regalia to Millennia, Magnus to Neo</text>
-    <rect x="376" y="52" width="308" height="130" rx="6" fill="#dc2626" opacity="0.08" />
+    <rect x="376" y="52" width="308" height="130" rx="6" fill="#dc2626" opacity="0.22" />
     <text x="530" y="78" textAnchor="middle" fontSize="14" fontWeight="700" fill="#dc2626">Close Card</text>
     <text x="530" y="98" textAnchor="middle" fontSize="12" fill="var(--text)">Credit age: Reduced (hurts score)</text>
     <text x="530" y="116" textAnchor="middle" fontSize="12" fill="var(--text)">Credit limit: Lost permanently</text>

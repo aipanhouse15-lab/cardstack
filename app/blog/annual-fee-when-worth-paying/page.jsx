@@ -169,7 +169,7 @@ const SvgDecisionTree = () => (
     <line x1="500" y1="128" x2="620" y2="180" stroke="var(--text-muted)" strokeWidth="1.5" />
     <text x="140" y="172" textAnchor="middle" fontSize="11" fill="#dc2626">No</text>
     <text x="580" y="172" textAnchor="middle" fontSize="11" fill="#16a34a">Yes</text>
-    <rect x="20" y="180" width="200" height="36" rx="8" fill="#dc2626" opacity="0.1" stroke="#dc2626" strokeWidth="1.5" />
+    <rect x="20" y="180" width="200" height="36" rx="8" fill="#dc2626" opacity="0.25" stroke="#dc2626" strokeWidth="1.5" />
     <text x="120" y="200" textAnchor="middle" fontSize="12" fontWeight="600" fill="#dc2626">Skip. Use free card.</text>
     <text x="120" y="216" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Net negative position</text>
     <rect x="500" y="180" width="200" height="36" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
@@ -181,7 +181,7 @@ const SvgDecisionTree = () => (
     <rect x="280" y="246" width="180" height="36" rx="8" fill={COLOR} opacity="0.12" stroke={COLOR} strokeWidth="1.5" />
     <text x="370" y="262" textAnchor="middle" fontSize="12" fontWeight="600" fill={COLOR}>Borderline. Re-check</text>
     <text x="370" y="278" textAnchor="middle" fontSize="10" fill="var(--text-muted)">benefits utilisation plan</text>
-    <rect x="540" y="246" width="160" height="36" rx="8" fill="#16a34a" opacity="0.1" stroke="#16a34a" strokeWidth="1.5" />
+    <rect x="540" y="246" width="160" height="36" rx="8" fill="#16a34a" opacity="0.25" stroke="#16a34a" strokeWidth="1.5" />
     <text x="620" y="262" textAnchor="middle" fontSize="12" fontWeight="600" fill="#16a34a">Fee card wins.</text>
     <text x="620" y="278" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Apply with confidence</text>
   </svg>

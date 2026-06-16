@@ -24,7 +24,7 @@ const UPDATED = "June 4, 2026";
 
 const IconPremium = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Premium credit card for high income earners">
-    <rect x="4" y="10" width="40" height="28" rx="6" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="2"/>
+    <rect x="4" y="10" width="40" height="28" rx="6" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="2"/>
     <rect x="4" y="18" width="40" height="7" fill={GOLD} opacity="0.15"/>
     <circle cx="36" cy="30" r="4" fill={GOLD} opacity="0.4"/>
     <circle cx="40" cy="30" r="4" fill={GOLD} opacity="0.7"/>
@@ -53,7 +53,7 @@ const IconKey = () => (
 
 const IconCheck = () => (
   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit included">
-    <circle cx="9" cy="9" r="8" fill={COLOR} opacity="0.1"/>
+    <circle cx="9" cy="9" r="8" fill={COLOR} opacity="0.25"/>
     <path d="M5 9.5L8 12L13 6" stroke={COLOR} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );

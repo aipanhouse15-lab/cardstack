@@ -149,7 +149,7 @@ const SvgWhenToUseWhich = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Decision guide: when to use credit card vs debit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Quick Decision Guide</text>
-    <rect x="20" y="38" width="330" height="148" rx="8" fill={COLOR} opacity="0.08" />
+    <rect x="20" y="38" width="330" height="148" rx="8" fill={COLOR} opacity="0.22" />
     <rect x="370" y="38" width="330" height="148" rx="8" fill="var(--raise)" />
     <text x="185" y="58" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Use Credit Card When...</text>
     <text x="535" y="58" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text-muted)">Use Debit Card When...</text>

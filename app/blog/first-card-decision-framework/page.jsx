@@ -31,10 +31,10 @@ const SvgDecisionTree = () => (
     <line x1="440" y1="90" x2="540" y2="130" stroke="var(--border)" strokeWidth="1.5" />
     <text x="220" y="122" fontSize="11" fill="#dc2626">No</text>
     <text x="488" y="122" fontSize="11" fill="#16a34a">Yes</text>
-    <rect x="80" y="130" width="200" height="60" rx="6" fill="#dc2626" opacity="0.1" />
+    <rect x="80" y="130" width="200" height="60" rx="6" fill="#dc2626" opacity="0.25" />
     <text x="180" y="157" textAnchor="middle" fontSize="12" fontWeight="700" fill="#dc2626">Do NOT get a credit card yet</text>
     <text x="180" y="176" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Build savings first</text>
-    <rect x="440" y="130" width="200" height="40" rx="6" fill="#7c3aed" opacity="0.1" />
+    <rect x="440" y="130" width="200" height="40" rx="6" fill="#7c3aed" opacity="0.25" />
     <text x="540" y="155" textAnchor="middle" fontSize="12" fontWeight="700" fill="#7c3aed">Monthly income?</text>
     <line x1="460" y1="170" x2="340" y2="220" stroke="var(--border)" strokeWidth="1.5" />
     <line x1="540" y1="170" x2="540" y2="220" stroke="var(--border)" strokeWidth="1.5" />
@@ -42,21 +42,21 @@ const SvgDecisionTree = () => (
     <text x="390" y="210" fontSize="10" fill="var(--text-muted)">Under ₹25K</text>
     <text x="520" y="210" fontSize="10" fill="var(--text-muted)">₹25K-1L</text>
     <text x="630" y="210" fontSize="10" fill="var(--text-muted)">Over ₹1L</text>
-    <rect x="240" y="220" width="196" height="56" rx="6" fill="#0891b2" opacity="0.1" />
+    <rect x="240" y="220" width="196" height="56" rx="6" fill="#0891b2" opacity="0.25" />
     <text x="338" y="246" textAnchor="middle" fontSize="12" fontWeight="700" fill="#0891b2">Student/Secured Card</text>
     <text x="338" y="264" textAnchor="middle" fontSize="11" fill="var(--text-muted)">SBI Student Plus, FD-backed</text>
-    <rect x="440" y="220" width="196" height="56" rx="6" fill="#7c3aed" opacity="0.1" />
+    <rect x="440" y="220" width="196" height="56" rx="6" fill="#7c3aed" opacity="0.25" />
     <text x="538" y="246" textAnchor="middle" fontSize="12" fontWeight="700" fill="#7c3aed">Amazon ICICI / Axis Ace</text>
     <text x="538" y="264" textAnchor="middle" fontSize="11" fill="var(--text-muted)">SBI SimplySAVE also works</text>
-    <rect x="640" y="220" width="60" height="56" rx="6" fill="#16a34a" opacity="0.1" />
+    <rect x="640" y="220" width="60" height="56" rx="6" fill="#16a34a" opacity="0.25" />
     <text x="670" y="246" textAnchor="middle" fontSize="11" fontWeight="700" fill="#16a34a">Regalia</text>
     <text x="670" y="264" textAnchor="middle" fontSize="10" fill="var(--text-muted)">or Magnus</text>
     <line x1="338" y1="276" x2="338" y2="316" stroke="var(--border)" strokeWidth="1.5" />
     <line x1="538" y1="276" x2="538" y2="316" stroke="var(--border)" strokeWidth="1.5" />
-    <rect x="240" y="316" width="196" height="46" rx="6" fill="#0891b2" opacity="0.08" />
+    <rect x="240" y="316" width="196" height="46" rx="6" fill="#0891b2" opacity="0.22" />
     <text x="338" y="341" textAnchor="middle" fontSize="11" fill="var(--text)">Upgrade in 12 months</text>
     <text x="338" y="355" textAnchor="middle" fontSize="10" fill="var(--text-muted)">with good CIBIL history</text>
-    <rect x="440" y="316" width="196" height="46" rx="6" fill="#7c3aed" opacity="0.08" />
+    <rect x="440" y="316" width="196" height="46" rx="6" fill="#7c3aed" opacity="0.22" />
     <text x="538" y="341" textAnchor="middle" fontSize="11" fill="var(--text)">Upgrade to Regalia at ₹50K+</text>
     <text x="538" y="355" textAnchor="middle" fontSize="10" fill="var(--text-muted)">income or 2 years good history</text>
   </svg>

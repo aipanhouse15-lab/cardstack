@@ -77,13 +77,13 @@ function FeeWaiverMathDiagram() {
     >
       <rect width="680" height="180" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Axis ACE Fee Waiver: Easier Than You Think</text>
-      <rect x="20" y="42" width="196" height="100" rx="10" fill={COLOR} opacity="0.08" stroke={COLOR} strokeWidth="1.5" />
+      <rect x="20" y="42" width="196" height="100" rx="10" fill={COLOR} opacity="0.22" stroke={COLOR} strokeWidth="1.5" />
       <text x="118" y="64" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Annual Fee</text>
       <text x="118" y="84" textAnchor="middle" fontSize="28" fontWeight="800" fill={COLOR}>₹499</text>
       <text x="118" y="104" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Charged every card year</text>
       <text x="118" y="120" textAnchor="middle" fontSize="11" fill="var(--text-muted)">unless waiver condition met</text>
       <text x="230" y="95" fontSize="22" fill="var(--text-muted)" textAnchor="middle">→</text>
-      <rect x="245" y="42" width="196" height="100" rx="10" fill="var(--raise)" opacity="0.08" stroke="#f59e0b" strokeWidth="1.5" />
+      <rect x="245" y="42" width="196" height="100" rx="10" fill="var(--raise)" opacity="0.22" stroke="#f59e0b" strokeWidth="1.5" />
       <text x="343" y="64" textAnchor="middle" fontSize="12" fontWeight="700" fill="#f59e0b">Waiver Condition</text>
       <text x="343" y="84" textAnchor="middle" fontSize="20" fontWeight="800" fill="#f59e0b">₹2,00,000</text>
       <text x="343" y="104" textAnchor="middle" fontSize="11" fill="var(--text-muted)">annual spend on the card</text>

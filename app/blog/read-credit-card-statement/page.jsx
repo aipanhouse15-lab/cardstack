@@ -25,7 +25,7 @@ const SvgStatementAnatomy = () => (
   <svg viewBox="0 0 720 300" role="img" aria-label="Annotated credit card statement showing key sections and their meaning" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="300" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Your Credit Card Statement: What Each Section Actually Means</text>
-    <rect x="20" y="38" width="680" height="52" rx="6" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5" />
+    <rect x="20" y="38" width="680" height="52" rx="6" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" />
     <text x="36" y="58" fontSize="12" fontWeight="700" fill={COLOR}>STATEMENT SUMMARY</text>
     <text x="36" y="76" fontSize="11" fill="var(--text-muted)">Statement Date: 15 May 2026  |  Payment Due Date: 5 Jun 2026  |  Credit Limit: ₹1,50,000</text>
     <rect x="20" y="100" width="220" height="70" rx="6" fill="var(--raise)" stroke="#ca8a04" strokeWidth="1" />

@@ -51,7 +51,7 @@ const SvgInterestFreePeriod = () => (
     <rect x="24" y="42" width="120" height="100" rx="6" fill="var(--border)" opacity="0.3" />
     <text x="84" y="78" textAnchor="middle" fontSize="10" fontWeight="700" fill="var(--text)">Statement</text>
     <text x="84" y="94" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Date</text>
-    <rect x="174" y="42" width="200" height="100" rx="6" fill={COLOR} opacity="0.08" />
+    <rect x="174" y="42" width="200" height="100" rx="6" fill={COLOR} opacity="0.22" />
     <text x="274" y="78" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>14 days minimum</text>
     <text x="274" y="96" textAnchor="middle" fontSize="10" fill="var(--text-muted)">RBI mandated interest-free</text>
     <text x="274" y="112" textAnchor="middle" fontSize="10" fill="var(--text-muted)">window from statement date</text>
@@ -93,7 +93,7 @@ const SvgTokenisation = () => (
     <text x="124" y="108" textAnchor="middle" fontSize="10" fill="var(--text-muted)">actual 16-digit card number</text>
     <text x="124" y="124" textAnchor="middle" fontSize="10" fill="#ef4444">Risk: data breach = card fraud</text>
     <polygon points="234,99 254,90 254,108" fill={COLOR} opacity="0.6" />
-    <rect x="264" y="44" width="200" height="110" rx="8" fill={COLOR} opacity="0.08" />
+    <rect x="264" y="44" width="200" height="110" rx="8" fill={COLOR} opacity="0.22" />
     <text x="364" y="70" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>After Tokenisation</text>
     <text x="364" y="92" textAnchor="middle" fontSize="10" fill="var(--text)">Merchant stores a token</text>
     <text x="364" y="108" textAnchor="middle" fontSize="10" fill="var(--text)">(random string, useless alone)</text>

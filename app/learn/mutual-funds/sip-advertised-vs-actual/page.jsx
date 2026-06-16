@@ -87,14 +87,14 @@ const SvgInflationAdjusted = () => (
 const SvgStepUpSIP = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Step-up SIP versus flat SIP comparison showing that increasing SIP by 10 percent annually creates significantly more wealth than a flat SIP over 15 years" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">STEP-UP SIP vs FLAT SIP · ₹10,000 STARTING · 12% RETURN · 15 YEARS</text>
-    <rect x="20" y="40" width="310" height="150" fill="#dc2626" rx="8" opacity="0.08" stroke="#dc2626" strokeWidth="1" />
+    <rect x="20" y="40" width="310" height="150" fill="#dc2626" rx="8" opacity="0.22" stroke="#dc2626" strokeWidth="1" />
     <text x="175" y="66" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#dc2626">FLAT SIP: ₹10,000/month</text>
     <text x="175" y="90" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Total invested: ₹18L</text>
     <text x="175" y="110" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill="#dc2626">₹50.4L</text>
     <text x="175" y="135" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">at 15 years</text>
     <text x="175" y="160" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Real value (inflation adj): ₹24.2L</text>
     <text x="175" y="180" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">SIP at Year 15 still: ₹10,000</text>
-    <rect x="390" y="40" width="310" height="150" fill={COLOR} rx="8" opacity="0.08" stroke={COLOR} strokeWidth="1" />
+    <rect x="390" y="40" width="310" height="150" fill={COLOR} rx="8" opacity="0.22" stroke={COLOR} strokeWidth="1" />
     <text x="545" y="66" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>STEP-UP: 10% annual increase</text>
     <text x="545" y="90" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Total invested: ₹38.5L</text>
     <text x="545" y="110" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill={COLOR}>₹1.16Cr</text>

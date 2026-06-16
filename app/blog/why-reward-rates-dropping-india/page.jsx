@@ -51,12 +51,12 @@ const SvgAtlasDevaluation = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Axis Atlas credit card reward rate devaluation timeline April 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Axis Atlas April 2026 Devaluation — The 50% Travel Reward Cut</text>
-    <rect x="36" y="54" width="308" height="100" rx="6" fill="#16a34a" opacity="0.1" />
+    <rect x="36" y="54" width="308" height="100" rx="6" fill="#16a34a" opacity="0.25" />
     <text x="190" y="80" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Before April 2026</text>
     <text x="190" y="104" textAnchor="middle" fontSize="13" fill="var(--text)">Transfer ratio: 2 EDGE Miles</text>
     <text x="190" y="122" textAnchor="middle" fontSize="13" fill="var(--text)">= 1 airline mile</text>
     <text x="190" y="144" textAnchor="middle" fontSize="15" fontWeight="700" fill="#16a34a">Effective rate: 5% on travel</text>
-    <rect x="376" y="54" width="308" height="100" rx="6" fill="#dc2626" opacity="0.1" />
+    <rect x="376" y="54" width="308" height="100" rx="6" fill="#dc2626" opacity="0.25" />
     <text x="530" y="80" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">After April 2026</text>
     <text x="530" y="104" textAnchor="middle" fontSize="13" fill="var(--text)">Transfer ratio: 4 EDGE Miles</text>
     <text x="530" y="122" textAnchor="middle" fontSize="13" fill="var(--text)">= 1 airline mile</text>
@@ -154,13 +154,13 @@ const SvgCashbackVsPoints = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Comparison of cashback and reward points stability in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Cashback vs Reward Points — Devaluation Risk Compared</text>
-    <rect x="36" y="52" width="308" height="110" rx="6" fill="#16a34a" opacity="0.08" />
+    <rect x="36" y="52" width="308" height="110" rx="6" fill="#16a34a" opacity="0.22" />
     <text x="190" y="78" textAnchor="middle" fontSize="14" fontWeight="700" fill="#16a34a">Cashback</text>
     <text x="190" y="100" textAnchor="middle" fontSize="12" fill="var(--text)">Value: Fixed at face value (₹1 = ₹1)</text>
     <text x="190" y="118" textAnchor="middle" fontSize="12" fill="var(--text)">Devaluation risk: Low (requires fee change)</text>
     <text x="190" y="136" textAnchor="middle" fontSize="12" fill="var(--text)">Expiry: Usually none or 12 months</text>
     <text x="190" y="154" textAnchor="middle" fontSize="12" fill="#16a34a" fontWeight="600">Best for: simplicity, safety</text>
-    <rect x="376" y="52" width="308" height="110" rx="6" fill="var(--raise)" opacity="0.08" />
+    <rect x="376" y="52" width="308" height="110" rx="6" fill="var(--raise)" opacity="0.22" />
     <text x="530" y="78" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ea580c">Reward Points</text>
     <text x="530" y="100" textAnchor="middle" fontSize="12" fill="var(--text)">Value: Variable (bank decides redemption rate)</text>
     <text x="530" y="118" textAnchor="middle" fontSize="12" fill="var(--text)">Devaluation risk: High (can change without notice)</text>

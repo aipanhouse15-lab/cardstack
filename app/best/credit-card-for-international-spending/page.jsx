@@ -106,7 +106,7 @@ function DCCWarningDiagram() {
       <text x="95" y="71" textAnchor="middle" fontSize="11" fontWeight="700" fill="#ef4444">Pay in INR</text>
       <text x="95" y="87" textAnchor="middle" fontSize="10" fill="var(--text-muted)">(DCC chosen)</text>
       <text x="198" y="79" fontSize="20" fill="var(--text-muted)">→</text>
-      <rect x="215" y="50" width="170" height="50" rx="8" fill="var(--raise)" opacity="0.08" />
+      <rect x="215" y="50" width="170" height="50" rx="8" fill="var(--raise)" opacity="0.22" />
       <text x="300" y="71" textAnchor="middle" fontSize="10.5" fill="var(--text)">Merchant converts at</text>
       <text x="300" y="85" textAnchor="middle" fontSize="10.5" fill="#ef4444" fontWeight="700">their rate (1-3% markup)</text>
       <text x="402" y="79" fontSize="20" fill="var(--text-muted)">→</text>
@@ -118,7 +118,7 @@ function DCCWarningDiagram() {
       <text x="95" y="151" textAnchor="middle" fontSize="11" fontWeight="700" fill="#22c55e">Pay in local currency</text>
       <text x="95" y="167" textAnchor="middle" fontSize="10" fill="var(--text-muted)">(correct choice)</text>
       <text x="198" y="159" fontSize="20" fill="var(--text-muted)">→</text>
-      <rect x="215" y="130" width="170" height="50" rx="8" fill="#22c55e" opacity="0.08" />
+      <rect x="215" y="130" width="170" height="50" rx="8" fill="#22c55e" opacity="0.22" />
       <text x="300" y="151" textAnchor="middle" fontSize="10.5" fill="var(--text)">Your bank converts at</text>
       <text x="300" y="165" textAnchor="middle" fontSize="10.5" fill="#22c55e" fontWeight="700">interbank + your markup</text>
       <text x="402" y="159" fontSize="20" fill="var(--text-muted)">→</text>

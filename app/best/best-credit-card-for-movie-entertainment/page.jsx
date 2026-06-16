@@ -42,7 +42,7 @@ const IconTicket = () => (
 const IconBogo = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Buy-one-get-one BOGO offer">
     <rect x="2" y="8" width="11" height="14" rx="2" fill={COLOR} opacity="0.3" stroke={COLOR} strokeWidth="1.5"/>
-    <rect x="15" y="8" width="11" height="14" rx="2" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5" strokeDasharray="3 2"/>
+    <rect x="15" y="8" width="11" height="14" rx="2" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" strokeDasharray="3 2"/>
     <text x="5" y="18" fontSize="6" fill={COLOR} fontWeight="800">PAY</text>
     <text x="17.5" y="18" fontSize="6" fill={COLOR} fontWeight="800">FREE</text>
   </svg>

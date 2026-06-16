@@ -166,13 +166,13 @@ const SvgClosingOrder = () => (
     <text x="270" y="104" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Removes least</text>
     <text x="270" y="120" textAnchor="middle" fontSize="10" fill="var(--text-muted)">available credit</text>
     <text x="270" y="140" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Utilisation hit minimal</text>
-    <rect x="370" y="44" width="140" height="110" rx="8" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5" />
+    <rect x="370" y="44" width="140" height="110" rx="8" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" />
     <text x="440" y="66" textAnchor="middle" fontSize="22" fontWeight="800" fill={COLOR}>Never</text>
     <text x="440" y="86" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">Oldest card</text>
     <text x="440" y="104" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Destroys credit age</text>
     <text x="440" y="120" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Biggest score drop</text>
     <text x="440" y="140" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Worst-case scenario</text>
-    <rect x="540" y="44" width="150" height="110" rx="8" fill={COLOR} opacity="0.08" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="540" y="44" width="150" height="110" rx="8" fill={COLOR} opacity="0.22" stroke="var(--border)" strokeWidth="1.5" />
     <text x="615" y="66" textAnchor="middle" fontSize="22" fontWeight="800" fill="var(--text-muted)">Avoid</text>
     <text x="615" y="86" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">High-limit card</text>
     <text x="615" y="104" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Spikes utilisation</text>
@@ -194,7 +194,7 @@ const SvgDecisionTree = () => (
     <line x1="505" y1="124" x2="620" y2="170" stroke="var(--text-muted)" strokeWidth="1.5" />
     <text x="118" y="162" textAnchor="middle" fontSize="11" fill="#16a34a">Yes</text>
     <text x="570" y="162" textAnchor="middle" fontSize="11" fill={COLOR}>No</text>
-    <rect x="20" y="170" width="200" height="40" rx="8" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5" />
+    <rect x="20" y="170" width="200" height="40" rx="8" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" />
     <text x="120" y="188" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Do NOT close.</text>
     <text x="120" y="204" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Protect your score for loan</text>
     <rect x="500" y="170" width="200" height="36" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
@@ -203,7 +203,7 @@ const SvgDecisionTree = () => (
     <line x1="700" y1="188" x2="660" y2="234" stroke="var(--text-muted)" strokeWidth="1.5" />
     <text x="432" y="226" textAnchor="middle" fontSize="11" fill={COLOR}>No fee</text>
     <text x="688" y="226" textAnchor="middle" fontSize="11" fill={COLOR}>Yes, fee</text>
-    <rect x="270" y="234" width="200" height="40" rx="8" fill="#16a34a" opacity="0.1" stroke="#16a34a" strokeWidth="1.5" />
+    <rect x="270" y="234" width="200" height="40" rx="8" fill="#16a34a" opacity="0.25" stroke="#16a34a" strokeWidth="1.5" />
     <text x="370" y="252" textAnchor="middle" fontSize="12" fontWeight="700" fill="#16a34a">Keep it. Zero cost.</text>
     <text x="370" y="268" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Stop using, don't close</text>
     <rect x="520" y="234" width="180" height="40" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />

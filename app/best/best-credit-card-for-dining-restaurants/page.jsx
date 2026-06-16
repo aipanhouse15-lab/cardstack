@@ -33,13 +33,13 @@ function DiningVsDeliveryExplainer() {
     >
       <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Dining vs Delivery: Different MCCs, Different Rewards</text>
-      <rect x="20" y="42" width="290" height="100" rx="10" fill={COLOR} opacity="0.08" stroke={COLOR} strokeWidth="1.5" />
+      <rect x="20" y="42" width="290" height="100" rx="10" fill={COLOR} opacity="0.22" stroke={COLOR} strokeWidth="1.5" />
       <text x="165" y="64" textAnchor="middle" fontSize="13" fontWeight="700" fill={COLOR}>Restaurant Dining</text>
       <text x="165" y="82" textAnchor="middle" fontSize="11" fill="var(--text)">MCC 5812 (Eating Places)</text>
       <text x="165" y="98" textAnchor="middle" fontSize="11" fill="var(--text)">You swipe at the restaurant table</text>
       <text x="165" y="114" textAnchor="middle" fontSize="11" fill="var(--text)">Card earns "dining" category reward</text>
       <text x="165" y="130" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>HSBC Live+: 10%, BOB Eterna: 3.75%</text>
-      <rect x="370" y="42" width="290" height="100" rx="10" fill="#6366f1" opacity="0.08" stroke="#6366f1" strokeWidth="1.5" />
+      <rect x="370" y="42" width="290" height="100" rx="10" fill="#6366f1" opacity="0.22" stroke="#6366f1" strokeWidth="1.5" />
       <text x="515" y="64" textAnchor="middle" fontSize="13" fontWeight="700" fill="#6366f1">Food Delivery Apps</text>
       <text x="515" y="82" textAnchor="middle" fontSize="11" fill="var(--text)">MCC varies (Swiggy: often 5411/5812)</text>
       <text x="515" y="98" textAnchor="middle" fontSize="11" fill="var(--text)">You pay via app to aggregator</text>
@@ -148,7 +148,7 @@ function WeekendDiningBonusCalc() {
       <text x="170" y="104" textAnchor="middle" fontSize="11" fill="var(--text-muted)">1 Reward Point per ₹100</text>
       <text x="170" y="120" textAnchor="middle" fontSize="11" fill="var(--text-muted)">(post-category multiplier)</text>
       <text x="170" y="136" textAnchor="middle" fontSize="10" fill="var(--text-muted)">₹499 annual fee waivable at ₹1L</text>
-      <rect x="370" y="42" width="280" height="100" rx="10" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5" />
+      <rect x="370" y="42" width="280" height="100" rx="10" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" />
       <text x="510" y="64" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Weekend Dining (Fri-Sun)</text>
       <text x="510" y="84" textAnchor="middle" fontSize="22" fontWeight="800" fill={COLOR}>5X Points</text>
       <text x="510" y="104" textAnchor="middle" fontSize="11" fill="var(--text)">Effectively 2.5% on dining</text>

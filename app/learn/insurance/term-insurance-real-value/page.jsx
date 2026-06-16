@@ -97,14 +97,14 @@ const SvgRiderMatrix = () => (
 const SvgULIPvsTerm = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="ULIP versus pure term insurance total cost comparison over 20 years showing that buying term plus investing separately creates significantly more wealth" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ULIP vs TERM + INVEST · ₹1CR COVER · 30-YEAR-OLD · 20-YEAR HORIZON</text>
-    <rect x="20" y="38" width="320" height="140" fill="#dc2626" rx="8" opacity="0.1" stroke="#dc2626" strokeWidth="1" />
+    <rect x="20" y="38" width="320" height="140" fill="#dc2626" rx="8" opacity="0.25" stroke="#dc2626" strokeWidth="1" />
     <text x="180" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#dc2626">ULIP (₹1CR cover)</text>
     <text x="180" y="84" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">Annual premium: ₹80,000</text>
     <text x="180" y="102" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">Total paid over 20 yrs: ₹16L</text>
     <text x="180" y="120" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">Charges/mortality: ₹4-5L</text>
     <text x="180" y="138" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">Net invested in fund: ~₹11L</text>
     <text x="180" y="158" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="#dc2626">Approx fund value: ₹35-45L</text>
-    <rect x="380" y="38" width="320" height="140" fill="#16a34a" rx="8" opacity="0.1" stroke="#16a34a" strokeWidth="1" />
+    <rect x="380" y="38" width="320" height="140" fill="#16a34a" rx="8" opacity="0.25" stroke="#16a34a" strokeWidth="1" />
     <text x="540" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#16a34a">TERM + ELSS SIP</text>
     <text x="540" y="84" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">Term premium: ₹10,200/yr</text>
     <text x="540" y="102" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">ELSS SIP: ₹69,800/yr (balance)</text>

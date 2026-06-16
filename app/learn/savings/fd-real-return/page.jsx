@@ -109,12 +109,12 @@ const SvgFDvsInflation10yr = () => (
 const SvgWhenFDMakesSense = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="When fixed deposits make sense versus when they don't based on time horizon tax slab and financial goals" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHEN FD ACTUALLY MAKES SENSE · HONEST ASSESSMENT</text>
-    <rect x="20" y="38" width="340" height="140" fill="#16a34a" rx="8" opacity="0.08" stroke="#16a34a" strokeWidth="1" />
+    <rect x="20" y="38" width="340" height="140" fill="#16a34a" rx="8" opacity="0.22" stroke="#16a34a" strokeWidth="1" />
     <text x="190" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#16a34a">FD MAKES SENSE WHEN...</text>
     {["Horizon is under 2-3 years (short goal)", "Emergency fund: safety over returns", "Nil or 5% tax slab (low income earner)", "Senior citizens: 80TTB + higher rates", "Capital preservation is the only goal"].map((t, i) => (
       <text key={t} x="30" y={82 + i * 22} fontFamily="system-ui" fontSize="11" fill="var(--text)">✓ {t}</text>
     ))}
-    <rect x="380" y="38" width="320" height="140" fill="#dc2626" rx="8" opacity="0.08" stroke="#dc2626" strokeWidth="1" />
+    <rect x="380" y="38" width="320" height="140" fill="#dc2626" rx="8" opacity="0.22" stroke="#dc2626" strokeWidth="1" />
     <text x="540" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#dc2626">FD IS WRONG WHEN...</text>
     {["30% tax slab — real return near zero", "10+ year horizon — equity beats FD 3:1", "Goal is wealth creation, not preservation", "Inflation hedging is needed", "NRE FD is unavailable (or wrong tenure)"].map((t, i) => (
       <text key={t} x="390" y={82 + i * 22} fontFamily="system-ui" fontSize="11" fill="var(--text)">✗ {t}</text>

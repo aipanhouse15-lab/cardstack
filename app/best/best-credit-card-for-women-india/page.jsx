@@ -22,7 +22,7 @@ const UPDATED = "June 4, 2026";
 
 const IconSpark = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Best credit card for women India">
-    <circle cx="24" cy="24" r="18" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.8"/>
+    <circle cx="24" cy="24" r="18" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.8"/>
     <path d="M24 10L26.5 20.5L37 24L26.5 27.5L24 38L21.5 27.5L11 24L21.5 20.5L24 10Z" fill={COLOR} opacity="0.8"/>
   </svg>
 );

@@ -68,7 +68,7 @@ function AmazonPayICICIBreakdown() {
         { category: "All other spends", rate: "1%", color: "var(--border)", note: "1% on every other transaction. No exclusion list." },
       ].map((r, i) => (
         <g key={i}>
-          <rect x="16" y={42 + i * 46} width="648" height="42" rx="6" fill={r.color} opacity="0.08" stroke={r.color === "var(--border)" ? "var(--border)" : r.color} strokeWidth="1" strokeOpacity="0.4" />
+          <rect x="16" y={42 + i * 46} width="648" height="42" rx="6" fill={r.color} opacity="0.22" stroke={r.color === "var(--border)" ? "var(--border)" : r.color} strokeWidth="1" strokeOpacity="0.4" />
           <text x="28" y={68 + i * 46} fontSize="12" fontWeight="700" fill="var(--text)">{r.category}</text>
           <text x="490" y={60 + i * 46} fontSize="22" fontWeight="800" fill={r.color === "var(--border)" ? "var(--text-muted)" : r.color}>{r.rate}</text>
           <text x="28" y={80 + i * 46} fontSize="10" fill="var(--text-muted)">{r.note}</text>

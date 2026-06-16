@@ -30,7 +30,7 @@ const SvgHRAFormula = () => (
       { label: "C) Rent paid minus 10% of (Basic + DA)", formula: "Annual rent paid — 10% × (Basic + DA) annual", color: "#7c3aed" },
     ].map(({ label, formula, color }, i) => (
       <g key={label}>
-        <rect x="20" y={45 + i * 54} width="680" height="42" fill={color} rx="6" opacity="0.1" stroke={color} strokeWidth="1" />
+        <rect x="20" y={45 + i * 54} width="680" height="42" fill={color} rx="6" opacity="0.25" stroke={color} strokeWidth="1" />
         <text x="30" y={64 + i * 54} fontFamily="system-ui" fontSize="13" fontWeight="700" fill={color}>{label}</text>
         <text x="30" y={80 + i * 54} fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">{formula}</text>
       </g>
@@ -67,7 +67,7 @@ const SvgCityExamples = () => (
       },
     ].map(({ name, basic, hra, rent, a, b, c, exempt, tax30, color }, i) => (
       <g key={name}>
-        <rect x="20" y={38 + i * 78} width="680" height="70" fill={color} rx="6" opacity={i % 2 === 0 ? 0.06 : 0.04} stroke={color} strokeWidth="1" />
+        <rect x="20" y={38 + i * 78} width="680" height="70" fill={color} rx="6" opacity={i % 2 === 0 ? 0.2 : 0.15} stroke={color} strokeWidth="1" />
         <text x="30" y={55 + i * 78} fontFamily="system-ui" fontSize="12" fontWeight="700" fill={color}>{name}</text>
         <text x="30" y={70 + i * 78} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Basic: {basic} · HRA from employer: {hra} · Rent paid: {rent}</text>
         <text x="30" y={84 + i * 78} fontFamily="system-ui" fontSize="10" fill="var(--text)">A: {a} · B: {b} · C: {c}</text>

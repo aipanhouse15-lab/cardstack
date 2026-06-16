@@ -128,7 +128,7 @@ const SvgRuPayUpiOpportunity = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="RuPay credit card on UPI possibility and impact on rewards landscape" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">RuPay Credit on UPI: Game Changer or False Dawn?</text>
-    <rect x="24" y="44" width="672" height="50" rx="6" fill={COLOR} opacity="0.08" />
+    <rect x="24" y="44" width="672" height="50" rx="6" fill={COLOR} opacity="0.22" />
     <text x="360" y="66" textAnchor="middle" fontSize="12" fontWeight="600" fill={COLOR}>The Promise: Earn credit card rewards on UPI transactions</text>
     <text x="360" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">RuPay credit cards linked to UPI apps allow payment from a credit line. If rewards attach, the UPI vs card divide collapses.</text>
     <text x="36" y="114" fontSize="10" fontWeight="700" fill={COLOR}>The opportunity:</text>
@@ -146,7 +146,7 @@ const SvgMaximizeNow = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Strategies to maximise credit card rewards now before further devaluation" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Maximise Now: What to Do Before the Next Devaluation</text>
-    <rect x="24" y="40" width="672" height="24" rx="5" fill={COLOR} opacity="0.06" />
+    <rect x="24" y="40" width="672" height="24" rx="5" fill={COLOR} opacity="0.2" />
     <circle cx="42" cy="52" r="9" fill={COLOR} opacity="0.2" />
     <text x="42" y="56" textAnchor="middle" fontSize="10" fontWeight="700" fill={COLOR}>1</text>
     <text x="60" y="52" fontSize="11" fontWeight="600" fill="var(--text)">Burn points actively:</text>
@@ -155,7 +155,7 @@ const SvgMaximizeNow = () => (
     <text x="42" y="88" textAnchor="middle" fontSize="10" fontWeight="700" fill={COLOR}>2</text>
     <text x="60" y="84" fontSize="11" fontWeight="600" fill="var(--text)">Prioritise no-expiry cards:</text>
     <text x="240" y="84" fontSize="11" fill="var(--text-muted)">Axis EDGE Miles have lifetime option. HDFC points expire in 2 years. Prefer cards where points stay.</text>
-    <rect x="24" y="104" width="672" height="24" rx="5" fill={COLOR} opacity="0.06" />
+    <rect x="24" y="104" width="672" height="24" rx="5" fill={COLOR} opacity="0.2" />
     <circle cx="42" cy="116" r="9" fill={COLOR} opacity="0.2" />
     <text x="42" y="120" textAnchor="middle" fontSize="10" fontWeight="700" fill={COLOR}>3</text>
     <text x="60" y="116" fontSize="11" fontWeight="600" fill="var(--text)">Avoid single-app co-brands:</text>
@@ -191,7 +191,7 @@ const SvgHonestForecast = () => (
   <svg viewBox="0 0 720 140" role="img" aria-label="Honest forecast for credit card rewards in India over the next five years" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="140" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">The Honest Forecast: Rewards in 2028 and Beyond</text>
-    <rect x="24" y="44" width="672" height="80" rx="8" fill={COLOR} opacity="0.06" />
+    <rect x="24" y="44" width="672" height="80" rx="8" fill={COLOR} opacity="0.2" />
     <text x="42" y="66" fontSize="11" fill="var(--text)">Rewards will continue declining, not recovering. UPI volume growth, MDR sensitivity, lounge overcrowding, and ONDC disruption</text>
     <text x="42" y="84" fontSize="11" fill="var(--text)">all point in one direction. No mechanism makes rewards more generous at system level unless MDR rises (politically unlikely)</text>
     <text x="42" y="102" fontSize="11" fill="var(--text)">or RuPay credit on UPI creates new interchange economics. Right strategy: treat rewards as a bonus, not an income source.</text>

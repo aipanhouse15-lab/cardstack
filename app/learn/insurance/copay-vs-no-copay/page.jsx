@@ -47,13 +47,13 @@ const SvgCopayMath = () => (
 const SvgPremiumDifference = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Premium comparison between policy with 10 percent copay and policy with no copay showing annual premium savings and cumulative savings over 10 years" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">PREMIUM DIFFERENCE · WITH vs WITHOUT COPAY · ₹5L SI · AGE 62</text>
-    <rect x="20" y="40" width="300" height="120" fill={COLOR} rx="8" opacity="0.1" stroke={COLOR} strokeWidth="1" />
+    <rect x="20" y="40" width="300" height="120" fill={COLOR} rx="8" opacity="0.25" stroke={COLOR} strokeWidth="1" />
     <text x="170" y="64" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>WITH 10% COPAY</text>
     <text x="170" y="88" textAnchor="middle" fontFamily="system-ui" fontSize="18" fontWeight="800" fill={COLOR}>₹34,000/yr</text>
     <text x="170" y="110" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">Senior citizen policy</text>
     <text x="170" y="128" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">with 10-20% copay built in</text>
     <text x="170" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="#16a34a">Saves: ₹8,000/yr premium</text>
-    <rect x="400" y="40" width="300" height="120" fill="#16a34a" rx="8" opacity="0.1" stroke="#16a34a" strokeWidth="1" />
+    <rect x="400" y="40" width="300" height="120" fill="#16a34a" rx="8" opacity="0.25" stroke="#16a34a" strokeWidth="1" />
     <text x="550" y="64" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#16a34a">NO COPAY</text>
     <text x="550" y="88" textAnchor="middle" fontFamily="system-ui" fontSize="18" fontWeight="800" fill="#16a34a">₹42,000/yr</text>
     <text x="550" y="110" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">Full coverage, insurer</text>

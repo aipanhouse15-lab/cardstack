@@ -50,7 +50,7 @@ const IconCalendar = () => (
 
 const IconRupee = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rupee cost indicator">
-    <circle cx="14" cy="14" r="12" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5"/>
+    <circle cx="14" cy="14" r="12" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5"/>
     <text x="9" y="19" fontSize="13" fill={COLOR} fontWeight="700">₹</text>
   </svg>
 );

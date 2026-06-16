@@ -113,7 +113,7 @@ const SvgMilestoneTrap = () => (
     <text x="375" y="108" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Typical milestone threshold</text>
     <text x="375" y="130" textAnchor="middle" fontSize="26" fontWeight="800" fill="#dc2626">₹75,000</text>
     <text x="375" y="152" textAnchor="middle" fontSize="11" fill="var(--text-muted)">per quarter (advertised bonus)</text>
-    <rect x="504" y="80" width="210" height="90" rx="6" fill="#dc2626" opacity="0.06" />
+    <rect x="504" y="80" width="210" height="90" rx="6" fill="#dc2626" opacity="0.2" />
     <text x="609" y="108" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Gap to bridge</text>
     <text x="609" y="130" textAnchor="middle" fontSize="26" fontWeight="800" fill="#dc2626">4x</text>
     <text x="609" y="152" textAnchor="middle" fontSize="11" fill="var(--text-muted)">more than most people spend</text>

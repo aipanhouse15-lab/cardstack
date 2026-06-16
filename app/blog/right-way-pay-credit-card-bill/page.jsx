@@ -25,14 +25,14 @@ const SvgFullVsMinimumDue = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Comparison of paying full amount versus minimum due on a credit card over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Full Amount vs Minimum Due — 12-Month Scenario (₹50,000 balance)</text>
-    <rect x="36" y="54" width="308" height="140" rx="6" fill="#0891b2" opacity="0.08" />
+    <rect x="36" y="54" width="308" height="140" rx="6" fill="#0891b2" opacity="0.22" />
     <text x="190" y="80" textAnchor="middle" fontSize="14" fontWeight="700" fill="#0891b2">Pay Full Amount Monthly</text>
     <text x="190" y="104" textAnchor="middle" fontSize="13" fill="var(--text)">Interest paid: ₹0</text>
     <text x="190" y="124" textAnchor="middle" fontSize="13" fill="var(--text)">GST on interest: ₹0</text>
     <text x="190" y="144" textAnchor="middle" fontSize="13" fill="var(--text)">Rewards earned: Kept in full</text>
     <text x="190" y="164" textAnchor="middle" fontSize="13" fill="var(--text)">Grace period: Active (up to 50 days)</text>
     <text x="190" y="184" textAnchor="middle" fontSize="22" fontWeight="800" fill="#0891b2">₹0 extra cost</text>
-    <rect x="376" y="54" width="308" height="140" rx="6" fill="#dc2626" opacity="0.08" />
+    <rect x="376" y="54" width="308" height="140" rx="6" fill="#dc2626" opacity="0.22" />
     <text x="530" y="80" textAnchor="middle" fontSize="14" fontWeight="700" fill="#dc2626">Pay Minimum Due Only</text>
     <text x="530" y="104" textAnchor="middle" fontSize="13" fill="var(--text)">Interest at 3.5%/mo on unpaid balance</text>
     <text x="530" y="124" textAnchor="middle" fontSize="13" fill="var(--text)">+ 18% GST on interest</text>
@@ -145,11 +145,11 @@ const SvgMultiplePaymentsUtilisation = () => (
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Mid-Cycle Payment — Reducing Utilisation Before Statement Date</text>
     <text x="36" y="58" fontSize="12" fill="var(--text-muted)">Scenario: ₹1,00,000 credit limit. You have spent ₹60,000 mid-cycle.</text>
-    <rect x="36" y="74" width="308" height="70" rx="6" fill="#dc2626" opacity="0.08" />
+    <rect x="36" y="74" width="308" height="70" rx="6" fill="#dc2626" opacity="0.22" />
     <text x="190" y="98" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Without mid-cycle payment</text>
     <text x="190" y="118" textAnchor="middle" fontSize="18" fontWeight="800" fill="#dc2626">60% utilisation</text>
     <text x="190" y="136" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Reported to CIBIL — can hurt score</text>
-    <rect x="376" y="74" width="308" height="70" rx="6" fill="#0891b2" opacity="0.08" />
+    <rect x="376" y="74" width="308" height="70" rx="6" fill="#0891b2" opacity="0.22" />
     <text x="530" y="98" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Pay ₹40,000 before statement date</text>
     <text x="530" y="118" textAnchor="middle" fontSize="18" fontWeight="800" fill="#0891b2">20% utilisation</text>
     <text x="530" y="136" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Healthier CIBIL report next month</text>

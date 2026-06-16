@@ -30,7 +30,7 @@ const SvgLowSpenderDefinition = () => (
     <text x="127" y="88" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Under ₹15,000/month</text>
     <text x="127" y="108" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Under ₹1.8L/year</text>
     <text x="127" y="126" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Can't clear most fee waivers</text>
-    <rect x="263" y="44" width="195" height="90" rx="8" fill="var(--raise)" opacity="0.1" stroke="#ea580c" strokeWidth="1.5" />
+    <rect x="263" y="44" width="195" height="90" rx="8" fill="var(--raise)" opacity="0.25" stroke="#ea580c" strokeWidth="1.5" />
     <text x="360" y="68" textAnchor="middle" fontSize="20" fontWeight="800" fill="#ea580c">Mid</text>
     <text x="360" y="88" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">₹15K - ₹40K/month</text>
     <text x="360" y="108" textAnchor="middle" fontSize="11" fill="var(--text-muted)">₹1.8L - ₹4.8L/year</text>
@@ -80,7 +80,7 @@ const SvgTopPicksGrid = () => (
   <svg viewBox="0 0 720 320" role="img" aria-label="Top credit card picks for low spenders in India 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="320" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Best Cards for Low Spenders: June 2026 Rankings</text>
-    <rect x="20" y="40" width="330" height="120" rx="8" fill={COLOR} opacity="0.08" stroke={COLOR} strokeWidth="2" />
+    <rect x="20" y="40" width="330" height="120" rx="8" fill={COLOR} opacity="0.22" stroke={COLOR} strokeWidth="2" />
     <text x="34" y="62" fontSize="10" fontWeight="700" letterSpacing="1" fill={COLOR}>RANK 1 · BEST OVERALL</text>
     <text x="34" y="82" fontSize="14" fontWeight="800" fill="var(--text)">Amazon Pay ICICI</text>
     <text x="34" y="100" fontSize="11" fill="var(--text-muted)">Annual fee: Zero, for life</text>
@@ -165,13 +165,13 @@ const SvgCardsToAvoid = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Credit cards low spenders should avoid in 2026: Axis Magnus and HDFC Infinia" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Cards to Avoid If You Spend Under ₹15K/Month</text>
-    <rect x="30" y="44" width="310" height="116" rx="8" fill="#dc2626" opacity="0.06" stroke="#dc2626" strokeWidth="1.5" />
+    <rect x="30" y="44" width="310" height="116" rx="8" fill="#dc2626" opacity="0.2" stroke="#dc2626" strokeWidth="1.5" />
     <text x="185" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill="#dc2626">Axis Magnus (₹10,000 fee)</text>
     <text x="185" y="88" textAnchor="middle" fontSize="11" fill="var(--text)">Break-even: ₹3.28L spend minimum</text>
     <text x="185" y="106" textAnchor="middle" fontSize="11" fill="var(--text)">Best rewards kick in at ₹1.5L/month (Burgundy)</text>
     <text x="185" y="124" textAnchor="middle" fontSize="11" fill="var(--text)">Net loss at ₹10K/month: ₹7,480/year</text>
     <text x="185" y="142" textAnchor="middle" fontSize="11" fill="var(--text)">Lounge value: only if you travel frequently</text>
-    <rect x="380" y="44" width="310" height="116" rx="8" fill="#dc2626" opacity="0.06" stroke="#dc2626" strokeWidth="1.5" />
+    <rect x="380" y="44" width="310" height="116" rx="8" fill="#dc2626" opacity="0.2" stroke="#dc2626" strokeWidth="1.5" />
     <text x="535" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill="#dc2626">HDFC Infinia (invite-only, ₹12,500 fee)</text>
     <text x="535" y="88" textAnchor="middle" fontSize="11" fill="var(--text)">Requires ₹10L+ annual spend to justify</text>
     <text x="535" y="106" textAnchor="middle" fontSize="11" fill="var(--text)">Reward rate excellent above ₹1L/month</text>

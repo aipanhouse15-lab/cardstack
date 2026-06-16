@@ -97,13 +97,13 @@ const SvgSpendProfile = () => (
 const SvgMilestoneCalculator = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Annual milestone benefit calculation showing how HDFC Infinia and Axis Magnus milestone bonuses add significant value at 10 lakh annual spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">MILESTONE BONUS VALUE · ₹10L ANNUAL SPEND</text>
-    <rect x="20" y="35" width="320" height="120" fill={COLOR} rx="8" opacity="0.08" stroke={COLOR} strokeWidth="1" />
+    <rect x="20" y="35" width="320" height="120" fill={COLOR} rx="8" opacity="0.22" stroke={COLOR} strokeWidth="1" />
     <text x="180" y="58" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill={COLOR}>HDFC Infinia</text>
     <text x="180" y="78" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Annual fee (waived at ₹10L): ₹0</text>
     <text x="180" y="96" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Base rewards (3.3%): ₹33,000</text>
     <text x="180" y="114" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Milestone bonus: ₹10,000 travel credit</text>
     <text x="180" y="135" textAnchor="middle" fontFamily="system-ui" fontSize="15" fontWeight="800" fill={COLOR}>Total: ~₹43,000 value</text>
-    <rect x="380" y="35" width="320" height="120" fill="#16a34a" rx="8" opacity="0.08" stroke="#16a34a" strokeWidth="1" />
+    <rect x="380" y="35" width="320" height="120" fill="#16a34a" rx="8" opacity="0.22" stroke="#16a34a" strokeWidth="1" />
     <text x="540" y="58" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#16a34a">Axis Magnus</text>
     <text x="540" y="78" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Annual fee: ₹14,750</text>
     <text x="540" y="96" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Base rewards (2.8%): ₹28,000</text>

@@ -117,7 +117,7 @@ const SvgSocialSignal = () => (
     <text x="42" y="88" fontSize="10" fill="var(--text)">Staff attention in premium hotels</text>
     <text x="42" y="106" fontSize="10" fill="var(--text)">Perceived seriousness in business settings</text>
     <text x="42" y="124" fontSize="10" fill="var(--text)">The tap sound (widely discussed, genuinely distinct)</text>
-    <rect x="376" y="42" width="320" height="98" rx="8" fill="var(--raise)" opacity="0.06" />
+    <rect x="376" y="42" width="320" height="98" rx="8" fill="var(--raise)" opacity="0.2" />
     <text x="536" y="66" textAnchor="middle" fontSize="11" fontWeight="600" fill="#ef4444">What metal does NOT add</text>
     <text x="394" y="88" fontSize="10" fill="var(--text)">Better reward rates (same as plastic Infinia)</text>
     <text x="394" y="106" fontSize="10" fill="var(--text)">More lounge visits than the plastic variant</text>

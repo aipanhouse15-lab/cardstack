@@ -94,12 +94,12 @@ const SvgWhenToUseWhich = () => (
 const SvgCIBILMultiCard = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Impact of having multiple credit cards on CIBIL score showing that multiple cards can help if managed well or hurt if mismanaged" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">MULTIPLE CARDS AND CIBIL: WHAT ACTUALLY HAPPENS</text>
-    <rect x="20" y="35" width="320" height="108" fill="#16a34a" rx="8" opacity="0.08" stroke="#16a34a" strokeWidth="1" />
+    <rect x="20" y="35" width="320" height="108" fill="#16a34a" rx="8" opacity="0.22" stroke="#16a34a" strokeWidth="1" />
     <text x="180" y="58" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#16a34a">POSITIVE EFFECTS</text>
     {["Higher total credit limit → lower utilisation ratio", "Multiple on-time payments → stronger credit history", "Older average account age (over time)", "Diverse credit types improves mix score"].map((t, i) => (
       <text key={t} x="30" y={76 + i * 18} fontFamily="system-ui" fontSize="10" fill="var(--text)">+ {t}</text>
     ))}
-    <rect x="380" y="35" width="320" height="108" fill="#dc2626" rx="8" opacity="0.08" stroke="#dc2626" strokeWidth="1" />
+    <rect x="380" y="35" width="320" height="108" fill="#dc2626" rx="8" opacity="0.22" stroke="#dc2626" strokeWidth="1" />
     <text x="540" y="58" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#dc2626">NEGATIVE EFFECTS</text>
     {["Multiple hard enquiries at application (temporary)", "More accounts to track — easier to miss payment", "Higher total available credit can look risky", "Applying for 3+ cards in same month: red flag"].map((t, i) => (
       <text key={t} x="390" y={76 + i * 18} fontFamily="system-ui" fontSize="10" fill="var(--text)">- {t}</text>

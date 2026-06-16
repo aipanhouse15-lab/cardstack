@@ -112,12 +112,12 @@ const SvgHighValueRedemption = () => (
 const SvgPracticalAdvice = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Practical tax advice for credit card reward holders showing what to declare what is safe to ignore and what needs CA consultation" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">PRACTICAL GUIDE: WHAT TO DECLARE VS WHAT IS SAFE TO IGNORE</text>
-    <rect x="20" y="38" width="320" height="120" fill={COLOR} rx="8" opacity="0.08" stroke={COLOR} strokeWidth="1" />
+    <rect x="20" y="38" width="320" height="120" fill={COLOR} rx="8" opacity="0.22" stroke={COLOR} strokeWidth="1" />
     <text x="180" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill={COLOR}>SAFE TO IGNORE (No Declaration)</text>
     {["Reward points on personal card spend", "Cashback on transactions (credit card statement)", "Annual fee waivers credited as points", "Welcome points on card activation"].map((t, i) => (
       <text key={t} x="30" y={80 + i * 18} fontFamily="system-ui" fontSize="10" fill="var(--text)">✓ {t}</text>
     ))}
-    <rect x="380" y="38" width="320" height="120" fill="#dc2626" rx="8" opacity="0.08" stroke="#dc2626" strokeWidth="1" />
+    <rect x="380" y="38" width="320" height="120" fill="#dc2626" rx="8" opacity="0.22" stroke="#dc2626" strokeWidth="1" />
     <text x="540" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#dc2626">DECLARE AS INCOME</text>
     {["Referral cash rewards above ₹5,000 (cumulative)", "Contest/lucky draw prizes from card company", "Business card cashback (belongs to employer)", "Points sold or transferred for cash"].map((t, i) => (
       <text key={t} x="390" y={80 + i * 18} fontFamily="system-ui" fontSize="10" fill="var(--text)">✗ {t}</text>

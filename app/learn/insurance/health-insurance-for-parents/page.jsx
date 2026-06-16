@@ -91,14 +91,14 @@ const SvgWaitingPeriod = () => (
 const SvgSuperTopUpMath = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Super top-up insurance math showing how a 5 lakh base policy plus 20 lakh super top-up gives 25 lakh coverage for much lower total premium than buying 25 lakh directly" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">SUPER TOP-UP: HOW TO GET ₹25L COVERAGE FOR THE PRICE OF ₹5L · SMART STRATEGY FOR PARENTS</text>
-    <rect x="20" y="38" width="320" height="140" fill={COLOR} rx="8" opacity="0.1" stroke={COLOR} strokeWidth="1" />
+    <rect x="20" y="38" width="320" height="140" fill={COLOR} rx="8" opacity="0.25" stroke={COLOR} strokeWidth="1" />
     <text x="180" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>DIRECT ₹25L POLICY</text>
     <text x="180" y="84" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">Sum Insured: ₹25 lakh</text>
     <text x="180" y="104" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">Annual Premium (age 62):</text>
     <text x="180" y="124" textAnchor="middle" fontFamily="system-ui" fontSize="16" fontWeight="800" fill={COLOR}>₹1,05,000/yr</text>
     <text x="180" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Large premium, whole amount</text>
     <text x="180" y="165" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">covers from ₹1 of claim</text>
-    <rect x="380" y="38" width="320" height="140" fill="#16a34a" rx="8" opacity="0.1" stroke="#16a34a" strokeWidth="1" />
+    <rect x="380" y="38" width="320" height="140" fill="#16a34a" rx="8" opacity="0.25" stroke="#16a34a" strokeWidth="1" />
     <text x="540" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#16a34a">₹5L BASE + ₹20L TOP-UP</text>
     <text x="540" y="84" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">Base policy: ₹5L (₹42,000/yr)</text>
     <text x="540" y="104" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">Super top-up: ₹20L above ₹5L threshold</text>

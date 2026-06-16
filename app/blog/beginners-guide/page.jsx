@@ -42,7 +42,7 @@ const SvgCreditCardLifecycle = () => (
         <text x={x} y="128" textAnchor="middle" fontSize="9" fill="var(--text-muted)">{note}</text>
       </g>
     ))}
-    <rect x="40" y="155" width="640" height="28" rx="6" fill={COLOR} opacity="0.1" />
+    <rect x="40" y="155" width="640" height="28" rx="6" fill={COLOR} opacity="0.25" />
     <text x="360" y="174" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Free credit window: up to 50 days (statement date to due date)</text>
   </svg>
 );

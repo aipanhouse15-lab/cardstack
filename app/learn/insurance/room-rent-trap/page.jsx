@@ -27,14 +27,14 @@ const SvgProportionateDeduction = () => (
     <rect x="20" y="40" width="680" height="50" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="4" />
     <text x="30" y="60" fontFamily="system-ui" fontSize="12" fill="var(--text)">Policy Room Rent Limit: <tspan fontWeight="700">1% of Sum Insured per day</tspan> = ₹2,000/day on ₹2L policy</text>
     <text x="30" y="78" fontFamily="system-ui" fontSize="12" fill="var(--text)">Meera chose: <tspan fontWeight="700" fill="#dc2626">Single AC room at ₹3,000/day</tspan> (she thought it was only ₹1,000 over limit)</text>
-    <rect x="20" y="105" width="320" height="140" fill={COLOR} rx="8" opacity="0.1" stroke={COLOR} strokeWidth="1" />
+    <rect x="20" y="105" width="320" height="140" fill={COLOR} rx="8" opacity="0.25" stroke={COLOR} strokeWidth="1" />
     <text x="180" y="128" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill={COLOR}>TOTAL HOSPITAL BILL: ₹5,00,000</text>
     <text x="180" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Room charges (5 days): ₹15,000</text>
     <text x="180" y="165" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Surgery charges: ₹2,50,000</text>
     <text x="180" y="182" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Medicines: ₹80,000</text>
     <text x="180" y="199" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Doctor fees: ₹1,20,000</text>
     <text x="180" y="216" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Tests: ₹35,000</text>
-    <rect x="380" y="105" width="320" height="140" fill="#dc2626" rx="8" opacity="0.1" stroke="#dc2626" strokeWidth="1" />
+    <rect x="380" y="105" width="320" height="140" fill="#dc2626" rx="8" opacity="0.25" stroke="#dc2626" strokeWidth="1" />
     <text x="540" y="128" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#dc2626">WHAT INSURER PAYS: ₹3,35,000</text>
     <text x="540" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Deduction ratio: 2000/3000 = 66.7%</text>
     <text x="540" y="165" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#dc2626">Everything deducted by 33.3%</text>
@@ -128,7 +128,7 @@ const SvgHowToAvoid = () => (
       { step: "3. If forced to upgrade", action: "Call insurer immediately. Get written approval. In emergencies, tell them you had no choice — document the medical necessity.", color: "#16a34a" },
     ].map(({ step, action, color }, i) => (
       <g key={step}>
-        <rect x="20" y={42 + i * 44} width={700} height="36" fill={color} rx="6" opacity="0.08" stroke={color} strokeWidth="1" />
+        <rect x="20" y={42 + i * 44} width={700} height="36" fill={color} rx="6" opacity="0.22" stroke={color} strokeWidth="1" />
         <text x="30" y={57 + i * 44} fontFamily="system-ui" fontSize="11" fontWeight="700" fill={color}>{step}</text>
         <text x="30" y={72 + i * 44} fontFamily="system-ui" fontSize="12" fill="var(--text)">{action}</text>
       </g>

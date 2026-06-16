@@ -22,7 +22,7 @@ const UPDATED = "June 4, 2026";
 
 const IconGlobe = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="International spending globe icon">
-    <circle cx="24" cy="24" r="18" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="2"/>
+    <circle cx="24" cy="24" r="18" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="2"/>
     <ellipse cx="24" cy="24" rx="8" ry="18" fill="none" stroke={COLOR} strokeWidth="1.5"/>
     <path d="M6 24H42" stroke={COLOR} strokeWidth="1.5"/>
     <path d="M9 16H39M9 32H39" stroke={COLOR} strokeWidth="1" strokeDasharray="3 2"/>
@@ -31,7 +31,7 @@ const IconGlobe = () => (
 
 const IconRupeeArrow = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forex markup rupee loss">
-    <circle cx="14" cy="14" r="12" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5"/>
+    <circle cx="14" cy="14" r="12" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5"/>
     <path d="M10 8H18M10 12H14C16.2 12 18 13.8 18 16C18 18.2 16.2 20 14 20H10" stroke={COLOR} strokeWidth="1.8" strokeLinecap="round"/>
     <path d="M10 16H16" stroke={COLOR} strokeWidth="1.8" strokeLinecap="round"/>
   </svg>

@@ -52,7 +52,7 @@ const SvgLoungeAccess = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Lounge access comparison between HDFC Regalia and HDFC Infinia credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Airport Lounge Access: Regalia vs Infinia</text>
-    <rect x="20" y="40" width="320" height="124" rx="8" fill={COLOR} opacity="0.08" />
+    <rect x="20" y="40" width="320" height="124" rx="8" fill={COLOR} opacity="0.22" />
     <rect x="380" y="40" width="320" height="124" rx="8" fill="var(--raise)" />
     <text x="180" y="62" textAnchor="middle" fontSize="13" fontWeight="700" fill={COLOR}>HDFC Regalia</text>
     <text x="540" y="62" textAnchor="middle" fontSize="13" fontWeight="700" fill="#6d28d9">HDFC Infinia</text>
@@ -125,7 +125,7 @@ const SvgMilestoneComparison = () => (
   <svg viewBox="0 0 720 170" role="img" aria-label="Milestone and annual spend benefits for HDFC Regalia and Infinia" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Milestone Benefits: Regalia vs Infinia</text>
-    <rect x="20" y="38" width="320" height="116" rx="8" fill={COLOR} opacity="0.06" />
+    <rect x="20" y="38" width="320" height="116" rx="8" fill={COLOR} opacity="0.2" />
     <rect x="380" y="38" width="320" height="116" rx="8" fill="var(--raise)" />
     <text x="180" y="58" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Regalia Milestones</text>
     <text x="540" y="58" textAnchor="middle" fontSize="12" fontWeight="700" fill="#6d28d9">Infinia Milestones</text>

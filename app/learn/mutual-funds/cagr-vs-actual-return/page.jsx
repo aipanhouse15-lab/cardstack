@@ -24,7 +24,7 @@ const UPDATED = "June 4, 2026";
 const SvgCAGRvsXIRR = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="CAGR versus XIRR comparison showing that a fund with 18 percent CAGR can give only 11 percent XIRR to a SIP investor depending on when each installment was invested and how the market moved" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">CAGR vs XIRR: THE SAME FUND, TWO VERY DIFFERENT RETURNS · ₹10,000 SIP · 5 YEARS</text>
-    <rect x="20" y="40" width="320" height="160" fill={COLOR} rx="8" opacity="0.08" stroke={COLOR} strokeWidth="1" />
+    <rect x="20" y="40" width="320" height="160" fill={COLOR} rx="8" opacity="0.22" stroke={COLOR} strokeWidth="1" />
     <text x="180" y="65" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>FUND BROCHURE SAYS: 18% CAGR</text>
     <text x="180" y="88" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Measured: ₹10,000 lump sum Jan 2020</text>
     <text x="180" y="106" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Value: ₹22,877 by Dec 2024</text>
@@ -32,7 +32,7 @@ const SvgCAGRvsXIRR = () => (
     <text x="180" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="800" fill={COLOR}>18% CAGR ✓</text>
     <text x="180" y="168" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">This is mathematically correct.</text>
     <text x="180" y="184" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">But you didn't invest lump sum.</text>
-    <rect x="380" y="40" width="320" height="160" fill="#dc2626" rx="8" opacity="0.08" stroke="#dc2626" strokeWidth="1" />
+    <rect x="380" y="40" width="320" height="160" fill="#dc2626" rx="8" opacity="0.22" stroke="#dc2626" strokeWidth="1" />
     <text x="540" y="65" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#dc2626">YOUR ACCOUNT SHOWS: 11% XIRR</text>
     <text x="540" y="88" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">SIP: ₹10K/month for 60 months</text>
     <text x="540" y="106" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Total invested: ₹6,00,000</text>
@@ -50,13 +50,13 @@ const SvgSequenceOfReturns = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Sequence of returns risk showing two funds with identical 10 percent CAGR but different sequences producing very different actual wealth outcomes for SIP investors" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">SAME CAGR, DIFFERENT ACTUAL WEALTH · THE SEQUENCE OF RETURNS PROBLEM</text>
     <text x="20" y="40" fontFamily="system-ui" fontSize="12" fill="var(--text)">Two imaginary funds. Both exactly 10% CAGR over 5 years. But you invested ₹10,000/month via SIP.</text>
-    <rect x="20" y="54" width="320" height="160" fill="#16a34a" rx="8" opacity="0.08" stroke="#16a34a" strokeWidth="1" />
+    <rect x="20" y="54" width="320" height="160" fill="#16a34a" rx="8" opacity="0.22" stroke="#16a34a" strokeWidth="1" />
     <text x="180" y="78" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#16a34a">Fund A: Good early, bad later</text>
     {[["Yr 1", "+25%"], ["Yr 2", "+20%"], ["Yr 3", "+10%"], ["Yr 4", "-10%"], ["Yr 5", "-10%"]].map(([yr, ret], i) => (
       <text key={yr} x="30" y={98 + i * 22} fontFamily="system-ui" fontSize="11" fill="var(--text)">{yr}: {ret}</text>
     ))}
     <text x="30" y="210" fontFamily="system-ui" fontSize="11" fill={COLOR}>CAGR: ~10% | SIP Final Value: ₹8.2L</text>
-    <rect x="380" y="54" width="320" height="160" fill="#dc2626" rx="8" opacity="0.08" stroke="#dc2626" strokeWidth="1" />
+    <rect x="380" y="54" width="320" height="160" fill="#dc2626" rx="8" opacity="0.22" stroke="#dc2626" strokeWidth="1" />
     <text x="540" y="78" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#dc2626">Fund B: Bad early, good later</text>
     {[["Yr 1", "-10%"], ["Yr 2", "-10%"], ["Yr 3", "+10%"], ["Yr 4", "+20%"], ["Yr 5", "+25%"]].map(([yr, ret], i) => (
       <text key={yr} x="390" y={98 + i * 22} fontFamily="system-ui" fontSize="11" fill="var(--text)">{yr}: {ret}</text>
@@ -100,7 +100,7 @@ const SvgXIRRCalculation = () => (
       { step: "3. Use Excel XIRR formula", detail: "=XIRR(values, dates, 0.1). Values column: negative for each SIP, positive for current value. Dates: corresponding dates.", color: "#16a34a" },
     ].map(({ step, detail, color }, i) => (
       <g key={step}>
-        <rect x="20" y={38 + i * 44} width="680" height="36" fill={color} rx="6" opacity="0.08" stroke={color} strokeWidth="1" />
+        <rect x="20" y={38 + i * 44} width="680" height="36" fill={color} rx="6" opacity="0.22" stroke={color} strokeWidth="1" />
         <text x="30" y={56 + i * 44} fontFamily="system-ui" fontSize="12" fontWeight="700" fill={color}>{step}</text>
         <text x="30" y={70 + i * 44} fontFamily="system-ui" fontSize="11" fill="var(--text)">{detail}</text>
       </g>

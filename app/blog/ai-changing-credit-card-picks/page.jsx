@@ -32,10 +32,10 @@ const SvgHeroFlow = () => (
     <text x="120" y="150" textAnchor="middle" fontSize="10" fill="var(--text-muted)" opacity="0.7">disclosure. Generic spend.</text>
     <line x1="220" y1="110" x2="490" y2="110" stroke={COLOR} strokeWidth="2" strokeDasharray="6 3" />
     <polygon points="490,104 500,110 490,116" fill={COLOR} />
-    <rect x="285" y="92" width="140" height="36" rx="6" fill={COLOR} opacity="0.1" />
+    <rect x="285" y="92" width="140" height="36" rx="6" fill={COLOR} opacity="0.25" />
     <text x="355" y="107" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>AI Comparison</text>
     <text x="355" y="123" textAnchor="middle" fontSize="10" fill={COLOR}>+ your actual spend</text>
-    <rect x="510" y="40" width="180" height="140" rx="8" fill={COLOR} opacity="0.08" />
+    <rect x="510" y="40" width="180" height="140" rx="8" fill={COLOR} opacity="0.22" />
     <text x="600" y="75" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>NOW</text>
     <text x="600" y="98" textAnchor="middle" fontSize="11" fill="var(--text)">Cap-adjusted reward rate</text>
     <text x="600" y="116" textAnchor="middle" fontSize="11" fill="var(--text)">Real annual fee math</text>
@@ -54,7 +54,7 @@ const SvgGenericVsReal = () => (
     <text x="36" y="104" fontSize="10" fill="var(--text-muted)">HDFC Millennia: 5% on Amazon</text>
     <text x="36" y="120" fontSize="10" fill="var(--text-muted)">SBI SimplyCLICK: 10x on partner apps</text>
     <text x="36" y="140" fontSize="10" fill="var(--text-muted)" opacity="0.7">Caps? What caps? Hidden.</text>
-    <rect x="376" y="44" width="320" height="110" rx="6" fill={COLOR} opacity="0.08" />
+    <rect x="376" y="44" width="320" height="110" rx="6" fill={COLOR} opacity="0.22" />
     <text x="388" y="68" fontSize="11" fontWeight="600" fill={COLOR}>Smart Swipe output (your spend input)</text>
     <text x="388" y="88" fontSize="10" fill="var(--text)">Axis Ace: 2% uncapped on Swiggy</text>
     <text x="388" y="104" fontSize="10" fill="var(--text)">HDFC Millennia: ₹1,000/mo cap hit at ₹20k</text>
