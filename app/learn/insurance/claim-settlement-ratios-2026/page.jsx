@@ -118,7 +118,7 @@ const SvgClaimProcess = () => (
     {[
       { step: "1. Notify insurer", time: "Day 1-3", detail: "Phone + email. Get claim reference number." },
       { step: "2. Submit docs", time: "Day 3-15", detail: "Death certificate, policy bond, ID proof of nominee." },
-      { step: "3. Investigation", time: "Day 15-30", detail: "Insurer may investigate for claims < 3 years old." },
+      { step: "3. Investigation", time: "Day 15-30", detail: "Insurer may investigate for claims {'<'} 3 years old." },
       { step: "4. Claim decision", time: "Day 30-45", detail: "IRDAI mandates decision within 30 days of docs." },
       { step: "5. Settlement", time: "Day 45-60", detail: "Payment via NEFT. Interest paid if insurer is late." },
     ].map(({ step, time, detail }, i) => (

@@ -3,13 +3,11 @@ import Script from "next/script";
 
 export const metadata = {
   title: "The Fuel Card Trick: Stop Paying the 1% Surcharge and Earn 4-7% Back at the Pump",
-  description: "Your fuel card action plan
-        Step 1: Note which petrol brand (BPCL, HPCL, IOCL) you fill up at most often. Check your last 3 fuel receipts.",
+  description: "Your fuel card action plan Step 1: Note which petrol brand (BPCL, HPCL, IOCL) you fill up at most often. Check your last 3 fuel receipts.",
   alternates: { canonical: "/blog/fuel-trick" },
   openGraph: {
     title: "The Fuel Card Trick: Stop Paying the 1% Surcharge and Earn 4-7% Back at the Pump",
-    description: "Your fuel card action plan
-        Step 1: Note which petrol brand (BPCL, HPCL, IOCL) you fill up at most often. Check your last 3 fuel receipts.",
+    description: "Your fuel card action plan Step 1: Note which petrol brand (BPCL, HPCL, IOCL) you fill up at most often. Check your last 3 fuel receipts.",
     type: "article",
     siteName: "Assure Fintech",
   },

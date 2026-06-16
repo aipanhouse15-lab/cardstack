@@ -3,13 +3,11 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Best Free Credit Cards in India 2026: Ranked With Honest Pros and Cons",
-  description: "#1: Amazon Pay ICICI Bank Credit Card
-        No joining fee. No annual fee. No spend condition. The 5% cashback on Amazon.in is direct credit to your Amazon...",
+  description: "#1: Amazon Pay ICICI Bank Credit Card No joining fee. No annual fee. No spend condition. The 5% cashback on Amazon.in is direct credit to your Amazon...",
   alternates: { canonical: "/blog/best-free-cards" },
   openGraph: {
     title: "Best Free Credit Cards in India 2026: Ranked With Honest Pros and Cons",
-    description: "#1: Amazon Pay ICICI Bank Credit Card
-        No joining fee. No annual fee. No spend condition. The 5% cashback on Amazon.in is direct credit to your Amazon...",
+    description: "#1: Amazon Pay ICICI Bank Credit Card No joining fee. No annual fee. No spend condition. The 5% cashback on Amazon.in is direct credit to your Amazon...",
     type: "article",
     siteName: "Assure Fintech",
   },

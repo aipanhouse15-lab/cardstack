@@ -175,7 +175,7 @@ function RuralUrbanDifference() {
       <text x="510" y="93" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Brand varies: BPCL, IOCL, HPCL, others</text>
       <text x="510" y="110" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Higher spend (₹8,000-20,000/mo)</text>
       <text x="510" y="127" textAnchor="middle" fill="#7c3aed" fontSize="11" fontWeight="600">Best card: Axis IOCL (unlimited waiver) or Axis ACE</text>
-      <text x="510" y="148" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Surcharge waiver > brand cashback at irregular pumps</text>
+      <text x="510" y="148" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Surcharge waiver {'>'} brand cashback at irregular pumps</text>
     </svg>
   );
 }

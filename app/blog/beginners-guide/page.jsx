@@ -3,13 +3,11 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Your First Credit Card in India: Everything You Actually Need to Know (2026)",
-  description: "Your first 3 months: what to do
-        Month 1: Apply for one card appropriate for your income. Activate it. Make 2-3 small purchases (groceries, a Blinkit ...",
+  description: "Your first 3 months: what to do Month 1: Apply for one card appropriate for your income. Activate it. Make 2-3 small purchases (groceries, a Blinkit ...",
   alternates: { canonical: "/blog/beginners-guide" },
   openGraph: {
     title: "Your First Credit Card in India: Everything You Actually Need to Know (2026)",
-    description: "Your first 3 months: what to do
-        Month 1: Apply for one card appropriate for your income. Activate it. Make 2-3 small purchases (groceries, a Blinkit ...",
+    description: "Your first 3 months: what to do Month 1: Apply for one card appropriate for your income. Activate it. Make 2-3 small purchases (groceries, a Blinkit ...",
     type: "article",
     siteName: "Assure Fintech",
   },

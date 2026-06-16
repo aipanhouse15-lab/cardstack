@@ -403,7 +403,7 @@ export default function BestCreditCardForHighIncomeEarners() {
           { label: "Marriott Bonvoy Gold status", value: "~₹8,000/yr in upgrades", good: true },
           { label: "Global Dining Programme credits", value: "~₹12,000/yr if used fully", good: true },
           { label: "Fee payback requirement", value: "₹60,000 to break even", good: false },
-          { label: "Who should skip it", value: "Domestic travellers, < 8 intl trips/yr", good: false }
+          { label: "Who should skip it", value: "Domestic travellers, {'<'} 8 intl trips/yr", good: false }
         ].map(({ label, value, good }, i) => (
           <div key={i} style={{ background: good ? `${GOLD}08` : "var(--surface,#f8fafc)", border: `1px solid ${good ? GOLD + "30" : "var(--border,#e2e8f0)"}`, borderRadius: 8, padding: "12px 14px" }}>
             <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 4 }}>

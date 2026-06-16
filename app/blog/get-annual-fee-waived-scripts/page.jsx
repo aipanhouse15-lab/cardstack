@@ -160,7 +160,7 @@ const SvgMetricsTable = () => (
       ["Payment history", "Zero late payments ever", "1+ late payments in 12 months"],
       ["Card tenure", "3+ years with same card", "Under 1 year"],
       ["Multiple products", "Loan/savings/FD with bank", "Card only relationship"],
-      ["Monthly spend", "> ₹20,000/month", "< ₹5,000/month"],
+      ["Monthly spend", "> ₹20,000/month", "{'<'} ₹5,000/month"],
       ["CIBIL score", "750+", "Below 700"],
     ].map(([metric, strong, weak], i) => (
       <g key={i}>

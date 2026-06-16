@@ -3,11 +3,11 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Your 15L Education Loan Becomes 22L Before Your First Job: The Complete Cost Breakdown",
-  description: "Banks explain the moratorium but not interest capitalization. Full math on how a 15L education loan grows to 22L, the 80E tax benefit, and which lenders actually charge less.",
+  description: "Banks explain the moratorium but not interest capitalization. Full math on how a 15L education loan grows to 22L, the 80E tax benefit, and which lenders actu...",
   alternates: { canonical: "/learn/loans/education-loan-real-cost" },
   openGraph: {
     title: "Your 15L Education Loan Becomes 22L Before Your First Job: The Complete Cost Breakdown",
-    description: "Banks explain the moratorium but not interest capitalization. Full math on how a 15L education loan grows to 22L, the 80E tax benefit, and which lenders actually charge less.",
+    description: "Banks explain the moratorium but not interest capitalization. Full math on how a 15L education loan grows to 22L, the 80E tax benefit, and which lenders actu...",
     type: "article",
     siteName: "Assure Fintech",
   },

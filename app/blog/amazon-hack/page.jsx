@@ -3,13 +3,11 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Amazon Pay ICICI Card: The Complete Power User Guide",
-  description: "Power user checklist
-        1. In the Amazon app, set default payment to your Amazon Pay ICICI card, not Amazon Pay balance. This ensures every purchase ear...",
+  description: "Power user checklist 1. In the Amazon app, set default payment to your Amazon Pay ICICI card, not Amazon Pay balance. This ensures every purchase ear...",
   alternates: { canonical: "/blog/amazon-hack" },
   openGraph: {
     title: "Amazon Pay ICICI Card: The Complete Power User Guide",
-    description: "Power user checklist
-        1. In the Amazon app, set default payment to your Amazon Pay ICICI card, not Amazon Pay balance. This ensures every purchase ear...",
+    description: "Power user checklist 1. In the Amazon app, set default payment to your Amazon Pay ICICI card, not Amazon Pay balance. This ensures every purchase ear...",
     type: "article",
     siteName: "Assure Fintech",
   },

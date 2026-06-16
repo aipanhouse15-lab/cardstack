@@ -3,13 +3,11 @@ import Script from "next/script";
 
 export const metadata = {
   title: "How to Actually Maximize Dining Rewards in India (With Real Math)",
-  description: "Your action plan
-        Step 1: Check your last 3 months of dining spend on Swiggy and Zomato. If combined delivery is under ₹10,000/month, Axis Ace alone i...",
+  description: "Your action plan Step 1: Check your last 3 months of dining spend on Swiggy and Zomato. If combined delivery is under ₹10,000/month, Axis Ace alone i...",
   alternates: { canonical: "/blog/maximize-dining" },
   openGraph: {
     title: "How to Actually Maximize Dining Rewards in India (With Real Math)",
-    description: "Your action plan
-        Step 1: Check your last 3 months of dining spend on Swiggy and Zomato. If combined delivery is under ₹10,000/month, Axis Ace alone i...",
+    description: "Your action plan Step 1: Check your last 3 months of dining spend on Swiggy and Zomato. If combined delivery is under ₹10,000/month, Axis Ace alone i...",
     type: "article",
     siteName: "Assure Fintech",
   },
