@@ -230,7 +230,7 @@ export default function BestCreditCardForRentPayment() {
         padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
-        lineHeight: 1.65,
+        lineHeight: 1.6,
       }}
     >
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />

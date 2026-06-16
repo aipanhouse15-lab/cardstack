@@ -145,7 +145,7 @@ export default function CapAdjustedCashbackExplained() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Your 5% Credit Card Actually Earns 2.8%
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 28 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 28 }}>
             Cap-adjusted cashback: why advertised rates are a lie.
           </p>
           <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
@@ -155,7 +155,7 @@ export default function CapAdjustedCashbackExplained() {
           </div>
         </div>
       </div>
-      <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.85, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
+      <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.6, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -188,7 +188,6 @@ export default function CapAdjustedCashbackExplained() {
           <SvgCapBinding />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The general formula</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -204,7 +203,6 @@ export default function CapAdjustedCashbackExplained() {
           <SvgFormula />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Applied to five popular cashback cards</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -226,7 +224,6 @@ export default function CapAdjustedCashbackExplained() {
           <SvgFiveCardCompare />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The card-by-spend-profile matrix</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -242,7 +239,6 @@ export default function CapAdjustedCashbackExplained() {
           <SvgEarnersHeatmap />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Why this gap exists — the issuer economics</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -258,7 +254,6 @@ export default function CapAdjustedCashbackExplained() {
           Practical takeaway: the 5 percent headline is real, but it's a marketing strategy with structural constraints, not a sustainable arbitrage. Plan around the cap rather than against it.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How to maximise effective rate on your existing cards</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -277,7 +272,6 @@ export default function CapAdjustedCashbackExplained() {
           For the full per-card analysis, our <Link href="/best/credit-card-online-shopping" style={{ color: COLOR, fontWeight: 600 }}>online shopping picks</Link>, <Link href="/best/credit-card-food-delivery" style={{ color: COLOR, fontWeight: 600 }}>food delivery picks</Link>, and <Link href="/best/credit-card-fuel" style={{ color: COLOR, fontWeight: 600 }}>fuel picks</Link> show the cap-adjusted winner per category.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The credit-revolver penalty — why this article matters most</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -287,7 +281,6 @@ export default function CapAdjustedCashbackExplained() {
           The cap-adjusted cashback formula is meaningful only for transactors. If you're a revolver, the priority is to clear the revolving balance via balance transfer to a 0%-promotional card or a 12-month EMI conversion. Pursue cap optimisation later, after the underlying interest leakage is plugged. Read more on this in the <Link href="/blog/rbi-credit-card-rules-2026" style={{ color: COLOR, fontWeight: 600 }}>RBI credit card rules guide</Link> — Rule 4 (months-to-clear disclosure) is specifically designed to help revolvers see the true cost of carrying balances.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Spend categorisation — the missing piece in most calculators</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -303,7 +296,6 @@ export default function CapAdjustedCashbackExplained() {
           The practical workflow: check your card statement for the first three months and see which transactions actually credited the accelerated rate versus the base rate. The real reward pattern reveals itself only after you see it on the statement. Adjust your routing logic accordingly.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The exclusions list — what no cashback covers</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -328,7 +320,6 @@ export default function CapAdjustedCashbackExplained() {
           <strong>Gold and jewellery.</strong> High-value low-MDR category, almost always excluded from accelerated rates. A ₹5 lakh gold purchase on a 5 percent card earns base rate (₹5,000) at most, not the headline ₹25,000.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>A complete worked example for a real household</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -350,7 +341,6 @@ export default function CapAdjustedCashbackExplained() {
           The verdict: SBI Cashback dominates this profile because of the high online concentration. Even if some online categories don't qualify, the ₹5,000 monthly cap is large enough to absorb most of the spend. The lesson: card choice is a function of spend profile, not card-marketing prestige. The ₹100,000 to ₹400,000 of online-heavy spenders should default to SBI Cashback unless they specifically value Amazon Pay ICICI's lifetime-free structure. For a household with online concentration above 50 percent, the cumulative annual gain over picking the wrong card is ₹30,000 to ₹50,000 — meaningfully more than the difference between any two flat-cashback cards on a balanced spend profile. Run your own numbers in our calculator at /tools/cashback-calculator before committing to any card for the long term.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The hidden cost of reward-point cards in this comparison</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -366,17 +356,15 @@ export default function CapAdjustedCashbackExplained() {
           For the deep-dive on premium card economics, see our <Link href="/blog/cashback-vs-reward-points" style={{ color: COLOR }}>cashback vs reward points</Link> comparison and the <Link href="/blog/premium-card-review-framework" style={{ color: COLOR }}>premium card review framework</Link>. The honest framing: most cardholders should optimise for cashback simplicity unless they're committed to actively managing reward-point redemption ladders, which requires periodic time investment that rarely repays itself for sub-₹3 lakh monthly spenders.
         </p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 18px" }}>Frequently asked questions</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "16px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 600 }}>{q.name}</summary>
-            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>
-
       <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
@@ -387,7 +375,6 @@ export default function CapAdjustedCashbackExplained() {
           <li><Link href="/learn/credit-cards" style={{ color: COLOR }}>Credit cards knowledge hub</Link>. All our card guides in one place.</li>
         </ul>
       </section>
-
       <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>

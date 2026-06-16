@@ -83,13 +83,13 @@ export default function CompareTataNeuVsAmazonIcici() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Tata Neu Plus HDFC vs Amazon Pay ICICI — pick your ecosystem in 2026
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Both cards reward 5% — but the 5% only triggers inside their respective walled gardens. Your existing buying habits decide the winner before you ever apply, not the marketing.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -108,7 +108,6 @@ export default function CompareTataNeuVsAmazonIcici() {
           BigBasket monthly groceries plus occasional Vistara/IHCL travel adds up fast at 5%. Amazon Pay ICICI wins if you are an Amazon Prime household with ₹15-20k+/mo on Amazon and minimal Tata-property spend. The decision is mostly determined by the grocery-app you already use.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -130,14 +129,12 @@ export default function CompareTataNeuVsAmazonIcici() {
         </div>
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginTop: 8 }}>Note Tata Neu Plus's 2.0% forex markup is unusually low for a sub-₹500 card — useful for occasional international online purchases.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Earn rate by purchase context</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
           <SvgFunnel />
         </div>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK TATA NEU PLUS HDFC IF</div>
@@ -158,7 +155,6 @@ export default function CompareTataNeuVsAmazonIcici() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The grocery delta is what matters</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -168,7 +164,6 @@ export default function CompareTataNeuVsAmazonIcici() {
           Model your own profile in the <Link href="/tools/cashback-calculator" style={{ color: COLOR }}>cashback calculator</Link>; for the full ecosystem-card landscape see the <Link href="/learn/credit-cards" style={{ color: COLOR }}>credit-cards hub</Link>.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

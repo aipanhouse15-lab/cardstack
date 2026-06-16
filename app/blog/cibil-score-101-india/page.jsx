@@ -228,13 +228,13 @@ export default function BlogCibilScore101India() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             CIBIL Score 101: Ranges, Factors, How to Read Your Report, and Fastest Ways to Improve
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Your CIBIL score follows you to every bank, every loan application, and every credit card you ever apply for. Here is everything you need to know to understand it, read it, and improve it.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -246,7 +246,6 @@ export default function BlogCibilScore101India() {
         <SvgScoreRanges />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The 750+ threshold is where life gets meaningfully easier. Most premium credit cards (HDFC Regalia, Axis Magnus, Amex Platinum Travel) require 750+ for approval. Home loans at best rates require 750+. Personal loans at single-digit rates require 750+.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The 5 Factors That Build (or Destroy) Your Score</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>CIBIL uses five factors to calculate your score. Two of them, payment history and credit utilization, together control 65% of your score. Get those two right and you are most of the way there.</p>
@@ -254,7 +253,6 @@ export default function BlogCibilScore101India() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Payment history is binary: you either paid on time or you did not. One missed EMI can drop your score by 50-100 points. Setting up auto-pay for at least the minimum due on every account is non-negotiable if you want to protect your score.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Credit utilization is the most actionable factor because you can fix it within one billing cycle. Our dedicated <Link href="/blog/credit-utilization-ratio-guide" style={{ color: COLOR }}>credit utilization guide</Link> covers the exact mechanics and fastest fixes.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>How to Read Your Free CIBIL Report</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Most people check only the score number and ignore the report. That is a mistake because errors in the report (wrong account status, incorrect outstanding amounts, accounts you do not recognize) can be dragging your score down with no action on your part.</p>
@@ -262,7 +260,6 @@ export default function BlogCibilScore101India() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The most important field to check in each credit account entry is the DPD column (Days Past Due). A DPD of "000" means paid on time. Any other number means late. Even a "001" means one day late, which still affects your score. Dispute any DPD entry you believe is incorrect.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Also check for accounts you do not recognize. Fraudulent accounts opened in your name show up here and can be disputed under the RBI credit information dispute resolution framework.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>How to Dispute CIBIL Report Errors</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>RBI regulations require credit information companies and lenders to resolve disputes within 30 days. The process has been significantly simplified since 2024 and can be done entirely online.</p>
@@ -270,7 +267,6 @@ export default function BlogCibilScore101India() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Common errors worth disputing: loan accounts showing as Active when they were closed and settled, incorrect outstanding balances, late payment markers for periods when you paid on time, and duplicate accounts. Always keep your loan closure letters, NOCs, and payment receipts as digital copies.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If a bank fails to respond within 30 days, you can escalate to the Banking Ombudsman under RBI's grievance mechanism. Banks take Ombudsman referrals seriously.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>How Long Negative Marks Stay</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>One of the most common questions: if I had a bad period 4 years ago, when does it stop affecting me? Here is the honest answer.</p>
@@ -278,7 +274,6 @@ export default function BlogCibilScore101India() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Late payment entries drop off after 3 years. Defaults, write-offs, and settlements remain for 7 years. After 7 years, the account disappears entirely from your report.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>There is no legal mechanism to remove accurate negative information before its natural expiry period. Any service claiming to "clean" your CIBIL report of legitimate entries is either misleading you or operating in a legal gray area.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Real Improvement Timeline: 6 Months to 700, 12 Months to 750+</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Banks and credit apps like to promise fast score improvements. Here is the realistic picture with disciplined action from a 650 starting point.</p>
@@ -286,7 +281,6 @@ export default function BlogCibilScore101India() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Six months of on-time payments combined with utilization dropped to under 15% can realistically move a 650 score to 700-720. Reaching 750+ typically takes 9-12 months because CIBIL's algorithm also weights the consistency of behavior over time, not just the most recent month.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The score does not improve in a straight line. You may see a plateau for 2-3 months before a jump. This is normal and reflects how CIBIL's reporting cycle and factor weights interact.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Fastest Ways to Improve Your Score: Ranked by Impact</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Not all actions are equal. Here are the highest-leverage steps ranked by how much they move the needle and how quickly the improvement shows up in your report.</p>
@@ -294,7 +288,6 @@ export default function BlogCibilScore101India() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Never missing a payment is the single most impactful action over any 12-month period. Set up auto-pay for every credit card and loan EMI today. Even if you set it to minimum due only, this protects your payment history while you work on other factors.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>For the utilization piece, see our detailed <Link href="/blog/credit-utilization-ratio-guide" style={{ color: COLOR }}>credit utilization ratio guide</Link> which covers the mid-cycle payment trick that can drop your reported utilization by 20-30% within one billing cycle.</p>
       </section>
-
       <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>Your 5-Step CIBIL Action Plan</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2 }}>
@@ -306,7 +299,6 @@ export default function BlogCibilScore101India() {
         </ol>
         <p style={{ fontSize: 14, color: "var(--text-muted)", margin: "16px 0 0" }}>Once your score crosses 720, check which loans you qualify for in our <Link href="/learn/loans" style={{ color: COLOR }}>loans section</Link> and compare the rate improvement. It is often the most motivating data point.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

@@ -83,13 +83,13 @@ export default function CompareRegaliaVsMagnus() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             HDFC Regalia vs Axis Magnus — premium travel cards face-off, 2026 edition
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Regalia is the dependable workhorse — moderate rewards, easy redemption, broad acceptance. Magnus is the optimiser's tool — higher headline rate, deeper partner economics, but punishes the casual user who never figures out airline transfers.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -108,7 +108,6 @@ export default function CompareRegaliaVsMagnus() {
           If you fly internationally three or more times a year and will use airline-mile transfers (Marriott Bonvoy, ITC Hotels, Singapore KrisFlyer), Magnus extracts roughly 30-40% more value per rupee spent. Otherwise, Regalia's auto-credit redemption is more behaviourally robust — you actually get the rewards out, and that beats unrealised Magnus value.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -130,7 +129,6 @@ export default function CompareRegaliaVsMagnus() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Reward point value across redemption paths</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
@@ -140,7 +138,6 @@ export default function CompareRegaliaVsMagnus() {
           The headline rate is meaningful only if multiplied by per-point redeemed value. Magnus ekes out genuinely higher per-point value when you transfer to airline frequent-flyer programmes, but the redemption ladder requires effort the average user does not invest.
         </p>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK AXIS MAGNUS IF</div>
@@ -161,7 +158,6 @@ export default function CompareRegaliaVsMagnus() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Honest break-even maths</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -171,7 +167,6 @@ export default function CompareRegaliaVsMagnus() {
           For a deeper take on travel-card economics, the <Link href="/learn/credit-cards" style={{ color: COLOR }}>credit-cards hub</Link> and the <Link href="/blog/best-card-beginners-2026" style={{ color: COLOR }}>beginner shortlist</Link> walk through redemption realism, lounge utilisation, and forex markup arithmetic.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

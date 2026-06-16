@@ -218,7 +218,7 @@ export default function PageSBIvsHDFCvsICICI() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 14 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -234,7 +234,6 @@ export default function PageSBIvsHDFCvsICICI() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The processing fee difference is ₹17,500 vs ₹25,000 (₹7,500). The insurance add-on difference is ₹0 vs ₹30,000–50,000. The total upfront cost difference is ₹22,500 (SBI) vs ₹60,000–80,000 (HDFC). That's a ₹37,500–57,500 difference just on day one — before a single EMI is paid.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This comparison adds it all up.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Rates: What's Advertised vs What You Actually Pay</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>As of June 4, 2026, for a salaried applicant with CIBIL 775+, applying for ₹50L over 20 years:</p>
@@ -243,7 +242,6 @@ export default function PageSBIvsHDFCvsICICI() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>HDFC Bank starts at 8.75% and adjusts based on a combination of CIBIL score, employment type, loan-to-value ratio, and internal scoring. Existing HDFC customers with credit card or savings account relationship often get 0.10–0.15% off the listed rate without asking.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>ICICI Bank lists 8.65% as the starting rate but its iMobile pre-approved offers for existing customers routinely start at 8.50–8.55%. If you're an existing ICICI salary account holder, check the app before visiting a branch — you might be pre-approved at a better rate than what any walk-in will be offered.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Total 20-Year Cost: Where SBI Really Wins</h2>
         <SvgTotalCost20yr />
@@ -251,7 +249,6 @@ export default function PageSBIvsHDFCvsICICI() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The reason SBI wins isn't just the rate — it's the insurance approach. SBI doesn't actively push life insurance add-ons the way private banks do, which eliminates ₹30,000–50,000 in forced bundling that HDFC and ICICI customers often end up paying.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>ICICI sits between the two. At ₹59.6L total outgo, it's ₹1L more than SBI but ₹0.7L less than HDFC. For applicants who already bank with ICICI, the convenience premium is arguably worth ₹70,000 over 20 years.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Processing Speed: The Factor That Actually Decides</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This is the dirty secret of the SBI vs HDFC debate. SBI is cheaper. By a meaningful margin. But the 15–25 business day processing time is a real constraint for most home buyers.</p>
@@ -260,7 +257,6 @@ export default function PageSBIvsHDFCvsICICI() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>HDFC's 3–5 day processing is genuinely exceptional. Their digital infrastructure, branch-level verification teams, and pre-approved offer system mean that for most salaried applicants, the loan disbursal happens before you've had time to second-guess your decision.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>ICICI's 5–7 days is a comfortable middle. Not as fast as HDFC, but typically fast enough for all but the most urgent deadlines. If you're buying a resale property with a flexible seller, ICICI's speed-to-cost ratio is often the best of the three.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Hidden Cost Breakdown: Where Money Really Goes</h2>
         <SvgHiddenCostBreakdown />
@@ -268,20 +264,17 @@ export default function PageSBIvsHDFCvsICICI() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Your right (under IRDAI guidelines): you can decline the bank's insurance and use any standalone term policy with equivalent coverage. This is legal and the bank cannot make it a loan approval condition. Practice saying: "I already have adequate term coverage. I'd like to proceed with just the loan."</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Valuation fees are charged by all three banks (₹3,000–8,000) and go to an empaneled valuer. You don't choose the valuer. The valuation report affects your loan-to-value ratio — if the valuer values the property below the purchase price, your loan eligibility drops.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Full Feature Comparison</h2>
         <SvgFeatureMatrix />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>One dimension not captured in the table: customer service quality varies enormously by branch, not by bank. An SBI branch in South Delhi may be exceptional. An HDFC branch in a small town may be frustrating. Read Google reviews for the specific branch you'll be dealing with, not just the bank as a brand.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Pre-approved offers deserve special mention. ICICI's iMobile app pre-approved offers are based on your salary credit history, account vintage, and internal credit scoring. These offers are often 0.15–0.25% below the listed rate and include waived or reduced processing fees. Check the app before walking into any branch or calling the home loan helpline.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Which Bank to Choose Based on Your Profile</h2>
         <SvgBorrowerProfile />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>One more profile: if you're a first-time home buyer under 35 with no prior loan history. In this case, ICICI's digital onboarding and relatively flexible credit assessment (they rely more on salary data and less rigidly on tenure and CIBIL score) makes them the recommended starting point. Apply, get in-principle approval, and then use that as leverage at SBI for a better offer.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Negotiation Scripts That Actually Work</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Here's the most important thing about comparing these three banks: the comparison itself is your negotiation leverage. Banks hate losing home loan customers to each other. A ₹50L loan at 8.75% is roughly ₹20L of interest revenue over 20 years. Banks fight hard for that.</p>
@@ -290,13 +283,12 @@ export default function PageSBIvsHDFCvsICICI() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>One word of caution: each bank's in-principle approval triggers a CIBIL enquiry, which temporarily lowers your score by 5–10 points per enquiry. Multiple enquiries in a short window (2–4 weeks) are usually treated as a single enquiry by credit bureaus for home loans — this is the rate-shopping exception. But don't apply to 8 banks; 3–4 is sufficient.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>See also: our <Link href="/learn/loans/fixed-vs-floating-rate" style={{ color: COLOR }}>fixed vs floating guide</Link> to decide which rate type to take, our <Link href="/learn/loans/prepayment-penalty-trap" style={{ color: COLOR }}>prepayment penalty guide</Link> for the clauses to check before signing, and the <Link href="/tools/emi-calculator" style={{ color: COLOR }}>EMI calculator</Link> to model your total outgo across banks.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
-            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>

@@ -159,13 +159,13 @@ export default function BlogBuild3CardStack() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             How to Build a 3-Card Stack: Cover Every Rupee at 3-5% (Instead of 1%)
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             One card can't cover all your spending at the best rate. But 3 well-chosen cards, used correctly, can raise your blended cashback from 1% to 3.5-4.5% across your entire monthly spend. Here's the strategy.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -176,34 +176,29 @@ export default function BlogBuild3CardStack() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>A 3-card stack solves this. Each card covers one or two categories at maximum rate, and together they cover your full spend. The result: 3-4.5% effective rate versus 1.5-2% on a single card.</p>
         <SvgStackPrinciple />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>4 Proven Stacks for Different Profiles</h2>
         <SvgPopularStacks />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The Beginner Stack (Amazon Pay ICICI + Axis Ace + SBI SimplyCLICK) is free — zero total annual fees, waiver-eligible. For most college students and young professionals starting out, this stack delivers 3-3.5% blended rate without any annual fee burden.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The Online-Heavy Stack (SBI Cashback + Amazon Pay ICICI + HDFC Millennia) is the best for remote workers and digital-native households who primarily spend online. The ₹1,500 combined annual fee is typically waived through spend thresholds, and the 4.2% blended rate is excellent.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Which Card at Which Merchant</h2>
         <SvgWhenToUseWhich />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The mental model takes about a month to internalize. After that it's automatic. The key is resisting the habit of using one card for everything "because it's simpler" — that simplicity costs you ₹1,500-3,000 per month in missed returns on a ₹50K monthly spend portfolio.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Your Blended Rate: Do the Math</h2>
         <SvgBlendedRate />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This calculation assumes the Axis Ace monthly cap (₹500) is fully used in the Swiggy/Ola category. With 3 cards on ₹50K monthly spend, total cashback is ₹1,870/month = ₹22,440/year. Compare this to a single 1.5% effective card: ₹750/month = ₹9,000/year. The stack earns ₹13,440 more annually — for ₹1,500 total annual fee investment.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Use our <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder tool</Link> to model your specific spend split across card options. It calculates blended rate automatically and suggests the optimal 2-3 card combination for your spending profile.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Managing Multiple Cards Without Chaos</h2>
         <SvgCIBILMultiCard />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Set up auto-pay for FULL statement balance on all 3 cards. Use different due dates (most banks let you change due date) so you're not paying 3 bills on the same day. A simple calendar reminder 3 days before each due date is sufficient. Many people use a single family WhatsApp group or notes app to track monthly bills.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Also see our <Link href="/blog/right-way-pay-credit-card-bill" style={{ color: COLOR }}>credit card payment guide</Link> and our <Link href="/blog/should-you-close-old-credit-card" style={{ color: COLOR }}>guide on closing old cards</Link> for managing your card portfolio over time.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

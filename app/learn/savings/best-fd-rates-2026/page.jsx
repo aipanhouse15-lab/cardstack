@@ -80,7 +80,7 @@ const SvgLadderStrategy = () => (
         <text x="80" y="68" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill="var(--text)">{b.amt}</text>
         <text x="80" y="98" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="var(--text)">at {b.rate}</text>
         <foreignObject x="8" y="115" width="144" height="58">
-          <div xmlns="http://www.w3.org/1999/xhtml" style={{ fontFamily: "system-ui", fontSize: 9, color: "var(--text)", lineHeight: 1.85, padding: 4 }}>{b.note}</div>
+          <div xmlns="http://www.w3.org/1999/xhtml" style={{ fontFamily: "system-ui", fontSize: 9, color: "var(--text)", lineHeight: 1.6, padding: 4 }}>{b.note}</div>
         </foreignObject>
       </g>
     ))}
@@ -178,7 +178,7 @@ export default function BestFdRates2026() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best FD Rates in India — April 2026
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 28 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 28 }}>
             Your 7.5% FD returns 0.15% after tax and inflation. I compared 25 banks.
           </p>
           <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
@@ -188,7 +188,7 @@ export default function BestFdRates2026() {
           </div>
         </div>
       </div>
-      <main style={{ maxWidth: 700, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+      <main style={{ maxWidth: 700, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -230,7 +230,6 @@ export default function BestFdRates2026() {
           Rates change quarterly. Bookmark the source pages: <Link href="https://www.unitybank.co.in" style={{ color: COLOR }}>Unity Bank</Link>, <Link href="https://www.sbi.co.in" style={{ color: COLOR }}>SBI</Link>, <Link href="https://www.hdfcbank.com" style={{ color: COLOR }}>HDFC Bank</Link>, <Link href="https://www.bajajfinserv.in" style={{ color: COLOR }}>Bajaj Finance</Link>. RBI's MPC meets every two months; rate cuts typically transmit to FD rates with a 1 to 3 month lag.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>DICGC insurance — the ₹5 lakh ceiling that decides allocation</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -249,7 +248,6 @@ export default function BestFdRates2026() {
           The practical allocation rule: cap individual SFB exposure at ₹5 lakh per bank, cap NBFC exposure at 10 to 15 percent of total fixed-income corpus, keep the bulk of FD allocation in DICGC-insured banks across multiple institutions.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The repo rate cycle and where rates head from here</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -269,7 +267,6 @@ export default function BestFdRates2026() {
           <SvgRepoCurve />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The FD ladder — a structure that survives any rate cycle</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -289,7 +286,6 @@ export default function BestFdRates2026() {
           <SvgLadderStrategy />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Senior citizen rates — and why SCSS often beats them</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -305,7 +301,6 @@ export default function BestFdRates2026() {
           PMVVY (Pradhan Mantri Vaya Vandana Yojana) — the LIC-administered annuity scheme — was closed for new subscriptions in March 2023. Existing PMVVY holders continue receiving the 7.40% rate for the original 10-year tenure. New retirees should treat PMVVY as no longer available and default to SCSS plus senior FD ladder.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Post-tax yield — the number that actually matters</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -328,7 +323,6 @@ export default function BestFdRates2026() {
           <SvgPostTaxWaterfall />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>TDS, Form 15G and 15H — getting the cash flow right</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -344,7 +338,6 @@ export default function BestFdRates2026() {
           For NBFC FDs, TDS rules are similar — 10 percent above ₹40,000 (₹50,000 senior). NBFCs are usually less efficient at processing 15G/15H forms than mainstream banks, so factor in 60 to 90 days of TDS reconciliation friction at NBFCs you hold FDs with.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Common mistakes that cost depositors money</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -366,7 +359,6 @@ export default function BestFdRates2026() {
           <strong>Keeping ₹10 lakh idle in savings account at 3.5%.</strong> The same ₹10 lakh in liquid fund earns 6.8 to 7.0%, with full T+1 liquidity. The ₹35,000 annual yield gap on ₹10 lakh of idle cash adds up to ₹3.5 lakh over a decade of inattention.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>FD alternatives — when other instruments beat the FD</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -385,7 +377,6 @@ export default function BestFdRates2026() {
           The right FD allocation in a balanced fixed-income portfolio is rarely 100 percent. A reasonable mix for a ₹50 lakh fixed-income corpus: 50 percent FD ladder (across DICGC-insured banks and SFBs), 20 percent SCSS or PMVVY-equivalent (if eligible), 15 percent AAA corporate bonds for daily-NAV liquidity, 10 percent G-Secs via Retail Direct for sovereign-credit anchor, 5 percent liquid fund for emergency. The blended yield holds up under various rate scenarios while the diversification mitigates single-instrument concentration risk.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The mistakes that cost money beyond the obvious ones</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -404,7 +395,6 @@ export default function BestFdRates2026() {
           The cumulative effect of these errors across a typical retiree's ₹40 lakh FD allocation can run ₹40,000 to ₹80,000 a year of foregone yield or unnecessary tax. Each one is fixable with operational discipline. None of them require sophisticated portfolio management.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How to actually compare FDs across banks — a 5-minute checklist</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -426,17 +416,15 @@ export default function BestFdRates2026() {
           <strong>Ask about loan-against-FD.</strong> Most banks let you borrow up to 90% of the FD value at 1% above the FD rate. So a ₹5 lakh FD at 8.5% can support a ₹4.5 lakh loan at 9.5%, with the FD continuing to earn its 8.5%. Useful as an emergency credit line that doesn't break the FD or trigger CIBIL impact. Not all SFBs offer this; verify before booking if liquidity flexibility matters to you.
         </p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 18px" }}>Frequently asked questions</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "16px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 600 }}>{q.name}</summary>
-            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>
-
       <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
@@ -447,7 +435,6 @@ export default function BestFdRates2026() {
           <li><Link href="/learn/savings" style={{ color: COLOR }}>Savings knowledge hub</Link>. All our deposit and short-term-yield guides.</li>
         </ul>
       </section>
-
       <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>

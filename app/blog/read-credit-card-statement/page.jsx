@@ -266,13 +266,13 @@ export default function BlogReadCreditCardStatement() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             How to Read Your Credit Card Statement: A Plain-English Walkthrough
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Your monthly statement is full of traps disguised as numbers. Here's how to decode every line before it costs you money.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -286,14 +286,12 @@ export default function BlogReadCreditCardStatement() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Most people only look at the minimum amount due. That's the most expensive number on the page. Here's what each section actually means.</p>
         <SvgStatementAnatomy />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 2: Crack the Date Trinity</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>There are three dates on every statement and they confuse even experienced card users. The statement date is when your billing cycle ended. The payment due date is your deadline to pay. And somewhere in between is the interest-free cutoff.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>A transaction made the day before your statement date gets only 20 days free (until the due date). A transaction made the day after your statement date gets up to 50 days free (full next cycle plus due date window). Knowing this lets you time large purchases to maximise your float.</p>
         <SvgDatesExplained />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 3: Never Pay Just the Minimum Amount Due</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The minimum amount due is usually 5 percent of your outstanding balance or ₹200, whichever is higher. Paying it keeps you safe from late fees (typically ₹500 to ₹1,300 depending on your balance bracket) but triggers interest on your full balance at 3 to 3.5 percent per month.</p>
@@ -301,35 +299,30 @@ export default function BlogReadCreditCardStatement() {
         <SvgMinDueTrap />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The rule is simple: always pay the total amount due, not the minimum. If you genuinely can't, pay as much as possible above the minimum to reduce the interest burden.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 4: Calculate Your Real Interest-Free Window</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The interest-free period isn't a fixed number. It depends entirely on when in the billing cycle you make your purchase. Banks advertise "up to 50 days" but most purchases land somewhere between 20 and 45 days free.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>For big purchases, like a new phone or an appliance, time them for the day after your statement date. You get a full billing cycle (30 days) plus the grace period (15 to 20 days) before you need to pay a single rupee.</p>
         <SvgInterestFreeCalc />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 5: Decode Your Reward Points Balance</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Every statement shows your reward points balance and (usually) an expiry date. Most Indians let their points expire unused. That's free money walking out the door.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The value of a point varies dramatically by card. HDFC Regalia points are worth 40 paise each when redeemed on SmartBuy. SBI points are worth 25 paise. Axis Edge Miles can be worth over ₹1 when transferred to airline programs. Know your card's rate before assuming your balance is worth a lot or a little.</p>
         <SvgRewardPointsDecoder />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 6: Understand Unbilled Transactions</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you bought something two days after your statement date, it won't appear in this month's payable amount. But it has already reduced your available credit. This trips up a lot of people who think their available credit should be higher after paying the bill.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Look for the "unbilled transactions" section (sometimes called "transactions after statement date"). Add it to your mental tally of what you owe, even if it's not due yet.</p>
         <SvgUnbilledVsBilled />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 7: Read Your EMI Breakdowns Carefully</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you've converted any purchases to EMI, the statement will show a separate EMI section. The monthly installment is already included in your total amount due, so you don't pay it separately. What you need to watch is the outstanding EMI principal, because it blocks your credit limit.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Also check whether your EMI is genuinely no-cost or simply deferred interest. Some merchants advertise "no-cost EMI" but add a subvention fee or processing charge of 1 to 2 percent upfront. That fee appears as a debit on your statement in month 1.</p>
         <SvgEmiBreakdown />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Your 5-Minute Statement Checklist</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Every month when your statement arrives, run through these five checks before closing the PDF.</p>
@@ -341,13 +334,11 @@ export default function BlogReadCreditCardStatement() {
           <li>Review any active EMIs for outstanding principal and check the interest rate column for surprise charges.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Open your bank's app, go to the credit card section, and set up auto-debit for the full statement balance. This single action eliminates every interest risk and every late payment penalty permanently.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Then check your reward points balance. If you have points expiring in the next 6 months, redeem them today against your statement or for a flight. Banks don't remind you. Your statement does, but only if you read it.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

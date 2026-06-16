@@ -281,7 +281,7 @@ export default function BestCreditCardForGroceries() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -364,7 +364,6 @@ export default function BestCreditCardForGroceries() {
           </div>
         ))}
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: "#dc2626" }}>What Changed with Axis Airtel in April 2026</h2>
         <p>For years, the Axis Airtel Credit Card was on every "best grocery card" list in India. The 10% grocery earning, which covered BigBasket, Blinkit, and even offline stores under certain MCCs, made it genuinely one of the best category cards available.</p>
@@ -373,7 +372,6 @@ export default function BestCreditCardForGroceries() {
         <p style={{ marginTop: 12 }}>If you have not updated your default payment card on BigBasket or Blinkit since April 2026, you are earning 1% instead of 5-10%. That gap, on a household spending ₹8,000/month on groceries, is roughly ₹3,840 per year in lost cashback.</p>
         <p>Understand why banks make these changes by reading our explainer on <Link href="/blog/cashback-rate-is-a-lie">why cashback rates are never permanent</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The BigBasket Problem</h2>
         <p>BigBasket is India's largest online grocery platform and also one of the trickiest to navigate from a card reward perspective. It is a Tata-owned company, which means it is on the partner list of Tata-affiliated cards like SBI Tata Neu Infinity. It is also on HDFC Millennia's partner list as a standalone merchant.</p>
@@ -381,7 +379,6 @@ export default function BestCreditCardForGroceries() {
         <BigBasketProblemDiagram />
         <p style={{ marginTop: 12 }}>A key nuance: SBI Cashback earns 5% on BigBasket because BigBasket transacts as an online merchant, and SBI Cashback covers all online purchases at 5%. The card does not have a specific BigBasket partnership. This is a structural difference worth understanding.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Online Grocery vs Offline Supermarket: Different MCCs</h2>
         <p>When you buy groceries on BigBasket or Blinkit, the transaction runs through an online payment gateway and is tagged with an e-commerce or marketplace MCC. When you swipe your card at DMart, the POS terminal sends a physical retail grocery MCC (5411 or 5412).</p>
@@ -390,7 +387,6 @@ export default function BestCreditCardForGroceries() {
         <p style={{ marginTop: 12 }}>The practical implication: if your family does a mix of weekly BigBasket orders and monthly bulk purchases at DMart or a local supermarket, you need either RBL ShopRite as a single card covering both channels or a two-card approach with an online-focused card plus Axis ACE for offline.</p>
         <p>Track your offline vs online grocery ratio. Most urban Indian households have shifted 60-70% of grocery spend online. But if you still shop at physical stores regularly, the online-only coverage of SBI Cashback leaves real money on the table.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The RBL ShopRite Case</h2>
         <RBLShopRiteSpotlight />
@@ -398,14 +394,12 @@ export default function BestCreditCardForGroceries() {
         <p>The cap of ₹1,000 per month binds at ₹20,000 monthly grocery spend. For a household spending ₹8,000-15,000 on groceries monthly, the cap is not hit and every rupee earns the full 5%.</p>
         <p>The main reason most people do not know this card exists: RBL Bank has less marketing visibility than HDFC or SBI. The card is available on RBL Bank's website and through major card aggregator sites. Application and servicing quality is generally reported as fine, though RBL is a smaller bank than the big four.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Annual Return at Different Grocery Spend Levels</h2>
         <GrocerySpendScenarios />
         <p style={{ marginTop: 12 }}>The scenarios above show a key finding: at ₹10,000/month grocery spend, HDFC Millennia caps at ₹1,000/month but that cap is shared across all categories. If Millennia is also being used for Swiggy and Amazon, the effective grocery allocation from the cap may be lower than ₹500/month.</p>
         <p>RBL ShopRite's ₹1,000/month cap is grocery-specific, not shared with other categories. That is the structural reason it wins for dedicated grocery spend. See our <Link href="/blog/cashback-rate-is-a-lie">cap structure explainer</Link> for more on shared vs category-specific caps.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Stack for Maximum Grocery Earning</h2>
         <p>No single card covers all grocery scenarios optimally. The two-card stack that covers both online app orders and offline supermarket purchases at a combined annual cost under ₹1,000 is practical and effective.</p>
@@ -413,7 +407,6 @@ export default function BestCreditCardForGroceries() {
         <p style={{ marginTop: 12 }}>This stack costs ₹999 per year combined. At ₹12,000 monthly grocery spend split roughly 70/30 between online and offline, you earn approximately ₹4,200 in online 5% cashback (before cap) plus ₹720 in offline 2% cashback, totalling ₹4,920 per year before deducting the ₹999 fee. Net: approximately ₹3,921.</p>
         <p>For a household with higher online grocery spend, adding SBI Cashback as a third card at ₹999/yr provides a ₹5,000 monthly cap safety net for months when your online grocery pushes past ₹20,000. Use the <Link href="/stack-builder">Stack Builder tool</Link> to model your specific scenario.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>What to Do Right Now</h2>
         <ol style={{ paddingLeft: 20, lineHeight: 2.1 }}>
@@ -425,14 +418,12 @@ export default function BestCreditCardForGroceries() {
           <li>Read the <Link href="/smart-swipe">Smart Swipe guide</Link> to see which card to swipe at each specific grocery channel.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
         <p>RBL ShopRite is the best grocery credit card in India right now. The Axis Airtel situation should remind everyone that card rewards are not permanent: what earned 10% on grocery in 2023 earns 1% in 2026. Reviewing your default cards every 6 months is essential.</p>
         <p>HDFC Millennia is a reasonable grocery card for people who already hold it for other categories. But its shared cap means it is not the right tool if grocery is a significant standalone spend category for your household.</p>
         <p>The online vs offline split remains the biggest structural challenge in grocery card selection. No single card is perfect for both channels at a low fee. RBL ShopRite comes closest at ₹500/year for combined online and offline grocery coverage at 5%.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 16 }}>FAQ</h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -455,7 +446,7 @@ export default function BestCreditCardForGroceries() {
         <Link href="/stack-builder">Stack Builder</Link>
       </p>
 
-      <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
         <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Card terms including grocery category inclusions, caps, and partner lists verified as of {UPDATED}. The Axis Airtel card devaluation details are based on the April 2026 revised terms. RBL ShopRite terms subject to change. Always verify current benefit terms with the issuing bank before applying. This is not financial advice.
       </footer>
     </main>

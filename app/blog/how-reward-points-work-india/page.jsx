@@ -216,13 +216,13 @@ export default function BlogHowRewardPointsWorkIndia() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             How Reward Points Actually Work in India: Earn Rates, Expiry, and Real Rupee Value
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Your card says "5x reward points." What does that actually mean in rupees? Less than the bank wants you to think, and more than you are probably getting right now.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -234,7 +234,6 @@ export default function BlogHowRewardPointsWorkIndia() {
         <SvgEarnRateComparison />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Most cards also have exclusions: fuel, rent payments, EMIs, and government payments often earn zero points or reduced rates. Check the exclusion list in your card's Most Important Terms and Conditions before assuming a big spend will earn full rewards.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 2: What Is 1 Reward Point Worth in Rupees?</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This is where Indian banks are deliberately vague. The brochure shows "5x points" without telling you what 1 point is actually worth. Here is the honest number.</p>
@@ -242,7 +241,6 @@ export default function BlogHowRewardPointsWorkIndia() {
         <SvgPointValue />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Amex Membership Rewards stand out because they can be worth ₹1-2+ per point when transferred to certain airline programs at the right time. That is a 4-8x difference versus statement credit. The catch: you need to actually fly on partner airlines.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The SmartBuy Factor: Why Redemption Channel Matters</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>HDFC SmartBuy is the portal where HDFC cardholders can redeem points against Amazon and Flipkart purchases, flight and hotel bookings, and gift vouchers. The values are meaningfully better than statement credit.</p>
@@ -250,35 +248,30 @@ export default function BlogHowRewardPointsWorkIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>1 lakh HDFC points = ₹25,000 on statement credit vs ₹40,000+ via SmartBuy portal during offer periods. That is a ₹15,000 difference on the same 1 lakh points. The honest number on SmartBuy: it is genuinely better, but offer availability and portal uptime are real issues that heavy redeemers complain about.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Compare this approach to cashback cards in our <Link href="/blog/reward-points-vs-cashback" style={{ color: COLOR }}>rewards vs cashback guide</Link> to decide which suits your habits better.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Expiry Rules: The Silent Point Killer</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Most Indian cardholders do not think about expiry until they try to redeem and find their balance is zero. Banks are legally required to tell you about expiry, but they are not required to remind you loudly before it happens.</p>
         <SvgExpiryTimeline />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Set a calendar reminder every 6 months. When it fires, log into your card's reward portal, check the expiry date on your oldest points batch, and redeem if you are within 3-4 months of expiry. Do not wait for the bank to remind you.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Redemption Value Gap: Not All Options Are Equal</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Product catalogue redemptions are almost always the worst value. Banks offer discounted merchandise through reward catalogues priced in points, but the effective point value drops to ₹0.15-0.18 per point because the products are marked up.</p>
         <SvgRedemptionValueGap />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The hierarchy for most Indian bank programs: miles transfer (highest, if you fly), then partner vouchers via SmartBuy, then statement credit, then product catalogue (avoid). Use the catalogue only if you are about to let points expire and everything else is unavailable.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Accelerated Earn Categories: Where Points Stack Up Fast</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Bonus earn categories are where reward cards earn their keep. If your primary spend is on Swiggy, Amazon, or utility bill payments, the right card can give you 5-10x the base earn rate on those specific categories.</p>
         <SvgAcceleratedEarn />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The catch, as always, is the monthly spend cap. Check the <Link href="/blog/7-credit-card-mistakes-india" style={{ color: COLOR }}>7 credit card mistakes article</Link> for how spend caps silently reduce your effective reward rate.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Transfer Partners: The Path to Maximum Value</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you are willing to learn how airline and hotel loyalty programs work, transferring credit card points to miles is almost always the highest-value redemption path available in India.</p>
         <SvgTransferPartners />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Amex has the widest transfer partner network of any card program available in India, including British Airways Avios (useful for short-haul redemptions within India) and Singapore Airlines KrisFlyer (excellent for Southeast Asia and business class to Europe). The caveat: award seats need to be available, which takes some planning.</p>
       </section>
-
       <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2 }}>
@@ -289,7 +282,6 @@ export default function BlogHowRewardPointsWorkIndia() {
           <li>Set a 6-month recurring calendar reminder titled "Check reward point expiry."</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

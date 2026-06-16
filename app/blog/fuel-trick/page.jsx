@@ -259,13 +259,13 @@ export default function BlogFuelTrick() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             The Fuel Card Trick: Stop Paying the 1% Surcharge and Earn 4-7% Back at the Pump
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Every time you pay fuel with a regular credit card, you lose about ₹118 per ₹10,000. The right fuel card flips that into a ₹425-725 gain. Here is the complete optimization guide.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -278,33 +278,25 @@ export default function BlogFuelTrick() {
         <p>When you swipe any credit card at a petrol bunk, the Visa or Mastercard network adds a 1% fuel surcharge to your transaction. This is not charged by the petrol station, it is levied by the card network for fuel category transactions. The government then charges 18% GST on this surcharge, so your actual extra cost is 1.18% above the pump price.</p>
         <p>On ₹5,000/month in fuel, that is ₹59/month or ₹708/year quietly exiting your wallet. A fuel-specific card eliminates this and adds rewards on top.</p>
       </section>
-
       <SvgFuelSurchargeExplainer />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Cards that actually solve the problem</h2>
         <p>Fuel cards work in two ways: they waive the surcharge (so you pay exactly the pump price) and they earn enhanced reward points on fuel transactions. The best cards do both. The key constraint is that most top-tier fuel cards are brand-specific, meaning the best rewards only work at one petrol company's pumps.</p>
         <p>Know which brand of petrol bunk is nearest your home and office before picking a card. This single decision determines which card is best for you.</p>
       </section>
-
       <SvgCardComparison />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Brand-to-card matching: the most important decision</h2>
         <p>India's petrol retail is dominated by three PSU brands: BPCL (Bharat Petroleum), HPCL (Hindustan Petroleum), and IOCL (Indian Oil). Each has a co-branded credit card optimized for its own pumps. Using an HPCL card at a BPCL pump gives you standard reward rates, not the fuel-category enhanced rate.</p>
         <p>Before applying, check which brand dominates your usual fuel route. In most Indian cities, you will find all three brands on major roads, so look at which one is on your commute specifically.</p>
       </section>
-
       <SvgBrandMap />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The GST problem: you are paying tax on a fee</h2>
         <p>The 18% GST on the fuel surcharge is the part of this story that almost no card comparison site mentions. Without a surcharge waiver, you are not just paying 1%, you are paying 1.18%. The 0.18% extra is the government's cut on a private card network fee.</p>
         <p>Fuel cards that waive the surcharge eliminate both the base 1% and typically the GST component. This is the cleaner win from a fuel card beyond the reward points, and it is immediate, appearing on your bill at the pump.</p>
       </section>
-
       <SvgGSTBreakdown />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Real math: ₹5,000/month fuel spend</h2>
 
@@ -315,17 +307,13 @@ export default function BlogFuelTrick() {
           <p style={{ margin: 0, fontSize: 14 }}><strong>Swing from no card to fuel card:</strong> ₹2,051 + ₹708 = ₹2,759/year difference at ₹5,000/month spend. That is real money for picking the right card.</p>
         </div>
       </section>
-
       <SvgAnnualSavingsChart />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How to stack a fuel card with a cashback card</h2>
         <p>Fuel cards typically earn minimal rewards outside the fuel category. So carry a general cashback card (like Axis Ace or Amazon Pay ICICI) for all non-fuel purchases, and reserve your BPCL/HPCL card strictly for petrol transactions. This two-card stack costs you no extra annual fee if the fuel card is fee-waivable.</p>
         <p>Do not use your fuel card for grocery or restaurant payments. It will not earn fuel-category rewards there, and you will miss out on better category rewards from your general card.</p>
       </section>
-
       <SvgStackingFlow />
-
       <section style={{ marginBottom: 24, padding: "20px 24px", background: "rgba(157,140,255,.08)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 12px" }}>Your fuel card action plan</h2>
         <p style={{ margin: "0 0 8px" }}><strong>Step 1:</strong> Note which petrol brand (BPCL, HPCL, IOCL) you fill up at most often. Check your last 3 fuel receipts.</p>
@@ -333,7 +321,6 @@ export default function BlogFuelTrick() {
         <p style={{ margin: "0 0 8px" }}><strong>Step 3:</strong> Never use the fuel card for non-fuel purchases. Keep it in your wallet for petrol visits only and pair it with a general rewards card for everything else.</p>
         <p style={{ margin: 0 }}>Check <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> to find the best fuel card for your specific petrol brand and monthly spend amount.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

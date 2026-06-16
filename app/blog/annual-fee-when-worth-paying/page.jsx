@@ -277,13 +277,13 @@ export default function BlogAnnualFeeWhenWorthPaying() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Credit Card Annual Fee: The Honest Math on When It Is Worth Paying
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Banks never show you the break-even spend. We calculated it for HDFC Regalia, ICICI Emeralde, Axis Magnus, SBI Elite, and Amex MRCC. The numbers are not always flattering.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -297,58 +297,49 @@ export default function BlogAnnualFeeWhenWorthPaying() {
         <p>Annual fee plus 18% GST, divided by the card's true reward rate, equals your minimum annual spend. Spend less, you lose. Spend more, you win. That is the whole game.</p>
         <SvgBreakevenFormula />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Five Popular Cards, Five Honest Calculations</h2>
         <p>The table below uses real June 2026 numbers. Reward rates reflect the current program values after HDFC's March 2026 devaluation (Regalia went from 1.6% to 1.25% effective) and Axis Magnus's restructured EDGE Miles earning.</p>
         <p>Notice that the "with lounge" break-even column drops dramatically for every card. This is why banks give you lounge access: it makes the fee feel justified, and for travellers who actually use it, the math usually works out.</p>
         <SvgFiveCardBreakeven />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Hidden Benefit That Changes Everything</h2>
         <p>Lounge access is the most underestimated variable in fee card math. A single domestic lounge visit saves you ₹600-₹900 versus buying food and drinks airside. International lounge access at airports like BOM T2 or DEL T3 is worth ₹1,500-₹2,500 per visit.</p>
         <p>HDFC Regalia Gold's ₹2,950 effective annual fee (with GST) is completely neutralised by four domestic lounge visits. If you fly even monthly for work, the card pays for itself through lounge access alone and the rewards become pure upside.</p>
         <SvgLoungeValue />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Fee Waivers: The Easiest Win Most People Miss</h2>
         <p>Almost every fee card offers a spend-based annual fee waiver. Hit a certain spend threshold in the card year and the next year's fee is not charged. Most cardholders do not know this or do not track it.</p>
         <p>The Amex MRCC waiver threshold at ₹1,50,000 per year (₹12,500/month) is genuinely easy for middle-income earners to hit. HDFC Regalia at ₹3L/year is achievable if it is your primary card. Axis Magnus and SBI Elite have thresholds so high they are effectively always-paid cards.</p>
         <SvgFeeWaiverConditions />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The HDFC Regalia Case Study: Real Numbers</h2>
         <p>HDFC Regalia Gold charges ₹2,500 plus GST, totalling ₹2,950. At its current reward rate of 1.25% (5 reward points per ₹150 spend, each point worth roughly ₹0.375), the fee-only break-even is ₹2,36,000 annual spend.</p>
         <p>But add lounge: 12 domestic visits at ₹700 each is ₹8,400 in saved spending. Subtract ₹8,400 from ₹2,950 fee: effective fee is actually net positive by ₹5,450. The break-even on rewards alone then effectively disappears for anyone who actually flies. The card does not make sense for a person who never travels by air.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>When Free Cards Genuinely Beat Fee Cards</h2>
         <p>For spenders under ₹15,000 a month, the honest answer is usually a zero-fee card. Amazon Pay ICICI gives 5% on Amazon and 1.5% elsewhere with no annual fee. IDFC FIRST Classic rewards 10X on select partners and 3X elsewhere, also free.</p>
         <p>The only scenario where a fee card wins at low spend is if you have a very specific spend category where the fee card's earn rate is dramatically higher — for example, a fuel-focused card like SBI Octane (₹1,499 fee waived at ₹3L, 4.25% on BPCL fuel) for someone who spends ₹8,000+ monthly on petrol.</p>
         <SvgFreeCardWins />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The One Rule That Overrides Everything</h2>
         <p>If you carry a balance from month to month, fee analysis is irrelevant. Credit card interest at 36-42% per annum wipes out every reward, fee saving, and lounge benefit in the first billing cycle. Sort the interest habit first, then optimise for fee versus no-fee.</p>
         <p>If you clear your bill in full every month: run the break-even formula, add your lounge usage value, check the fee waiver threshold. The card that puts the most money back in your pocket after fee is the correct card for you.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Use the Decision Tree</h2>
         <SvgDecisionTree />
       </section>
-
       <section style={{ background: "var(--raise)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 10px", color: COLOR }}>Three Things to Do Before Your Next Fee Card Decision</h2>
         <p style={{ margin: "0 0 10px" }}>First, calculate your actual monthly card spend for the last 3 months and project annually. Second, count how many times you flew and used (or would have used) a lounge. Third, run the formula: fee + GST divided by reward rate.</p>
         <p style={{ margin: 0 }}>Use our <Link href="/smart-swipe" style={{ color: COLOR, fontWeight: 600 }}>Smart Swipe tool</Link> to compare net annual value across cards at your actual spend level. Also read: <Link href="/blog/regalia-vs-infinia" style={{ color: COLOR }}>Regalia vs Infinia head-to-head</Link> and <Link href="/blog/best-free-cards" style={{ color: COLOR }}>best zero-fee credit cards in India</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

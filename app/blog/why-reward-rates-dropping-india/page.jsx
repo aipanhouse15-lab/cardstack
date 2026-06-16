@@ -282,13 +282,13 @@ export default function BlogWhyRewardRatesDropping() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Why Indian Credit Card Reward Rates Are Dropping — And What It Means for Your Card
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Axis Atlas just cut travel rewards by 50%. Scapia slashed its international rate twice. HDFC split its Swiggy card. This is not a coincidence — there is a structural economic story here, and understanding it changes how you should manage your cards.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -307,7 +307,6 @@ export default function BlogWhyRewardRatesDropping() {
         <SvgDevaluationTimeline />
         <SvgAtlasDevaluation />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Root Cause: MDR Economics Are Getting Tighter</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -318,7 +317,6 @@ export default function BlogWhyRewardRatesDropping() {
         </p>
         <SvgMdrEconomics />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How RBI Policy Is Compressing the Reward Budget</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -329,7 +327,6 @@ export default function BlogWhyRewardRatesDropping() {
         </p>
         <SvgRbiInterventionMap />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Why Travel Rewards Are Being Cut Fastest</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -340,7 +337,6 @@ export default function BlogWhyRewardRatesDropping() {
         </p>
         <SvgTravelRewardCutReasons />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Cashback vs Points: Which Survives Devaluation Better</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -351,7 +347,6 @@ export default function BlogWhyRewardRatesDropping() {
         </p>
         <SvgCashbackVsPoints />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What Smart Cardholders Are Doing Right Now</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -362,7 +357,6 @@ export default function BlogWhyRewardRatesDropping() {
         </p>
         <SvgWhatToDo />
       </section>
-
       <section style={{ background: "rgba(212,168,83,.06)", border: "1px solid rgba(212,168,83,.25)", borderRadius: 8, padding: "20px 24px", marginBottom: 28 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>Your Devaluation Action Checklist</h2>
         <ol style={{ fontSize: 14, color: "var(--text)", lineHeight: 2.1, paddingLeft: 20 }}>
@@ -374,7 +368,6 @@ export default function BlogWhyRewardRatesDropping() {
           <li>For your next card evaluation, weigh the cashback rate versus the points earn rate with equal scepticism about longevity.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

@@ -288,7 +288,7 @@ export default function BestCreditCardForOnlineShopping() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -381,7 +381,6 @@ export default function BestCreditCardForOnlineShopping() {
           </div>
         ))}
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Partner-Only vs All-Online Distinction</h2>
         <p>This is the most important concept to understand before picking an online shopping card. HDFC Millennia's 5% applies only to the 10 merchants on its published partner list. Shop at any other site and you earn 1%, not 5%.</p>
@@ -390,21 +389,18 @@ export default function BestCreditCardForOnlineShopping() {
         <p style={{ marginTop: 12 }}>The matrix above shows the practical coverage gap. Indian consumers increasingly shop across many platforms: Meesho for budget fashion, Nykaa for beauty, Ajio for branded wear, and regional sites for specialty items. HDFC Millennia covers none of these non-partner sites at 5%.</p>
         <p>Understand the <Link href="/blog/cashback-rate-is-a-lie">real effective rate after partner restrictions</Link> before choosing a card based on headline numbers alone.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Cap Math at Different Spend Levels</h2>
         <p>All five of these cards cap their cashback at some level, whether that cap is a strict monthly ceiling or an uncapped structure that is uncapped only within a specific merchant. Understanding where your spend level intersects with each card's cap is the core decision variable.</p>
         <CapMathAtSpendLevels />
         <p style={{ marginTop: 12 }}>The chart makes the decision clearer: for spend below ₹20,000/month, the Axis Cashback card's 7% rate means it can earn more despite the lower cap. For ₹20,000-1,00,000 monthly online spend, SBI Cashback at 5% with a ₹5,000 cap earns the most on non-Amazon spend. Amazon Pay ICICI dominates on Amazon-specific spend regardless of amount.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Right Card for Each Online Merchant</h2>
         <p>Indian online spending is not homogeneous. A typical household might use Amazon for electronics, Flipkart for fashion, Nykaa for beauty, Swiggy for delivery, and a dozen other platforms throughout the month.</p>
         <MerchantCardMatchGrid />
         <p style={{ marginTop: 12 }}>The practical approach: hold Amazon Pay ICICI for Amazon purchases, Axis Flipkart for Flipkart, and SBI Cashback as the default for everything else. Total annual fee: under ₹1,500 for all three cards. See the <Link href="/stack-builder">Stack Builder tool</Link> to optimise this for your specific merchant mix.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Zero-Fee Option</h2>
         <p>Not everyone wants to manage multiple paid cards. If you prefer to avoid annual fees entirely, there is a two-card combination that provides solid online shopping coverage at zero cost.</p>
@@ -412,7 +408,6 @@ export default function BestCreditCardForOnlineShopping() {
         <p style={{ marginTop: 12 }}>Amazon Pay ICICI plus AU Xcite ACE costs ₹0 per year and covers: 5% on Amazon, 2% on Amazon Pay partners like Swiggy and BookMyShow, and 2% flat on everything else. That is meaningfully better than a single card earning 1% base rate across all spending.</p>
         <p>The trade-off is accepting 2% instead of 5% on non-Amazon spends. For a household spending ₹30,000/month across various online platforms, the free combo earns roughly ₹7,200/year. SBI Cashback earns ₹17,280 but costs ₹999, netting ₹16,281. For high spenders, the paid card wins clearly. For moderate spenders, the free combo is the rational choice.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>High-Spender Strategy: SBI Cashback Cap Reality</h2>
         <p>The SBI Cashback card's ₹5,000 monthly cap is often cited as a limitation. In practice, very few households reach it. The cap binds at ₹1 lakh monthly online spend, which is ₹12 lakh per year. That is genuinely high spend territory.</p>
@@ -420,7 +415,6 @@ export default function BestCreditCardForOnlineShopping() {
         <p style={{ marginTop: 12 }}>For the rare household spending ₹1 lakh or more online every month, SBI Cashback earns its maximum ₹5,000/month, or ₹60,000/year, against a ₹999 annual fee. The net ₹59,001 annual return is exceptional. No other card in this fee range comes close at that volume.</p>
         <p>If you are in this high-spend bracket, also consider holding both SBI Cashback and Amazon Pay ICICI: SBI Cashback for all non-Amazon online spend and ICICI for Amazon, since both have separate category tracking and the ICICI card is free. Use the <Link href="/smart-swipe">Smart Swipe guide</Link> to verify the stack math for your specific mix.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>What to Do Right Now</h2>
         <ol style={{ paddingLeft: 20, lineHeight: 2.1 }}>
@@ -432,14 +426,12 @@ export default function BestCreditCardForOnlineShopping() {
           <li>Read the <Link href="/blog/reward-points-vs-cashback">reward points vs cashback explainer</Link> before adding any points-earning card to your wallet for online shopping.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
         <p>SBI Cashback is the single best card for broad online shopping in India in June 2026. Its all-online coverage, high cap, and direct bank account cashback make it the most practical choice for households that shop across many platforms.</p>
         <p>Amazon Pay ICICI wins specifically for Amazon, and that is a meaningful carve-out given how central Amazon is to Indian e-commerce. Holding both at a combined fee of ₹999/year gives you the best of both worlds for the two largest online platforms.</p>
         <p>HDFC Millennia's partner-only limitation is its core weakness in 2026 when Indian consumers shop on dozens of platforms. Unless your spending is tightly concentrated among its 10 partners, SBI Cashback is the more rational choice despite the similar fee and headline rate.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 16 }}>FAQ</h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -462,7 +454,7 @@ export default function BestCreditCardForOnlineShopping() {
         <Link href="/stack-builder">Stack Builder</Link>
       </p>
 
-      <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
         <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Card terms including partner lists, caps, and rates are as of {UPDATED} and subject to change by issuers without notice. HDFC Millennia's partner list changes periodically. SBI Cashback exclusions apply to certain transaction types. Verify current terms before applying. This is not financial advice.
       </footer>
     </main>

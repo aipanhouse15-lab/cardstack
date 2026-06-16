@@ -309,7 +309,7 @@ export default function BestCreditCardForFuel() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -392,7 +392,6 @@ export default function BestCreditCardForFuel() {
           </div>
         ))}
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>What the 1% Surcharge Actually Is</h2>
         <p>Every time you pay for petrol with a credit card, the payment network adds a 1% surcharge to your transaction. This is not a bank decision: it is a network-level charge. The bank collects it and passes it to you unless they specifically waive it as a card benefit.</p>
@@ -401,7 +400,6 @@ export default function BestCreditCardForFuel() {
         <p style={{ marginTop: 12 }}>Most Indian car owners spend ₹4,000-8,000 per month on fuel. At ₹5,000 monthly spend, you are paying ₹600 per year in surcharge alone, with no cashback benefit, if you use a non-fuel card. That ₹600 is pure waste. The right fuel card eliminates it and adds cashback on top.</p>
         <p>The surcharge waiver alone, even without cashback, justifies holding a dedicated fuel card if you drive regularly. Read more about how invisible fees erode rewards in our <Link href="/blog/cashback-rate-is-a-lie">cashback rate explainer</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Petrol Brand Problem</h2>
         <p>India has three major PSU petrol retailers: BPCL (Bharat Petroleum), IOCL (IndianOil), and HPCL (Hindustan Petroleum). Each has a co-branded credit card. The problem is that the high reward rate on each card applies only at that brand's pumps.</p>
@@ -409,7 +407,6 @@ export default function BestCreditCardForFuel() {
         <p style={{ marginTop: 12 }}>Using an SBI BPCL Octane card at an IOCL pump is one of the most common mistakes Indian drivers make. You earn the base 1% reward rate, pay the 1% surcharge, and net a negative return on the fuel spend. This is worse than using a general cashback card.</p>
         <p>Before applying for any fuel card, identify which brand fills up the majority of your tank. If your regular petrol bunk near home is IOCL, get the Axis IOCL card. If the one near your office is BPCL, get SBI BPCL Octane. Do not make brand assumptions based on the card name.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Real Math at ₹5,000 Monthly Fuel Spend</h2>
         <p>The most common fuel spend range for Indian urban car owners is ₹3,000-8,000 per month. At ₹5,000 per month, the numbers for each card look like this when you account for annual fee, cashback, and surcharge waiver value combined.</p>
@@ -419,7 +416,6 @@ export default function BestCreditCardForFuel() {
         <SBIBPCLCapCalc />
         <p style={{ marginTop: 12 }}>The chart above shows a typical driver's annual spend pattern. Note July and August spending above ₹5,000 per month (holiday driving, rain season alternatives to public transit). These are the months where the ₹2,000 monthly cap on SBI BPCL Octane starts to bind on high spenders. If your monthly BPCL spend regularly exceeds ₹32,000, you have outgrown the card's cap.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Fuel Card Plus Cashback Card Stack</h2>
         <p>No fuel card helps you when you are at a highway petrol bunk of an unknown brand, or when your usual pump is out of fuel and you fill at the competitor across the street. For these scenarios, you need a fallback card that earns at least 2% on fuel without a surcharge.</p>
@@ -427,7 +423,6 @@ export default function BestCreditCardForFuel() {
         <p style={{ marginTop: 12 }}>Axis ACE earns 2% flat on all purchases including fuel, and the surcharge on fuel transactions through Axis ACE is handled by Axis Bank's general card benefits. At a highway pump where your brand card earns 1% plus surcharge, Axis ACE earns 2% and is structurally more efficient even before considering the surcharge difference.</p>
         <p>The two-card stack costs ₹999-1,499 per year depending on which brand fuel card you choose. The combined return at typical driving levels is ₹3,000-6,000 per year. Use the <Link href="/stack-builder">Stack Builder tool</Link> to calculate your specific household scenario.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Urban vs Rural Fuel Spend Patterns</h2>
         <p>Urban drivers who fill up at the same 2-3 petrol bunks near home and office can rely on brand-specific fuel cards because their brand is predictable. Rural and highway drivers face a different reality.</p>
@@ -435,7 +430,6 @@ export default function BestCreditCardForFuel() {
         <p style={{ marginTop: 12 }}>Long-distance commercial drivers filling up across state highways encounter all three brands. For these users, the surcharge waiver value is arguably more important than the cashback rate, because surcharge waste happens on every transaction at any pump. Axis IOCL's unlimited IOCL waiver plus a general card for BPCL and HPCL stops is the pragmatic choice.</p>
         <p>For two-wheeler owners with fuel spend under ₹2,000/month, the dedicated fuel card fee may not justify the cashback return. At ₹2,000/month BPCL spend, SBI BPCL Octane earns ₹1,500 in cashback and ₹240 in waiver per year, netting ₹241 after the ₹1,499 fee. Barely worth it. For two-wheelers, a general Axis ACE at 2% flat with no annual fee is more rational.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>What to Do Right Now</h2>
         <ol style={{ paddingLeft: 20, lineHeight: 2.1 }}>
@@ -448,14 +442,12 @@ export default function BestCreditCardForFuel() {
           <li>Review your fuel card every 12 months. If you have changed jobs or moved and now drive past a different brand pump, your card may no longer be optimal. Use the <Link href="/smart-swipe">Smart Swipe guide</Link> to reassess.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
         <p>Fuel cards are one of the clearest value propositions in Indian credit cards: a specific, unavoidable expense that every car owner faces, with a 1% hidden tax that can be eliminated and replaced with positive cashback. There is no reason to fill petrol with a non-fuel card if you drive regularly.</p>
         <p>SBI BPCL Octane offers the highest headline rate in the market at 6.25%, but only for BPCL-loyal drivers spending enough to justify the ₹1,499 annual fee. Axis IOCL is the more broadly useful card given IOCL's market penetration as the largest petrol retailer in India, the unlimited waiver structure, and the lounge visits that add unrelated but real value.</p>
         <p>The honest number on fuel cards: at ₹5,000 monthly fuel spend, the right card saves you ₹600-1,200 per year in surcharge alone, and earns ₹2,400-4,500 in cashback annually. That is real money returned from spending that was going to happen anyway.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 16 }}>FAQ</h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -478,7 +470,7 @@ export default function BestCreditCardForFuel() {
         <Link href="/smart-swipe">Smart Swipe Guide</Link>
       </p>
 
-      <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
         <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. The 1% fuel surcharge is governed by RBI and card network rules as of {UPDATED}. Card-specific surcharge waiver transaction ranges and cashback rates are as stated in issuer terms and subject to revision. BPCL, IOCL, and HPCL are public sector undertakings and brand partnerships are subject to change. Always verify current terms with SBI Card, Axis Bank, and ICICI Bank directly before applying. This is not financial advice.
       </footer>
     </main>

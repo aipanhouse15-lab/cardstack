@@ -169,7 +169,7 @@ export default function PageHealthInsuranceParents() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -182,7 +182,6 @@ export default function PageHealthInsuranceParents() {
         <SvgPremiumVsAge />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The key insight from the premium chart: buy before conditions are diagnosed. A 55-year-old with no declared pre-existing diseases gets a relatively manageable ₹28,500 premium. The same person one year later, after a diabetes diagnosis, will face a 2-3 year PED waiting period at any new insurer and potentially a loaded premium of ₹35,000-40,000. The gap between healthy-at-55 and diagnosed-at-56 can cost you years of full coverage.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Top Insurers for Senior Citizens: June 2026</h2>
         <SvgInsurerSeniorComparison />
@@ -190,7 +189,6 @@ export default function PageHealthInsuranceParents() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Star Senior Citizen Red Carpet is the most popular senior citizen-specific product. It's designed for 60-75 year olds and accepts applicants without requiring extensive pre-policy health checkups. The trade-off: room rent is limited to single AC room (no proportionate deduction clause, just a direct limit on room type). Their hospital network in tier-2 cities is extensive — a meaningful advantage.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Avoid New India Assurance Varistha unless the lower premium is genuinely unaffordable. The 1% of SI room rent limit + proportionate deduction clause is a real risk for senior citizen policyholders who are more likely to require private rooms post-surgery for comfort and recovery.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Pre-Existing Disease Trap: The Real Coverage Gap</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This is the single biggest source of claim rejection and disappointment for senior citizen policyholders. Almost every Indian above 60 has at least one pre-existing condition — and all of them have waiting periods.</p>
@@ -198,14 +196,12 @@ export default function PageHealthInsuranceParents() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The most painful scenario: an elderly parent is diagnosed with diabetes in October, you buy health insurance in December, and they need bypass surgery in March. The bypass claim will be rejected because cardiac conditions are complications of diabetes, and the PED waiting period hasn't elapsed. You'll receive a claim for "unrelated" conditions, but nothing cardiac or vascular.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The solution is timing and honesty. When buying, declare all pre-existing conditions accurately — non-disclosure leads to rejected claims, which is worse than a higher premium. Once enrolled, the waiting period clock starts. Don't switch insurers during the waiting period — you'd restart the clock at the new insurer unless you use IRDAI's portability process correctly.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Floater vs Individual: Which for Parents?</h2>
         <SvgFlaterVsIndividual />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For parents above 65 or with different health conditions, individual policies are the clear recommendation. The risk with a floater: if your father has a major hospitalization that exhausts most of the ₹5L shared cover, your mother has minimal coverage left for the rest of that year. For a senior couple, this scenario is not hypothetical.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Annual restore feature partially mitigates this. Some policies (HDFC Ergo Optima Restore, Niva Bupa Health Companion) automatically restore the full SI if it's exhausted — even for the same person in the same year. If you're buying a floater, this feature is non-negotiable for senior citizen coverage.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Smart Move: Base Policy + Super Top-Up</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Most families buying health insurance for elderly parents face a dilemma: ₹5L feels too low (a major surgery in a private hospital easily costs ₹4-8L), but ₹20L+ policies have very high premiums for ages 60+.</p>
@@ -214,13 +210,12 @@ export default function PageHealthInsuranceParents() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Star Health, Niva Bupa, and HDFC Ergo all offer super top-up products. Star's super top-up is particularly affordable. The total premium (base + top-up) for a 62-year-old is roughly ₹52,000/year versus ₹1,05,000/year for a direct ₹25L policy. The saving is ₹53,000/year — real money for most families managing multiple financial responsibilities.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>One important nuance: super top-up is aggregate-based (across all hospitalizations in a year) while regular top-up is per-hospitalization. Always buy super top-up, not regular top-up. See also our <Link href="/learn/insurance/copay-vs-no-copay" style={{ color: COLOR }}>copay guide</Link>, our <Link href="/learn/insurance/room-rent-trap" style={{ color: COLOR }}>room rent trap article</Link>, and the <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
-            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>

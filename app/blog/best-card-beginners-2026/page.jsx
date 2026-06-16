@@ -144,7 +144,7 @@ export default function BestCardBeginners2026() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Card for Beginners in India (2026)
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 28 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 28 }}>
             Your first card decision matters more than you think.
           </p>
           <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
@@ -154,7 +154,7 @@ export default function BestCardBeginners2026() {
           </div>
         </div>
       </div>
-      <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.85, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
+      <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.6, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -187,7 +187,6 @@ export default function BestCardBeginners2026() {
           <SvgPersonaMatrix />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 1 — Karthik, 22, final-year student, no income</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -203,7 +202,6 @@ export default function BestCardBeginners2026() {
           The FD continues earning interest at the bank's standard rate (around 6.5 percent annually) while pledged. The opportunity cost is small. The CIBIL gain is meaningful — first-card builders who skip this path and apply for unsecured cards immediately at salary credit time often face rejection (no bureau history) and burn 5 to 10 points per attempt.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 2 — Riya, 24, junior consultant, ₹6 lakh, no card</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -219,7 +217,6 @@ export default function BestCardBeginners2026() {
           Why not start with a higher-tier card? Two reasons. CIBIL approval risk is real for first applications without any bureau history. And the marginal cashback benefit of premium cards is small at ₹50,000 monthly spend, so the higher fee isn't justified. Lifetime-free Amazon Pay ICICI is the boring-but-correct first card for most of this persona band.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 3 — Sagar, 28, gig-economy professional, ₹4 lakh, irregular income</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -235,7 +232,6 @@ export default function BestCardBeginners2026() {
           Behavioural prescription. Beyond the standard pay-in-full discipline, Sagar should keep utilisation low even in busy months. Spending ₹20,000 on a ₹25,000 limit card looks like high utilisation to bureaus regardless of underlying income; banks read it as financial stress. Aim for under 30 percent utilisation by paying down balances mid-month if necessary, before statement generation.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 4 — Meera, 32, homemaker, no formal income</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -251,7 +247,6 @@ export default function BestCardBeginners2026() {
           Why this matters. Personal CIBIL is independently valuable. If Meera ever needs to take a loan in her own name (small business, vehicle, eventual property), banks will need her CIBIL. Building it through 24 months of FD-secured card discipline is the cleanest path. The pledged FD continues earning interest, so the opportunity cost is small. The autonomy and creditworthiness gain is structural.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 5 — Aditya, 26, IT engineer, ₹12 lakh, building portfolio fast</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -267,7 +262,6 @@ export default function BestCardBeginners2026() {
           Premium card at month 24 to 30: HDFC Diners Privilege if his spend has consistently exceeded ₹1.5 lakh monthly, justifying the ₹2,500 fee. Magnus is too aspirational (₹18 lakh income recommended); wait until salary crosses that bar. Skipping these stages and applying for Magnus immediately at month 6 with ₹12 lakh income usually produces rejection plus 5-10 CIBIL points lost. The staged approach builds approval certainty.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The first-year math — what you actually earn</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -280,7 +274,6 @@ export default function BestCardBeginners2026() {
           <SvgFirstYearMath />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How CIBIL evolves on a first card — the trajectory</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -296,7 +289,6 @@ export default function BestCardBeginners2026() {
           <SvgBuildingScore />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Match your spend pattern to a card — the self-test</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -309,7 +301,6 @@ export default function BestCardBeginners2026() {
           <SvgSpendCheck />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Common first-card mistakes that cost real money</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -331,7 +322,6 @@ export default function BestCardBeginners2026() {
           <strong>Auto-debiting minimum due rather than full balance.</strong> The single most common first-card trap. Minimum due autopay protects CIBIL but accumulates interest on remaining balance at 36 to 42 percent APR. Set up full-statement-balance auto-debit instead. Net banking apps from every major bank now offer this option explicitly; switching takes about 2 minutes and saves potentially years of compounding interest leakage if you ever forget a manual payment.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What documentation do you actually need?</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -356,7 +346,6 @@ export default function BestCardBeginners2026() {
           One under-appreciated detail: applying through your salary-account bank cuts processing time roughly in half. Banks already have your KYC, salary credit history, and address on file — they just need to confirm CIBIL and underwrite the card. HDFC salary account holders typically get HDFC Millennia approved in 2 to 3 days versus 7 to 10 days through a non-relationship application. The same shortcut works at SBI, ICICI, and Axis. If your salary credits to a particular bank, default the first-card application there unless you have a specific reason to apply elsewhere — the friction reduction alone justifies the choice in most cases.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Year 2 onwards — what changes once you have CIBIL</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -372,17 +361,15 @@ export default function BestCardBeginners2026() {
           The patience pays a non-obvious dividend. By year three, with a 740-plus CIBIL and three years of clean tradelines, you'd qualify for premium cards (HDFC Diners Privilege, Axis Atlas, American Express MRCC) that deliver 3.5 to 5 percent effective rate on optimised redemption. Skip the disciplined first-year build and you're stuck on entry-tier cards for several extra years while your CIBIL catches up. The compounding effect over a 10-year card-holding career is roughly ₹2 to 3 lakh of cumulative reward differential between disciplined first-year builders and sloppy first-year revolvers — almost entirely from the gating that strong CIBIL provides into higher-reward products. The first card is the foundation; the optimisation is what you build on top of it later.
         </p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 18px" }}>Frequently asked questions</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "16px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 600 }}>{q.name}</summary>
-            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>
-
       <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
@@ -393,7 +380,6 @@ export default function BestCardBeginners2026() {
           <li><Link href="/learn/credit-cards" style={{ color: COLOR }}>Credit cards knowledge hub</Link>. All our card guides in one place.</li>
         </ul>
       </section>
-
       <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>

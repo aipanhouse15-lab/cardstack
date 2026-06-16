@@ -167,7 +167,7 @@ export default function PagePPFvsFDvsDebtFund() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -179,7 +179,6 @@ export default function PagePPFvsFDvsDebtFund() {
         <SvgOutcome10yr />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The ₹6.1L difference is almost entirely explained by tax treatment, not returns. PPF at 7.1% and FD at 7.0% have near-identical gross returns. The difference is that PPF interest is never taxed, while FD interest is taxed at 30% every single year. That annual tax drag compounds into a ₹6.1L difference over 10 years.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Tax Mechanics: EEE vs ETE</h2>
         <SvgTaxTreatment />
@@ -187,34 +186,30 @@ export default function PagePPFvsFDvsDebtFund() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>FD is ETE (Exempt-Taxable-Exempt) in practice: the principal is not taxed (it's your post-tax money), the interest is fully taxable at your slab rate every year, and there's no maturity tax. But that annual taxation is where the damage occurs — compounding is interrupted every year as tax payments reduce the investable base.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Debt mutual funds: since April 2023, gains are taxed at 12.5% LTCG for holding beyond 2 years (without indexation). This is a post-Budget 2024 structure. For investments held 2-10 years, the 12.5% one-time tax at exit significantly beats the annual 30% slab taxation of FDs.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Liquidity: The PPF Trade-Off</h2>
         <SvgLiquidityComparison />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>PPF's 15-year lock-in is the reason many people avoid it even when it would otherwise be their best option. This is sometimes a mistake. If you're 30 years old today, you'll be 45 when the 15-year account matures — a perfectly reasonable age to access a large tax-free corpus. The lock-in horizon becomes less daunting when you map it to your life stage.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Partial withdrawals from Year 7 provide some flexibility. Loans against PPF from Year 3 to 6 at 1% above PPF rate are available for emergencies. These mechanisms aren't as liquid as FD or debt funds, but they're not as rigid as people fear.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Risk vs Return: Where Each Sits</h2>
         <SvgRiskReturnMatrix />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Debt mutual funds carry NAV risk: if interest rates rise, bond prices fall, and the fund's NAV dips. This doesn't mean you lose money if you hold for 2+ years, but you can see negative short-term returns. For someone who panics at any NAV drop, this psychological discomfort is real even if the financial impact is minimal at long horizons.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>FD and PPF carry zero NAV risk — the return is predetermined and guaranteed. PPF carries sovereign credit risk (if the government were to default), which is effectively zero. FD carries bank credit risk above the DICGC ₹5L limit.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Who Should Pick What</h2>
         <SvgWhoPicksWhat />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The smart approach for most salaried families: use all three products for different purposes. PPF for long-term wealth accumulation (take advantage of EEE + 80C). Debt fund for medium-term goals (down payment in 5 years, education fund in 7 years). FD for emergency fund and very short-term capital parking.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Explore our related guides: <Link href="/learn/savings/fd-real-return" style={{ color: COLOR }}>FD real return</Link> for the tax math in detail, <Link href="/learn/savings/tax-saving-fd-vs-elss-vs-ppf" style={{ color: COLOR }}>Tax Saving FD vs ELSS vs PPF</Link> for the 80C angle, and the <Link href="/learn/savings" style={{ color: COLOR }}>savings hub</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
-            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>

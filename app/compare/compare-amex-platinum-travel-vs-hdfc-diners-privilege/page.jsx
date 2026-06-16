@@ -83,13 +83,13 @@ export default function CompareAmexPlatinumVsDinersPrivilege() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Amex Platinum Travel vs HDFC Diners Privilege — premium card showdown for 2026
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Both cards target the ₹15-25L income band and reward serious spenders. Diners has a higher headline rate and broader Indian acceptance; Amex stacks bigger first-year voucher value but demands more fee-flexibility. The right pick swings on whether your year-one spend will hit the milestone bars.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -108,7 +108,6 @@ export default function CompareAmexPlatinumVsDinersPrivilege() {
           If your monthly spend is split across many merchants and you want raw earn rate, Diners' 10 RP per ₹150 wins. If you can hit ₹4L+ in 12 months and will use Taj/IHCL vouchers, Amex Platinum Travel returns roughly ₹65,000 in voucher value on top of points — a higher first-year ceiling at the cost of higher fee.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -131,14 +130,12 @@ export default function CompareAmexPlatinumVsDinersPrivilege() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Annual benefit stack at ₹6L spend</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
           <SvgValueLadder />
         </div>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK HDFC DINERS PRIVILEGE IF</div>
@@ -159,7 +156,6 @@ export default function CompareAmexPlatinumVsDinersPrivilege() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Fee-justification thresholds</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -169,7 +165,6 @@ export default function CompareAmexPlatinumVsDinersPrivilege() {
           For premium-card economics see our <Link href="/learn/credit-cards" style={{ color: COLOR }}>credit-cards hub</Link>; for the broader landscape including Magnus and other ₹10L-class cards, the <Link href="/compare/hdfc-regalia-vs-axis-magnus" style={{ color: COLOR }}>Regalia vs Magnus comparison</Link> covers the rung above.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

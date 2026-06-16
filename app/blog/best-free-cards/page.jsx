@@ -240,13 +240,13 @@ export default function BlogBestFreeCards() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Free Credit Cards in India 2026: Ranked With Honest Pros and Cons
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             There are exactly two truly free credit cards worth holding in India right now. The rest are "conditionally free" or quietly charge you in ways the headline never mentions.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -259,9 +259,7 @@ export default function BlogBestFreeCards() {
         <p>A credit card is truly free if it charges no joining fee and no annual fee, and that applies every year without a spending condition. Most cards described as "free" are actually one of two other things: conditionally free (fee waived only if you spend a minimum amount per year) or quietly paid (joining fee upfront, which banks count separately from the annual fee).</p>
         <p>This distinction matters because a conditionally free card with a ₹50,000 spend waiver effectively ties you to a usage pattern. If you miss the threshold in any year, you pay the fee. Know which type you are signing up for before you apply.</p>
       </section>
-
       <SvgFreeDefinitionBreakdown />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The ranked list</h2>
 
@@ -297,38 +295,30 @@ export default function BlogBestFreeCards() {
           <strong>The honest downside:</strong> The highest spend threshold in this list at ₹2 lakh/year. HSBC's India branch network is limited to major metros, so customer service access for non-digital issues can be slow.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The real math: free card vs paid card at ₹12,000/month</h2>
         <p>At ₹12,000/month spend, IDFC FIRST Classic earns roughly 3X on most categories. That is 36 points per ₹100, valued at ₹0.25 each, equaling ₹0.75 per ₹100 or effectively 0.75% base rate. On dining and 10X categories, it is 2.5%.</p>
         <p>A ₹2,500-fee premium card at the same spend may offer 2-3% across all categories, giving higher gross rewards. But subtract the ₹2,500 fee and the net advantage shrinks significantly for spend levels below ₹20,000/month. For anyone spending under ₹15,000/month, the truly free card wins.</p>
       </section>
-
       <SvgIDFCvsPremiuum />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The spend-waiver math for conditional cards</h2>
         <p>If a card charges ₹499 and waives it at ₹1 lakh annual spend, calculate whether the rewards you earn on that ₹1 lakh exceed the ₹499 fee. At 1% flat cashback on ₹1 lakh, you earn ₹1,000 in rewards and save ₹499 in fees: net ₹1,499 positive. The fee waiver is not a burden if you are already spending that amount naturally.</p>
         <p>The mistake is chasing the waiver threshold by spending money you would not otherwise spend. Never spend an extra ₹5,000 just to hit a waiver that saves you ₹499.</p>
       </section>
-
       <SvgSpendWaiverBreakeven />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Hidden costs to watch for</h2>
         <p>A card with no annual fee can still charge you in other ways. The most common are joining fees (separate from annual fee, charged once at issuance), reward redemption fees (₹99-₹299 per redemption at some banks), and inactivity fees charged if you do not make even one transaction in 12 months.</p>
         <p>Also check whether the "lifetime free" claim is for the base variant only. HDFC Moneyback+ is sometimes marketed with lifetime free status, but upgrading to the Plus variant brings fees. Read the specific variant's MITC document, not just the marketing page.</p>
       </section>
-
       <SvgHiddenCostRadar />
-
       <section style={{ marginBottom: 24, padding: "20px 24px", background: "var(--green-dim)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>Before you apply</h2>
         <p style={{ margin: "0 0 8px" }}>Run your actual monthly spend numbers through <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> to find which free card matches your real usage pattern.</p>
         <p style={{ margin: "0 0 8px" }}>If you spend heavily on Amazon, stop overthinking and get Amazon Pay ICICI first. Add IDFC FIRST Classic as your second card for everything else. That combination costs you nothing and covers most spending categories.</p>
         <p style={{ margin: 0 }}>If you are a complete beginner with no credit history, read our <Link href="/blog/best-card-low-spenders-2026" style={{ color: COLOR }}>guide for low-spender first cards</Link> before applying for any card.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

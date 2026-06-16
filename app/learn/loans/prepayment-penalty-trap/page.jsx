@@ -201,7 +201,7 @@ export default function PagePrepaymentTrap() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -217,7 +217,6 @@ export default function PagePrepaymentTrap() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>She had a fixed rate loan. She didn't know. She'd signed the sanction letter without checking prepayment clauses three years earlier. Nobody had flagged it.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Her interest saving from the prepayment? About ₹6.8L over the remaining tenure. The penalty was ₹1.41L — yes, still worth prepaying, but that's a 21% hit to her interest savings. A number that didn't exist on any website she visited when comparing banks.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What Actually Happens When You Try to Prepay</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The mechanics are simple. You call your bank and say you want to make a lump-sum payment toward your principal. On floating rate loans (which most home loans are today), RBI mandates zero prepayment penalty for individuals. You can prepay any amount, any time, no charges.</p>
@@ -226,7 +225,6 @@ export default function PagePrepaymentTrap() {
         <SvgPenaltyMath />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The net saving after penalty is still positive in most scenarios — prepayment is almost always worthwhile once you're past the lock-in. The issue is the unpleasant surprise when that penalty hits your bank account.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What Each Bank Charges: The Honest Table</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>We called each bank's home loan department and pulled their sanction letter samples to compile this. Banks are required to disclose penalty terms, but they often bury them in page 8 of a 12-page document nobody reads.</p>
@@ -235,7 +233,6 @@ export default function PagePrepaymentTrap() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>SBI has no fixed rate home loan product currently (all floating), which means all SBI home loan borrowers enjoy zero prepayment penalty by default. The trade-off is longer processing times and occasional branch-dependent service quality.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>One critical note: the table above reflects published penalty terms. Some banks change penalties based on whether the source of prepayment funds is "own funds" or proceeds from another loan. RBI requires banks to accept "own funds" prepayments without penalty on floating rate loans — but be prepared for pushback, especially at smaller branches.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>When Prepayment Saves the Most Money</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Home loan interest is front-loaded. In the early years of a 20-year loan at 9%, roughly 85% of your EMI goes to interest and only 15% to principal. By Year 12, it's closer to 60% interest and 40% principal. By Year 18, you're mostly repaying principal.</p>
@@ -243,7 +240,6 @@ export default function PagePrepaymentTrap() {
         <SvgSavingsVsPenalty />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>A ₹5L lump-sum prepayment at Year 3 on a ₹50L, 20-year loan at 9% saves about ₹9.5L in interest and cuts 2.5 years off your tenure. At Year 15, the same ₹5L prepayment saves about ₹2.8L and cuts 1 year. The time value of prepayment is massive.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Lock-In Period: The Hidden Trap Inside the Trap</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Most borrowers know about prepayment penalties. Fewer know about lock-in periods and their actual cost.</p>
@@ -251,14 +247,12 @@ export default function PagePrepaymentTrap() {
         <SvgLockInImpact />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The lock-in isn't a penalty, but it's absolutely a hidden cost. Banks never explain the opportunity cost of being locked in during a rate-cut environment. Always negotiate the shortest possible lock-in before you sign — ideally zero.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Optimal Prepayment Windows</h2>
         <SvgOptimalTiming />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Year 7–12 is the golden window. Your outstanding principal is typically ₹35–45L (on a ₹50L original loan), which means every lakh you prepay saves ₹1.7–2.2L in interest over the remaining tenure. The penalty window (if any) is usually behind you, and the compound benefit of reduced principal is highest here.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Practical tactics: Many employers give annual bonuses in March or April (after advance tax clearance). Direct at least 50% of any variable pay toward home loan prepayment in Years 5–12. Use NACH auto-debit to set a monthly top-up of ₹5,000–10,000 above your EMI — this partial prepayment is allowed even on fixed rate loans in many cases, and saves more per rupee than waiting for a large lump sum.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How to Exit Your Loan Without Getting Burned</h2>
         <SvgEscapeFlowchart />
@@ -266,7 +260,6 @@ export default function PagePrepaymentTrap() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>If you're on a fixed rate loan and want to exit: first calculate the penalty on your outstanding balance. Then calculate how much interest you'll save over your remaining tenure by repaying now. If savings exceed penalty (they almost always do in Years 5+), prepay. If you're early in the tenure and the penalty seems high, consider a balance transfer to a floating rate loan at a new bank — you pay one-time processing fee instead of a percentage penalty, and you convert to a zero-penalty loan for the future.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Before any balance transfer: check that your new bank's floating rate actually saves enough to cover the transfer costs. Our <Link href="/tools/emi-calculator" style={{ color: COLOR }}>EMI calculator</Link> has a balance transfer mode. Also see our <Link href="/learn/loans/fixed-vs-floating-rate" style={{ color: COLOR }}>fixed vs floating guide</Link> for the rate environment analysis.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Three Questions to Ask Before You Sign Any Loan</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Question 1: Is this a fixed or floating rate loan? If floating, confirm the sanction letter explicitly says "no prepayment penalty for individual borrowers as per RBI guidelines."</p>
@@ -274,13 +267,12 @@ export default function PagePrepaymentTrap() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Question 3: If fixed rate, what is the prepayment penalty as a percentage and does it change over time? Some banks reduce the penalty after Year 5 or Year 7. That declining penalty structure can be favourable if you plan to prepay later.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Also see our full <Link href="/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" style={{ color: COLOR }}>SBI vs HDFC vs ICICI comparison</Link> for how these banks differ on prepayment and total cost metrics, and the broader context at our <Link href="/learn/loans" style={{ color: COLOR }}>loans hub</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
-            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>

@@ -164,13 +164,13 @@ export default function BlogBestCardHighSpenders() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Cards for High Spenders in India 2026 (₹1 Lakh+ Monthly)
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Above ₹1 lakh monthly spend, the right card stack can return ₹3,000-5,000 per month in value. Here's what actually delivers at high spend levels — and why "premium" doesn't always mean best.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -181,33 +181,28 @@ export default function BlogBestCardHighSpenders() {
         <SvgHighSpendCards />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The surprise on this chart: SBI Cashback ranks highest in pure rupee value at ₹1L/month — because its 5% online rate doesn't hit the cap until ₹1L/month of online spend. If your spending is predominantly online (common for high earners using Amazon, Swiggy, online bill payments), SBI Cashback is the highest-value card regardless of its modest annual fee.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>HDFC Infinia vs Axis Magnus: The Premium Showdown</h2>
         <SvgInfiniaVsMagnus />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Infinia's unlimited Priority Pass is genuinely exceptional. Axis Magnus limits international Priority Pass to 8 visits per year — fine for 2-4 international trips annually, but Infinia's unlimited access enables full cost-free lounge use for heavy travellers. For 20+ annual lounge visits at ₹2,000 value each: Infinia saves ₹40,000/year on lounge access alone.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Lounge Access: The Benefit That Changes the Fee Calculation</h2>
         <SvgLoungeComparison />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>High spenders who travel frequently often find that lounge access alone justifies the premium card fee. ₹14,750 annual fee for Infinia. Use the Priority Pass lounge 10 times with one guest each time = 20 lounge accesses at ₹2,000 each = ₹40,000 in value. The fee has paid for itself before a single reward point is counted.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Right Card for Your Spend Profile</h2>
         <SvgSpendProfile />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The optimal high-spender setup for most urban professionals: HDFC Infinia (or Axis Magnus if Infinia is unavailable) as the primary card for offline and travel spending, paired with SBI Cashback for all online transactions. This combination covers the full spend spectrum at maximum rates.</p>
         <SvgMilestoneCalculator />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What High Spenders Often Get Wrong</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Sticking with one card for everything. No single card maximises all spend categories. The high-spend sweet spot is always a 2-card strategy: one premium card for travel and offline + one purpose-built card for online (SBI Cashback) or specific ecosystems (Amazon Pay ICICI for Amazon).</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Ignoring the fee waiver threshold. Infinia's fee is waived at ₹10L annual spend (₹83K/month). If you're spending ₹1L/month, you qualify — but only if you put that spending on the Infinia card specifically. Splitting across cards means no single card gets the waiver threshold crossed.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>See our <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder tool</Link> to model your specific spend profile across card combinations, and our <Link href="/blog/build-3-card-stack-guide" style={{ color: COLOR }}>3-card stack guide</Link> for the full strategy.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

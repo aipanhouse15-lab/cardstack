@@ -149,7 +149,7 @@ export default function BestCardFreelancers2026() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Card for Freelancers in India (2026)
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 28 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 28 }}>
             No salary slip, irregular income. These 5 cards work for freelancers.
           </p>
           <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
@@ -159,7 +159,7 @@ export default function BestCardFreelancers2026() {
           </div>
         </div>
       </div>
-      <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.85, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
+      <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.6, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -192,7 +192,6 @@ export default function BestCardFreelancers2026() {
           <SvgBracketPlaybook />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Bracket A — ₹3 to 5 lakh ITR — building from zero</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -208,7 +207,6 @@ export default function BestCardFreelancers2026() {
           For freelancers with parents willing to add as guarantors, some banks (HDFC, ICICI) approve unsecured first cards on parent-guaranteed basis at this bracket. The structural alternative is the same: a clean track record on a small first card builds the bureau foundation that unlocks better products in years 2 and 3.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Bracket B — ₹5 to 10 lakh ITR — the Amex SmartEarn sweet spot</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -224,7 +222,6 @@ export default function BestCardFreelancers2026() {
           The companion card at this bracket: Amazon Pay ICICI (lifetime free, 5 percent Amazon Prime). The combined ₹495 fee for two cards delivers two-card flexibility at single-card cost.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Bracket C — ₹10 to 20 lakh ITR — the two-card stack</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -243,7 +240,6 @@ export default function BestCardFreelancers2026() {
           The third card at this bracket. Once 18 months of clean payment history is established on the two-card stack, add HDFC Millennia (₹1,000 fee, 5 percent on 10 partner apps). The three-card combination pushes effective rate to 3.0 to 3.2 percent across most freelancer spend mixes.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Bracket D — ₹20 lakh-plus ITR — premium with business tracking</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -262,7 +258,6 @@ export default function BestCardFreelancers2026() {
           The combined effective rate across this stack lands at 4 to 5 percent on a typical ₹12 to 18 lakh annual spend, after fees, with optimised redemption. The fee outlay is meaningful (₹15,000 to ₹16,000 combined) but recovers ₹50,000 to ₹70,000 of additional reward value versus mid-tier card stacks at the same spend volume.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The GST input credit angle — recovering 18 percent on business spend</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -281,7 +276,6 @@ export default function BestCardFreelancers2026() {
           <SvgGstFlow />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Underwriting reality — which banks actually approve self-employed</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -294,7 +288,6 @@ export default function BestCardFreelancers2026() {
           <SvgUnderwriting />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The freelancer spend profile — and why it matters for card pick</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -310,7 +303,6 @@ export default function BestCardFreelancers2026() {
           <SvgSpendProfile />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Common freelancer mistakes that cost real money</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -332,7 +324,6 @@ export default function BestCardFreelancers2026() {
           <strong>Skipping the business expense audit at year-end.</strong> Freelancers who don't reconcile business expenses to ITR claims often miss legitimate deductions worth ₹50,000 to ₹2 lakh annually. Spend an hour at year-end going through statement transactions to identify business spend that wasn't captured in your accounting.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Cash flow management — the freelancer-specific challenge</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -351,7 +342,6 @@ export default function BestCardFreelancers2026() {
           The other working-capital tool worth knowing: invoice discounting via fintech platforms like KredX, Velocity, or Recur. You sell unpaid client invoices to the platform at a small discount (typically 1.5 to 3 percent) for immediate cash. Useful when client payments are confirmed but delayed by 30 to 90 days. Effectively another form of receivables financing, distinct from credit-card float. Operationally a useful third tier in the freelancer cash-flow toolkit alongside the card float and the cash credit line.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The forex card-vs-credit card decision for international freelancers</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -370,17 +360,15 @@ export default function BestCardFreelancers2026() {
           One last operational tip: if you receive client payments from overseas, register on Wise, Payoneer, or similar to receive USD/EUR/GBP into Indian bank accounts at near-spot rates. Standard SWIFT remittance from clients drops 2 to 4 percent in conversion friction; Wise and Payoneer drop 0.5 to 1 percent. On ₹50 lakh of annual overseas receipts, the friction differential is ₹1 to 1.5 lakh — material money that most freelancers leave on the table by accepting standard SWIFT inflows. Wise and Payoneer also reduce currency-conversion variability by letting you choose when to convert — useful if you have a view on INR-USD direction in any given quarter.
         </p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 18px" }}>Frequently asked questions</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "16px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 600 }}>{q.name}</summary>
-            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>
-
       <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
@@ -391,7 +379,6 @@ export default function BestCardFreelancers2026() {
           <li><Link href="/learn/credit-cards" style={{ color: COLOR }}>Credit cards knowledge hub</Link>. All our card guides in one place.</li>
         </ul>
       </section>
-
       <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>

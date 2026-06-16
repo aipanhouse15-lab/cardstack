@@ -263,13 +263,13 @@ export default function BlogCreditCardVsDebitCard() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Credit Card vs Debit Card: Which Should You Actually Use?
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Most Indians treat these two as interchangeable. They are not. One puts you in control; the other leaves you exposed.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -282,7 +282,6 @@ export default function BlogCreditCardVsDebitCard() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>A debit card spends money you already have. A credit card spends money the bank lends you for up to 50 days, interest-free, with fraud protection on top.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>That distinction sounds simple, but the practical consequences are enormous. Let's walk through each one.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Fraud Protection: The Biggest Difference</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>RBI's zero-liability circular (updated in 2019) says if you report an unauthorised credit card transaction within 3 working days, your liability is zero. The bank is responsible, full stop.</p>
@@ -290,7 +289,6 @@ export default function BlogCreditCardVsDebitCard() {
         <SvgFraudProtectionComparison />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The practical impact: if your card details are stolen and used for an ₹80,000 purchase, on a credit card you dispute it and pay nothing. On a debit card, you wake up to an empty account and a 90-day wait.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The ₹80,000 MacBook Story</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Here's a real scenario that plays out hundreds of times every day in India. You buy a MacBook Pro from an online store. The laptop arrives damaged. The seller refuses a return. You paid via debit card.</p>
@@ -298,21 +296,18 @@ export default function BlogCreditCardVsDebitCard() {
         <SvgMacBookScenario />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This is not a hypothetical. Visa and Mastercard chargeback rights are a real, enforceable consumer protection tool. Debit cards, especially on the RuPay network, have significantly weaker protections.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Rewards: One Card Earns, the Other Mostly Doesn't</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The honest number here is stark. Good credit cards return 1 to 3 percent of your spend as cashback, points, or miles. Most debit cards return effectively zero.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>On ₹1,00,000 of annual spend, a mid-range credit card like HDFC Regalia returns roughly ₹1,060. Your HDFC Millennia Debit Card returns maybe ₹100 to ₹200, and even that requires hitting spend thresholds most people miss.</p>
         <SvgRewardRateChart />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Float: Free Money for Up to 50 Days</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Every credit card comes with an interest-free period of 20 to 50 days, depending on when in the billing cycle you make your purchase. During this window, the bank has effectively given you a zero-cost short-term loan.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you keep your money in a savings account earning 4 to 7 percent (like IDFC FIRST or Yes Bank), you earn interest on money the bank is lending you for free. On ₹50,000 of monthly spend held for 45 days, that's roughly ₹250 to ₹500 extra per month, effortlessly.</p>
         <SvgFloatBenefit />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>CIBIL Score: Only One Card Builds It</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This is non-negotiable. Debit card usage is invisible to every credit bureau in India. CIBIL, Experian, CRIF, Equifax, none of them see your debit card behaviour.</p>
@@ -320,27 +315,23 @@ export default function BlogCreditCardVsDebitCard() {
         <SvgCibilImpact />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you're planning to take any loan in the next 3 years, a credit card is not optional. It's your training ground for creditworthiness.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Interest Risk: When Credit Cards Bite Back</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Here's where the debit card has one genuine advantage: you cannot spend money you don't have. Credit cards charge 3 to 3.5 percent per month on unpaid balances, which is 36 to 42 percent annually.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you pay only the minimum due on a ₹50,000 balance, you will pay back nearly double the original amount by the time the debt is cleared. This is the trap. The solution is simple: pay the full statement balance, every month, before the due date.</p>
         <SvgInterestRisk />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>When to Use Which Card</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The answer isn't "always use one or the other." It depends on what you're buying and where.</p>
         <SvgWhenToUseWhich />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The practical rule is this: for any purchase above ₹1,000 at a merchant that accepts cards, use a credit card. For ATM withdrawals, street vendors, and situations where you genuinely can't trust yourself to pay the bill, use debit or UPI.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you don't have a credit card, apply for a lifetime-free entry-level card today. IDFC FIRST Classic, SBI SimplySAVE, or Axis MY Zone are all solid starting points with no annual fee.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you already have one, set up an auto-debit for the full statement balance so you never pay interest. Then use the card for every purchase above ₹500. Your debit card can go back in the drawer for ATM use only.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

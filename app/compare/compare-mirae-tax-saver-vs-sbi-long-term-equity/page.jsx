@@ -83,13 +83,13 @@ export default function CompareMiraeVsSbiElss() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Mirae Asset ELSS Tax Saver vs SBI Long Term Equity — 80C face-off for 2026
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Two of the largest ELSS funds in India by AUM. Same Section 80C deduction, same 3-year lock-in, same equity tax treatment. The differentiator is portfolio construction and the resulting CAGR — and Mirae has been pulling ahead consistently for the last seven years.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -108,7 +108,6 @@ export default function CompareMiraeVsSbiElss() {
           Mirae's 5-year CAGR of ~16.5% beats SBI Long Term Equity's ~14.5% by 200 bps annualised. The 80C deduction (₹46,800 saved at 30% slab) is identical — that benefit is invariant across ELSS funds. If you are claiming 80C under the old regime in FY 2025-26, Mirae is the simpler default; SBI is reasonable as a second ELSS for diversification across AMCs.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -131,7 +130,6 @@ export default function CompareMiraeVsSbiElss() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>10-year wealth outcome at ₹1.5L/year</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
@@ -141,7 +139,6 @@ export default function CompareMiraeVsSbiElss() {
           Tax saved adds roughly ₹4.68L over 10 years (₹46,800/year × 10) at 30% slab, irrespective of fund choice — both ELSS funds save the same upfront tax. The post-tax wealth differential is driven entirely by gross return.
         </p>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK MIRAE ASSET ELSS IF</div>
@@ -162,7 +159,6 @@ export default function CompareMiraeVsSbiElss() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The 80C decision frame</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -172,7 +168,6 @@ export default function CompareMiraeVsSbiElss() {
           Compare the regime decision in our <Link href="/learn/tax/old-vs-new-regime" style={{ color: COLOR }}>old vs new regime</Link> walkthrough; the <Link href="/tools/income-tax-calculator" style={{ color: COLOR }}>tax calculator</Link> models actual 80C savings. For ELSS positioning within a broader portfolio see the <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link>.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

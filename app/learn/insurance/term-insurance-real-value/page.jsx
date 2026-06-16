@@ -174,7 +174,7 @@ export default function PageTermInsuranceRealValue() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -187,7 +187,6 @@ export default function PageTermInsuranceRealValue() {
         <SvgInflationErosion />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>At 6% average annual inflation (India's historical average is closer to 6-7%), ₹1 crore today is worth ₹55.8 lakh in purchasing power 10 years from now, ₹31.2 lakh in 20 years, and ₹17.4 lakh in 30 years. A 30-year-old who takes ₹1 crore cover and dies at 60 is leaving their family ₹17 lakh equivalent in real terms. For most urban Indian families with a home loan and dependent kids, that's not remotely adequate.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How Much Cover Do You Actually Need?</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The right framework is income replacement, not a round number. Your family needs to maintain their current lifestyle if you're gone. The standard approach: cover enough to generate your current annual income in investment returns, plus cover all outstanding debts and future financial goals.</p>
@@ -196,7 +195,6 @@ export default function PageTermInsuranceRealValue() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Add your home loan outstanding, car loan, personal loans, and any credit card debt — these become the family's liability and need to be covered. Add future goals like children's education and marriage (estimate at today's cost, then add some buffer for inflation). Subtract existing savings and any other insurance cover you have. The resulting number is your actual coverage need.</p>
         <SvgLifeStageCoverage />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Premium Comparison: What Your Cover Actually Costs</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The good news about buying adequate cover: term insurance is exceptionally cheap for young, healthy, non-smoking Indians. The difference between ₹1 crore and ₹3 crore in annual premium is often only ₹20,000-25,000 per year.</p>
@@ -204,14 +202,12 @@ export default function PageTermInsuranceRealValue() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Tata AIA consistently offers the most competitive online premiums. For a 30-year-old non-smoking male, ₹1 crore over 30 years costs just ₹9,800/year — that's ₹817/month. Less than your Netflix, Spotify, and Swiggy subscription combined. Scaling to ₹3 crore is approximately ₹29,000/year — around ₹2,400/month.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>LIC premiums are significantly higher (₹15,800/year for the same ₹1Cr cover) because LIC includes a government-backing implied premium and has higher operational costs. LIC's term product (LIC Tech Term) is available online at lower rates than offline, but still 50% more than Tata AIA. The trade-off is LIC's unmatched brand trust for offline claimants — worth considering if your nominee may face challenges managing the claim process.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Riders: Which Ones Are Actually Worth Adding</h2>
         <SvgRiderMatrix />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The waiver of premium rider is the one universally worth having. At ₹300-600/year additional, it keeps your policy active if you become permanently disabled and can no longer pay premiums. Without this rider, a disability that stops your income also stops your life cover — at exactly the moment your family needs it most.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The accidental death benefit rider is the most commonly sold and, paradoxically, the least valuable. Your family needs the same financial support whether you die in a car accident or from cancer. Having a rider that doubles the payout only for accidental death is an emotional purchase, not a rational one. Buy more base cover instead.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>ULIP vs Term + Invest: The Math That Settles the Debate</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Insurance agents often pitch ULIPs (Unit Linked Insurance Plans) as "insurance with investment" — implying you get double benefit. The math says otherwise.</p>
@@ -219,7 +215,6 @@ export default function PageTermInsuranceRealValue() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>On identical premium outgo (₹80,000/year), term + ELSS SIP creates ₹65-80 lakh over 20 years while a comparable ULIP creates ₹35-45 lakh. The gap is the multiple layers of ULIP charges: mortality charges (the insurance cost embedded in ULIP, typically higher than pure term), fund management charges, administration charges, and premium allocation charges. Together these erode 3-5% of your investment annual return.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>IRDAI has capped ULIP charges significantly since 2010. But capped still means charged. Pure term + direct plan mutual fund SIP is universally the superior structure. Separate your insurance need from your investment need, buy the cheapest of each, and you win on both.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What to Buy, From Whom, and How</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Calculate your coverage need using the income replacement formula above. A target range for most 30-35 year old salaried Indians with home loans and young families: ₹2-4 crore total term cover.</p>
@@ -227,13 +222,12 @@ export default function PageTermInsuranceRealValue() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Buy online, directly on the insurer's website. Declare everything honestly on the proposal form. Pay annually (not monthly — monthly loading adds 3-5% to total premium). Set up NACH auto-debit and keep the term policy active for the full planned period.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Also see our <Link href="/learn/insurance/claim-settlement-ratios-2026" style={{ color: COLOR }}>claim settlement ratios guide</Link> for the 2025-26 insurer rankings, and our <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link> for health insurance coverage you need alongside your term plan.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
-            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>

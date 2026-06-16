@@ -311,7 +311,7 @@ export default function BestCreditCardForInternationalSpending() {
         padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
-        lineHeight: 1.65,
+        lineHeight: 1.6,
       }}
     >
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
@@ -461,7 +461,7 @@ export default function BestCreditCardForInternationalSpending() {
                   {card.tag}
                 </span>
               </div>
-              <div style={{ fontSize: 13, color: "var(--text-muted)", lineHeight: 1.7 }}>
+              <div style={{ fontSize: 13, color: "var(--text-muted)", lineHeight: 1.6 }}>
                 <span style={{ fontWeight: 600, color: "var(--text)" }}>Fee:</span> {card.fee} |{" "}
                 <span style={{ fontWeight: 600, color: "var(--text)" }}>Forex:</span>{" "}
                 <span style={{ color: card.forex === "0%" ? "#22c55e" : card.forex === "1%" ? "#f59e0b" : "#ef4444", fontWeight: 700 }}>
@@ -599,7 +599,7 @@ export default function BestCreditCardForInternationalSpending() {
             <summary style={{ fontWeight: 600, fontSize: 15, cursor: "pointer", paddingTop: 4, color: "var(--text)" }}>
               {item.name}
             </summary>
-            <p style={{ marginTop: 10, fontSize: 14, color: "var(--text-muted)", lineHeight: 1.7 }}>
+            <p style={{ marginTop: 10, fontSize: 14, color: "var(--text-muted)", lineHeight: 1.6 }}>
               {item.acceptedAnswer.text}
             </p>
           </details>
@@ -634,7 +634,7 @@ export default function BestCreditCardForInternationalSpending() {
           paddingTop: 20,
           fontSize: 12,
           color: "var(--text-muted)",
-          lineHeight: 1.7,
+          lineHeight: 1.6,
         }}
       >
         <strong>Disclaimer:</strong> Assure Fintech is an independent editorial platform and does not hold a banking license. Nothing on this page constitutes financial advice regulated under SEBI or RBI. Forex markup rates, reward structures, and card terms change frequently. Always verify current terms with the issuing bank before applying or traveling. Some links may earn us a referral commission that does not affect our editorial stance.

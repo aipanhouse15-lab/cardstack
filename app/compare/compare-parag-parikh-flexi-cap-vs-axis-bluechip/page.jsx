@@ -82,13 +82,13 @@ export default function ComparePpfasVsAxisBluechip() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Parag Parikh Flexi Cap vs Axis Bluechip — diversified growth vs defensive large-cap in 2026
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Two of the most-held active equity funds in Indian retail portfolios. Same broad equity exposure, very different cap curve and geographic mandate. The risk profile is materially different — and so is the place each fund earns in a portfolio.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -107,7 +107,6 @@ export default function ComparePpfasVsAxisBluechip() {
           Over rolling 5 and 7-year windows since 2018, PPFAS Flexi Cap has consistently delivered 250-400 bps of CAGR alpha versus Axis Bluechip — at the cost of meaningfully larger interim drawdowns. If you can hold through 25-30% drawdowns without panic-redeeming, PPFAS wins on long-horizon outcome. If you cannot, Axis Bluechip's tighter risk profile is genuinely better for your behaviour.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -131,7 +130,6 @@ export default function ComparePpfasVsAxisBluechip() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Risk-return profile</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
@@ -141,7 +139,6 @@ export default function ComparePpfasVsAxisBluechip() {
           Returns CAGR are illustrative 5-year rolling windows ending March 2026 from AMC factsheets. Drawdown figures reflect peak-to-trough during the 2022 correction and early-2025 dip.
         </p>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK PARAG PARIKH FLEXI CAP IF</div>
@@ -162,7 +159,6 @@ export default function ComparePpfasVsAxisBluechip() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Behavioural fit, not just CAGR</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -172,7 +168,6 @@ export default function ComparePpfasVsAxisBluechip() {
           For a deeper take on the flexi-cap vs large-cap framework, our <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link> walks through SEBI categorisation. Use the <Link href="/tools/sip-calculator" style={{ color: COLOR }}>SIP calculator</Link> to model both at typical CAGR ranges.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

@@ -258,13 +258,13 @@ export default function BlogBestCardInsurancePremiums2026() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Card for Insurance Premium Payments in India 2026: The Tricky Part Nobody Mentions
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             You pay ₹20,000-₹60,000 a year in insurance premiums. Most credit cards earn you nothing on it. The ones that do earn can return ₹500-₹900 per year from that spend alone.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -277,59 +277,50 @@ export default function BlogBestCardInsurancePremiums2026() {
         <p>Insurance premiums are typically the largest annual credit card transaction most families make outside of EMIs. A family of four paying LIC, health insurance, and term insurance can easily put ₹70,000-₹1,00,000 a year through their card from insurance alone.</p>
         <p>The problem is that the most popular cashback cards in India — SBI Cashback Card being the most prominent example — explicitly exclude insurance from their high-reward categories. Millions of people pay their premiums on these cards assuming they are earning 5% cashback. They are earning nothing.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Who Excludes Insurance and Who Does Not</h2>
         <p>The divide between cards that reward insurance and cards that exclude it is sharp, and the exclusions are not prominently disclosed. SBI Cashback's T&Cs list insurance under excluded merchant categories for the 5% online cashback — but the marketing prominently features "5% on all online purchases," which is technically only true outside excluded categories.</p>
         <p>HDFC Regalia Gold, Axis Magnus, and Amex MRCC all award full reward points on insurance premium payments as of June 2026. Verify this every year — insurance earning rules are among the most frequently updated in credit card programs when banks renegotiate their MDR arrangements with insurers.</p>
         <SvgInsurancePaymentProblem />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Real Numbers: ₹50,000 Premium Across Five Cards</h2>
         <p>Here is what a ₹50,000 annual insurance premium actually earns across the major cards in the market. The difference between the best and worst performing card on this single spend category is ₹900 versus zero — every year, for as long as you hold the policy.</p>
         <p>Axis Magnus at 2X EDGE Miles leads at approximately ₹900 in travel redemption value. HDFC Regalia Gold returns ₹625. Amex MRCC returns ₹500 at basic cashback, but that number climbs significantly if you redeem MR points into airline transfer partners. SBI Cashback returns nothing.</p>
         <SvgPremiumMath />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Term vs Health Insurance: Different Amounts, Different Strategy</h2>
         <p>Term insurance premiums for a ₹1 crore cover are typically ₹15,000-₹30,000/year for a healthy 35-year-old non-smoker. Health insurance for a family of four with ₹10 lakh cover runs ₹20,000-₹60,000/year depending on age and insurer.</p>
         <p>At lower premium amounts (term insurance under ₹20,000), the reward difference between cards is ₹150-₹300 annually. At higher amounts (health insurance family floater ₹50,000+), choosing the right card earns an extra ₹400-₹600 compared to the wrong one. Over 20 years of premium payments, that compound difference is material.</p>
         <SvgHealthVsTermPremium />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Billing Cycle Trick for Insurance Premium Float</h2>
         <p>Insurance premiums are predictable and large — making them the ideal spend to plan around your billing cycle. Paying an annual premium on Day 1 of your billing cycle versus Day 25 is the difference between 50 days of interest-free credit and 25 days.</p>
         <p>On a ₹50,000 premium, 50 days of float at an 8% opportunity cost (equivalent FD rate) saves approximately ₹550 in money you did not have to pull from your savings account prematurely. Add this to your reward earning and the case for a rewards card on insurance payments becomes even stronger.</p>
         <SvgTermInsuranceTiming />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Annual vs Monthly Premium: Which Earns More?</h2>
         <p>Most insurers give you a choice between annual and monthly (or quarterly) premium payment. The reward earning is roughly similar either way. The float value clearly favours annual payment. But there is one additional consideration: some cards cap monthly rewards earned in certain categories.</p>
         <p>If your card has a ₹1,000/month rewards cap and your monthly insurance premium is ₹4,000, paying monthly means you earn rewards on the full ₹4,000 each month with no cap hit. Paying annually might put the entire ₹48,000 into a single cycle where a per-cycle cap could limit your earning. Check your card's specific monthly limits.</p>
         <SvgMonthlyVsAnnual />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Verdict: Which Card to Use</h2>
         <p>For most people paying ₹20,000-₹50,000 annually in insurance premiums, HDFC Regalia Gold is the best all-around choice. It rewards insurance spend at full rate, has an achievable fee waiver condition, and the insurance premium itself counts toward the ₹3L waiver threshold — helping you get the card's fee waived while earning rewards on a spend you were making anyway.</p>
         <p>For high spenders (above ₹80,000/month total card spend) who already hold Axis Magnus, the 2X EDGE Miles on insurance makes it the highest-earning option. Amex MRCC is worth considering if you actively use Membership Rewards transfers to airline programs, where MR points can be worth ₹1.00+ each.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step-by-Step: Maximum Reward Strategy</h2>
         <SvgRewardEarningGuide />
       </section>
-
       <section style={{ background: "var(--raise)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 10px", color: COLOR }}>What to Do Before Your Next Premium Is Due</h2>
         <p style={{ margin: "0 0 10px" }}>Download your credit card's full terms and conditions and search for "insurance" in the reward earning section. Confirm whether your card earns on insurance premiums and whether any monthly or annual caps apply. If your card is SBI Cashback or Axis Flipkart — switch to HDFC Regalia Gold for this spend.</p>
         <p style={{ margin: 0 }}>For help picking the right card for your full spend profile including insurance: use <Link href="/smart-swipe" style={{ color: COLOR, fontWeight: 600 }}>Smart Swipe</Link>. Read more about how fee card maths works in <Link href="/blog/annual-fee-when-worth-paying" style={{ color: COLOR }}>our annual fee guide</Link>. For the broader picture on insurance products themselves, see our <Link href="/learn/insurance" style={{ color: COLOR }}>insurance comparison section</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

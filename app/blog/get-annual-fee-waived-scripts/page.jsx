@@ -286,13 +286,13 @@ export default function BlogGetAnnualFeeWaived() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             How to Get Your Credit Card Annual Fee Waived — Scripts Indians Can Actually Use
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             A ₹11,800 annual fee on an Axis Magnus does not have to be a done deal. Here is word-for-word what to say, when to call, which banks cave, and what to do if they say no.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -310,7 +310,6 @@ export default function BlogGetAnnualFeeWaived() {
         </p>
         <SvgBankFlexibilityRating />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 1: Time Your Call Correctly</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -321,7 +320,6 @@ export default function BlogGetAnnualFeeWaived() {
         </p>
         <SvgCallTimeline />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 2: Know Your Numbers Before You Dial</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -332,7 +330,6 @@ export default function BlogGetAnnualFeeWaived() {
         </p>
         <SvgMetricsTable />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Script — Word for Word</h2>
 
@@ -368,12 +365,10 @@ export default function BlogGetAnnualFeeWaived() {
           <p style={{ fontSize: 12, color: "var(--text-muted)", margin: 0 }}>Many agents have not done this math themselves. Running it out loud sometimes prompts them to offer more.</p>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What Banks Typically Offer</h2>
         <SvgWaiverOutcomeMatrix />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Real Case: Axis Magnus Annual Fee ₹11,800</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -384,7 +379,6 @@ export default function BlogGetAnnualFeeWaived() {
         </p>
         <SvgAxisMagnusWaiverMath />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>If They Say No: The Escalation Ladder</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -392,7 +386,6 @@ export default function BlogGetAnnualFeeWaived() {
         </p>
         <SvgEscalationLadder />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Downgrade as Your Backup — Not a Consolation</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -403,7 +396,6 @@ export default function BlogGetAnnualFeeWaived() {
         </p>
         <SvgDowngradeVsClose />
       </section>
-
       <section style={{ background: "var(--green-dim)", border: "1px solid rgba(62,224,143,.25)", borderRadius: 8, padding: "20px 24px", marginBottom: 28 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>Your Pre-Call Checklist</h2>
         <ol style={{ fontSize: 14, color: "var(--text)", lineHeight: 2.1, paddingLeft: 20 }}>
@@ -415,7 +407,6 @@ export default function BlogGetAnnualFeeWaived() {
           <li>Have time — the call can take 15-25 minutes including hold music.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

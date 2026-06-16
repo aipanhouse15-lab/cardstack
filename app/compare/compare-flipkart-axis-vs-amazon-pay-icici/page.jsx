@@ -87,13 +87,13 @@ export default function CompareFlipkartAxisVsAmazonIcici() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Flipkart Axis vs Amazon Pay ICICI — which platform-native card pays more in 2026
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Co-brand cashback cards reward ecosystem loyalty. Pick whichever platform you actually shop on — the cross-platform earnings collapse to base rate. The interesting case is the household running both ecosystems simultaneously.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -112,7 +112,6 @@ export default function CompareFlipkartAxisVsAmazonIcici() {
           If forced to pick one: Amazon Pay ICICI for the lifetime-free structure plus Prime 5% with no cap; Flipkart Axis if your spend leans Flipkart/Myntra/Cleartrip. Most multi-platform households earn more by holding both — the combined annual fee impact is just ₹500 + GST after Amazon ICICI's zero charge.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -134,7 +133,6 @@ export default function CompareFlipkartAxisVsAmazonIcici() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Annual earnings across platform mixes</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
@@ -144,7 +142,6 @@ export default function CompareFlipkartAxisVsAmazonIcici() {
           The crossover line is roughly 50/50 platform mix. Below that, the heavier-weighted platform's native card always wins; above 70%, the difference is dramatic — ₹19,200/yr on a 100%-skewed profile.
         </p>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK AMAZON PAY ICICI IF</div>
@@ -165,7 +162,6 @@ export default function CompareFlipkartAxisVsAmazonIcici() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Why the stack is rational</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -175,7 +171,6 @@ export default function CompareFlipkartAxisVsAmazonIcici() {
           The full mathematics is documented in our <Link href="/blog/cap-adjusted-cashback-explained" style={{ color: COLOR }}>cap-adjusted cashback guide</Link>. To model your specific spend, our <Link href="/tools/cashback-calculator" style={{ color: COLOR }}>cashback calculator</Link> compares both cards in 30 seconds.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

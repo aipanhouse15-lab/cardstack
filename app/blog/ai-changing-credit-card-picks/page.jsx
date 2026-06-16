@@ -267,13 +267,13 @@ export default function BlogAiChangingCreditCardPicks() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             How AI Is Changing the Way Indians Pick Credit Cards
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             ChatGPT, Perplexity, and specialised comparison tools are pulling card selection away from influencer affiliate links toward data-driven spend math. Banks are not happy about it.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -286,7 +286,6 @@ export default function BlogAiChangingCreditCardPicks() {
       </div>
 
       <SvgHeroFlow />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Old Way Was Broken</h2>
         <p>For most of the last decade, choosing a credit card in India meant watching a YouTube video or reading a blog post written by someone who earns a commission if you apply. The incentive was never to find you the best card. The incentive was to get you to click.</p>
@@ -295,28 +294,24 @@ export default function BlogAiChangingCreditCardPicks() {
         <p>The cap problem is real and widespread. A card that advertises 5% cashback on Amazon but caps rewards at ₹1,000 per month is only a 5% card if you spend exactly ₹20,000 on Amazon and not a rupee more. Spend ₹40,000 and your effective rate drops to 2.5%. Spend ₹80,000 and you are at 1.25%. Nobody's YouTube video mentioned that.</p>
         <p>AI tools do not have the same incentive structure. They are not paid when you apply. This changes what information surfaces first.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What AI Tools Actually Expose</h2>
         <SvgBankSweat />
         <p>When you ask a well-prompted AI tool about two cards side by side, it pulls out the cap structure, the fee-to-benefit math, and the category exclusions that bank marketing never leads with. Three things banks would prefer stayed buried come to the surface quickly.</p>
         <p>First: the true effective reward rate after applying realistic spend and caps. Second: which categories are excluded (international spends, fuel, utilities, rent are excluded on most "lifestyle" cards). Third: the annual fee payback calculation, which often shows that a zero-fee card beats a ₹2,500/year card unless you hit very specific spend patterns.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Generic AI vs Personalised Comparison</h2>
         <SvgGenericVsReal />
         <p>Here is the honest limitation of general AI tools like ChatGPT or Google AI: they give every user the same answer. Ask "best cashback card in India" and you get Axis Ace, HDFC Millennia, and SBI SimplyCLICK, in some order, with their headline rates. No cap analysis. No fee offset. No spend-pattern match.</p>
         <p>That is still better than an affiliate blog, but it is not a personalised recommendation. The cards that come up first in an AI answer are the cards that appear most frequently in the training data, which is largely the same affiliate content the AI was supposed to replace.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How Smart Swipe Closes the Gap</h2>
         <SvgSmartSwipeHow />
         <p><Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> works differently from a general chatbot: it asks for your actual monthly spend by category and amount, then runs each card's real cap structure against your numbers. The output is not "here are the top 3 cards" but "here is the net annual rupee value of each card given exactly what you spend."</p>
         <p>If you spend ₹25,000 on flights and ₹8,000 on dining each month, Smart Swipe knows to flag that the HDFC Regalia's dining reward cap will leave money on the table at your volume, while an Axis Atlas with its uncapped mile earning on direct airline bookings will serve you better. That is a different class of answer from anything a general AI can produce today.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What AI Still Cannot Do</h2>
         <SvgAiLimits />
@@ -324,7 +319,6 @@ export default function BlogAiChangingCreditCardPicks() {
         <p>Bank relationships are invisible to AI. HDFC Infinia Metal requires an invitation or an existing relationship with HDFC Private Banking. No tool can tell you whether you qualify. Similarly, limited-time offers that give 10x points on certain partners for 60 days are gone before most comparison databases update. If a deal closes next week, today's AI recommendation may already be stale.</p>
         <p>Devaluation risk is unquantifiable. Axis Magnus's 2024 reward restructuring cut effective value for heavy users by 40% with three weeks notice. No AI model predicted it. Axis Bank released a circular and that was it. The only hedge against this is spreading spend across two or three card ecosystems rather than concentrating on one.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How Banks Are Responding</h2>
         <SvgBankComplexityTrend />
@@ -332,20 +326,17 @@ export default function BlogAiChangingCreditCardPicks() {
         <p>This means more co-branded variants (BPCL SBI Card vs HPCL Axis Card vs Indian Oil Kotak Card, each slightly different), more partner-specific tiers (5% at Partner A, 3% at Partner B, 1% elsewhere), and more milestone gating (3x rewards only after ₹50,000 monthly spend). Each layer of added complexity is a deliberate friction against clean comparison.</p>
         <p>The takeaway: when a bank launches a card that is genuinely hard to model, that complexity is a feature for the bank, not for you. See our piece on <Link href="/blog/cashback-rate-is-a-lie" style={{ color: COLOR }}>why the advertised cashback rate is almost always a lie</Link> for a breakdown of how this works in practice.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How to Use AI Tools Correctly for Card Selection</h2>
         <SvgInputGuide />
         <p>The right workflow in June 2026 uses general AI tools for education and shortlisting, then hands off to spend-specific tools for the final decision. Use ChatGPT or Perplexity to understand what card categories exist and what the general trade-offs are between cashback, travel miles, and lifestyle rewards. Then go to <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> with your actual spend numbers for the ranked output.</p>
         <p>Input precision matters. "I spend on food and travel" is not enough information. "₹8,000/month on Swiggy and Zomato, ₹25,000/month on direct airline bookings via airline apps, ₹12,000/month on supermarkets" gives a tool something real to work with. Also read our <Link href="/blog/first-card-decision-framework" style={{ color: COLOR }}>first card decision framework</Link> if you are just starting out, and understand the <Link href="/blog/reward-points-vs-cashback" style={{ color: COLOR }}>points vs cashback trade-off</Link> before you commit to an ecosystem.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What to Do Right Now</h2>
         <p>Pull your last three months of credit card statements and categorise your spend. Use actual numbers, not estimates. Run those numbers through <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> and note the top two cards by net annual value. Then open those two cards' most current terms and conditions documents (not the bank's marketing page) and verify the cap structures match what the tool found.</p>
         <p>If your current card is not in the top two by more than ₹2,000/year, it is worth switching. The goal is not to have the theoretically best card. The goal is to not leave ₹4,000 to ₹8,000 a year on the table because your card selection was based on a 2022 YouTube video.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

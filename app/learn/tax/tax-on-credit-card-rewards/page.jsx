@@ -174,7 +174,7 @@ export default function PageTaxOnCreditCardRewards() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -186,34 +186,29 @@ export default function PageTaxOnCreditCardRewards() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The logic: when you spend ₹100 and earn 5 reward points worth ₹5, you effectively paid ₹95 for the item. The ₹5 in rewards is not additional income — it's a reduction in your effective purchase cost. Airlines and hotels treat frequent flyer miles the same way: a discount on future purchases, not taxable income.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This interpretation has held up in the absence of contrary CBDT guidance. Until India's tax authority issues a specific circular saying otherwise, the "not taxable" position for personal card spend-based rewards is well-supported.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Decision Tree: When Do Rewards Become Taxable?</h2>
         <SvgTaxabilityFlowchart />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The key distinction is between rewards linked to your spending (discount/rebate treatment) versus rewards received as prizes, gifts, or compensation for an activity (income treatment). Spending rewards: not taxable. Non-spending rewards: potentially taxable.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Full Reward Type Matrix</h2>
         <SvgRewardTypeMatrix />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Referral rewards are the most overlooked risk. When HDFC Bank or Axis Bank gives you ₹2,000 for referring a friend who gets a card, that ₹2,000 is not linked to your spending — it's compensation for an activity (referral). Technically, this is income from other sources. Individual amounts are small, but heavy referrers accumulating ₹30,000-50,000/year in referral rewards are in grey territory.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Milestone bonuses (spend ₹5L in a year and get a free flight) are the other grey area. These are linked to spending but delivered as a separate gift rather than as accumulated points. Most tax practitioners treat them as spend-linked (not taxable) but the structure is different from regular reward points.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>High-Value Redemptions: Where Scrutiny Could Happen</h2>
         <SvgHighValueRedemption />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The IT department's focus area for credit card rewards is large-scale redemptions, not ₹500 cashback events. An individual redeeming ₹5L+ annually in flight miles or hotel stays via credit card points is unlikely to face scrutiny for personal card rewards — especially when those points were earned on documented credit card statements showing corresponding spend.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Contest winners and lucky draw recipients are different. Card companies are required to deduct TDS at 30% on contest winnings above ₹10,000 before payment. If you win a contest without TDS being deducted, you're responsible for declaring it. Check your Form 26AS — any TDS deducted by a card company will appear there.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Business Card: The Trap Most Corporate Employees Miss</h2>
         <SvgBusinessCardTax />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>If you use a company credit card for business expenses and personally redeem the accumulated rewards: those rewards technically belong to your employer. The points were earned on the company's spending. When you personally redeem them, it's a perquisite — taxable as part of your salary under Section 17 of the Income Tax Act.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This is widely ignored in practice, but it's the correct legal position. Some companies have written policies explicitly allowing personal redemption of corporate card rewards as a fringe benefit (in which case the company bears the perquisite tax). Many companies have no policy at all — employees redeem freely and no tax is paid.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Practical Guide: What to Declare</h2>
         <SvgPracticalAdvice />
@@ -221,13 +216,12 @@ export default function PageTaxOnCreditCardRewards() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For power users maximizing premium card rewards, earning referral income, or using corporate cards for personal redemptions: get a CA consultation once a year. The cost of a consultation (₹2,000-5,000) is trivial compared to the potential tax liability if you've been accumulating significant reward income without declaration.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>See our <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link> for maximizing your credit card rewards legally and efficiently, and our <Link href="/learn/tax" style={{ color: COLOR }}>tax hub</Link> for related deductions and exemptions you might be missing.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
-            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>

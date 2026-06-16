@@ -260,13 +260,13 @@ export default function BlogBestCardLowSpenders2026() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Card for Low Spenders in India 2026: The Honest Ranked List
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Spending under ₹15,000 a month? Most credit card advice is written for people spending 5x that. This guide is actually for you.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 6 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -280,54 +280,46 @@ export default function BlogBestCardLowSpenders2026() {
         <p>Low spenders represent a large share of India's working population: early-career professionals, students on their first card, homemakers managing household budgets, and retirees with moderate expenses. The right card for this group looks completely different from the aspirational recommendations you see elsewhere.</p>
         <SvgLowSpenderDefinition />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Why Fee Cards Punish Low Spenders</h2>
         <p>The math is brutal and simple. A ₹10,000/month spender earns ₹1,500 in rewards on HDFC Regalia (1.25% reward rate) against an annual fee of ₹2,950 with GST. Net result: -₹1,450 per year. You paid ₹1,450 for the privilege of holding the card.</p>
         <p>Axis Magnus is even worse at this spend level: net negative by ₹7,480 annually. The higher the fee card's prestige, the worse the math for low spenders. This is not a coincidence — these cards are designed to monetise high spenders and use low spenders to subsidise them.</p>
         <SvgWhyFeeCardsPunishLowSpenders />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Ranked Picks for Low Spenders</h2>
         <p>These four cards cover most low-spender needs in India as of June 2026. Each has been selected based on net annual value at ₹10,000/month spend, not on marketing prestige or bank advertising budgets.</p>
         <p>The rankings are based on actual cashback rates, fee structures, waiver conditions, and the realistic spend mix of someone in this segment. No lounge access was counted since most low spenders do not fly frequently enough for it to change the math.</p>
         <SvgTopPicksGrid />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rank 1 Deep Dive: Amazon Pay ICICI Card</h2>
         <p>Amazon Pay ICICI has been the best free credit card in India for low-to-mid spenders for three consecutive years. No annual fee, no fee waiver conditions, no complicated point conversion, and cashback credited directly as Amazon Pay Balance each billing cycle.</p>
         <p>The 5% rate on Amazon for Prime members is genuinely excellent. If you spend ₹3,000/month on Amazon (a realistic figure for someone buying groceries, personal care, and household items there), you earn ₹150/month from that spend alone, which is ₹1,800/year on a single category. Add 1% on all other spend and the annual earnings at ₹10,000/month reach ₹2,640 with zero fee paid.</p>
         <SvgAmazonPayMath />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rank 2 Deep Dive: IDFC FIRST Classic</h2>
         <p>IDFC FIRST has built the most underrated free credit card program in India. The Classic card offers 10X reward points at a partner network spanning restaurants, fuel stations, grocery chains, and online platforms — and 3X on everything else. No annual fee, ever.</p>
         <p>The points earn at 1 point per ₹10 spent (3X base), with each point worth approximately ₹0.25 on redemption. That translates to a base rate of roughly 0.75%, rising to 2.5% at 10X partner merchants. For someone with a diverse, small-value spend pattern, this broad reward structure compounds well.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What Low Spenders Should Look For (And Avoid)</h2>
         <p>The non-negotiables for a low-spender card are: zero fee or a waiver achievable under ₹1L annual spend, rewards on everyday categories rather than just travel, and cashback that does not require a complex point conversion to realise.</p>
         <p>The red flags: fee waivers above ₹3L spend, rewards locked to luxury categories, and point systems where small transaction amounts do not round to a full point. These card structures are explicitly designed to benefit high spenders at the expense of everyone else.</p>
         <SvgWhatToLookFor />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Cards to Stay Away From</h2>
         <p>Axis Magnus and HDFC Infinia are excellent cards for the right person. That person spends ₹1,00,000 or more per month. At ₹10,000/month, these cards cost more in fees than they return in rewards, by a wide margin.</p>
         <p>The internet is full of Magnus and Infinia reviews written by high spenders and travel hackers for whom the maths works beautifully. Do not let that content convince you these cards are aspirational milestones. They are tools optimised for a specific spend level, and for low spenders, they are simply the wrong tool.</p>
         <SvgCardsToAvoid />
       </section>
-
       <section style={{ background: "var(--raise)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 10px", color: COLOR }}>Your Next Step</h2>
         <p style={{ margin: "0 0 10px" }}>If you are not already on Amazon Pay ICICI and you shop on Amazon at all, that is the first application to make today. If you prefer broad category rewards and want something that earns on dining and groceries at local stores, IDFC FIRST Classic is your pick. Both take under 10 minutes to apply for online.</p>
         <p style={{ margin: 0 }}>Use <Link href="/smart-swipe" style={{ color: COLOR, fontWeight: 600 }}>Smart Swipe</Link> to verify which card earns most against your actual spend pattern. Also read: <Link href="/blog/best-free-cards" style={{ color: COLOR }}>best zero-fee credit cards complete list</Link> and <Link href="/blog/annual-fee-when-worth-paying" style={{ color: COLOR }}>when an annual fee finally makes sense</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

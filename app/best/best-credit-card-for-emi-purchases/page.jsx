@@ -234,7 +234,7 @@ export default function BestCreditCardForEMIPurchases() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -314,7 +314,7 @@ export default function BestCreditCardForEMIPurchases() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 20 }}>
         <div style={{ background: "var(--green-dim)", border: "1px solid #86efac", borderRadius: 8, padding: "14px 16px" }}>
           <strong style={{ fontSize: 13, color: "#16a34a", display: "block", marginBottom: 6 }}>Cost EMI (you pay interest)</strong>
-          <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.7 }}>
+          <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.6 }}>
             <li>HDFC: Points earned on full amount</li>
             <li>Axis: 2% cashback still accrues</li>
             <li>SBI: Points earned, lower rate</li>
@@ -323,7 +323,7 @@ export default function BestCreditCardForEMIPurchases() {
         </div>
         <div style={{ background: "rgba(212,168,83,.06)", border: "1px solid #fdba74", borderRadius: 8, padding: "14px 16px" }}>
           <strong style={{ fontSize: 13, color: "#ea580c", display: "block", marginBottom: 6 }}>No-Cost EMI (subvented)</strong>
-          <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.7 }}>
+          <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.6 }}>
             <li>HDFC: Points withheld on select brand EMIs</li>
             <li>Axis: Cashback may not apply</li>
             <li>SBI: Points NOT earned (per MITC 2026)</li>
@@ -478,14 +478,14 @@ export default function BestCreditCardForEMIPurchases() {
               {item.name}
               <span style={{ color: COLOR, fontSize: 18, flexShrink: 0, marginLeft: 12 }}>+</span>
             </summary>
-            <div style={{ padding: "0 18px 16px", fontSize: 14, color: "var(--text-muted,#475569)", lineHeight: 1.7 }}>
+            <div style={{ padding: "0 18px 16px", fontSize: 14, color: "var(--text-muted,#475569)", lineHeight: 1.6 }}>
               {item.acceptedAnswer.text}
             </div>
           </details>
         ))}
       </div>
 
-      <footer style={{ borderTop: "1px solid var(--border,var(--hair))", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border,var(--hair))", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.6 }}>
         <p style={{ margin: "0 0 6px" }}>
           <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. We are not affiliated with any bank or card issuer. Card features, fees, and reward rates change frequently — verify all details with the issuing bank before applying. This page does not constitute financial advice.
         </p>

@@ -196,13 +196,13 @@ export default function BlogCreditCardMistakesIndia() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             7 Credit Card Mistakes Indians Make (And How to Fix Each One)
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             You probably think you are using your credit card correctly. You are likely not. Here are the seven mistakes that quietly cost Indian cardholders thousands of rupees every year.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -215,7 +215,6 @@ export default function BlogCreditCardMistakesIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>By month 12, if you have only ever paid the minimum, you have paid over ₹21,000 in interest while still owing close to the original amount. The math is brutal.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The fix is simple but requires discipline: pay the full statement balance every single month. If you cannot, treat it as a personal loan at 42% annual interest and prioritize clearing it before anything else.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #2: Closing Your Oldest Credit Card</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>You upgraded to a premium card, so you close the old basic one. Feels logical. CIBIL disagrees.</p>
@@ -224,7 +223,6 @@ export default function BlogCreditCardMistakesIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If the old card has no annual fee, the better move is to keep it open. Use it once every 2-3 months for a small Swiggy order or a utility bill to keep it active and avoid the bank closing it due to inactivity.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Read more on how this affects your score in our <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL Score 101 guide</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #3: Piling All Spend on One Card</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you have two cards and charge everything to one, you are hurting your utilization ratio even if you clear it in full every month.</p>
@@ -232,7 +230,6 @@ export default function BlogCreditCardMistakesIndia() {
         <SvgUtilizationSpread />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Spread your spend across cards to keep each card utilization below 30%. Our <Link href="/blog/credit-utilization-ratio-guide" style={{ color: COLOR }}>credit utilization guide</Link> covers the exact math and how to fix this fast.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #4: Letting Reward Points Expire</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Reward points feel like free money until they silently expire. Most Indian banks do not send a clear warning before points lapse.</p>
@@ -240,7 +237,6 @@ export default function BlogCreditCardMistakesIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>1 lakh HDFC points equals roughly ₹25,000 in value. If you forget to redeem, that is real money gone. Log into your card portal every 6 months, check your points balance, and either redeem or transfer to a partner program.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Our <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>guide on reward points</Link> breaks down expiry rules and the smartest redemption options across major Indian banks.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #5: Ignoring Forex Markup on International Spends</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Using your regular HDFC or ICICI card internationally? You are paying an invisible tax called forex markup, usually 3-3.5% on every transaction, on top of the exchange rate.</p>
@@ -248,7 +244,6 @@ export default function BlogCreditCardMistakesIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>On a ₹83,500 ($1,000) purchase, that is up to ₹2,922 in extra fees for nothing. Zero-markup cards like Niyo Global or IDFC FIRST WOW cost you nothing extra on the same transaction.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you travel internationally even once a year, a zero-markup card pays for itself on day one.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #6: Using Your Credit Card at an ATM</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Cash advance from a credit card is one of the most expensive financial products available to retail customers in India. It combines a flat fee with immediate interest at the highest possible rate.</p>
@@ -256,7 +251,6 @@ export default function BlogCreditCardMistakesIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>There is no 30-day grace period. Interest starts from the moment you pull the cash out. On ₹10,000 repaid within 30 days, your total cost is ₹600-920. Annualized, that is over 72% per year.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Use a debit card for ATM withdrawals or explore a small personal loan via <Link href="/learn/loans" style={{ color: COLOR }}>our loans section</Link> if you are short on cash.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #7: Assuming Accelerated Rewards Have No Cap</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>That 5% cashback on Swiggy, the 4x points on fuel, the 10x on grocery apps — they almost always come with a monthly spend cap buried in the fine print.</p>
@@ -264,7 +258,6 @@ export default function BlogCreditCardMistakesIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Once you hit the cap, the card quietly reverts to its base earn rate, often 1%. You might assume you are earning 5% on ₹30,000 of online spend but actually earn 5% on the first ₹10,000 and 1% on the rest.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Before choosing a card for a specific spend category, check the T&C for monthly caps. Use our <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link> to find which card gives you the best rate for your real spend pattern.</p>
       </section>
-
       <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2 }}>
@@ -275,7 +268,6 @@ export default function BlogCreditCardMistakesIndia() {
           <li>If you travel abroad, apply for one zero-forex-markup card before your next trip.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

@@ -145,7 +145,7 @@ export default function HealthInsuranceEffectiveCoverage() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Your ₹10L Health Insurance Actually Covers ₹4.2L
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 28 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 28 }}>
             Room rent caps, co-pay, sub-limits. We calculated what your policy really pays.
           </p>
           <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
@@ -155,7 +155,7 @@ export default function HealthInsuranceEffectiveCoverage() {
           </div>
         </div>
       </div>
-      <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.85, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
+      <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.6, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -188,7 +188,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           <SvgWaterfall />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 1 — room rent cap (the proportional reduction trap)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -204,7 +203,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           <SvgRoomRent />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 2 — co-payment (the percentage you always pay)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -217,7 +215,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           The trade-off when buying. Lower co-pay (0 to 10 percent) means higher premium but smaller out-of-pocket exposure on any major claim. Higher co-pay (20 to 30 percent) means lower premium but you're meaningfully exposed on claims above ₹2 to 3 lakh. For senior citizens specifically, mandatory co-pay is hard to avoid; the trade-off is between policies with 10 percent co-pay (Care Plus) and 20 percent co-pay (Star Senior Citizens Red Carpet) at different premium points.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 3 — disease-wise sub-limits (the silent caps)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -230,7 +227,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           What to check at policy purchase. Pull the sub-limit table and compare to typical procedure costs at hospitals you'd actually use. For older insureds (50-plus) likely to face orthopaedic and ophthalmic procedures, the sub-limit table matters more than the headline sum insured. Premium plans like Care Supreme have notably looser sub-limits — knee replacement at 75 percent of SI, cataract at ₹60k per eye — making them genuinely better-value for the 50-plus cohort despite slightly higher premium.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 4 — non-medical consumables (the IRDAI exclusion list)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -243,7 +239,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           What you can do. Two paths. First, premium policies (HDFC ERGO Optima Secure, Niva Bupa Reassure 2.0) explicitly include consumables coverage as a flagship feature, at roughly 6 to 8 percent premium uplift over basic policies. Second, the standardised IRDAI consumable rider (introduced 2020) is now offered as an optional add-on by most insurers at ₹500 to ₹1,500 per year. The rider explicitly covers items on List I. Both are worth considering for households with ageing parents likely to face extended hospitalisations.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 5 — pre and post hospitalisation expenses</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -256,7 +251,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           What to do at admission. Tell the hospital admission desk that you have insurance and request that all pre-admission consultations and diagnostics in the prior 30 days be linked to the current admission case file. Provide all receipts at the cashless desk. The admin overhead is small but recovers ₹15,000 to ₹40,000 of expenses that would otherwise be silently missed.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 6 — the claim settlement reality (CSR by amount)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -272,7 +266,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           <SvgCsrTable />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Comparing policies on effective coverage, not nominal</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -288,7 +281,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           <SvgRealisticPolicy />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Three high-effective-coverage policies in 2026</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -307,7 +299,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           The 30 to 40 percent premium uplift over basic policies (where ₹10L SI sells for ₹9,500 to ₹11,000 per year) is real money but recovers ₹2 lakh of additional effective coverage on a typical claim. Pay the uplift unless your budget is genuinely tight; the value-for-money math heavily favours premium plans.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The cashless reality and what to expect at the hospital</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -320,7 +311,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           Common operational gaps. Smaller hospitals lack IT integration for fast pre-authorisation. Pre-existing condition disputes can pause cashless approval. Some procedures (cosmetic-adjacent, optional, OPD-equivalent) are excluded from cashless even at major hospitals. Memorise your insurer's 24x7 cashless desk number — fastest escalation path during admission.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Working through a real claim — what actually happens</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -336,7 +326,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           The take-away. On a ₹5 lakh hospitalisation against a ₹10 lakh sum insured, the patient still paid ₹2.15 lakh out of pocket — 41 percent of the bill. The room-rent cap was the largest single deduction lever. Switching to an Optima Secure-style policy with no room-rent cap and consumables included would have eliminated roughly ₹1.8 lakh of those out-of-pocket costs, at premium uplift of about ₹4,000 per year. The trade-off heavily favours premium policy structure.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What to do this week — a practical checklist</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -364,17 +353,15 @@ export default function HealthInsuranceEffectiveCoverage() {
           <strong>Review every two years.</strong> Insurance is not set-and-forget. Sub-limits, exclusions, and CSR figures shift every few years. Renewal time is the moment to reconsider whether your current policy still has the best effective-coverage profile or whether a competitor has launched a better-structured plan.
         </p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 18px" }}>Frequently asked questions</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "16px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 600 }}>{q.name}</summary>
-            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>
-
       <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
@@ -385,7 +372,6 @@ export default function HealthInsuranceEffectiveCoverage() {
           <li><Link href="/learn/insurance" style={{ color: COLOR }}>Insurance knowledge hub</Link>. All our insurance guides.</li>
         </ul>
       </section>
-
       <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>

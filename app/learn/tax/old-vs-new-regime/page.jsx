@@ -173,7 +173,7 @@ export default function OldVsNewTaxRegime2026() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Old vs New Tax Regime — The ₹3.75 Lakh Breakeven Rule
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 28 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 28 }}>
             Budget 2025 moved the goalposts. Income up to ₹12.75L is tax-free under new regime.
           </p>
           <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
@@ -183,7 +183,7 @@ export default function OldVsNewTaxRegime2026() {
           </div>
         </div>
       </div>
-      <main style={{ maxWidth: 700, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.85 }}>
+      <main style={{ maxWidth: 700, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -224,7 +224,6 @@ export default function OldVsNewTaxRegime2026() {
           <SvgSlabComparison />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How the new regime computes — including the ₹12L cliff</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -258,7 +257,6 @@ export default function OldVsNewTaxRegime2026() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How the old regime stays competitive</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -297,7 +295,6 @@ export default function OldVsNewTaxRegime2026() {
           <strong>Section 80G — donations to approved charities.</strong> Either 50% or 100% deductible depending on the recipient organisation's classification. Often overlooked by individual filers. A ₹50,000 donation to a 100%-eligible cause saves ₹15,000 in tax for a 30%-bracket old-regime filer.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Three real scenarios — and which regime each one picks</h2>
         <p style={{ fontSize: 17, margin: "0 0 18px" }}>
@@ -362,7 +359,6 @@ export default function OldVsNewTaxRegime2026() {
           The senior-citizen lesson: even with respectable old-regime deductions, the post-Budget-2025 ₹12 lakh rebate is so generous that most retired pensioners with sub-₹13 lakh income are mathematically better off under new regime. The old regime survives mainly for seniors with substantial residual home-loan interest deductions.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What about surcharge — the silent extra tax above ₹50 lakh</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -378,7 +374,6 @@ export default function OldVsNewTaxRegime2026() {
           For most readers of this guide — taxable income ₹15 lakh to ₹40 lakh — surcharge is irrelevant. For HNI readers above ₹50 lakh, the new regime's lower surcharge cap is yet another reason to prefer it unless deductions are very substantial. Above ₹2 crore, the new regime almost always wins despite the loss of HRA and 24(b), purely because of the surcharge cap.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The breakeven point — where old regime overtakes new</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -401,7 +396,6 @@ export default function OldVsNewTaxRegime2026() {
           <SvgBreakeven />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How to actually switch regimes — and the one-time rule for self-employed</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -417,7 +411,6 @@ export default function OldVsNewTaxRegime2026() {
           The implication: self-employed filers should run multi-year projections before exercising the switch. If you are 35 with a strong home loan and high deductions, switching to old now and committing to it for the next 15 to 20 years until the loan is cleared makes sense. If the deductions are likely to dry up in 3 to 4 years (loan repaid, HRA gone), the new regime's flexibility is worth more than the modest old-regime saving today.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Practical decision framework — five quick checks</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -434,7 +427,6 @@ export default function OldVsNewTaxRegime2026() {
           When in doubt, plug your numbers into our <Link href="/tools/income-tax-calculator" style={{ color: COLOR, fontWeight: 600 }}>income tax calculator</Link>. It runs both regimes simultaneously, applies the 87A rebate where eligible, and names the winner. Five minutes, no signup, nothing leaves your browser.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>CTC structuring — what to ask payroll to change</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -459,7 +451,6 @@ export default function OldVsNewTaxRegime2026() {
           The bigger picture: under new regime, the CTC components that matter are basic, employer NPS contribution, perquisite-class benefits with their own exemption rules, and the standard deduction. Everything else is just gross salary. Push payroll to optimise around that reality.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Five mistakes that cost taxpayers money in 2026</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -481,17 +472,15 @@ export default function OldVsNewTaxRegime2026() {
           <strong>Ignoring the cliff at ₹12 lakh.</strong> Earning ₹12.10 lakh in taxable income costs roughly ₹62,000 more in tax than earning ₹12 lakh, because the rebate vanishes. If your taxable income is hovering near the line, even a small tax planning move — slightly higher employer NPS contribution, deferred bonus by a quarter — can bring you under the cliff and save the entire amount.
         </p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 18px" }}>Frequently asked questions</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "16px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 600 }}>{q.name}</summary>
-            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>
-
       <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
@@ -503,7 +492,6 @@ export default function OldVsNewTaxRegime2026() {
           <li><Link href="/learn/tax" style={{ color: COLOR }}>Tax knowledge hub</Link>. All our tax guides in one place</li>
         </ul>
       </section>
-
       <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>

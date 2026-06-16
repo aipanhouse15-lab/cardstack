@@ -216,13 +216,13 @@ export default function BlogRewardPointsVsCashback() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Reward Points vs Cashback: Which Credit Card Strategy Is Right for You?
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Both camps have die-hard fans. Both can be the right answer. Here is a clear framework to figure out which one actually suits your life, not your aspirations.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -234,7 +234,6 @@ export default function BlogRewardPointsVsCashback() {
         <SvgDecisionMatrix />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This is not about what sounds better. It is about what you will actually do. Most Indians earn points on aspirational cards and never redeem them. That is the points trap, and it is real.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>When Points Genuinely Win: The Math for Real Travelers</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Points programs offer their best value through airline and hotel miles redemptions, specifically when you are booking routes where award seats are available and you are flexible on dates.</p>
@@ -242,7 +241,6 @@ export default function BlogRewardPointsVsCashback() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>10,000 Axis EDGE Miles as cash gives you ₹2,500. Transfer those same miles to IndiGo 6E Rewards or Air India Flying Returns, and they can be worth ₹5,000+ on an economy domestic redemption. That is a genuine 2x difference.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The caveat: award seat availability. On busy routes during peak season, there may be zero award seats available, meaning those miles sit idle until you find a redemption or they expire. Read our <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>complete guide to reward points</Link> for more on maximizing this gap.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Honest Amazon Spend Comparison</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Let us do the math on a very common Indian scenario: ₹1 lakh in annual Amazon spending. One of the most popular points cards vs one of the best cashback cards for this exact use case.</p>
@@ -250,35 +248,30 @@ export default function BlogRewardPointsVsCashback() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The Amazon Pay ICICI card wins for Amazon-heavy spenders, and it is not even close. The HDFC Millennia is capped, requires portal redemption, and still delivers lower effective returns on this specific spend pattern. This is why knowing your primary spend category matters before picking a card.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Use our <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link> to find the highest-returning card for your actual monthly spend breakdown.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Points Trap: Why Many Indians End Up with Zero</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The points trap is not just about forgetting to redeem. It is about the entire friction chain between earning and extracting value from a reward program.</p>
         <SvgPointsTrap />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>You earn points. The portal is confusing or unavailable. You delay. Points expire. You have received exactly ₹0 in return for spend that could have earned guaranteed cashback. Cashback does not have this problem. It credits automatically to your statement with no portal, no deadline, no friction.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Which Card Type Wins Per Spend Category</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The answer is not the same for every rupee you spend. Some categories are clearly better served by points, others by cashback. Here is the honest breakdown.</p>
         <SvgCategoryMatch />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Daily-life categories (groceries, utility bills, Swiggy) almost all favor cashback, while occasional high-value categories (flights, hotel stays) favor points. Your card choice should be weighted toward whichever bucket represents your largest monthly spend.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Hidden Costs of Reward Points Programs</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Beyond the obvious expiry risk, reward points programs carry several less-discussed risks that reduce their realized value compared to the theoretical maximum.</p>
         <SvgPortalRisk />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Transfer partner programs change. HDFC removed Vistara from its SmartBuy program after the Air India-Vistara merger. Axis has changed its EDGE Miles redemption rates multiple times. These are not hypothetical risks. They happen, and they can change the value of points you have already earned.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Stack Strategy: Use Both</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>You do not have to choose exclusively. The optimal setup for most Indians who travel occasionally and have regular daily spend is a two-card stack: one points card for travel bookings and dining, one cashback card for everything else.</p>
         <SvgStackStrategy />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This approach extracts the highest-value redemption from points (flights and hotels) while capturing guaranteed cashback on routine spend categories. Our <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder tool</Link> recommends card combinations based on your spend pattern.</p>
       </section>
-
       <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>Your Decision in 3 Questions</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2.2 }}>
@@ -287,7 +280,6 @@ export default function BlogRewardPointsVsCashback() {
           <li>Do you have points sitting in a reward account right now with no redemption plan? If yes, redeem them against your statement today and use our <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link> to find a card that matches how you actually spend.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

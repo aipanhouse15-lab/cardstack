@@ -157,7 +157,7 @@ export default function PageTaxSavingFDvsELSSvsPPF() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -170,41 +170,36 @@ export default function PageTaxSavingFDvsELSSvsPPF() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The ₹3.4L difference between ELSS (₹11.2L) and Tax FD (₹7.8L) is on identical investment — ₹1.5L per year for 5 years. Tax FD earns the least because: the interest is taxed annually at 30% (unlike ELSS where gains are taxed only at exit) and the rates are lower than what equity has historically delivered.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>PPF sits in the middle at ₹8.9L — guaranteed and tax-free, but capped at 7.1% and requiring a 15-year tenure for full benefits. For a 5-year comparison, we're measuring the PPF balance at Year 5, which is ₹8.9L — the full maturity at 15 years would be significantly larger.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Lock-In: The Factor That Changes Everything</h2>
         <SvgLockIn />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>ELSS is the only 80C product where your capital is accessible within 3 years. This matters when life doesn't follow a plan. A medical emergency, a sudden opportunity, or a job change can make you need that money before PPF's Year 7 partial withdrawal window or Tax FD's 5-year exit.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The 3-year lock-in per ELSS installment means SIP-based investing is smart: start an SIP of ₹12,500/month in ELSS, and from Year 4 onwards, each installment matures and becomes accessible. You maintain continuous 80C coverage while gradually increasing liquidity.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Risk vs Return: Where Each Sits</h2>
         <SvgRiskReturnPlot />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>ELSS can deliver negative returns in bad years — 2020 and 2022 were rough for equity. If your investment horizon is genuinely 3-5 years and you need the money at a fixed date, ELSS carry timing risk. PPF eliminates this entirely: the rate is set by government and guaranteed.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For most working professionals with 10-15+ years before retirement: equity (ELSS) dominates over long periods. But for money you'll definitely need back in 5 years: PPF or ELSS (accepted with the understanding that the market may be down when you exit).</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Optimal 80C Strategy</h2>
         <SvgDecisionFramework />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The most common mistake: filling 80C with LIC policies or Tax FDs out of habit, when EPF contribution (already happening) plus PPF SIP would give better outcomes with zero extra effort.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Check your EPF contribution first — many salaried employees at ₹8L+ CTC have 70-100% of their ₹1.5L 80C already covered by EPF. If that's you, you don't need to buy Tax FD or ELSS separately. Any additional 80C investment is optional and should go where it earns the most for your risk tolerance.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Best ELSS Funds to Consider</h2>
         <SvgELSSFundPicks />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Always invest in direct plans — available on Zerodha Coin, Kuvera, MF Central, or Groww. Regular plans through agents charge 1-1.5% commission which significantly reduces returns over 5-10 years. Our <Link href="/learn/mutual-funds/direct-vs-regular" style={{ color: COLOR }}>Direct vs Regular guide</Link> walks through the math in detail.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For more context, see our <Link href="/learn/savings/ppf-vs-fd-vs-debt-fund" style={{ color: COLOR }}>PPF vs FD vs Debt Fund comparison</Link>, our broader <Link href="/learn/tax/80c-beyond-the-obvious" style={{ color: COLOR }}>80C deductions guide</Link>, and the <Link href="/learn/savings" style={{ color: COLOR }}>savings hub</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
-            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>

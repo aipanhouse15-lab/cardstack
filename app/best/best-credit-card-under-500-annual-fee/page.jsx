@@ -328,7 +328,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
-        lineHeight: 1.65,
+        lineHeight: 1.6,
       }}
     >
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
@@ -468,7 +468,7 @@ export default function BestCreditCardUnder500AnnualFee() {
                   {card.tag}
                 </span>
               </div>
-              <div style={{ fontSize: 13, color: "var(--text-muted)", lineHeight: 1.7 }}>
+              <div style={{ fontSize: 13, color: "var(--text-muted)", lineHeight: 1.6 }}>
                 <span style={{ fontWeight: 600, color: "var(--text)" }}>Fee:</span> {card.fee} |{" "}
                 <span style={{ fontWeight: 600, color: "var(--text)" }}>Reward:</span> {card.reward}
               </div>
@@ -600,7 +600,7 @@ export default function BestCreditCardUnder500AnnualFee() {
             <summary style={{ fontWeight: 600, fontSize: 15, cursor: "pointer", paddingTop: 4, color: "var(--text)" }}>
               {item.name}
             </summary>
-            <p style={{ marginTop: 10, fontSize: 14, color: "var(--text-muted)", lineHeight: 1.7 }}>
+            <p style={{ marginTop: 10, fontSize: 14, color: "var(--text-muted)", lineHeight: 1.6 }}>
               {item.acceptedAnswer.text}
             </p>
           </details>
@@ -619,7 +619,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         </ul>
       </section>
 
-      <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
         <strong>Disclaimer:</strong> Assure Fintech is an independent editorial platform and does not hold a banking license. Card terms, reward rates, annual fee waiver conditions, and category caps are subject to change by issuing banks. Always verify current terms on the bank's official website before applying. Referral links on this page may generate a commission that does not affect editorial rankings.
       </footer>
     </main>

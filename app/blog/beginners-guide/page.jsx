@@ -263,13 +263,13 @@ export default function BlogBeginnersGuide() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Your First Credit Card in India: Everything You Actually Need to Know (2026)
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             A credit card is one of the most useful financial tools in India when used correctly. It is also the most expensive debt you can carry. This guide covers both sides, so you start on the right foot.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -282,15 +282,12 @@ export default function BlogBeginnersGuide() {
         <p>A credit card is a short-term loan facility from a bank. You spend on the card, the bank pays the merchant on your behalf, and you repay the bank by the due date. If you repay the full amount, you pay zero interest. If you carry any balance past the due date, you pay 3% to 3.5% monthly interest, which is 36% to 42% per year.</p>
         <p>The reason to get a credit card is not to borrow money. It is to use the 20-50 day free credit window while earning rewards on spending you were going to do anyway. Think of it as a tool that pays you to buy groceries and Zomato orders, as long as you pay the full bill every month without fail.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How the billing cycle works</h2>
         <p>Every credit card has a statement date (when the billing cycle closes and your bill is generated) and a due date (when you must pay). The gap between the statement date and due date is typically 18-21 days. The full free credit period extends from the start of the billing cycle to the due date, which can be up to 50 days.</p>
         <p>Here is the key insight: a purchase made right after your statement date gets almost 50 days interest-free. A purchase made the day before your statement date gets only about 18-20 days free. This does not change your behavior, just helps you understand why your statement date matters.</p>
       </section>
-
       <SvgCreditCardLifecycle />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Why you should get a credit card (even if you do not need credit)</h2>
 
@@ -303,53 +300,41 @@ export default function BlogBeginnersGuide() {
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "16px 0 8px", color: COLOR }}>Purchase protection</h3>
         <p>Most credit cards include a dispute resolution mechanism: if a merchant fails to deliver, you can raise a chargeback with the bank. This protection does not exist with UPI or debit card payments, where your money is gone the moment you approve the transaction.</p>
       </section>
-
       <SvgGoldenRules />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The one rule that overrides everything else</h2>
         <p>Pay the full statement balance before the due date, every single month. Not the minimum due. Not "most of it." The full amount. This one habit means you pay zero interest and earn all the rewards. This is the entire point of the card.</p>
         <p>Set up an auto-debit for the full statement amount on the due date. Check that your savings account will have enough funds two days before the due date. This removes human error from the equation entirely.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The real cost of carrying a balance</h2>
         <p>Carrying ₹10,000 unpaid on a credit card for 12 months at 3.5%/month costs ₹5,100 in interest. The same ₹10,000 in a 1-year FD at SBI (7% per year) earns ₹700. The gap between the best saving and the worst borrowing, both using ₹10,000, is ₹5,800 in a single year.</p>
         <p>Credit card debt is the most expensive legal form of borrowing available to individuals in India. It is more expensive than personal loans (11-18%), gold loans (7-10%), and home loans (8.5-9.5%). If you ever find yourself unable to pay the full amount, treat that as a financial emergency and address the root spending problem first.</p>
       </section>
-
       <SvgInterestVsInvestment />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What happens when you miss a payment</h2>
         <p>Missing your due date triggers an immediate late payment fee of ₹500 to ₹1,000 depending on the bank. Interest starts accruing on the full outstanding amount from the date of each original purchase, not from the due date. Your grace period is also lost for the next billing cycle, meaning all new purchases start accruing interest from the transaction date.</p>
         <p>If the payment delay crosses 30 days, the bank reports it to the credit bureau and your CIBIL score drops significantly. A single 30-day delinquency can knock 50-100 points off your score and stays on record for 7 years.</p>
       </section>
-
       <SvgMissedPaymentCost />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How to choose your first card</h2>
         <p>Your first credit card choice should be based on: your monthly income (for approval), your primary spending category (for reward optimization), and your tolerance for annual fees. At the start, prioritize approval probability and zero or low fee over maximum rewards.</p>
         <p>A good first card is one that gets approved, costs you nothing or very little in fees, and gives modest rewards. Once you have 12 months of credit history, you can upgrade to a card that is better optimized for your specific spending pattern.</p>
       </section>
-
       <SvgFirstCardByIncome />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The CIBIL score building timeline</h2>
         <p>Starting from zero credit history, using your first card responsibly produces measurable results within 3 months. Most bureaus require at least 6 months of credit history to generate a score. By month 12, responsible users consistently reach 720-750, which qualifies them for most consumer lending products.</p>
         <p>The two factors that matter most in the early months: payment history (no missed payments) and credit utilization (never above 30%). The age of credit accounts matters too, which is why you should not cancel your first card even after upgrading to a better one later.</p>
       </section>
-
       <SvgCibilImpact />
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The credit utilization ratio explained simply</h2>
         <p>If your card limit is ₹1,00,000 and you spend ₹70,000 this month, your utilization is 70%. That looks alarming to lenders even if you pay the full ₹70,000 on time. CIBIL records your utilization at the statement closing date, so what matters is what is on the card when the statement is generated, not just whether you pay it off.</p>
         <p>Keep spend below 30% of your limit on each statement. If you regularly spend ₹30,000 and your limit is only ₹60,000 (50% utilization), call the bank and request a limit increase after 6-12 months of good history, rather than asking for a new card.</p>
       </section>
-
       <section style={{ marginBottom: 24, padding: "20px 24px", background: "#ecfeff", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 12px" }}>Your first 3 months: what to do</h2>
         <p style={{ margin: "0 0 8px" }}>Month 1: Apply for one card appropriate for your income. Activate it. Make 2-3 small purchases (groceries, a Blinkit order). Pay the full statement amount on due date.</p>
@@ -357,7 +342,6 @@ export default function BlogBeginnersGuide() {
         <p style={{ margin: "0 0 8px" }}>Month 3: Check your credit report for free at CIBIL.com (one free report per year per bureau). Confirm your card activity is being reported correctly. Keep utilization below 30%.</p>
         <p style={{ margin: 0 }}>After 12 months: revisit your card. If your spending has grown or shifted (more Amazon, more dining, more travel), use <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> to find a more optimized second card to add.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

@@ -201,7 +201,7 @@ export default function PageFixedVsFloating() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -216,7 +216,6 @@ export default function PageFixedVsFloating() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>And yet, banks actively discourage this comparison. Fixed rate products are aggressively pitched during rate-hike cycles ("lock in before it goes higher!"). Floating products are pushed during falling rate environments ("why pay a premium for certainty you don't need?"). The advice always favours selling you the more profitable product at that moment.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Let's look at the actual math and build a framework you can use regardless of what cycle we're in.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How We Got Here: The Rate Cycle Story</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Understanding the history is important because fixed-vs-floating decisions are bets on the future rate path. India went through a textbook rate cycle between 2020 and 2026.</p>
@@ -226,7 +225,6 @@ export default function PageFixedVsFloating() {
         <SvgRateHistory />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The lesson: over a full rate cycle, floating rate borrowers paid more during the hike phase and benefited during the easing phase. Those who locked in at a 9.35% fixed rate during the 2023 peak are now overpaying compared to floating rate peers.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The EMI Reality: Same Loan, Very Different Payments</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Let's run the numbers on a ₹50 lakh home loan for 20 years with a current fixed rate offer of 9.0% versus floating at 8.75% (June 2026 starting rate) across three scenarios.</p>
@@ -235,7 +233,6 @@ export default function PageFixedVsFloating() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The floating rate starts at ₹44,072 (8.75%), so almost the same as fixed. But if rates rise 1.25% and stay elevated, you hit ₹48,251. That extra ₹3,265 per month compounds into ₹7.8 lakh more interest over 20 years.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Conversely, if rates fall to 8.0% and stay there, floating rate borrowers pay ₹41,822 — saving ₹3,164/month versus fixed, or ₹7.6 lakh over 20 years.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Break-Even Point: Where the Math Becomes a Decision</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The fundamental question is: by how much do rates need to rise (on average over your tenure) for the fixed rate to save you money versus floating?</p>
@@ -244,7 +241,6 @@ export default function PageFixedVsFloating() {
         <SvgBreakEvenAnalysis />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This is not a guarantee. It's a base rate probability. If you are in a position where a ₹5,000–8,000 EMI jump in a bad rate environment would genuinely harm your family's finances, the fixed rate insurance is worth every rupee of that premium.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Total Interest Across 20 Years: Three Futures</h2>
         <SvgTotalInterestComparison />
@@ -252,7 +248,6 @@ export default function PageFixedVsFloating() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Here's what the historical data says: over the last 20 years in India, floating rate borrowers have, on average, paid less than they would have on fixed rate products from the same year. But that average includes a very painful 2022-23 period that was unusually severe.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Think of fixed rate like term insurance. You might never "need" it. But when you do need it, the relief is enormous.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Decision Framework: 3 Questions</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>After looking at all the scenarios, here is a simple framework. Answer these three questions honestly.</p>
@@ -261,7 +256,6 @@ export default function PageFixedVsFloating() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Question 2: Is your income stable and growing? Two-income household, government job, or a private sector job in a stable industry? You can absorb a ₹5,000–8,000 EMI spike for a couple of years without financial stress. Take floating. Single income, startup job, commission-based income, or irregular freelance income? Fixed rate removes one major variable from your financial life.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Question 3: What are your prepayment plans? If you expect to inherit money, sell an asset, or bonus-out a significant chunk of the loan in the next 5–8 years, take floating — fixed rate prepayment penalties (2–4%) make early exit expensive. For floating rate loans, RBI mandates zero prepayment penalty for individuals.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What Each Bank Actually Offers (June 2026)</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The availability of true long-term fixed rate products is actually limited in India. Most lenders offer either purely floating (most common) or "fixed for 3–5 years then converts to floating."</p>
@@ -270,7 +264,6 @@ export default function PageFixedVsFloating() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Axis Bank's fixed rate is currently the most attractively priced with the narrowest spread above their floating rate (0.40% vs HDFC/ICICI's 0.60%). If you've decided fixed is right for you, Axis is worth checking first.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>One smart structure that few people consider: take a floating rate loan but fix your EMI amount higher than required. When rates fall, you continue paying the higher EMI — the extra goes to principal prepayment. When rates rise, your higher EMI buffer means you might not even notice the rate increase for a year or two. This is a DIY "fixed-equivalent" strategy without the premium.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What to Actually Do Right Now</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Given that RBI is in a mild easing cycle (June 2026) and floating rates are already falling from the 2023 peak: the base case for new borrowers favours floating.</p>
@@ -278,13 +271,12 @@ export default function PageFixedVsFloating() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>If you're taking a fresh loan now: get quotes for both fixed and floating from your shortlisted banks. Plug the numbers into our <Link href="/tools/emi-calculator" style={{ color: COLOR }}>EMI calculator</Link> and model three scenarios (rates flat, up 1%, down 1%). The floating case will look better under two of the three scenarios unless you're very risk-averse.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Also read our full comparison at <Link href="/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" style={{ color: COLOR }}>SBI vs HDFC vs ICICI home loan</Link> to see which bank to shortlist first, and our <Link href="/learn/loans/prepayment-penalty-trap" style={{ color: COLOR }}>prepayment penalty guide</Link> before you sign anything.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
-            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>

@@ -152,8 +152,7 @@ export default function ComparisonPage({ params }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-
-    <section className="pt-24 pb-20 px-6 max-w-[700px] mx-auto">
+      <section className="pt-24 pb-20 px-6 max-w-[700px] mx-auto">
       {/* Breadcrumb */}
       <div className="flex items-center gap-2 mb-8 text-sm" style={{ color: "var(--text-faint)" }}>
         <Link href="/" className="no-underline hover:underline" style={{ color: "var(--text-faint)" }}>Home</Link>

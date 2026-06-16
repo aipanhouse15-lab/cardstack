@@ -210,13 +210,13 @@ export default function BlogCreditUtilizationRatioGuide() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Credit Utilization Ratio: The 30% Rule, the Real Math, and How to Fix It Fast
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Credit utilization is the second biggest factor in your CIBIL score at 30% of the total. Most people who are paying in full every month are still getting it wrong.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -228,7 +228,6 @@ export default function BlogCreditUtilizationRatioGuide() {
         <SvgUtilizationMeter />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The commonly cited 30% rule is a useful rule of thumb, but 10% or less is genuinely better for your score. If you want a CIBIL score above 780, targeting 10% utilization is one of the most direct levers you can pull.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Real Math: ₹45K vs ₹10K on a ₹1 Lakh Limit</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Two people, same ₹1 lakh credit limit, same bank, same payment history. The only difference is their balance at statement date.</p>
@@ -236,7 +235,6 @@ export default function BlogCreditUtilizationRatioGuide() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>That 30-60 point gap matters more than people realize. At 700-720, you might get a home loan approved but at a higher interest rate, say 9.5% instead of 8.75%. On a ₹50 lakh loan over 20 years, that 0.75% rate difference adds roughly ₹7-9 lakh in extra interest paid over the loan term.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>See how utilization connects to your loan eligibility in our <Link href="/learn/loans" style={{ color: COLOR }}>loans learning section</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Per-Card vs Overall Utilization: CIBIL Checks Both</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Here is a nuance most people miss. Your overall utilization might look fine at 20%, but if one individual card is at 80% utilization, CIBIL penalizes that card's ratio separately.</p>
@@ -244,7 +242,6 @@ export default function BlogCreditUtilizationRatioGuide() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The fix: spread your spending. If you have two cards, charge roughly proportional to each card's limit rather than putting everything on one card. The total spend is the same; the CIBIL impact is very different.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This is exactly why the <Link href="/blog/7-credit-card-mistakes-india" style={{ color: COLOR }}>mistake of piling spend on one card</Link> costs you even when you pay in full.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Why "Paying in Full" Is Not Enough: The Statement Date Trap</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This is the single most common misconception about credit utilization in India. Paying your credit card in full by the due date does not guarantee low utilization in CIBIL's records.</p>
@@ -252,21 +249,18 @@ export default function BlogCreditUtilizationRatioGuide() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Your bank reports your balance to CIBIL on your statement generation date, typically the first day of each billing cycle. If you had ₹45,000 outstanding when the statement was generated, CIBIL recorded 45% utilization regardless of what you paid later.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The solution: make a large payment a few days before your expected statement date to bring the balance down. Then pay the remaining balance by the due date as usual.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Mid-Cycle Payment: Your Most Underused Tool</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>You do not have to wait for your due date to pay. Paying down your balance before your statement date is the most reliable way to control what CIBIL sees each month.</p>
         <SvgMidCyclePayment />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Find your statement generation date from your card portal or last statement. Set a reminder 2-3 days before that date to make a large payment if your balance is high. This one habit, done consistently, can move your utilization from 40-50% to under 15% within 2 billing cycles.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Where Utilization Sits in Your CIBIL Score</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Credit utilization is the second-largest component of your CIBIL score. Combined with payment history, these two factors control 65% of your score. Everything else, including credit age, credit mix, and new inquiries, makes up the remaining 35%.</p>
         <SvgCibilWeightChart />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Fixing your utilization (free to do, takes 1-2 billing cycles) and paying on time (also free) addresses nearly two-thirds of your CIBIL score. Read our full <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL Score 101 guide</Link> to understand all five factors and how to improve each one.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>How to Fix High Utilization: 3 Options Ranked by Speed</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If your utilization is currently above 30%, here are the three main options in order of how quickly they work.</p>
@@ -274,7 +268,6 @@ export default function BlogCreditUtilizationRatioGuide() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Requesting a credit limit increase from HDFC, Axis, or ICICI can often be done online through net banking in under 5 minutes. Most banks approve instantly for customers with good payment history. A higher limit on the same balance immediately lowers your utilization ratio without requiring any cash outflow.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you are building your CIBIL from scratch and considering a new card, check our <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL Score 101 article</Link> for how new card applications affect your score temporarily.</p>
       </section>
-
       <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>Your Action Plan</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2 }}>
@@ -285,7 +278,6 @@ export default function BlogCreditUtilizationRatioGuide() {
           <li>Set auto-pay to full amount to protect your payment history while you work on utilization.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

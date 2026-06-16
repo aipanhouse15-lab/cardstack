@@ -83,13 +83,13 @@ export default function CompareQuantVsNipponSmallCap() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Quant Small Cap vs Nippon India Small Cap — high-momentum vs steady compounder in 2026
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Both target the same SEBI category — companies ranked 251 or below by market cap. Two completely different operating philosophies produce two completely different volatility profiles. Pick the one whose drawdowns you can sleep through.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -108,7 +108,6 @@ export default function CompareQuantVsNipponSmallCap() {
           Nippon's 13-year track record of steadier compounding and lower max drawdown makes it the more behaviourally robust SIP for retail investors. Quant's punchier returns are real but came with sharper interim drawdowns — fund-management style risk concentrated in a single PMS-like decision-maker. As a 10% portfolio satellite either works; as a 30%+ allocation, lean towards Nippon.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -132,7 +131,6 @@ export default function CompareQuantVsNipponSmallCap() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Volatility distribution comparison</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
@@ -142,7 +140,6 @@ export default function CompareQuantVsNipponSmallCap() {
           Higher count of severe-drawdown months for Quant reflects the active rotation style. Both funds have similar 0-to-2% mild drawdown frequency.
         </p>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK NIPPON SMALL CAP IF</div>
@@ -163,7 +160,6 @@ export default function CompareQuantVsNipponSmallCap() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Position sizing matters more than fund choice</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -173,7 +169,6 @@ export default function CompareQuantVsNipponSmallCap() {
           For category-fit guidance see the <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link>; the <Link href="/tools/sip-calculator" style={{ color: COLOR }}>SIP calculator</Link> models compounding under volatile assumptions.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

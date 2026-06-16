@@ -172,13 +172,13 @@ export default function BlogCashbackRateIsALie() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             The Cashback Rate Is a Lie: Your 5% Card Is Probably Earning You 1.5-2%
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Monthly caps. Partner-only rates. Annual fee drag. By the time you add it all up, that flashy 5% cashback card is giving most households about 1.5-2% on their actual spending. Here's the honest math.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -190,7 +190,6 @@ export default function BlogCashbackRateIsALie() {
         <SvgCapBinding />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This isn't unique to Axis Ace. Almost every cashback card in India uses this structure. The high headline rate attracts attention; the low cap limits actual outgo for the bank. Your job is to calculate whether your actual spend in the qualifying category stays below the cap threshold.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Partner-Only Rate Problem</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The advertised rate almost always applies to partner merchants only — not your total spend. Look at your last 3 months of credit card statements. What percentage goes to Swiggy, Amazon, Flipkart, and the card's specific partners? For most urban Indian households, that's 15-35% of total spending. The other 65-85% earns 1% or less.</p>
@@ -198,27 +197,23 @@ export default function BlogCashbackRateIsALie() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This math is why SBI Cashback stands out. Its 5% applies to all online transactions — not a partner list, not specific apps, but any website or app payment. The monthly cap is ₹5,000, which binds only at ₹1L/month of online spend. For most households, SBI Cashback delivers close to its advertised rate in practice.</p>
         <SvgBankCapTable />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Annual Fee Drag</h2>
         <SvgGSTOnCashback />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Every fee-bearing cashback card has a fee waiver condition — usually ₹1-2L annual spend. If you qualify, the net fee cost is zero. But if you're spending ₹15,000-20,000 per month (below the waiver threshold), you're paying the fee and reducing your net cashback. Always check if your spend qualifies for fee waiver before paying the annual fee.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The True Effective Rate: Card by Card</h2>
         <SvgTrueRateComparison />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Amazon Pay ICICI is the only card that consistently delivers close to its advertised rate — because it has no monthly cap on Amazon spend, no annual fee, and Amazon purchases make up a large slice of urban household spending. If you buy significantly on Amazon each month, this card is genuinely as good as advertised.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>For mixed spending households, the gap between advertised and actual is largest for the partner-heavy cards (Axis Ace, Flipkart Axis) and smallest for the broad-category cards (SBI Cashback, Amazon Pay ICICI within its ecosystem).</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>How to Find Your Card's Real Rate</h2>
         <SvgHowToFind />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The fastest way: use our <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link>. Enter your monthly spending by category and it calculates cap-adjusted cashback for every card in its database. No manual MITC reading, no spreadsheet math. The tool surfaces the "honest number" across your actual spend pattern — not the headline number that only applies to a fraction of your spending.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Also see our <Link href="/blog/reward-points-vs-cashback" style={{ color: COLOR }}>reward points vs cashback comparison</Link> for when points cards actually beat cashback despite the complexity, and our <Link href="/blog/build-3-card-stack-guide" style={{ color: COLOR }}>3-card stack guide</Link> for how to combine cards to cover your full spend at the best rate.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

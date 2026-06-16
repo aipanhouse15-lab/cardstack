@@ -83,13 +83,13 @@ export default function CompareUtiVsHdfcNifty50() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             UTI Nifty 50 Index Fund vs HDFC Nifty 50 Index Fund — which low-cost tracker wins in 2026
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Same index, same constituents, near-identical TER. The differences are second-order — tracking precision, AUM cushion, and platform availability. The case for splitting a SIP between both is essentially zero; here is which one to consolidate into.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -108,7 +108,6 @@ export default function CompareUtiVsHdfcNifty50() {
           UTI Nifty 50 Index Fund has historically run 2-3 bps cheaper TER and 1-2 bps tighter tracking error. That is a roughly ₹500-1,000 per year advantage on a ₹10L corpus — small but free. If you already SIP into HDFC funds, do not switch on this margin alone; the operational hassle outweighs the spread.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -131,7 +130,6 @@ export default function CompareUtiVsHdfcNifty50() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The metrics that actually differ</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
@@ -141,7 +139,6 @@ export default function CompareUtiVsHdfcNifty50() {
           AUM bar normalised by a factor of 500 to fit alongside expense ratio and tracking-error percentages. UTI is roughly 45% larger by AUM as of March 2026.
         </p>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK UTI NIFTY 50 IF</div>
@@ -162,7 +159,6 @@ export default function CompareUtiVsHdfcNifty50() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What 2 basis points actually does</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -172,7 +168,6 @@ export default function CompareUtiVsHdfcNifty50() {
           The bigger lever is regular vs direct, not UTI vs HDFC. For more on this, our <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link> walks through plan selection, and the <Link href="/tools/sip-calculator" style={{ color: COLOR }}>SIP calculator</Link> models compounding gain.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

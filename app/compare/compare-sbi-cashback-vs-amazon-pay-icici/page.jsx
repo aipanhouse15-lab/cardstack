@@ -105,13 +105,13 @@ export default function CompareSbiVsAmazonIcici() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             SBI Cashback vs Amazon Pay ICICI 2026 — which online-shopper card actually wins
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Direct answer: it depends on your Amazon concentration. If your monthly online spend is Amazon Prime-heavy (above ₹15,000 of monthly Amazon spend), the lifetime-free Amazon Pay ICICI wins through the no-cap 5 percent Prime rate. If your online spend is diversified across Flipkart, Myntra, Cleartrip, and other platforms, SBI Cashback's 5 percent flat rate on all online merchants beats ICICI's 1 percent rate on non-Amazon online. The two cards target opposite spend patterns despite both being "online cashback" products. The fee differential matters too — ICICI is free, SBI charges ₹999.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -132,7 +132,6 @@ export default function CompareSbiVsAmazonIcici() {
           If forced to pick one: Amazon Pay ICICI for the lifetime-free structure plus uncapped 5 percent Prime rate. SBI Cashback if your spend genuinely diversifies across multiple e-commerce platforms. Most online-heavy households earn the highest blended rate by holding both — combined annual fee impact is just ₹999 (Amazon ICICI's zero plus SBI's fee).
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -155,7 +154,6 @@ export default function CompareSbiVsAmazonIcici() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Effective rate by online spend pattern</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>
@@ -168,7 +166,6 @@ export default function CompareSbiVsAmazonIcici() {
           Amazon ICICI dominates Amazon-concentrated profiles. SBI Cashback dominates diversified online profiles. The 50/50 crossover line is roughly ₹15,000 monthly Amazon spend versus ₹15,000 on other online merchants.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Lifetime fee economics</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>
@@ -181,7 +178,6 @@ export default function CompareSbiVsAmazonIcici() {
           <SvgFeeFreedom />
         </div>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK AMAZON PAY ICICI IF</div>
@@ -204,7 +200,6 @@ export default function CompareSbiVsAmazonIcici() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The cap math, in numbers</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -220,7 +215,6 @@ export default function CompareSbiVsAmazonIcici() {
           The pattern emerges: SBI Cashback's ₹5,000 monthly cap is high enough that the cap rarely binds for retail users. Even at ₹1 lakh monthly online spend (₹12 lakh annually), the cap is exactly hit. Beyond that, SBI's marginal earn rate drops to 1 percent on the excess. ICICI's no-cap Amazon Prime rate keeps performing at 5 percent regardless of volume — making it the right card for true Amazon power users.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The festive booster — ICICI's quiet advantage</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -233,7 +227,6 @@ export default function CompareSbiVsAmazonIcici() {
           SBI Cashback has no equivalent festive booster. Its 5 percent rate is the steady-state ceiling regardless of season. For Amazon-aligned spenders who time large purchases for sale events, the ICICI festive advantage compounds the structural rate advantage on Amazon spend.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What each card explicitly excludes</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -246,7 +239,6 @@ export default function CompareSbiVsAmazonIcici() {
           Both cards exclude rent payments via fintech platforms (Cred, Magicbricks, NoBroker, etc.), wallet loads, fuel beyond surcharge waiver, government services, and gold/jewellery — the standard cashback-card exclusion list applies across both. Before assuming any specific transaction will earn cashback, check the MITC exclusion section.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The two-card stack — combined economics</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -259,7 +251,6 @@ export default function CompareSbiVsAmazonIcici() {
           The stack beats either card alone, but the gain over SBI Cashback alone is modest (₹0 to ₹3,600/yr depending on Amazon percentage). The real value of the stack is structural — Amazon Pay ICICI as the zero-fee safety net that protects against SBI fee-waiver failure, plus the Amazon-specific welcome bonus and festive boosters.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>When to add other cards to the stack</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -269,7 +260,6 @@ export default function CompareSbiVsAmazonIcici() {
           A three-card stack (SBI Cashback for diversified online, Amazon Pay ICICI for Amazon, Axis Ace for utility and offline) on a ₹60,000 monthly spend profile typically captures 3.5 to 4.5 percent blended effective rate. Annual fee outlay ₹1,499 plus GST is recovered within 2 months of typical spend. The operational discipline cost — knowing which card to tap at which merchant — is the trade-off. For details see our <Link href="/blog/cap-adjusted-cashback-explained" style={{ color: COLOR }}>cap-adjusted cashback explainer</Link>.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Behavioural pitfalls — and how to avoid them on either card</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -282,7 +272,6 @@ export default function CompareSbiVsAmazonIcici() {
           The third pitfall — letting Amazon Pay balance accumulate without redemption. ICICI cashback credits as Amazon Pay balance, useful for Amazon purchases or partner-merchant payments. The balance has no expiry, but it sits idle if you don't actively use it. Set a quarterly reminder to use accumulated balance during normal Amazon purchases rather than letting it compound unused. SBI Cashback's statement-credit redemption avoids this issue entirely — cashback auto-reduces your next statement balance.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Approval timing and CIBIL considerations</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -295,7 +284,6 @@ export default function CompareSbiVsAmazonIcici() {
           For seasoned cardholders with established CIBIL above 760 and existing card portfolio, both cards approve on the same application cycle without behavioural concern. The sequential approach matters mainly for first-time or thin-CIBIL applicants.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
@@ -305,7 +293,6 @@ export default function CompareSbiVsAmazonIcici() {
           </details>
         ))}
       </section>
-
       <section style={{ marginBottom: 28, padding: "18px 20px", border: "1px solid var(--border)", borderRadius: 12, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 14, paddingLeft: 22, margin: 0 }}>
@@ -315,7 +302,6 @@ export default function CompareSbiVsAmazonIcici() {
           <li><Link href="/learn/credit-cards" style={{ color: COLOR }}>Credit cards knowledge hub</Link>.</li>
         </ul>
       </section>
-
       <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 13, fontWeight: 700, color: "var(--text)", margin: "0 0 8px", letterSpacing: 1.5 }}>SOURCES</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>

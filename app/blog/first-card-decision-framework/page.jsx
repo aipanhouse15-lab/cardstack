@@ -356,13 +356,13 @@ export default function BlogFirstCardDecisionFramework() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Your First Credit Card in India — Answer 5 Questions and Get the Right Answer
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             India has 85 million credit card holders and most of them got their first card wrong. Here is the decision framework that saves you from a bad start, a CIBIL hit, and five years of paying for a card that does not fit you.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -387,7 +387,6 @@ export default function BlogFirstCardDecisionFramework() {
         </p>
         <SvgFiveQuestions />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 2: Use the Decision Tree</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -398,7 +397,6 @@ export default function BlogFirstCardDecisionFramework() {
         </p>
         <SvgDecisionTree />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 3: Filter by Income Band</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -409,7 +407,6 @@ export default function BlogFirstCardDecisionFramework() {
         </p>
         <SvgIncomeCardMatrix />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 4: Match Your Spending Pattern</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -420,7 +417,6 @@ export default function BlogFirstCardDecisionFramework() {
         </p>
         <SvgSpendPatternMatch />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 5: Apply Without Getting Rejected</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -431,7 +427,6 @@ export default function BlogFirstCardDecisionFramework() {
         </p>
         <SvgApplicationChecklist />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Real Payoff: Your CIBIL Trajectory</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -442,7 +437,6 @@ export default function BlogFirstCardDecisionFramework() {
         </p>
         <SvgCibilProjection />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Where You Will Be in 5 Years — The Upgrade Path</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -453,7 +447,6 @@ export default function BlogFirstCardDecisionFramework() {
         </p>
         <SvgUpgradePath />
       </section>
-
       <section style={{ background: "rgba(157,140,255,.08)", border: "1px solid rgba(157,140,255,.25)", borderRadius: 8, padding: "20px 24px", marginBottom: 28 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>Your First Card Action Plan</h2>
         <ol style={{ fontSize: 14, color: "var(--text)", lineHeight: 2.1, paddingLeft: 20 }}>
@@ -465,7 +458,6 @@ export default function BlogFirstCardDecisionFramework() {
           <li>Check back in 12 months: if CIBIL is above 720, you are eligible for an upgrade worth exploring.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

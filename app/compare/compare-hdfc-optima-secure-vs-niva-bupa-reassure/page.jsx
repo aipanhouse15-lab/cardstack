@@ -84,13 +84,13 @@ export default function CompareOptimaVsReassure() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             HDFC ERGO Optima Secure vs Niva Bupa Reassure 2.0 — health insurance face-off in 2026
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Two of the most-recommended individual health plans in India. Optima Secure's 2x sum-insured boost is a structural advantage; Reassure 2.0's restoration mechanics work differently. The right pick depends on your family structure and the insurer's network at your nearest hospital.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -109,7 +109,6 @@ export default function CompareOptimaVsReassure() {
           Optima Secure's 2x boost effectively turns ₹10L into ₹20L, which in 2026 metro hospital costs is closer to adequate coverage for a major surgery. Reassure 2.0's strength is the wider floater family structure (up to 6 members) and more flexible pre-existing waiting period. Pick by household composition, then compare network hospitals near home.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -134,7 +133,6 @@ export default function CompareOptimaVsReassure() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Effective cover after deduction layers</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
@@ -144,7 +142,6 @@ export default function CompareOptimaVsReassure() {
           Optima's 2x boost makes effective annual capacity ₹19L on a ₹10L base, versus Reassure's ₹9-10L when restoration is not yet triggered. For more on the effective-coverage waterfall see our <Link href="/learn/insurance/health-insurance-effective-coverage" style={{ color: COLOR }}>deep-dive guide</Link>.
         </p>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK OPTIMA SECURE IF</div>
@@ -165,7 +162,6 @@ export default function CompareOptimaVsReassure() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The network hospital decision</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -175,7 +171,6 @@ export default function CompareOptimaVsReassure() {
           For the broader insurance landscape see the <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link>; for term life decisions our <Link href="/compare/hdfc-click2protect-vs-icici-iprotect" style={{ color: COLOR }}>Click 2 Protect vs iProtect Smart comparison</Link> covers the next tier.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

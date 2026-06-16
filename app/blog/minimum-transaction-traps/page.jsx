@@ -326,13 +326,13 @@ export default function BlogMinimumTransactionTraps() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Read This Before You Swipe: The Minimum Transaction Traps Eating Your Rewards
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             From the ₹100 floor that silently kills small-purchase rewards to a cash advance that costs 92% annualised — here is the fine print your card company hoped you would not read.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -360,7 +360,6 @@ export default function BlogMinimumTransactionTraps() {
           The fix is mechanical: whenever possible, consolidate small purchases into one transaction and stay above the threshold. For everyday coffee or auto rides, a UPI-linked card with no floor (some neo-bank offerings) beats a points card.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Trap 2: Milestone Bonuses That Almost Nobody Reaches</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -374,7 +373,6 @@ export default function BlogMinimumTransactionTraps() {
           When evaluating a card, always calculate your rewards at the base rate — the milestone rate is a bonus for the small percentage of power spenders who actually cross it.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Trap 3: The Reward Exclusion List Nobody Shows You at Sign-Up</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -389,7 +387,6 @@ export default function BlogMinimumTransactionTraps() {
           Before you pick a card for a specific purpose (say, railway travel or fuel), look up that exact category in the MITC. There is a card for every spend pattern — but only if you match deliberately.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Trap 4: GST on Top of Interest — The Hidden 18%</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -400,7 +397,6 @@ export default function BlogMinimumTransactionTraps() {
         </p>
         <SvgGSTOnInterest />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Trap 5: The Reward Reversal — You Return, They Take Points Back</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -414,7 +410,6 @@ export default function BlogMinimumTransactionTraps() {
           Always confirm the reversal terms before a large purchase if you even remotely expect to return it. This is especially relevant for online shopping during sale seasons.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Trap 6: Cash Advance — The Most Expensive Credit in India</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -429,7 +424,6 @@ export default function BlogMinimumTransactionTraps() {
           By comparison, a personal loan from a bank runs 12-18% per year and even a high-rate NBFC personal loan is rarely above 28%. If you genuinely need emergency cash, a personal loan application takes 4-24 hours today. Cash advance should be a last resort — literally.
         </p>
       </section>
-
       <section style={{ background: "var(--red-dim)", border: "1px solid rgba(255,90,72,.3)", borderRadius: 8, padding: "20px 24px", marginBottom: 28 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>Before Your Next Transaction: A 30-Second Checklist</h2>
         <ol style={{ fontSize: 14, color: "var(--text)", lineHeight: 2, paddingLeft: 20 }}>
@@ -440,7 +434,6 @@ export default function BlogMinimumTransactionTraps() {
           <li>Do I actually need cash from my credit card? If yes, explore a personal loan first — it costs 3-6x less.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

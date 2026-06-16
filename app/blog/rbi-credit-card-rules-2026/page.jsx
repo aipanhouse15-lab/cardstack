@@ -190,7 +190,7 @@ export default function RbiCreditCardRules2026() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             7 RBI Credit Card Rules Banks Hope You Never Read
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 28 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 28 }}>
             Your bank is probably violating at least 2 of these.
           </p>
           <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
@@ -200,7 +200,7 @@ export default function RbiCreditCardRules2026() {
           </div>
         </div>
       </div>
-      <main style={{ maxWidth: 700, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.85 }}>
+      <main style={{ maxWidth: 700, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -241,7 +241,6 @@ export default function RbiCreditCardRules2026() {
           <SvgTimeline />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The seven rules at a glance</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -251,7 +250,6 @@ export default function RbiCreditCardRules2026() {
           <SvgRulesGrid />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 1 — explicit consent for billing items</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -268,7 +266,6 @@ export default function RbiCreditCardRules2026() {
           <SvgConsentFlow />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 2 — minimum 15-day grace from bill date to due date</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -281,7 +278,6 @@ export default function RbiCreditCardRules2026() {
           One useful side benefit: a transaction made on day 1 of your billing cycle effectively gets up to 45 days of free credit before payment is due (30-day cycle plus 15-day grace). Compared to debit-card spend (immediate cash out), this is meaningful working capital — provided you pay the full statement on time. Time large purchases (electronics, appliances) right after a statement-generation date to maximise the float.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 3 — APR disclosure standardised on every statement</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -297,7 +293,6 @@ export default function RbiCreditCardRules2026() {
           One subtle point: the APR disclosure rule covers card finance charges but not all fees. Cash-advance fees (typically 2.5% on amount withdrawn), foreign markup, late-payment fees, and over-limit charges are disclosed separately. Always check the MITC for the full fee schedule, not just the headline APR.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 4 — the months-to-clear balance disclosure</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -313,7 +308,6 @@ export default function RbiCreditCardRules2026() {
           What to do with this number. If your statement shows years to clear, you're in a structural debt situation that won't fix itself. The fastest way out: balance-transfer the entire amount to a 0%-period card (ICICI Bank Balance Transfer, HDFC Balance Transfer on EMI both offer 90-day promotional 0% on transferred balances). Repay within the promo window. The transfer typically saves ₹30,000 to ₹50,000 of interest on a ₹1 lakh revolving balance, plus dramatically improves your CIBIL utilisation profile.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 5 — closure within 7 working days</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -329,7 +323,6 @@ export default function RbiCreditCardRules2026() {
           Common bank tactics that violate this rule. Repeated retention calls that delay the actual closure entry. Claims of pending charges that aren't actually pending (always demand a written breakdown). Requirements to visit a branch when net-banking closure is functionally available. If any of these happen, push back with the rule citation; banks usually resolve immediately when they realise you know the rule.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 6 — forex markup transparency on every transaction line</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -345,7 +338,6 @@ export default function RbiCreditCardRules2026() {
           What to do. Review your last international-spend statements. If your card is at 3.5% markup, consider switching for travel-heavy spend. Niyo Global Visa, IDFC FIRST Wealth, RBL World Safari all offer near-zero forex markup. The TCS implications under LRS apply equally to all card spend, so the choice is purely about markup efficiency.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 7 — single grievance window of 30 days</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -362,7 +354,6 @@ export default function RbiCreditCardRules2026() {
           <SvgGrievance />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Bonus protections worth knowing about</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -378,7 +369,6 @@ export default function RbiCreditCardRules2026() {
           <strong>OTP-confirmed standing instructions.</strong> Recurring auto-debits set up on credit cards (Netflix, Spotify, gym subscriptions, insurance premiums) now require OTP confirmation when set up and again at periodic re-authentication windows. The rule was originally for utility bills above ₹15,000 but has been extended to most subscription categories. Practical effect: if a service tries to auto-charge you above the OTP-authorised amount or after the authorisation period expires, the charge fails and the service notifies you. Useful for catching subscription creep.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What to do this week — a practical checklist</h2>
         <ol style={{ fontSize: 16, paddingLeft: 24, margin: "0 0 18px" }}>
@@ -391,7 +381,6 @@ export default function RbiCreditCardRules2026() {
           <li>Bookmark cms.rbi.org.in. Hopefully you never need it. But if a bank issue drags beyond 30 days, that's the escalation path.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How major banks have implemented these rules</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -419,7 +408,6 @@ export default function RbiCreditCardRules2026() {
           The lesson: if you have a choice between issuers, all else equal, pick one with strong rule-implementation history. The 30-day grievance resolution rule is a floor; some banks consistently resolve in 7 to 10 days while others stretch to the full 30 and beyond.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>CIBIL implications of using these rules</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -441,7 +429,6 @@ export default function RbiCreditCardRules2026() {
           The takeaway: don't avoid using your RBI-granted rights for fear of CIBIL impact. The actual damage scenarios are limited and recoverable. The damage from leaving an unfair charge unchallenged or staying with a bad card cycles into much worse CIBIL outcomes via prolonged high utilisation and accrued interest.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What RBI is likely to regulate next</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -460,7 +447,6 @@ export default function RbiCreditCardRules2026() {
           The cardholder takeaway: the regulatory direction continues to favour transparency and customer rights. Cards-as-instruments are increasingly treated by RBI as utility-like services with rights and disclosures, not as discretionary financial products. Expect the trend to continue.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Real dispute cases — patterns that keep recurring</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -479,17 +465,15 @@ export default function RbiCreditCardRules2026() {
           The common thread across these cases: the rules work when invoked specifically. Vague complaints get vague responses; specific rule citations get specific resolutions.
         </p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 18px" }}>Frequently asked questions</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "16px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 600 }}>{q.name}</summary>
-            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>
-
       <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
@@ -500,7 +484,6 @@ export default function RbiCreditCardRules2026() {
           <li><Link href="/learn/credit-cards" style={{ color: COLOR }}>Credit cards knowledge hub</Link>. All our card guides in one place.</li>
         </ul>
       </section>
-
       <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>

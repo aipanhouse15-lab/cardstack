@@ -177,7 +177,7 @@ export default function PageCAGRvsActualReturn() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -190,7 +190,6 @@ export default function PageCAGRvsActualReturn() {
         <SvgCAGRvsXIRR />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>XIRR (Extended Internal Rate of Return) is the correct metric for SIP investors. It accounts for the timing and size of every cash flow. If you invested ₹10,000 in January 2020 and different amounts in subsequent months, XIRR gives you the single annualized return that makes all those cash flows add up correctly. This is your actual return.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Same CAGR, Different Money: The Sequence Problem</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Even more counterintuitive: two funds with identical 10-year CAGR can produce different actual wealth for SIP investors. The reason is the order in which returns occur — the sequence of returns.</p>
@@ -198,21 +197,18 @@ export default function PageCAGRvsActualReturn() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This has a positive implication: SIP investors benefit from early market weakness. When the market falls in Year 1 and Year 2, your ₹10,000/month buys more units at lower prices. Those units then grow substantially when the market recovers in Year 4 and Year 5. Dollar-cost averaging works because bad early years allow you to accumulate more units at cheaper prices.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The lesson: stop worrying about market timing for SIP investments. An immediate crash after you start a SIP is actually good news — you're buying more units at a discount.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How Fund Houses Cherry-Pick Windows</h2>
         <SvgCherryPickedWindows />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Every fund house's marketing team knows that choosing the right 3-year or 5-year window can make any fund look exceptional. Starting the measurement at a market low (like March 2020 COVID crash) and ending at a market high produces spectacular-looking CAGR numbers.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The better metrics: 10-year and 15-year CAGR (captures multiple market cycles), rolling returns (average of all N-year windows since inception), and benchmark comparison (does the fund beat Nifty 50 TRI over 10 years after expenses?). Rolling returns are particularly honest — they can't be cherry-picked because they average all periods.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How to Calculate Your Actual XIRR</h2>
         <SvgXIRRCalculation />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Most modern investment platforms make this easy. Zerodha Coin, Kuvera, and Groww all display XIRR prominently. Paytm Money and ET Money also show it. MF Central (the AMFI-run consolidator) shows XIRR across all your funds in one place — free, with your PAN.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>If your platform shows XIRR significantly lower than the fund's advertised CAGR: that's expected and not a problem. The gap is the difference between how the fund grew and how your specific investment timing translated to returns. As long as your XIRR beats fixed deposits and inflation (comfortably for long-tenure equity SIPs), the investment is doing its job.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Rolling Returns Reality for Nifty 50</h2>
         <SvgRollingReturns />
@@ -220,13 +216,12 @@ export default function PageCAGRvsActualReturn() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The implication for SIP investors: if you stay invested through at least one full market cycle (typically 7-10 years), you capture the good windows and dilute the bad ones through continued investment. The math gets dramatically better with patience.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>See our related guides: <Link href="/learn/mutual-funds/direct-vs-regular" style={{ color: COLOR }}>Direct vs Regular plans</Link> (don't let expense ratios eat your CAGR), <Link href="/learn/mutual-funds/sip-advertised-vs-actual" style={{ color: COLOR }}>SIP advertised vs actual returns</Link>, and the <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
-            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>

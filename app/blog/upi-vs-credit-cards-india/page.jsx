@@ -254,13 +254,13 @@ export default function BlogUpiVsCreditCardsIndia() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             UPI vs Credit Cards in India: They're Not Rivals. Here's When to Use Each.
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Half of India thinks UPI is making credit cards obsolete. The other half pays by credit card for everything and wonders why they earn no rewards on UPI. Both sides are wrong.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -273,7 +273,6 @@ export default function BlogUpiVsCreditCardsIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The UPI-vs-credit-card debate is full of confident wrong takes. Here are the five most common ones, with what actually happens.</p>
         <SvgMythVsReality />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Why UPI Earns No Rewards (And Never Will on Visa/MC)</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Credit card rewards are not a gift from your bank. They are funded by the MDR (Merchant Discount Rate) that merchants pay on every credit card transaction, typically 1.5 to 2 percent. The bank keeps part of it and shares the rest as rewards with you.</p>
@@ -281,54 +280,46 @@ export default function BlogUpiVsCreditCardsIndia() {
         <SvgMdrAndRewardsFlow />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>There is exactly one exception: RuPay credit cards on UPI. RBI and NPCI have a special arrangement where issuers receive interchange income on RuPay credit card UPI transactions, enabling them to pay rewards. Visa and Mastercard cards on UPI don't get this treatment.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The RuPay Credit Card Exception</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you have a RuPay credit card and link it to PhonePe, Google Pay, or Paytm, you earn rewards on UPI payments just like a physical swipe. This is a genuinely useful option for anyone who prefers UPI's convenience but doesn't want to sacrifice rewards.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Popular RuPay credit cards for UPI include HDFC MoneyBack+, SBI Cashback Card RuPay, and Axis Ace RuPay. Note: some issuers cap the reward rate on UPI transactions below the POS rate. Always read the fine print.</p>
         <SvgRuPayUpiAdvantage />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>UPI Limits: The Hidden Cap Nobody Mentions</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>NPCI caps standard UPI at ₹1,00,000 per transaction and per day for most users as of June 2026. This matters for high-value purchases like electronics, jewellery, or rentals where a single transaction might exceed that threshold.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Your credit card has no NPCI-imposed transaction limit. You can put a ₹3 lakh flight booking on your credit card in one swipe. You cannot do that on UPI.</p>
         <SvgUpiLimits />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>When UPI Wins: Be Honest About This</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>UPI is a genuinely superior payment tool for specific use cases. The mistake is thinking it's superior for everything just because it's faster and more widely accepted.</p>
         <SvgWhenUpiWins />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The hidden trap with UPI that no one talks about: instant debit means zero float. Every UPI payment drains your account immediately. If you're the kind of person who parks money in a high-interest savings account and pays your credit card bill at month-end, UPI replaces a free short-term loan with an immediate loss of investable funds.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>When Credit Cards Win: The Real Advantages</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Credit cards have irreplaceable advantages for specific transaction types. These aren't marginal wins. They're structurally different protections and benefits that UPI simply cannot replicate.</p>
         <SvgWhenCreditCardWins />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The chargeback right alone is worth a lot. If a merchant delivers a defective product and refuses to refund via UPI, you're arguing with the merchant directly. If you paid by credit card, your bank fights that battle for you under Visa or Mastercard's rules. The merchant must prove delivery of a valid product or return your money.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Real Scenario: ₹15,000 Camera on UPI vs Credit Card</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Let's make this concrete. You're buying a Sony ZV-E10 mirrorless camera for ₹15,000 from an authorised dealer. Here's the exact difference in outcome depending on how you pay.</p>
         <SvgCameraScenario />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The difference isn't enormous on a single purchase. But multiply this across every purchase above ₹2,000 you make in a year, and you're leaving ₹5,000 to ₹15,000 on the table annually by defaulting to UPI.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Optimal Strategy for Most Indians</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Stop thinking of UPI and credit cards as rivals. Use both, for what each does best.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Use UPI for: small merchants with no POS, peer-to-peer transfers, splitting bills, government payments, and any purchase under ₹500. Use a RuPay credit card on UPI if you want rewards on those UPI transactions. Use your credit card (physical or tokenised) for: anything above ₹2,000, all online shopping, travel bookings, and any purchase where you might want EMI or chargeback protection.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you primarily pay via UPI with a Visa or Mastercard credit card: switch to a RuPay credit card for UPI transactions. Apply for HDFC MoneyBack+ RuPay or SBI Cashback RuPay as an add-on card if you already have a primary card from these banks.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you primarily pay everything via UPI from your savings account: set up your credit card on Google Pay or PhonePe via tokenisation, and start using it for purchases above ₹1,000. Pay the full statement balance monthly. You'll earn back 1 to 3 percent on that spend for zero extra effort.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

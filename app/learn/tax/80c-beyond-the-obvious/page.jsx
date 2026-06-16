@@ -169,7 +169,7 @@ export default function Page80CBeyondObvious() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -182,7 +182,6 @@ export default function Page80CBeyondObvious() {
         <SvgDeductionsMap />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The ₹1.5L limit is a combined cap across all 12 qualifying items. Your job: first tally what you're already contributing (EPF + existing insurance + tuition fees + home loan principal), then invest the gap in the highest-returning available option (usually ELSS or PPF).</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Three Deductions Most People Forget</h2>
         <SvgMostMissed />
@@ -190,33 +189,29 @@ export default function Page80CBeyondObvious() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Home loan principal: every month, your EMI pays some interest and some principal. The principal portion qualifies for 80C. In the first few years of a home loan, the principal portion is smaller (around ₹40,000-80,000/year on a ₹50L loan at 9%). As the loan matures, principal grows. Check your lender's amortization schedule — your bank app usually shows year-wise principal and interest split.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Stamp duty and registration: when you buy property, you pay stamp duty (5-7% of property value) and registration charges. In the year you pay these (not every year, just the year of purchase), this amount qualifies for 80C deduction. On a ₹60L property at 5% stamp duty, that's ₹3L in registration charges — ₹1.5L of which can be claimed under 80C.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The NPS Bonus: ₹50,000 Over and Above 80C</h2>
         <SvgNPSExtra />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Section 80CCD(1B) is the most underused tax-saving provision for salaried people with stable incomes. It lets you claim an additional ₹50,000 deduction on NPS Tier-I contributions, completely separate from the ₹1.5L 80C bucket. For a 30% slab investor, this saves ₹15,600 per year in tax.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>NPS Tier-I is a retirement account — you can't withdraw freely until age 60. At maturity: 60% as lump sum (tax-free), 40% as annuity (taxable). For most employed people who already have EPF as retirement savings, ₹50,000 in NPS is a targeted tax-saving instrument rather than a primary retirement vehicle.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How Much Does 80C Actually Save?</h2>
         <SvgTaxSavedByAmount />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The higher your income, the more valuable every rupee of 80C deduction is. At 30% slab, the ₹1.5L 80C + ₹50K NPS 80CCD(1B) + Section 24(b) home loan interest (₹2L) can collectively save up to ₹1.09L in tax per year — a very significant number that most people don't actively plan for.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The One Instrument Most People Don't Even Know About</h2>
         <SvgSukanyaSamriddhi />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Sukanya Samriddhi Yojana (SSY) is available at post offices and major bank branches. Opening takes 30 minutes and ₹250. If you have a daughter below age 10, this should be your first 80C investment before anything else — it offers 8.20% (currently better than PPF's 7.1%) with full EEE tax treatment and government guarantee.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>See our full guides: <Link href="/learn/savings/tax-saving-fd-vs-elss-vs-ppf" style={{ color: COLOR }}>Tax Saving FD vs ELSS vs PPF</Link> for investment comparison, <Link href="/learn/tax/hra-calculation" style={{ color: COLOR }}>HRA calculation guide</Link> for another major deduction, and the <Link href="/learn/tax" style={{ color: COLOR }}>tax hub</Link> for the full picture.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
-            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>

@@ -86,13 +86,13 @@ export default function CompareAbhVsIciciLombard() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Aditya Birla Activ Health vs ICICI Lombard Complete Health — wellness-driven plans face-off, 2026
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Both plans offer engagement-linked premium discounts via paired wellness apps. ABH's HealthReturns is more generous at the upper-engagement tier, ICICI's mechanism caps lower but base premium is 3% cheaper. The decision hinges entirely on whether you will hit 60+ active days a year.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -111,7 +111,6 @@ export default function CompareAbhVsIciciLombard() {
           ABH's 30% premium credit at full engagement makes it the cheaper effective plan for committed wellness participants. If you are honest with yourself and unlikely to log 60+ active days a year, ICICI's lower base premium and simpler product structure deliver the same coverage at lower realised cost.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -135,7 +134,6 @@ export default function CompareAbhVsIciciLombard() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Effective premium by engagement tier</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
@@ -145,7 +143,6 @@ export default function CompareAbhVsIciciLombard() {
           Engagement tier reflects active days achieved within the policy year. Both insurers compute the credit in the renewal cycle, not the running year.
         </p>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK ABH ACTIV HEALTH IF</div>
@@ -166,7 +163,6 @@ export default function CompareAbhVsIciciLombard() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The behavioural test before committing</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -176,7 +172,6 @@ export default function CompareAbhVsIciciLombard() {
           For more on engagement-linked health products see the <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link>; for the broader effective-coverage framework our <Link href="/learn/insurance/health-insurance-effective-coverage" style={{ color: COLOR }}>deep-dive</Link> walks through the deduction waterfall every health policy applies.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

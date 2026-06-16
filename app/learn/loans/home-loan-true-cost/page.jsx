@@ -149,7 +149,7 @@ export default function HomeLoanTrueCost() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Your Home Loan Is Not 8.5%. It Is Probably 9.35%.
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 28 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 28 }}>
             Banks advertise the base rate. We calculate the true cost after hidden fees.
           </p>
           <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
@@ -159,7 +159,7 @@ export default function HomeLoanTrueCost() {
           </div>
         </div>
       </div>
-      <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.85, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
+      <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.6, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -192,7 +192,6 @@ export default function HomeLoanTrueCost() {
           <SvgWaterfall />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 1 — processing fee and GST</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -205,7 +204,6 @@ export default function HomeLoanTrueCost() {
           The negotiation window is real. During festive periods (Diwali, Republic Day, Independence Day) banks routinely waive 50 to 100 percent of the processing fee on home loans to chase disbursal targets. Walk in with a CIBIL above 760 and a competing sanction letter from another bank, and the fee drops to zero in most negotiations. The trick is to negotiate before signing — once signed, waivers become far harder to extract.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 2 — stamp duty and registration (the largest single hit)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -221,7 +219,6 @@ export default function HomeLoanTrueCost() {
           Several states offer reduced rates for women buyers (Delhi, Haryana, Punjab) or first-time buyers (Maharashtra had the 1 percent concession during the 2020-22 COVID-relief window, since restored). Verify the state-specific rate at your sub-registrar's office or through the property lawyer; circle-rate methodology can also vary, sometimes using a per-square-foot rate rather than transaction value as the base.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 3 — MOD charges and legal fees</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -234,7 +231,6 @@ export default function HomeLoanTrueCost() {
           Add it all up and the legal-and-MOD layer typically costs ₹25,000 to ₹50,000. Negotiable to a small extent — banks sometimes absorb the MOD if you're a high-value or relationship customer — but generally not zero. Always ask for a written breakdown before disbursal so there are no surprises at signing.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 4 — the insurance bundle (often optional, often mis-sold)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -250,7 +246,6 @@ export default function HomeLoanTrueCost() {
           The right approach: politely decline the bundled cover, buy term insurance separately for sum assured equal to your loan balance plus other dependant needs, and source property insurance from any IRDAI-registered insurer. The bank cannot legally refuse loan disbursement on this ground; they can express disappointment, but the loan goes through.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 5 — pre-EMI interest during construction</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -266,7 +261,6 @@ export default function HomeLoanTrueCost() {
           Pre-EMI interest is also tax-deductible under Section 24(b), but the deduction is claimable only after possession is taken. The accumulated pre-EMI interest is split into 5 equal annual deductions starting the year of completion, subject to the overall ₹2 lakh cap. So a ₹5.3 lakh accumulated pre-EMI translates to ₹1.06 lakh of additional 24(b) deduction per year for 5 years — meaningful tax shelter for old-regime filers.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 6 — lifetime interest (the biggest line in the waterfall)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -282,7 +276,6 @@ export default function HomeLoanTrueCost() {
           <SvgEmiSplit />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Floating rate volatility — the hidden cost or saving</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -298,7 +291,6 @@ export default function HomeLoanTrueCost() {
           <SvgRateRisk />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The tax shelter side — the part most articles skip</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -317,7 +309,6 @@ export default function HomeLoanTrueCost() {
           <SvgTaxShelter />
         </div>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How to negotiate the true cost down</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -339,7 +330,6 @@ export default function HomeLoanTrueCost() {
           <strong>Make targeted prepayments in years 1-7.</strong> A ₹2 lakh prepayment in year 2 of a 20-year ₹50 lakh loan saves roughly ₹4.5 lakh of total interest. Same prepayment in year 14 saves ₹50,000. The interest-saving multiplier is highest in the first third of the loan; structure your prepayment plan around that. Some banks attempt to default the prepayment treatment to "reduce EMI, keep tenure" rather than "reduce tenure, keep EMI." The latter saves roughly three times more total interest. Always specify the treatment in writing at the time of the prepayment instruction; if the bank applies it the wrong way, raise it as a service request.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The under-construction trap and how to avoid it</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -352,7 +342,6 @@ export default function HomeLoanTrueCost() {
           The decision becomes meaningful only when the per-square-foot price gap exceeds 20 percent and the developer has a strong delivery track record (post-RERA, this is verifiable via the project's RERA registration page). For under-construction in tier-1 cities with a developer of mixed track record, the ready-to-move-in option usually wins on total cost-of-purchase plus risk-adjusted basis. RERA also gives you a documented escalation path if the project is delayed; complaints to the state RERA authority resolve faster than civil court routes and have produced compensation rulings against several large developers since 2018.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What this looks like as a homeowner profile</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
@@ -368,17 +357,15 @@ export default function HomeLoanTrueCost() {
           Lifetime cost on the ₹65 lakh loan: ₹72,86,000 of interest, ₹1,37,86,000 total outflow on the ₹65 lakh principal. Tax shelter recovers roughly ₹40 lakh of that over 20 years. Net post-tax interest cost: ₹33 lakh. Add upfront costs and the ₹85 lakh property eventually costs them around ₹1.45 crore including all interest, fees, taxes — net of tax shelter, around ₹1.05 crore. The 23 percent gap between headline price and true cost is the structural reality of debt-financed home ownership.
         </p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 18px" }}>Frequently asked questions</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "16px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 600 }}>{q.name}</summary>
-            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 15, color: "var(--text-muted)", marginTop: 12, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>
-
       <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
@@ -389,7 +376,6 @@ export default function HomeLoanTrueCost() {
           <li><Link href="/learn/tax/section-24b" style={{ color: COLOR }}>Section 24(b) interest deduction</Link>. The ₹2 lakh tax shelter that anchors the maths.</li>
         </ul>
       </section>
-
       <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>

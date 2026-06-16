@@ -273,13 +273,13 @@ export default function BlogBnplVsCreditCardsIndia() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             BNPL vs Credit Cards in India: Read This Before You Sign Up
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Buy Now Pay Later sounds like a smarter credit card. In most cases, it's a more expensive one that doesn't even build your CIBIL score. Here's the honest comparison.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -292,63 +292,54 @@ export default function BlogBnplVsCreditCardsIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>BNPL (Buy Now Pay Later) in India means platforms like LazyPay, Simpl, Amazon Pay Later, and Flipkart Pay Later that let you make purchases and pay later, typically within 30 days for free or in EMIs at an interest rate.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The target audience is people who don't qualify for a credit card yet, or who want a faster, app-native checkout experience. The marketing is clever: "0% interest" sounds like a free credit card. What they don't highlight is what happens after day 30.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The BNPL Landscape in India: Honest Numbers</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>India has over a dozen active BNPL products. ZestMoney shut down in 2024 after struggling with defaults and regulatory pressure. The survivors have tightened their credit policies but the interest rates remain high.</p>
         <SvgBnplLandscape />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The number that should concern you is the APR after the free period. At 24 to 36 percent annually, BNPL EMI is as expensive as revolving credit card debt, the worst-value credit product that consumer finance experts universally advise against.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>How BNPL Actually Works: The Free Window Then the Trap</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Every BNPL product has the same basic structure. You get a 30-day window where you can spend up to your approved limit and pay nothing. If you pay the full amount by day 30, you pay zero interest. That part is genuinely useful.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The trap is what happens if you don't pay in full. Most users who can't pay in full convert the outstanding balance to an EMI plan. That's where the interest rates of 18 to 42 percent kick in, plus a processing fee of 1 to 2 percent on the converted amount.</p>
         <SvgBnplHowItWorks />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The APR in Context: Where BNPL Sits Among Indian Debt</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>One of the most useful mental models in personal finance is comparing APRs across debt types. When you do that for BNPL, the picture is uncomfortable.</p>
         <SvgAprWarningChart />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>BNPL EMI sits right alongside revolving credit card debt as the most expensive commonly available consumer credit in India. A home loan at 8.5 percent is five times cheaper. Even a personal loan from HDFC at 15 percent is significantly cheaper than BNPL EMI at 24 to 42 percent APR.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Hidden Charges Nobody Discloses Prominently</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The interest rate is just the start. BNPL products have a range of fees that are often buried in the terms document that nobody reads. Here are the ones that catch people off guard.</p>
         <SvgHiddenCharges />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The late fee is the most brutal. On a ₹2,000 purchase where you're just one day late, a ₹590 late fee (₹500 plus 18 percent GST) represents a 29.5 percent penalty on a single day's delay. Compare that to a credit card late fee of ₹100 to ₹1,300 depending on your balance, which is similar in rupee terms but at least comes with 20 to 50 days of prior notice via your statement.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The CIBIL Problem: Spending Without Growing</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This is the part that makes BNPL a particularly poor choice for young Indians starting their financial journey. Most BNPL providers don't report your repayment history to credit bureaus. You can use LazyPay perfectly for two years and your CIBIL score remains exactly where it was.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The one exception is Amazon Pay Later, which operates through an NBFC and does report to CIBIL. Even there, the interest rate after the free period is 24 percent APR, which is high. A credit card, by contrast, reports every month, builds your history with every on-time payment, and can take a 650 score to 750 in 12 months of responsible use.</p>
         <SvgCibilImpact />
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Real Math: ₹10,000 Over 3 Months</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Let's put actual numbers on a typical scenario. You buy a ₹10,000 product and decide to pay it off over 3 months. Here's the cost comparison between LazyPay BNPL and a credit card no-cost EMI.</p>
         <SvgRealMathComparison />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The credit card no-cost EMI saves you ₹600 on this one purchase. Over a year of similar purchases, that's ₹2,400 to ₹7,200 in unnecessary BNPL costs, plus zero CIBIL points built, plus zero rewards earned. The math is never close.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The 3 Situations Where BNPL Genuinely Wins</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This is not a "BNPL is always bad" article. There are specific situations where BNPL is the right tool.</p>
         <SvgWhenBnplWins />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Notice that in all three cases, the winning condition is paying in full within 30 days. The moment you need to convert to EMI, a personal loan at 10 to 15 percent from a bank or NBFC is almost always cheaper than BNPL EMI at 24 to 42 percent.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you currently use BNPL and have a credit card: stop converting BNPL purchases to EMI immediately. Instead, use your credit card's no-cost EMI feature on the same platforms. Amazon, Flipkart, and most major retailers support it. Your EMI rate drops from 24 percent to 0 percent instantly.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you use BNPL because you don't have a credit card: apply for a lifetime-free entry-level credit card today. IDFC FIRST Classic and SBI SimplySAVE both have low eligibility requirements and zero annual fee. Once approved, use the credit card for everything above ₹500 and pay the full balance monthly. Your BNPL apps become backup-only tools for the rare merchant that doesn't accept cards.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you're already in BNPL EMI debt: don't take on more BNPL. Consider a personal loan at a lower rate to consolidate the outstanding balance and clear it faster. Check our <Link href="/learn/loans" style={{ color: COLOR }}>loans guide</Link> for current personal loan rates from HDFC, ICICI, Kotak, and IDFC FIRST.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

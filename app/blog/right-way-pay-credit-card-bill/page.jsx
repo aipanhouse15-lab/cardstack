@@ -287,13 +287,13 @@ export default function BlogRightWayPayCreditCardBill() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             The Right Way to Pay Your Credit Card Bill — Most People Do This Wrong
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Missing the due date by one day on a ₹50,000 balance can cost ₹2,750 in fees and interest — wiping out a whole quarter of rewards. Here is every decision point, with the correct answer.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -314,7 +314,6 @@ export default function BlogRightWayPayCreditCardBill() {
           That last point trips up smart people. You pay the minimum on your June statement, then spend ₹15,000 in July assuming you have a 50-day grace period. You do not — interest starts accumulating on that ₹15,000 spend from day one, because your grace period was forfeited the moment you did not pay in full.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Understanding Your Billing Cycle — The Dates That Actually Matter</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -325,7 +324,6 @@ export default function BlogRightWayPayCreditCardBill() {
         </p>
         <SvgBillingCycleTimeline />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Autopay: Set It Once, Get It Right</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -336,7 +334,6 @@ export default function BlogRightWayPayCreditCardBill() {
         </p>
         <SvgAutopayComparison />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Timing Matters: Before Statement Date vs Before Due Date</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -347,7 +344,6 @@ export default function BlogRightWayPayCreditCardBill() {
         </p>
         <SvgMultiplePaymentsUtilisation />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Which Payment Method to Use — Speed Is the Variable</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -358,7 +354,6 @@ export default function BlogRightWayPayCreditCardBill() {
         </p>
         <SvgPaymentMethodSpeed />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The 3-Day Buffer Rule</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -369,7 +364,6 @@ export default function BlogRightWayPayCreditCardBill() {
         </p>
         <SvgThreeDayBuffer />
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What One Missed Payment Actually Costs</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
@@ -380,7 +374,6 @@ export default function BlogRightWayPayCreditCardBill() {
           If you do miss a due date, call your bank and pay immediately. On a first miss, many banks will reverse the late fee as a one-time courtesy — but you must ask. Interest cannot typically be reversed once accrued, only waived at the bank's discretion.
         </p>
       </section>
-
       <section style={{ background: "#e0f2fe", border: "1px solid #7dd3fc", borderRadius: 8, padding: "20px 24px", marginBottom: 28 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>Your Credit Card Payment System — Set This Up Once</h2>
         <ol style={{ fontSize: 14, color: "var(--text)", lineHeight: 2.1, paddingLeft: 20 }}>
@@ -392,7 +385,6 @@ export default function BlogRightWayPayCreditCardBill() {
           <li>If you miss a payment, call immediately, pay immediately, and ask for a one-time courtesy reversal of the late fee.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

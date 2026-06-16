@@ -147,13 +147,13 @@ export default function BlogBestCardStudents() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Cards for Students in India 2026: Your First Card, Done Right
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Your first credit card isn't just about cashback — it's building 10+ years of credit history. Get this right and you'll qualify for home loans at the lowest rates. Get it wrong and you're paying 36% interest on revolving debt.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -164,32 +164,27 @@ export default function BlogBestCardStudents() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Amazon Pay ICICI is the default recommendation for most students. It's free, has no income threshold barrier, gives 5% on Amazon (where most students buy textbooks, gadgets, and daily items), and has the simplest approval process. Start here unless you have a specific reason not to.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you're a Swiggy/Zomato heavy user: add Axis Ace as a second card after 6-12 months. The 5% on food delivery and ride-hailing apps is genuinely valuable for the typical college lifestyle, and the ₹499 fee is waived if you spend ₹2L annually (₹16,700/month — achievable for working students).</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Why Your Spend Profile Matters</h2>
         <SvgStudentSpendSplit />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Matching your card to your actual spending matters more than the headline rate. A student who orders Swiggy 15 times a month and never uses Amazon should prioritise Axis Ace over Amazon Pay ICICI. The card that earns the most on your specific spending pattern is the right card for you — not the one with the highest advertised rate on a category you don't use.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Can't Get a Card? Use an FD-Backed Card</h2>
         <SvgFDBackedCard />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you're rejected for a regular card (common for students with no income proof), an FD-backed card is the solution. Place ₹20,000-30,000 in an FD at ICICI or Axis, get a credit card with ₹16,000-24,000 limit, and start building your CIBIL score. After 12-18 months of good behaviour, the bank will typically offer to upgrade you to a regular card and release the FD.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Building Your CIBIL Score: The Real Goal</h2>
         <SvgCIBILBuilding />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The cashback is nice. The CIBIL score you build is far more valuable. A 760+ CIBIL score built by 25-26 gets you: home loans at the lowest rates (saving ₹10-20L over a 20-year loan), personal loans without rejections, premium cards without income hassle, and zero-cost balance transfers. Every month you pay your full balance on time is an investment in that future.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The 5 Mistakes That Destroy Your Credit Start</h2>
         <SvgFirstCardMistakes />
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Set up auto-pay for FULL statement balance — not minimum due, not a fixed amount. FULL. This single action prevents 4 of the 5 mistakes above automatically. The fifth (cash withdrawal) you simply have to know to avoid — never use a credit card at an ATM.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>See our <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL score guide</Link>, our <Link href="/blog/beginners-guide" style={{ color: COLOR }}>complete beginner's guide to credit cards</Link>, and our <Link href="/blog/first-card-decision-framework" style={{ color: COLOR }}>first card decision framework</Link> for more detail.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

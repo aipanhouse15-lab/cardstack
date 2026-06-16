@@ -300,7 +300,7 @@ export default function BestCreditCardForSwiggyZomato() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -383,7 +383,6 @@ export default function BestCreditCardForSwiggyZomato() {
           </div>
         ))}
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Cap Math: What You Actually Earn</h2>
         <p>A 10% cashback rate sounds extraordinary until you understand the cap. The HDFC Swiggy Card caps your cashback at ₹1,500 per month, which means once you spend ₹15,000 on Swiggy in a month, every extra rupee earns zero food delivery reward.</p>
@@ -392,7 +391,6 @@ export default function BestCreditCardForSwiggyZomato() {
         <p style={{ marginTop: 12 }}>The chart above makes clear that the cap bites hardest at high spend levels. For heavy delivery households spending ₹20,000+ monthly on food apps combined, the Axis ACE or HSBC Live+ become more attractive because their category scope is wider even if their headline rate is lower.</p>
         <p>Run the numbers for your household: multiply your actual monthly spend by the effective rate (not the headline rate) and subtract the annual fee divided by 12. That is your true monthly return. See our detailed <Link href="/blog/cashback-rate-is-a-lie">breakdown of why the cashback rate is a lie</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Swiggy vs Zomato Split Problem</h2>
         <p>The HDFC Swiggy Card is clear about this in its terms: the 10% applies only to Swiggy. Zomato orders earn the base 1% reward rate on the same card. This is a merchant ID restriction, not an MCC restriction.</p>
@@ -401,7 +399,6 @@ export default function BestCreditCardForSwiggyZomato() {
         <p style={{ marginTop: 12 }}>The two-card stack is the smart play if your combined monthly food delivery spend is between ₹15,000 and ₹25,000. You hold the HDFC Swiggy Card for all Swiggy orders and the Axis ACE for Zomato orders, giving you a combined earning cap of ₹2,000 per month at a combined annual fee of under ₹1,000.</p>
         <p>For a complete guide to building a card stack that maximises every rupee, visit our <Link href="/stack-builder">Stack Builder tool</Link>.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>How MCC Codes Affect Your Earning</h2>
         <p>Every time you pay by card, the merchant terminal sends a four-digit Merchant Category Code to your bank along with the transaction. Your bank uses this code to decide which reward tier fires. The problem is that Swiggy and Zomato sometimes use the restaurant MCC (5812) and sometimes use a software or marketplace code (7372 or 5965).</p>
@@ -409,21 +406,18 @@ export default function BestCreditCardForSwiggyZomato() {
         <p style={{ marginTop: 12 }}>Cards with direct merchant partnerships like HDFC Swiggy bypass this problem because they match on the merchant ID itself, not the MCC. But cards that rely purely on category-based reward rules may miss Swiggy or Zomato orders if the MCC comes through as a non-dining code.</p>
         <p>This is why anecdotal reports sometimes show "Swiggy order earned only 1% on HDFC Millennia" — the transaction came through under a non-partner MCC in that particular batch. Read more about <Link href="/blog/reward-points-vs-cashback">reward points vs cashback</Link> to understand which mechanism is more reliable.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: "#dc2626" }}>April 2026 Axis Airtel Devaluation: Stop Using It</h2>
         <AirtelDevaluationAlert />
         <p style={{ marginTop: 12 }}>The Axis Airtel Credit Card was, until March 2026, one of the best dining cards in India with 10% on food delivery. The April 2026 revision quietly moved dining and grocery out of the accelerated earning tier. The current effective rate on Swiggy and Zomato on this card is around 1%.</p>
         <p>If Axis Airtel is still set as your default payment card in either app, change it today. The opportunity cost is real: at ₹10,000 monthly food delivery spend, you are leaving approximately ₹4,800 per year on the table by using Axis Airtel over HDFC Millennia.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Effective Returns at a Glance</h2>
         <EffectiveRateGrid />
         <SpendScenarioGrid />
         <p style={{ marginTop: 12 }}>The grids above cover the most common spend scenarios. "Net return" in the table assumes you consistently hit 80% of the monthly cap across 12 months, minus the annual fee. Your actual return depends on consistency of spend and whether the merchant MCC matches correctly.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>What to Do Right Now</h2>
         <ol style={{ paddingLeft: 20, lineHeight: 2 }}>
@@ -436,14 +430,12 @@ export default function BestCreditCardForSwiggyZomato() {
           <li>Use the <Link href="/smart-swipe">Smart Swipe guide</Link> to verify which card is best for your specific spend mix.</li>
         </ol>
       </section>
-
       <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
         <p>If you order only from Swiggy and spend ₹8,000-15,000 a month, the HDFC Swiggy Card earns the most cashback of any card available. Full stop. The 10% rate with a ₹1,500 monthly cap is genuinely one of the best category rewards in Indian credit cards right now.</p>
         <p>If you use both apps or want one card to cover food delivery plus other online spending, HDFC Millennia is the most practical choice. The 5% on both Swiggy and Zomato, combined with coverage for Amazon, Flipkart, and BigBasket, makes it an extremely versatile ₹1,000/year card.</p>
         <p>The Axis Airtel card is no longer relevant for food delivery following the April 2026 changes. Stop using it. And remember: the advertised rate is not the rate you will consistently earn. The effective rate after caps and after MCC misfires is always lower.</p>
       </section>
-
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 16 }}>FAQ</h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
@@ -466,7 +458,7 @@ export default function BestCreditCardForSwiggyZomato() {
         <Link href="/smart-swipe">Smart Swipe Guide</Link>
       </p>
 
-      <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
         <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. All card terms, rates, and caps are based on bank terms as of {UPDATED}. Reward rates can change without notice. Always verify current terms directly with the issuing bank before applying. This is not financial advice. RBI guidelines govern all credit card operations in India.
       </footer>
     </main>

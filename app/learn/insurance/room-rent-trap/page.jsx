@@ -172,7 +172,7 @@ export default function PageRoomRentTrap() {
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
       </div>
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -184,7 +184,6 @@ export default function PageRoomRentTrap() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Her total bill was ₹5,00,000. The insurer settled ₹3,35,000. She owed ₹1,65,000 out of her own pocket. Her policy's sum insured was ₹5 lakh — more than the entire bill. She should have been covered in full. What happened?</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Her policy had a room rent sub-limit: 1% of sum insured per day = ₹2,000/day. She chose a ₹3,000/day room. The insurer applied proportionate deduction: 2000/3000 = 66.7% payable on every single line item. Not just on room charges. On everything.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Proportionate Deduction Clause: How It Actually Works</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This is the mechanism that makes room rent limits so dangerous. It's not intuitive and most policyholders discover it only at the time of claim.</p>
@@ -193,27 +192,23 @@ export default function PageRoomRentTrap() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The hospital tariff system is the underlying reason this rule exists. Hospitals structure their charges room-category-wise. A doctor's fee for operating on a patient in a suite room is literally higher than for the same procedure in a twin-sharing room — because the hospital bills differently. Insurers argue that if you upgrade your room, all associated charges increase, so they proportionately limit their liability.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Whether this is fair is debatable. What's not debatable: it's legal, it's in your policy document (usually on page 8 of 15 in 8-point font), and not knowing about it doesn't protect you from it.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Which Bill Components Get Cut</h2>
         <SvgBillComponent />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Virtually everything except blood and implants (which are charged at fixed rates regardless of room category) gets proportionately reduced. This is why a seemingly minor room upgrade can devastate a claim — you're not just paying more for the room, you're reducing insurer liability across the entire hospitalization.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How Room Choice Changes Your Payout</h2>
         <SvgRoomUpgradeImpact />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The numbers are stark. On a ₹5L bill, choosing a room that's double the policy limit (₹4,000 when limit is ₹2,000) cuts the insurer's payment by 50% — from ₹5L to ₹2.5L. You're left with a ₹2.5L out-of-pocket payment despite having "₹5 lakh health insurance."</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The irony: a ₹5L policy with room rent limits often gives you worse effective coverage than a ₹3L policy with no room rent limits. The policy with limits looks better on the brochure and costs less in premium. The reality at the time of claim is very different.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Which Insurers Have Room Rent Limits (And Which Don't)</h2>
         <SvgInsurerComparison />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The pattern is clear: newer, private health-focused insurers (Niva Bupa, HDFC Ergo, Care Health) have moved to no-room-rent-limit products because it's a selling point. Older general insurers (New India, United India, Oriental) and some older product variants still have 1% of SI limits with full proportionate deduction.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>If you currently have a New India or United India policy: look at your policy wording specifically. If it says "room rent 1% of sum insured per day", you have this exposure. Consider upgrading to a no-limit policy at your next renewal — porting your policy preserves waiting period credits and IRDAI mandates that insurers accept portability requests.</p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How to Protect Yourself</h2>
         <SvgHowToAvoid />
@@ -222,13 +217,12 @@ export default function PageRoomRentTrap() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For planned procedures: call the insurer's pre-authorization helpline 48-72 hours before admission. Explain your policy limit, ask which rooms at the network hospital fall within that limit, and get written pre-authorization. This protects you even if you're admitted to a slightly higher-cost room in an emergency — documented pre-authorization gives you leverage.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>See our full <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link>, our <Link href="/learn/insurance/copay-vs-no-copay" style={{ color: COLOR }}>copay vs no copay guide</Link>, and our <Link href="/learn/insurance/health-insurance-for-parents" style={{ color: COLOR }}>health insurance for parents</Link> guide for related coverage decisions.</p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
             <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
-            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.6 }}>{q.acceptedAnswer.text}</p>
           </details>
         ))}
       </section>

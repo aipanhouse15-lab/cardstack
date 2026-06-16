@@ -114,13 +114,13 @@ export default function CompareMillenniaVsAce() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             HDFC Millennia vs Axis Ace 2026 — which cashback card actually pays more
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Direct answer: Axis Ace wins for most balanced metro household spend profiles — lower annual fee (₹499 vs ₹1,000), unique 5 percent on Gpay utility bills, higher 1.5 percent base rate, and a less restrictive cap structure. HDFC Millennia is the better pick only if your monthly spend concentrates above ₹25,000 on its specific 10-merchant partner shortlist and you fully utilise the ₹1,000 welcome voucher within 30 days. For three of four typical spend profiles, Ace edges Millennia by roughly 50 to 90 basis points of effective rate. This comparison walks the math.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -141,7 +141,6 @@ export default function CompareMillenniaVsAce() {
           Lower fee (₹499 vs ₹1,000), stronger utility-bill rate, more permissive base. HDFC Millennia is the better pick only if spend is concentrated on its specific 10-merchant partner shortlist and you maximise the welcome voucher.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -164,7 +163,6 @@ export default function CompareMillenniaVsAce() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Effective rate across four spend profiles</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>
@@ -177,7 +175,6 @@ export default function CompareMillenniaVsAce() {
           Ace wins three of four profiles by 50 to 140 basis points. Millennia wins only the partner-app-concentrated profile (₹40k Amazon/Flipkart split) where its 5 percent partner rate compounds over wider spend than Ace's narrower utility-and-food acceleration covers.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Year-by-year fee economics</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>
@@ -190,7 +187,6 @@ export default function CompareMillenniaVsAce() {
           <SvgFeeMath />
         </div>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK AXIS ACE IF</div>
@@ -211,7 +207,6 @@ export default function CompareMillenniaVsAce() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Where the math actually lands — worked example</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -230,7 +225,6 @@ export default function CompareMillenniaVsAce() {
           Now flip the profile: ₹40,000 monthly spend concentrated as ₹25k partner online (Amazon, Flipkart, Swiggy combined) plus ₹15k miscellaneous. With Millennia, the ₹1,000 monthly cap binds at ₹20k partner spend (5 percent × ₹20k = ₹1,000), so additional ₹5k earns only the 1 percent base rate. Monthly cashback ₹1,150 = ₹13,800 annual. Subtract ₹1,000 fee, add ₹1,000 voucher year one = ₹13,800 year-one net. With Ace, the partner spend gets only the 1.5 percent base rate (not on Ace's partner list), so monthly cashback ₹600 = ₹7,200 annual minus ₹499 fee = ₹6,701. Millennia wins by ₹7,099 on this partner-app-concentrated profile. The right card is entirely a function of spend pattern.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The card-stack strategy — hold both</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -243,7 +237,6 @@ export default function CompareMillenniaVsAce() {
           For the stack-strategy walkthrough see our <Link href="/blog/cap-adjusted-cashback-explained" style={{ color: COLOR }}>cap-adjusted cashback explainer</Link>. To run your specific spend profile, use the <Link href="/tools/cashback-calculator" style={{ color: COLOR }}>cashback calculator</Link>.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Who shouldn't get either card</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -256,7 +249,6 @@ export default function CompareMillenniaVsAce() {
           Third, first-time cardholders with no CIBIL. Both Millennia and Ace require established CIBIL history (typically 720-plus) for approval. New applicants without bureau history should start with Amazon Pay ICICI (lifetime free, ₹2.4 lakh income approval) or an FD-secured Axis Insta Easy before stepping up to the cashback tier.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Common operational mistakes</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -266,7 +258,6 @@ export default function CompareMillenniaVsAce() {
           The behavioural fixes are simple but require discipline. Set a calendar reminder for the 25th day after card mailing to use the welcome voucher. Save the merchant-card mapping as a phone note. Pay down mid-month if your spend spikes above the safe utilisation threshold.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Reward credit and redemption mechanics</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -279,7 +270,6 @@ export default function CompareMillenniaVsAce() {
           The simplicity is genuinely valuable. For cardholders who don't enjoy reward optimisation (which is most cardholders), getting headline rate cleanly outperforms a higher headline rate that requires active management. A 2.5 percent Ace cashback you actually capture beats a 3.5 percent Magnus reward you partially realise via default statement credit at ₹0.20 per point.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Eligibility and approval process</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -295,7 +285,6 @@ export default function CompareMillenniaVsAce() {
           Pre-approved offers from your salary-account bank skip most of this friction. HDFC salary account holders typically receive in-app pre-approved Millennia offers with same-day instant approval and 1-week card mailing. Axis salary account holders similarly get pre-approved Ace offers. Pre-approved means the bank has already underwritten your profile internally; the hard CIBIL pull is replaced by a soft pull, with zero CIBIL impact and faster turnaround. Check your salary-account net-banking app for current pre-approved card offers before applying through standard channels — same card, faster process, less CIBIL impact.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
@@ -305,7 +294,6 @@ export default function CompareMillenniaVsAce() {
           </details>
         ))}
       </section>
-
       <section style={{ marginBottom: 28, padding: "18px 20px", border: "1px solid var(--border)", borderRadius: 12, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 14, paddingLeft: 22, margin: 0 }}>
@@ -315,7 +303,6 @@ export default function CompareMillenniaVsAce() {
           <li><Link href="/learn/credit-cards" style={{ color: COLOR }}>Credit cards knowledge hub</Link>. All our card guides in one place.</li>
         </ul>
       </section>
-
       <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 13, fontWeight: 700, color: "var(--text)", margin: "0 0 8px", letterSpacing: 1.5 }}>SOURCES</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>

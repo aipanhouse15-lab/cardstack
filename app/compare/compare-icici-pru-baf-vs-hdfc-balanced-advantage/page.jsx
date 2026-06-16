@@ -87,13 +87,13 @@ export default function CompareIciciVsHdfcBaf() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             ICICI Pru BAF vs HDFC Balanced Advantage — defensive vs growth BAF in 2026
           </h1>
-          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Both are equity-tax-treated dynamic allocation funds. Same SEBI category, same arbitrage-based 65% equity floor — but two completely different valuation philosophies translate into different risk profiles. Pick by the drawdown you can stomach, not the headline CAGR.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
-    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -112,7 +112,6 @@ export default function CompareIciciVsHdfcBaf() {
           ICICI's counter-cyclical model has lower max drawdown (~14% vs HDFC's ~22%) at the cost of slightly lower CAGR. For investors near retirement or those using a BAF as the entire equity exposure, ICICI's defensive profile is the smarter default. HDFC suits a 5-10 year horizon investor who wants tax-efficient equity exposure with mild volatility damping.
         </p>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
@@ -135,14 +134,12 @@ export default function CompareIciciVsHdfcBaf() {
           </table>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Equity allocation behaviour</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
           <SvgEquityBands />
         </div>
       </section>
-
       <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK ICICI PRU BAF IF</div>
@@ -163,7 +160,6 @@ export default function CompareIciciVsHdfcBaf() {
           </ul>
         </div>
       </section>
-
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Why BAFs are the SWP-friendly equity option</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
@@ -173,7 +169,6 @@ export default function CompareIciciVsHdfcBaf() {
           For BAF positioning within a portfolio see the <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link>; the <Link href="/tools/sip-calculator" style={{ color: COLOR }}>SIP calculator</Link> models long-horizon compounding under realistic BAF return bands.
         </p>
       </section>
-
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (

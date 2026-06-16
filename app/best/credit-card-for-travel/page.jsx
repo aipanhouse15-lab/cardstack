@@ -357,7 +357,7 @@ export default function BestCreditCardForTravel() {
         padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
-        lineHeight: 1.65,
+        lineHeight: 1.6,
       }}
     >
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
@@ -492,7 +492,7 @@ export default function BestCreditCardForTravel() {
                   {card.tag}
                 </span>
               </div>
-              <div style={{ fontSize: 13, color: "var(--text-muted)", lineHeight: 1.7 }}>
+              <div style={{ fontSize: 13, color: "var(--text-muted)", lineHeight: 1.6 }}>
                 <span style={{ fontWeight: 600, color: "var(--text)" }}>Fee:</span> {card.fee} |{" "}
                 <span style={{ fontWeight: 600, color: "var(--text)" }}>Reward:</span> {card.reward}
               </div>
@@ -653,7 +653,7 @@ export default function BestCreditCardForTravel() {
             >
               {item.name}
             </summary>
-            <p style={{ marginTop: 10, fontSize: 14, color: "var(--text-muted)", lineHeight: 1.7 }}>
+            <p style={{ marginTop: 10, fontSize: 14, color: "var(--text-muted)", lineHeight: 1.6 }}>
               {item.acceptedAnswer.text}
             </p>
           </details>
@@ -688,7 +688,7 @@ export default function BestCreditCardForTravel() {
           paddingTop: 20,
           fontSize: 12,
           color: "var(--text-muted)",
-          lineHeight: 1.7,
+          lineHeight: 1.6,
         }}
       >
         <strong>Disclaimer:</strong> Assure Fintech is an independent editorial site. We do not have a banking license and do not provide financial advice regulated under SEBI or RBI guidelines. Card terms, rewards rates, and partner lists change frequently. Verify all details with the issuing bank before applying. Some links on this page may earn us a referral fee, which does not influence our rankings or editorial opinions.
