@@ -485,3 +485,10 @@ footer { border-top: 1px solid var(--hair); background: #0A090D; padding: 70px 0
 .final h2 { font-family: var(--disp); font-size: clamp(38px, 6vw, 72px); font-weight: 380; line-height: 1.08; letter-spacing: -.02em; }
 .final h2 em { font-style: italic; color: var(--green); }
 .final p { margin: 24px auto 44px; color: var(--mut); max-width: 420px; }
+
+/* ── ARTICLE CONTENT SPACING ── */
+main p { margin: 0 0 14px; }
+main p:last-child { margin-bottom: 0; }
+main section { margin-bottom: 22px; }
+main h2 { margin-top: 8px; }
+main h3 { margin-top: 4px; }

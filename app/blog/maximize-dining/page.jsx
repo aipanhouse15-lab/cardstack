@@ -287,7 +287,29 @@ export default function BlogMaximizeDining() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1F1500, #4D3300, #1F1500)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #f59e0b22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Dining Rewards
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            How to Actually Maximize Dining Rewards in India (With Real Math)
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 28 }}>
+            You're spending ₹8,000 a month on Swiggy, Zomato, and restaurants. The right card combination earns you ₹800+ back. The wrong one earns you ₹80.
+          </p>
+          <div style={{ display: "flex", gap: 40, flexWrap: "wrap" }}>
+            <div><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>₹800+</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>Monthly savings (right combo)</div></div>
+            <div><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>5</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>Cards compared</div></div>
+            <div><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>₹10K</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>Cap threshold</div></div>
+          </div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)", marginTop: 20 }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+        </div>
+      </div>
+      <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -295,18 +317,6 @@ export default function BlogMaximizeDining() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Maximize Dining Rewards
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · DINING REWARDS</div>
-
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>
-        How to Actually Maximize Dining Rewards in India (With Real Math)
-      </h1>
-
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>
-        You're spending ₹8,000 a month on Swiggy, Zomato, and restaurants. The right card combination earns you ₹800+ back. The wrong one earns you ₹80.
-      </p>
-
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
 
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The honest version of dining rewards</h2>
@@ -396,5 +406,6 @@ export default function BlogMaximizeDining() {
         Assure Fintech is an independent comparison site. Reward rates and caps listed reflect publicly available bank terms as of June 2026 and may change. Always verify current terms at your bank's website before applying. We do not receive commission from card issuers for editorial coverage.
       </footer>
     </main>
+    </>
   );
 }
