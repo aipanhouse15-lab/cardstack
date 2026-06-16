@@ -146,7 +146,7 @@ const SvgPayLaterVsCard = () => (
     <text x="64" y="146" fontSize="11" fill="var(--text-muted)">Requires credit card eligibility</text>
     <rect x="380" y="42" width="310" height="112" rx="8" fill="white" stroke="#94a3b8" strokeWidth="1.5" />
     <text x="535" y="66" textAnchor="middle" fontSize="13" fontWeight="800" fill="var(--text)">Amazon Pay Later</text>
-    <text x="400" y="92" fontSize="11" fill="#16a34a}>✓</text>
+    <text x="400" y="92" fontSize="11" fill="#16a34a">✓</text>
     <text x="414" y="92" fontSize="11" fill="var(--text)">Easy KYC, instant credit line</text>
     <text x="400" y="110" fontSize="11" fill="#16a34a">✓</text>
     <text x="414" y="110" fontSize="11" fill="var(--text)">Good for thin credit profile users</text>
