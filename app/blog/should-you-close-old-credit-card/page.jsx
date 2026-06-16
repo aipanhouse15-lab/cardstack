@@ -77,7 +77,7 @@ const SvgCreditAgeExplainer = () => (
 );
 
 const SvgUtilisationSpike = () => (
-  <svg viewBox="0 0 720 214" role="img" aria-label="Credit utilisation ratio spike after closing a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 224" role="img" aria-label="Credit utilisation ratio spike after closing a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Utilisation Spike: The Second Hit You Do Not See Coming</text>
     <text x="180" y="56" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Before Closing Old Card</text>
@@ -94,7 +94,8 @@ const SvgUtilisationSpike = () => (
     <text x="540" y="138" textAnchor="middle" fontSize="11" fill="var(--text-muted)">utilisation (hurts score)</text>
     <rect x="440" y="152" width="200" height="22" rx="4" fill={COLOR} opacity="0.15" />
     <rect x="440" y="152" width="50" height="22" rx="4" fill={COLOR} opacity="0.6" />
-    <text x="360" y="190" textAnchor="middle" fontSize="7" fill="var(--text-muted)">Same ₹75,000 outstanding. Different utilisation. Closing a high-limit old card is a double penalty: lower credit age AND higher utilisation ratio.</text>
+        <text x="360" y="190" fontSize="9" textAnchor="middle" fill="var(--text-muted)">Same ₹75,000 outstanding. Different utilisation. Closing a high-limit old card is a double penalty: lower credit age AND</text>
+    <text x="360" y="204" fontSize="9" textAnchor="middle" fill="var(--text-muted)">higher utilisation ratio.</text>
   </svg>
 );
 

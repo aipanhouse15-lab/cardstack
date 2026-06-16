@@ -22,7 +22,7 @@ const COLOR = "#16a34a";
 const UPDATED = "June 4, 2026";
 
 const SvgDeductionsMap = () => (
-  <svg viewBox="0 0 720 340" role="img" aria-label="Complete map of all Section 80C eligible deductions including EPF PPF ELSS LIC tuition fees home loan principal stamp duty NSC SCSS and Sukanya Samriddhi with maximum amounts" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 350" role="img" aria-label="Complete map of all Section 80C eligible deductions including EPF PPF ELSS LIC tuition fees home loan principal stamp duty NSC SCSS and Sukanya Samriddhi with maximum amounts" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ALL 12 SECTION 80C ELIGIBLE ITEMS · ₹1.5L ANNUAL LIMIT (OLD REGIME)</text>
     {[
       { item: "Employee EPF contribution", max: "No cap (auto)", color: COLOR, group: "Auto" },
@@ -45,12 +45,13 @@ const SvgDeductionsMap = () => (
         <text x="630" y={53 + i * 23} fontFamily="system-ui" fontSize="11" fontWeight="600" fill={color}>{max}</text>
       </g>
     ))}
-    <text x="20" y="316" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">The ₹1.5L cap is on total 80C deduction claimed, not per item. EPF alone often fills ₹60-90K of this for salaried employees. Check your payslip before buying additional 80C products.</text>
+        <text x="20" y="316" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">The ₹1.5L cap is on total 80C deduction claimed, not per item. EPF alone often fills ₹60-90K of this for salaried</text>
+    <text x="20" y="330" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">employees. Check your payslip before buying additional 80C products.</text>
   </svg>
 );
 
 const SvgMostMissed = () => (
-  <svg viewBox="0 0 720 239" role="img" aria-label="Most commonly missed 80C deductions showing children tuition fees home loan principal and stamp duty that most salaried Indians do not claim" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 354" role="img" aria-label="Most commonly missed 80C deductions showing children tuition fees home loan principal and stamp duty that most salaried Indians do not claim" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">THE MOST MISSED 80C DEDUCTIONS · WHAT MOST SALARIED INDIANS FORGET TO CLAIM</text>
     {[
       { item: "Children's tuition fees", detail: "School / college fees for up to 2 children. Full-time courses only. Claimable even for private school fees.", savings30pct: "₹45,000", missed: "Very High" },
@@ -66,12 +67,13 @@ const SvgMostMissed = () => (
         <text x="580" y={70 + i * 44} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Miss rate: {missed}</text>
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Children's tuition fees and home loan principal together can contribute ₹80,000-1,50,000 to 80C — potentially filling the entire limit without any additional investment.</text>
+        <text x="20" y="215" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Children's tuition fees and home loan principal together can contribute ₹80,000-1,50,000 to 80C — potentially filling the</text>
+    <text x="20" y="229" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">entire limit without any additional investment.</text>
   </svg>
 );
 
 const SvgNPSExtra = () => (
-  <svg viewBox="0 0 720 214" role="img" aria-label="NPS 80CCD 1B additional deduction of 50000 rupees over and above 80C limit showing total tax saving potential of 2 lakh rupees for 30 percent slab investor" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 224" role="img" aria-label="NPS 80CCD 1B additional deduction of 50000 rupees over and above 80C limit showing total tax saving potential of 2 lakh rupees for 30 percent slab investor" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">NPS 80CCD(1B): ₹50,000 EXTRA DEDUCTION BEYOND THE ₹1.5L 80C LIMIT</text>
     <rect x="20" y="40" width="280" height="120" fill={COLOR} rx="8" opacity="0.12" stroke={COLOR} strokeWidth="1" />
     <text x="160" y="68" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill={COLOR}>Section 80C</text>
@@ -90,12 +92,13 @@ const SvgNPSExtra = () => (
     <text x="640" y="88" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#fff">TOTAL TAX</text>
     <text x="640" y="106" textAnchor="middle" fontFamily="system-ui" fontSize="18" fontWeight="800" fill="#fff">₹60,000</text>
     <text x="640" y="124" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#bbf7d0">saved/yr (30%)</text>
-    <text x="20" y="190" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">NPS 80CCD(1B) is over and above 80C — it doesn't compete with PPF/ELSS. This ₹50,000 extra deduction saves ₹15,000/year in tax for 30% slab. NPS has retirement lock-in — 60% lump sum at 60, 40% annuity.</text>
+        <text x="20" y="190" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">NPS 80CCD(1B) is over and above 80C — it doesn't compete with PPF/ELSS. This ₹50,000 extra deduction saves ₹15,000/year</text>
+    <text x="20" y="204" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">in tax for 30% slab. NPS has retirement lock-in — 60% lump sum at 60, 40% annuity.</text>
   </svg>
 );
 
 const SvgTaxSavedByAmount = () => (
-  <svg viewBox="0 0 720 239" role="img" aria-label="Tax saved at different income tax slabs for 1.5 lakh 80C deduction showing savings of 7500 at 5 percent slab to 45000 at 30 percent slab" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 428" role="img" aria-label="Tax saved at different income tax slabs for 1.5 lakh 80C deduction showing savings of 7500 at 5 percent slab to 45000 at 30 percent slab" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW MUCH TAX DOES ₹1.5L 80C ACTUALLY SAVE? BY INCOME SLAB</text>
     {[
       { slab: "5% (₹3L-7L income)", saved: 7500, color: "#65a30d", note: "₹7,500/yr — still worth claiming" },
@@ -109,12 +112,13 @@ const SvgTaxSavedByAmount = () => (
         <text x={218 + saved / 150} y={84 + i * 54} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{note}</text>
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Plus 4% cess on above: actual savings are ₹7,800 / ₹31,200 / ₹46,800 respectively. NPS 80CCD(1B) adds another ₹2,600 / ₹10,400 / ₹15,600 on top.</text>
+        <text x="20" y="215" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Plus 4% cess on above: actual savings are ₹7,800 / ₹31,200 / ₹46,800 respectively. NPS 80CCD(1B) adds another ₹2,600 /</text>
+    <text x="20" y="229" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">₹10,400 / ₹15,600 on top.</text>
   </svg>
 );
 
 const SvgSukanyaSamriddhi = () => (
-  <svg viewBox="0 0 720 196" role="img" aria-label="Sukanya Samriddhi Yojana features showing 8.2 percent interest rate EEE tax treatment minimum 250 rupees deposit and 21 year maturity making it best instrument for girl child savings" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 206" role="img" aria-label="Sukanya Samriddhi Yojana features showing 8.2 percent interest rate EEE tax treatment minimum 250 rupees deposit and 21 year maturity making it best instrument for girl child savings" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">SUKANYA SAMRIDDHI YOJANA: BEST 80C INSTRUMENT FOR PARENTS OF DAUGHTERS</text>
     <rect x="20" y="38" width="680" height="120" fill="var(--surface, #f0fdf4)" stroke={COLOR} strokeWidth="1.5" rx="8" />
     {[
@@ -129,7 +133,8 @@ const SvgSukanyaSamriddhi = () => (
         <text x="175" y={58 + i * 20} fontFamily="system-ui" fontSize="11" fill="var(--text)">{value}</text>
       </g>
     ))}
-    <text x="20" y="172" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">SSY at 8.20% beats PPF (7.1%) and FD by a meaningful margin with EEE tax — the best government-backed return available. If you have a daughter below 10, open this account immediately at any post office or SBI branch.</text>
+        <text x="20" y="172" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">SSY at 8.20% beats PPF (7.1%) and FD by a meaningful margin with EEE tax — the best government-backed return available.</text>
+    <text x="20" y="186" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">If you have a daughter below 10, open this account immediately at any post office or SBI branch.</text>
   </svg>
 );
 

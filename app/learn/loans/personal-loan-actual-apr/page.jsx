@@ -98,7 +98,7 @@ const SvgBankRateComparison = () => (
 );
 
 const SvgCibilVsRate = () => (
-  <svg viewBox="0 0 720 254" role="img" aria-label="CIBIL score range versus personal loan interest rate showing that a score below 700 can mean paying 4 to 8 percent more than someone with 800 plus score" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 264" role="img" aria-label="CIBIL score range versus personal loan interest rate showing that a score below 700 can mean paying 4 to 8 percent more than someone with 800 plus score" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">CIBIL SCORE vs PERSONAL LOAN RATE · HDFC / ICICI / AXIS · SALARIED APPLICANT</text>
     {[
       { label: "800+", rate: "10.50%", color: "#16a34a", x: 60, barW: 120 },
@@ -114,7 +114,8 @@ const SvgCibilVsRate = () => (
         <text x={x + barW + 6} y={55 + i * 30} fontFamily="system-ui" fontSize="12" fontWeight="700" fill={color}>{rate}</text>
       </g>
     ))}
-    <text x="20" y="230" fontFamily="system-ui" fontSize="8" fill="var(--text-muted)">Gap between 800+ and below-700 borrower: ~10-14% on same loan. Check your score free at RBI-authorized bureaus before applying.</text>
+        <text x="20" y="230" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Gap between 800+ and below-700 borrower: ~10-14% on same loan. Check your score free at RBI-authorized bureaus before</text>
+    <text x="20" y="244" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">applying.</text>
   </svg>
 );
 

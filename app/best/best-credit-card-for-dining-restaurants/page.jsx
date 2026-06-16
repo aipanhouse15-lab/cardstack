@@ -98,7 +98,7 @@ function DiningRewardRateChart() {
 function HighSpendDinerMathTable() {
   return (
     <svg
-      viewBox="0 0 680 274"
+      viewBox="0 0 680 329"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Table comparing annual cashback earned by high-spend restaurant diners across different credit cards"
@@ -163,7 +163,7 @@ function WeekendDiningBonusCalc() {
 function DiningCardDecisionMatrix() {
   return (
     <svg
-      viewBox="0 0 680 330"
+      viewBox="0 0 680 351"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Decision matrix for choosing the best dining credit card based on spending level and usage pattern"

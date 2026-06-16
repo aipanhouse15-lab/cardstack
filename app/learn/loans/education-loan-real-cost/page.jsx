@@ -22,7 +22,7 @@ const COLOR = "#2563eb";
 const UPDATED = "June 4, 2026";
 
 const SvgMoratoriumCost = () => (
-  <svg viewBox="0 0 720 322" role="img" aria-label="Education loan moratorium cost visualization showing how 15 lakh borrowed becomes 18.5 lakh outstanding before first EMI due to interest capitalization during course and moratorium periods" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 332" role="img" aria-label="Education loan moratorium cost visualization showing how 15 lakh borrowed becomes 18.5 lakh outstanding before first EMI due to interest capitalization during course and moratorium periods" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW ₹15L BECOMES ₹22L BEFORE YOUR FIRST JOB · ANANYA'S MBA LOAN</text>
     <rect x="20" y="40" width="100" height="200" fill={COLOR} rx="6" opacity="0.8" />
     <text x="70" y="135" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#fff">₹15L</text>
@@ -46,13 +46,15 @@ const SvgMoratoriumCost = () => (
     <text x="610" y="195" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#fca5a5">₹5.8L added</text>
     <text x="610" y="212" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fca5a5">before earning</text>
     <text x="610" y="228" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fca5a5">a single rupee</text>
-    <text x="20" y="285" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Interest during study period: simple (added to principal). After moratorium ends: EMI on ₹20.8L, not ₹15L. At 11% over 10 years, total repaid: ~₹34.4L on ₹15L borrowed.</text>
-    <text x="20" y="298" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">If Ananya had paid interest during study (₹1,650/month): outstanding stays ₹15L. EMI on ₹15L over 10yr: ₹20,700. Total repaid: ₹28.4L. She saves ₹6L by paying ₹39,600 during study.</text>
+        <text x="20" y="285" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Interest during study period: simple (added to principal). After moratorium ends: EMI on ₹20.8L, not ₹15L. At 11% over 10</text>
+    <text x="20" y="299" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">years, total repaid: ~₹34.4L on ₹15L borrowed.</text>
+        <text x="20" y="298" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">If Ananya had paid interest during study (₹1,650/month): outstanding stays ₹15L. EMI on ₹15L over 10yr: ₹20,700. Total</text>
+    <text x="20" y="312" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">repaid: ₹28.4L. She saves ₹6L by paying ₹39,600 during study.</text>
   </svg>
 );
 
 const SvgBankComparison = () => (
-  <svg viewBox="0 0 720 289" role="img" aria-label="Education loan comparison across SBI Vidya Lakshmi Axis Bank HDFC Credila and Bank of Baroda showing interest rates moratorium options and processing time for June 2026" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 319" role="img" aria-label="Education loan comparison across SBI Vidya Lakshmi Axis Bank HDFC Credila and Bank of Baroda showing interest rates moratorium options and processing time for June 2026" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">EDUCATION LOAN COMPARISON · JUNE 2026 · PREMIER INSTITUTE (IIM/IIT/NIT) · ₹15L</text>
     {[{ h: "Bank" }, { h: "Rate" }, { h: "Moratorium" }, { h: "Collateral req." }, { h: "80E benefit" }, { h: "Processing" }].map(({ h }, i) => {
       const xs = [20, 130, 220, 320, 430, 540, 640];
@@ -80,7 +82,8 @@ const SvgBankComparison = () => (
         })}
       </g>
     ))}
-    <text x="20" y="265" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">*SBI Scholar Loan rate with repo-rate linkage for premier institutes. Rate for other colleges: 11.15%. HDFC Credila good for international programs — fastest processing, accepts wider college list.</text>
+        <text x="20" y="265" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">*SBI Scholar Loan rate with repo-rate linkage for premier institutes. Rate for other colleges: 11.15%. HDFC Credila good</text>
+    <text x="20" y="279" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">for international programs — fastest processing, accepts wider college list.</text>
   </svg>
 );
 
@@ -109,7 +112,7 @@ const SvgSection80E = () => (
 );
 
 const SvgRepaymentTimeline = () => (
-  <svg viewBox="0 0 720 288" role="img" aria-label="Education loan repayment timeline showing three scenarios of 7 year 10 year and 15 year tenures with total interest paid for each" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 524" role="img" aria-label="Education loan repayment timeline showing three scenarios of 7 year 10 year and 15 year tenures with total interest paid for each" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">REPAYMENT TIMELINE SCENARIOS · ₹20L OUTSTANDING AT START · 11% INTEREST</text>
     {[
       { tenure: "7 years", emi: "₹35,600/mo", totalInt: "₹9.9L", totalRepaid: "₹29.9L", color: "#16a34a", barW: 200 },
@@ -124,7 +127,8 @@ const SvgRepaymentTimeline = () => (
       </g>
     ))}
     <rect x="20" y="248" width="680" height="24" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="4" />
-    <text x="30" y="264" fontFamily="system-ui" fontSize="7" fill="#dc2626" fontWeight="600">The 15-year option feels easiest month-to-month. It costs ₹11L more in total interest than the 7-year option. If possible, choose 7-10 years and prepay aggressively.</text>
+        <text x="30" y="264" fontSize="9" fontFamily="system-ui" fill="#dc2626" fontWeight="600">The 15-year option feels easiest month-to-month. It costs ₹11L more in total interest than the 7-year option. If</text>
+    <text x="30" y="278" fontSize="9" fontFamily="system-ui" fill="#dc2626" fontWeight="600">possible, choose 7-10 years and prepay aggressively.</text>
   </svg>
 );
 
@@ -150,7 +154,7 @@ const SvgInterestVsMoratorium = () => (
 );
 
 const SvgSalaryVsEMI = () => (
-  <svg viewBox="0 0 720 272" role="img" aria-label="Salary to EMI ratio across career paths showing what percentage of salary education loan EMI consumes for different jobs after MBA from tier 1 college" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 330" role="img" aria-label="Salary to EMI ratio across career paths showing what percentage of salary education loan EMI consumes for different jobs after MBA from tier 1 college" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">EMI AS % OF FIRST SALARY · ₹20L OUTSTANDING · 10-YEAR REPAYMENT · EMI ₹27,600/MONTH</text>
     {[
       { role: "IIM-A grad, consulting (₹28-35L CTC)", monthly: "₹1,90,000", pct: "14%", color: "#16a34a" },
@@ -166,7 +170,8 @@ const SvgSalaryVsEMI = () => (
         <text x={428 + parseInt(pct) * 2.8} y={66 + i * 40} fontFamily="system-ui" fontSize="12" fontWeight="700" fill={color}>{pct} of salary</text>
       </g>
     ))}
-    <text x="20" y="248" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">The 20-40% EMI-to-income ratio is manageable. Above 50% is severe stress. The college tier matters enormously — a ₹15L loan for a college with ₹5L average placement is a financial trap.</text>
+        <text x="20" y="248" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">The 20-40% EMI-to-income ratio is manageable. Above 50% is severe stress. The college tier matters enormously — a ₹15L</text>
+    <text x="20" y="262" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">loan for a college with ₹5L average placement is a financial trap.</text>
   </svg>
 );
 

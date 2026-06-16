@@ -22,7 +22,7 @@ const COLOR = "#ca8a04";
 const UPDATED = "June 4, 2026";
 
 const SvgRateComparison = () => (
-  <svg viewBox="0 0 720 319" role="img" aria-label="Senior citizen versus regular FD rates at top 8 banks as of June 2026 showing senior citizens earn 0.25 to 0.50 percent extra across all major banks" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 329" role="img" aria-label="Senior citizen versus regular FD rates at top 8 banks as of June 2026 showing senior citizens earn 0.25 to 0.50 percent extra across all major banks" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">SENIOR CITIZEN vs REGULAR FD RATES · 1-YEAR FD · JUNE 2026</text>
     {[
       { bank: "SBI", regular: 7.00, senior: 7.50, x: 60 },
@@ -44,12 +44,13 @@ const SvgRateComparison = () => (
     <line x1="40" y1="260" x2="700" y2="260" stroke="var(--border)" />
     <g><rect x="500" y="20" width="12" height="12" fill="var(--border)" rx="2" /><text x="518" y="30" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Regular</text></g>
     <g><rect x="500" y="38" width="12" height="12" fill={COLOR} rx="2" opacity="0.85" /><text x="518" y="48" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Senior / SCSS</text></g>
-    <text x="20" y="295" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">*SCSS (Senior Citizen Savings Scheme) is government-backed, 5-year tenor, max ₹30L, quarterly interest payout. Not technically an FD but the closest safe alternative for seniors.</text>
+        <text x="20" y="295" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">*SCSS (Senior Citizen Savings Scheme) is government-backed, 5-year tenor, max ₹30L, quarterly interest payout. Not</text>
+    <text x="20" y="309" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">technically an FD but the closest safe alternative for seniors.</text>
   </svg>
 );
 
 const SvgIncomeOnInvestment = () => (
-  <svg viewBox="0 0 720 259" role="img" aria-label="Annual interest income calculation for 20 lakh invested at different senior citizen FD rates and SCSS showing rupee income per year" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 303" role="img" aria-label="Annual interest income calculation for 20 lakh invested at different senior citizen FD rates and SCSS showing rupee income per year" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ANNUAL INTEREST INCOME · ₹20L INVESTED · SENIOR CITIZEN RATES · JUNE 2026</text>
     {[
       { product: "SCSS (8.20%)", income: 164000, color: "#16a34a" },
@@ -65,12 +66,13 @@ const SvgIncomeOnInvestment = () => (
         <text x={268 + income / 800 + 100} y={55 + i * 38} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">= ₹{Math.round(income / 12).toLocaleString()}/month</text>
       </g>
     ))}
-    <text x="20" y="235" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">After 80TTB exemption (₹50,000 tax-free interest), the first ₹50K of above income is tax-free regardless of slab. Senior citizens in nil slab: entire income above may be tax-free if under basic exemption.</text>
+        <text x="20" y="235" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">After 80TTB exemption (₹50,000 tax-free interest), the first ₹50K of above income is tax-free regardless of slab. Senior</text>
+    <text x="20" y="249" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">citizens in nil slab: entire income above may be tax-free if under basic exemption.</text>
   </svg>
 );
 
 const SvgSCSSvsfd = () => (
-  <svg viewBox="0 0 720 242" role="img" aria-label="SCSS versus senior citizen FD comparison showing SCSS is better on rate and government backing but FD wins on flexibility and no maximum limit" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 252" role="img" aria-label="SCSS versus senior citizen FD comparison showing SCSS is better on rate and government backing but FD wins on flexibility and no maximum limit" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">SCSS vs SENIOR CITIZEN FD · THE HONEST COMPARISON</text>
     {[{ h: "Feature" }, { h: "SCSS" }, { h: "Senior Citizen FD" }].map(({ h }, i) => {
       const xs = [20, 220, 480];
@@ -96,27 +98,31 @@ const SvgSCSSvsfd = () => (
         })}
       </g>
     ))}
-    <text x="20" y="218" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Best strategy: use SCSS for the first ₹30L (sovereign guarantee + 8.20%). For remaining corpus, park in senior citizen FDs at Unity SFB or Kotak for higher rates.</text>
+        <text x="20" y="218" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Best strategy: use SCSS for the first ₹30L (sovereign guarantee + 8.20%). For remaining corpus, park in senior citizen</text>
+    <text x="20" y="232" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">FDs at Unity SFB or Kotak for higher rates.</text>
   </svg>
 );
 
 const SvgForm15H = () => (
-  <svg viewBox="0 0 720 197" role="img" aria-label="Form 15H guide showing how senior citizens can submit form 15H to bank to prevent TDS deduction on FD interest when total income is below taxable limit" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 207" role="img" aria-label="Form 15H guide showing how senior citizens can submit form 15H to bank to prevent TDS deduction on FD interest when total income is below taxable limit" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">FORM 15H: HOW TO AVOID TDS ON FD INTEREST · SENIOR CITIZENS ONLY</text>
     <rect x="20" y="38" width="680" height="120" fill="var(--surface, #f0fdf4)" stroke="#16a34a" strokeWidth="1" rx="8" />
     <text x="36" y="62" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#16a34a">Who can submit Form 15H?</text>
     <text x="36" y="82" fontFamily="system-ui" fontSize="10" fill="var(--text)">Senior citizens (age 60+) whose total income in the financial year does not exceed the basic exemption limit.</text>
     <text x="36" y="99" fontFamily="system-ui" fontSize="12" fill="var(--text)">Basic exemption for senior citizens: ₹3,00,000. For super senior citizens (age 80+): ₹5,00,000.</text>
     <text x="36" y="118" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#16a34a">When to submit?</text>
-    <text x="36" y="136" fontFamily="system-ui" fontSize="7" fill="var(--text)">At the start of every financial year (April) to ALL banks where FDs are held. Digital submission available on most bank apps. No notarization needed.</text>
+        <text x="36" y="136" fontSize="9" fontFamily="system-ui" fill="var(--text)">At the start of every financial year (April) to ALL banks where FDs are held. Digital submission available on most bank</text>
+    <text x="36" y="150" fontSize="9" fontFamily="system-ui" fill="var(--text)">apps. No notarization needed.</text>
     <text x="36" y="153" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>What it does:</text>
-    <text x="120" y="153" fontFamily="system-ui" fontSize="7" fill="var(--text)">Prevents 10% TDS on FD interest. Saves the hassle of refund claims. Does NOT exempt you from tax — you still declare and pay at filing if liable.</text>
-    <text x="20" y="173" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">TDS threshold for senior citizens: ₹50,000 interest per bank per year. Below ₹50K from one bank, no TDS regardless of Form 15H. Submit anyway if income is below exemption limit.</text>
+        <text x="120" y="153" fontSize="9" fontFamily="system-ui" fill="var(--text)">Prevents 10% TDS on FD interest. Saves the hassle of refund claims. Does NOT exempt you from tax — you still declare and</text>
+    <text x="120" y="167" fontSize="9" fontFamily="system-ui" fill="var(--text)">pay at filing if liable.</text>
+        <text x="20" y="173" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">TDS threshold for senior citizens: ₹50,000 interest per bank per year. Below ₹50K from one bank, no TDS regardless of</text>
+    <text x="20" y="187" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Form 15H. Submit anyway if income is below exemption limit.</text>
   </svg>
 );
 
 const Svg80TTB = () => (
-  <svg viewBox="0 0 720 204" role="img" aria-label="Section 80TTB deduction calculation showing senior citizens can deduct up to 50000 rupees of interest income from savings FD and post office deposits" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 214" role="img" aria-label="Section 80TTB deduction calculation showing senior citizens can deduct up to 50000 rupees of interest income from savings FD and post office deposits" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">SECTION 80TTB: ₹50,000 INTEREST DEDUCTION FOR SENIOR CITIZENS</text>
     <rect x="20" y="38" width="680" height="50" fill="var(--surface, #f0f9ff)" stroke={COLOR} strokeWidth="1.5" rx="8" />
     <text x="30" y="60" fontFamily="system-ui" fontSize="9" fontWeight="700" fill={COLOR}>80TTB allows deduction of up to ₹50,000 on interest income from: savings account, FD, RD, and Post Office deposits.</text>
@@ -125,7 +131,8 @@ const Svg80TTB = () => (
     <text x="20" y="130" fontFamily="system-ui" fontSize="12" fill="var(--text)">80TTB deduction: ₹50,000 | Taxable interest: ₹22,000</text>
     <text x="20" y="148" fontFamily="system-ui" fontSize="9" fill="var(--text)">If total income (after 80TTB) is under ₹3L exemption limit: zero tax. Rebate under 87A applies if income is under ₹5L.</text>
     <rect x="20" y="160" width="680" height="30" fill={COLOR} rx="4" opacity="0.15" />
-    <text x="30" y="180" fontFamily="system-ui" fontSize="7" fontWeight="700" fill={COLOR}>Senior citizens in nil/5% slab with FD income: 80TTB + basic exemption often makes entire FD interest tax-free. Plan FD allocation with this in mind.</text>
+        <text x="30" y="180" fontSize="9" fontFamily="system-ui" fontWeight="700" fill={COLOR}>Senior citizens in nil/5% slab with FD income: 80TTB + basic exemption often makes entire FD interest tax-free. Plan FD</text>
+    <text x="30" y="194" fontSize="9" fontFamily="system-ui" fontWeight="700" fill={COLOR}>allocation with this in mind.</text>
   </svg>
 );
 

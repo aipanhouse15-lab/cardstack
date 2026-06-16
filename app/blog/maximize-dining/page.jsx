@@ -58,7 +58,7 @@ const SvgDiningRates = () => (
 );
 
 const SvgMonthlyEarningsTable = () => (
-  <svg viewBox="0 0 720 296" role="img" aria-label="Table showing monthly dining earnings on ₹8000 spend across 5 cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 339" role="img" aria-label="Table showing monthly dining earnings on ₹8000 spend across 5 cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="280" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">₹8,000/month dining spend: What you actually earn</text>
     {/* Header row */}
@@ -88,7 +88,7 @@ const SvgMonthlyEarningsTable = () => (
 );
 
 const SvgZomatoSwiggyTable = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Comparison table of which cards reward Zomato vs Swiggy vs both" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 352" role="img" aria-label="Comparison table of which cards reward Zomato vs Swiggy vs both" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Zomato vs Swiggy: Which Card Covers Which App?</text>
     <rect x="20" y="40" width="680" height="36" fill="var(--raise2)" rx="4" />

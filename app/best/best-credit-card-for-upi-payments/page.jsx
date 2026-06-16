@@ -57,7 +57,7 @@ function PhonePayIcon() {
       <rect x="10" y="4" width="20" height="32" rx="4" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
       <rect x="13" y="9" width="14" height="18" rx="1" fill={COLOR} fillOpacity="0.15"/>
       <circle cx="20" cy="32" r="2" fill={COLOR} fillOpacity="0.5"/>
-      <text x="20" y="21" textAnchor="middle" fontSize="8" fill={COLOR} fontWeight="700">GPay</text>
+      <text x="20" y="21" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="700">GPay</text>
     </svg>
   );
 }

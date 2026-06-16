@@ -171,7 +171,7 @@ function GroceryStackDiagram() {
 function GrocerySpendScenarios() {
   return (
     <svg
-      viewBox="0 0 680 200"
+      viewBox="0 0 680 254"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Annual cashback scenarios for grocery spend at different levels comparing three card options"

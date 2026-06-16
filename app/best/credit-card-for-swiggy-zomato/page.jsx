@@ -99,7 +99,7 @@ function StackPlayDiagram() {
 function EffectiveRateGrid() {
   return (
     <svg
-      viewBox="0 0 680 260"
+      viewBox="0 0 680 294"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Effective annual return comparison table for food delivery cards"
@@ -190,7 +190,7 @@ function AirtelDevaluationAlert() {
 function SpendScenarioGrid() {
   return (
     <svg
-      viewBox="0 0 680 200"
+      viewBox="0 0 680 254"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Spend scenario grid: which card wins at different food delivery budget levels"

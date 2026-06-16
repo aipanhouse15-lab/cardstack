@@ -65,7 +65,7 @@ const IconStar = () => (
 );
 
 const IconStack = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two-card stack strategy">
+  <svg width="28" height="28" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two-card stack strategy">
     <rect x="4" y="14" width="20" height="11" rx="3" fill={COLOR} opacity="0.15" stroke={COLOR} strokeWidth="1.5"/>
     <rect x="4" y="7" width="20" height="11" rx="3" fill={COLOR} opacity="0.3" stroke={COLOR} strokeWidth="1.5"/>
     <rect x="4" y="3" width="20" height="11" rx="3" fill={COLOR} opacity="0.5" stroke={COLOR} strokeWidth="1.5"/>

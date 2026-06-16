@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 function SurchargeExplainer() {
   return (
     <svg
-      viewBox="0 0 680 200"
+      viewBox="0 0 680 226"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Explainer diagram showing how the 1 percent fuel surcharge works and how much it costs per year at different spend levels"
@@ -59,7 +59,7 @@ function SurchargeExplainer() {
 function PetrolBrandMatchGrid() {
   return (
     <svg
-      viewBox="0 0 680 220"
+      viewBox="0 0 680 241"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Fuel card to petrol brand matching table: use BPCL card at BPCL pumps, IOCL card at IOCL pumps"

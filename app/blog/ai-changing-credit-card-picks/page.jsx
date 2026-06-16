@@ -64,7 +64,7 @@ const SvgGenericVsReal = () => (
 );
 
 const SvgBankComplexityTrend = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Banks increasing product complexity in response to AI comparison tools" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 316" role="img" aria-label="Banks increasing product complexity in response to AI comparison tools" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">How Banks Are Responding to AI Comparison Tools</text>
     {[
@@ -110,7 +110,7 @@ const SvgSmartSwipeHow = () => (
 );
 
 const SvgAiLimits = () => (
-  <svg viewBox="0 0 720 170" role="img" aria-label="What AI tools cannot do when picking credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 248" role="img" aria-label="What AI tools cannot do when picking credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">What AI Still Cannot Do for Card Picks</text>
     {[
@@ -128,7 +128,7 @@ const SvgAiLimits = () => (
 );
 
 const SvgInputGuide = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="What to input and ignore when using AI for credit card selection" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 228" role="img" aria-label="What to input and ignore when using AI for credit card selection" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <rect x="24" y="20" width="320" height="140" rx="8" fill="#22c55e" opacity="0.07" />
     <rect x="376" y="20" width="320" height="140" rx="8" fill="var(--raise)" opacity="0.07" />
@@ -170,7 +170,7 @@ const SvgRewardCapExposed = () => (
 );
 
 const SvgBankSweat = () => (
-  <svg viewBox="0 0 720 150" role="img" aria-label="Why banks are uncomfortable with AI-driven credit card comparisons" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 273" role="img" aria-label="Why banks are uncomfortable with AI-driven credit card comparisons" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="150" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Why Banks Are Uncomfortable With AI Comparisons</text>
     {[

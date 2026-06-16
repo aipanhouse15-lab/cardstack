@@ -22,7 +22,7 @@ const COLOR = "#e11d48";
 const UPDATED = "June 4, 2026";
 
 const SvgCopayMath = () => (
-  <svg viewBox="0 0 720 299" role="img" aria-label="Copay calculation on different claim sizes showing out of pocket payment at 10 percent copay on 2 lakh 5 lakh and 10 lakh claims" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 552" role="img" aria-label="Copay calculation on different claim sizes showing out of pocket payment at 10 percent copay on 2 lakh 5 lakh and 10 lakh claims" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">COPAY IMPACT ON 3 CLAIM SIZES · 10% COPAY CLAUSE · ₹10L SUM INSURED</text>
     {[
       { claim: "₹2L claim (minor surgery)", copay: "₹20,000", insurer: "₹1,80,000", oopPct: "10%", color: "#f59e0b" },
@@ -40,12 +40,13 @@ const SvgCopayMath = () => (
         <text x={602 + Math.min(parseInt(copay.replace(/[₹,]/g, "")) / 2000, 50)} y={69 + i * 74} textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fff">{copay} you</text>
       </g>
     ))}
-    <text x="20" y="275" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Copay is always a percentage of the total eligible claim. It applies AFTER sub-limits and deductions. On ₹10L claim, a 10% copay means ₹1L out of pocket — significant.</text>
+        <text x="20" y="275" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Copay is always a percentage of the total eligible claim. It applies AFTER sub-limits and deductions. On ₹10L claim, a</text>
+    <text x="20" y="289" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">10% copay means ₹1L out of pocket — significant.</text>
   </svg>
 );
 
 const SvgPremiumDifference = () => (
-  <svg viewBox="0 0 720 228" role="img" aria-label="Premium comparison between policy with 10 percent copay and policy with no copay showing annual premium savings and cumulative savings over 10 years" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 238" role="img" aria-label="Premium comparison between policy with 10 percent copay and policy with no copay showing annual premium savings and cumulative savings over 10 years" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">PREMIUM DIFFERENCE · WITH vs WITHOUT COPAY · ₹5L SI · AGE 62</text>
     <rect x="20" y="40" width="300" height="120" fill={COLOR} rx="8" opacity="0.25" stroke={COLOR} strokeWidth="1" />
     <text x="170" y="64" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>WITH 10% COPAY</text>
@@ -59,13 +60,15 @@ const SvgPremiumDifference = () => (
     <text x="550" y="110" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">Full coverage, insurer</text>
     <text x="550" y="128" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">absorbs 100% of eligible claim</text>
     <text x="550" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="#dc2626">Costs: ₹8,000/yr more</text>
-    <text x="20" y="185" fontFamily="system-ui" fontSize="7" fontWeight="700" fill="var(--text)">10-year premium difference: ₹80,000 saved with copay. But ONE ₹5L claim adds ₹50,000 out of pocket. Break-even: ~1.6 major claims over 10 years.</text>
-    <text x="20" y="204" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Above 60, average hospitalization probability per year is higher. Most seniors will have more than 1.6 major hospitalizations in 10 years. No-copay wins long-term for senior policyholders.</text>
+        <text x="20" y="185" fontSize="9" fontFamily="system-ui" fontWeight="700" fill="var(--text)">10-year premium difference: ₹80,000 saved with copay. But ONE ₹5L claim adds ₹50,000 out of pocket. Break-even: ~1.6</text>
+    <text x="20" y="199" fontSize="9" fontFamily="system-ui" fontWeight="700" fill="var(--text)">major claims over 10 years.</text>
+        <text x="20" y="204" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Above 60, average hospitalization probability per year is higher. Most seniors will have more than 1.6 major</text>
+    <text x="20" y="218" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">hospitalizations in 10 years. No-copay wins long-term for senior policyholders.</text>
   </svg>
 );
 
 const SvgBreakEven = () => (
-  <svg viewBox="0 0 720 259" role="img" aria-label="Break-even analysis for copay versus no copay health insurance showing at which number of claims over 10 years no copay becomes cheaper than copay policy" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 269" role="img" aria-label="Break-even analysis for copay versus no copay health insurance showing at which number of claims over 10 years no copay becomes cheaper than copay policy" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">BREAK-EVEN: WHEN DOES NO-COPAY START SAVING MORE THAN IT COSTS? · ₹5L CLAIM SIZE</text>
     <line x1="60" y1="200" x2="700" y2="200" stroke="var(--border)" />
     <line x1="60" y1="40" x2="60" y2="200" stroke="var(--border)" />
@@ -80,12 +83,13 @@ const SvgBreakEven = () => (
     {["0", "1", "2", "3", "4", "5"].map((n, i) => (
       <text key={n} x={60 + i * 128} y="215" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)" textAnchor="middle">{n} claims</text>
     ))}
-    <text x="20" y="235" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">If you expect 0-1 major hospitalizations in 10 years: copay policy saves you money. If you expect 2+ major claims: no-copay pays off. Seniors above 60: statistically expect 2+ in 10 years.</text>
+        <text x="20" y="235" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">If you expect 0-1 major hospitalizations in 10 years: copay policy saves you money. If you expect 2+ major claims:</text>
+    <text x="20" y="249" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">no-copay pays off. Seniors above 60: statistically expect 2+ in 10 years.</text>
   </svg>
 );
 
 const SvgInsurerCopayTerms = () => (
-  <svg viewBox="0 0 720 239" role="img" aria-label="Copay terms comparison across major health insurers showing which have mandatory copay for senior citizens and which offer no copay options" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 278" role="img" aria-label="Copay terms comparison across major health insurers showing which have mandatory copay for senior citizens and which offer no copay options" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">COPAY TERMS BY INSURER · SENIOR CITIZEN POLICIES · JUNE 2026</text>
     {[{ h: "Insurer" }, { h: "Copay %" }, { h: "When it applies" }, { h: "Can you buy out?" }, { h: "Verdict" }].map(({ h }, i) => {
       const xs = [20, 170, 280, 450, 560];
@@ -108,12 +112,13 @@ const SvgInsurerCopayTerms = () => (
         })}
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Some insurers allow you to buy out the copay clause by paying additional premium. Always ask: 'Can I get a zero-copay version of this policy?' — the answer may surprise you.</text>
+        <text x="20" y="215" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Some insurers allow you to buy out the copay clause by paying additional premium. Always ask: 'Can I get a zero-copay</text>
+    <text x="20" y="229" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">version of this policy?' — the answer may surprise you.</text>
   </svg>
 );
 
 const SvgWhoShouldChoose = () => (
-  <svg viewBox="0 0 720 217" role="img" aria-label="Decision guide for choosing between copay and no copay health insurance based on age income and expected hospitalization frequency" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 305" role="img" aria-label="Decision guide for choosing between copay and no copay health insurance based on age income and expected hospitalization frequency" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHO SHOULD CHOOSE WHAT · SIMPLIFIED DECISION GUIDE</text>
     {[
       { profile: "Under 45, healthy, budget-conscious", choice: "Copay OK", reason: "Low hospitalization probability. Premium savings likely outweigh occasional copay cost.", color: "#16a34a" },
@@ -129,7 +134,8 @@ const SvgWhoShouldChoose = () => (
         <text x="480" y={56 + i * 38} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{reason.slice(0, 55)}</text>
       </g>
     ))}
-    <text x="20" y="193" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Copay isn't evil — it lowers premiums for people who may not use the policy heavily. The problem is mandatory copay on senior citizen policies where heavy use is almost certain.</text>
+        <text x="20" y="193" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Copay isn't evil — it lowers premiums for people who may not use the policy heavily. The problem is mandatory copay on</text>
+    <text x="20" y="207" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">senior citizen policies where heavy use is almost certain.</text>
   </svg>
 );
 

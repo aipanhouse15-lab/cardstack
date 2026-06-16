@@ -25,7 +25,7 @@ const UPDATED = "June 4, 2026";
 function MilesVsCashbackChart() {
   return (
     <svg
-      viewBox="0 0 680 279"
+      viewBox="0 0 680 323"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Bar chart comparing value per ₹100 spent for miles-based vs cashback travel cards"
@@ -114,7 +114,7 @@ function LoungeAccessTable() {
   ];
   return (
     <svg
-      viewBox="0 0 680 316"
+      viewBox="0 0 680 320"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Table showing lounge access benefits for top Indian travel credit cards"
@@ -196,7 +196,7 @@ function TravelCardDecisionFlow() {
 function MilesValueCalculator() {
   return (
     <svg
-      viewBox="0 0 680 212"
+      viewBox="0 0 680 357"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Reference table showing break-even spend for Axis Atlas card to justify the annual fee"

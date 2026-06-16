@@ -110,7 +110,7 @@ function BBDStrategyTimeline() {
   ];
   return (
     <svg
-      viewBox="0 0 680 220"
+      viewBox="0 0 680 303"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Big Billion Days preparation timeline showing steps to maximise Flipkart card rewards"

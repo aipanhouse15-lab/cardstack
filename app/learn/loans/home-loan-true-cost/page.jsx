@@ -29,7 +29,7 @@ const SvgWaterfall = () => (
         <rect x="0" y={250 - b.h} width="80" height={b.h} fill={b.c} opacity={i === 6 ? 1 : 0.7} />
         <text x="40" y={244 - b.h} textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill={b.c}>{b.val}</text>
         <text x="40" y="270" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text)">{b.label}</text>
-        <text x="40" y="284" textAnchor="middle" fontFamily="system-ui" fontSize="8" fill="var(--text-muted)">{b.desc}</text>
+        <text x="40" y="284" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">{b.desc}</text>
       </g>
     ))}
   </svg>

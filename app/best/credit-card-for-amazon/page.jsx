@@ -94,7 +94,7 @@ function TrifectaExplainer() {
 function SaleStrategyGrid() {
   return (
     <svg
-      viewBox="0 0 680 234"
+      viewBox="0 0 680 279"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Amazon sale strategy grid showing how cashback stacks with bank offers during Great Indian Sale and Prime Day"
@@ -154,7 +154,7 @@ function EMIDecisionTree() {
 function WhenOtherCardsBeat() {
   return (
     <svg
-      viewBox="0 0 680 160"
+      viewBox="0 0 680 302"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Scenarios where HDFC Millennia or SBI Cashback beats Amazon Pay ICICI despite lower rates"

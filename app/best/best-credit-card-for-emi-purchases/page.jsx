@@ -26,7 +26,7 @@ const IconEMI = () => (
     <rect x="4" y="18" width="40" height="6" fill={COLOR} opacity="0.18"/>
     <circle cx="34" cy="32" r="3" fill={COLOR}/>
     <circle cx="40" cy="32" r="3" fill={COLOR} opacity="0.5"/>
-    <text x="9" y="35" fontSize="7" fill={COLOR} fontWeight="700">EMI</text>
+    <text x="9" y="35" fontSize="9" fill={COLOR} fontWeight="700">EMI</text>
   </svg>
 );
 
@@ -44,7 +44,7 @@ const IconCalendar = () => (
     <rect x="3" y="10" width="22" height="3" fill={COLOR} opacity="0.2"/>
     <rect x="8" y="3" width="2" height="5" rx="1" fill={COLOR}/>
     <rect x="18" y="3" width="2" height="5" rx="1" fill={COLOR}/>
-    <text x="8" y="22" fontSize="7" fill="var(--text-muted,#64748b)">1 2 3 4 5</text>
+    <text x="8" y="22" fontSize="9" fill="var(--text-muted,#64748b)">1 2 3 4 5</text>
   </svg>
 );
 

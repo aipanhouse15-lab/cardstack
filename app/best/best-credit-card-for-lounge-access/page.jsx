@@ -37,7 +37,7 @@ const IconPlane = () => (
 );
 
 const IconTrophy = () => (
-  <svg width="28" height="28" viewBox="0 0 28 42" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top ranked card trophy">
+  <svg width="28" height="28" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top ranked card trophy">
     <path d="M9 5H19V14C19 17.3 16.3 20 13 20V20C9.7 20 7 17.3 7 14V5H9Z" fill="none" stroke={COLOR} strokeWidth="2"/>
     <path d="M7 8H4C4 11 6 13 9 13" fill="none" stroke={COLOR} strokeWidth="1.5"/>
     <path d="M21 8H24C24 11 22 13 19 13" fill="none" stroke={COLOR} strokeWidth="1.5"/>
@@ -68,7 +68,7 @@ const IconCheck = () => (
 );
 
 const IconGlobe = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="International lounge access">
+  <svg width="28" height="28" viewBox="0 0 28 38" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="International lounge access">
     <circle cx="14" cy="14" r="11" fill="none" stroke={COLOR} strokeWidth="1.8"/>
     <ellipse cx="14" cy="14" rx="5" ry="11" fill="none" stroke={COLOR} strokeWidth="1.2"/>
     <path d="M3 14H25" stroke={COLOR} strokeWidth="1.2"/>

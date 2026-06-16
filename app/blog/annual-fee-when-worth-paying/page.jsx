@@ -79,7 +79,8 @@ const SvgFiveCardBreakeven = () => (
     <text x="320" y="214" fontSize="11" fill="var(--text)">0.5% base + bonus MR</text>
     <text x="440" y="214" fontSize="11" fontWeight="700" fill={COLOR}>₹3,54,000</text>
     <text x="620" y="214" fontSize="11" fontWeight="700" fill="#16a34a">₹2,80,000</text>
-    <text x="360" y="258" textAnchor="middle" fontSize="8" fill="var(--text-muted)">Lounge value calculated at ₹800/visit x included visits. Reward rates reflect June 2026 program values after recent devaluations.</text>
+        <text x="360" y="258" fontSize="9" textAnchor="middle" fill="var(--text-muted)">Lounge value calculated at ₹800/visit x included visits. Reward rates reflect June 2026 program values after recent</text>
+    <text x="360" y="272" fontSize="9" textAnchor="middle" fill="var(--text-muted)">devaluations.</text>
     <text x="360" y="272" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Amex MRCC break-even is high due to low base rate; value depends on how you redeem Membership Rewards points.</text>
   </svg>
 );

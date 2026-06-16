@@ -52,7 +52,7 @@ const SvgFuelSurchargeExplainer = () => (
 );
 
 const SvgCardComparison = () => (
-  <svg viewBox="0 0 720 300" role="img" aria-label="Comparison table of best fuel credit cards in India with surcharge waiver and reward details" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 329" role="img" aria-label="Comparison table of best fuel credit cards in India with surcharge waiver and reward details" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="300" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Best Fuel Cards in India: June 2026</text>
     <rect x="20" y="36" width="680" height="32" fill={COLOR} rx="4" />

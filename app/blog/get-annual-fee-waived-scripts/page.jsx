@@ -22,7 +22,7 @@ const COLOR = "#16a34a";
 const UPDATED = "June 4, 2026";
 
 const SvgBankFlexibilityRating = () => (
-  <svg viewBox="0 0 720 248" role="img" aria-label="Annual fee waiver flexibility rating by Indian bank, from most to least flexible" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 319" role="img" aria-label="Annual fee waiver flexibility rating by Indian bank, from most to least flexible" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Annual Fee Waiver Flexibility — Indian Banks Ranked (June 2026)</text>
     {[
@@ -39,12 +39,13 @@ const SvgBankFlexibilityRating = () => (
         <text x={248 + Math.round(score * 3.6)} y={70 + i * 36} fontSize="12" fontWeight="700" fill="var(--text)">{score}/100</text>
       </g>
     ))}
-    <text x="36" y="224" fontSize="7" fill="var(--text-muted)">Flexibility score based on Assure Fintech reader reports and retention call outcomes, Jan–May 2026. Results vary by card variant, tenure, and payment history.</text>
+        <text x="36" y="224" fontSize="9" fill="var(--text-muted)">Flexibility score based on Assure Fintech reader reports and retention call outcomes, Jan–May 2026. Results vary by card</text>
+    <text x="36" y="238" fontSize="9" fill="var(--text-muted)">variant, tenure, and payment history.</text>
   </svg>
 );
 
 const SvgWaiverOutcomeMatrix = () => (
-  <svg viewBox="0 0 720 276" role="img" aria-label="Possible annual fee waiver outcomes when calling retention desk" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 337" role="img" aria-label="Possible annual fee waiver outcomes when calling retention desk" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="270" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">What Banks Actually Offer When You Call About Annual Fee</text>
     <rect x="36" y="52" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
@@ -65,7 +66,8 @@ const SvgWaiverOutcomeMatrix = () => (
         <text x="400" y={101 + i * 36} fontSize="11" fill="var(--text-muted)">{meaning}</text>
       </g>
     ))}
-    <text x="36" y="252" fontSize="7" fill="var(--text-muted)">Likelihood percentages are indicative based on aggregated cardholder reports. Outcomes depend heavily on individual credit profile and card variant.</text>
+        <text x="36" y="252" fontSize="9" fill="var(--text-muted)">Likelihood percentages are indicative based on aggregated cardholder reports. Outcomes depend heavily on individual</text>
+    <text x="36" y="266" fontSize="9" fill="var(--text-muted)">credit profile and card variant.</text>
   </svg>
 );
 
@@ -106,7 +108,7 @@ const SvgCallTimeline = () => (
 );
 
 const SvgEscalationLadder = () => (
-  <svg viewBox="0 0 720 242" role="img" aria-label="Escalation steps if first agent refuses annual fee waiver" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 309" role="img" aria-label="Escalation steps if first agent refuses annual fee waiver" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="230" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Escalation Ladder — If the First Agent Says No</text>
     {[
@@ -127,7 +129,7 @@ const SvgEscalationLadder = () => (
 );
 
 const SvgDowngradeVsClose = () => (
-  <svg viewBox="0 0 720 228" role="img" aria-label="Comparison of downgrading versus closing a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 238" role="img" aria-label="Comparison of downgrading versus closing a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Downgrade vs. Close — What Happens to Your Credit Score</text>
     <rect x="36" y="52" width="308" height="130" rx="6" fill="#16a34a" opacity="0.22" />
@@ -144,12 +146,13 @@ const SvgDowngradeVsClose = () => (
     <text x="530" y="134" textAnchor="middle" fontSize="12" fill="var(--text)">Annual fee: ₹0 (card gone)</text>
     <text x="530" y="152" textAnchor="middle" fontSize="12" fill="var(--text)">CIBIL impact: Usually negative</text>
     <text x="530" y="170" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Fine only if card is very new (under 1 year)</text>
-    <text x="36" y="204" fontSize="8" fill="var(--text-muted)">Unless the card is under 12 months old, downgrading almost always beats closing. Mention this when negotiating — agents respond to it.</text>
+        <text x="36" y="204" fontSize="9" fill="var(--text-muted)">Unless the card is under 12 months old, downgrading almost always beats closing. Mention this when negotiating — agents</text>
+    <text x="36" y="218" fontSize="9" fill="var(--text-muted)">respond to it.</text>
   </svg>
 );
 
 const SvgMetricsTable = () => (
-  <svg viewBox="0 0 720 230" role="img" aria-label="Cardholder metrics that strengthen your annual fee waiver case" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 283" role="img" aria-label="Cardholder metrics that strengthen your annual fee waiver case" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="230" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Metrics That Strengthen Your Waiver Case</text>
     <rect x="36" y="50" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
@@ -170,7 +173,8 @@ const SvgMetricsTable = () => (
         <text x="500" y={95 + i * 28} fontSize="12" fill="#dc2626">{weak}</text>
       </g>
     ))}
-    <text x="36" y="218" fontSize="8" fill="var(--text-muted)">Mention your strongest 2-3 metrics in the first 30 seconds of the call. Agents have a checklist — you want to tick the boxes upfront.</text>
+        <text x="36" y="218" fontSize="9" fill="var(--text-muted)">Mention your strongest 2-3 metrics in the first 30 seconds of the call. Agents have a checklist — you want to tick the</text>
+    <text x="36" y="232" fontSize="9" fill="var(--text-muted)">boxes upfront.</text>
   </svg>
 );
 

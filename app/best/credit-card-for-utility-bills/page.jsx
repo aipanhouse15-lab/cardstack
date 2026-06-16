@@ -107,7 +107,7 @@ function BBPSVsDirectPaymentTable() {
   ];
   return (
     <svg
-      viewBox="0 0 680 276"
+      viewBox="0 0 680 329"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Table comparing reward earning methods for utility bill payment in India"
@@ -136,7 +136,7 @@ function BBPSVsDirectPaymentTable() {
 function MonthlyCapMathTable() {
   return (
     <svg
-      viewBox="0 0 680 236"
+      viewBox="0 0 680 321"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Table showing Axis ACE cashback earned at different monthly utility spending levels"

@@ -77,7 +77,7 @@ const SvgInterestVsInvestment = () => (
 );
 
 const SvgFirstCardByIncome = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Table recommending first credit cards for different income brackets in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 416" role="img" aria-label="Table recommending first credit cards for different income brackets in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="280" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Your First Card by Income Bracket (June 2026)</text>
     <rect x="20" y="40" width="680" height="34" fill={COLOR} rx="4" />
@@ -155,7 +155,7 @@ const SvgCibilImpact = () => (
 );
 
 const SvgMissedPaymentCost = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="Table showing cost of missing or delaying credit card payment in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 264" role="img" aria-label="Table showing cost of missing or delaying credit card payment in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">What Happens When You Miss a Credit Card Payment</text>
     <rect x="20" y="38" width="680" height="30" fill="var(--raise2)" rx="4" />

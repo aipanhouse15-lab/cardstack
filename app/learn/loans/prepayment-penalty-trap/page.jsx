@@ -22,7 +22,7 @@ const COLOR = "#2563eb";
 const UPDATED = "June 4, 2026";
 
 const SvgPenaltyMath = () => (
-  <svg viewBox="0 0 720 294" role="img" aria-label="Prepayment penalty calculation showing how a 3 percent penalty on 40 lakh outstanding loan equals 1.2 lakh charge that eats into your interest savings" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 304" role="img" aria-label="Prepayment penalty calculation showing how a 3 percent penalty on 40 lakh outstanding loan equals 1.2 lakh charge that eats into your interest savings" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">THE PREPAYMENT TRAP · ₹40L OUTSTANDING · FIXED RATE LOAN · YEAR 3</text>
     <rect x="40" y="40" width="280" height="50" fill={COLOR} rx="8" />
     <text x="180" y="60" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="#fff">Interest you want to save</text>
@@ -38,12 +38,13 @@ const SvgPenaltyMath = () => (
     <text x="360" y="175" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#fff">Net saving after penalty</text>
     <text x="360" y="200" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill="#fff">₹2,00,000</text>
     <text x="360" y="240" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">Still worth it — but only after penalty payback period of ~22 months</text>
-    <text x="20" y="270" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Penalty on floating rate loans: RBI mandates ZERO for individuals. But many banks have a 6-12 month lock-in before you can even attempt prepayment.</text>
+        <text x="20" y="270" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Penalty on floating rate loans: RBI mandates ZERO for individuals. But many banks have a 6-12 month lock-in before you</text>
+    <text x="20" y="284" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">can even attempt prepayment.</text>
   </svg>
 );
 
 const SvgBankPenaltyComparison = () => (
-  <svg viewBox="0 0 720 284" role="img" aria-label="Prepayment penalty comparison across SBI HDFC ICICI Axis and Kotak for both fixed and floating home loans showing which banks are most expensive to exit" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 319" role="img" aria-label="Prepayment penalty comparison across SBI HDFC ICICI Axis and Kotak for both fixed and floating home loans showing which banks are most expensive to exit" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">PREPAYMENT PENALTIES BY BANK · JUNE 2026 · HOME LOANS</text>
     {[{ h: "Bank", w: 90 }, { h: "Floating Penalty", w: 110 }, { h: "Fixed Penalty", w: 110 }, { h: "Lock-in Period", w: 110 }, { h: "Admin Fee on Switch", w: 140 }, { h: "Exit Cost on ₹40L", w: 120 }].map(({ h, w }, i) => {
       const x = [20, 110, 220, 330, 440, 580][i];
@@ -70,12 +71,13 @@ const SvgBankPenaltyComparison = () => (
         })}
       </g>
     ))}
-    <text x="20" y="260" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Axis Bank has the lowest fixed rate penalty and no lock-in. For floating loans, all scheduled banks are penalty-free per RBI mandate — but verify your sanction letter says floating rate explicitly.</text>
+        <text x="20" y="260" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Axis Bank has the lowest fixed rate penalty and no lock-in. For floating loans, all scheduled banks are penalty-free per</text>
+    <text x="20" y="274" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">RBI mandate — but verify your sanction letter says floating rate explicitly.</text>
   </svg>
 );
 
 const SvgSavingsVsPenalty = () => (
-  <svg viewBox="0 0 720 297" role="img" aria-label="Interest savings from prepaying versus penalty cost at different years of prepayment showing the optimal window for minimum penalty impact" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 307" role="img" aria-label="Interest savings from prepaying versus penalty cost at different years of prepayment showing the optimal window for minimum penalty impact" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">INTEREST SAVED vs PENALTY COST · ₹40L HOME LOAN · 9% FIXED · PREPAY FULL OUTSTANDING</text>
     <line x1="60" y1="240" x2="700" y2="240" stroke="var(--border)" />
     <line x1="60" y1="40" x2="60" y2="240" stroke="var(--border)" />
@@ -89,12 +91,13 @@ const SvgSavingsVsPenalty = () => (
     <circle cx="448" cy="148" r="7" fill="#f59e0b" />
     <text x="460" y="142" fontFamily="system-ui" fontSize="10" fill="#f59e0b" fontWeight="700">Cross-over: Year 10</text>
     <text x="460" y="155" fontFamily="system-ui" fontSize="10" fill="#f59e0b">Savings overtake penalty</text>
-    <text x="20" y="273" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Before Year 10 on a 20-year loan: interest saved typically exceeds penalty cost significantly. After Year 15: outstanding is smaller, penalty is lower, but less interest remains to save.</text>
+        <text x="20" y="273" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Before Year 10 on a 20-year loan: interest saved typically exceeds penalty cost significantly. After Year 15: outstanding</text>
+    <text x="20" y="287" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">is smaller, penalty is lower, but less interest remains to save.</text>
   </svg>
 );
 
 const SvgOptimalTiming = () => (
-  <svg viewBox="0 0 720 259" role="img" aria-label="Optimal prepayment timing guide showing the sweet spot years 7 to 12 where principal outstanding is high enough to save significant interest but loan is past most lock-in periods" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 269" role="img" aria-label="Optimal prepayment timing guide showing the sweet spot years 7 to 12 where principal outstanding is high enough to save significant interest but loan is past most lock-in periods" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">PREPAYMENT TIMING GUIDE · ₹50L HOME LOAN · 20-YEAR TENURE · 9% RATE</text>
     {[
       { period: "Year 0-1", verdict: "AVOID", detail: "Lock-in period. Penalty is high. Only 5-10% principal repaid.", color: "#dc2626", y: 45 },
@@ -110,12 +113,13 @@ const SvgOptimalTiming = () => (
         <text x="245" y={y + 22} fontFamily="system-ui" fontSize="12" fill="var(--text)">{detail}</text>
       </g>
     ))}
-    <text x="20" y="235" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">The sweet spot: big bonus in Year 8-10 should go straight to home loan prepayment. You'll save ₹3-8L in interest with no penalty on floating loans.</text>
+        <text x="20" y="235" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">The sweet spot: big bonus in Year 8-10 should go straight to home loan prepayment. You'll save ₹3-8L in interest with no</text>
+    <text x="20" y="249" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">penalty on floating loans.</text>
   </svg>
 );
 
 const SvgEscapeFlowchart = () => (
-  <svg viewBox="0 0 720 339" role="img" aria-label="Step by step flowchart for exiting a home loan early with minimum penalty cost covering floating versus fixed rate and balance transfer options" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 349" role="img" aria-label="Step by step flowchart for exiting a home loan early with minimum penalty cost covering floating versus fixed rate and balance transfer options" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW TO EXIT YOUR LOAN WITHOUT GETTING BURNED · DECISION FLOW</text>
     <rect x="260" y="38" width="200" height="40" fill={COLOR} rx="8" />
     <text x="360" y="63" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#fff">Want to prepay loan?</text>
@@ -139,12 +143,13 @@ const SvgEscapeFlowchart = () => (
     <rect x="140" y="240" width="240" height="40" fill="#7c3aed" rx="8" />
     <text x="260" y="258" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#fff">Balance transfer to floating</text>
     <text x="260" y="273" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#ddd6fe">New bank, zero prepayment future</text>
-    <text x="20" y="315" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Balance transfer: switch your outstanding loan to a new bank at a lower rate. Processing fee: ₹5,000-15,000. Worth it if rate differential saves more than the fee in 12 months.</text>
+        <text x="20" y="315" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Balance transfer: switch your outstanding loan to a new bank at a lower rate. Processing fee: ₹5,000-15,000. Worth it if</text>
+    <text x="20" y="329" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">rate differential saves more than the fee in 12 months.</text>
   </svg>
 );
 
 const SvgLockInImpact = () => (
-  <svg viewBox="0 0 720 226" role="img" aria-label="Lock-in period cost visualization showing how 12 month lock-in on a home loan prevents you from refinancing during a rate drop and costs 20000 to 40000 in missed savings" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 236" role="img" aria-label="Lock-in period cost visualization showing how 12 month lock-in on a home loan prevents you from refinancing during a rate drop and costs 20000 to 40000 in missed savings" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">LOCK-IN PERIOD COST · WHAT HAPPENS WHEN RATES DROP DURING LOCK-IN</text>
     <rect x="20" y="40" width="680" height="8" fill="var(--border)" rx="4" />
     <rect x="20" y="40" width="200" height="8" fill="#dc2626" rx="4" />
@@ -160,7 +165,8 @@ const SvgLockInImpact = () => (
     <text x="460" y="145" fontFamily="system-ui" fontSize="10" fill="#16a34a">But you've lost ₹24,000–36,000</text>
     <rect x="20" y="175" width="680" height="30" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="4" />
     <text x="36" y="188" fontFamily="system-ui" fontSize="9" fontWeight="700" fill="#dc2626">On ₹50L loan: 6-month lock-in during a 1% rate cut = ₹24,000–30,000 in missed savings. A hidden cost of "free" loan offers.</text>
-    <text x="36" y="202" fontFamily="system-ui" fontSize="7" fill="#dc2626">Ask upfront: "What is the lock-in period and what is the penalty if I exit during lock-in?" This is non-negotiable to ask before signing.</text>
+        <text x="36" y="202" fontSize="9" fontFamily="system-ui" fill="#dc2626">Ask upfront: "What is the lock-in period and what is the penalty if I exit during lock-in?" This is non-negotiable to ask</text>
+    <text x="36" y="216" fontSize="9" fontFamily="system-ui" fill="#dc2626">before signing.</text>
   </svg>
 );
 

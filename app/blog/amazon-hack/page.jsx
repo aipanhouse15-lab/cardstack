@@ -50,7 +50,7 @@ const SvgRewardTiersChart = () => (
 );
 
 const SvgAnnualCashbackTable = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Table showing annual cashback earned on Amazon Pay ICICI at Rs 2 lakh yearly Amazon spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 279" role="img" aria-label="Table showing annual cashback earned on Amazon Pay ICICI at Rs 2 lakh yearly Amazon spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">₹2,00,000 Amazon Annual Spend: The Real Math</text>
     <rect x="20" y="38" width="680" height="32" fill={COLOR} rx="4" />

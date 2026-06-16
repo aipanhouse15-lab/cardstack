@@ -22,7 +22,7 @@ const COLOR = "#dc2626";
 const UPDATED = "June 4, 2026";
 
 const SvgBnplLandscape = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Overview of major BNPL providers in India with their rates and key terms" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 235" role="img" aria-label="Overview of major BNPL providers in India with their rates and key terms" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">India's Major BNPL Players: The Honest Numbers</text>
     {["Provider", "30-Day Free?", "APR After Free Period", "Late Fee", "Reports to CIBIL?"].map((h, i) => (
@@ -48,7 +48,7 @@ const SvgBnplLandscape = () => (
 );
 
 const SvgBnplHowItWorks = () => (
-  <svg viewBox="0 0 720 190" role="img" aria-label="How BNPL buy now pay later works in India: free period then high interest" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 242" role="img" aria-label="How BNPL buy now pay later works in India: free period then high interest" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">How BNPL Actually Works: The Free Period Ends</text>
     <line x1="40" y1="90" x2="680" y2="90" stroke="var(--border)" strokeWidth="2" />
@@ -141,7 +141,7 @@ const SvgCibilImpact = () => (
 );
 
 const SvgWhenBnplWins = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="Situations where BNPL is genuinely better than a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 320" role="img" aria-label="Situations where BNPL is genuinely better than a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The 3 Situations Where BNPL Actually Makes Sense</text>
     {[
@@ -168,7 +168,7 @@ const SvgWhenBnplWins = () => (
 );
 
 const SvgAprWarningChart = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="APR comparison chart showing BNPL rates against other consumer debt options in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 230" role="img" aria-label="APR comparison chart showing BNPL rates against other consumer debt options in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">BNPL APR in Context: Where It Sits Among Indian Debt</text>
     {[

@@ -52,7 +52,7 @@ const IconCross = () => (
 );
 
 const IconATM = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ATM abroad withdrawal icon">
+  <svg width="28" height="28" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ATM abroad withdrawal icon">
     <rect x="4" y="6" width="20" height="16" rx="3" fill="var(--raise)" stroke={COLOR} strokeWidth="1.8"/>
     <rect x="7" y="10" width="8" height="5" rx="1" fill={COLOR} opacity="0.2"/>
     <rect x="17" y="10" width="4" height="2" rx="0.5" fill={COLOR} opacity="0.4"/>

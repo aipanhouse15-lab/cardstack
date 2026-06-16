@@ -49,7 +49,7 @@ const SvgStackPrinciple = () => (
 );
 
 const SvgPopularStacks = () => (
-  <svg viewBox="0 0 720 281" role="img" aria-label="4 popular 3-card credit card stacks for different Indian household profiles showing beginner stack traveller stack online shopper stack and premium stack" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 417" role="img" aria-label="4 popular 3-card credit card stacks for different Indian household profiles showing beginner stack traveller stack online shopper stack and premium stack" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">4 PROVEN 3-CARD STACKS FOR DIFFERENT PROFILES · JUNE 2026</text>
     {[
       { label: "Beginner Stack (₹0 total annual fee)", cards: "Amazon Pay ICICI + Axis Ace + SBI SimplyCLICK", rate: "~3.5% blended", col: "#16a34a" },
@@ -64,12 +64,13 @@ const SvgPopularStacks = () => (
         <text x="660" y={58 + i * 54} textAnchor="end" fontFamily="system-ui" fontSize="13" fontWeight="800" fill={col}>{rate}</text>
       </g>
     ))}
-    <text x="20" y="257" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Blended rate = weighted average across all spending categories using typical urban spend distribution. Actual rate depends on your specific spend split.</text>
+        <text x="20" y="257" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Blended rate = weighted average across all spending categories using typical urban spend distribution. Actual rate</text>
+    <text x="20" y="271" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">depends on your specific spend split.</text>
   </svg>
 );
 
 const SvgWhenToUseWhich = () => (
-  <svg viewBox="0 0 720 239" role="img" aria-label="Decision guide showing which card to use for each type of purchase in a typical 3 card stack to maximize cashback earned" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 276" role="img" aria-label="Decision guide showing which card to use for each type of purchase in a typical 3 card stack to maximize cashback earned" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHICH CARD TO SWIPE FOR WHAT · ONLINE SHOPPER STACK EXAMPLE</text>
     {[
       { spend: "Amazon purchases", card: "Amazon Pay ICICI", rate: "5%", note: "No cap, no fee — always Amazon Pay ICICI", col: "#f59e0b" },
@@ -87,12 +88,13 @@ const SvgWhenToUseWhich = () => (
         <text x="430" y={52 + i * 34} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{note.slice(0, 45)}</text>
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">The mental model: Amazon = Amazon card. Food/transport apps = Axis Ace. Everything else online = SBI Cashback. Offline = Millennia. Travel = travel card. 30 seconds of learning, years of maximized returns.</text>
+        <text x="20" y="215" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">The mental model: Amazon = Amazon card. Food/transport apps = Axis Ace. Everything else online = SBI Cashback. Offline =</text>
+    <text x="20" y="229" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Millennia. Travel = travel card. 30 seconds of learning, years of maximized returns.</text>
   </svg>
 );
 
 const SvgCIBILMultiCard = () => (
-  <svg viewBox="0 0 720 177" role="img" aria-label="Impact of having multiple credit cards on CIBIL score showing that multiple cards can help if managed well or hurt if mismanaged" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 204" role="img" aria-label="Impact of having multiple credit cards on CIBIL score showing that multiple cards can help if managed well or hurt if mismanaged" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">MULTIPLE CARDS AND CIBIL: WHAT ACTUALLY HAPPENS</text>
     <rect x="20" y="35" width="320" height="108" fill="#16a34a" rx="8" opacity="0.22" stroke="#16a34a" strokeWidth="1" />
     <text x="180" y="58" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#16a34a">POSITIVE EFFECTS</text>
@@ -104,12 +106,13 @@ const SvgCIBILMultiCard = () => (
     {["Multiple hard enquiries at application (temporary)", "More accounts to track — easier to miss payment", "Higher total available credit can look risky", "Applying for 3+ cards in same month: red flag"].map((t, i) => (
       <text key={t} x="390" y={76 + i * 18} fontFamily="system-ui" fontSize="10" fill="var(--text)">- {t}</text>
     ))}
-    <text x="20" y="153" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Net effect: 3 well-managed cards with low utilisation and perfect payment history is better for CIBIL than 1 card. Space card applications at least 6 months apart to minimise enquiry impact.</text>
+        <text x="20" y="153" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Net effect: 3 well-managed cards with low utilisation and perfect payment history is better for CIBIL than 1 card. Space</text>
+    <text x="20" y="167" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">card applications at least 6 months apart to minimise enquiry impact.</text>
   </svg>
 );
 
 const SvgBlendedRate = () => (
-  <svg viewBox="0 0 720 197" role="img" aria-label="Blended cashback rate calculation for a 3-card stack showing how to calculate weighted average return across all spending categories" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 222" role="img" aria-label="Blended cashback rate calculation for a 3-card stack showing how to calculate weighted average return across all spending categories" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">CALCULATE YOUR BLENDED RATE · ONLINE SHOPPER STACK ON ₹50K MONTHLY SPEND</text>
     {[
       { cat: "Amazon (₹12K) @ 5%", cashback: 600, col: "#f59e0b" },

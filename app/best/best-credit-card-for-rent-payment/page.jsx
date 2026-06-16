@@ -35,7 +35,7 @@ function CalculatorIcon() {
     <svg width="44" height="44" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calculator representing break-even math for rent payment processing fees">
       <rect x="8" y="4" width="28" height="36" rx="4" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
       <rect x="12" y="8" width="20" height="8" rx="2" fill={COLOR} fillOpacity="0.15"/>
-      <text x="22" y="15" textAnchor="middle" fontSize="7" fill={COLOR} fontWeight="700">₹ break-even</text>
+      <text x="22" y="15" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="700">₹ break-even</text>
       {[
         [12, 22], [19, 22], [26, 22], [33, 22],
         [12, 28], [19, 28], [26, 28], [33, 28],
@@ -52,14 +52,14 @@ function ProcessingFeeWarning() {
     <svg width="44" height="44" viewBox="0 0 44 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warning flag for processing fee on rent payment platforms">
       <circle cx="22" cy="22" r="20" fill="var(--red-dim)" stroke={COLOR} strokeWidth="1.5"/>
       <text x="22" y="20" textAnchor="middle" fontSize="10" fill={COLOR} fontWeight="700">1.49%</text>
-      <text x="22" y="30" textAnchor="middle" fontSize="7" fill={COLOR}>processing fee</text>
+      <text x="22" y="30" textAnchor="middle" fontSize="9" fill={COLOR}>processing fee</text>
     </svg>
   );
 }
 
 function NobrokerIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NoBroker app icon representing rent payment platform">
+    <svg width="44" height="44" viewBox="0 0 44 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NoBroker app icon representing rent payment platform">
       <rect x="4" y="4" width="36" height="36" rx="8" fill={COLOR} fillOpacity="0.12" stroke={COLOR} strokeWidth="1.5"/>
       <text x="22" y="28" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="800">NoBroker</text>
     </svg>

@@ -119,7 +119,7 @@ function MerchantCardMatchGrid() {
   ];
   return (
     <svg
-      viewBox="0 0 680 230"
+      viewBox="0 0 680 239"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Merchant to card matching table showing the best card for each major Indian online shopping platform"
@@ -171,7 +171,7 @@ function FreeCardComboDiagram() {
 function HighSpenderBreakeven() {
   return (
     <svg
-      viewBox="0 0 680 180"
+      viewBox="0 0 680 242"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Breakeven analysis showing at what monthly online spend each card becomes worth its annual fee"

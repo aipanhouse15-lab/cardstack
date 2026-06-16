@@ -75,7 +75,7 @@ const SvgRealMathExample = () => (
 );
 
 const SvgPerCardVsOverall = () => (
-  <svg viewBox="0 0 720 252" role="img" aria-label="Difference between per-card utilization and overall portfolio utilization" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 478" role="img" aria-label="Difference between per-card utilization and overall portfolio utilization" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Per-card vs overall utilization: CIBIL checks both and penalizes either</text>
     <text x="36" y="62" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Situation: ₹20,000 balance across two cards</text>
@@ -141,7 +141,7 @@ const SvgFixItFast = () => (
 );
 
 const SvgCibilWeightChart = () => (
-  <svg viewBox="0 0 720 212" role="img" aria-label="CIBIL score factor weights with payment history and credit utilization as top two" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 256" role="img" aria-label="CIBIL score factor weights with payment history and credit utilization as top two" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">What makes up your CIBIL score: utilization is the #2 factor at 30%</text>
     {[

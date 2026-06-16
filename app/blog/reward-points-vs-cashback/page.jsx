@@ -22,7 +22,7 @@ const COLOR = "#0891b2";
 const UPDATED = "June 4, 2026";
 
 const SvgDecisionMatrix = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Decision matrix comparing reward points vs cashback cards based on user habits" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 278" role="img" aria-label="Decision matrix comparing reward points vs cashback cards based on user habits" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Points vs Cashback: Quick Decision Framework</text>
     <rect x="36" y="52" width="310" height="190" fill="#e0f2fe" rx="8" />
@@ -117,7 +117,7 @@ const SvgPointsTrap = () => (
 );
 
 const SvgCategoryMatch = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Spend category matching: which card type wins for each category" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 283" role="img" aria-label="Spend category matching: which card type wins for each category" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Which wins by spend category: reward points or cashback?</text>
     <text x="36" y="58" fontSize="11" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Spend Category</text>
@@ -143,7 +143,7 @@ const SvgCategoryMatch = () => (
 );
 
 const SvgPortalRisk = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Portal risk factors for reward point redemption vs guaranteed cashback" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 270" role="img" aria-label="Portal risk factors for reward point redemption vs guaranteed cashback" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">The hidden cost of points: portal friction and risk</text>
     <text x="36" y="58" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Risk Factor</text>

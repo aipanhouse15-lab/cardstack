@@ -22,7 +22,7 @@ const COLOR = "#7c3aed";
 const UPDATED = "June 4, 2026";
 
 const SvgEarnRateComparison = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Reward earn rates per ₹100 spent across major Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 281" role="img" aria-label="Reward earn rates per ₹100 spent across major Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Earn Rates: points or cashback per ₹100 spent (base rate, no bonus categories)</text>
     {[
@@ -44,7 +44,7 @@ const SvgEarnRateComparison = () => (
 );
 
 const SvgPointValue = () => (
-  <svg viewBox="0 0 720 229" role="img" aria-label="Rupee value of 1 reward point across HDFC, Axis, Amex, and SBI cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 257" role="img" aria-label="Rupee value of 1 reward point across HDFC, Axis, Amex, and SBI cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">What is 1 reward point actually worth? (June 2026)</text>
     <text x="36" y="56" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Bank / Program</text>
@@ -121,7 +121,7 @@ const SvgExpiryTimeline = () => (
 );
 
 const SvgRedemptionValueGap = () => (
-  <svg viewBox="0 0 720 232" role="img" aria-label="Value gap between different reward point redemption options" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 361" role="img" aria-label="Value gap between different reward point redemption options" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">10,000 HDFC points: how much you get depends entirely on how you redeem</text>
     {[
@@ -144,7 +144,7 @@ const SvgRedemptionValueGap = () => (
 );
 
 const SvgAcceleratedEarn = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Accelerated reward earn rates by spend category across popular Indian cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 268" role="img" aria-label="Accelerated reward earn rates by spend category across popular Indian cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Accelerated Earn Rates: where each card gives you extra points</text>
     <text x="36" y="56" fontSize="11" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Card</text>

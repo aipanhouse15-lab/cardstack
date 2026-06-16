@@ -22,7 +22,7 @@ const COLOR = "#0891b2";
 const UPDATED = "June 4, 2026";
 
 const SvgFullVsMinimumDue = () => (
-  <svg viewBox="0 0 720 262" role="img" aria-label="Comparison of paying full amount versus minimum due on a credit card over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 272" role="img" aria-label="Comparison of paying full amount versus minimum due on a credit card over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Full Amount vs Minimum Due — 12-Month Scenario (₹50,000 balance)</text>
     <rect x="36" y="54" width="308" height="140" rx="6" fill="#0891b2" opacity="0.22" />
@@ -40,12 +40,13 @@ const SvgFullVsMinimumDue = () => (
     <text x="530" y="164" textAnchor="middle" fontSize="13" fill="var(--text)">New purchases: Also attract interest</text>
     <text x="530" y="184" textAnchor="middle" fontSize="22" fontWeight="800" fill="#dc2626">₹24,000+ year 1</text>
     <text x="36" y="218" fontSize="9" fill="var(--text-muted)">Once you pay minimum due, the grace period disappears for ALL transactions — including new ones you make next month.</text>
-    <text x="36" y="238" fontSize="8" fill="var(--text-muted)">Minimum due on most Indian cards is 5% of outstanding or ₹200 — whichever is higher. Source: RBI Credit Card Guidelines 2022.</text>
+        <text x="36" y="238" fontSize="9" fill="var(--text-muted)">Minimum due on most Indian cards is 5% of outstanding or ₹200 — whichever is higher. Source: RBI Credit Card Guidelines</text>
+    <text x="36" y="252" fontSize="9" fill="var(--text-muted)">2022.</text>
   </svg>
 );
 
 const SvgPaymentMethodSpeed = () => (
-  <svg viewBox="0 0 720 230" role="img" aria-label="Comparison of credit card payment methods by processing speed in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 270" role="img" aria-label="Comparison of credit card payment methods by processing speed in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Payment Method Speed — Critical If You Are Near the Due Date</text>
     <rect x="36" y="50" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
@@ -68,12 +69,13 @@ const SvgPaymentMethodSpeed = () => (
         <text x="590" y={94 + i * 26} fontSize="11" fill="var(--text-muted)">{note}</text>
       </g>
     ))}
-    <text x="36" y="206" fontSize="7" fill="var(--text-muted)">NEFT batches pause overnight and on banking holidays — do not rely on it on due-date evening. UPI is always the safest for last-minute payments.</text>
+        <text x="36" y="206" fontSize="9" fill="var(--text-muted)">NEFT batches pause overnight and on banking holidays — do not rely on it on due-date evening. UPI is always the safest</text>
+    <text x="36" y="220" fontSize="9" fill="var(--text-muted)">for last-minute payments.</text>
   </svg>
 );
 
 const SvgMissedPaymentCost = () => (
-  <svg viewBox="0 0 720 208" role="img" aria-label="Total cost of missing a credit card due date by one day" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 276" role="img" aria-label="Total cost of missing a credit card due date by one day" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Missing Due Date by 1 Day — ₹50,000 Balance (June 2026)</text>
     {[
@@ -96,7 +98,7 @@ const SvgMissedPaymentCost = () => (
 );
 
 const SvgBillingCycleTimeline = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Credit card billing cycle timeline showing statement date, grace period, and due date" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 202" role="img" aria-label="Credit card billing cycle timeline showing statement date, grace period, and due date" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Understanding Your Billing Cycle — Where the Dates Fall</text>
     <line x1="36" y1="100" x2="684" y2="100" stroke="var(--border)" strokeWidth="2" />
@@ -114,7 +116,8 @@ const SvgBillingCycleTimeline = () => (
     ))}
     <rect x="240" y="88" width="180" height="24" fill="#16a34a" opacity="0.15" />
     <text x="330" y="104" textAnchor="middle" fontSize="11" fontWeight="600" fill="#16a34a">~20-day grace period</text>
-    <text x="36" y="168" fontSize="7" fill="var(--text-muted)">Pay before the statement date: reduces credit utilisation ratio (helps CIBIL score). Pay before due date: avoids all charges. Both are valid goals — they serve different purposes.</text>
+        <text x="36" y="168" fontSize="9" fill="var(--text-muted)">Pay before the statement date: reduces credit utilisation ratio (helps CIBIL score). Pay before due date: avoids all</text>
+    <text x="36" y="182" fontSize="9" fill="var(--text-muted)">charges. Both are valid goals — they serve different purposes.</text>
   </svg>
 );
 
@@ -141,7 +144,7 @@ const SvgAutopayComparison = () => (
 );
 
 const SvgMultiplePaymentsUtilisation = () => (
-  <svg viewBox="0 0 720 196" role="img" aria-label="How mid-cycle payments reduce credit utilisation ratio" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 206" role="img" aria-label="How mid-cycle payments reduce credit utilisation ratio" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Mid-Cycle Payment — Reducing Utilisation Before Statement Date</text>
     <text x="36" y="58" fontSize="12" fill="var(--text-muted)">Scenario: ₹1,00,000 credit limit. You have spent ₹60,000 mid-cycle.</text>
@@ -153,7 +156,8 @@ const SvgMultiplePaymentsUtilisation = () => (
     <text x="530" y="98" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Pay ₹40,000 before statement date</text>
     <text x="530" y="118" textAnchor="middle" fontSize="18" fontWeight="800" fill="#0891b2">20% utilisation</text>
     <text x="530" y="136" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Healthier CIBIL report next month</text>
-    <text x="36" y="172" fontSize="7" fill="var(--text-muted)">CIBIL uses the statement-date balance for utilisation calculation. Paying before the statement date — not just before the due date — is what moves the needle.</text>
+        <text x="36" y="172" fontSize="9" fill="var(--text-muted)">CIBIL uses the statement-date balance for utilisation calculation. Paying before the statement date — not just before the</text>
+    <text x="36" y="186" fontSize="9" fill="var(--text-muted)">due date — is what moves the needle.</text>
   </svg>
 );
 
@@ -170,7 +174,8 @@ const SvgThreeDayBuffer = () => (
     <text x="556" y="94" fontSize="12" fill="#16a34a">7+ days = safest</text>
     <line x1="56" y1="64" x2="56" y2="52" stroke="#dc2626" strokeWidth="2" />
     <line x1="400" y1="64" x2="400" y2="52" stroke="#0891b2" strokeWidth="2" />
-    <text x="36" y="124" fontSize="7" fill="var(--text-muted)">Bank processing, NEFT batch windows, and weekend/holiday closures mean a payment initiated on the due date can sometimes post the next business day.</text>
+        <text x="36" y="124" fontSize="9" fill="var(--text-muted)">Bank processing, NEFT batch windows, and weekend/holiday closures mean a payment initiated on the due date can sometimes</text>
+    <text x="36" y="138" fontSize="9" fill="var(--text-muted)">post the next business day.</text>
     <text x="36" y="144" fontSize="11" fill="var(--text-muted)">UPI payments are immediate — the 3-day rule matters most for NEFT, RTGS, and cheque payments.</text>
   </svg>
 );

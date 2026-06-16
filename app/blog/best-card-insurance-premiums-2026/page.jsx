@@ -22,7 +22,7 @@ const COLOR = "#ea580c";
 const UPDATED = "June 4, 2026";
 
 const SvgInsurancePaymentProblem = () => (
-  <svg viewBox="0 0 720 194" role="img" aria-label="Why insurance premium payment is tricky on credit cards: most cards exclude it from reward earning" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 204" role="img" aria-label="Why insurance premium payment is tricky on credit cards: most cards exclude it from reward earning" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Insurance Premium Problem Most Cardholders Do Not Know About</text>
     <rect x="30" y="44" width="310" height="116" rx="8" fill="#dc2626" opacity="0.07" stroke="#dc2626" strokeWidth="1.5" />
@@ -37,12 +37,13 @@ const SvgInsurancePaymentProblem = () => (
     <text x="535" y="108" textAnchor="middle" fontSize="11" fill="var(--text)">Axis Magnus: 2X EDGE Miles on insurance</text>
     <text x="535" y="126" textAnchor="middle" fontSize="11" fill="var(--text)">Amex MRCC: 1 MR point per ₹50 on insurance</text>
     <text x="535" y="144" textAnchor="middle" fontSize="11" fill="var(--text)">ICICI Sapphiro: reward points on insurance</text>
-    <text x="360" y="170" textAnchor="middle" fontSize="8" fill="var(--text-muted)">Always verify in the card's current T&Cs. Insurance earning exclusions are the most frequently changed rule in credit card programs.</text>
+        <text x="360" y="170" fontSize="9" textAnchor="middle" fill="var(--text-muted)">Always verify in the card's current T&Cs. Insurance earning exclusions are the most frequently changed rule in credit</text>
+    <text x="360" y="184" fontSize="9" textAnchor="middle" fill="var(--text-muted)">card programs.</text>
   </svg>
 );
 
 const SvgPremiumMath = () => (
-  <svg viewBox="0 0 720 254" role="img" aria-label="Credit card rewards on 50000 rupees annual insurance premium across different cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 264" role="img" aria-label="Credit card rewards on 50000 rupees annual insurance premium across different cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">₹50,000 Annual Insurance Premium: Which Card Returns the Most?</text>
     <text x="30" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">CARD</text>
@@ -74,7 +75,8 @@ const SvgPremiumMath = () => (
     <text x="230" y="206" fontSize="11" fill="var(--text)">2 pts/₹100</text>
     <text x="400" y="206" fontSize="11" fontWeight="700" fill={COLOR}>₹500 est.</text>
     <text x="540" y="206" fontSize="11" fill="var(--text)">1.0%</text>
-    <text x="360" y="230" textAnchor="middle" fontSize="7" fill="var(--text-muted)">Amex MR point redemption value varies: ₹0.25 for cashback, ₹0.50+ for statement credit, up to ₹1.00+ for airline transfers. Magnus EDGE Miles at 1 EM = ₹0.75 for flight redemptions.</text>
+        <text x="360" y="230" fontSize="9" textAnchor="middle" fill="var(--text-muted)">Amex MR point redemption value varies: ₹0.25 for cashback, ₹0.50+ for statement credit, up to ₹1.00+ for airline</text>
+    <text x="360" y="244" fontSize="9" textAnchor="middle" fill="var(--text-muted)">transfers. Magnus EDGE Miles at 1 EM = ₹0.75 for flight redemptions.</text>
   </svg>
 );
 
@@ -128,7 +130,7 @@ const SvgHealthVsTermPremium = () => (
 );
 
 const SvgMonthlyVsAnnual = () => (
-  <svg viewBox="0 0 720 208" role="img" aria-label="Annual vs monthly insurance premium payment on credit card: which earns more rewards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 218" role="img" aria-label="Annual vs monthly insurance premium payment on credit card: which earns more rewards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Annual vs Monthly Premium Payment: The Credit Card Reward Difference</text>
     <rect x="30" y="44" width="310" height="126" rx="8" fill={COLOR} opacity="0.07" stroke={COLOR} strokeWidth="1.5" />
@@ -145,7 +147,8 @@ const SvgMonthlyVsAnnual = () => (
     <text x="535" y="128" textAnchor="middle" fontSize="11" fill="var(--text)">Float: 50 days on ₹1,700 each time</text>
     <text x="535" y="148" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text-muted)">Net annual benefit: ₹255 + ₹9 float</text>
     <text x="535" y="164" textAnchor="middle" fontSize="10" fill="var(--text-muted)">(monthly premium means less float value)</text>
-    <text x="360" y="184" textAnchor="middle" fontSize="8" fill="var(--text-muted)">Reward earning is similar. Annual payment wins on float value. But check if your card caps monthly insurance earn — some do.</text>
+        <text x="360" y="184" fontSize="9" textAnchor="middle" fill="var(--text-muted)">Reward earning is similar. Annual payment wins on float value. But check if your card caps monthly insurance earn — some</text>
+    <text x="360" y="198" fontSize="9" textAnchor="middle" fill="var(--text-muted)">do.</text>
   </svg>
 );
 

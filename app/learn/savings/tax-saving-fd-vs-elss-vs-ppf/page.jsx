@@ -22,7 +22,7 @@ const COLOR = "#ca8a04";
 const UPDATED = "June 4, 2026";
 
 const SvgReturns5yr = () => (
-  <svg viewBox="0 0 720 319" role="img" aria-label="Post-tax 5 year returns comparison between tax saving FD ELSS and PPF on 1.5 lakh annual investment showing ELSS at 11.2 lakh PPF at 8.9 lakh and tax FD at 7.8 lakh" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 329" role="img" aria-label="Post-tax 5 year returns comparison between tax saving FD ELSS and PPF on 1.5 lakh annual investment showing ELSS at 11.2 lakh PPF at 8.9 lakh and tax FD at 7.8 lakh" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">₹1.5L INVESTED ANNUALLY FOR 5 YEARS · POST-TAX MATURITY VALUE · 30% SLAB</text>
     {[
       { prod: "ELSS (12% historical CAGR, LTCG 12.5%)", value: "₹11.2L", detail: "Best returns. Most risk.", color: "#7c3aed", barH: 220 },
@@ -37,12 +37,13 @@ const SvgReturns5yr = () => (
       </g>
     ))}
     <line x1="40" y1="250" x2="680" y2="250" stroke="var(--border)" />
-    <text x="20" y="295" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">ELSS can vary: in bad 5-year windows (2018-2023), returns were 6-8%. PPF is guaranteed. Tax FD has the guaranteed lowest post-tax return of the three for 30% slab investors.</text>
+        <text x="20" y="295" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">ELSS can vary: in bad 5-year windows (2018-2023), returns were 6-8%. PPF is guaranteed. Tax FD has the guaranteed lowest</text>
+    <text x="20" y="309" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">post-tax return of the three for 30% slab investors.</text>
   </svg>
 );
 
 const SvgLockIn = () => (
-  <svg viewBox="0 0 720 197" role="img" aria-label="Lock-in period comparison showing ELSS at 3 years tax saving FD at 5 years and PPF at 15 years with explanation of what happens after lock-in" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 207" role="img" aria-label="Lock-in period comparison showing ELSS at 3 years tax saving FD at 5 years and PPF at 15 years with explanation of what happens after lock-in" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">LOCK-IN PERIOD COMPARISON · 80C INSTRUMENTS</text>
     <rect x="20" y="40" width={3 * 30} height="40" fill="#7c3aed" rx="4" opacity="0.85" />
     <text x="20" y="100" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#7c3aed">ELSS: 3 years</text>
@@ -53,13 +54,15 @@ const SvgLockIn = () => (
     <rect x="500" y="40" width={15 * 10} height="40" fill="#16a34a" rx="4" opacity="0.85" />
     <text x="500" y="100" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#16a34a">PPF: 15 years</text>
     <text x="500" y="116" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Longest lock-in. Partial withdrawal Year 7+. Extendable in 5-year blocks.</text>
-    <text x="20" y="160" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">ELSS wins on flexibility — 3-year lock-in makes it the most accessible 80C equity option. But it also carries the most risk. Short lock-in + market volatility can mean lower returns if your exit is timed badly.</text>
-    <text x="20" y="173" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">After lock-in: ELSS and Tax FD proceeds are yours to redeploy. PPF can be extended 5 years at a time — you continue to earn EEE returns without depositing more (or continue depositing up to ₹1.5L/yr).</text>
+        <text x="20" y="160" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">ELSS wins on flexibility — 3-year lock-in makes it the most accessible 80C equity option. But it also carries the most</text>
+    <text x="20" y="174" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">risk. Short lock-in + market volatility can mean lower returns if your exit is timed badly.</text>
+        <text x="20" y="173" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">After lock-in: ELSS and Tax FD proceeds are yours to redeploy. PPF can be extended 5 years at a time — you continue to</text>
+    <text x="20" y="187" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">earn EEE returns without depositing more (or continue depositing up to ₹1.5L/yr).</text>
   </svg>
 );
 
 const SvgRiskReturnPlot = () => (
-  <svg viewBox="0 0 720 259" role="img" aria-label="Risk versus post-tax return plot for ELSS PPF and tax saving FD showing ELSS has highest risk and return PPF has no risk and moderate return and tax FD has no risk but lowest return" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 269" role="img" aria-label="Risk versus post-tax return plot for ELSS PPF and tax saving FD showing ELSS has highest risk and return PPF has no risk and moderate return and tax FD has no risk but lowest return" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">RISK vs RETURN · THREE 80C INSTRUMENTS</text>
     <line x1="60" y1="200" x2="700" y2="200" stroke="var(--border)" />
     <line x1="60" y1="40" x2="60" y2="200" stroke="var(--border)" />
@@ -75,12 +78,13 @@ const SvgRiskReturnPlot = () => (
     <text x="580" y="59" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#fff">ELSS</text>
     <text x="580" y="43" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#7c3aed">12% hist. CAGR</text>
     <text x="580" y="95" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">(can be -15% in bad yr)</text>
-    <text x="20" y="235" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Circle size = liquidity (PPF is mid, ELSS is most liquid after 3yr, Tax FD is illiquid for 5yr). Tax FD earns less than PPF with identical safety. Avoid Tax FD unless ELSS and PPF are already maxed.</text>
+        <text x="20" y="235" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Circle size = liquidity (PPF is mid, ELSS is most liquid after 3yr, Tax FD is illiquid for 5yr). Tax FD earns less than</text>
+    <text x="20" y="249" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">PPF with identical safety. Avoid Tax FD unless ELSS and PPF are already maxed.</text>
   </svg>
 );
 
 const SvgDecisionFramework = () => (
-  <svg viewBox="0 0 720 216" role="img" aria-label="Decision framework for 80C investment showing which instrument to pick based on risk tolerance income level and time horizon" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 260" role="img" aria-label="Decision framework for 80C investment showing which instrument to pick based on risk tolerance income level and time horizon" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">80C ALLOCATION STRATEGY · HOW TO SPLIT ₹1.5L FOR MAXIMUM BENEFIT</text>
     <rect x="20" y="38" width="680" height="140" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="8" />
     {[
@@ -96,12 +100,13 @@ const SvgDecisionFramework = () => (
         <text x="500" y={59 + i * 30} fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">{reason.slice(0, 50)}</text>
       </g>
     ))}
-    <text x="20" y="192" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Tax FD earns less than PPF with the same lock-in safety. The only reason to pick Tax FD: EPF/insurance already fills your 80C bucket and you want a guaranteed, capital-safe overflow option.</text>
+        <text x="20" y="192" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Tax FD earns less than PPF with the same lock-in safety. The only reason to pick Tax FD: EPF/insurance already fills your</text>
+    <text x="20" y="206" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">80C bucket and you want a guaranteed, capital-safe overflow option.</text>
   </svg>
 );
 
 const SvgELSSFundPicks = () => (
-  <svg viewBox="0 0 720 197" role="img" aria-label="Top ELSS mutual fund picks for 80C investment showing 5 year returns for Mirae Asset Tax Saver Axis Long Term Equity and Canara Robeco ELSS Tax Saver" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 228" role="img" aria-label="Top ELSS mutual fund picks for 80C investment showing 5 year returns for Mirae Asset Tax Saver Axis Long Term Equity and Canara Robeco ELSS Tax Saver" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">TOP ELSS FUNDS FOR 80C · 5-YEAR RETURN · JUNE 2026 · DIRECT PLAN</text>
     {[
       { fund: "Mirae Asset ELSS Tax Saver", ret5yr: "16.8%", aum: "₹24,000Cr", color: "#16a34a" },
@@ -117,7 +122,8 @@ const SvgELSSFundPicks = () => (
         <text x={266 + parseFloat(ret5yr) * 14 + 80} y={51 + i * 26} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">AUM: {aum}</text>
       </g>
     ))}
-    <text x="20" y="173" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Past performance isn't guaranteed. Prefer direct plans (Zerodha Coin, Kuvera, MF Central) over regular for same fund. 5-year windows can be misleading — check 10yr and 15yr data too.</text>
+        <text x="20" y="173" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Past performance isn't guaranteed. Prefer direct plans (Zerodha Coin, Kuvera, MF Central) over regular for same fund.</text>
+    <text x="20" y="187" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">5-year windows can be misleading — check 10yr and 15yr data too.</text>
   </svg>
 );
 

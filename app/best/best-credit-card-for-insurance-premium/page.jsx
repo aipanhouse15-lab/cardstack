@@ -35,7 +35,7 @@ function RupeeStackIcon() {
       <ellipse cx="22" cy="36" rx="14" ry="5" fill={COLOR} fillOpacity="0.15" stroke={COLOR} strokeWidth="1.2"/>
       <ellipse cx="22" cy="30" rx="14" ry="5" fill={COLOR} fillOpacity="0.25" stroke={COLOR} strokeWidth="1.2"/>
       <ellipse cx="22" cy="24" rx="14" ry="5" fill={COLOR} fillOpacity="0.4" stroke={COLOR} strokeWidth="1.2"/>
-      <text x="22" y="27" textAnchor="middle" fontSize="8" fill="white" fontWeight="700">₹50K</text>
+      <text x="22" y="27" textAnchor="middle" fontSize="9" fill="white" fontWeight="700">₹50K</text>
     </svg>
   );
 }
@@ -63,11 +63,11 @@ function YearlyVsMonthlyIcon() {
   return (
     <svg width="56" height="44" viewBox="0 0 56 61" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendar showing annual vs monthly premium payment comparison">
       <rect x="2" y="2" width="22" height="40" rx="3" fill={COLOR} fillOpacity="0.12" stroke={COLOR} strokeWidth="1.5"/>
-      <text x="13" y="18" textAnchor="middle" fontSize="7" fill={COLOR} fontWeight="700">Annual</text>
+      <text x="13" y="18" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="700">Annual</text>
       <text x="13" y="28" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="800">1x</text>
       <text x="13" y="37" textAnchor="middle" fontSize="6" fill="var(--text-muted)">payment</text>
       <rect x="32" y="2" width="22" height="40" rx="3" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
-      <text x="43" y="16" textAnchor="middle" fontSize="7" fill="var(--text-muted)">Monthly</text>
+      <text x="43" y="16" textAnchor="middle" fontSize="9" fill="var(--text-muted)">Monthly</text>
       <text x="43" y="26" textAnchor="middle" fontSize="9" fill="var(--text-muted)" fontWeight="800">12x</text>
       <text x="43" y="37" textAnchor="middle" fontSize="6" fill="var(--text-muted)">payments</text>
     </svg>
@@ -76,10 +76,10 @@ function YearlyVsMonthlyIcon() {
 
 function AmexIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="American Express card representing Amex MRCC insurance premium rewards">
+    <svg width="44" height="44" viewBox="0 0 44 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="American Express card representing Amex MRCC insurance premium rewards">
       <rect x="2" y="10" width="40" height="24" rx="4" fill={COLOR} fillOpacity="0.15" stroke={COLOR} strokeWidth="1.5"/>
       <text x="22" y="28" textAnchor="middle" fontSize="10" fill={COLOR} fontWeight="800">Amex</text>
-      <text x="22" y="20" textAnchor="middle" fontSize="7" fill="var(--text-muted)">2% on insurance</text>
+      <text x="22" y="20" textAnchor="middle" fontSize="9" fill="var(--text-muted)">2% on insurance</text>
     </svg>
   );
 }

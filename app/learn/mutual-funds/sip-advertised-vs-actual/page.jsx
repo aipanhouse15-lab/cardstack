@@ -22,7 +22,7 @@ const COLOR = "#7c3aed";
 const UPDATED = "June 4, 2026";
 
 const SvgAdvertisedVsActual = () => (
-  <svg viewBox="0 0 720 279" role="img" aria-label="Comparison of advertised SIP returns in mutual fund advertisements versus actual investor returns across different market entry points showing ads claim 18 percent while average investor gets 10 to 13 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 340" role="img" aria-label="Comparison of advertised SIP returns in mutual fund advertisements versus actual investor returns across different market entry points showing ads claim 18 percent while average investor gets 10 to 13 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ADVERTISED vs ACTUAL SIP RETURNS · ₹10,000/MONTH · 10 YEARS · SAME FUND</text>
     {[
       { scenario: "Fund advertisement (best 10-yr window, 2013-2023)", returns: "18.4%", corpus: "₹3.01Cr", color: "#dc2626", note: "Cherry-picked: starts at 2013 bull-run base" },
@@ -40,12 +40,13 @@ const SvgAdvertisedVsActual = () => (
         <text x="600" y={61 + i * 42} fontFamily="system-ui" fontSize="13" fontWeight="700" fill={color}>{corpus}</text>
       </g>
     ))}
-    <text x="20" y="255" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">The advertised 18.4% is real — for the specific window they chose. The realistic number for most investors starting today is 10-14% over 10 years, depending on market conditions. Plan with 12%, celebrate if you get more.</text>
+        <text x="20" y="255" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">The advertised 18.4% is real — for the specific window they chose. The realistic number for most investors starting today</text>
+    <text x="20" y="269" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">is 10-14% over 10 years, depending on market conditions. Plan with 12%, celebrate if you get more.</text>
   </svg>
 );
 
 const SvgOneCroreIn15yr = () => (
-  <svg viewBox="0 0 720 256" role="img" aria-label="How much SIP needed to reach 1 crore in 15 years at different return rates showing that 15 percent advertised returns require only 11000 rupees monthly while realistic 12 percent requires 16000 monthly" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 370" role="img" aria-label="How much SIP needed to reach 1 crore in 15 years at different return rates showing that 15 percent advertised returns require only 11000 rupees monthly while realistic 12 percent requires 16000 monthly" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">₹1 CRORE GOAL IN 15 YEARS · HOW MUCH MONTHLY SIP IS NEEDED AT DIFFERENT RETURNS?</text>
     {[
       { rate: "15% CAGR (advertised typical)", sip: "₹11,500/mo", total: "₹20.7L invested", color: "#dc2626", note: "Optimistic — not what most investors achieve" },
@@ -60,16 +61,18 @@ const SvgOneCroreIn15yr = () => (
         <text x={258 + parseInt(sip.replace(/[₹,/mo]/g, "")) / 150} y={74 + i * 46} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{total} · {note}</text>
       </g>
     ))}
-    <text x="20" y="232" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Planning with 15% and getting 12% means you'll fall ₹30-40L short of your goal. Planning with 12% and getting 15% means you hit ₹1Cr early. Always plan conservatively with realistic return assumptions.</text>
+        <text x="20" y="232" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Planning with 15% and getting 12% means you'll fall ₹30-40L short of your goal. Planning with 12% and getting 15% means</text>
+    <text x="20" y="246" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">you hit ₹1Cr early. Always plan conservatively with realistic return assumptions.</text>
   </svg>
 );
 
 const SvgInflationAdjusted = () => (
-  <svg viewBox="0 0 720 239" role="img" aria-label="Inflation adjusted value of 1 crore rupees in 15 years showing that 1 crore in 2041 is worth only about 48 lakh in today purchasing power at 5 percent inflation" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 374" role="img" aria-label="Inflation adjusted value of 1 crore rupees in 15 years showing that 1 crore in 2041 is worth only about 48 lakh in today purchasing power at 5 percent inflation" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">INFLATION REALITY CHECK · WHAT ₹1 CRORE IN 2041 IS WORTH IN TODAY'S MONEY</text>
     <rect x="20" y="38" width="680" height="60" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="8" />
     <text x="30" y="62" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="#dc2626">₹1 Crore in 2041 = ₹48.1 Lakh in today's purchasing power (at 5% annual inflation)</text>
-    <text x="30" y="84" fontFamily="system-ui" fontSize="8" fill="var(--text)">That is, if you achieve your ₹1Cr goal in 15 years, you'll be able to buy what ₹48 Lakh buys today. Not ₹1 Crore worth of today's goods.</text>
+        <text x="30" y="84" fontSize="9" fontFamily="system-ui" fill="var(--text)">That is, if you achieve your ₹1Cr goal in 15 years, you'll be able to buy what ₹48 Lakh buys today. Not ₹1 Crore worth of</text>
+    <text x="30" y="98" fontSize="9" fontFamily="system-ui" fill="var(--text)">today's goods.</text>
     <text x="20" y="122" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="var(--text)">Correct target: ₹2.08 Crore in 15 years = ₹1 Crore of today's purchasing power</text>
     {[
       { target: "₹1Cr nominal", rate: "12%", sip: "₹16,200/mo" },
@@ -80,12 +83,14 @@ const SvgInflationAdjusted = () => (
         <text x="26" y={150 + i * 34} fontFamily="system-ui" fontSize="12" fill="var(--text)">Goal: {target} by 2041 at {rate} CAGR = SIP of {sip}</text>
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Inflation is the silent tax on all investment goals. Set your target in real (inflation-adjusted) terms, then back-calculate your required SIP. Most people set nominal targets and end up with half the purchasing power they planned for.</text>
+        <text x="20" y="215" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Inflation is the silent tax on all investment goals. Set your target in real (inflation-adjusted) terms, then</text>
+    <text x="20" y="229" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">back-calculate your required SIP. Most people set nominal targets and end up with half the purchasing power they planned</text>
+    <text x="20" y="243" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">for.</text>
   </svg>
 );
 
 const SvgStepUpSIP = () => (
-  <svg viewBox="0 0 720 262" role="img" aria-label="Step-up SIP versus flat SIP comparison showing that increasing SIP by 10 percent annually creates significantly more wealth than a flat SIP over 15 years" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 272" role="img" aria-label="Step-up SIP versus flat SIP comparison showing that increasing SIP by 10 percent annually creates significantly more wealth than a flat SIP over 15 years" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">STEP-UP SIP vs FLAT SIP · ₹10,000 STARTING · 12% RETURN · 15 YEARS</text>
     <rect x="20" y="40" width="310" height="150" fill="#dc2626" rx="8" opacity="0.22" stroke="#dc2626" strokeWidth="1" />
     <text x="175" y="66" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#dc2626">FLAT SIP: ₹10,000/month</text>
@@ -103,12 +108,13 @@ const SvgStepUpSIP = () => (
     <text x="545" y="180" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">SIP at Year 15: ₹38,000/month</text>
     <rect x="200" y="206" width="320" height="24" fill={COLOR} rx="4" />
     <text x="360" y="222" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#fff">Step-up creates ₹65.6L more wealth — and actually beats inflation.</text>
-    <text x="20" y="238" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Step-up SIP is available on all major platforms. Set a 10% annual increment and forget — it auto-increases each April. As your salary grows, your SIP should too. This is the single best SIP optimization available.</text>
+        <text x="20" y="238" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Step-up SIP is available on all major platforms. Set a 10% annual increment and forget — it auto-increases each April. As</text>
+    <text x="20" y="252" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">your salary grows, your SIP should too. This is the single best SIP optimization available.</text>
   </svg>
 );
 
 const SvgRealisticTargetSetting = () => (
-  <svg viewBox="0 0 720 202" role="img" aria-label="Realistic SIP target setting guide showing how to set goals accounting for inflation realistic returns and step-up investments" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 214" role="img" aria-label="Realistic SIP target setting guide showing how to set goals accounting for inflation realistic returns and step-up investments" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">THE REALISTIC SIP PLANNING CHECKLIST</text>
     {[
       { item: "Use 12% as your equity CAGR assumption (not 15-18% from ads)", status: "DO THIS", color: COLOR },
@@ -125,7 +131,8 @@ const SvgRealisticTargetSetting = () => (
         <text x="98" y={50 + i * 24} fontFamily="system-ui" fontSize="11" fill="var(--text)">{item}</text>
       </g>
     ))}
-    <text x="20" y="178" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">The ads show you the best-case. Plan for the base case. Celebrate if you beat it. Never confuse historical best performance with guaranteed future performance.</text>
+        <text x="20" y="178" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">The ads show you the best-case. Plan for the base case. Celebrate if you beat it. Never confuse historical best</text>
+    <text x="20" y="192" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">performance with guaranteed future performance.</text>
   </svg>
 );
 

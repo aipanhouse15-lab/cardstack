@@ -43,7 +43,7 @@ function FDLockIcon() {
 
 function FamilyCardIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two connected cards representing add-on card from parent">
+    <svg width="44" height="44" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two connected cards representing add-on card from parent">
       <rect x="4" y="16" width="28" height="18" rx="3" fill="var(--border)" stroke="var(--border)" strokeWidth="1"/>
       <rect x="12" y="10" width="28" height="18" rx="3" fill={COLOR} fillOpacity="0.2" stroke={COLOR} strokeWidth="1.5"/>
       <line x1="16" y1="21" x2="36" y2="21" stroke={COLOR} strokeWidth="1.5" strokeLinecap="round"/>
@@ -63,7 +63,7 @@ function TimelineArrow() {
 
 function BankIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bank building representing issuing bank">
+    <svg width="44" height="44" viewBox="0 0 44 50" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bank building representing issuing bank">
       <polygon points="22,4 40,16 4,16" fill={COLOR} fillOpacity="0.15" stroke={COLOR} strokeWidth="1.5"/>
       <rect x="8" y="16" width="5" height="18" fill={COLOR} fillOpacity="0.3"/>
       <rect x="17" y="16" width="5" height="18" fill={COLOR} fillOpacity="0.3"/>

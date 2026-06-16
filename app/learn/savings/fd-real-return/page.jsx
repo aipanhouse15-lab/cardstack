@@ -22,7 +22,7 @@ const COLOR = "#ca8a04";
 const UPDATED = "June 4, 2026";
 
 const SvgWaterfall = () => (
-  <svg viewBox="0 0 720 296" role="img" aria-label="Waterfall chart showing how 7 percent FD return reduces to 4.9 percent after 30 percent tax and further to 0.4 percent real return after 5 percent inflation" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 306" role="img" aria-label="Waterfall chart showing how 7 percent FD return reduces to 4.9 percent after 30 percent tax and further to 0.4 percent real return after 5 percent inflation" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">THE 7% FD REALITY CHECK · ₹10L INVESTED · 30% TAX SLAB · 5% INFLATION</text>
     {[
       { label: "Gross FD Return", val: 7.0, color: COLOR, y: 60, h: 140 },
@@ -40,12 +40,13 @@ const SvgWaterfall = () => (
     ))}
     <rect x="580" y="260" width="100" height="8" fill="#16a34a" rx="3" />
     <text x="630" y="256" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="800" fill="#16a34a">Real: +0.4%</text>
-    <text x="20" y="272" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">For a 30% tax bracket investor, your FD's 7% becomes 4.9% after tax, then 0.4% after inflation. On ₹10L, you earn ₹40,000 real wealth per year — less than inflation erodes.</text>
+        <text x="20" y="272" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">For a 30% tax bracket investor, your FD's 7% becomes 4.9% after tax, then 0.4% after inflation. On ₹10L, you earn ₹40,000</text>
+    <text x="20" y="286" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">real wealth per year — less than inflation erodes.</text>
   </svg>
 );
 
 const SvgPostTaxBySlab = () => (
-  <svg viewBox="0 0 720 256" role="img" aria-label="Post-tax FD return at different income tax slabs showing returns at 0 percent 5 percent 20 percent and 30 percent brackets on 7 percent gross FD rate" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 376" role="img" aria-label="Post-tax FD return at different income tax slabs showing returns at 0 percent 5 percent 20 percent and 30 percent brackets on 7 percent gross FD rate" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">POST-TAX FD RETURNS BY INCOME SLAB · 7% GROSS FD · JUNE 2026</text>
     {[
       { slab: "Nil slab (up to ₹3L)", tax: "0%", postTax: "7.00%", real: "~2.0%", color: "#16a34a" },
@@ -62,12 +63,13 @@ const SvgPostTaxBySlab = () => (
         <text x={378 + parseFloat(postTax) * 26} y={80 + i * 46} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Real: {real} (after 5% inflation)</text>
       </g>
     ))}
-    <text x="20" y="232" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">30% slab investors: your FD real return is essentially zero or marginally negative. The money grows in nominal terms but loses purchasing power at inflation. Not a "safe" choice — just a differently-risky one.</text>
+        <text x="20" y="232" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">30% slab investors: your FD real return is essentially zero or marginally negative. The money grows in nominal terms but</text>
+    <text x="20" y="246" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">loses purchasing power at inflation. Not a "safe" choice — just a differently-risky one.</text>
   </svg>
 );
 
 const SvgBankRates = () => (
-  <svg viewBox="0 0 720 276" role="img" aria-label="FD interest rate comparison across large banks and small finance banks as of June 2026 showing SBI at 7 percent versus Unity Small Finance Bank at 9 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 286" role="img" aria-label="FD interest rate comparison across large banks and small finance banks as of June 2026 showing SBI at 7 percent versus Unity Small Finance Bank at 9 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">FD RATES COMPARISON · 1-YEAR FD · REGULAR CITIZEN · JUNE 2026</text>
     {[
       { bank: "Unity Small Finance Bank", rate: 9.00, color: "#16a34a", risk: "Moderate" },
@@ -86,12 +88,13 @@ const SvgBankRates = () => (
         <text x={220 + rate * 40 + 30} y={52 + i * 28} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Risk: {risk}</text>
       </g>
     ))}
-    <text x="20" y="252" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Small Finance Banks are regulated by RBI and covered by DICGC insurance up to ₹5L per depositor per bank. The 2% extra rate is real — but max ₹5L exposure per bank to stay fully insured. Split across 2-3 SFBs for higher amounts.</text>
+        <text x="20" y="252" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Small Finance Banks are regulated by RBI and covered by DICGC insurance up to ₹5L per depositor per bank. The 2% extra</text>
+    <text x="20" y="266" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">rate is real — but max ₹5L exposure per bank to stay fully insured. Split across 2-3 SFBs for higher amounts.</text>
   </svg>
 );
 
 const SvgFDvsInflation10yr = () => (
-  <svg viewBox="0 0 720 279" role="img" aria-label="FD value versus purchasing power over 10 years showing nominal growth of FD at 7 percent versus inflation eroding value at 5 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 289" role="img" aria-label="FD value versus purchasing power over 10 years showing nominal growth of FD at 7 percent versus inflation eroding value at 5 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">₹10L FD vs INFLATION · 10-YEAR HORIZON · 7% FD RATE · 30% TAX SLAB · 5% INFLATION</text>
     <line x1="60" y1="220" x2="700" y2="220" stroke="var(--border)" />
     <line x1="60" y1="40" x2="60" y2="220" stroke="var(--border)" />
@@ -102,12 +105,13 @@ const SvgFDvsInflation10yr = () => (
     <path d="M 60 180 L 188 175 L 316 170 L 444 165 L 572 160 L 700 155" fill="none" stroke="#dc2626" strokeWidth="3" strokeDasharray="6,3" />
     <text x="650" y="120" fontFamily="system-ui" fontSize="10" fill={COLOR} fontWeight="700">FD value: ₹14.9L</text>
     <text x="650" y="152" fontFamily="system-ui" fontSize="10" fill="#dc2626" fontWeight="700">Real value: ₹11.2L</text>
-    <text x="20" y="255" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">₹10L FD grows to ₹14.9L nominally in 10 years at 7% (post-tax: ₹13.6L at 30% slab). But ₹10L in goods you could buy today costs ₹16.3L in 10 years at 5% inflation. You've lost purchasing power.</text>
+        <text x="20" y="255" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">₹10L FD grows to ₹14.9L nominally in 10 years at 7% (post-tax: ₹13.6L at 30% slab). But ₹10L in goods you could buy today</text>
+    <text x="20" y="269" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">costs ₹16.3L in 10 years at 5% inflation. You've lost purchasing power.</text>
   </svg>
 );
 
 const SvgWhenFDMakesSense = () => (
-  <svg viewBox="0 0 720 217" role="img" aria-label="When fixed deposits make sense versus when they don't based on time horizon tax slab and financial goals" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 234" role="img" aria-label="When fixed deposits make sense versus when they don't based on time horizon tax slab and financial goals" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHEN FD ACTUALLY MAKES SENSE · HONEST ASSESSMENT</text>
     <rect x="20" y="38" width="340" height="140" fill="#16a34a" rx="8" opacity="0.22" stroke="#16a34a" strokeWidth="1" />
     <text x="190" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#16a34a">FD MAKES SENSE WHEN...</text>
@@ -119,20 +123,23 @@ const SvgWhenFDMakesSense = () => (
     {["30% tax slab — real return near zero", "10+ year horizon — equity beats FD 3:1", "Goal is wealth creation, not preservation", "Inflation hedging is needed", "NRE FD is unavailable (or wrong tenure)"].map((t, i) => (
       <text key={t} x="390" y={82 + i * 22} fontFamily="system-ui" fontSize="11" fill="var(--text)">✗ {t}</text>
     ))}
-    <text x="20" y="193" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">FD is not a bad product. It's the wrong product for long-term wealth creation at high tax slabs. Use it for what it's designed for: short-term capital preservation with guaranteed returns.</text>
+        <text x="20" y="193" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">FD is not a bad product. It's the wrong product for long-term wealth creation at high tax slabs. Use it for what it's</text>
+    <text x="20" y="207" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">designed for: short-term capital preservation with guaranteed returns.</text>
   </svg>
 );
 
 const SvgDICGCCoverage = () => (
-  <svg viewBox="0 0 720 196" role="img" aria-label="DICGC insurance coverage guide showing deposits up to 5 lakh per depositor per bank are insured and strategy for distributing large deposits across banks" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 206" role="img" aria-label="DICGC insurance coverage guide showing deposits up to 5 lakh per depositor per bank are insured and strategy for distributing large deposits across banks" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">DICGC INSURANCE: HOW TO PROTECT FDs ABOVE ₹5L</text>
     <rect x="20" y="38" width="680" height="50" fill="var(--surface, #f0fdf4)" stroke="#16a34a" strokeWidth="1" rx="4" />
     <text x="30" y="58" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#16a34a">DICGC covers ₹5L per depositor per bank (including interest)</text>
     <text x="30" y="78" fontFamily="system-ui" fontSize="9" fill="var(--text)">This limit was raised from ₹1L to ₹5L in 2020. It covers savings + FD + RD across all branches of the same bank combined.</text>
     <text x="20" y="110" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text)">If you have ₹20L to park in FDs:</text>
     <text x="20" y="130" fontFamily="system-ui" fontSize="9" fill="var(--text)">Split across 4 banks (₹5L each) = fully insured. Or: ₹5L each at SBI, HDFC, Kotak + ICICI = 4x ₹5L = ₹20L fully covered.</text>
-    <text x="20" y="150" fontFamily="system-ui" fontSize="7" fill="var(--text)">Include joint holder: Joint FD covers ₹5L per depositor per bank. A joint FD with spouse at same bank = ₹5L cover each = ₹10L total at one bank.</text>
-    <text x="20" y="172" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Small Finance Banks: eligible for DICGC coverage same as scheduled commercial banks. For amounts above ₹5L at any single SFB, split across multiple SFBs.</text>
+        <text x="20" y="150" fontSize="9" fontFamily="system-ui" fill="var(--text)">Include joint holder: Joint FD covers ₹5L per depositor per bank. A joint FD with spouse at same bank = ₹5L cover each =</text>
+    <text x="20" y="164" fontSize="9" fontFamily="system-ui" fill="var(--text)">₹10L total at one bank.</text>
+        <text x="20" y="172" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Small Finance Banks: eligible for DICGC coverage same as scheduled commercial banks. For amounts above ₹5L at any single</text>
+    <text x="20" y="186" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">SFB, split across multiple SFBs.</text>
   </svg>
 );
 

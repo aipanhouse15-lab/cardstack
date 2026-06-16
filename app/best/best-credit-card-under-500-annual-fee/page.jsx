@@ -25,7 +25,7 @@ const UPDATED = "June 4, 2026";
 function AxisACEReturnCalculator() {
   return (
     <svg
-      viewBox="0 0 680 260"
+      viewBox="0 0 680 326"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Chart showing annual return on Axis ACE credit card at different spending levels"
@@ -110,7 +110,7 @@ function Under500CardsComparison() {
   ];
   return (
     <svg
-      viewBox="0 0 680 318"
+      viewBox="0 0 680 329"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Comparison table of all major Indian credit cards under Rs 500 annual fee"
@@ -140,7 +140,7 @@ function Under500CardsComparison() {
 function ACECategoriesBreakdown() {
   return (
     <svg
-      viewBox="0 0 680 216"
+      viewBox="0 0 680 302"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Breakdown of Axis ACE cashback rates by spending category"
@@ -171,7 +171,7 @@ function ACECategoriesBreakdown() {
 function RBLShopRiteGroceryMath() {
   return (
     <svg
-      viewBox="0 0 680 184"
+      viewBox="0 0 680 313"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Annual cashback calculation for RBL ShopRite card based on grocery spending"

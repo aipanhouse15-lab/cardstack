@@ -22,7 +22,7 @@ const COLOR = "#ea580c";
 const UPDATED = "June 4, 2026";
 
 const SvgMythVsReality = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Common myths about UPI vs credit cards debunked with reality checks" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 271" role="img" aria-label="Common myths about UPI vs credit cards debunked with reality checks" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">5 Myths Indians Believe About UPI vs Credit Cards</text>
     {["The Myth", "The Reality"].map((h, i) => (
@@ -61,7 +61,7 @@ const SvgMdrAndRewardsFlow = () => (
 );
 
 const SvgWhenUpiWins = () => (
-  <svg viewBox="0 0 720 190" role="img" aria-label="Scenarios where UPI is better than a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 240" role="img" aria-label="Scenarios where UPI is better than a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">When UPI Genuinely Beats Your Credit Card</text>
     {[
@@ -81,7 +81,7 @@ const SvgWhenUpiWins = () => (
 );
 
 const SvgWhenCreditCardWins = () => (
-  <svg viewBox="0 0 720 190" role="img" aria-label="Scenarios where a credit card beats UPI" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 240" role="img" aria-label="Scenarios where a credit card beats UPI" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">When Your Credit Card Beats UPI</text>
     {[
@@ -151,7 +151,7 @@ const SvgRuPayUpiAdvantage = () => (
 );
 
 const SvgUpiLimits = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="UPI transaction limits in India as of June 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 209" role="img" aria-label="UPI transaction limits in India as of June 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">UPI Limits You Need to Know (NPCI, June 2026)</text>
     {["Category", "Per Transaction", "Daily Limit"].map((h, i) => (

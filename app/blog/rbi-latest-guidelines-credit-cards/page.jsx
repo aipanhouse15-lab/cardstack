@@ -64,7 +64,7 @@ const SvgInterestFreePeriod = () => (
 );
 
 const SvgCardClosureRule = () => (
-  <svg viewBox="0 0 720 176" role="img" aria-label="RBI one click card closure rule requiring banks to close cards within 7 working days" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 242" role="img" aria-label="RBI one click card closure rule requiring banks to close cards within 7 working days" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 2: Card Closure Within 7 Working Days</text>
     {[
@@ -145,7 +145,7 @@ const SvgMDRUpi = () => (
 );
 
 const SvgGrievanceEscalation = () => (
-  <svg viewBox="0 0 720 206" role="img" aria-label="RBI credit card grievance redressal escalation path from bank to ombudsman" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 282" role="img" aria-label="RBI credit card grievance redressal escalation path from bank to ombudsman" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 7: Grievance Escalation Path (Know This)</text>
     {[
@@ -161,7 +161,8 @@ const SvgGrievanceEscalation = () => (
         <text x="670" y={58 + i * 34} textAnchor="end" fontSize="10" fill="var(--text-muted)">{s.days}</text>
       </g>
     ))}
-    <text x="24" y="182" fontSize="8" fill="var(--text-muted)">Key: bank must respond within 30 days per RBI mandate. After 30 days of no resolution, Ombudsman jurisdiction triggers automatically.</text>
+        <text x="24" y="182" fontSize="9" fill="var(--text-muted)">Key: bank must respond within 30 days per RBI mandate. After 30 days of no resolution, Ombudsman jurisdiction triggers</text>
+    <text x="24" y="196" fontSize="9" fill="var(--text-muted)">automatically.</text>
   </svg>
 );
 

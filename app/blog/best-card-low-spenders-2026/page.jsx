@@ -22,7 +22,7 @@ const COLOR = "#16a34a";
 const UPDATED = "June 4, 2026";
 
 const SvgLowSpenderDefinition = () => (
-  <svg viewBox="0 0 720 176" role="img" aria-label="Definition of low spender: under 15000 rupees per month on credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 186" role="img" aria-label="Definition of low spender: under 15000 rupees per month on credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Who Counts as a Low Spender?</text>
     <rect x="30" y="44" width="195" height="90" rx="8" fill={COLOR} opacity="0.12" stroke={COLOR} strokeWidth="2" />
@@ -40,7 +40,8 @@ const SvgLowSpenderDefinition = () => (
     <text x="592" y="88" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Above ₹40K/month</text>
     <text x="592" y="108" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Above ₹4.8L/year</text>
     <text x="592" y="126" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Premium fee cards become worthwhile</text>
-    <text x="360" y="152" textAnchor="middle" fontSize="7" fill="var(--text-muted)">This guide is for low spenders — a group often ignored by credit card marketing but actually better served by a small number of excellent free cards.</text>
+        <text x="360" y="152" fontSize="9" textAnchor="middle" fill="var(--text-muted)">This guide is for low spenders — a group often ignored by credit card marketing but actually better served by a small</text>
+    <text x="360" y="166" fontSize="9" textAnchor="middle" fill="var(--text-muted)">number of excellent free cards.</text>
   </svg>
 );
 

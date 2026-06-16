@@ -38,8 +38,8 @@ function CibilMeterIcon() {
       <path d="M63 13 A36 36 0 0 1 76 40" stroke="#22c55e" strokeWidth="8" strokeLinecap="round" fill="none"/>
       <line x1="40" y1="40" x2="40" y2="10" stroke={COLOR} strokeWidth="2.5" strokeLinecap="round"/>
       <circle cx="40" cy="40" r="4" fill={COLOR}/>
-      <text x="6" y="43" fontSize="8" fill="var(--text-muted)">300</text>
-      <text x="56" y="43" fontSize="8" fill="var(--text-muted)">900</text>
+      <text x="6" y="43" fontSize="9" fill="var(--text-muted)">300</text>
+      <text x="56" y="43" fontSize="9" fill="var(--text-muted)">900</text>
     </svg>
   );
 }
@@ -95,13 +95,13 @@ function UpgradeArrowIcon() {
 
 function CalendarIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendar showing 12 to 18 month CIBIL building period">
+    <svg width="44" height="44" viewBox="0 0 44 63" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendar showing 12 to 18 month CIBIL building period">
       <rect x="4" y="8" width="36" height="32" rx="3" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
       <line x1="4" y1="17" x2="40" y2="17" stroke="var(--border)" strokeWidth="1.5"/>
       <rect x="13" y="4" width="4" height="8" rx="2" fill={COLOR}/>
       <rect x="27" y="4" width="4" height="8" rx="2" fill={COLOR}/>
       <text x="22" y="34" textAnchor="middle" fontSize="11" fill={COLOR} fontWeight="700">12–18</text>
-      <text x="22" y="43" textAnchor="middle" fontSize="7" fill="var(--text-muted)">months</text>
+      <text x="22" y="43" textAnchor="middle" fontSize="9" fill="var(--text-muted)">months</text>
     </svg>
   );
 }

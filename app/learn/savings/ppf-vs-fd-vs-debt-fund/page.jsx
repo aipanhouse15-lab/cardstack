@@ -22,7 +22,7 @@ const COLOR = "#ca8a04";
 const UPDATED = "June 4, 2026";
 
 const SvgOutcome10yr = () => (
-  <svg viewBox="0 0 720 299" role="img" aria-label="10 lakh invested for 10 years outcome comparison between PPF FD and debt mutual fund showing PPF wins at 16.1 lakh followed by debt fund at 14.9 lakh and FD at 13.6 lakh after tax" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 309" role="img" aria-label="10 lakh invested for 10 years outcome comparison between PPF FD and debt mutual fund showing PPF wins at 16.1 lakh followed by debt fund at 14.9 lakh and FD at 13.6 lakh after tax" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">₹10L LUMP SUM · 10 YEARS · 30% TAX SLAB · POST-TAX MATURITY VALUE COMPARISON</text>
     {[
       { label: "PPF (7.1% EEE)", value: "₹19.7L", detail: "Zero tax. Govt-guaranteed. 15yr lock-in.", color: "#16a34a", barH: 200 },
@@ -37,12 +37,13 @@ const SvgOutcome10yr = () => (
       </g>
     ))}
     <line x1="60" y1="240" x2="660" y2="240" stroke="var(--border)" />
-    <text x="20" y="275" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">PPF dominates for 30% slab investors with EEE (Exempt-Exempt-Exempt) tax treatment. Debt fund LTCG indexation helps significantly. FD's annual tax drag is the biggest handicap.</text>
+        <text x="20" y="275" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">PPF dominates for 30% slab investors with EEE (Exempt-Exempt-Exempt) tax treatment. Debt fund LTCG indexation helps</text>
+    <text x="20" y="289" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">significantly. FD's annual tax drag is the biggest handicap.</text>
   </svg>
 );
 
 const SvgTaxTreatment = () => (
-  <svg viewBox="0 0 720 239" role="img" aria-label="Tax treatment comparison for PPF FD and debt mutual fund showing EEE versus ETE versus LTCG treatment at each stage of investment maturity and withdrawal" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 317" role="img" aria-label="Tax treatment comparison for PPF FD and debt mutual fund showing EEE versus ETE versus LTCG treatment at each stage of investment maturity and withdrawal" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">TAX TREATMENT AT 3 STAGES · PPF vs FD vs DEBT FUND</text>
     {[{ h: "Stage" }, { h: "PPF" }, { h: "FD" }, { h: "Debt Mutual Fund" }].map(({ h }, i) => {
       const xs = [20, 160, 340, 530];
@@ -64,12 +65,13 @@ const SvgTaxTreatment = () => (
         })}
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">PPF's EEE status means zero tax at every stage. FD's annual taxation is the most damaging for long-tenure investors — the tax on interest eats into compounding every year.</text>
+        <text x="20" y="215" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">PPF's EEE status means zero tax at every stage. FD's annual taxation is the most damaging for long-tenure investors — the</text>
+    <text x="20" y="229" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">tax on interest eats into compounding every year.</text>
   </svg>
 );
 
 const SvgLiquidityComparison = () => (
-  <svg viewBox="0 0 720 217" role="img" aria-label="Liquidity comparison showing PPF has 15 year lock-in with partial withdrawal after year 7 while FD can be broken anytime and debt funds can be redeemed in 1 to 3 business days" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 361" role="img" aria-label="Liquidity comparison showing PPF has 15 year lock-in with partial withdrawal after year 7 while FD can be broken anytime and debt funds can be redeemed in 1 to 3 business days" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">LIQUIDITY COMPARISON · CAN YOU ACCESS YOUR MONEY WHEN YOU NEED IT?</text>
     {[
       { prod: "PPF", access: "Low", detail: "15-year lock-in. Partial withdrawal from Year 7. Loan against PPF from Year 3.", color: "#dc2626", score: 2 },
@@ -83,12 +85,13 @@ const SvgLiquidityComparison = () => (
         <text x={98 + score * 40} y={65 + i * 46} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)"> · {detail}</text>
       </g>
     ))}
-    <text x="20" y="193" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">If you might need the money in under 5 years: FD or debt fund. PPF is genuinely locked. The partial withdrawal from Year 7 is 50% of balance at end of Year 4 — useful but not full access.</text>
+        <text x="20" y="193" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">If you might need the money in under 5 years: FD or debt fund. PPF is genuinely locked. The partial withdrawal from Year</text>
+    <text x="20" y="207" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">7 is 50% of balance at end of Year 4 — useful but not full access.</text>
   </svg>
 );
 
 const SvgRiskReturnMatrix = () => (
-  <svg viewBox="0 0 720 259" role="img" aria-label="Risk return matrix for PPF FD and debt mutual fund showing PPF has low risk and moderate returns while debt funds have low to moderate risk and better post-tax returns" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 269" role="img" aria-label="Risk return matrix for PPF FD and debt mutual fund showing PPF has low risk and moderate returns while debt funds have low to moderate risk and better post-tax returns" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">RISK-RETURN MATRIX · WHERE EACH PRODUCT SITS</text>
     <line x1="60" y1="200" x2="700" y2="200" stroke="var(--border)" />
     <line x1="60" y1="40" x2="60" y2="200" stroke="var(--border)" />
@@ -106,12 +109,13 @@ const SvgRiskReturnMatrix = () => (
     <circle cx="550" cy="65" r="25" fill={COLOR} opacity="0.8" />
     <text x="550" y="69" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#fff">Equity</text>
     <text x="550" y="48" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill={COLOR}>6-9% real, high risk</text>
-    <text x="20" y="235" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">For 30% slab, 5+ year horizon: Debt Fund sits in the sweet spot of risk and post-tax return. PPF wins on absolute safety if 15yr lock-in is acceptable. FD loses at this horizon due to tax drag.</text>
+        <text x="20" y="235" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">For 30% slab, 5+ year horizon: Debt Fund sits in the sweet spot of risk and post-tax return. PPF wins on absolute safety</text>
+    <text x="20" y="249" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">if 15yr lock-in is acceptable. FD loses at this horizon due to tax drag.</text>
   </svg>
 );
 
 const SvgWhoPicksWhat = () => (
-  <svg viewBox="0 0 720 199" role="img" aria-label="Decision guide for choosing between PPF FD and debt fund based on investment horizon tax slab and liquidity needs" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 279" role="img" aria-label="Decision guide for choosing between PPF FD and debt fund based on investment horizon tax slab and liquidity needs" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHO SHOULD PICK WHAT</text>
     {[
       { who: "30% slab, 15yr+ horizon, no liquidity need", pick: "PPF", reason: "EEE tax + govt guarantee + 80C benefit = unbeatable for this profile", color: "#16a34a" },
@@ -127,7 +131,8 @@ const SvgWhoPicksWhat = () => (
         <text x="440" y={55 + i * 34} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{reason.slice(0, 60)}</text>
       </g>
     ))}
-    <text x="20" y="175" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">No single product wins for everyone. The right mix depends on time horizon, tax slab, and liquidity requirements. Most families benefit from all three products in some combination.</text>
+        <text x="20" y="175" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">No single product wins for everyone. The right mix depends on time horizon, tax slab, and liquidity requirements. Most</text>
+    <text x="20" y="189" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">families benefit from all three products in some combination.</text>
   </svg>
 );
 

@@ -34,8 +34,8 @@ function AxisAceIcon() {
       <rect x="2" y="10" width="40" height="24" rx="4" fill={COLOR} fillOpacity="0.12" stroke={COLOR} strokeWidth="1.5"/>
       <circle cx="34" cy="18" r="4" fill={COLOR} fillOpacity="0.3"/>
       <circle cx="38" cy="18" r="4" fill={COLOR} fillOpacity="0.5"/>
-      <text x="10" y="32" fontSize="8" fill={COLOR} fontWeight="700">AXIS ACE</text>
-      <text x="10" y="22" fontSize="7" fill="var(--text-muted)">5% utility</text>
+      <text x="10" y="32" fontSize="9" fill={COLOR} fontWeight="700">AXIS ACE</text>
+      <text x="10" y="22" fontSize="9" fill="var(--text-muted)">5% utility</text>
     </svg>
   );
 }
@@ -52,7 +52,7 @@ function BbpsIcon() {
 
 function AutopayIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Autopay cycle icon showing automated bill payment">
+    <svg width="44" height="44" viewBox="0 0 44 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Autopay cycle icon showing automated bill payment">
       <path d="M8 22 A14 14 0 0 1 36 22" stroke={COLOR} strokeWidth="2" strokeLinecap="round" fill="none"/>
       <path d="M36 22 A14 14 0 0 1 8 22" stroke={COLOR} strokeWidth="2" strokeLinecap="round" fill="none" strokeDasharray="4 2"/>
       <path d="M32 15l4 7-7 1" stroke={COLOR} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>

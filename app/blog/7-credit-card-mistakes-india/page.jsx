@@ -83,7 +83,7 @@ const SvgUtilizationSpread = () => (
 );
 
 const SvgForexMarkup = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Forex markup fee comparison across Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 282" role="img" aria-label="Forex markup fee comparison across Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Forex Markup Fees on a $1,000 international transaction (approx ₹83,500)</text>
     {[
@@ -102,7 +102,7 @@ const SvgForexMarkup = () => (
 );
 
 const SvgCashAdvanceCost = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="True cost breakdown of a ₹10,000 credit card cash advance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 217" role="img" aria-label="True cost breakdown of a ₹10,000 credit card cash advance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">True cost of a ₹10,000 credit card cash advance (repaid in 30 days)</text>
     <rect x="36" y="56" width="160" height="50" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="6" />
@@ -141,7 +141,7 @@ const SvgRewardExpiry = () => (
 );
 
 const SvgSpendCap = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Accelerated reward earn category caps on popular Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 274" role="img" aria-label="Accelerated reward earn category caps on popular Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Category Spend Caps: the small print that limits your rewards</text>
     <text x="36" y="58" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Card</text>

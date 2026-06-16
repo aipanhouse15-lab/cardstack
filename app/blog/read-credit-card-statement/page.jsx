@@ -74,7 +74,7 @@ const SvgDatesExplained = () => (
 );
 
 const SvgMinDueTrap = () => (
-  <svg viewBox="0 0 720 234" role="img" aria-label="Minimum amount due trap: total cost of only paying minimum on a 50000 rupee balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 307" role="img" aria-label="Minimum amount due trap: total cost of only paying minimum on a 50000 rupee balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Minimum Due Trap: ₹50,000 Balance at 3.5%/Month</text>
     <text x="360" y="44" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Paying only ₹2,500 minimum each month (5% of balance)</text>
@@ -95,7 +95,7 @@ const SvgMinDueTrap = () => (
 );
 
 const SvgRewardPointsDecoder = () => (
-  <svg viewBox="0 0 720 190" role="img" aria-label="Reward points value decoder for major Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 237" role="img" aria-label="Reward points value decoder for major Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">What Are Your Reward Points Actually Worth?</text>
     {["Card", "Points per ₹150", "Value per Point", "Effective Rate", "Expiry"].map((h, i) => (
@@ -119,7 +119,7 @@ const SvgRewardPointsDecoder = () => (
 );
 
 const SvgEmiBreakdown = () => (
-  <svg viewBox="0 0 720 212" role="img" aria-label="Credit card EMI breakdown on statement showing principal, interest, and remaining balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 266" role="img" aria-label="Credit card EMI breakdown on statement showing principal, interest, and remaining balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">How an EMI Conversion Appears on Your Statement</text>
     <text x="360" y="44" textAnchor="middle" fontSize="11" fill="var(--text-muted)">₹30,000 converted to 6-month EMI at 13% p.a. (no-cost EMI: 0%)</text>
@@ -163,7 +163,7 @@ const SvgUnbilledVsBilled = () => (
 );
 
 const SvgInterestFreeCalc = () => (
-  <svg viewBox="0 0 720 170" role="img" aria-label="Interest-free period calculator showing different purchase dates" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 240" role="img" aria-label="Interest-free period calculator showing different purchase dates" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Interest-Free Days Depend on When You Buy</text>
     <text x="360" y="44" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Statement date: 15th of every month. Due date: 5th of next month.</text>

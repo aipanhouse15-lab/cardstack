@@ -46,7 +46,7 @@ const SvgFreeDefinitionBreakdown = () => (
 );
 
 const SvgTopCardRanking = () => (
-  <svg viewBox="0 0 720 320" role="img" aria-label="Ranked list of best free credit cards in India 2026 with key benefits" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 387" role="img" aria-label="Ranked list of best free credit cards in India 2026 with key benefits" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="320" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Best Free Credit Cards in India: June 2026</text>
     <rect x="20" y="40" width="680" height="34" fill={COLOR} rx="4" />
@@ -109,7 +109,7 @@ const SvgIDFCvsPremiuum = () => (
 );
 
 const SvgHiddenCostRadar = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Table of hidden fees that free credit cards sometimes charge" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 314" role="img" aria-label="Table of hidden fees that free credit cards sometimes charge" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Hidden Costs That Make 'Free' Cards Not Free</text>
     <rect x="20" y="36" width="680" height="30" fill="var(--raise2)" rx="4" />

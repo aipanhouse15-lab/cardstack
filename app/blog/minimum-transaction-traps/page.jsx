@@ -80,7 +80,7 @@ const SvgRewardExclusionTable = () => (
 );
 
 const SvgMinimumTransactionBar = () => (
-  <svg viewBox="0 0 720 212" role="img" aria-label="Minimum transaction thresholds for reward earning on Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 244" role="img" aria-label="Minimum transaction thresholds for reward earning on Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Minimum Transaction to Earn Rewards (₹)</text>
     {[
@@ -101,7 +101,7 @@ const SvgMinimumTransactionBar = () => (
 );
 
 const SvgMilestoneTrap = () => (
-  <svg viewBox="0 0 720 230" role="img" aria-label="Milestone bonus spend thresholds versus average cardholder monthly spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 234" role="img" aria-label="Milestone bonus spend thresholds versus average cardholder monthly spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="230" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Milestone Bonus Threshold vs. Avg Monthly Spend (India, 2026)</text>
     <text x="36" y="58" fontSize="12" fill="var(--text-muted)">Most cardholders never reach the milestone that unlocks the "headline" bonus.</text>
@@ -117,12 +117,13 @@ const SvgMilestoneTrap = () => (
     <text x="609" y="108" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Gap to bridge</text>
     <text x="609" y="130" textAnchor="middle" fontSize="26" fontWeight="800" fill="#dc2626">4x</text>
     <text x="609" y="152" textAnchor="middle" fontSize="11" fill="var(--text-muted)">more than most people spend</text>
-    <text x="36" y="200" fontSize="8" fill="var(--text-muted)">Source: RBI Payment System Report 2025, Assure Fintech estimates. Milestone thresholds: HDFC Regalia Gold, Axis Magnus, ICICI Sapphiro.</text>
+        <text x="36" y="200" fontSize="9" fill="var(--text-muted)">Source: RBI Payment System Report 2025, Assure Fintech estimates. Milestone thresholds: HDFC Regalia Gold, Axis Magnus,</text>
+    <text x="36" y="214" fontSize="9" fill="var(--text-muted)">ICICI Sapphiro.</text>
   </svg>
 );
 
 const SvgRewardReversalFlow = () => (
-  <svg viewBox="0 0 720 184" role="img" aria-label="How reward reversal works when you return a purchase" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 194" role="img" aria-label="How reward reversal works when you return a purchase" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">The Reward Reversal Trap — Step by Step</text>
     {[
@@ -138,7 +139,8 @@ const SvgRewardReversalFlow = () => (
         {i < 3 && <text x={x + 158} y="92" fontSize="18" fill="var(--text-muted)">→</text>}
       </g>
     ))}
-    <text x="36" y="160" fontSize="8" fill="var(--text-muted)">The refund and reversal happen but any foreign currency conversion fee or processing charge may stay. Always confirm in writing.</text>
+        <text x="36" y="160" fontSize="9" fill="var(--text-muted)">The refund and reversal happen but any foreign currency conversion fee or processing charge may stay. Always confirm in</text>
+    <text x="36" y="174" fontSize="9" fill="var(--text-muted)">writing.</text>
   </svg>
 );
 
@@ -158,13 +160,14 @@ const SvgGSTOnInterest = () => (
     <rect x="508" y="74" width="196" height="52" rx="6" fill="#dc2626" opacity="0.15" />
     <text x="606" y="100" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Total charge</text>
     <text x="606" y="118" textAnchor="middle" fontSize="18" fontWeight="800" fill="#dc2626">₹2,065</text>
-    <text x="36" y="164" fontSize="7" fill="var(--text-muted)">Your statement shows interest separately from GST — banks are required to itemize both, but the combined hit is 41.3% annualised on a revolving balance.</text>
+        <text x="36" y="164" fontSize="9" fill="var(--text-muted)">Your statement shows interest separately from GST — banks are required to itemize both, but the combined hit is 41.3%</text>
+    <text x="36" y="178" fontSize="9" fill="var(--text-muted)">annualised on a revolving balance.</text>
     <text x="36" y="184" fontSize="11" fill="var(--text-muted)">RBI Master Direction on Credit Cards, 2022 requires GST to be disclosed separately on each statement.</text>
   </svg>
 );
 
 const SvgAnnualisedCostComparison = () => (
-  <svg viewBox="0 0 720 242" role="img" aria-label="Annualised cost comparison of cash advance versus other borrowing options in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 292" role="img" aria-label="Annualised cost comparison of cash advance versus other borrowing options in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">True Annualised Cost — Cash Advance vs Other Credit Options</text>
     {[
