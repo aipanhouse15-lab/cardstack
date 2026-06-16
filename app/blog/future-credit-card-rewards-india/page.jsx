@@ -75,7 +75,7 @@ const SvgRewardSurvivalChart = () => (
 );
 
 const SvgDevaluationHistory = () => (
-  <svg viewBox="0 0 720 190" role="img" aria-label="Timeline of major credit card reward devaluations in India 2022 to 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 192" role="img" aria-label="Timeline of major credit card reward devaluations in India 2022 to 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Indian Card Devaluations: The Pattern</text>
     <rect x="24" y="40" width="672" height="22" rx="4" fill="var(--border)" opacity="0.2" />
@@ -105,7 +105,7 @@ const SvgDevaluationHistory = () => (
 );
 
 const SvgOndcWildcard = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="How ONDC could make credit card partner app rewards worthless" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 192" role="img" aria-label="How ONDC could make credit card partner app rewards worthless" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">The ONDC Wildcard: How It Kills Partner Rewards</text>
     <rect x="24" y="44" width="300" height="110" rx="8" fill="var(--border)" opacity="0.2" />
@@ -130,7 +130,7 @@ const SvgRuPayUpiOpportunity = () => (
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">RuPay Credit on UPI: Game Changer or False Dawn?</text>
     <rect x="24" y="44" width="672" height="50" rx="6" fill={COLOR} opacity="0.22" />
     <text x="360" y="66" textAnchor="middle" fontSize="12" fontWeight="600" fill={COLOR}>The Promise: Earn credit card rewards on UPI transactions</text>
-    <text x="360" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">RuPay credit cards linked to UPI apps allow payment from a credit line. If rewards attach, the UPI vs card divide collapses.</text>
+    <text x="360" y="84" textAnchor="middle" fontSize="8" fill="var(--text-muted)">RuPay credit cards linked to UPI apps allow payment from a credit line. If rewards attach, the UPI vs card divide collapses.</text>
     <text x="36" y="114" fontSize="10" fontWeight="700" fill={COLOR}>The opportunity:</text>
     <text x="180" y="114" fontSize="10" fill="var(--text-muted)">Rewards on UPI volume = massive increase in reward-earning surface area</text>
     <text x="36" y="132" fontSize="10" fontWeight="700" fill={COLOR}>The blocker:</text>
@@ -168,7 +168,7 @@ const SvgMaximizeNow = () => (
 );
 
 const SvgLoungeGating = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="Credit card lounge access milestone gating trend as lounges become overcrowded" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 166" role="img" aria-label="Credit card lounge access milestone gating trend as lounges become overcrowded" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Lounge Access: Why It Will Keep Getting Harder</text>
     <text x="24" y="48" fontSize="11" fill="var(--text-muted)">Average lounge visits per cardholder per year (approximate industry trend)</text>
@@ -188,13 +188,13 @@ const SvgLoungeGating = () => (
 );
 
 const SvgHonestForecast = () => (
-  <svg viewBox="0 0 720 140" role="img" aria-label="Honest forecast for credit card rewards in India over the next five years" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 144" role="img" aria-label="Honest forecast for credit card rewards in India over the next five years" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="140" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">The Honest Forecast: Rewards in 2028 and Beyond</text>
     <rect x="24" y="44" width="672" height="80" rx="8" fill={COLOR} opacity="0.2" />
-    <text x="42" y="66" fontSize="11" fill="var(--text)">Rewards will continue declining, not recovering. UPI volume growth, MDR sensitivity, lounge overcrowding, and ONDC disruption</text>
-    <text x="42" y="84" fontSize="11" fill="var(--text)">all point in one direction. No mechanism makes rewards more generous at system level unless MDR rises (politically unlikely)</text>
-    <text x="42" y="102" fontSize="11" fill="var(--text)">or RuPay credit on UPI creates new interchange economics. Right strategy: treat rewards as a bonus, not an income source.</text>
+    <text x="42" y="66" fontSize="8" fill="var(--text)">Rewards will continue declining, not recovering. UPI volume growth, MDR sensitivity, lounge overcrowding, and ONDC disruption</text>
+    <text x="42" y="84" fontSize="8" fill="var(--text)">all point in one direction. No mechanism makes rewards more generous at system level unless MDR rises (politically unlikely)</text>
+    <text x="42" y="102" fontSize="9" fill="var(--text)">or RuPay credit on UPI creates new interchange economics. Right strategy: treat rewards as a bonus, not an income source.</text>
     <text x="42" y="120" fontSize="11" fontWeight="700" fill={COLOR}>Maximise now. Do not depend on reward income long-term.</text>
   </svg>
 );

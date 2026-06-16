@@ -22,7 +22,7 @@ const COLOR = "#7c3aed";
 const UPDATED = "June 4, 2026";
 
 const SvgFeeVsValue = () => (
-  <svg viewBox="0 0 720 210" role="img" aria-label="HDFC Regalia vs Infinia: annual fee compared to potential reward value at different spend levels" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 226" role="img" aria-label="HDFC Regalia vs Infinia: annual fee compared to potential reward value at different spend levels" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="210" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Annual Fee vs Reward Value: The Honest Break-Even</text>
     {["Annual Spend", "Regalia Net Gain", "Infinia Net Gain", "Better Pick"].map((h, i) => (
@@ -44,7 +44,7 @@ const SvgFeeVsValue = () => (
         <text x="570" y={71 + i * 24} fontSize="11" fontWeight="700" fill={row.bColor}>{row.better}</text>
       </g>
     ))}
-    <text x="36" y="202" fontSize="10" fill="var(--text-muted)">*At ₹10L spend, Regalia still wins on net but Infinia lounge + golf benefits may justify the gap for frequent flyers. All figures include GST on fees.</text>
+    <text x="36" y="202" fontSize="7" fill="var(--text-muted)">*At ₹10L spend, Regalia still wins on net but Infinia lounge + golf benefits may justify the gap for frequent flyers. All figures include GST on fees.</text>
   </svg>
 );
 
@@ -122,7 +122,7 @@ const SvgRewardMechanism = () => (
 );
 
 const SvgMilestoneComparison = () => (
-  <svg viewBox="0 0 720 170" role="img" aria-label="Milestone and annual spend benefits for HDFC Regalia and Infinia" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 174" role="img" aria-label="Milestone and annual spend benefits for HDFC Regalia and Infinia" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Milestone Benefits: Regalia vs Infinia</text>
     <rect x="20" y="38" width="320" height="116" rx="8" fill={COLOR} opacity="0.2" />
@@ -142,7 +142,7 @@ const SvgMilestoneComparison = () => (
 );
 
 const SvgSpendDecisionTree = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Decision tree to choose between HDFC Regalia and Infinia based on annual spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 209" role="img" aria-label="Decision tree to choose between HDFC Regalia and Infinia based on annual spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Which Card Should You Pick? (Spend-Based Decision)</text>
     <rect x="270" y="38" width="180" height="34" rx="8" fill={COLOR} opacity="0.15" />
@@ -162,7 +162,7 @@ const SvgSpendDecisionTree = () => (
     <rect x="490" y="106" width="180" height="50" rx="8" fill="var(--raise)" />
     <text x="580" y="128" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6d28d9">Infinia</text>
     <text x="580" y="146" textAnchor="middle" fontSize="10" fill="#6d28d9">Rewards + unlimited lounge</text>
-    <text x="360" y="185" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Also consider: do you fly internationally? Infinia's unlimited Priority Pass becomes the biggest differentiator above 6 trips/year.</text>
+    <text x="360" y="185" textAnchor="middle" fontSize="8" fill="var(--text-muted)">Also consider: do you fly internationally? Infinia's unlimited Priority Pass becomes the biggest differentiator above 6 trips/year.</text>
   </svg>
 );
 

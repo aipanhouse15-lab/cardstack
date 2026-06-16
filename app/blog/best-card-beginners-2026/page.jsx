@@ -40,7 +40,7 @@ const SvgPersonaMatrix = () => (
 );
 
 const SvgFirstYearMath = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="First year economic outcome of three popular beginner cards under typical 25k monthly spend" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 244" role="img" aria-label="First year economic outcome of three popular beginner cards under typical 25k monthly spend" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">YEAR 1 NET BENEFIT · ₹25K MONTHLY SPEND PROFILE</text>
     {[
       { card: "Amazon Pay ICICI", fee: 0, welcome: 1500, cashback: 4200, net: 5700, w: 285 },
@@ -59,7 +59,7 @@ const SvgFirstYearMath = () => (
 );
 
 const SvgBuildingScore = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="CIBIL score progression over 24 months for a first-time cardholder following three different behavioural patterns" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 242" role="img" aria-label="CIBIL score progression over 24 months for a first-time cardholder following three different behavioural patterns" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">CIBIL TRAJECTORY · 24 MONTHS POST FIRST CARD · 3 BEHAVIOURS</text>
     <line x1="60" y1="200" x2="700" y2="200" stroke="var(--border)" />
     <line x1="60" y1="50" x2="60" y2="200" stroke="var(--border)" />

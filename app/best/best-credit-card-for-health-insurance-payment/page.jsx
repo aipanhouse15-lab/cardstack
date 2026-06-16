@@ -28,14 +28,14 @@ const IconShield = () => (
 );
 
 const IconRupee = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Premium amount indicator">
+  <svg width="28" height="28" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Premium amount indicator">
     <circle cx="14" cy="14" r="12" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5"/>
     <text x="9" y="19" fontSize="13" fill={COLOR} fontWeight="700">₹</text>
   </svg>
 );
 
 const IconCalendar = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Annual payment timing calendar">
+  <svg width="28" height="28" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Annual payment timing calendar">
     <rect x="3" y="5" width="22" height="20" rx="3" fill="var(--raise)" stroke={COLOR} strokeWidth="1.8"/>
     <rect x="3" y="10" width="22" height="3" fill={COLOR} opacity="0.2"/>
     <rect x="8" y="3" width="2" height="5" rx="1" fill={COLOR}/>
@@ -46,7 +46,7 @@ const IconCalendar = () => (
 );
 
 const IconWarn = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Exclusion warning">
+  <svg width="24" height="24" viewBox="0 0 24 41" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Exclusion warning">
     <path d="M12 3L22 20H2L12 3Z" fill="#fff7ed" stroke="#f97316" strokeWidth="1.8"/>
     <rect x="11" y="9" width="2" height="6" rx="1" fill="var(--raise)"/>
     <rect x="11" y="17" width="2" height="2" rx="1" fill="var(--raise)"/>
@@ -54,14 +54,14 @@ const IconWarn = () => (
 );
 
 const IconCheck = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Earns reward points">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Earns reward points">
     <circle cx="9" cy="9" r="8" fill={COLOR} opacity="0.12"/>
     <path d="M5 9.5L8 12L13 6" stroke={COLOR} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const IconCross = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Does not earn reward points">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Does not earn reward points">
     <circle cx="9" cy="9" r="8" fill="#fee2e2" opacity="0.6"/>
     <path d="M6 6L12 12M12 6L6 12" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
   </svg>
@@ -77,7 +77,7 @@ const IconFamily = () => (
 );
 
 const IconStar = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top recommended card">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top recommended card">
     <polygon points="9,1.5 11,7 17,7 12,11 14,17 9,13.5 4,17 6,11 1,7 7,7" fill={COLOR}/>
   </svg>
 );

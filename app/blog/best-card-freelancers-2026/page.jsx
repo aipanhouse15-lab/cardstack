@@ -33,7 +33,7 @@ const SvgBracketPlaybook = () => (
 );
 
 const SvgGstFlow = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="GST input credit recovery flow on a freelancer business spend example showing how 18 percent GST on SaaS subscriptions is recoverable" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 244" role="img" aria-label="GST input credit recovery flow on a freelancer business spend example showing how 18 percent GST on SaaS subscriptions is recoverable" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">GST INPUT CREDIT RECOVERY · ₹60K MONTHLY SAAS SPEND</text>
     <rect x="40" y="50" width="180" height="60" fill="var(--raise)" stroke={COLOR} />
     <text x="130" y="74" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text)">Step 1</text>

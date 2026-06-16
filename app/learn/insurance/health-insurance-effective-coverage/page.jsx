@@ -35,7 +35,7 @@ const SvgWaterfall = () => (
 );
 
 const SvgRoomRent = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Room rent cap proportional reduction example — ₹15000 actual room rent on a ₹5000 cap reduces all bill components by the same proportion" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 242" role="img" aria-label="Room rent cap proportional reduction example — ₹15000 actual room rent on a ₹5000 cap reduces all bill components by the same proportion" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">ROOM RENT CAP · PROPORTIONAL REDUCTION RULE</text>
     {[
       { item: "Room rent (₹15k actual)", actual: 15000, paid: 5000 },
@@ -51,12 +51,12 @@ const SvgRoomRent = () => (
         <text x={285 + r.paid / 100} y="29" fontFamily="system-ui" fontSize="10" fontWeight="700" fill={COLOR}>₹{r.paid.toLocaleString("en-IN")} paid</text>
       </g>
     ))}
-    <text x="20" y="218" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)" fontWeight="600">If actual room rent is 3x the policy cap, every bill line gets reimbursed at 1/3 — even surgeon fees and OT costs.</text>
+    <text x="20" y="218" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)" fontWeight="600">If actual room rent is 3x the policy cap, every bill line gets reimbursed at 1/3 — even surgeon fees and OT costs.</text>
   </svg>
 );
 
 const SvgCsrTable = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="FY25 IRDAI claim settlement ratio for top six health insurers showing percentage of claims settled against percentage by amount" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 286" role="img" aria-label="FY25 IRDAI claim settlement ratio for top six health insurers showing percentage of claims settled against percentage by amount" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">FY25 IRDAI CSR · CLAIM SETTLEMENT RATIO BY INSURER</text>
     {[
       { name: "HDFC ERGO", count: 93.1, amount: 89.4 },
@@ -76,12 +76,12 @@ const SvgCsrTable = () => (
         <text x={186 + r.amount * 4} y="39" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="var(--text)">{r.amount}%</text>
       </g>
     ))}
-    <text x="20" y="262" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">By count = % of claims paid · By amount = % of claimed amount actually paid · gap is sub-limit and exclusion erosion</text>
+    <text x="20" y="262" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">By count = % of claims paid · By amount = % of claimed amount actually paid · gap is sub-limit and exclusion erosion</text>
   </svg>
 );
 
 const SvgRealisticPolicy = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Comparison of three health insurance plans showing nominal versus effective coverage on a typical 5 lakh hospitalisation scenario" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 244" role="img" aria-label="Comparison of three health insurance plans showing nominal versus effective coverage on a typical 5 lakh hospitalisation scenario" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">EFFECTIVE COVER ON A ₹5L HOSPITALISATION · 3 POLICY DESIGNS</text>
     {[
       { plan: "₹5L basic · 20% co-pay · ₹4k room", nominal: 500000, eff: 280000, w: 224 },

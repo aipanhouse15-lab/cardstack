@@ -22,7 +22,7 @@ const UPDATED = "June 4, 2026";
 
 function UpiLogoIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UPI payment logo icon">
+    <svg width="44" height="44" viewBox="0 0 44 51" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="UPI payment logo icon">
       <rect x="2" y="8" width="40" height="28" rx="5" fill={COLOR} fillOpacity="0.12" stroke={COLOR} strokeWidth="1.5"/>
       <text x="22" y="27" textAnchor="middle" fontSize="13" fill={COLOR} fontWeight="800">UPI</text>
     </svg>
@@ -31,7 +31,7 @@ function UpiLogoIcon() {
 
 function RupayBadgeIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RuPay card network badge - the only network that earns rewards on UPI">
+    <svg width="44" height="44" viewBox="0 0 44 51" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RuPay card network badge - the only network that earns rewards on UPI">
       <rect x="2" y="10" width="40" height="24" rx="4" fill={COLOR} fillOpacity="0.1" stroke={COLOR} strokeWidth="1.5"/>
       <text x="22" y="27" textAnchor="middle" fontSize="10" fill={COLOR} fontWeight="800">RuPay</text>
       <path d="M36 10v24" stroke={COLOR} strokeWidth="0.5" strokeDasharray="3 2"/>
@@ -53,7 +53,7 @@ function BlockedIcon() {
 
 function PhonePayIcon() {
   return (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Phone showing UPI payment app">
+    <svg width="40" height="40" viewBox="0 0 40 45" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Phone showing UPI payment app">
       <rect x="10" y="4" width="20" height="32" rx="4" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
       <rect x="13" y="9" width="14" height="18" rx="1" fill={COLOR} fillOpacity="0.15"/>
       <circle cx="20" cy="32" r="2" fill={COLOR} fillOpacity="0.5"/>
@@ -64,7 +64,7 @@ function PhonePayIcon() {
 
 function ZeroRewardBadge() {
   return (
-    <svg width="60" height="32" viewBox="0 0 60 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zero rewards earned badge">
+    <svg width="60" height="32" viewBox="0 0 60 45" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zero rewards earned badge">
       <rect width="60" height="32" rx="16" fill="var(--raise)" stroke="#fca5a5" strokeWidth="1.5"/>
       <text x="30" y="21" textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="800">0%</text>
     </svg>
@@ -73,7 +73,7 @@ function ZeroRewardBadge() {
 
 function ArrowRightIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arrow pointing right">
+    <svg width="16" height="16" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arrow pointing right">
       <path d="M3 8h10M9 4l4 4-4 4" stroke={COLOR} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
@@ -81,7 +81,7 @@ function ArrowRightIcon() {
 
 function InfoIcon() {
   return (
-    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Information icon">
+    <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Information icon">
       <circle cx="9" cy="9" r="8" fill={COLOR} fillOpacity="0.12" stroke={COLOR} strokeWidth="1.2"/>
       <line x1="9" y1="8" x2="9" y2="12" stroke={COLOR} strokeWidth="1.5" strokeLinecap="round"/>
       <circle cx="9" cy="6" r="1" fill={COLOR}/>

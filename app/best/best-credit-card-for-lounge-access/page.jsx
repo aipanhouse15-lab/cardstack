@@ -21,7 +21,7 @@ const COLOR = "#0891b2";
 const UPDATED = "June 4, 2026";
 
 const IconLounge = () => (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Airport lounge icon">
+  <svg width="48" height="48" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Airport lounge icon">
     <rect x="4" y="28" width="40" height="12" rx="4" fill={COLOR} opacity="0.15" stroke={COLOR} strokeWidth="1.5"/>
     <path d="M10 28 Q10 18 20 18 Q28 18 28 28" fill={COLOR} opacity="0.12" stroke={COLOR} strokeWidth="1.5"/>
     <path d="M28 28 Q28 20 36 20 Q40 20 40 26" fill="none" stroke={COLOR} strokeWidth="1.5"/>
@@ -31,13 +31,13 @@ const IconLounge = () => (
 );
 
 const IconPlane = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flight travel indicator">
+  <svg width="28" height="28" viewBox="0 0 28 47" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flight travel indicator">
     <path d="M4 20L12 14L10 6L14 8L16 16L22 12L24 14L18 18L19 23L16 22L15 18L4 20Z" fill={COLOR} opacity="0.7"/>
   </svg>
 );
 
 const IconTrophy = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top ranked card trophy">
+  <svg width="28" height="28" viewBox="0 0 28 42" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top ranked card trophy">
     <path d="M9 5H19V14C19 17.3 16.3 20 13 20V20C9.7 20 7 17.3 7 14V5H9Z" fill="none" stroke={COLOR} strokeWidth="2"/>
     <path d="M7 8H4C4 11 6 13 9 13" fill="none" stroke={COLOR} strokeWidth="1.5"/>
     <path d="M21 8H24C24 11 22 13 19 13" fill="none" stroke={COLOR} strokeWidth="1.5"/>
@@ -47,7 +47,7 @@ const IconTrophy = () => (
 );
 
 const IconWarning = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Milestone trap warning">
+  <svg width="24" height="24" viewBox="0 0 24 41" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Milestone trap warning">
     <path d="M12 3L22 20H2L12 3Z" fill="#fff7ed" stroke="#f97316" strokeWidth="1.8"/>
     <rect x="11" y="9" width="2" height="6" rx="1" fill="var(--raise)"/>
     <rect x="11" y="17" width="2" height="2" rx="1" fill="var(--raise)"/>
@@ -55,13 +55,13 @@ const IconWarning = () => (
 );
 
 const IconStar = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top pick star">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top pick star">
     <polygon points="9,1.5 11,7 17,7 12,11 14,17 9,13.5 4,17 6,11 1,7 7,7" fill={COLOR}/>
   </svg>
 );
 
 const IconCheck = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Feature included">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Feature included">
     <circle cx="9" cy="9" r="8" fill={COLOR} opacity="0.12"/>
     <path d="M5 9.5L8 12L13 6" stroke={COLOR} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>

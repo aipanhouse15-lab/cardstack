@@ -22,7 +22,7 @@ const COLOR = "#ea580c";
 const UPDATED = "June 4, 2026";
 
 const SvgRewardTiersChart = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Tier chart showing Amazon Pay ICICI card reward rates by spend category" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 272" role="img" aria-label="Tier chart showing Amazon Pay ICICI card reward rates by spend category" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Amazon Pay ICICI: Reward Rate by Spend Category</text>
     {[

@@ -22,7 +22,7 @@ const COLOR = "#7c3aed";
 const UPDATED = "June 4, 2026";
 
 const SvgBreakevenFormula = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="Break-even spend formula: annual fee divided by reward rate equals minimum annual spend required" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 172" role="img" aria-label="Break-even spend formula: annual fee divided by reward rate equals minimum annual spend required" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="30" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Break-Even Formula for Any Fee Card</text>
     <rect x="60" y="48" width="180" height="68" rx="8" fill={COLOR} opacity="0.12" stroke={COLOR} strokeWidth="1.5" />
@@ -36,12 +36,12 @@ const SvgBreakevenFormula = () => (
     <rect x="540" y="48" width="150" height="68" rx="8" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="2" />
     <text x="615" y="76" textAnchor="middle" fontSize="13" fontWeight="700" fill={COLOR}>Min Annual</text>
     <text x="615" y="94" textAnchor="middle" fontSize="13" fontWeight="700" fill={COLOR}>Spend Needed</text>
-    <text x="360" y="148" textAnchor="middle" fontSize="11" fill="var(--text-muted)">This is your break-even before a single rupee of benefit. Include lounge value to bring the number down significantly.</text>
+    <text x="360" y="148" textAnchor="middle" fontSize="9" fill="var(--text-muted)">This is your break-even before a single rupee of benefit. Include lounge value to bring the number down significantly.</text>
   </svg>
 );
 
 const SvgFiveCardBreakeven = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Break-even spend for 5 popular fee cards: HDFC Regalia, ICICI Emeralde, Axis Magnus, SBI Elite, Amex MRCC" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 296" role="img" aria-label="Break-even spend for 5 popular fee cards: HDFC Regalia, ICICI Emeralde, Axis Magnus, SBI Elite, Amex MRCC" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="280" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Break-Even Spend: 5 Popular Fee Cards (June 2026)</text>
     <text x="20" y="50" fontSize="10" fontWeight="700" fill="var(--text-muted)">CARD</text>
@@ -79,13 +79,13 @@ const SvgFiveCardBreakeven = () => (
     <text x="320" y="214" fontSize="11" fill="var(--text)">0.5% base + bonus MR</text>
     <text x="440" y="214" fontSize="11" fontWeight="700" fill={COLOR}>₹3,54,000</text>
     <text x="620" y="214" fontSize="11" fontWeight="700" fill="#16a34a">₹2,80,000</text>
-    <text x="360" y="258" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Lounge value calculated at ₹800/visit x included visits. Reward rates reflect June 2026 program values after recent devaluations.</text>
+    <text x="360" y="258" textAnchor="middle" fontSize="8" fill="var(--text-muted)">Lounge value calculated at ₹800/visit x included visits. Reward rates reflect June 2026 program values after recent devaluations.</text>
     <text x="360" y="272" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Amex MRCC break-even is high due to low base rate; value depends on how you redeem Membership Rewards points.</text>
   </svg>
 );
 
 const SvgLoungeValue = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="How lounge access reduces the effective annual fee of premium credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 212" role="img" aria-label="How lounge access reduces the effective annual fee of premium credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Hidden Benefit Math: How Lounge Access Slashes Effective Fee</text>
     <text x="30" y="56" fontSize="12" fontWeight="600" fill="var(--text)">HDFC Regalia Gold</text>
@@ -105,7 +105,7 @@ const SvgLoungeValue = () => (
 );
 
 const SvgFeeWaiverConditions = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Fee waiver conditions for popular credit cards: minimum annual spend required" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 230" role="img" aria-label="Fee waiver conditions for popular credit cards: minimum annual spend required" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Fee Waiver Conditions: Can You Hit Them?</text>
     <text x="30" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">CARD</text>
@@ -156,7 +156,7 @@ const SvgFreeCardWins = () => (
 );
 
 const SvgDecisionTree = () => (
-  <svg viewBox="0 0 720 300" role="img" aria-label="Decision tree: should you pay an annual fee for a credit card?" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 302" role="img" aria-label="Decision tree: should you pay an annual fee for a credit card?" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="300" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Should You Pay This Annual Fee? Decision Tree</text>
     <rect x="260" y="42" width="200" height="42" rx="8" fill={COLOR} opacity="0.15" stroke={COLOR} strokeWidth="1.5" />

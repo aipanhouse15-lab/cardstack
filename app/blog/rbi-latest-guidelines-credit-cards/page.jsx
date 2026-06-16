@@ -45,7 +45,7 @@ const SvgRegulatoryTimeline = () => (
 );
 
 const SvgInterestFreePeriod = () => (
-  <svg viewBox="0 0 720 170" role="img" aria-label="RBI mandated minimum 14 day interest free period from credit card statement date" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 182" role="img" aria-label="RBI mandated minimum 14 day interest free period from credit card statement date" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 1: Minimum 14-Day Interest-Free Period</text>
     <rect x="24" y="42" width="120" height="100" rx="6" fill="var(--border)" opacity="0.3" />
@@ -64,7 +64,7 @@ const SvgInterestFreePeriod = () => (
 );
 
 const SvgCardClosureRule = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="RBI one click card closure rule requiring banks to close cards within 7 working days" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 176" role="img" aria-label="RBI one click card closure rule requiring banks to close cards within 7 working days" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 2: Card Closure Within 7 Working Days</text>
     {[
@@ -108,7 +108,7 @@ const SvgTokenisation = () => (
 );
 
 const SvgEmiAprTrap = () => (
-  <svg viewBox="0 0 720 190" role="img" aria-label="No cost EMI true interest rate revealed through processing fee RBI disclosure rules" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 202" role="img" aria-label="No cost EMI true interest rate revealed through processing fee RBI disclosure rules" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 6: No-Cost EMI Effective APR Disclosure</text>
     <text x="24" y="50" fontSize="12" fill="var(--text-muted)">Example: &#8377;60,000 laptop on "0% EMI" for 12 months</text>
@@ -122,12 +122,12 @@ const SvgEmiAprTrap = () => (
     <text x="536" y="104" textAnchor="middle" fontSize="11" fill="var(--text)">Processing fee: &#8377;1,800 (charged upfront)</text>
     <text x="536" y="122" textAnchor="middle" fontSize="11" fill="var(--text)">Effective APR: ~6.8%</text>
     <text x="536" y="140" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>This must now be shown before you confirm</text>
-    <text x="24" y="178" fontSize="10" fill="var(--text-muted)">Banks must display effective APR (not just 0%) on all no-cost EMI offers per RBI's updated merchant EMI guidelines.</text>
+    <text x="24" y="178" fontSize="9" fill="var(--text-muted)">Banks must display effective APR (not just 0%) on all no-cost EMI offers per RBI's updated merchant EMI guidelines.</text>
   </svg>
 );
 
 const SvgMDRUpi = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="Why UPI has no rewards but credit cards do - MDR cap impact on reward economics" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 176" role="img" aria-label="Why UPI has no rewards but credit cards do - MDR cap impact on reward economics" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 4: MDR Cap and Why Credit Card Rewards Exist</text>
     <rect x="24" y="42" width="310" height="96" rx="6" fill="var(--border)" opacity="0.25" />
@@ -140,12 +140,12 @@ const SvgMDRUpi = () => (
     <text x="537" y="85" textAnchor="middle" fontSize="11" fill="var(--text)">MDR: 1-2% (merchant pays)</text>
     <text x="537" y="103" textAnchor="middle" fontSize="11" fill="var(--text)">Bank earns interchange per swipe</text>
     <text x="537" y="122" textAnchor="middle" fontSize="11" fill="#22c55e">Funds reward programs</text>
-    <text x="24" y="152" fontSize="10" fill="var(--text-muted)">This structural difference is why credit card rewards exist and UPI cashback does not. RuPay credit on UPI may change this.</text>
+    <text x="24" y="152" fontSize="9" fill="var(--text-muted)">This structural difference is why credit card rewards exist and UPI cashback does not. RuPay credit on UPI may change this.</text>
   </svg>
 );
 
 const SvgGrievanceEscalation = () => (
-  <svg viewBox="0 0 720 190" role="img" aria-label="RBI credit card grievance redressal escalation path from bank to ombudsman" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 206" role="img" aria-label="RBI credit card grievance redressal escalation path from bank to ombudsman" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 7: Grievance Escalation Path (Know This)</text>
     {[
@@ -161,12 +161,12 @@ const SvgGrievanceEscalation = () => (
         <text x="670" y={58 + i * 34} textAnchor="end" fontSize="10" fill="var(--text-muted)">{s.days}</text>
       </g>
     ))}
-    <text x="24" y="182" fontSize="10" fill="var(--text-muted)">Key: bank must respond within 30 days per RBI mandate. After 30 days of no resolution, Ombudsman jurisdiction triggers automatically.</text>
+    <text x="24" y="182" fontSize="8" fill="var(--text-muted)">Key: bank must respond within 30 days per RBI mandate. After 30 days of no resolution, Ombudsman jurisdiction triggers automatically.</text>
   </svg>
 );
 
 const SvgActivationRule = () => (
-  <svg viewBox="0 0 720 140" role="img" aria-label="RBI rule that credit cards cannot be auto-activated and must require customer action" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 156" role="img" aria-label="RBI rule that credit cards cannot be auto-activated and must require customer action" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="140" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 5: No Auto-Activation of Credit Cards</text>
     <rect x="24" y="44" width="320" height="76" rx="6" fill="var(--raise)" opacity="0.07" />
@@ -177,7 +177,7 @@ const SvgActivationRule = () => (
     <text x="536" y="67" textAnchor="middle" fontSize="11" fontWeight="600" fill="#22c55e">Current Requirement (RBI Mandated)</text>
     <text x="536" y="87" textAnchor="middle" fontSize="10" fill="var(--text)">Card dormant until you explicitly activate</text>
     <text x="536" y="105" textAnchor="middle" fontSize="10" fill="var(--text)">Annual fee clock starts at activation, not delivery</text>
-    <text x="24" y="132" fontSize="10" fill="var(--text-muted)">Practical use: if you applied for a card you no longer want, it can be closed before activation with no fee impact.</text>
+    <text x="24" y="132" fontSize="9" fill="var(--text-muted)">Practical use: if you applied for a card you no longer want, it can be closed before activation with no fee impact.</text>
   </svg>
 );
 

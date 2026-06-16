@@ -22,7 +22,7 @@ const UPDATED = "June 4, 2026";
 
 function BoltIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lightning bolt representing electricity bill payments">
+    <svg width="44" height="44" viewBox="0 0 44 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lightning bolt representing electricity bill payments">
       <path d="M26 4L10 24h14L18 40l16-20H20L26 4z" fill={COLOR} fillOpacity="0.15" stroke={COLOR} strokeWidth="1.5" strokeLinejoin="round"/>
     </svg>
   );
@@ -30,7 +30,7 @@ function BoltIcon() {
 
 function AxisAceIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Axis ACE card - top pick for bill payments at 5% cashback">
+    <svg width="44" height="44" viewBox="0 0 44 57" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Axis ACE card - top pick for bill payments at 5% cashback">
       <rect x="2" y="10" width="40" height="24" rx="4" fill={COLOR} fillOpacity="0.12" stroke={COLOR} strokeWidth="1.5"/>
       <circle cx="34" cy="18" r="4" fill={COLOR} fillOpacity="0.3"/>
       <circle cx="38" cy="18" r="4" fill={COLOR} fillOpacity="0.5"/>
@@ -42,7 +42,7 @@ function AxisAceIcon() {
 
 function BbpsIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BBPS - Bharat Bill Payment System logo representation">
+    <svg width="44" height="44" viewBox="0 0 44 56" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BBPS - Bharat Bill Payment System logo representation">
       <rect x="2" y="8" width="40" height="28" rx="4" fill={COLOR} fillOpacity="0.08" stroke={COLOR} strokeWidth="1.5"/>
       <text x="22" y="24" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="800">BBPS</text>
       <text x="22" y="33" textAnchor="middle" fontSize="6" fill="var(--text-muted)">Bharat Bill Pay</text>
@@ -63,7 +63,7 @@ function AutopayIcon() {
 
 function FivePercentBadge() {
   return (
-    <svg width="64" height="36" viewBox="0 0 64 36" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="5% cashback badge for Axis ACE on utility bills">
+    <svg width="64" height="36" viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="5% cashback badge for Axis ACE on utility bills">
       <rect width="64" height="36" rx="18" fill={COLOR} fillOpacity="0.12" stroke={COLOR} strokeWidth="1.5"/>
       <text x="32" y="24" textAnchor="middle" fontSize="16" fill={COLOR} fontWeight="800">5%</text>
     </svg>

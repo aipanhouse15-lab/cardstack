@@ -46,7 +46,7 @@ const SvgMythVsReality = () => (
 );
 
 const SvgMdrAndRewardsFlow = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="How MDR merchant discount rate works for credit cards vs UPI and why credit cards earn rewards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 193" role="img" aria-label="How MDR merchant discount rate works for credit cards vs UPI and why credit cards earn rewards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Why Credit Cards Earn Rewards But UPI Doesn't</text>
     <rect x="20" y="38" width="660" height="50" rx="6" fill={COLOR} opacity="0.22" />
@@ -56,7 +56,7 @@ const SvgMdrAndRewardsFlow = () => (
     <text x="36" y="118" fontSize="12" fontWeight="700" fill="#64748b">UPI Transaction (Visa/Mastercard linked)</text>
     <text x="36" y="136" fontSize="11" fill="var(--text)">You spend ₹100 → Merchant pays 0% MDR (NPCI mandate) → Bank earns nothing → You earn nothing</text>
     <rect x="20" y="156" width="660" height="18" rx="4" fill="var(--raise)" />
-    <text x="36" y="169" fontSize="11" fontWeight="600" fill="#854d0e">Exception: RuPay Credit Card on UPI earns rewards (special NPCI-RBI arrangement). Visa/MC on UPI: zero rewards.</text>
+    <text x="36" y="169" fontSize="10" fontWeight="600" fill="#854d0e">Exception: RuPay Credit Card on UPI earns rewards (special NPCI-RBI arrangement). Visa/MC on UPI: zero rewards.</text>
   </svg>
 );
 

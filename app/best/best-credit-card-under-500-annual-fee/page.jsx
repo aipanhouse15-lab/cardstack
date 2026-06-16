@@ -69,7 +69,7 @@ function AxisACEReturnCalculator() {
 function FeeWaiverMathDiagram() {
   return (
     <svg
-      viewBox="0 0 680 180"
+      viewBox="0 0 680 192"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Diagram explaining Axis ACE fee waiver condition and monthly spend required"
@@ -94,7 +94,7 @@ function FeeWaiverMathDiagram() {
       <text x="565" y="84" textAnchor="middle" fontSize="20" fontWeight="800" fill={COLOR}>₹0</text>
       <text x="565" y="104" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Annual fee waived</text>
       <text x="565" y="120" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Truly free at this spend</text>
-      <text x="340" y="168" textAnchor="middle" fontSize="11" fill="var(--text-muted)">₹16,667/month is achievable for most urban households combining utility bills, groceries, and online shopping.</text>
+      <text x="340" y="168" textAnchor="middle" fontSize="10" fill="var(--text-muted)">₹16,667/month is achievable for most urban households combining utility bills, groceries, and online shopping.</text>
     </svg>
   );
 }
@@ -110,7 +110,7 @@ function Under500CardsComparison() {
   ];
   return (
     <svg
-      viewBox="0 0 680 300"
+      viewBox="0 0 680 318"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Comparison table of all major Indian credit cards under Rs 500 annual fee"
@@ -140,7 +140,7 @@ function Under500CardsComparison() {
 function ACECategoriesBreakdown() {
   return (
     <svg
-      viewBox="0 0 680 200"
+      viewBox="0 0 680 216"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Breakdown of Axis ACE cashback rates by spending category"
@@ -171,7 +171,7 @@ function ACECategoriesBreakdown() {
 function RBLShopRiteGroceryMath() {
   return (
     <svg
-      viewBox="0 0 680 170"
+      viewBox="0 0 680 184"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Annual cashback calculation for RBL ShopRite card based on grocery spending"

@@ -13,7 +13,7 @@ const COLOR = "#16A34A";
 const UPDATED = "June 3, 2026";
 
 const SvgSlabComparison = () => (
-  <svg viewBox="0 0 640 280" role="img" aria-label="New regime FY 2025-26 seven-slab structure with 87A rebate band and old regime four-slab structure side by side" style={{ width: "100%", maxWidth: 720 }}>
+  <svg viewBox="0 0 640 288" role="img" aria-label="New regime FY 2025-26 seven-slab structure with 87A rebate band and old regime four-slab structure side by side" style={{ width: "100%", maxWidth: 720 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">NEW REGIME · FY 2025-26 · 7 SLABS · POST BUDGET 2025</text>
     {[
       { range: "Up to ₹4L", rate: "0%", c: "#dcfce7" },
@@ -52,7 +52,7 @@ const SvgSlabComparison = () => (
 );
 
 const SvgBreakeven = () => (
-  <svg viewBox="0 0 640 280" role="img" aria-label="Breakeven income chart showing where old regime overtakes new regime by deduction stack" style={{ width: "100%", maxWidth: 720 }}>
+  <svg viewBox="0 0 640 282" role="img" aria-label="Breakeven income chart showing where old regime overtakes new regime by deduction stack" style={{ width: "100%", maxWidth: 720 }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">BREAKEVEN INCOME — WHERE OLD REGIME WINS BACK · ₹ TAX UNDER EACH</text>
     <line x1="60" y1="240" x2="610" y2="240" stroke="var(--border)" />
     <line x1="60" y1="50" x2="60" y2="240" stroke="var(--border)" />
@@ -98,7 +98,7 @@ const SvgScenarios = () => (
 );
 
 const SvgDeductionStack = () => (
-  <svg viewBox="0 0 640 260" role="img" aria-label="Deduction stack required to make old regime win — visual breakdown of where the deduction amount comes from" style={{ width: "100%", maxWidth: 720 }}>
+  <svg viewBox="0 0 640 276" role="img" aria-label="Deduction stack required to make old regime win — visual breakdown of where the deduction amount comes from" style={{ width: "100%", maxWidth: 720 }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">THE DEDUCTION STACK · WHEN OLD REGIME PAYS OFF</text>
     {[
       { label: "Standard deduction (auto · salaried)", amt: 50000, w: 30 },

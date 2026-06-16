@@ -105,7 +105,7 @@ const SvgBrandMap = () => (
 );
 
 const SvgAnnualSavingsChart = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Bar chart comparing annual fuel savings at Rs 5000 per month spend with and without a fuel card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 292" role="img" aria-label="Bar chart comparing annual fuel savings at Rs 5000 per month spend with and without a fuel card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="280" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Annual Impact at ₹5,000/month Fuel Spend (₹60,000/year)</text>
     {[
@@ -136,7 +136,7 @@ const SvgAnnualSavingsChart = () => (
 );
 
 const SvgGSTBreakdown = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="Breakdown showing GST charged on fuel surcharge amounts to paying tax on a fee" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 172" role="img" aria-label="Breakdown showing GST charged on fuel surcharge amounts to paying tax on a fee" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">The GST-on-Surcharge Problem: Paying Tax on a Fee</text>
     <rect x="40" y="44" width="180" height="90" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />

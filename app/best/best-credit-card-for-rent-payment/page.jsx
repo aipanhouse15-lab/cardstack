@@ -22,7 +22,7 @@ const UPDATED = "June 4, 2026";
 
 function HomeIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="House representing rent payment category">
+    <svg width="44" height="44" viewBox="0 0 44 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="House representing rent payment category">
       <path d="M4 22L22 6l18 16" stroke={COLOR} strokeWidth="1.5" strokeLinejoin="round" fill="none"/>
       <rect x="8" y="22" width="28" height="18" rx="2" fill={COLOR} fillOpacity="0.12" stroke={COLOR} strokeWidth="1.5"/>
       <rect x="17" y="28" width="10" height="12" rx="1" fill={COLOR} fillOpacity="0.4"/>
@@ -32,7 +32,7 @@ function HomeIcon() {
 
 function CalculatorIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calculator representing break-even math for rent payment processing fees">
+    <svg width="44" height="44" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calculator representing break-even math for rent payment processing fees">
       <rect x="8" y="4" width="28" height="36" rx="4" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
       <rect x="12" y="8" width="20" height="8" rx="2" fill={COLOR} fillOpacity="0.15"/>
       <text x="22" y="15" textAnchor="middle" fontSize="7" fill={COLOR} fontWeight="700">₹ break-even</text>
@@ -49,7 +49,7 @@ function CalculatorIcon() {
 
 function ProcessingFeeWarning() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warning flag for processing fee on rent payment platforms">
+    <svg width="44" height="44" viewBox="0 0 44 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warning flag for processing fee on rent payment platforms">
       <circle cx="22" cy="22" r="20" fill="var(--red-dim)" stroke={COLOR} strokeWidth="1.5"/>
       <text x="22" y="20" textAnchor="middle" fontSize="10" fill={COLOR} fontWeight="700">1.49%</text>
       <text x="22" y="30" textAnchor="middle" fontSize="7" fill={COLOR}>processing fee</text>

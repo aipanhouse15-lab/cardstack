@@ -22,7 +22,7 @@ const COLOR = "#dc2626";
 const UPDATED = "June 4, 2026";
 
 const SvgCashAdvanceCost = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Cash advance cost breakdown: ₹10,000 for 30 days totals ₹768 in fees" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 264" role="img" aria-label="Cash advance cost breakdown: ₹10,000 for 30 days totals ₹768 in fees" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="14" fontWeight="700" fill="var(--text)">Cash Advance ₹10,000 — 30-Day Total Cost Breakdown</text>
     <rect x="36" y="56" width="160" height="36" rx="4" fill="#dc2626" opacity="0.15" />
@@ -49,7 +49,7 @@ const SvgCashAdvanceCost = () => (
 );
 
 const SvgRewardExclusionTable = () => (
-  <svg viewBox="0 0 720 320" role="img" aria-label="Reward exclusion categories by major Indian credit card issuers" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 322" role="img" aria-label="Reward exclusion categories by major Indian credit card issuers" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="320" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="14" fontWeight="700" fill="var(--text)">Reward Exclusion Categories — Common Indian Cards (June 2026)</text>
     <rect x="36" y="52" width="648" height="28" rx="4" fill="var(--border)" opacity="0.5" />
@@ -75,12 +75,12 @@ const SvgRewardExclusionTable = () => (
         <text x="610" y={109 + i * 32} fontSize="12" fill={icici === "Excluded" ? "#dc2626" : icici === "Earns" ? "#16a34a" : "#ea580c"} fontWeight="600">{icici}</text>
       </g>
     ))}
-    <text x="36" y="298" fontSize="11" fill="var(--text-muted)">Data compiled from issuer Most Important Terms (MIT) documents. Always verify with your card's current MITC.</text>
+    <text x="36" y="298" fontSize="10" fill="var(--text-muted)">Data compiled from issuer Most Important Terms (MIT) documents. Always verify with your card's current MITC.</text>
   </svg>
 );
 
 const SvgMinimumTransactionBar = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Minimum transaction thresholds for reward earning on Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 212" role="img" aria-label="Minimum transaction thresholds for reward earning on Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Minimum Transaction to Earn Rewards (₹)</text>
     {[
@@ -117,12 +117,12 @@ const SvgMilestoneTrap = () => (
     <text x="609" y="108" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Gap to bridge</text>
     <text x="609" y="130" textAnchor="middle" fontSize="26" fontWeight="800" fill="#dc2626">4x</text>
     <text x="609" y="152" textAnchor="middle" fontSize="11" fill="var(--text-muted)">more than most people spend</text>
-    <text x="36" y="200" fontSize="12" fill="var(--text-muted)">Source: RBI Payment System Report 2025, Assure Fintech estimates. Milestone thresholds: HDFC Regalia Gold, Axis Magnus, ICICI Sapphiro.</text>
+    <text x="36" y="200" fontSize="8" fill="var(--text-muted)">Source: RBI Payment System Report 2025, Assure Fintech estimates. Milestone thresholds: HDFC Regalia Gold, Axis Magnus, ICICI Sapphiro.</text>
   </svg>
 );
 
 const SvgRewardReversalFlow = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="How reward reversal works when you return a purchase" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 184" role="img" aria-label="How reward reversal works when you return a purchase" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">The Reward Reversal Trap — Step by Step</text>
     {[
@@ -138,12 +138,12 @@ const SvgRewardReversalFlow = () => (
         {i < 3 && <text x={x + 158} y="92" fontSize="18" fill="var(--text-muted)">→</text>}
       </g>
     ))}
-    <text x="36" y="160" fontSize="12" fill="var(--text-muted)">The refund and reversal happen but any foreign currency conversion fee or processing charge may stay. Always confirm in writing.</text>
+    <text x="36" y="160" fontSize="8" fill="var(--text-muted)">The refund and reversal happen but any foreign currency conversion fee or processing charge may stay. Always confirm in writing.</text>
   </svg>
 );
 
 const SvgGSTOnInterest = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="How GST compounds on top of credit card interest in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 208" role="img" aria-label="How GST compounds on top of credit card interest in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">GST Stacks on Top of Interest — Most People Miss This</text>
     <text x="36" y="58" fontSize="13" fill="var(--text-muted)">Outstanding balance: ₹50,000 | 30 days revolving</text>
@@ -158,13 +158,13 @@ const SvgGSTOnInterest = () => (
     <rect x="508" y="74" width="196" height="52" rx="6" fill="#dc2626" opacity="0.15" />
     <text x="606" y="100" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Total charge</text>
     <text x="606" y="118" textAnchor="middle" fontSize="18" fontWeight="800" fill="#dc2626">₹2,065</text>
-    <text x="36" y="164" fontSize="12" fill="var(--text-muted)">Your statement shows interest separately from GST — banks are required to itemize both, but the combined hit is 41.3% annualised on a revolving balance.</text>
+    <text x="36" y="164" fontSize="7" fill="var(--text-muted)">Your statement shows interest separately from GST — banks are required to itemize both, but the combined hit is 41.3% annualised on a revolving balance.</text>
     <text x="36" y="184" fontSize="11" fill="var(--text-muted)">RBI Master Direction on Credit Cards, 2022 requires GST to be disclosed separately on each statement.</text>
   </svg>
 );
 
 const SvgAnnualisedCostComparison = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Annualised cost comparison of cash advance versus other borrowing options in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 242" role="img" aria-label="Annualised cost comparison of cash advance versus other borrowing options in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">True Annualised Cost — Cash Advance vs Other Credit Options</text>
     {[
@@ -185,7 +185,7 @@ const SvgAnnualisedCostComparison = () => (
 );
 
 const SvgSpendCategories = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Which card spend categories typically earn no rewards in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 210" role="img" aria-label="Which card spend categories typically earn no rewards in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Categories That Often Earn Zero Rewards (Read Your MITC)</text>
     {[
@@ -202,7 +202,7 @@ const SvgSpendCategories = () => (
         <text x="66" y={62 + i * 20} fontSize="12" fill="var(--text)">{label}</text>
       </g>
     ))}
-    <text x="36" y="186" fontSize="11" fill="var(--text-muted)">Orange = card-dependent. Some premium cards allow rent or EMI rewards — check the current MITC before assuming.</text>
+    <text x="36" y="186" fontSize="10" fill="var(--text-muted)">Orange = card-dependent. Some premium cards allow rent or EMI rewards — check the current MITC before assuming.</text>
   </svg>
 );
 

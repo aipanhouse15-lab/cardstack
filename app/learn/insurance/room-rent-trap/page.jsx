@@ -22,7 +22,7 @@ const COLOR = "#e11d48";
 const UPDATED = "June 4, 2026";
 
 const SvgProportionateDeduction = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Room rent trap proportionate deduction calculation showing how choosing a room that costs 3000 per day when policy limit is 2000 per day results in 33 percent deduction on entire hospital bill not just room charges" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 294" role="img" aria-label="Room rent trap proportionate deduction calculation showing how choosing a room that costs 3000 per day when policy limit is 2000 per day results in 33 percent deduction on entire hospital bill not just room charges" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW PROPORTIONATE DEDUCTION WORKS · THE TRAP MOST POLICYHOLDERS NEVER ANTICIPATE</text>
     <rect x="20" y="40" width="680" height="50" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="4" />
     <text x="30" y="60" fontFamily="system-ui" fontSize="12" fill="var(--text)">Policy Room Rent Limit: <tspan fontWeight="700">1% of Sum Insured per day</tspan> = ₹2,000/day on ₹2L policy</text>
@@ -42,12 +42,12 @@ const SvgProportionateDeduction = () => (
     <text x="540" y="199" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Medicines paid: ₹53,360</text>
     <text x="540" y="216" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Etc., all cut by 33%</text>
     <rect x="180" y="258" width="360" height="15" fill="#dc2626" rx="4" />
-    <text x="360" y="270" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#fff">Meera pays ₹1,65,000 out of pocket. Not because her policy was inadequate — because of the room she chose.</text>
+    <text x="360" y="270" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#fff">Meera pays ₹1,65,000 out of pocket. Not because her policy was inadequate — because of the room she chose.</text>
   </svg>
 );
 
 const SvgInsurerComparison = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Comparison of room rent limit policies across major health insurers showing which have no room rent limits and which restrict to 1 percent or fixed daily amounts" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 239" role="img" aria-label="Comparison of room rent limit policies across major health insurers showing which have no room rent limits and which restrict to 1 percent or fixed daily amounts" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ROOM RENT LIMIT COMPARISON · MAJOR HEALTH INSURERS · JUNE 2026</text>
     {[{ h: "Insurer" }, { h: "Room Rent Limit" }, { h: "ICU Limit" }, { h: "Verdict" }].map(({ h }, i) => {
       const xs = [20, 180, 360, 520];
@@ -71,12 +71,12 @@ const SvgInsurerComparison = () => (
         })}
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Data from policy wordings as of June 2026. Always read your specific plan's room rent clause in the policy document — not the brochure, not the agent's verbal summary.</text>
+    <text x="20" y="215" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Data from policy wordings as of June 2026. Always read your specific plan's room rent clause in the policy document — not the brochure, not the agent's verbal summary.</text>
   </svg>
 );
 
 const SvgBillComponent = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Hospital bill components showing which charges are proportionately reduced when room rent limit is breached including surgery fees doctor fees medicines and tests" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 239" role="img" aria-label="Hospital bill components showing which charges are proportionately reduced when room rent limit is breached including surgery fees doctor fees medicines and tests" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHICH CHARGES GET PROPORTIONATELY CUT WHEN ROOM RENT LIMIT IS BREACHED</text>
     {[
       { item: "Surgeon / specialist fees", cut: "YES", reason: "Doctor charges are tied to room category in hospital tariff" },
@@ -95,12 +95,12 @@ const SvgBillComponent = () => (
         <text x="440" y={51 + i * 26} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{reason}</text>
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Almost everything except blood and implants is proportionately reduced. The room rent limit doesn't just cap room charges — it reduces the insurer's liability across the entire bill.</text>
+    <text x="20" y="215" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Almost everything except blood and implants is proportionately reduced. The room rent limit doesn't just cap room charges — it reduces the insurer's liability across the entire bill.</text>
   </svg>
 );
 
 const SvgRoomUpgradeImpact = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Impact of room upgrade on health insurance payout showing that choosing a 4000 rupees per day room when limit is 2000 rupees cuts payout on a 5 lakh bill by 50 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 219" role="img" aria-label="Impact of room upgrade on health insurance payout showing that choosing a 4000 rupees per day room when limit is 2000 rupees cuts payout on a 5 lakh bill by 50 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ROOM CHOICE vs INSURANCE PAYOUT · ₹5L BILL · POLICY SI: ₹2L · LIMIT 1% = ₹2,000/DAY</text>
     {[
       { room: "General Ward (₹800/day)", ratio: "100%", payout: "₹5,00,000", color: "#16a34a" },
@@ -115,12 +115,12 @@ const SvgRoomUpgradeImpact = () => (
         <text x={226 + parseInt(ratio) * 3.8} y={53 + i * 30} fontFamily="system-ui" fontSize="12" fontWeight="700" fill={color}>{payout} ({ratio} paid)</text>
       </g>
     ))}
-    <text x="20" y="195" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Choosing the ₹5,000/day suite room cuts your insurance payout by 60%. Your out-of-pocket goes from zero to ₹3L. One room choice. Three lakh rupees difference.</text>
+    <text x="20" y="195" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Choosing the ₹5,000/day suite room cuts your insurance payout by 60%. Your out-of-pocket goes from zero to ₹3L. One room choice. Three lakh rupees difference.</text>
   </svg>
 );
 
 const SvgHowToAvoid = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="Three step guide to avoid room rent trap by checking policy limit before admission choosing appropriate room or getting insurer approval for upgrade" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 199" role="img" aria-label="Three step guide to avoid room rent trap by checking policy limit before admission choosing appropriate room or getting insurer approval for upgrade" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW TO AVOID THE ROOM RENT TRAP: 3-STEP PROTOCOL</text>
     {[
       { step: "1. Before buying policy", action: "Check policy wording for 'Room Rent' clause. 'No room rent sub-limit' = safe. '1% of SI/day' = danger zone.", color: COLOR },
@@ -133,7 +133,7 @@ const SvgHowToAvoid = () => (
         <text x="30" y={72 + i * 44} fontFamily="system-ui" fontSize="12" fill="var(--text)">{action}</text>
       </g>
     ))}
-    <text x="20" y="175" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Emergency admissions: if you're admitted to ICU due to emergency, the proportionate deduction rule is typically waived. Document the emergency admission clearly in your claim paperwork.</text>
+    <text x="20" y="175" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Emergency admissions: if you're admitted to ICU due to emergency, the proportionate deduction rule is typically waived. Document the emergency admission clearly in your claim paperwork.</text>
   </svg>
 );
 

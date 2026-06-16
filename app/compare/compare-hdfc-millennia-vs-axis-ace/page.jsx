@@ -48,7 +48,7 @@ const SvgEffectiveRate = () => (
 );
 
 const SvgFeeMath = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Annual fee and welcome benefit comparison between HDFC Millennia and Axis Ace showing year one and year two economics" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 224" role="img" aria-label="Annual fee and welcome benefit comparison between HDFC Millennia and Axis Ace showing year one and year two economics" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">YEAR 1 VS YEAR 2 FEE ECONOMICS · ₹40K MONTHLY SPEND</text>
     {[
       { name: "Millennia · Year 1", fee: -1000, welcome: 1000, cashback: 12000, net: 12000, w: 400 },

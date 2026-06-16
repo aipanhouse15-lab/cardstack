@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 function AirtelDevaluationTimeline() {
   return (
     <svg
-      viewBox="0 0 680 200"
+      viewBox="0 0 680 204"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Timeline of Axis Airtel card devaluation showing grocery reward removed in April 2026"
@@ -87,7 +87,7 @@ function BigBasketProblemDiagram() {
 function OnlineVsOfflineGroceryChart() {
   return (
     <svg
-      viewBox="0 0 680 220"
+      viewBox="0 0 680 232"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Comparison of cashback rates on online grocery apps versus offline supermarkets across major credit cards"

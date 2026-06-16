@@ -40,7 +40,7 @@ const SvgUseCase = () => (
 );
 
 const SvgFeeFreedom = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Lifetime fee economics comparison showing total fees paid over 5 years on SBI Cashback versus Amazon Pay ICICI assuming year 2 onwards waiver hits or fails" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 208" role="img" aria-label="Lifetime fee economics comparison showing total fees paid over 5 years on SBI Cashback versus Amazon Pay ICICI assuming year 2 onwards waiver hits or fails" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">5-YEAR LIFETIME FEE OUTLAY · ASSUMING WAIVER PATTERN</text>
     {[
       { name: "SBI Cashback · waiver hit Yr 2-5", fee: 999, w: 200 },

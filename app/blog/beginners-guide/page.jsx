@@ -128,7 +128,7 @@ const SvgGoldenRules = () => (
 );
 
 const SvgCibilImpact = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="Chart showing how responsible credit card use improves CIBIL score over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 192" role="img" aria-label="Chart showing how responsible credit card use improves CIBIL score over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">CIBIL Score Growth: Responsible Card Use Over 12 Months</text>
     {/* Score line */}

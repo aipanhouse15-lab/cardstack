@@ -85,7 +85,7 @@ const SvgBankComplexityTrend = () => (
 );
 
 const SvgSmartSwipeHow = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="How Smart Swipe works: spend input to cap-adjusted card recommendation" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 246" role="img" aria-label="How Smart Swipe works: spend input to cap-adjusted card recommendation" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Smart Swipe: How It Works</text>
     {[
@@ -154,7 +154,7 @@ const SvgInputGuide = () => (
 );
 
 const SvgRewardCapExposed = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="How AI tools expose hidden reward caps that banks do not advertise" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 174" role="img" aria-label="How AI tools expose hidden reward caps that banks do not advertise" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">The Cap Trap AI Now Exposes</text>
     <text x="24" y="50" fontSize="11" fill="var(--text-muted)">HDFC Millennia advertises "5% cashback on Amazon"</text>

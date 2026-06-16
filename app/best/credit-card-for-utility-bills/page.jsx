@@ -32,7 +32,7 @@ function UtilityRewardRateComparison() {
   ];
   return (
     <svg
-      viewBox="0 0 680 260"
+      viewBox="0 0 680 282"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Bar chart comparing reward rates on utility bill payments across major Indian credit cards"
@@ -68,7 +68,7 @@ function UtilityRewardRateComparison() {
 function MDRExplainerDiagram() {
   return (
     <svg
-      viewBox="0 0 680 200"
+      viewBox="0 0 680 211"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Diagram explaining why MDR economics make utility bill rewards rare in India"
@@ -92,7 +92,7 @@ function MDRExplainerDiagram() {
       <text x="340" y="148" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Axis ACE subsidizes utility rewards from revenue on other categories (food delivery, general spend).</text>
       <text x="340" y="165" textAnchor="middle" fontSize="11" fill="var(--text-muted)">This is why most banks silently cap, reduce, or exclude utility rewards.</text>
       <rect x="60" y="175" width="560" height="18" rx="4" fill={COLOR} opacity="0.07" />
-      <text x="340" y="187" textAnchor="middle" fontSize="10" fill={COLOR} fontWeight="600">Axis ACE is structurally unique: it is the only card that still offers 5% on eligible utility MCCs as of June 2026.</text>
+      <text x="340" y="187" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="600">Axis ACE is structurally unique: it is the only card that still offers 5% on eligible utility MCCs as of June 2026.</text>
     </svg>
   );
 }
@@ -107,7 +107,7 @@ function BBPSVsDirectPaymentTable() {
   ];
   return (
     <svg
-      viewBox="0 0 680 260"
+      viewBox="0 0 680 276"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Table comparing reward earning methods for utility bill payment in India"
@@ -136,7 +136,7 @@ function BBPSVsDirectPaymentTable() {
 function MonthlyCapMathTable() {
   return (
     <svg
-      viewBox="0 0 680 220"
+      viewBox="0 0 680 236"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Table showing Axis ACE cashback earned at different monthly utility spending levels"
@@ -170,7 +170,7 @@ function MonthlyCapMathTable() {
 function UtilityStackDiagram() {
   return (
     <svg
-      viewBox="0 0 680 200"
+      viewBox="0 0 680 214"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Diagram showing recommended two-card stack for maximizing utility and online spending rewards"

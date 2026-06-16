@@ -22,7 +22,7 @@ const COLOR = "#7c3aed";
 const UPDATED = "June 4, 2026";
 
 const SvgStudentCards = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Best credit cards for students and young adults in India 2026 showing HDFC Millennia SBI Student Plus ICICI Coral and Amazon Pay ICICI with their key features and typical approval difficulty" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 259" role="img" aria-label="Best credit cards for students and young adults in India 2026 showing HDFC Millennia SBI Student Plus ICICI Coral and Amazon Pay ICICI with their key features and typical approval difficulty" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">BEST FIRST CREDIT CARDS FOR STUDENTS · JUNE 2026</text>
     {[{ h: "Card" }, { h: "Annual Fee" }, { h: "Best Feature" }, { h: "Approval" }, { h: "Key Benefit" }].map(({ h }, i) => {
       const xs = [20, 180, 290, 480, 560];
@@ -45,12 +45,12 @@ const SvgStudentCards = () => (
         })}
       </g>
     ))}
-    <text x="20" y="235" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Amazon Pay ICICI is the single best first card for students: free forever, 5% on Amazon (where students spend heavily), and easy approval even with thin credit files.</text>
+    <text x="20" y="235" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Amazon Pay ICICI is the single best first card for students: free forever, 5% on Amazon (where students spend heavily), and easy approval even with thin credit files.</text>
   </svg>
 );
 
 const SvgCIBILBuilding = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="How using a credit card responsibly builds CIBIL score over 12 months showing the gradual score improvement from using and paying credit card bills on time" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 199" role="img" aria-label="How using a credit card responsibly builds CIBIL score over 12 months showing the gradual score improvement from using and paying credit card bills on time" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW A FIRST CREDIT CARD BUILDS YOUR CIBIL SCORE · TYPICAL TRAJECTORY</text>
     <line x1="60" y1="140" x2="700" y2="140" stroke="var(--border)" />
     {[{ mo: "Start", score: 0, x: 60 }, { mo: "Mo 3", score: 650, x: 160 }, { mo: "Mo 6", score: 680, x: 280 }, { mo: "Mo 9", score: 710, x: 400 }, { mo: "Mo 12", score: 730, x: 520 }, { mo: "Yr 2", score: 760, x: 640 }].map(({ mo, score, x }) => (
@@ -61,12 +61,12 @@ const SvgCIBILBuilding = () => (
       </g>
     ))}
     <path d="M 60 138 L 160 92 L 280 64 L 400 48 L 520 36 L 640 20" fill="none" stroke={COLOR} strokeWidth="2" strokeDasharray="4,2" />
-    <text x="20" y="175" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Conditions for this trajectory: (1) Use card every month, (2) Pay FULL statement balance by due date, (3) Keep utilisation under 30% of limit. Miss any condition and the score building stalls or reverses.</text>
+    <text x="20" y="175" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Conditions for this trajectory: (1) Use card every month, (2) Pay FULL statement balance by due date, (3) Keep utilisation under 30% of limit. Miss any condition and the score building stalls or reverses.</text>
   </svg>
 );
 
 const SvgStudentSpendSplit = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="Typical college student monthly spending breakdown showing high spend on food delivery and online shopping categories that match Amazon Pay ICICI card benefits" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 199" role="img" aria-label="Typical college student monthly spending breakdown showing high spend on food delivery and online shopping categories that match Amazon Pay ICICI card benefits" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">TYPICAL STUDENT MONTHLY SPEND SPLIT · ₹8,000/MONTH BUDGET</text>
     {[
       { cat: "Food (Swiggy/Zomato/mess)", amt: 2500, pct: "31%", col: "#f97316" },
@@ -81,24 +81,24 @@ const SvgStudentSpendSplit = () => (
         <text x={286 + amt / 8} y={47 + i * 28} fontFamily="system-ui" fontSize="11" fontWeight="600" fill={col}>₹{amt} ({pct})</text>
       </g>
     ))}
-    <text x="20" y="175" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Amazon Pay ICICI covers ₹2,000 of Amazon spend at 5% = ₹100/month. Axis Ace covers ₹2,500 of Swiggy/Zomato spend at 5% = ₹125/month (within ₹500 cap). Using both: ₹225/month on ₹8K budget = 2.8% effective.</text>
+    <text x="20" y="175" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Amazon Pay ICICI covers ₹2,000 of Amazon spend at 5% = ₹100/month. Axis Ace covers ₹2,500 of Swiggy/Zomato spend at 5% = ₹125/month (within ₹500 cap). Using both: ₹225/month on ₹8K budget = 2.8% effective.</text>
   </svg>
 );
 
 const SvgFDBackedCard = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="Fixed deposit backed credit card explanation showing how students with no income can get a credit card by placing a fixed deposit as security at ICICI Axis or SBI" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 174" role="img" aria-label="Fixed deposit backed credit card explanation showing how students with no income can get a credit card by placing a fixed deposit as security at ICICI Axis or SBI" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">FD-BACKED CREDIT CARD: THE GUARANTEED APPROVAL PATH</text>
     <rect x="20" y="35" width="680" height="105" fill="var(--surface, #f0fdf4)" stroke="#16a34a" strokeWidth="1" rx="8" />
-    <text x="30" y="56" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#16a34a">How it works: Place ₹10,000–₹50,000 FD at the bank. Get a credit card with 80-90% of FD value as limit.</text>
-    <text x="30" y="76" fontFamily="system-ui" fontSize="12" fill="var(--text)">The FD earns 6-7% interest. The card earns cashback/rewards. You're building credit history with zero risk to the bank — hence guaranteed approval.</text>
-    <text x="30" y="96" fontFamily="system-ui" fontSize="12" fill="var(--text)">Available at: ICICI Bank (iMobile), SBI (branch), Axis Bank (online). Process: open FD online, apply for card against it, card issued within 7-10 days.</text>
-    <text x="30" y="116" fontFamily="system-ui" fontSize="12" fontWeight="600" fill="#16a34a">After 12-18 months of good behaviour: upgrade to a regular credit card with the same bank. FD released, limit potentially increased.</text>
-    <text x="20" y="150" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Best for: Students with no income proof, self-employed with no ITR, NRIs building India credit history. The 6-7% FD interest partially offsets any nominal card fee.</text>
+    <text x="30" y="56" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#16a34a">How it works: Place ₹10,000–₹50,000 FD at the bank. Get a credit card with 80-90% of FD value as limit.</text>
+    <text x="30" y="76" fontFamily="system-ui" fontSize="7" fill="var(--text)">The FD earns 6-7% interest. The card earns cashback/rewards. You're building credit history with zero risk to the bank — hence guaranteed approval.</text>
+    <text x="30" y="96" fontFamily="system-ui" fontSize="7" fill="var(--text)">Available at: ICICI Bank (iMobile), SBI (branch), Axis Bank (online). Process: open FD online, apply for card against it, card issued within 7-10 days.</text>
+    <text x="30" y="116" fontFamily="system-ui" fontSize="8" fontWeight="600" fill="#16a34a">After 12-18 months of good behaviour: upgrade to a regular credit card with the same bank. FD released, limit potentially increased.</text>
+    <text x="20" y="150" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Best for: Students with no income proof, self-employed with no ITR, NRIs building India credit history. The 6-7% FD interest partially offsets any nominal card fee.</text>
   </svg>
 );
 
 const SvgFirstCardMistakes = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="Common first credit card mistakes made by students in India including paying minimum due only and exceeding 50 percent credit utilization" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 199" role="img" aria-label="Common first credit card mistakes made by students in India including paying minimum due only and exceeding 50 percent credit utilization" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">5 MISTAKES STUDENTS MAKE WITH THEIR FIRST CREDIT CARD</text>
     {[
       { mistake: "Paying minimum due only", impact: "36-42% annual interest on revolving balance — destroys all cashback earned", col: "#dc2626" },
@@ -113,7 +113,7 @@ const SvgFirstCardMistakes = () => (
         <text x="220" y={50 + i * 28} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{impact}</text>
       </g>
     ))}
-    <text x="20" y="175" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">The single most important rule: set up auto-pay for FULL statement balance (not minimum due, not fixed amount). FULL. This one habit prevents all of the above mistakes automatically.</text>
+    <text x="20" y="175" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">The single most important rule: set up auto-pay for FULL statement balance (not minimum due, not fixed amount). FULL. This one habit prevents all of the above mistakes automatically.</text>
   </svg>
 );
 

@@ -58,7 +58,7 @@ const SvgDiningRates = () => (
 );
 
 const SvgMonthlyEarningsTable = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Table showing monthly dining earnings on ₹8000 spend across 5 cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 296" role="img" aria-label="Table showing monthly dining earnings on ₹8000 spend across 5 cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="280" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">₹8,000/month dining spend: What you actually earn</text>
     {/* Header row */}

@@ -22,7 +22,7 @@ const COLOR = "#e11d48";
 const UPDATED = "June 4, 2026";
 
 const SvgInflationErosion = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Value of 1 crore rupees in future years after 6 percent inflation showing it becomes equivalent to only 17 lakh rupees in todays money after 30 years" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 276" role="img" aria-label="Value of 1 crore rupees in future years after 6 percent inflation showing it becomes equivalent to only 17 lakh rupees in todays money after 30 years" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHAT ₹1 CRORE COVER IS REALLY WORTH · 6% ANNUAL INFLATION ASSUMPTION</text>
     <line x1="60" y1="220" x2="700" y2="220" stroke="var(--border)" />
     <line x1="60" y1="40" x2="60" y2="220" stroke="var(--border)" />
@@ -33,12 +33,12 @@ const SvgInflationErosion = () => (
         <text x={x} y="235" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{yr}</text>
       </g>
     ))}
-    <text x="20" y="252" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">₹1 Crore feels like a lot today. At 6% inflation, its purchasing power is ₹17.4L in 30 years. A 30-year-old buying ₹1Cr cover today is leaving their family with ₹17L equivalent at age 60. Not enough.</text>
+    <text x="20" y="252" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">₹1 Crore feels like a lot today. At 6% inflation, its purchasing power is ₹17.4L in 30 years. A 30-year-old buying ₹1Cr cover today is leaving their family with ₹17L equivalent at age 60. Not enough.</text>
   </svg>
 );
 
 const SvgCoverageFormula = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Life cover calculation formula showing income replacement method recommending 15 to 20 times annual income with worked example" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 207" role="img" aria-label="Life cover calculation formula showing income replacement method recommending 15 to 20 times annual income with worked example" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW MUCH COVER DO YOU ACTUALLY NEED? · INCOME REPLACEMENT METHOD</text>
     <rect x="20" y="38" width="680" height="60" fill="var(--surface, #fef2f2)" stroke={COLOR} strokeWidth="1.5" rx="8" />
     <text x="360" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="700" fill={COLOR}>Sum Assured = (Annual Income × 15-20) + All Outstanding Loans + Future Goals</text>
@@ -52,7 +52,7 @@ const SvgCoverageFormula = () => (
 );
 
 const SvgPremiumComparison = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Annual premium comparison for 1 crore term insurance for 30 year old non-smoker male across LIC HDFC Life ICICI Pru Max Life and Tata AIA" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 279" role="img" aria-label="Annual premium comparison for 1 crore term insurance for 30 year old non-smoker male across LIC HDFC Life ICICI Pru Max Life and Tata AIA" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ANNUAL PREMIUM · ₹1CR TERM COVER · 30-YEAR-OLD MALE NON-SMOKER · 30-YEAR TENURE · JUNE 2026</text>
     {[
       { insurer: "Tata AIA", premium: 9800, color: "#16a34a" },
@@ -68,12 +68,12 @@ const SvgPremiumComparison = () => (
         {i === 4 && <text x={128 + premium / 50} y={79 + i * 42} fontFamily="system-ui" fontSize="10" fill="#f97316">₹6,000 more/yr than cheapest = ₹1.8L extra over 30 years</text>}
       </g>
     ))}
-    <text x="20" y="255" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Online plans are 30-40% cheaper than offline. Always buy online directly from insurer website, not through agent, to save on commission loading. LIC premium via offline agent can be ₹18,000+.</text>
+    <text x="20" y="255" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Online plans are 30-40% cheaper than offline. Always buy online directly from insurer website, not through agent, to save on commission loading. LIC premium via offline agent can be ₹18,000+.</text>
   </svg>
 );
 
 const SvgRiderMatrix = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Term insurance rider value matrix showing which riders are worth buying including waiver of premium and critical illness but not accidental death benefit" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 237" role="img" aria-label="Term insurance rider value matrix showing which riders are worth buying including waiver of premium and critical illness but not accidental death benefit" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">RIDERS: WORTH IT OR NOT? · HONEST ASSESSMENT</text>
     {[
       { rider: "Waiver of Premium (disability)", verdict: "WORTH IT", cost: "+₹300-600/yr", reason: "If disabled, future premiums waived. Policy stays active. Small cost, big protection.", color: "#16a34a" },
@@ -90,12 +90,12 @@ const SvgRiderMatrix = () => (
         <text x="390" y={68 + i * 44} fontFamily="system-ui" fontSize="10" fill="var(--text)">{reason.slice(0, 55)}</text>
       </g>
     ))}
-    <text x="20" y="213" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Keep riders simple. Waiver of premium is universally worth it. For everything else, a separate standalone policy usually gives better value than a bundled rider.</text>
+    <text x="20" y="213" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Keep riders simple. Waiver of premium is universally worth it. For everything else, a separate standalone policy usually gives better value than a bundled rider.</text>
   </svg>
 );
 
 const SvgULIPvsTerm = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="ULIP versus pure term insurance total cost comparison over 20 years showing that buying term plus investing separately creates significantly more wealth" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 242" role="img" aria-label="ULIP versus pure term insurance total cost comparison over 20 years showing that buying term plus investing separately creates significantly more wealth" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ULIP vs TERM + INVEST · ₹1CR COVER · 30-YEAR-OLD · 20-YEAR HORIZON</text>
     <rect x="20" y="38" width="320" height="140" fill="#dc2626" rx="8" opacity="0.25" stroke="#dc2626" strokeWidth="1" />
     <text x="180" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#dc2626">ULIP (₹1CR cover)</text>
@@ -112,12 +112,12 @@ const SvgULIPvsTerm = () => (
     <text x="540" y="138" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">Net invested in fund: ~₹13.96L</text>
     <text x="540" y="158" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="#16a34a">Approx fund value: ₹65-80L</text>
     <rect x="180" y="198" width="360" height="30" fill={COLOR} rx="4" />
-    <text x="360" y="218" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#fff">Term + Invest creates ₹25-35L more wealth for same outgo. Always separate insurance from investment.</text>
+    <text x="360" y="218" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#fff">Term + Invest creates ₹25-35L more wealth for same outgo. Always separate insurance from investment.</text>
   </svg>
 );
 
 const SvgLifeStageCoverage = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Life stage coverage needs guide showing how much term insurance you need at different ages from 25 to 55 based on income dependents and loans" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 219" role="img" aria-label="Life stage coverage needs guide showing how much term insurance you need at different ages from 25 to 55 based on income dependents and loans" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">COVERAGE BY LIFE STAGE · ROUGH GUIDE FOR SALARIED INDIANS</text>
     {[
       { age: "25-30", cover: "15-20× income", note: "No dependents yet? Still buy — cheapest premiums of your life. Lock in now.", color: "#16a34a" },
@@ -134,7 +134,7 @@ const SvgLifeStageCoverage = () => (
         <text x="272" y={59 + i * 38} fontFamily="system-ui" fontSize="11" fill="var(--text)">{note}</text>
       </g>
     ))}
-    <text x="20" y="195" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Income here = in-hand annual salary. If self-employed, use 5× net profit as proxy. Include spouse's income in family need calculation.</text>
+    <text x="20" y="195" fontFamily="system-ui" fontSize="8" fill="var(--text-muted)">Income here = in-hand annual salary. If self-employed, use 5× net profit as proxy. Include spouse's income in family need calculation.</text>
   </svg>
 );
 

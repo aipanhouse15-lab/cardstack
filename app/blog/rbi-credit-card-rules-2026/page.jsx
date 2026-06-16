@@ -14,7 +14,7 @@ const COLOR = "#7C3AED";
 const UPDATED = "June 3, 2026";
 
 const SvgTimeline = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Timeline of major RBI credit card rule changes from 2022 master direction through 2025 amendments" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 224" role="img" aria-label="Timeline of major RBI credit card rule changes from 2022 master direction through 2025 amendments" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">RBI CREDIT CARD RULES · TIMELINE 2022 TO 2025</text>
     <line x1="40" y1="120" x2="700" y2="120" stroke="var(--border)" strokeWidth="2" />
 

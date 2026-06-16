@@ -492,4 +492,4 @@ main p { margin: 0 0 12px; }
 main p:last-child { margin-bottom: 0; }
 main h2 { margin: 0 0 12px; }
 main h3 { margin: 14px 0 8px; }
-main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; border-radius: 12px; padding: 10px; box-sizing: border-box; }
+main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; border-radius: 12px; margin: 14px 0; }

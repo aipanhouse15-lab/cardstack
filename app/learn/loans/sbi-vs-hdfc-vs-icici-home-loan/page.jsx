@@ -26,7 +26,7 @@ const HDFC = "#004c8f";
 const ICICI = "#f97316";
 
 const SvgRateComparison = () => (
-  <svg viewBox="0 0 720 300" role="img" aria-label="Home loan interest rate comparison between SBI HDFC Bank and ICICI Bank as of June 2026 for 750 plus CIBIL salaried applicant showing advertised versus effective rates" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 317" role="img" aria-label="Home loan interest rate comparison between SBI HDFC Bank and ICICI Bank as of June 2026 for 750 plus CIBIL salaried applicant showing advertised versus effective rates" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">RATE COMPARISON · HOME LOAN · JUNE 2026 · ₹50L / 20 YEARS / SALARIED / 775 CIBIL</text>
     {[
       { bank: "SBI", advRate: "8.50%", effRate: "9.20%", advH: 140, effH: 185, color: SBI },
@@ -64,13 +64,13 @@ const SvgTotalCost20yr = () => (
       </g>
     ))}
     <rect x="120" y="220" width="680" height="36" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="4" />
-    <text x="130" y="237" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#dc2626">SBI saves ₹1.7L over HDFC on total 20-year cost. But 15–25 day processing vs HDFC's 3–5 days. Pick based on your timeline urgency.</text>
-    <text x="130" y="252" fontFamily="system-ui" fontSize="12" fill="#dc2626">ICICI is a good middle ground — cheaper than HDFC, faster than SBI. Especially competitive for existing ICICI account holders.</text>
+    <text x="130" y="237" fontFamily="system-ui" fontSize="8" fontWeight="700" fill="#dc2626">SBI saves ₹1.7L over HDFC on total 20-year cost. But 15–25 day processing vs HDFC's 3–5 days. Pick based on your timeline urgency.</text>
+    <text x="130" y="252" fontFamily="system-ui" fontSize="8" fill="#dc2626">ICICI is a good middle ground — cheaper than HDFC, faster than SBI. Especially competitive for existing ICICI account holders.</text>
   </svg>
 );
 
 const SvgProcessingTime = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Home loan processing time comparison between SBI HDFC and ICICI showing SBI takes 15 to 25 days while HDFC and ICICI take 3 to 7 days" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 231" role="img" aria-label="Home loan processing time comparison between SBI HDFC and ICICI showing SBI takes 15 to 25 days while HDFC and ICICI take 3 to 7 days" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">PROCESSING TIME: WHEN DO YOU ACTUALLY GET THE MONEY?</text>
     <text x="20" y="55" fontFamily="system-ui" fontSize="12" fill="var(--text)">SBI</text>
     <rect x="100" y="40" width="380" height="28" fill={SBI} rx="4" opacity="0.8" />
@@ -82,13 +82,13 @@ const SvgProcessingTime = () => (
     <rect x="100" y="140" width="200" height="28" fill={ICICI} rx="4" opacity="0.8" />
     <text x="310" y="159" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={ICICI}>5–7 business days</text>
     <rect x="20" y="180" width="680" height="30" fill="var(--surface, #f0f9ff)" stroke={COLOR} strokeWidth="1" rx="4" />
-    <text x="30" y="194" fontFamily="system-ui" fontSize="12" fill={COLOR} fontWeight="600">If you need money in under 10 days: SBI is ruled out. If you have 3-4 weeks and want to save ₹1.7L over 20 years: SBI is the call.</text>
-    <text x="30" y="207" fontFamily="system-ui" fontSize="12" fill={COLOR}>Builder deadlines and possession timelines often can't wait for SBI. Factor this into your bank choice.</text>
+    <text x="30" y="194" fontFamily="system-ui" fontSize="8" fill={COLOR} fontWeight="600">If you need money in under 10 days: SBI is ruled out. If you have 3-4 weeks and want to save ₹1.7L over 20 years: SBI is the call.</text>
+    <text x="30" y="207" fontFamily="system-ui" fontSize="11" fill={COLOR}>Builder deadlines and possession timelines often can't wait for SBI. Factor this into your bank choice.</text>
   </svg>
 );
 
 const SvgFeatureMatrix = () => (
-  <svg viewBox="0 0 720 300" role="img" aria-label="Feature comparison matrix between SBI HDFC and ICICI home loans covering rates fees processing insurance balance transfer and digital experience" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 319" role="img" aria-label="Feature comparison matrix between SBI HDFC and ICICI home loans covering rates fees processing insurance balance transfer and digital experience" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">FEATURE MATRIX · THE HONEST COMPARISON</text>
     {[{ h: "Feature" }, { h: "SBI" }, { h: "HDFC Bank" }, { h: "ICICI Bank" }].map(({ h }, i) => (
       <rect key={h} x={[20, 200, 360, 520][i]} y="35" width={[170, 150, 150, 180][i]} height="26" fill={[COLOR, SBI, HDFC, ICICI][i]} rx="0">
@@ -114,12 +114,12 @@ const SvgFeatureMatrix = () => (
         })}
       </g>
     ))}
-    <text x="20" y="295" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Green = borrower-friendly. Red = watch out. ICICI and HDFC score better on digital/pre-approved offers. SBI wins on rate and insurance practices.</text>
+    <text x="20" y="295" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Green = borrower-friendly. Red = watch out. ICICI and HDFC score better on digital/pre-approved offers. SBI wins on rate and insurance practices.</text>
   </svg>
 );
 
 const SvgBorrowerProfile = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Which bank is best for different borrower profiles including first time buyers high cibil score self employed tight timeline and balance transfer" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 279" role="img" aria-label="Which bank is best for different borrower profiles including first time buyers high cibil score self employed tight timeline and balance transfer" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHO SHOULD PICK WHICH BANK</text>
     {[
       { profile: "CIBIL 800+ salaried, no rush", winner: "SBI", reason: "Lowest rate + no insurance pressure = maximum savings over 20 years", color: SBI },
@@ -137,12 +137,12 @@ const SvgBorrowerProfile = () => (
         <text x="400" y={58 + i * 36} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{reason}</text>
       </g>
     ))}
-    <text x="20" y="255" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">No single bank is universally best. Your profile, timeline, and relationship with the bank matter more than the headline rate difference of 0.25%.</text>
+    <text x="20" y="255" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">No single bank is universally best. Your profile, timeline, and relationship with the bank matter more than the headline rate difference of 0.25%.</text>
   </svg>
 );
 
 const SvgHiddenCostBreakdown = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Hidden cost breakdown per bank showing processing fee insurance and other charges for SBI HDFC and ICICI on a 50 lakh home loan" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 274" role="img" aria-label="Hidden cost breakdown per bank showing processing fee insurance and other charges for SBI HDFC and ICICI on a 50 lakh home loan" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">UPFRONT HIDDEN COSTS · ₹50L HOME LOAN · BEYOND THE INTEREST RATE</text>
     {[
       { bank: "SBI", items: [["Processing fee", "₹17,500 (0.35%)"], ["Insurance (optional, rarely pushed)", "₹0–25,000"], ["Valuation fee", "₹5,000"], ["Total upfront extra", "₹22,500–42,500"]], color: SBI },
@@ -160,23 +160,23 @@ const SvgHiddenCostBreakdown = () => (
         ))}
       </g>
     ))}
-    <text x="20" y="250" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">HDFC's total upfront cost can be ₹37,500–57,500 more than SBI. Over 20 years, SBI saves more. But negotiate insurance with all banks — it is optional under IRDAI rules.</text>
+    <text x="20" y="250" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">HDFC's total upfront cost can be ₹37,500–57,500 more than SBI. Over 20 years, SBI saves more. But negotiate insurance with all banks — it is optional under IRDAI rules.</text>
   </svg>
 );
 
 const SvgNegotiationScripts = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Negotiation script guide for getting lower rates and waived fees from SBI HDFC and ICICI home loan teams" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 237" role="img" aria-label="Negotiation script guide for getting lower rates and waived fees from SBI HDFC and ICICI home loan teams" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHAT TO ACTUALLY SAY TO GET A BETTER DEAL</text>
     <rect x="20" y="38" width="680" height="46" fill="var(--surface, #f0f9ff)" stroke={SBI} strokeWidth="1" rx="4" />
     <text x="30" y="55" fontFamily="system-ui" fontSize="11" fontWeight="700" fill={SBI}>At SBI:</text>
-    <text x="30" y="71" fontFamily="system-ui" fontSize="12" fill="var(--text)">"I have my salary account here for 5 years and CIBIL of 790. HDFC offered me 8.75% with ₹5,000 processing. Can you match or beat that?"</text>
+    <text x="30" y="71" fontFamily="system-ui" fontSize="8" fill="var(--text)">"I have my salary account here for 5 years and CIBIL of 790. HDFC offered me 8.75% with ₹5,000 processing. Can you match or beat that?"</text>
     <rect x="20" y="94" width="680" height="46" fill="var(--surface, #f0f9ff)" stroke={HDFC} strokeWidth="1" rx="4" />
     <text x="30" y="111" fontFamily="system-ui" fontSize="11" fontWeight="700" fill={HDFC}>At HDFC:</text>
-    <text x="30" y="127" fontFamily="system-ui" fontSize="12" fill="var(--text)">"SBI pre-approved me at 8.50% with ₹10,000 processing. I prefer HDFC for the speed. Can you reduce the processing fee and match 8.60%?"</text>
+    <text x="30" y="127" fontFamily="system-ui" fontSize="8" fill="var(--text)">"SBI pre-approved me at 8.50% with ₹10,000 processing. I prefer HDFC for the speed. Can you reduce the processing fee and match 8.60%?"</text>
     <rect x="20" y="150" width="680" height="46" fill="var(--surface, #fff7ed)" stroke={ICICI} strokeWidth="1" rx="4" />
     <text x="30" y="167" fontFamily="system-ui" fontSize="11" fontWeight="700" fill={ICICI}>At ICICI:</text>
-    <text x="30" y="183" fontFamily="system-ui" fontSize="12" fill="var(--text)">"Check my iMobile app — I think I have a pre-approved offer. Let's use that rate. And I want to confirm: zero insurance add-on, just the loan."</text>
-    <text x="20" y="213" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Always get competing quotes in writing before negotiating. A printed or screenshot offer from another bank is your strongest negotiation card.</text>
+    <text x="30" y="183" fontFamily="system-ui" fontSize="7" fill="var(--text)">"Check my iMobile app — I think I have a pre-approved offer. Let's use that rate. And I want to confirm: zero insurance add-on, just the loan."</text>
+    <text x="20" y="213" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Always get competing quotes in writing before negotiating. A printed or screenshot offer from another bank is your strongest negotiation card.</text>
   </svg>
 );
 

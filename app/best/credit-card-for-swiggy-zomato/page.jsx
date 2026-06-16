@@ -30,7 +30,7 @@ function CapMathChart() {
   const maxVal = 1500;
   return (
     <svg
-      viewBox="0 0 680 320"
+      viewBox="0 0 680 325"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Monthly cashback earned on food delivery at different spend levels across three cards"
@@ -171,7 +171,7 @@ function MCCInfoDiagram() {
 function AirtelDevaluationAlert() {
   return (
     <svg
-      viewBox="0 0 680 120"
+      viewBox="0 0 680 130"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Alert: Axis Airtel card devalued in April 2026, dining and grocery removed from 10 percent category"

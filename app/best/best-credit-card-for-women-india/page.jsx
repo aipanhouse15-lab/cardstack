@@ -28,7 +28,7 @@ const IconSpark = () => (
 );
 
 const IconShopping = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Online shopping spend category">
+  <svg width="28" height="28" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Online shopping spend category">
     <rect x="5" y="10" width="18" height="14" rx="2" fill="var(--raise)" stroke={COLOR} strokeWidth="1.8"/>
     <path d="M10 10V8C10 5.8 11.8 4 14 4C16.2 4 18 5.8 18 8V10" fill="none" stroke={COLOR} strokeWidth="1.8" strokeLinecap="round"/>
     <circle cx="10.5" cy="16" r="1.5" fill={COLOR} opacity="0.6"/>
@@ -37,21 +37,21 @@ const IconShopping = () => (
 );
 
 const IconFood = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Food and dining spend category">
+  <svg width="28" height="28" viewBox="0 0 28 38" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Food and dining spend category">
     <path d="M8 4V24M8 4C8 4 5 8 5 13H11C11 8 8 4 8 4Z" fill={COLOR} opacity="0.2" stroke={COLOR} strokeWidth="1.5" strokeLinecap="round"/>
     <path d="M20 4V10M20 10C18.3 10 17 11.3 17 13V24M20 10C21.7 10 23 11.3 23 13V24" fill="none" stroke={COLOR} strokeWidth="1.5" strokeLinecap="round"/>
   </svg>
 );
 
 const IconCheck = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit included in card">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit included in card">
     <circle cx="9" cy="9" r="8" fill={COLOR} opacity="0.12"/>
     <path d="M5 9.5L8 12L13 6" stroke={COLOR} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const IconCaution = () => (
-  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marketing gimmick caution">
+  <svg width="22" height="22" viewBox="0 0 22 39" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Marketing gimmick caution">
     <path d="M11 2L21 19H1L11 2Z" fill="#fdf2f8" stroke={COLOR} strokeWidth="1.8"/>
     <rect x="10" y="8" width="2" height="5" rx="1" fill={COLOR}/>
     <rect x="10" y="15" width="2" height="2" rx="1" fill={COLOR}/>
@@ -59,7 +59,7 @@ const IconCaution = () => (
 );
 
 const IconStar = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top recommended card">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top recommended card">
     <polygon points="9,1.5 11,7 17,7 12,11 14,17 9,13.5 4,17 6,11 1,7 7,7" fill={COLOR}/>
   </svg>
 );

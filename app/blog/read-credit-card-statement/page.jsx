@@ -50,7 +50,7 @@ const SvgStatementAnatomy = () => (
 );
 
 const SvgDatesExplained = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="Credit card date timeline: statement date, payment due date, and interest-free period" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 194" role="img" aria-label="Credit card date timeline: statement date, payment due date, and interest-free period" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Confusing Date Trinity, Explained on One Timeline</text>
     <line x1="40" y1="90" x2="680" y2="90" stroke="var(--border)" strokeWidth="2" />
@@ -74,7 +74,7 @@ const SvgDatesExplained = () => (
 );
 
 const SvgMinDueTrap = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Minimum amount due trap: total cost of only paying minimum on a 50000 rupee balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 234" role="img" aria-label="Minimum amount due trap: total cost of only paying minimum on a 50000 rupee balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Minimum Due Trap: ₹50,000 Balance at 3.5%/Month</text>
     <text x="360" y="44" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Paying only ₹2,500 minimum each month (5% of balance)</text>
@@ -119,7 +119,7 @@ const SvgRewardPointsDecoder = () => (
 );
 
 const SvgEmiBreakdown = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Credit card EMI breakdown on statement showing principal, interest, and remaining balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 212" role="img" aria-label="Credit card EMI breakdown on statement showing principal, interest, and remaining balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">How an EMI Conversion Appears on Your Statement</text>
     <text x="360" y="44" textAnchor="middle" fontSize="11" fill="var(--text-muted)">₹30,000 converted to 6-month EMI at 13% p.a. (no-cost EMI: 0%)</text>

@@ -21,7 +21,7 @@ const COLOR = "#7c3aed";
 const UPDATED = "June 4, 2026";
 
 const IconEMI = () => (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EMI credit card icon">
+  <svg width="48" height="48" viewBox="0 0 48 59" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EMI credit card icon">
     <rect x="4" y="10" width="40" height="28" rx="5" fill={COLOR} opacity="0.12" stroke={COLOR} strokeWidth="2"/>
     <rect x="4" y="18" width="40" height="6" fill={COLOR} opacity="0.18"/>
     <circle cx="34" cy="32" r="3" fill={COLOR}/>
@@ -31,7 +31,7 @@ const IconEMI = () => (
 );
 
 const IconWarning = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warning: hidden cost">
+  <svg width="28" height="28" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warning: hidden cost">
     <path d="M14 3L26 24H2L14 3Z" fill="#fef3c7" stroke="#d97706" strokeWidth="2"/>
     <rect x="13" y="11" width="2" height="7" rx="1" fill="#d97706"/>
     <rect x="13" y="20" width="2" height="2" rx="1" fill="#d97706"/>
@@ -39,7 +39,7 @@ const IconWarning = () => (
 );
 
 const IconCalendar = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Monthly EMI calendar">
+  <svg width="28" height="28" viewBox="0 0 28 46" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Monthly EMI calendar">
     <rect x="3" y="5" width="22" height="20" rx="3" fill="var(--raise)" stroke="var(--hair)" strokeWidth="2"/>
     <rect x="3" y="10" width="22" height="3" fill={COLOR} opacity="0.2"/>
     <rect x="8" y="3" width="2" height="5" rx="1" fill={COLOR}/>
@@ -49,27 +49,27 @@ const IconCalendar = () => (
 );
 
 const IconRupee = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rupee cost indicator">
+  <svg width="28" height="28" viewBox="0 0 28 43" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rupee cost indicator">
     <circle cx="14" cy="14" r="12" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5"/>
     <text x="9" y="19" fontSize="13" fill={COLOR} fontWeight="700">₹</text>
   </svg>
 );
 
 const IconStar = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top pick star">
+  <svg width="20" height="20" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top pick star">
     <polygon points="10,2 12.5,7.5 18.5,8 14,12.5 15.5,18.5 10,15.5 4.5,18.5 6,12.5 1.5,8 7.5,7.5" fill={COLOR} opacity="0.85"/>
   </svg>
 );
 
 const IconCheck = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit included">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit included">
     <circle cx="9" cy="9" r="8" fill={COLOR} opacity="0.15"/>
     <path d="M5 9.5L8 12.5L13 6.5" stroke={COLOR} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const IconInfo = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Information note">
+  <svg width="20" height="20" viewBox="0 0 20 33" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Information note">
     <circle cx="10" cy="10" r="9" fill="var(--raise)" stroke={COLOR} strokeWidth="1.5"/>
     <rect x="9" y="9" width="2" height="5" rx="1" fill={COLOR}/>
     <rect x="9" y="5.5" width="2" height="2" rx="1" fill={COLOR}/>

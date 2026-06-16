@@ -30,7 +30,7 @@ const IconGlobe = () => (
 );
 
 const IconRupeeArrow = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forex markup rupee loss">
+  <svg width="28" height="28" viewBox="0 0 28 38" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Forex markup rupee loss">
     <circle cx="14" cy="14" r="12" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5"/>
     <path d="M10 8H18M10 12H14C16.2 12 18 13.8 18 16C18 18.2 16.2 20 14 20H10" stroke={COLOR} strokeWidth="1.8" strokeLinecap="round"/>
     <path d="M10 16H16" stroke={COLOR} strokeWidth="1.8" strokeLinecap="round"/>
@@ -38,14 +38,14 @@ const IconRupeeArrow = () => (
 );
 
 const IconCheck = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zero forex confirmed">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zero forex confirmed">
     <circle cx="9" cy="9" r="8" fill={COLOR} opacity="0.12"/>
     <path d="M5 9.5L8 12L13 6" stroke={COLOR} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const IconCross = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Has forex markup">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Has forex markup">
     <circle cx="9" cy="9" r="8" fill="#fee2e2" opacity="0.6"/>
     <path d="M6 6L12 12M12 6L6 12" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
   </svg>
@@ -62,7 +62,7 @@ const IconATM = () => (
 );
 
 const IconWarn = () => (
-  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DCC warning">
+  <svg width="22" height="22" viewBox="0 0 22 39" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DCC warning">
     <path d="M11 2L21 19H1L11 2Z" fill="#fff7ed" stroke="#f97316" strokeWidth="1.8"/>
     <rect x="10" y="8" width="2" height="5" rx="1" fill="var(--raise)"/>
     <rect x="10" y="15" width="2" height="2" rx="1" fill="var(--raise)"/>
@@ -70,7 +70,7 @@ const IconWarn = () => (
 );
 
 const IconStar = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top pick indicator">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top pick indicator">
     <polygon points="9,1.5 11,7 17,7 12,11 14,17 9,13.5 4,17 6,11 1,7 7,7" fill={COLOR}/>
   </svg>
 );

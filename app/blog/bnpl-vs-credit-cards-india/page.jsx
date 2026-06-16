@@ -120,7 +120,7 @@ const SvgHiddenCharges = () => (
 );
 
 const SvgCibilImpact = () => (
-  <svg viewBox="0 0 720 170" role="img" aria-label="Credit bureau reporting comparison between BNPL and credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 178" role="img" aria-label="Credit bureau reporting comparison between BNPL and credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">CIBIL Score Impact: Where BNPL Fails You Long-Term</text>
     <rect x="20" y="38" width="320" height="116" rx="8" fill="var(--raise)" />

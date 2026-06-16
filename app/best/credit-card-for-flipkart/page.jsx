@@ -63,7 +63,7 @@ function CapComparisonBars() {
   const maxVal = 5000;
   return (
     <svg
-      viewBox="0 0 680 300"
+      viewBox="0 0 680 307"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Monthly cashback earned on Flipkart at different spend levels comparing Axis Flipkart, SuperCoin card, and SBI Cashback"
@@ -140,7 +140,7 @@ function BaseRateAdvantageChart() {
   ];
   return (
     <svg
-      viewBox="0 0 680 240"
+      viewBox="0 0 680 250"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Base rate comparison on non-Flipkart categories showing Axis Flipkart 1.5 percent advantage over zero base on SBI Cashback"

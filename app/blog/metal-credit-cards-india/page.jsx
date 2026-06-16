@@ -22,7 +22,7 @@ const COLOR = "#374151";
 const UPDATED = "June 4, 2026";
 
 const SvgMetalVsPlastic = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Side-by-side comparison of metal and plastic credit cards in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 209" role="img" aria-label="Side-by-side comparison of metal and plastic credit cards in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <rect x="40" y="40" width="270" height="130" rx="12" fill={COLOR} opacity="0.85" />
     <text x="175" y="90" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--raise)">METAL</text>
@@ -61,7 +61,7 @@ const SvgCardFeeComparison = () => (
 );
 
 const SvgAmexBreakeven = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Break-even calculation for Amex Platinum Charge card at Rs 60000 annual fee" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 260" role="img" aria-label="Break-even calculation for Amex Platinum Charge card at Rs 60000 annual fee" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Amex Platinum &#8377;60,000 Fee: Break-Even Math</text>
     {[
@@ -149,7 +149,7 @@ const SvgWhenMetalIsWorth = () => (
 );
 
 const SvgReplacementTime = () => (
-  <svg viewBox="0 0 720 140" role="img" aria-label="Credit card replacement timelines: metal cards take 7-10 days vs 3-5 for plastic" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 160" role="img" aria-label="Credit card replacement timelines: metal cards take 7-10 days vs 3-5 for plastic" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="140" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Card Replacement: The Hidden Downside of Metal</text>
     <text x="24" y="52" fontSize="11" fill="var(--text-muted)">Plastic card (HDFC Regalia, Axis Ace, etc.)</text>

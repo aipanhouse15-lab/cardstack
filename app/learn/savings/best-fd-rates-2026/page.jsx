@@ -14,7 +14,7 @@ const COLOR = "#D97706";
 const UPDATED = "June 3, 2026";
 
 const SvgLeaderboard = () => (
-  <svg viewBox="0 0 720 380" role="img" aria-label="April 2026 fixed deposit rate leaderboard ranked by 3-year senior citizen rate across small finance banks NBFCs and major banks" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 392" role="img" aria-label="April 2026 fixed deposit rate leaderboard ranked by 3-year senior citizen rate across small finance banks NBFCs and major banks" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">APRIL 2026 · TOP 10 BANKS BY 3-YEAR SENIOR FD RATE · DICGC NOTES</text>
     {[
       { rank: 1, name: "Unity SFB", general: 9.00, senior: 9.50, type: "SFB · DICGC ₹5L", barW: 304 },
@@ -41,7 +41,7 @@ const SvgLeaderboard = () => (
 );
 
 const SvgRepoCurve = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="RBI repo rate trajectory from December 2024 to April 2026 with consensus forecast through end 2026" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 282" role="img" aria-label="RBI repo rate trajectory from December 2024 to April 2026 with consensus forecast through end 2026" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">RBI REPO RATE · DEC 2024 TO APR 2026 · CONSENSUS FORECAST DASHED</text>
     <line x1="60" y1="240" x2="700" y2="240" stroke="var(--border)" />
     <line x1="60" y1="50" x2="60" y2="240" stroke="var(--border)" />
@@ -66,7 +66,7 @@ const SvgRepoCurve = () => (
 );
 
 const SvgLadderStrategy = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Four-rung FD ladder strategy distributing ₹20 lakh across one two three and five year tenures" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 290" role="img" aria-label="Four-rung FD ladder strategy distributing ₹20 lakh across one two three and five year tenures" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">FD LADDER · ₹20 LAKH SPREAD ACROSS FOUR TENURES · CYCLE-RESILIENT</text>
     {[
       { tenure: "1 year", amt: "₹5L", rate: "7.10%", w: 158, c: "#fef3c7", note: "Rolls every Apr · re-prices to current market" },
@@ -89,7 +89,7 @@ const SvgLadderStrategy = () => (
 );
 
 const SvgPostTaxWaterfall = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Post-tax effective yield waterfall on ₹10 lakh FD at 8.5 percent showing how slab rate TDS and 80TTB carve into the headline rate" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 282" role="img" aria-label="Post-tax effective yield waterfall on ₹10 lakh FD at 8.5 percent showing how slab rate TDS and 80TTB carve into the headline rate" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">POST-TAX REAL YIELD · ₹10L FD AT 8.50% · 30% SLAB · 5-YR TENURE</text>
     <line x1="80" y1="240" x2="700" y2="240" stroke="var(--border)" />
 

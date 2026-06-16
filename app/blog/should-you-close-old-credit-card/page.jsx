@@ -22,7 +22,7 @@ const COLOR = "#dc2626";
 const UPDATED = "June 4, 2026";
 
 const SvgCibilImpact = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="CIBIL score impact of closing an old credit card: score can drop 30 to 60 points" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 236" role="img" aria-label="CIBIL score impact of closing an old credit card: score can drop 30 to 60 points" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">What Closing One Old Card Does to Your CIBIL Score</text>
     <rect x="30" y="44" width="300" height="155" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
@@ -41,12 +41,12 @@ const SvgCibilImpact = () => (
     <text x="540" y="150" textAnchor="middle" fontSize="12" fill="var(--text)">Recovery time: 6-18 months</text>
     <text x="540" y="168" textAnchor="middle" fontSize="12" fill="var(--text)">Loan impact: real and measurable</text>
     <text x="540" y="186" textAnchor="middle" fontSize="12" fill="var(--text)">Home loan rate: could go up 0.25-0.5%</text>
-    <text x="360" y="212" textAnchor="middle" fontSize="10" fill="var(--text-muted)">The older the card, the higher the hit. A 10-year-old card closure can drop scores more than 60 points in some profiles.</text>
+    <text x="360" y="212" textAnchor="middle" fontSize="9" fill="var(--text-muted)">The older the card, the higher the hit. A 10-year-old card closure can drop scores more than 60 points in some profiles.</text>
   </svg>
 );
 
 const SvgCreditAgeExplainer = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="How credit age is calculated and why old cards matter for your CIBIL score" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 196" role="img" aria-label="How credit age is calculated and why old cards matter for your CIBIL score" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Credit Age: How CIBIL Calculates It (And Why Old Cards Are Gold)</text>
     <text x="30" y="58" fontSize="11" fontWeight="700" fill="var(--text-muted)">CARD</text>
@@ -72,12 +72,12 @@ const SvgCreditAgeExplainer = () => (
     <text x="300" y="148" fontSize="11" fill="var(--text)">₹50,000</text>
     <text x="420" y="148" fontSize="11" fill="var(--text)">Rarely used</text>
     <text x="560" y="148" fontSize="11" fontWeight="700" fill="#16a34a">Safest to close.</text>
-    <text x="360" y="172" textAnchor="middle" fontSize="10" fill="var(--text-muted)">CIBIL uses average age of all open accounts. Closing the oldest card is the single most damaging action to your credit age.</text>
+    <text x="360" y="172" textAnchor="middle" fontSize="9" fill="var(--text-muted)">CIBIL uses average age of all open accounts. Closing the oldest card is the single most damaging action to your credit age.</text>
   </svg>
 );
 
 const SvgUtilisationSpike = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Credit utilisation ratio spike after closing a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 214" role="img" aria-label="Credit utilisation ratio spike after closing a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Utilisation Spike: The Second Hit You Do Not See Coming</text>
     <text x="180" y="56" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Before Closing Old Card</text>
@@ -94,12 +94,12 @@ const SvgUtilisationSpike = () => (
     <text x="540" y="138" textAnchor="middle" fontSize="11" fill="var(--text-muted)">utilisation (hurts score)</text>
     <rect x="440" y="152" width="200" height="22" rx="4" fill={COLOR} opacity="0.15" />
     <rect x="440" y="152" width="50" height="22" rx="4" fill={COLOR} opacity="0.6" />
-    <text x="360" y="190" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Same ₹75,000 outstanding. Different utilisation. Closing a high-limit old card is a double penalty: lower credit age AND higher utilisation ratio.</text>
+    <text x="360" y="190" textAnchor="middle" fontSize="7" fill="var(--text-muted)">Same ₹75,000 outstanding. Different utilisation. Closing a high-limit old card is a double penalty: lower credit age AND higher utilisation ratio.</text>
   </svg>
 );
 
 const SvgHomeLoanInterest = () => (
-  <svg viewBox="0 0 720 190" role="img" aria-label="Effect of CIBIL score drop on home loan interest rate in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 198" role="img" aria-label="Effect of CIBIL score drop on home loan interest rate in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">CIBIL Drop vs Home Loan Rate: The Real Cost of Closing a Card</text>
     <text x="30" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">CIBIL RANGE</text>
@@ -182,7 +182,7 @@ const SvgClosingOrder = () => (
 );
 
 const SvgDecisionTree = () => (
-  <svg viewBox="0 0 720 320" role="img" aria-label="Decision tree: should you close your old credit card?" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 334" role="img" aria-label="Decision tree: should you close your old credit card?" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="320" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Should You Close That Old Card? Decision Tree</text>
     <rect x="255" y="42" width="210" height="40" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />

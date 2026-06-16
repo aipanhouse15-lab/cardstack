@@ -22,7 +22,7 @@ const COLOR = "#7c3aed";
 const UPDATED = "June 4, 2026";
 
 const SvgCAGRvsXIRR = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="CAGR versus XIRR comparison showing that a fund with 18 percent CAGR can give only 11 percent XIRR to a SIP investor depending on when each installment was invested and how the market moved" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 282" role="img" aria-label="CAGR versus XIRR comparison showing that a fund with 18 percent CAGR can give only 11 percent XIRR to a SIP investor depending on when each installment was invested and how the market moved" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">CAGR vs XIRR: THE SAME FUND, TWO VERY DIFFERENT RETURNS · ₹10,000 SIP · 5 YEARS</text>
     <rect x="20" y="40" width="320" height="160" fill={COLOR} rx="8" opacity="0.22" stroke={COLOR} strokeWidth="1" />
     <text x="180" y="65" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>FUND BROCHURE SAYS: 18% CAGR</text>
@@ -40,14 +40,14 @@ const SvgCAGRvsXIRR = () => (
     <text x="540" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="800" fill="#dc2626">11% XIRR (actual)</text>
     <text x="540" y="168" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Each SIP installment has different</text>
     <text x="540" y="184" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">time in market — avg is less than 5yr.</text>
-    <text x="20" y="220" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="var(--text)">Why the gap? Fund CAGR measures point-to-point performance on a lump sum. Your SIP had later installments with less time to grow.</text>
-    <text x="20" y="240" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">SIP installment in Month 1: 60 months to grow. SIP installment in Month 48: only 12 months to grow. Most of your invested corpus has much less than 5 years in market.</text>
-    <text x="20" y="258" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Correct metric for SIP returns: XIRR (Extended Internal Rate of Return). This accounts for the timing of each cash flow. Always demand XIRR from your platform — not CAGR.</text>
+    <text x="20" y="220" fontFamily="system-ui" fontSize="8" fontWeight="700" fill="var(--text)">Why the gap? Fund CAGR measures point-to-point performance on a lump sum. Your SIP had later installments with less time to grow.</text>
+    <text x="20" y="240" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">SIP installment in Month 1: 60 months to grow. SIP installment in Month 48: only 12 months to grow. Most of your invested corpus has much less than 5 years in market.</text>
+    <text x="20" y="258" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Correct metric for SIP returns: XIRR (Extended Internal Rate of Return). This accounts for the timing of each cash flow. Always demand XIRR from your platform — not CAGR.</text>
   </svg>
 );
 
 const SvgSequenceOfReturns = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Sequence of returns risk showing two funds with identical 10 percent CAGR but different sequences producing very different actual wealth outcomes for SIP investors" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 286" role="img" aria-label="Sequence of returns risk showing two funds with identical 10 percent CAGR but different sequences producing very different actual wealth outcomes for SIP investors" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">SAME CAGR, DIFFERENT ACTUAL WEALTH · THE SEQUENCE OF RETURNS PROBLEM</text>
     <text x="20" y="40" fontFamily="system-ui" fontSize="12" fill="var(--text)">Two imaginary funds. Both exactly 10% CAGR over 5 years. But you invested ₹10,000/month via SIP.</text>
     <rect x="20" y="54" width="320" height="160" fill="#16a34a" rx="8" opacity="0.22" stroke="#16a34a" strokeWidth="1" />
@@ -64,16 +64,16 @@ const SvgSequenceOfReturns = () => (
     <text x="390" y="210" fontFamily="system-ui" fontSize="11" fill="#dc2626">CAGR: ~10% | SIP Final Value: ₹7.1L</text>
     <rect x="180" y="230" width="360" height="24" fill={COLOR} rx="4" opacity="0.9" />
     <text x="360" y="246" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#fff">Identical CAGR. ₹1.1L difference in actual SIP corpus.</text>
-    <text x="20" y="262" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Good early returns allow more units to accumulate at higher NAV before later dips. SIP investors actually benefit from early market weakness — they accumulate more units cheaply.</text>
+    <text x="20" y="262" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Good early returns allow more units to accumulate at higher NAV before later dips. SIP investors actually benefit from early market weakness — they accumulate more units cheaply.</text>
   </svg>
 );
 
 const SvgCherryPickedWindows = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="How mutual fund companies cherry-pick performance windows showing how a fund can show 25 percent 3-year return or 8 percent 5-year return for the same fund depending on start date" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 239" role="img" aria-label="How mutual fund companies cherry-pick performance windows showing how a fund can show 25 percent 3-year return or 8 percent 5-year return for the same fund depending on start date" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW FUND HOUSES CHERRY-PICK PERFORMANCE WINDOWS · SAME FUND, DIFFERENT STORY</text>
     <rect x="20" y="38" width="680" height="160" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="8" />
     <text x="30" y="60" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text)">Example: Mirae Asset Large Cap Fund (hypothetical)</text>
-    <text x="30" y="80" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">NAV trend (simplified): Jan 2019 = 100 → Jan 2021 = 80 (COVID crash) → Jan 2024 = 200 → Jan 2026 = 215</text>
+    <text x="30" y="80" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">NAV trend (simplified): Jan 2019 = 100 → Jan 2021 = 80 (COVID crash) → Jan 2024 = 200 → Jan 2026 = 215</text>
     {[
       { window: "3-year return (Jan 2021 to Jan 2024)", cagr: "35.7%", note: "Starts at COVID low — looks spectacular", color: "#16a34a" },
       { window: "5-year return (Jan 2019 to Jan 2024)", cagr: "14.9%", note: "More realistic, includes pre-COVID base", color: COLOR },
@@ -87,12 +87,12 @@ const SvgCherryPickedWindows = () => (
         <text x="400" y={101 + i * 24} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{note}</text>
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Always look at 10-year and 15-year CAGR alongside 3-year. Also check rolling returns (average of all 3-year windows in the past decade) — a more honest picture of consistent performance.</text>
+    <text x="20" y="215" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Always look at 10-year and 15-year CAGR alongside 3-year. Also check rolling returns (average of all 3-year windows in the past decade) — a more honest picture of consistent performance.</text>
   </svg>
 );
 
 const SvgXIRRCalculation = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="How to calculate XIRR for your mutual fund SIP showing the three inputs needed and where to find them in your Zerodha or Groww account" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 199" role="img" aria-label="How to calculate XIRR for your mutual fund SIP showing the three inputs needed and where to find them in your Zerodha or Groww account" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW TO CALCULATE YOUR ACTUAL XIRR IN 3 STEPS</text>
     {[
       { step: "1. Download your transaction statement", detail: "CAMS or KFintech (free). Covers all folios linked to your PAN. Download as Excel/CSV.", color: COLOR },
@@ -105,12 +105,12 @@ const SvgXIRRCalculation = () => (
         <text x="30" y={70 + i * 44} fontFamily="system-ui" fontSize="11" fill="var(--text)">{detail}</text>
       </g>
     ))}
-    <text x="20" y="175" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Most modern platforms (Zerodha Coin, Kuvera, Groww) show XIRR directly in your portfolio. Look for "returns" in your dashboard — if it shows "absolute" or "CAGR" without clarifying SIP timing, ask for XIRR explicitly.</text>
+    <text x="20" y="175" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Most modern platforms (Zerodha Coin, Kuvera, Groww) show XIRR directly in your portfolio. Look for "returns" in your dashboard — if it shows "absolute" or "CAGR" without clarifying SIP timing, ask for XIRR explicitly.</text>
   </svg>
 );
 
 const SvgRollingReturns = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Rolling 3 year returns for Nifty 50 index showing that the average of all 3 year periods since 2005 is around 11 percent even though some periods gave negative returns" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 219" role="img" aria-label="Rolling 3 year returns for Nifty 50 index showing that the average of all 3 year periods since 2005 is around 11 percent even though some periods gave negative returns" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">NIFTY 50: ROLLING 3-YEAR RETURNS 2005-2026 · THE HONEST PICTURE</text>
     <line x1="60" y1="160" x2="700" y2="160" stroke="var(--border)" />
     <line x1="60" y1="40" x2="60" y2="160" stroke="var(--border)" />
@@ -137,7 +137,7 @@ const SvgRollingReturns = () => (
     })}
     <path d="M 60 100 L 700 100" stroke={COLOR} strokeWidth="2" strokeDasharray="6,3" />
     <text x="660" y="96" fontFamily="system-ui" fontSize="10" fill={COLOR} fontWeight="700">avg ~11%</text>
-    <text x="20" y="195" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">One 3-year window showed -8% (2006-09 financial crisis). Eight of nine windows showed positive returns. Long-term average is ~11% CAGR for Nifty 50. Cherry-picking any single window tells a different story.</text>
+    <text x="20" y="195" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">One 3-year window showed -8% (2006-09 financial crisis). Eight of nine windows showed positive returns. Long-term average is ~11% CAGR for Nifty 50. Cherry-picking any single window tells a different story.</text>
   </svg>
 );
 

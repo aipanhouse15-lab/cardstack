@@ -22,7 +22,7 @@ const COLOR = "#16a34a";
 const UPDATED = "June 4, 2026";
 
 const SvgHRAFormula = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="HRA exemption formula showing it is minimum of three values: actual HRA received, 50 percent of basic plus DA for metro or 40 percent for non-metro, and actual rent paid minus 10 percent of basic plus DA" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 247" role="img" aria-label="HRA exemption formula showing it is minimum of three values: actual HRA received, 50 percent of basic plus DA for metro or 40 percent for non-metro, and actual rent paid minus 10 percent of basic plus DA" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HRA EXEMPTION = MINIMUM OF THESE 3 VALUES (Old Regime Only)</text>
     {[
       { label: "A) Actual HRA received from employer", formula: "From your salary slip", color: COLOR },
@@ -41,7 +41,7 @@ const SvgHRAFormula = () => (
 );
 
 const SvgCityExamples = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="HRA calculation examples for Rahul in Mumbai Priya in Hyderabad and Amit in Pune showing step by step calculation with different basic salaries and rent amounts" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 299" role="img" aria-label="HRA calculation examples for Rahul in Mumbai Priya in Hyderabad and Amit in Pune showing step by step calculation with different basic salaries and rent amounts" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WORKED EXAMPLES · THREE CITIES · FY 2025-26</text>
     {[
       {
@@ -74,12 +74,12 @@ const SvgCityExamples = () => (
         <text x="30" y={98 + i * 78} fontFamily="system-ui" fontSize="11" fontWeight="700" fill={color}>Exempt: {exempt} · Tax saved (30%): {tax30}</text>
       </g>
     ))}
-    <text x="20" y="275" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Rahul and Priya's exempt HRA is limited by component C (rent - 10% of basic). This is why paying more rent (within reason) increases HRA exemption. But only if rent receipts are documented.</text>
+    <text x="20" y="275" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Rahul and Priya's exempt HRA is limited by component C (rent - 10% of basic). This is why paying more rent (within reason) increases HRA exemption. But only if rent receipts are documented.</text>
   </svg>
 );
 
 const SvgDocumentation = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="HRA documentation requirements showing rent receipts PAN of landlord if rent above 1 lakh and rental agreement required to claim HRA exemption" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 218" role="img" aria-label="HRA documentation requirements showing rent receipts PAN of landlord if rent above 1 lakh and rental agreement required to claim HRA exemption" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">DOCUMENTATION REQUIRED FOR HRA CLAIM · WHAT YOUR EMPLOYER NEEDS</text>
     {[
       { doc: "Rent receipts", req: "Monthly (or quarterly). Landlord signature, date, amount, property address. Revenue stamp if cash.", status: "REQUIRED", color: COLOR },
@@ -96,25 +96,25 @@ const SvgDocumentation = () => (
         <text x="330" y={52 + i * 32} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{req.slice(0, 70)}</text>
       </g>
     ))}
-    <text x="20" y="194" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Always pay rent via bank transfer (NEFT/UPI). Cash payments are harder to prove in an IT assessment. Keep 3 years of rent receipts and rental agreement even after changing residence.</text>
+    <text x="20" y="194" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Always pay rent via bank transfer (NEFT/UPI). Cash payments are harder to prove in an IT assessment. Keep 3 years of rent receipts and rental agreement even after changing residence.</text>
   </svg>
 );
 
 const SvgHRAvsHomeLoan = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Comparison of claiming HRA exemption versus home loan deductions showing that both can be claimed simultaneously if you rent in one city and own property in another" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 214" role="img" aria-label="Comparison of claiming HRA exemption versus home loan deductions showing that both can be claimed simultaneously if you rent in one city and own property in another" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">CAN YOU CLAIM BOTH HRA AND HOME LOAN DEDUCTIONS?</text>
     <rect x="20" y="38" width="680" height="50" fill="var(--surface, #f0fdf4)" stroke={COLOR} strokeWidth="1.5" rx="8" />
     <text x="30" y="58" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>YES — if you rent in the city you work and own property in a different city.</text>
-    <text x="30" y="78" fontFamily="system-ui" fontSize="12" fill="var(--text)">Example: Neha owns a flat in Nagpur (rented out, no self-occupation) but lives and works in Pune on rent. She can claim HRA on Pune rent AND Section 24(b) on home loan interest of her Nagpur property.</text>
+    <text x="30" y="78" fontFamily="system-ui" fontSize="7" fill="var(--text)">Example: Neha owns a flat in Nagpur (rented out, no self-occupation) but lives and works in Pune on rent. She can claim HRA on Pune rent AND Section 24(b) on home loan interest of her Nagpur property.</text>
     <rect x="20" y="100" width="680" height="50" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="8" />
     <text x="30" y="120" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#dc2626">NOT ALLOWED — if you own property in the SAME city you're claiming HRA for.</text>
-    <text x="30" y="140" fontFamily="system-ui" fontSize="12" fill="var(--text)">Example: Owning a flat in Bangalore but renting nearby to avoid commute. The IT department can question the need for renting — you'll need to show genuine reason (under construction, occupied by parents, etc.).</text>
-    <text x="20" y="190" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Always consult a CA for the same-city situation. The IT department scrutinizes HRA + home loan combinations in the same city closely. Genuine scenarios (parental occupation, under-construction flat) are generally accepted.</text>
+    <text x="30" y="140" fontFamily="system-ui" fontSize="7" fill="var(--text)">Example: Owning a flat in Bangalore but renting nearby to avoid commute. The IT department can question the need for renting — you'll need to show genuine reason (under construction, occupied by parents, etc.).</text>
+    <text x="20" y="190" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Always consult a CA for the same-city situation. The IT department scrutinizes HRA + home loan combinations in the same city closely. Genuine scenarios (parental occupation, under-construction flat) are generally accepted.</text>
   </svg>
 );
 
 const SvgTaxSavedByCity = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Annual tax saved from HRA exemption by city for different salary and rent levels showing Mumbai saving most due to metro 50 percent formula" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 217" role="img" aria-label="Annual tax saved from HRA exemption by city for different salary and rent levels showing Mumbai saving most due to metro 50 percent formula" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ANNUAL TAX SAVING FROM HRA · 30% SLAB · BY CITY AND SALARY</text>
     {[
       { city: "Mumbai (₹60K basic, ₹28K rent)", saved: 79200, color: COLOR },
@@ -129,19 +129,19 @@ const SvgTaxSavedByCity = () => (
         <text x={308 + saved / 400} y={53 + i * 32} fontFamily="system-ui" fontSize="12" fontWeight="700" fill={color}>₹{saved.toLocaleString()}/yr</text>
       </g>
     ))}
-    <text x="20" y="193" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Metro city workers save significantly more from HRA due to the 50% formula vs 40%. This makes HRA one of the largest deductions for salaried employees in metro cities — don't leave it unclaimed.</text>
+    <text x="20" y="193" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Metro city workers save significantly more from HRA due to the 50% formula vs 40%. This makes HRA one of the largest deductions for salaried employees in metro cities — don't leave it unclaimed.</text>
   </svg>
 );
 
 const SvgRentFamilyTrap = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="Paying rent to parents to claim HRA showing rules and requirements including that parents must declare rental income and PAN is required if rent exceeds 1 lakh annually" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 176" role="img" aria-label="Paying rent to parents to claim HRA showing rules and requirements including that parents must declare rental income and PAN is required if rent exceeds 1 lakh annually" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">PAYING RENT TO PARENTS: CAN YOU CLAIM HRA? · THE RULES</text>
     <rect x="20" y="38" width="680" height="100" fill="var(--surface, #f0fdf4)" stroke={COLOR} strokeWidth="1.5" rx="8" />
     <text x="30" y="58" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>YES — paying rent to parents to claim HRA is legal and accepted by IT department.</text>
-    <text x="30" y="76" fontFamily="system-ui" fontSize="12" fill="var(--text)">Conditions: (1) Property must be in parent's name, not yours. (2) Genuine rental agreement signed. (3) Rent paid via bank transfer (not cash). (4) Parents must declare rental income in their ITR.</text>
-    <text x="30" y="94" fontFamily="system-ui" fontSize="12" fill="var(--text)">Parent's income from rent: taxable. But if parents are in nil or 5% slab, their tax on rental income is minimal or zero. The family saves net tax overall.</text>
-    <text x="30" y="112" fontFamily="system-ui" fontSize="12" fill="var(--text)">Landlord PAN required: if annual rent exceeds ₹1L. Since parents own property, they provide their PAN to you (their child tenant). This is perfectly legal — it's a bonafide landlord-tenant arrangement.</text>
-    <text x="20" y="152" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Common mistake: stopping monthly bank transfers and submitting cash receipts. Always maintain a consistent monthly payment trail. Irregular or year-end bulk payments are questioned in assessments.</text>
+    <text x="30" y="76" fontFamily="system-ui" fontSize="7" fill="var(--text)">Conditions: (1) Property must be in parent's name, not yours. (2) Genuine rental agreement signed. (3) Rent paid via bank transfer (not cash). (4) Parents must declare rental income in their ITR.</text>
+    <text x="30" y="94" fontFamily="system-ui" fontSize="7" fill="var(--text)">Parent's income from rent: taxable. But if parents are in nil or 5% slab, their tax on rental income is minimal or zero. The family saves net tax overall.</text>
+    <text x="30" y="112" fontFamily="system-ui" fontSize="7" fill="var(--text)">Landlord PAN required: if annual rent exceeds ₹1L. Since parents own property, they provide their PAN to you (their child tenant). This is perfectly legal — it's a bonafide landlord-tenant arrangement.</text>
+    <text x="20" y="152" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Common mistake: stopping monthly bank transfers and submitting cash receipts. Always maintain a consistent monthly payment trail. Irregular or year-end bulk payments are questioned in assessments.</text>
   </svg>
 );
 

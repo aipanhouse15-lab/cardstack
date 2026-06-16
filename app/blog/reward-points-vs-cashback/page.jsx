@@ -51,7 +51,7 @@ const SvgDecisionMatrix = () => (
 );
 
 const SvgAxisEdgeMathBreakdown = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Math breakdown: 10,000 Axis EDGE Miles as cash vs as airline miles" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 226" role="img" aria-label="Math breakdown: 10,000 Axis EDGE Miles as cash vs as airline miles" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">10,000 Axis EDGE Miles: cash in hand vs miles value (honest comparison)</text>
     <rect x="36" y="56" width="280" height="120" fill="#e0f2fe" rx="8" />
@@ -65,7 +65,7 @@ const SvgAxisEdgeMathBreakdown = () => (
     <text x="520" y="116" fontSize="32" fontWeight="800" fill="#a16207" textAnchor="middle" fontFamily="system-ui">₹5,000+</text>
     <text x="520" y="144" fontSize="12" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">If: seat available, you actually fly</text>
     <text x="520" y="162" fontSize="11" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">If not: possibly ₹0 (expired, unused)</text>
-    <text x="36" y="202" fontSize="11" fill="var(--text-muted)" fontFamily="system-ui">Miles value assumes IndiGo or Air India economy redemption. Assumes award seat availability at peak transfer value.</text>
+    <text x="36" y="202" fontSize="9" fill="var(--text-muted)" fontFamily="system-ui">Miles value assumes IndiGo or Air India economy redemption. Assumes award seat availability at peak transfer value.</text>
   </svg>
 );
 
@@ -91,7 +91,7 @@ const SvgHdfcVsAmazonPay = () => (
 );
 
 const SvgPointsTrap = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="The points trap: earning points you never redeem resulting in zero real value" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 210" role="img" aria-label="The points trap: earning points you never redeem resulting in zero real value" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">The Points Trap: why many Indians have unredeemed points worth nothing</text>
     <rect x="36" y="56" width="160" height="110" fill="var(--raise)" rx="6" />
@@ -166,7 +166,7 @@ const SvgPortalRisk = () => (
 );
 
 const SvgStackStrategy = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="Stack strategy: use a points card for travel and a cashback card for daily spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 194" role="img" aria-label="Stack strategy: use a points card for travel and a cashback card for daily spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">The smart play: stack a points card with a cashback card</text>
     <rect x="36" y="52" width="300" height="100" fill="#e0f2fe" rx="8" />

@@ -21,7 +21,7 @@ const COLOR = "#0891B2";
 const UPDATED = "June 6, 2026";
 
 const SvgRiskReturn = () => (
-  <svg viewBox="0 0 520 200" role="img" aria-label="5-year risk-adjusted return scatter" style={{ width: "100%" }}>
+  <svg viewBox="0 0 520 214" role="img" aria-label="5-year risk-adjusted return scatter" style={{ width: "100%" }}>
     <text x="10" y="18" fontFamily="system-ui" fontSize="11" fontWeight="600" fill="var(--text-muted)">5-YEAR ROLLING RETURN VS DRAWDOWN PROFILE</text>
     <line x1="40" y1="170" x2="510" y2="170" stroke="var(--border)" />
     <line x1="40" y1="40" x2="40" y2="170" stroke="var(--border)" />

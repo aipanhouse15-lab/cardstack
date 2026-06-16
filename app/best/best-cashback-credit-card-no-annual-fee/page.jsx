@@ -25,7 +25,7 @@ const UPDATED = "June 4, 2026";
 function FreeCardMythBuster() {
   return (
     <svg
-      viewBox="0 0 680 210"
+      viewBox="0 0 680 222"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Comparison showing free credit cards vs paid cards on annual cashback return"
@@ -53,7 +53,7 @@ function FreeCardMythBuster() {
 function AmazonPayICICIBreakdown() {
   return (
     <svg
-      viewBox="0 0 680 240"
+      viewBox="0 0 680 256"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Detailed breakdown of cashback rates for Amazon Pay ICICI credit card"
@@ -82,7 +82,7 @@ function AmazonPayICICIBreakdown() {
 function FreeCardStackDiagram() {
   return (
     <svg
-      viewBox="0 0 680 270"
+      viewBox="0 0 680 280"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Diagram showing a complete free-card stack covering all spending categories at zero annual fee"
@@ -113,7 +113,7 @@ function FreeCardStackDiagram() {
 function WhenToUpgradeChart() {
   return (
     <svg
-      viewBox="0 0 680 200"
+      viewBox="0 0 680 214"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Guide showing when upgrading from free credit cards to paid cards makes financial sense"
@@ -133,7 +133,7 @@ function WhenToUpgradeChart() {
           <text x="310" y={63 + i * 36} fontSize="10" fill={COLOR}>{r.upgrade}</text>
         </g>
       ))}
-      <text x="340" y="190" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Free cards handle 80% of urban Indian spending well. Upgrade only when a specific paid card covers a gap the free stack cannot.</text>
+      <text x="340" y="190" textAnchor="middle" fontSize="8" fill="var(--text-muted)">Free cards handle 80% of urban Indian spending well. Upgrade only when a specific paid card covers a gap the free stack cannot.</text>
     </svg>
   );
 }

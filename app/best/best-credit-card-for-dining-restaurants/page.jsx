@@ -25,7 +25,7 @@ const UPDATED = "June 4, 2026";
 function DiningVsDeliveryExplainer() {
   return (
     <svg
-      viewBox="0 0 680 200"
+      viewBox="0 0 680 204"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Diagram explaining the difference between restaurant dining and food delivery for credit card rewards"
@@ -62,7 +62,7 @@ function DiningRewardRateChart() {
   ];
   return (
     <svg
-      viewBox="0 0 680 280"
+      viewBox="0 0 680 298"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Bar chart comparing dining reward rates for major Indian credit cards at restaurants"
@@ -98,7 +98,7 @@ function DiningRewardRateChart() {
 function HighSpendDinerMathTable() {
   return (
     <svg
-      viewBox="0 0 680 260"
+      viewBox="0 0 680 274"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Table comparing annual cashback earned by high-spend restaurant diners across different credit cards"
@@ -134,7 +134,7 @@ function HighSpendDinerMathTable() {
 function WeekendDiningBonusCalc() {
   return (
     <svg
-      viewBox="0 0 680 190"
+      viewBox="0 0 680 208"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Illustration of SBI SimplySAVE weekend dining bonus and how it compares to weekday rates"

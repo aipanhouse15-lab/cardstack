@@ -69,7 +69,7 @@ const SvgWalletLimits = () => (
 );
 
 const SvgRewardsComparison = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Rewards comparison: wallets earn near zero, credit cards earn 1 to 5 percent on the same spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 256" role="img" aria-label="Rewards comparison: wallets earn near zero, credit cards earn 1 to 5 percent on the same spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Effective Reward Rate on ₹10,000 Spend</text>
     <text x="60" y="60" fontSize="12" fontWeight="600" fill="var(--text)">Paytm Wallet (direct)</text>
@@ -145,7 +145,7 @@ const SvgFraudProtection = () => (
 );
 
 const SvgRuPayUPI = () => (
-  <svg viewBox="0 0 720 170" role="img" aria-label="RuPay credit card on UPI: the best of both worlds for small transactions" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 182" role="img" aria-label="RuPay credit card on UPI: the best of both worlds for small transactions" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">RuPay Credit Card on UPI: Where It Actually Works</text>
     <rect x="30" y="44" width="200" height="100" rx="8" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" />
@@ -168,7 +168,7 @@ const SvgRuPayUPI = () => (
 );
 
 const SvgUseCaseMap = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Use case map: when to use wallet vs credit card for different spending scenarios" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 236" role="img" aria-label="Use case map: when to use wallet vs credit card for different spending scenarios" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Wallet vs Credit Card: Use-Case Verdict</text>
     <text x="30" y="54" fontSize="11" fontWeight="700" fill="var(--text-muted)">SCENARIO</text>

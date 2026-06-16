@@ -33,14 +33,14 @@ const IconMovie = () => (
 );
 
 const IconTicket = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Movie ticket icon">
+  <svg width="28" height="28" viewBox="0 0 28 42" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Movie ticket icon">
     <path d="M3 10C3 8.3 4.3 7 6 7H22C23.7 7 25 8.3 25 10V11C23.3 11 22 12.3 22 14C22 15.7 23.3 17 25 17V18C25 19.7 23.7 21 22 21H6C4.3 21 3 19.7 3 18V17C4.7 17 6 15.7 6 14C6 12.3 4.7 11 3 11V10Z" fill={COLOR} opacity="0.15" stroke={COLOR} strokeWidth="1.5"/>
     <line x1="10" y1="7" x2="10" y2="21" stroke={COLOR} strokeWidth="1.2" strokeDasharray="3 2"/>
   </svg>
 );
 
 const IconBogo = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Buy-one-get-one BOGO offer">
+  <svg width="28" height="28" viewBox="0 0 28 34" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Buy-one-get-one BOGO offer">
     <rect x="2" y="8" width="11" height="14" rx="2" fill={COLOR} opacity="0.3" stroke={COLOR} strokeWidth="1.5"/>
     <rect x="15" y="8" width="11" height="14" rx="2" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" strokeDasharray="3 2"/>
     <text x="5" y="18" fontSize="6" fill={COLOR} fontWeight="800">PAY</text>
@@ -59,21 +59,21 @@ const IconOTT = () => (
 );
 
 const IconCheck = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit included in card">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit included in card">
     <circle cx="9" cy="9" r="8" fill={COLOR} opacity="0.12"/>
     <path d="M5 9.5L8 12L13 6" stroke={COLOR} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const IconCross = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit not included">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit not included">
     <circle cx="9" cy="9" r="8" fill="#fee2e2" opacity="0.5"/>
     <path d="M6 6L12 12M12 6L6 12" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
   </svg>
 );
 
 const IconStar = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top entertainment card recommendation">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top entertainment card recommendation">
     <polygon points="9,1.5 11,7 17,7 12,11 14,17 9,13.5 4,17 6,11 1,7 7,7" fill={COLOR}/>
   </svg>
 );

@@ -14,7 +14,7 @@ const COLOR = "#7C3AED";
 const UPDATED = "June 3, 2026";
 
 const SvgCapBinding = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="How a five percent cashback rate effectively becomes 1.5 percent when monthly cap binds at typical household spend levels" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 282" role="img" aria-label="How a five percent cashback rate effectively becomes 1.5 percent when monthly cap binds at typical household spend levels" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">5% RATE WITH ₹1,000 MONTHLY CAP · EFFECTIVE RATE BY SPEND</text>
     <line x1="60" y1="240" x2="700" y2="240" stroke="var(--border)" />
     <line x1="60" y1="50" x2="60" y2="240" stroke="var(--border)" />
@@ -37,7 +37,7 @@ const SvgCapBinding = () => (
 );
 
 const SvgFormula = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Cap-adjusted cashback formula visualisation showing partner spend cashback plus base spend cashback minus annual fee divided by total spend" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 202" role="img" aria-label="Cap-adjusted cashback formula visualisation showing partner spend cashback plus base spend cashback minus annual fee divided by total spend" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">THE GENERAL FORMULA · WHAT REALLY DETERMINES YOUR EFFECTIVE RATE</text>
     <rect x="40" y="50" width="640" height="90" fill="var(--bg-soft)" stroke="var(--border)" />
     <text x="360" y="82" textAnchor="middle" fontFamily="ui-monospace, monospace" fontSize="14" fill="var(--text)">Effective rate = (Capped partner cashback + base cashback − annual fee)</text>
@@ -48,7 +48,7 @@ const SvgFormula = () => (
 );
 
 const SvgFiveCardCompare = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Effective cashback rate of five popular cards on identical 40k monthly spend split between partner and other categories" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 286" role="img" aria-label="Effective cashback rate of five popular cards on identical 40k monthly spend split between partner and other categories" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">5 POPULAR CARDS · IDENTICAL ₹40K MONTHLY SPEND · 25% PARTNER MIX</text>
     {[
       { name: "Axis Ace", rate: "5% Gpay util · 4% Swiggy/Zomato/Ola · 1.5% base", eff: 2.85, w: 285, fee: 499 },
@@ -69,7 +69,7 @@ const SvgFiveCardCompare = () => (
 );
 
 const SvgEarnersHeatmap = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Effective cashback rate matrix across five cards versus four spend profiles showing which card wins each profile" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 294" role="img" aria-label="Effective cashback rate matrix across five cards versus four spend profiles showing which card wins each profile" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">EFFECTIVE RATE MATRIX · CARD × SPEND PROFILE</text>
     {/* column headers */}
     {["Profile", "Light ₹15k", "Modest ₹30k", "Heavy ₹60k", "HNI ₹1L"].map((h, i) => (

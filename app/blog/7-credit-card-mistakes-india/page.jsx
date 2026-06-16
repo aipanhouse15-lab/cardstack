@@ -22,7 +22,7 @@ const COLOR = "#dc2626";
 const UPDATED = "June 4, 2026";
 
 const SvgMinimumDueTrap = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Compound interest trap: paying minimum due on ₹50,000 balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 264" role="img" aria-label="Compound interest trap: paying minimum due on ₹50,000 balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Minimum Due Trap: ₹50,000 balance at 3.5%/month</text>
     {[
@@ -45,7 +45,7 @@ const SvgMinimumDueTrap = () => (
 );
 
 const SvgCibilAgeImpact = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Credit age impact on CIBIL score when closing old card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 204" role="img" aria-label="Credit age impact on CIBIL score when closing old card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Closing an old card: what actually happens to your CIBIL score</text>
     <rect x="36" y="60" width="200" height="50" fill="#d1fae5" rx="6" />
@@ -114,7 +114,7 @@ const SvgCashAdvanceCost = () => (
     <rect x="396" y="56" width="180" height="50" fill="var(--raise)" stroke={COLOR} strokeWidth="1.5" rx="6" />
     <text x="486" y="76" fontSize="11" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">Total effective cost</text>
     <text x="486" y="96" fontSize="16" fontWeight="800" fill={COLOR} textAnchor="middle" fontFamily="system-ui">₹600-920 on ₹10K</text>
-    <text x="36" y="150" fontSize="12" fill="var(--text-muted)" fontFamily="system-ui">No grace period. Interest starts from the ATM transaction second. No reward points earned on cash advances.</text>
+    <text x="36" y="150" fontSize="10" fill="var(--text-muted)" fontFamily="system-ui">No grace period. Interest starts from the ATM transaction second. No reward points earned on cash advances.</text>
   </svg>
 );
 

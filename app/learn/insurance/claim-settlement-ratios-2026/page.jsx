@@ -22,7 +22,7 @@ const COLOR = "#e11d48";
 const UPDATED = "June 4, 2026";
 
 const SvgLifeCSR = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Life insurance claim settlement ratios for top 10 insurers in India for 2025-26 showing HDFC Life at 99.5 percent and LIC at 98.7 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 294" role="img" aria-label="Life insurance claim settlement ratios for top 10 insurers in India for 2025-26 showing HDFC Life at 99.5 percent and LIC at 98.7 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">LIFE INSURANCE CLAIM SETTLEMENT RATIO 2025-26 · IRDAI ANNUAL REPORT</text>
     {[
       { name: "Max Life", csr: 99.51, color: "#16a34a" },
@@ -42,12 +42,12 @@ const SvgLifeCSR = () => (
         <text x={128 + (csr - 93) * 80} y={52 + i * 24} fontFamily="system-ui" fontSize="11" fontWeight="700" fill={color}>{csr}%</text>
       </g>
     ))}
-    <text x="20" y="270" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">CSR = claims settled / (claims settled + claims repudiated + claims pending). Higher is better. But CSR above 96% is broadly safe — focus on complaint ratio next.</text>
+    <text x="20" y="270" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">CSR = claims settled / (claims settled + claims repudiated + claims pending). Higher is better. But CSR above 96% is broadly safe — focus on complaint ratio next.</text>
   </svg>
 );
 
 const SvgHealthICR = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Health insurance incurred claims ratio for top 5 health insurers in India showing Star Health at 65 percent and New India at 110 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 252" role="img" aria-label="Health insurance incurred claims ratio for top 5 health insurers in India showing Star Health at 65 percent and New India at 110 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HEALTH INSURANCE INCURRED CLAIMS RATIO (ICR) 2025-26 · SWEET SPOT: 65-90%</text>
     {[
       { name: "Star Health", icr: 65, color: "#16a34a", note: "Profitable — healthy" },
@@ -64,12 +64,12 @@ const SvgHealthICR = () => (
     ))}
     <rect x="420" y="38" width="3" height="160" fill="#dc2626" strokeDasharray="4,4" />
     <text x="425" y="55" fontFamily="system-ui" fontSize="10" fill="#dc2626">100% = pays out = premiums collected</text>
-    <text x="20" y="228" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">ICR above 100% means the insurer is paying more in claims than it collects in premiums — financially unsustainable. Expect premium hikes or coverage restrictions from high-ICR insurers.</text>
+    <text x="20" y="228" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">ICR above 100% means the insurer is paying more in claims than it collects in premiums — financially unsustainable. Expect premium hikes or coverage restrictions from high-ICR insurers.</text>
   </svg>
 );
 
 const SvgRejectionReasons = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Reasons for health and life insurance claim rejection in India showing non-disclosure at 44 percent as the top reason followed by policy lapse and exclusion" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 254" role="img" aria-label="Reasons for health and life insurance claim rejection in India showing non-disclosure at 44 percent as the top reason followed by policy lapse and exclusion" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHY CLAIMS GET REJECTED · TOP REASONS · IRDAI 2025-26</text>
     {[
       { reason: "Non-disclosure of pre-existing condition", pct: 44, color: "#dc2626" },
@@ -85,14 +85,14 @@ const SvgRejectionReasons = () => (
         <text x={326 + pct * 6} y={53 + i * 32} fontFamily="system-ui" fontSize="12" fontWeight="700" fill={color}>{pct}%</text>
       </g>
     ))}
-    <text x="20" y="230" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Non-disclosure is #1. When buying, always declare everything — pre-existing conditions, smoking, family history. A rejected claim is worse than a higher premium.</text>
+    <text x="20" y="230" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Non-disclosure is #1. When buying, always declare everything — pre-existing conditions, smoking, family history. A rejected claim is worse than a higher premium.</text>
   </svg>
 );
 
 const SvgComplaintRatio = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Insurance complaint ratio comparison showing complaints per 10000 policies for top life insurers revealing that high CSR and high complaints can coexist" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 239" role="img" aria-label="Insurance complaint ratio comparison showing complaints per 10000 policies for top life insurers revealing that high CSR and high complaints can coexist" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">COMPLAINT RATIO vs CSR · THE METRIC THAT CATCHES THE FINE PRINT TRICKS</text>
-    <text x="20" y="38" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">Complaints per 10,000 policies — lower is better. High CSR + high complaints = insurer settles but makes it painful.</text>
+    <text x="20" y="38" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Complaints per 10,000 policies — lower is better. High CSR + high complaints = insurer settles but makes it painful.</text>
     {[
       { name: "Tata AIA", csr: "99.1%", complaints: 2.1, color: "#16a34a" },
       { name: "HDFC Life", csr: "99.5%", complaints: 3.4, color: "#16a34a" },
@@ -108,12 +108,12 @@ const SvgComplaintRatio = () => (
         <text x={98 + complaints * 30 + 100} y={68 + i * 26} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">CSR: {csr}</text>
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Tata AIA: high CSR AND low complaints = best overall insurer for term. SBI Life: lower CSR and high complaints = avoid for term.</text>
+    <text x="20" y="215" fontFamily="system-ui" fontSize="8" fill="var(--text-muted)">Tata AIA: high CSR AND low complaints = best overall insurer for term. SBI Life: lower CSR and high complaints = avoid for term.</text>
   </svg>
 );
 
 const SvgClaimProcess = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="Step by step life insurance claim process flowchart from death notification to final settlement with timeline at each step" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 194" role="img" aria-label="Step by step life insurance claim process flowchart from death notification to final settlement with timeline at each step" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">LIFE INSURANCE CLAIM PROCESS · WHAT TO DO STEP BY STEP</text>
     {[
       { step: "1. Notify insurer", time: "Day 1-3", detail: "Phone + email. Get claim reference number." },
@@ -131,7 +131,7 @@ const SvgClaimProcess = () => (
         {i < 4 && <path d={`M ${150 + i * 140} 90 L ${160 + i * 140} 90`} stroke="var(--border)" strokeWidth="2" />}
       </g>
     ))}
-    <text x="20" y="170" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">IRDAI regulation: if insurer doesn't settle or reject within 30 days of receiving all documents, they owe you interest at 2% above bank rate. File complaint at Bima Bharosa portal if they stall.</text>
+    <text x="20" y="170" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">IRDAI regulation: if insurer doesn't settle or reject within 30 days of receiving all documents, they owe you interest at 2% above bank rate. File complaint at Bima Bharosa portal if they stall.</text>
   </svg>
 );
 

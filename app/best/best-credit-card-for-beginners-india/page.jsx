@@ -31,7 +31,7 @@ function ShieldIcon() {
 
 function CibilMeterIcon() {
   return (
-    <svg width="80" height="44" viewBox="0 0 80 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CIBIL score meter from poor to excellent">
+    <svg width="80" height="44" viewBox="0 0 80 67" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CIBIL score meter from poor to excellent">
       <path d="M4 40 A36 36 0 0 1 76 40" stroke="var(--border)" strokeWidth="8" strokeLinecap="round" fill="none"/>
       <path d="M4 40 A36 36 0 0 1 40 4" stroke="#ef4444" strokeWidth="8" strokeLinecap="round" fill="none"/>
       <path d="M40 4 A36 36 0 0 1 63 13" stroke="#f59e0b" strokeWidth="8" strokeLinecap="round" fill="none"/>
@@ -46,7 +46,7 @@ function CibilMeterIcon() {
 
 function CardTierIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Credit card tier progression">
+    <svg width="44" height="44" viewBox="0 0 44 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Credit card tier progression">
       <rect x="2" y="10" width="30" height="20" rx="3" fill={COLOR} fillOpacity="0.15" stroke={COLOR} strokeWidth="1.5"/>
       <rect x="12" y="6" width="30" height="20" rx="3" fill={COLOR} fillOpacity="0.3" stroke={COLOR} strokeWidth="1.5"/>
       <circle cx="18" cy="16" r="3" fill={COLOR}/>
@@ -56,7 +56,7 @@ function CardTierIcon() {
 
 function RupeeCircleIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rupee symbol in circle representing cost">
+    <svg width="44" height="44" viewBox="0 0 44 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rupee symbol in circle representing cost">
       <circle cx="22" cy="22" r="20" fill={COLOR} fillOpacity="0.1" stroke={COLOR} strokeWidth="1.5"/>
       <text x="22" y="28" textAnchor="middle" fontSize="18" fill={COLOR} fontWeight="700">₹</text>
     </svg>
@@ -65,7 +65,7 @@ function RupeeCircleIcon() {
 
 function WarningIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warning: common mistake">
+    <svg width="20" height="20" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warning: common mistake">
       <path d="M10 2L18.66 17H1.34L10 2z" fill="#fef3c7" stroke="#f59e0b" strokeWidth="1.5"/>
       <line x1="10" y1="8" x2="10" y2="12" stroke="#f59e0b" strokeWidth="1.5" strokeLinecap="round"/>
       <circle cx="10" cy="14.5" r="1" fill="#f59e0b"/>
@@ -75,7 +75,7 @@ function WarningIcon() {
 
 function CheckCircleIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Checkmark indicating correct action">
+    <svg width="20" height="20" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Checkmark indicating correct action">
       <circle cx="10" cy="10" r="9" fill="#dcfce7" stroke="#22c55e" strokeWidth="1.5"/>
       <path d="M6 10l3 3 5-5" stroke="#22c55e" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
@@ -84,7 +84,7 @@ function CheckCircleIcon() {
 
 function UpgradeArrowIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Upward arrow showing card upgrade path">
+    <svg width="44" height="44" viewBox="0 0 44 67" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Upward arrow showing card upgrade path">
       <rect x="6" y="28" width="32" height="10" rx="2" fill="var(--border)"/>
       <rect x="6" y="16" width="32" height="10" rx="2" fill={COLOR} fillOpacity="0.35"/>
       <rect x="6" y="4" width="32" height="10" rx="2" fill={COLOR}/>

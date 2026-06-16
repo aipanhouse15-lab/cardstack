@@ -65,7 +65,7 @@ const SvgRewardRateChart = () => (
 );
 
 const SvgFloatBenefit = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="Credit card float benefit: 20 to 50 days interest-free period illustration" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 164" role="img" aria-label="Credit card float benefit: 20 to 50 days interest-free period illustration" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Free Float Window (Credit Card Only)</text>
     <rect x="30" y="50" width="660" height="30" rx="4" fill="var(--raise)" />
@@ -82,7 +82,7 @@ const SvgFloatBenefit = () => (
 );
 
 const SvgCibilImpact = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="CIBIL score impact of credit card vs debit card usage" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 194" role="img" aria-label="CIBIL score impact of credit card vs debit card usage" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Credit Score Building: 12-Month Scenario</text>
     {[
@@ -163,7 +163,7 @@ const SvgWhenToUseWhich = () => (
 );
 
 const SvgInterestRisk = () => (
-  <svg viewBox="0 0 720 170" role="img" aria-label="Interest risk comparison: credit card revolving vs debit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 186" role="img" aria-label="Interest risk comparison: credit card revolving vs debit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">What Does Carrying a Balance Actually Cost?</text>
     <text x="360" y="46" textAnchor="middle" fontSize="11" fill="var(--text-muted)">₹50,000 outstanding, paying minimum only (3.5% per month)</text>

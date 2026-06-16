@@ -21,7 +21,7 @@ const COLOR = "#0891B2";
 const UPDATED = "June 6, 2026";
 
 const SvgEquityBands = () => (
-  <svg viewBox="0 0 520 200" role="img" aria-label="Equity allocation band ranges" style={{ width: "100%" }}>
+  <svg viewBox="0 0 520 204" role="img" aria-label="Equity allocation band ranges" style={{ width: "100%" }}>
     <text x="10" y="18" fontFamily="system-ui" fontSize="11" fontWeight="600" fill="var(--text-muted)">DYNAMIC EQUITY ALLOCATION RANGE — LAST 36 MONTHS</text>
     <line x1="40" y1="60" x2="500" y2="60" stroke="var(--border)" />
     {/* Bear / fair / bull markers */}

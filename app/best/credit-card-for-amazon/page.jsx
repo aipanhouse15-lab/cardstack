@@ -26,7 +26,7 @@ function NoCap5PercentVisual() {
   const maxSpend = 45000;
   return (
     <svg
-      viewBox="0 0 680 280"
+      viewBox="0 0 680 291"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Annual cashback comparison showing Amazon Pay ICICI uncapped return vs HDFC Millennia capped return across 12 months"
@@ -67,7 +67,7 @@ function NoCap5PercentVisual() {
 function TrifectaExplainer() {
   return (
     <svg
-      viewBox="0 0 680 180"
+      viewBox="0 0 680 186"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="The rare trifecta: Amazon Pay ICICI card has zero annual fee, 5 percent cashback, and no monthly cap simultaneously"
@@ -94,7 +94,7 @@ function TrifectaExplainer() {
 function SaleStrategyGrid() {
   return (
     <svg
-      viewBox="0 0 680 220"
+      viewBox="0 0 680 234"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Amazon sale strategy grid showing how cashback stacks with bank offers during Great Indian Sale and Prime Day"

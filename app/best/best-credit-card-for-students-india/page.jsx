@@ -22,7 +22,7 @@ const UPDATED = "June 4, 2026";
 
 function GraduationCapIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Graduation cap representing student finance">
+    <svg width="44" height="44" viewBox="0 0 44 58" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Graduation cap representing student finance">
       <polygon points="22,6 42,16 22,26 2,16" fill={COLOR} fillOpacity="0.15" stroke={COLOR} strokeWidth="1.5"/>
       <path d="M10 20v10a12 12 0 0 0 24 0V20" stroke={COLOR} strokeWidth="1.5" strokeLinecap="round" fill="none"/>
       <line x1="42" y1="16" x2="42" y2="26" stroke={COLOR} strokeWidth="2" strokeLinecap="round"/>
@@ -32,7 +32,7 @@ function GraduationCapIcon() {
 
 function FDLockIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lock icon representing Fixed Deposit secured credit card">
+    <svg width="44" height="44" viewBox="0 0 44 54" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Lock icon representing Fixed Deposit secured credit card">
       <rect x="10" y="20" width="24" height="18" rx="3" fill={COLOR} fillOpacity="0.15" stroke={COLOR} strokeWidth="1.5"/>
       <path d="M15 20V15a7 7 0 0 1 14 0v5" stroke={COLOR} strokeWidth="1.5" strokeLinecap="round" fill="none"/>
       <circle cx="22" cy="29" r="3" fill={COLOR}/>
@@ -54,7 +54,7 @@ function FamilyCardIcon() {
 
 function TimelineArrow() {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arrow indicating progression">
+    <svg width="20" height="20" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arrow indicating progression">
       <circle cx="10" cy="10" r="9" fill={COLOR} fillOpacity="0.12" stroke={COLOR} strokeWidth="1.2"/>
       <path d="M7 10h6M11 7l3 3-3 3" stroke={COLOR} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
@@ -76,7 +76,7 @@ function BankIcon() {
 
 function CostIcon() {
   return (
-    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rupee coin representing cost calculation">
+    <svg width="40" height="40" viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rupee coin representing cost calculation">
       <circle cx="20" cy="20" r="18" fill={COLOR} fillOpacity="0.1" stroke={COLOR} strokeWidth="1.5"/>
       <text x="20" y="26" textAnchor="middle" fontSize="16" fill={COLOR} fontWeight="700">₹</text>
     </svg>

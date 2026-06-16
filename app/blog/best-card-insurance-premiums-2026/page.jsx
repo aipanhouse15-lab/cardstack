@@ -22,7 +22,7 @@ const COLOR = "#ea580c";
 const UPDATED = "June 4, 2026";
 
 const SvgInsurancePaymentProblem = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="Why insurance premium payment is tricky on credit cards: most cards exclude it from reward earning" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 194" role="img" aria-label="Why insurance premium payment is tricky on credit cards: most cards exclude it from reward earning" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Insurance Premium Problem Most Cardholders Do Not Know About</text>
     <rect x="30" y="44" width="310" height="116" rx="8" fill="#dc2626" opacity="0.07" stroke="#dc2626" strokeWidth="1.5" />
@@ -37,12 +37,12 @@ const SvgInsurancePaymentProblem = () => (
     <text x="535" y="108" textAnchor="middle" fontSize="11" fill="var(--text)">Axis Magnus: 2X EDGE Miles on insurance</text>
     <text x="535" y="126" textAnchor="middle" fontSize="11" fill="var(--text)">Amex MRCC: 1 MR point per ₹50 on insurance</text>
     <text x="535" y="144" textAnchor="middle" fontSize="11" fill="var(--text)">ICICI Sapphiro: reward points on insurance</text>
-    <text x="360" y="170" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Always verify in the card's current T&Cs. Insurance earning exclusions are the most frequently changed rule in credit card programs.</text>
+    <text x="360" y="170" textAnchor="middle" fontSize="8" fill="var(--text-muted)">Always verify in the card's current T&Cs. Insurance earning exclusions are the most frequently changed rule in credit card programs.</text>
   </svg>
 );
 
 const SvgPremiumMath = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Credit card rewards on 50000 rupees annual insurance premium across different cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 254" role="img" aria-label="Credit card rewards on 50000 rupees annual insurance premium across different cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">₹50,000 Annual Insurance Premium: Which Card Returns the Most?</text>
     <text x="30" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">CARD</text>
@@ -74,15 +74,15 @@ const SvgPremiumMath = () => (
     <text x="230" y="206" fontSize="11" fill="var(--text)">2 pts/₹100</text>
     <text x="400" y="206" fontSize="11" fontWeight="700" fill={COLOR}>₹500 est.</text>
     <text x="540" y="206" fontSize="11" fill="var(--text)">1.0%</text>
-    <text x="360" y="230" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Amex MR point redemption value varies: ₹0.25 for cashback, ₹0.50+ for statement credit, up to ₹1.00+ for airline transfers. Magnus EDGE Miles at 1 EM = ₹0.75 for flight redemptions.</text>
+    <text x="360" y="230" textAnchor="middle" fontSize="7" fill="var(--text-muted)">Amex MR point redemption value varies: ₹0.25 for cashback, ₹0.50+ for statement credit, up to ₹1.00+ for airline transfers. Magnus EDGE Miles at 1 EM = ₹0.75 for flight redemptions.</text>
   </svg>
 );
 
 const SvgTermInsuranceTiming = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Term insurance premium timing and credit card billing cycle optimisation for maximum float" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 206" role="img" aria-label="Term insurance premium timing and credit card billing cycle optimisation for maximum float" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Billing Cycle Optimisation: Maximise Float on Annual Premiums</text>
-    <text x="360" y="50" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Pay a large annual insurance premium on Day 1 of your billing cycle to get maximum 45-50 days of interest-free credit</text>
+    <text x="360" y="50" textAnchor="middle" fontSize="9" fill="var(--text-muted)">Pay a large annual insurance premium on Day 1 of your billing cycle to get maximum 45-50 days of interest-free credit</text>
     <rect x="30" y="65" width="100" height="50" rx="6" fill={COLOR} opacity="0.8" />
     <text x="80" y="88" textAnchor="middle" fontSize="11" fontWeight="700" fill="white">Statement</text>
     <text x="80" y="106" textAnchor="middle" fontSize="11" fontWeight="700" fill="white">Date: Day 1</text>
@@ -99,7 +99,7 @@ const SvgTermInsuranceTiming = () => (
     <text x="650" y="88" textAnchor="middle" fontSize="11" fontWeight="700" fill="#16a34a">Due date</text>
     <text x="650" y="106" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Day 50-51</text>
     <text x="360" y="140" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>50 days float on ₹20,000 annual premium = ₹110 interest saved (at 8% FD rate)</text>
-    <text x="360" y="162" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Plus: rewards earned on the premium spend itself. Paying on Day 1 vs Day 25 of billing cycle = 25 extra days of float.</text>
+    <text x="360" y="162" textAnchor="middle" fontSize="9" fill="var(--text-muted)">Plus: rewards earned on the premium spend itself. Paying on Day 1 vs Day 25 of billing cycle = 25 extra days of float.</text>
     <text x="360" y="182" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Note: Do NOT pay one day before due date — you lose 29 days of potential float on the next cycle.</text>
   </svg>
 );
@@ -128,7 +128,7 @@ const SvgHealthVsTermPremium = () => (
 );
 
 const SvgMonthlyVsAnnual = () => (
-  <svg viewBox="0 0 720 190" role="img" aria-label="Annual vs monthly insurance premium payment on credit card: which earns more rewards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 208" role="img" aria-label="Annual vs monthly insurance premium payment on credit card: which earns more rewards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Annual vs Monthly Premium Payment: The Credit Card Reward Difference</text>
     <rect x="30" y="44" width="310" height="126" rx="8" fill={COLOR} opacity="0.07" stroke={COLOR} strokeWidth="1.5" />
@@ -145,12 +145,12 @@ const SvgMonthlyVsAnnual = () => (
     <text x="535" y="128" textAnchor="middle" fontSize="11" fill="var(--text)">Float: 50 days on ₹1,700 each time</text>
     <text x="535" y="148" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text-muted)">Net annual benefit: ₹255 + ₹9 float</text>
     <text x="535" y="164" textAnchor="middle" fontSize="10" fill="var(--text-muted)">(monthly premium means less float value)</text>
-    <text x="360" y="184" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Reward earning is similar. Annual payment wins on float value. But check if your card caps monthly insurance earn — some do.</text>
+    <text x="360" y="184" textAnchor="middle" fontSize="8" fill="var(--text-muted)">Reward earning is similar. Annual payment wins on float value. But check if your card caps monthly insurance earn — some do.</text>
   </svg>
 );
 
 const SvgRewardEarningGuide = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Step by step guide to earning maximum credit card rewards on insurance premiums" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 212" role="img" aria-label="Step by step guide to earning maximum credit card rewards on insurance premiums" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Maximum Reward Strategy for Insurance Premiums</text>
     <rect x="30" y="44" width="46" height="46" rx="23" fill={COLOR} opacity="0.15" stroke={COLOR} strokeWidth="1.5" />

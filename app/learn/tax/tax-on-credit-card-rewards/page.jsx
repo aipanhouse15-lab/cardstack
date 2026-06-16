@@ -22,7 +22,7 @@ const COLOR = "#16a34a";
 const UPDATED = "June 4, 2026";
 
 const SvgTaxabilityFlowchart = () => (
-  <svg viewBox="0 0 720 300" role="img" aria-label="Flowchart showing when credit card reward points are taxable including business cards cash rewards over 50000 and when they are not taxable including personal card points redeemed for merchandise" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 314" role="img" aria-label="Flowchart showing when credit card reward points are taxable including business cards cash rewards over 50000 and when they are not taxable including personal card points redeemed for merchandise" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ARE YOUR CREDIT CARD REWARDS TAXABLE? · DECISION FLOWCHART</text>
     <rect x="280" y="35" width="160" height="36" fill={COLOR} rx="8" />
     <text x="360" y="57" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#fff">What type of card?</text>
@@ -52,12 +52,12 @@ const SvgTaxabilityFlowchart = () => (
     <rect x="320" y="220" width="160" height="36" fill="#dc2626" rx="8" opacity="0.85" />
     <text x="400" y="238" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#fff">TDS + taxable</text>
     <text x="400" y="250" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fff">as income from other sources</text>
-    <text x="20" y="290" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">CBDT's position: rewards from spend are "discount/rebate" not income. Gifts/prizes are income. The ₹50K threshold is from Section 56(2)(x) — gifts above ₹50K from non-relatives are taxable.</text>
+    <text x="20" y="290" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">CBDT's position: rewards from spend are "discount/rebate" not income. Gifts/prizes are income. The ₹50K threshold is from Section 56(2)(x) — gifts above ₹50K from non-relatives are taxable.</text>
   </svg>
 );
 
 const SvgRewardTypeMatrix = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Matrix of different credit card reward types and their tax treatment including points for spend cashback welcome bonus referral rewards and milestone benefits" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 259" role="img" aria-label="Matrix of different credit card reward types and their tax treatment including points for spend cashback welcome bonus referral rewards and milestone benefits" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">CREDIT CARD REWARD TYPE vs TAX TREATMENT · CBDT INTERPRETATION AS OF JUNE 2026</text>
     {[{ h: "Reward Type" }, { h: "Tax Status" }, { h: "Why" }, { h: "Risk Level" }].map(({ h }, i) => {
       const xs = [20, 210, 330, 600];
@@ -83,12 +83,12 @@ const SvgRewardTypeMatrix = () => (
         })}
       </g>
     ))}
-    <text x="20" y="235" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">CBDT has not issued specific circulars on every scenario. The "discount vs income" distinction is the operative principle. When in doubt, consult a CA — especially for rewards above ₹50K annually.</text>
+    <text x="20" y="235" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">CBDT has not issued specific circulars on every scenario. The "discount vs income" distinction is the operative principle. When in doubt, consult a CA — especially for rewards above ₹50K annually.</text>
   </svg>
 );
 
 const SvgHighValueRedemption = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="High value credit card redemption risk zones showing scenarios where IT department might scrutinize large reward redemptions especially on business cards" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 219" role="img" aria-label="High value credit card redemption risk zones showing scenarios where IT department might scrutinize large reward redemptions especially on business cards" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HIGH-VALUE REDEMPTION RISK ZONES · WHEN IT SCRUTINY BECOMES POSSIBLE</text>
     {[
       { scenario: "Redeeming ₹5L+ in flight miles on personal card", risk: "LOW", reason: "Points earned on personal spend, redeemed for travel. Discount on spend.", color: COLOR },
@@ -105,12 +105,12 @@ const SvgHighValueRedemption = () => (
         <text x="500" y={54 + i * 30} fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">{reason.slice(0, 55)}</text>
       </g>
     ))}
-    <text x="20" y="195" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">The safest position: treat all credit card rewards as tax-free (current CBDT interpretation). The risky position: large referral earnings, business card cashback, or contest prizes — declare these as income from other sources.</text>
+    <text x="20" y="195" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">The safest position: treat all credit card rewards as tax-free (current CBDT interpretation). The risky position: large referral earnings, business card cashback, or contest prizes — declare these as income from other sources.</text>
   </svg>
 );
 
 const SvgPracticalAdvice = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="Practical tax advice for credit card reward holders showing what to declare what is safe to ignore and what needs CA consultation" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 199" role="img" aria-label="Practical tax advice for credit card reward holders showing what to declare what is safe to ignore and what needs CA consultation" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">PRACTICAL GUIDE: WHAT TO DECLARE VS WHAT IS SAFE TO IGNORE</text>
     <rect x="20" y="38" width="320" height="120" fill={COLOR} rx="8" opacity="0.22" stroke={COLOR} strokeWidth="1" />
     <text x="180" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill={COLOR}>SAFE TO IGNORE (No Declaration)</text>
@@ -122,20 +122,20 @@ const SvgPracticalAdvice = () => (
     {["Referral cash rewards above ₹5,000 (cumulative)", "Contest/lucky draw prizes from card company", "Business card cashback (belongs to employer)", "Points sold or transferred for cash"].map((t, i) => (
       <text key={t} x="390" y={80 + i * 18} fontFamily="system-ui" fontSize="10" fill="var(--text)">✗ {t}</text>
     ))}
-    <text x="20" y="175" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Middle ground: if your annual reward accumulation (all forms) exceeds ₹50K, get a CA to review. Below ₹50K from personal card spend: current practice is to not declare, aligned with CBDT's "discount" interpretation.</text>
+    <text x="20" y="175" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Middle ground: if your annual reward accumulation (all forms) exceeds ₹50K, get a CA to review. Below ₹50K from personal card spend: current practice is to not declare, aligned with CBDT's "discount" interpretation.</text>
   </svg>
 );
 
 const SvgBusinessCardTax = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="Business credit card reward tax treatment showing that rewards on company expenses belong to the company not the employee and must be declared as business income or employee perquisite" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 194" role="img" aria-label="Business credit card reward tax treatment showing that rewards on company expenses belong to the company not the employee and must be declared as business income or employee perquisite" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">BUSINESS CARD REWARDS: THE TAX TREATMENT MOST CORPORATES IGNORE</text>
     <rect x="20" y="38" width="680" height="120" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="8" />
-    <text x="30" y="60" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#dc2626">Situation: Employee uses company credit card for business expenses, accumulates 2L reward points, redeems for personal travel.</text>
-    <text x="30" y="82" fontFamily="system-ui" fontSize="12" fill="var(--text)">Tax position: Points accumulated on company spending are technically the company's assets. When an employee personally redeems them, it's a perquisite — taxable as salary.</text>
-    <text x="30" y="100" fontFamily="system-ui" fontSize="12" fill="var(--text)">How it's actually handled: Almost no Indian company tracks this. Card companies don't issue Form 26AS or TDS certificates for reward redemptions.</text>
-    <text x="30" y="118" fontFamily="system-ui" fontSize="12" fill="var(--text)">Safe approach: If your employer gives you a corporate card, clarify their policy on personal redemption of business card rewards. Some companies have explicit policies allowing or prohibiting this.</text>
-    <text x="30" y="136" fontFamily="system-ui" fontSize="12" fontWeight="600" fill="#dc2626">Practical reality: This is a grey area. The risk of scrutiny is low for moderate amounts. For frequent flyer points worth ₹5L+ redeemed annually: consult a CA.</text>
-    <text x="20" y="170" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Companies with formal expense reimbursement policies (travel cards with direct billing) don't create this issue — the card company invoices the company directly and employees don't accumulate personal points.</text>
+    <text x="30" y="60" fontFamily="system-ui" fontSize="8" fontWeight="700" fill="#dc2626">Situation: Employee uses company credit card for business expenses, accumulates 2L reward points, redeems for personal travel.</text>
+    <text x="30" y="82" fontFamily="system-ui" fontSize="7" fill="var(--text)">Tax position: Points accumulated on company spending are technically the company's assets. When an employee personally redeems them, it's a perquisite — taxable as salary.</text>
+    <text x="30" y="100" fontFamily="system-ui" fontSize="7" fill="var(--text)">How it's actually handled: Almost no Indian company tracks this. Card companies don't issue Form 26AS or TDS certificates for reward redemptions.</text>
+    <text x="30" y="118" fontFamily="system-ui" fontSize="7" fill="var(--text)">Safe approach: If your employer gives you a corporate card, clarify their policy on personal redemption of business card rewards. Some companies have explicit policies allowing or prohibiting this.</text>
+    <text x="30" y="136" fontFamily="system-ui" fontSize="7" fontWeight="600" fill="#dc2626">Practical reality: This is a grey area. The risk of scrutiny is low for moderate amounts. For frequent flyer points worth ₹5L+ redeemed annually: consult a CA.</text>
+    <text x="20" y="170" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Companies with formal expense reimbursement policies (travel cards with direct billing) don't create this issue — the card company invoices the company directly and employees don't accumulate personal points.</text>
   </svg>
 );
 

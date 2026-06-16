@@ -23,7 +23,7 @@ const GOLD = "#b45309";
 const UPDATED = "June 4, 2026";
 
 const IconPremium = () => (
-  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Premium credit card for high income earners">
+  <svg width="48" height="48" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Premium credit card for high income earners">
     <rect x="4" y="10" width="40" height="28" rx="6" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="2"/>
     <rect x="4" y="18" width="40" height="7" fill={GOLD} opacity="0.15"/>
     <circle cx="36" cy="30" r="4" fill={GOLD} opacity="0.4"/>
@@ -34,7 +34,7 @@ const IconPremium = () => (
 );
 
 const IconChart = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ROI chart for premium cards">
+  <svg width="28" height="28" viewBox="0 0 28 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ROI chart for premium cards">
     <rect x="3" y="20" width="5" height="6" rx="1" fill={COLOR} opacity="0.4"/>
     <rect x="11" y="14" width="5" height="12" rx="1" fill={COLOR} opacity="0.6"/>
     <rect x="19" y="8" width="5" height="18" rx="1" fill={GOLD} opacity="0.8"/>
@@ -43,7 +43,7 @@ const IconChart = () => (
 );
 
 const IconKey = () => (
-  <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Invite-only access key">
+  <svg width="28" height="28" viewBox="0 0 28 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Invite-only access key">
     <circle cx="10" cy="13" r="7" fill="none" stroke={GOLD} strokeWidth="2"/>
     <circle cx="10" cy="13" r="3" fill={GOLD} opacity="0.3"/>
     <path d="M17 13H26L26 16L23 16L23 13" fill="none" stroke={GOLD} strokeWidth="1.8" strokeLinecap="round"/>
@@ -52,20 +52,20 @@ const IconKey = () => (
 );
 
 const IconCheck = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit included">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit included">
     <circle cx="9" cy="9" r="8" fill={COLOR} opacity="0.25"/>
     <path d="M5 9.5L8 12L13 6" stroke={COLOR} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
 const IconStar = () => (
-  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top ranked premium card">
+  <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top ranked premium card">
     <polygon points="9,1.5 11,7 17,7 12,11 14,17 9,13.5 4,17 6,11 1,7 7,7" fill={GOLD}/>
   </svg>
 );
 
 const IconShield = () => (
-  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Verified premium tier benefit">
+  <svg width="22" height="22" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Verified premium tier benefit">
     <path d="M11 3L20 7V13C20 17 16 20 11 22C6 20 2 17 2 13V7L11 3Z" fill={GOLD} opacity="0.15" stroke={GOLD} strokeWidth="1.5"/>
     <path d="M7 11L10 14L15 9" stroke={GOLD} strokeWidth="2" strokeLinecap="round"/>
   </svg>

@@ -22,7 +22,7 @@ const COLOR = "#ea580c";
 const UPDATED = "June 4, 2026";
 
 const SvgScoreRanges = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="CIBIL score ranges from 300 to 900 with lender treatment at each level" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 234" role="img" aria-label="CIBIL score ranges from 300 to 900 with lender treatment at each level" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">CIBIL Score Ranges: what lenders actually do at each level (June 2026)</text>
     {[
@@ -67,7 +67,7 @@ const SvgFiveFactors = () => (
 );
 
 const SvgReportStructure = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Structure of a CIBIL credit report showing what each section contains" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 239" role="img" aria-label="Structure of a CIBIL credit report showing what each section contains" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">How to Read Your CIBIL Report: the 5 sections you need to check</text>
     {[
@@ -83,12 +83,12 @@ const SvgReportStructure = () => (
         <text x="180" y={69 + i * 32} fontSize="11" fill="var(--text-muted)" fontFamily="system-ui">{d.check}</text>
       </g>
     ))}
-    <text x="36" y="210" fontSize="11" fill="var(--text-muted)" fontFamily="system-ui">Get your free CIBIL report once a year at cibil.com. Paid full reports (₹550/year) include 12-month score history.</text>
+    <text x="36" y="210" fontSize="9" fill="var(--text-muted)" fontFamily="system-ui">Get your free CIBIL report once a year at cibil.com. Paid full reports (₹550/year) include 12-month score history.</text>
   </svg>
 );
 
 const SvgNegativeMarkTimeline = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="How long negative marks stay on your CIBIL report" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 202" role="img" aria-label="How long negative marks stay on your CIBIL report" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">How long do negative marks stay on your CIBIL report?</text>
     <line x1="60" y1="120" x2="660" y2="120" stroke="var(--border)" strokeWidth="2" />
@@ -108,12 +108,12 @@ const SvgNegativeMarkTimeline = () => (
     <circle cx={60 + 7 * 86} cy="102" r="5" fill="#dc2626" />
     <text x="36" y="94" fontSize="11" fontWeight="600" fill="#dc2626" fontFamily="system-ui">Defaults / Written-off</text>
     <text x={60 + 7 * 86 + 8} y="106" fontSize="10" fill="#dc2626" fontFamily="system-ui">Drop off at 7 years</text>
-    <text x="36" y="178" fontSize="11" fill="var(--text-muted)" fontFamily="system-ui">After these periods, the negative mark is removed. There is no way to remove them earlier unless the entry is an error.</text>
+    <text x="36" y="178" fontSize="9" fill="var(--text-muted)" fontFamily="system-ui">After these periods, the negative mark is removed. There is no way to remove them earlier unless the entry is an error.</text>
   </svg>
 );
 
 const SvgDisputeProcess = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Step-by-step process to dispute a CIBIL report error" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 202" role="img" aria-label="Step-by-step process to dispute a CIBIL report error" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">How to dispute a CIBIL report error (RBI mandates 30-day resolution)</text>
     {[

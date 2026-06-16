@@ -63,7 +63,7 @@ const SvgDecisionTree = () => (
 );
 
 const SvgIncomeCardMatrix = () => (
-  <svg viewBox="0 0 720 270" role="img" aria-label="Credit card recommendations by monthly income band in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 278" role="img" aria-label="Credit card recommendations by monthly income band in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="270" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Income-Based Card Recommendations — India, June 2026</text>
     <rect x="36" y="50" width="648" height="28" rx="4" fill="var(--border)" opacity="0.45" />
@@ -86,12 +86,12 @@ const SvgIncomeCardMatrix = () => (
         <text x="560" y={100 + i * 34} fontSize="11" fill="var(--text-muted)">{use}</text>
       </g>
     ))}
-    <text x="36" y="254" fontSize="11" fill="var(--text-muted)">Recommendations for first-time applicants. Income thresholds are approximate — banks also weigh employer category and credit history.</text>
+    <text x="36" y="254" fontSize="8" fill="var(--text-muted)">Recommendations for first-time applicants. Income thresholds are approximate — banks also weigh employer category and credit history.</text>
   </svg>
 );
 
 const SvgCibilProjection = () => (
-  <svg viewBox="0 0 720 230" role="img" aria-label="CIBIL score projection from age 22 to 27 with disciplined credit card use" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 238" role="img" aria-label="CIBIL score projection from age 22 to 27 with disciplined credit card use" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="230" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">CIBIL Score Journey — Age 22 to 27 with Disciplined First Card Use</text>
     <text x="36" y="56" fontSize="12" fill="var(--text-muted)">Starting with FD-backed card or student card at ₹25,000/month income, zero late payments</text>
@@ -121,12 +121,12 @@ const SvgCibilProjection = () => (
         {score > 0 && <text x={x} y={score === 0 ? 170 : Math.max(72, 192 - (score - 650) * 0.75)} textAnchor="middle" fontSize="10" fontWeight="700" fill="var(--text)">{score}</text>}
       </g>
     ))}
-    <text x="36" y="214" fontSize="11" fill="var(--text-muted)">Zero missed payments is the single biggest driver. Each missed payment can drop score by 50-100 points and takes 12-24 months to recover.</text>
+    <text x="36" y="214" fontSize="7" fill="var(--text-muted)">Zero missed payments is the single biggest driver. Each missed payment can drop score by 50-100 points and takes 12-24 months to recover.</text>
   </svg>
 );
 
 const SvgSpendPatternMatch = () => (
-  <svg viewBox="0 0 720 250" role="img" aria-label="Which credit card matches which spending pattern in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 262" role="img" aria-label="Which credit card matches which spending pattern in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="250" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Match Your Spending Pattern to the Right First Card</text>
     <rect x="36" y="50" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
@@ -147,12 +147,12 @@ const SvgSpendPatternMatch = () => (
         <text x="520" y={97 + i * 32} fontSize="11" fill="var(--text-muted)">{why}</text>
       </g>
     ))}
-    <text x="36" y="238" fontSize="11" fill="var(--text-muted)">Always verify eligibility criteria before applying. Rejection leaves a hard inquiry on your CIBIL report for 2 years.</text>
+    <text x="36" y="238" fontSize="9" fill="var(--text-muted)">Always verify eligibility criteria before applying. Rejection leaves a hard inquiry on your CIBIL report for 2 years.</text>
   </svg>
 );
 
 const SvgApplicationChecklist = () => (
-  <svg viewBox="0 0 720 230" role="img" aria-label="Credit card application checklist to maximise approval chances" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 240" role="img" aria-label="Credit card application checklist to maximise approval chances" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="230" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Before You Apply — Maximise Your Approval Chances</text>
     {[
@@ -169,12 +169,12 @@ const SvgApplicationChecklist = () => (
         <text x="66" y={64 + i * 28} fontSize="12" fill="var(--text)">{text}</text>
       </g>
     ))}
-    <text x="36" y="216" fontSize="11" fill="var(--text-muted)">Each hard inquiry stays on your CIBIL report for 24 months. Multiple applications in a short window signal desperation and hurt approval chances.</text>
+    <text x="36" y="216" fontSize="7" fill="var(--text-muted)">Each hard inquiry stays on your CIBIL report for 24 months. Multiple applications in a short window signal desperation and hurt approval chances.</text>
   </svg>
 );
 
 const SvgUpgradePath = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="Typical credit card upgrade path in India from first card to premium" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 168" role="img" aria-label="Typical credit card upgrade path in India from first card to premium" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">The Upgrade Path — How a First Card Becomes a Premium Card</text>
     {[
@@ -191,12 +191,12 @@ const SvgUpgradePath = () => (
         {i < arr.length - 1 && <text x={x + 158} y="94" fontSize="18" fill="var(--text-muted)">→</text>}
       </g>
     ))}
-    <text x="36" y="144" fontSize="11" fill="var(--text-muted)">Upgrading (not closing and reopening) preserves credit age. Banks often proactively offer upgrades — you do not always need to ask.</text>
+    <text x="36" y="144" fontSize="8" fill="var(--text-muted)">Upgrading (not closing and reopening) preserves credit age. Banks often proactively offer upgrades — you do not always need to ask.</text>
   </svg>
 );
 
 const SvgFiveQuestions = () => (
-  <svg viewBox="0 0 720 290" role="img" aria-label="Five questions to answer before getting your first credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 302" role="img" aria-label="Five questions to answer before getting your first credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="290" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">5 Questions to Answer Before Applying for Any Credit Card</text>
     {[
@@ -232,7 +232,7 @@ const SvgFiveQuestions = () => (
         <text x="50" y={84 + i * 46} fontSize="11" fill="var(--text-muted)">{a}</text>
       </g>
     ))}
-    <text x="36" y="278" fontSize="11" fill="var(--text-muted)">Write your answers before searching for cards — it prevents you from being swayed by marketing that emphasises features you will never use.</text>
+    <text x="36" y="278" fontSize="7" fill="var(--text-muted)">Write your answers before searching for cards — it prevents you from being swayed by marketing that emphasises features you will never use.</text>
   </svg>
 );
 

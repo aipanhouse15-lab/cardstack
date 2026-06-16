@@ -26,7 +26,7 @@ function PartnerVsAllOnlineMatrix() {
   const sbiCovered = [true, true, true, true, true, true, true, true, true, true];
   return (
     <svg
-      viewBox="0 0 680 260"
+      viewBox="0 0 680 272"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Coverage matrix comparing HDFC Millennia partner-only 5 percent versus SBI Cashback all-online 5 percent across 10 merchants"
@@ -64,7 +64,7 @@ function CapMathAtSpendLevels() {
   const spends = [5000, 15000, 30000, 60000, 100000];
   return (
     <svg
-      viewBox="0 0 680 280"
+      viewBox="0 0 680 291"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Monthly cashback earned across four cards at five different online spend levels from 5000 to 100000 rupees"
@@ -143,7 +143,7 @@ function MerchantCardMatchGrid() {
 function FreeCardComboDiagram() {
   return (
     <svg
-      viewBox="0 0 680 180"
+      viewBox="0 0 680 194"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Zero annual fee card combination: Amazon Pay ICICI plus AU Xcite ACE covering all online shopping"

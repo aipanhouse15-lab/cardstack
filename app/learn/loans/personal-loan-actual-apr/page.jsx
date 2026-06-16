@@ -22,7 +22,7 @@ const COLOR = "#2563eb";
 const UPDATED = "June 4, 2026";
 
 const SvgFlatVsReducing = () => (
-  <svg viewBox="0 0 720 300" role="img" aria-label="Flat rate versus reducing balance on a 5 lakh 3-year personal loan at 10.5 percent showing flat rate costs 1.57 lakh in interest while reducing balance costs only 87 thousand" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 319" role="img" aria-label="Flat rate versus reducing balance on a 5 lakh 3-year personal loan at 10.5 percent showing flat rate costs 1.57 lakh in interest while reducing balance costs only 87 thousand" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">FLAT RATE vs REDUCING BALANCE · ₹5L LOAN · 3 YEARS · 10.5% STATED RATE</text>
     <line x1="40" y1="260" x2="680" y2="260" stroke="var(--border)" strokeWidth="1" />
     <rect x="80" y="90" width="140" height="170" fill="#dc2626" rx="6" opacity="0.85" />
@@ -45,7 +45,7 @@ const SvgFlatVsReducing = () => (
 );
 
 const SvgHiddenCostStack = () => (
-  <svg viewBox="0 0 720 320" role="img" aria-label="Hidden cost breakdown on a 5 lakh HDFC personal loan showing processing fee GST insurance and total true cost versus advertised cost" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 336" role="img" aria-label="Hidden cost breakdown on a 5 lakh HDFC personal loan showing processing fee GST insurance and total true cost versus advertised cost" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHAT ₹5L PERSONAL LOAN ACTUALLY COSTS YOU · HDFC BANK EXAMPLE</text>
     <rect x="40" y="40" width="200" height="36" fill={COLOR} rx="4" />
     <text x="50" y="63" fontFamily="system-ui" fontSize="13" fontWeight="600" fill="#fff">Advertised interest (10.5%)</text>
@@ -70,7 +70,7 @@ const SvgHiddenCostStack = () => (
 );
 
 const SvgBankRateComparison = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Personal loan advertised versus actual APR comparison across SBI HDFC ICICI Axis and Kotak Mahindra Bank as of June 2026" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 299" role="img" aria-label="Personal loan advertised versus actual APR comparison across SBI HDFC ICICI Axis and Kotak Mahindra Bank as of June 2026" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ADVERTISED RATE vs TRUE APR · PERSONAL LOAN · JUNE 2026 · ₹5L · 3 YEARS · SALARIED 750+ CIBIL</text>
     {[
       { bank: "SBI", adv: "10.30%", apr: "12.8%", x: 60, advH: 120, aprH: 160 },
@@ -98,7 +98,7 @@ const SvgBankRateComparison = () => (
 );
 
 const SvgCibilVsRate = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="CIBIL score range versus personal loan interest rate showing that a score below 700 can mean paying 4 to 8 percent more than someone with 800 plus score" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 254" role="img" aria-label="CIBIL score range versus personal loan interest rate showing that a score below 700 can mean paying 4 to 8 percent more than someone with 800 plus score" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">CIBIL SCORE vs PERSONAL LOAN RATE · HDFC / ICICI / AXIS · SALARIED APPLICANT</text>
     {[
       { label: "800+", rate: "10.50%", color: "#16a34a", x: 60, barW: 120 },
@@ -114,12 +114,12 @@ const SvgCibilVsRate = () => (
         <text x={x + barW + 6} y={55 + i * 30} fontFamily="system-ui" fontSize="12" fontWeight="700" fill={color}>{rate}</text>
       </g>
     ))}
-    <text x="20" y="230" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Gap between 800+ and below-700 borrower: ~10-14% on same loan. Check your score free at RBI-authorized bureaus before applying.</text>
+    <text x="20" y="230" fontFamily="system-ui" fontSize="8" fill="var(--text-muted)">Gap between 800+ and below-700 borrower: ~10-14% on same loan. Check your score free at RBI-authorized bureaus before applying.</text>
   </svg>
 );
 
 const SvgApRFormula = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="APR calculation formula showing how to compute annual percentage rate from EMI principal and tenure to find your real cost of borrowing" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 187" role="img" aria-label="APR calculation formula showing how to compute annual percentage rate from EMI principal and tenure to find your real cost of borrowing" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW TO CALCULATE YOUR REAL APR IN 3 STEPS</text>
     <rect x="20" y="35" width="200" height="60" fill="var(--raise)" stroke={COLOR} strokeWidth="2" rx="8" />
     <text x="120" y="58" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill={COLOR}>STEP 1</text>
@@ -138,7 +138,7 @@ const SvgApRFormula = () => (
     <text x="20" y="120" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="var(--text)">Quick check: APR on ₹5L loan, ₹4,80,250 net disbursement, ₹16,247 EMI, 36 months</text>
     <rect x="20" y="132" width="680" height="36" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="4" />
     <text x="36" y="148" fontFamily="system-ui" fontSize="12" fill="#dc2626" fontWeight="600">Solve: 4,80,250 = 16,247 × [1-(1+r)^-36] / r</text>
-    <text x="36" y="163" fontFamily="system-ui" fontSize="12" fill="#dc2626">Result: r = 1.12%/month = 13.5% APR (not 10.5%). Use our EMI calculator at /tools/emi-calculator to back-derive.</text>
+    <text x="36" y="163" fontFamily="system-ui" fontSize="10" fill="#dc2626">Result: r = 1.12%/month = 13.5% APR (not 10.5%). Use our EMI calculator at /tools/emi-calculator to back-derive.</text>
   </svg>
 );
 
@@ -161,7 +161,7 @@ const SvgNegotiationLevels = () => (
 );
 
 const SvgTotalCost5yr = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Total cost of 5 lakh personal loan over 3 years at different effective APRs from 10.5 percent up to 24 percent showing rupee difference between best and worst case" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 282" role="img" aria-label="Total cost of 5 lakh personal loan over 3 years at different effective APRs from 10.5 percent up to 24 percent showing rupee difference between best and worst case" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">TOTAL COST ON ₹5L PERSONAL LOAN AT VARIOUS EFFECTIVE APRs · 3-YEAR TENURE</text>
     {[
       { apr: "10.5%", total: "5,87,000", interest: "87,000", color: "#16a34a", barH: 60 },

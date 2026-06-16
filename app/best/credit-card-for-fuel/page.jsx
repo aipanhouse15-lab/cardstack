@@ -96,7 +96,7 @@ function RealMathAt5000Monthly() {
   ];
   return (
     <svg
-      viewBox="0 0 680 260"
+      viewBox="0 0 680 274"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Annual net return comparison for four fuel cards at 5000 rupees monthly fuel spend after annual fee and surcharge waiver included"
@@ -116,7 +116,7 @@ function RealMathAt5000Monthly() {
             <text x="160" y={y + 18} textAnchor="end" fill="var(--text)" fontSize="11" fontWeight="600">{card.name}</text>
             <rect x="170" y={y + 4} width={barW} height={24} fill={COLOR} rx="4" />
             <text x={170 + barW + 8} y={y + 20} fill="var(--text)" fontSize="11">₹{net.toLocaleString()} net/yr</text>
-            <text x="170" y={y + 44} fill="var(--text-muted)" fontSize="9">Fee: ₹{card.fee} | Cashback: ₹{Math.min(annualFuelSpend * (card.rate / 100), card.cap * 12).toLocaleString()} | Waiver: ₹{waiver}</text>
+            <text x="170" y={y + 44} fill="var(--text-muted)" fontSize="8">Fee: ₹{card.fee} | Cashback: ₹{Math.min(annualFuelSpend * (card.rate / 100), card.cap * 12).toLocaleString()} | Waiver: ₹{waiver}</text>
           </g>
         );
       })}
@@ -186,7 +186,7 @@ function SBIBPCLCapCalc() {
   const maxSpend = 8000;
   return (
     <svg
-      viewBox="0 0 680 240"
+      viewBox="0 0 680 255"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Monthly fuel spend chart showing where SBI BPCL Octane 6.25 percent cashback cap of 2000 rupees binds at 32000 monthly spend"

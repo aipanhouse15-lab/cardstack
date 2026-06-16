@@ -22,7 +22,7 @@ const COLOR = "#7c3aed";
 const UPDATED = "June 4, 2026";
 
 const SvgExpenseRatio = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Expense ratio comparison for direct versus regular mutual fund plans for top 5 large cap funds showing 0.5 to 1.5 percent higher expense in regular plans" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 260" role="img" aria-label="Expense ratio comparison for direct versus regular mutual fund plans for top 5 large cap funds showing 0.5 to 1.5 percent higher expense in regular plans" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">EXPENSE RATIO COMPARISON · DIRECT vs REGULAR · TOP LARGE CAP FUNDS · JUNE 2026</text>
     {[{ h: "Fund" }, { h: "Direct Plan TER" }, { h: "Regular Plan TER" }, { h: "Difference" }, { h: "Commission to Distributor" }].map(({ h }, i) => {
       const xs = [20, 200, 330, 460, 560];
@@ -45,12 +45,12 @@ const SvgExpenseRatio = () => (
         })}
       </g>
     ))}
-    <text x="20" y="236" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Regular plan TER includes the distributor commission (trailing fee). This fee is paid from your NAV growth every single day — silently reducing your returns. Direct plans have zero distributor commission.</text>
+    <text x="20" y="236" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Regular plan TER includes the distributor commission (trailing fee). This fee is paid from your NAV growth every single day — silently reducing your returns. Direct plans have zero distributor commission.</text>
   </svg>
 );
 
 const SvgWealthDifference20yr = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Wealth difference between direct and regular mutual fund over 20 years on 10000 rupee monthly SIP showing direct plan creates 47 lakh more wealth" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 295" role="img" aria-label="Wealth difference between direct and regular mutual fund over 20 years on 10000 rupee monthly SIP showing direct plan creates 47 lakh more wealth" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">₹10,000/MONTH SIP · 20 YEARS · 12% GROSS RETURN · DIRECT vs REGULAR (1% DIFFERENCE)</text>
     <rect x="60" y="50" width="240" height="190" fill="#dc2626" rx="6" opacity="0.85" />
     <text x="180" y="80" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#fff">REGULAR PLAN (11% net)</text>
@@ -72,7 +72,7 @@ const SvgWealthDifference20yr = () => (
 );
 
 const SvgCommissionFlow = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="How distributor commission flows from your mutual fund investment through the regular plan expense ratio to the broker or distributor who sold you the fund" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 214" role="img" aria-label="How distributor commission flows from your mutual fund investment through the regular plan expense ratio to the broker or distributor who sold you the fund" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW THE COMMISSION FLOWS · WHY YOUR DISTRIBUTOR RECOMMENDS REGULAR PLANS</text>
     {[
       { box: "Your ₹10,000 SIP", x: 20 },
@@ -91,14 +91,14 @@ const SvgCommissionFlow = () => (
     <text x="630" y="82" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#fff">1% per year</text>
     <text x="630" y="98" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fca5a5">silently deducted</text>
     <text x="630" y="113" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fca5a5">from your NAV daily</text>
-    <text x="20" y="150" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text)">This is why your bank RM, insurance agent, and financial advisor recommend regular plans. They earn trailing commission every year you stay invested.</text>
-    <text x="20" y="168" fontFamily="system-ui" fontSize="12" fill="var(--text)">SEBI mandated disclosure of this commission — it's in the fund's KIID document. Most investors never read it. Now you know.</text>
-    <text x="20" y="190" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Direct plans were introduced by SEBI in 2013 specifically to allow investors to bypass distributors and access funds without commission loading. Direct plan NAVs are always higher than regular plan NAVs for the same fund.</text>
+    <text x="20" y="150" fontFamily="system-ui" fontSize="7" fontWeight="700" fill="var(--text)">This is why your bank RM, insurance agent, and financial advisor recommend regular plans. They earn trailing commission every year you stay invested.</text>
+    <text x="20" y="168" fontFamily="system-ui" fontSize="9" fill="var(--text)">SEBI mandated disclosure of this commission — it's in the fund's KIID document. Most investors never read it. Now you know.</text>
+    <text x="20" y="190" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Direct plans were introduced by SEBI in 2013 specifically to allow investors to bypass distributors and access funds without commission loading. Direct plan NAVs are always higher than regular plan NAVs for the same fund.</text>
   </svg>
 );
 
 const SvgPlatformComparison = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Platform comparison for investing in direct mutual funds showing Zerodha Coin MF Central Kuvera and Groww with their features and whether they charge for direct plan investing" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 220" role="img" aria-label="Platform comparison for investing in direct mutual funds showing Zerodha Coin MF Central Kuvera and Groww with their features and whether they charge for direct plan investing" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHERE TO BUY DIRECT PLANS · PLATFORM COMPARISON</text>
     {[{ h: "Platform" }, { h: "Type" }, { h: "Direct Plans" }, { h: "Fee" }, { h: "Best For" }].map(({ h }, i) => {
       const xs = [20, 160, 280, 430, 520];
@@ -119,12 +119,12 @@ const SvgPlatformComparison = () => (
         })}
       </g>
     ))}
-    <text x="20" y="196" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Never pay a platform fee for direct plan investment. If any platform charges you for direct plans, walk away — MF Central, Kuvera, and Groww are all free. Avoid "advisory platforms" that charge 0.5-1% AUM fee annually.</text>
+    <text x="20" y="196" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Never pay a platform fee for direct plan investment. If any platform charges you for direct plans, walk away — MF Central, Kuvera, and Groww are all free. Avoid "advisory platforms" that charge 0.5-1% AUM fee annually.</text>
   </svg>
 );
 
 const SvgSwitchingProcess = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="How to switch from regular to direct mutual fund plan showing the process and tax implications of switching" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 199" role="img" aria-label="How to switch from regular to direct mutual fund plan showing the process and tax implications of switching" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW TO SWITCH FROM REGULAR TO DIRECT PLAN · STEP-BY-STEP</text>
     {[
       { step: "1. Identify your regular plan holdings", detail: "Check your CAMS/KFintech statement. Any fund purchased via bank, broker, or agent is likely a regular plan." },
@@ -137,7 +137,7 @@ const SvgSwitchingProcess = () => (
         <text x="20" y={57 + i * 34} fontFamily="system-ui" fontSize="11" fill="var(--text)">{detail.slice(0, 100)}</text>
       </g>
     ))}
-    <text x="20" y="175" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Don't switch everything at once if you have large gains. Spread switches over multiple financial years to stay within ₹1.25L LTCG exemption per year. A CA can help plan the switching strategy for large portfolios.</text>
+    <text x="20" y="175" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Don't switch everything at once if you have large gains. Spread switches over multiple financial years to stay within ₹1.25L LTCG exemption per year. A CA can help plan the switching strategy for large portfolios.</text>
   </svg>
 );
 

@@ -22,7 +22,7 @@ const COLOR = "#e11d48";
 const UPDATED = "June 4, 2026";
 
 const SvgPremiumVsAge = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Health insurance annual premium versus age showing how premium jumps significantly at age 55 60 and 65 for a 5 lakh sum insured policy" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 276" role="img" aria-label="Health insurance annual premium versus age showing how premium jumps significantly at age 55 60 and 65 for a 5 lakh sum insured policy" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ANNUAL PREMIUM vs AGE · ₹5L SUM INSURED · STAR HEALTH COMPREHENSIVE · NON-SMOKER</text>
     <line x1="60" y1="220" x2="700" y2="220" stroke="var(--border)" />
     <line x1="60" y1="40" x2="60" y2="220" stroke="var(--border)" />
@@ -33,12 +33,12 @@ const SvgPremiumVsAge = () => (
         <text x={x} y="234" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Age {age}</text>
       </g>
     ))}
-    <text x="20" y="252" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Premium at age 60 is 5x that at age 35 for same coverage. At 70, it's 8.5x. This is why buying health insurance for parents when they're in their 50s — before pre-existing conditions set in — is critical.</text>
+    <text x="20" y="252" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Premium at age 60 is 5x that at age 35 for same coverage. At 70, it's 8.5x. This is why buying health insurance for parents when they're in their 50s — before pre-existing conditions set in — is critical.</text>
   </svg>
 );
 
 const SvgInsurerSeniorComparison = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Health insurance comparison for 60 year old parents across Star Health Niva Bupa HDFC Ergo Care Health and New India showing premium waiting period and entry age limit" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 279" role="img" aria-label="Health insurance comparison for 60 year old parents across Star Health Niva Bupa HDFC Ergo Care Health and New India showing premium waiting period and entry age limit" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">SENIOR HEALTH INSURANCE COMPARISON · ₹5L COVER · BOTH PARENTS AGE 60-62 · JUNE 2026</text>
     {[{ h: "Insurer" }, { h: "Annual Premium" }, { h: "Max Entry Age" }, { h: "PED Waiting" }, { h: "Room Limit" }, { h: "Verdict" }].map(({ h }, i) => {
       const xs = [20, 160, 290, 390, 490, 590];
@@ -61,12 +61,12 @@ const SvgInsurerSeniorComparison = () => (
         })}
       </g>
     ))}
-    <text x="20" y="255" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Premiums are approximate for a couple, age 60-62, non-smoking, ₹5L SI, no major PEDs. Actual premiums vary — always get quotes for your parents' specific age and health profile.</text>
+    <text x="20" y="255" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Premiums are approximate for a couple, age 60-62, non-smoking, ₹5L SI, no major PEDs. Actual premiums vary — always get quotes for your parents' specific age and health profile.</text>
   </svg>
 );
 
 const SvgWaitingPeriod = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Pre-existing disease waiting period comparison showing that diseases like diabetes hypertension and heart conditions have 2 to 4 year waiting periods before insurance pays for related claims" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 239" role="img" aria-label="Pre-existing disease waiting period comparison showing that diseases like diabetes hypertension and heart conditions have 2 to 4 year waiting periods before insurance pays for related claims" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">PRE-EXISTING DISEASE WAITING PERIOD · THE BIG TRAP FOR SENIOR CITIZEN POLICIES</text>
     {[
       { condition: "Diabetes (controlled)", wait: "2-3 years", impact: "No diabetes-related hospitalization claim for 2-3 years from policy start", color: "#f97316" },
@@ -84,12 +84,12 @@ const SvgWaitingPeriod = () => (
         <text x="318" y={50 + i * 30} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{impact.slice(0, 60)}</text>
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Buy before conditions are diagnosed. Once your parent has diabetes or hypertension documented, it's a PED and has a waiting period at every new insurer. Existing insurers retain the old waiting period on renewal.</text>
+    <text x="20" y="215" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Buy before conditions are diagnosed. Once your parent has diabetes or hypertension documented, it's a PED and has a waiting period at every new insurer. Existing insurers retain the old waiting period on renewal.</text>
   </svg>
 );
 
 const SvgSuperTopUpMath = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Super top-up insurance math showing how a 5 lakh base policy plus 20 lakh super top-up gives 25 lakh coverage for much lower total premium than buying 25 lakh directly" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 259" role="img" aria-label="Super top-up insurance math showing how a 5 lakh base policy plus 20 lakh super top-up gives 25 lakh coverage for much lower total premium than buying 25 lakh directly" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">SUPER TOP-UP: HOW TO GET ₹25L COVERAGE FOR THE PRICE OF ₹5L · SMART STRATEGY FOR PARENTS</text>
     <rect x="20" y="38" width="320" height="140" fill={COLOR} rx="8" opacity="0.25" stroke={COLOR} strokeWidth="1" />
     <text x="180" y="62" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>DIRECT ₹25L POLICY</text>
@@ -107,12 +107,12 @@ const SvgSuperTopUpMath = () => (
     <text x="540" y="165" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Saves ₹53,000/year</text>
     <rect x="200" y="196" width="320" height="30" fill="#16a34a" rx="4" />
     <text x="360" y="216" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#fff">Super top-up saves ₹53,000/year = ₹5.3L over 10 years for same coverage</text>
-    <text x="20" y="235" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Super top-up kicks in only when a single hospitalization crosses the deductible (₹5L here). Perfect for catastrophic coverage. Base policy handles routine hospitalizations.</text>
+    <text x="20" y="235" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Super top-up kicks in only when a single hospitalization crosses the deductible (₹5L here). Perfect for catastrophic coverage. Base policy handles routine hospitalizations.</text>
   </svg>
 );
 
 const SvgFlaterVsIndividual = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Floater versus individual health insurance policy comparison for parents showing that individual policies are better for older parents with different health profiles" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 219" role="img" aria-label="Floater versus individual health insurance policy comparison for parents showing that individual policies are better for older parents with different health profiles" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">FLOATER vs INDIVIDUAL POLICY FOR PARENTS · WHICH ONE TO BUY?</text>
     <rect x="20" y="38" width="320" height="130" fill="var(--raise)" stroke={COLOR} strokeWidth="1" rx="8" />
     <text x="180" y="60" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>FLOATER (₹5L shared)</text>
@@ -128,7 +128,7 @@ const SvgFlaterVsIndividual = () => (
     <text x="540" y="116" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="#16a34a">Better for parents with different health profiles</text>
     <text x="540" y="134" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="#dc2626">Higher total premium by ~15-20%</text>
     <text x="540" y="155" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Recommended for parents above 65</text>
-    <text x="20" y="195" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">For parents above 65 or with different existing conditions, individual policies are strongly recommended. The peace of mind from separate coverage outweighs the ~20% premium premium.</text>
+    <text x="20" y="195" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">For parents above 65 or with different existing conditions, individual policies are strongly recommended. The peace of mind from separate coverage outweighs the ~20% premium premium.</text>
   </svg>
 );
 

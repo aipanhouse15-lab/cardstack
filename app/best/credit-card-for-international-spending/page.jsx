@@ -25,7 +25,7 @@ const UPDATED = "June 4, 2026";
 function ForexMarkupExplainer() {
   return (
     <svg
-      viewBox="0 0 680 230"
+      viewBox="0 0 680 244"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Diagram showing how forex markup cost adds up on ₹1 lakh of international spending"
@@ -132,7 +132,7 @@ function DCCWarningDiagram() {
 function ZeroForexComparisonChart() {
   return (
     <svg
-      viewBox="0 0 680 220"
+      viewBox="0 0 680 232"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Comparison chart of forex markup rates across major Indian credit cards"
@@ -166,7 +166,7 @@ function ZeroForexComparisonChart() {
 function ATMVsCardChart() {
   return (
     <svg
-      viewBox="0 0 680 180"
+      viewBox="0 0 680 194"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Cost comparison of withdrawing cash at ATM abroad vs paying directly with card"

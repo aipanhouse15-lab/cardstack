@@ -36,7 +36,7 @@ const SvgWaterfall = () => (
 );
 
 const SvgEmiSplit = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Year by year EMI split between interest and principal showing how interest dominates first decade and principal dominates second decade" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 282" role="img" aria-label="Year by year EMI split between interest and principal showing how interest dominates first decade and principal dominates second decade" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">EMI SPLIT BY YEAR · ₹50L AT 8.75% · 20 YEAR TENURE</text>
     <line x1="40" y1="240" x2="700" y2="240" stroke="var(--border)" />
     {Array.from({ length: 20 }, (_, i) => i + 1).map(yr => {
@@ -65,7 +65,7 @@ const SvgEmiSplit = () => (
 );
 
 const SvgRateRisk = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Floating rate scenarios showing EMI variance under three repo rate paths over the loan tenure" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 242" role="img" aria-label="Floating rate scenarios showing EMI variance under three repo rate paths over the loan tenure" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">FLOATING RATE EMI VARIANCE · BASE 8.75% · 3 SCENARIOS</text>
     <line x1="60" y1="200" x2="700" y2="200" stroke="var(--border)" />
     <line x1="60" y1="50" x2="60" y2="200" stroke="var(--border)" />
@@ -84,7 +84,7 @@ const SvgRateRisk = () => (
 );
 
 const SvgTaxShelter = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Home loan tax shelter stack showing Section 24b interest deduction Section 80C principal Section 80EEA additional and combined annual saving" style={{ width: "100%", maxWidth: 760 }}>
+  <svg viewBox="0 0 720 250" role="img" aria-label="Home loan tax shelter stack showing Section 24b interest deduction Section 80C principal Section 80EEA additional and combined annual saving" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">HOME LOAN TAX SHELTER · OLD REGIME · 30% SLAB</text>
     {[
       { label: "Section 24(b) — interest", cap: 200000, w: 380, c: COLOR, save: 62400 },

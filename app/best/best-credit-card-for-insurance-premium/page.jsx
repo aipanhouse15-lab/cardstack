@@ -22,7 +22,7 @@ const UPDATED = "June 4, 2026";
 
 function ShieldHeartIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shield with heart representing insurance premium payment">
+    <svg width="44" height="44" viewBox="0 0 44 51" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shield with heart representing insurance premium payment">
       <path d="M22 4L6 10v10c0 8.284 5.928 15.637 14 17 8.072-1.363 14-8.716 14-17V10L22 4z" fill={COLOR} fillOpacity="0.12" stroke={COLOR} strokeWidth="1.5"/>
       <path d="M16 21c0-2.21 1.79-4 4-4 1.1 0 2.1.45 2.83 1.17.73-.72 1.73-1.17 2.83-1.17 2.21 0 4 1.79 4 4 0 4.41-6.83 7-7 7S16 25.41 16 21z" fill={COLOR} fillOpacity="0.5" stroke={COLOR} strokeWidth="1.2"/>
     </svg>
@@ -31,7 +31,7 @@ function ShieldHeartIcon() {
 
 function RupeeStackIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stack of rupee coins representing insurance premium amount">
+    <svg width="44" height="44" viewBox="0 0 44 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stack of rupee coins representing insurance premium amount">
       <ellipse cx="22" cy="36" rx="14" ry="5" fill={COLOR} fillOpacity="0.15" stroke={COLOR} strokeWidth="1.2"/>
       <ellipse cx="22" cy="30" rx="14" ry="5" fill={COLOR} fillOpacity="0.25" stroke={COLOR} strokeWidth="1.2"/>
       <ellipse cx="22" cy="24" rx="14" ry="5" fill={COLOR} fillOpacity="0.4" stroke={COLOR} strokeWidth="1.2"/>
@@ -61,7 +61,7 @@ function IncludedBadgeIcon() {
 
 function YearlyVsMonthlyIcon() {
   return (
-    <svg width="56" height="44" viewBox="0 0 56 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendar showing annual vs monthly premium payment comparison">
+    <svg width="56" height="44" viewBox="0 0 56 61" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendar showing annual vs monthly premium payment comparison">
       <rect x="2" y="2" width="22" height="40" rx="3" fill={COLOR} fillOpacity="0.12" stroke={COLOR} strokeWidth="1.5"/>
       <text x="13" y="18" textAnchor="middle" fontSize="7" fill={COLOR} fontWeight="700">Annual</text>
       <text x="13" y="28" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="800">1x</text>
@@ -86,7 +86,7 @@ function AmexIcon() {
 
 function LostRewardMeter() {
   return (
-    <svg width="100%" height="48" viewBox="0 0 320 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart showing reward earned vs lost on insurance premium by card type">
+    <svg width="100%" height="48" viewBox="0 0 320 68" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart showing reward earned vs lost on insurance premium by card type">
       <text x="0" y="12" fontSize="9" fill="var(--text-muted)">Reward on ₹50,000 annual premium</text>
       <rect x="0" y="18" width="200" height="12" rx="3" fill={COLOR} fillOpacity="0.7"/>
       <text x="204" y="28" fontSize="9" fill={COLOR} fontWeight="700">₹665 (HDFC Regalia)</text>

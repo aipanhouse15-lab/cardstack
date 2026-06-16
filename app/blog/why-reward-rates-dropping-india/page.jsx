@@ -22,7 +22,7 @@ const COLOR = "#ea580c";
 const UPDATED = "June 4, 2026";
 
 const SvgMdrEconomics = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="How MDR revenue is split between banks, card networks, and merchants in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 246" role="img" aria-label="How MDR revenue is split between banks, card networks, and merchants in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Where the MDR Goes — Why Reward Rates Have a Ceiling</text>
     <text x="36" y="56" fontSize="12" fill="var(--text-muted)">On a ₹1,000 credit card transaction: MDR is approximately ₹15-20 (1.5-2%)</text>
@@ -42,13 +42,13 @@ const SvgMdrEconomics = () => (
     <text x="612" y="106" textAnchor="middle" fontSize="12" fontWeight="700" fill="#16a34a">Rewards Budget</text>
     <text x="612" y="124" textAnchor="middle" fontSize="11" fill="var(--text-muted)">(from issuing bank)</text>
     <text x="612" y="144" textAnchor="middle" fontSize="18" fontWeight="800" fill="#16a34a">₹5-6</text>
-    <text x="36" y="188" fontSize="13" fill="var(--text-muted)">The issuing bank gets ~₹10 of the MDR. From this it pays processing costs, fraud costs, and rewards. As MDR gets capped or compressed, rewards are the first line item cut.</text>
-    <text x="36" y="208" fontSize="11" fill="var(--text-muted)">RBI has historically intervened in MDR for debit cards and UPI. Credit card MDR pressures may follow as digital payment policy evolves in 2026-27.</text>
+    <text x="36" y="188" fontSize="7" fill="var(--text-muted)">The issuing bank gets ~₹10 of the MDR. From this it pays processing costs, fraud costs, and rewards. As MDR gets capped or compressed, rewards are the first line item cut.</text>
+    <text x="36" y="208" fontSize="7" fill="var(--text-muted)">RBI has historically intervened in MDR for debit cards and UPI. Credit card MDR pressures may follow as digital payment policy evolves in 2026-27.</text>
   </svg>
 );
 
 const SvgAtlasDevaluation = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Axis Atlas credit card reward rate devaluation timeline April 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 230" role="img" aria-label="Axis Atlas credit card reward rate devaluation timeline April 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Axis Atlas April 2026 Devaluation — The 50% Travel Reward Cut</text>
     <rect x="36" y="54" width="308" height="100" rx="6" fill="#16a34a" opacity="0.25" />
@@ -87,12 +87,12 @@ const SvgDevaluationTimeline = () => (
         <text x="76" y={y + 22} fontSize="11" fill="var(--text-muted)">{cut}</text>
       </g>
     ))}
-    <text x="36" y="222" fontSize="11" fill="var(--text-muted)">Source: Assure Fintech tracking of card MITC changes. This list is not exhaustive — smaller cuts were more frequent.</text>
+    <text x="36" y="222" fontSize="9" fill="var(--text-muted)">Source: Assure Fintech tracking of card MITC changes. This list is not exhaustive — smaller cuts were more frequent.</text>
   </svg>
 );
 
 const SvgRbiInterventionMap = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="RBI interventions affecting credit card reward economics in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 234" role="img" aria-label="RBI interventions affecting credit card reward economics in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">How RBI Policy Shapes Card Rewards — The Regulatory Pressure</text>
     <rect x="36" y="52" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
@@ -113,7 +113,7 @@ const SvgRbiInterventionMap = () => (
         <text x="400" y={96 + i * 26} fontSize="11" fill="var(--text-muted)">{impact}</text>
       </g>
     ))}
-    <text x="36" y="206" fontSize="11" fill="var(--text-muted)">If RBI introduces credit card MDR caps similar to debit, reward rates would fall sharply industry-wide within 12-18 months.</text>
+    <text x="36" y="206" fontSize="9" fill="var(--text-muted)">If RBI introduces credit card MDR caps similar to debit, reward rates would fall sharply industry-wide within 12-18 months.</text>
   </svg>
 );
 
@@ -122,11 +122,11 @@ const SvgTravelRewardCutReasons = () => (
     <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Why Travel Rewards Are Being Cut Fastest</text>
     <text x="36" y="58" fontSize="13" fontWeight="600" fill="var(--text)">Airlines are squeezing banks out of the loyalty equation</text>
-    <text x="36" y="80" fontSize="12" fill="var(--text-muted)">Airlines have learned that customers who book directly cost them less than those who book through points programs. IndiGo, Air India, and Vistara (Air India Express) have all shifted to direct booking incentives over the past 18 months, making transfer partnerships less economically attractive for both sides.</text>
+    <text x="36" y="80" fontSize="7" fill="var(--text-muted)">Airlines have learned that customers who book directly cost them less than those who book through points programs. IndiGo, Air India, and Vistara (Air India Express) have all shifted to direct booking incentives over the past 18 months, making transfer partnerships less economically attractive for both sides.</text>
     <text x="36" y="116" fontSize="13" fontWeight="600" fill="var(--text)">Banks earn less on international travel spend</text>
-    <text x="36" y="138" fontSize="12" fill="var(--text-muted)">International transactions go through Visa/Mastercard networks at higher interchange fees — which sounds like more bank revenue. But cross-border compliance costs and hedging have compressed margins. Offering 5%+ rewards on international spend is often loss-making for issuers at current MDR levels.</text>
+    <text x="36" y="138" fontSize="7" fill="var(--text-muted)">International transactions go through Visa/Mastercard networks at higher interchange fees — which sounds like more bank revenue. But cross-border compliance costs and hedging have compressed margins. Offering 5%+ rewards on international spend is often loss-making for issuers at current MDR levels.</text>
     <text x="36" y="174" fontSize="13" fontWeight="600" fill="var(--text)">Hotel chains are following the same playbook</text>
-    <text x="36" y="196" fontSize="12" fill="var(--text-muted)">Marriott Bonvoy, Hyatt, and IHG all offer direct-booking discounts in India that exceed the points value from credit card rewards. The hotel-card partnership is under structural pressure that will continue devaluing hotel transfer rewards.</text>
+    <text x="36" y="196" fontSize="7" fill="var(--text-muted)">Marriott Bonvoy, Hyatt, and IHG all offer direct-booking discounts in India that exceed the points value from credit card rewards. The hotel-card partnership is under structural pressure that will continue devaluing hotel transfer rewards.</text>
   </svg>
 );
 
@@ -146,12 +146,12 @@ const SvgWhatToDo = () => (
         <text x="54" y={80 + i * 40} fontSize="11" fill="var(--text-muted)">{detail}</text>
       </g>
     ))}
-    <text x="36" y="210" fontSize="11" fill="var(--text-muted)">The era of 5%+ flat cashback is structurally over in India. 2-3% with careful category matching is the realistic ceiling for 2026-27.</text>
+    <text x="36" y="210" fontSize="8" fill="var(--text-muted)">The era of 5%+ flat cashback is structurally over in India. 2-3% with careful category matching is the realistic ceiling for 2026-27.</text>
   </svg>
 );
 
 const SvgCashbackVsPoints = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Comparison of cashback and reward points stability in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 210" role="img" aria-label="Comparison of cashback and reward points stability in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Cashback vs Reward Points — Devaluation Risk Compared</text>
     <rect x="36" y="52" width="308" height="110" rx="6" fill="#16a34a" opacity="0.22" />
@@ -166,7 +166,7 @@ const SvgCashbackVsPoints = () => (
     <text x="530" y="118" textAnchor="middle" fontSize="12" fill="var(--text)">Devaluation risk: High (can change without notice)</text>
     <text x="530" y="136" textAnchor="middle" fontSize="12" fill="var(--text)">Expiry: Typically 2-3 years, varies</text>
     <text x="530" y="154" textAnchor="middle" fontSize="12" fill="#ea580c" fontWeight="600">Best for: active users who redeem fast</text>
-    <text x="36" y="186" fontSize="11" fill="var(--text-muted)">Banks can change points redemption rates at any time with 30-day notice. Cash-equivalent cashback cannot be devalued without explicitly changing the cashback percentage.</text>
+    <text x="36" y="186" fontSize="7" fill="var(--text-muted)">Banks can change points redemption rates at any time with 30-day notice. Cash-equivalent cashback cannot be devalued without explicitly changing the cashback percentage.</text>
   </svg>
 );
 

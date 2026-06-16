@@ -22,7 +22,7 @@ const COLOR = "#7c3aed";
 const UPDATED = "June 4, 2026";
 
 const SvgCapBinding = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="How a 5 percent cashback rate becomes 1.5 percent when monthly cap of 500 rupees binds at 33000 rupees monthly spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 279" role="img" aria-label="How a 5 percent cashback rate becomes 1.5 percent when monthly cap of 500 rupees binds at 33000 rupees monthly spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">5% CASHBACK → 1.5% EFFECTIVE RATE · HOW THE CAP KILLS YOUR RETURN</text>
     <line x1="60" y1="220" x2="700" y2="220" stroke="var(--border)" />
     {[{ spend: "₹5K", eff: "5.0%", x: 80, h: 180, col: "#16a34a" }, { spend: "₹10K", eff: "5.0%", x: 200, h: 180, col: "#16a34a" }, { spend: "₹20K", eff: "2.5%", x: 320, h: 100, col: "#f59e0b" }, { spend: "₹33K", eff: "1.5%", x: 440, h: 55, col: "#dc2626" }, { spend: "₹50K", eff: "1.0%", x: 560, h: 36, col: "#7f1d1d" }].map(({ spend, eff, x, h, col }) => (
@@ -35,12 +35,12 @@ const SvgCapBinding = () => (
     <line x1="380" y1="40" x2="380" y2="220" stroke="#dc2626" strokeWidth="2" strokeDasharray="6,3" />
     <text x="383" y="52" fontFamily="system-ui" fontSize="10" fill="#dc2626" fontWeight="700">Cap binds here</text>
     <text x="383" y="65" fontFamily="system-ui" fontSize="10" fill="#dc2626">(₹500 cap ÷ 5% = ₹10K max)</text>
-    <text x="20" y="255" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Axis Ace: 5% on Swiggy/Zomato/Ola/Uber. Cap: ₹500/month per category. At ₹33K spend, effective rate = 1.5%. The billboard says 5%.</text>
+    <text x="20" y="255" fontFamily="system-ui" fontSize="8" fill="var(--text-muted)">Axis Ace: 5% on Swiggy/Zomato/Ola/Uber. Cap: ₹500/month per category. At ₹33K spend, effective rate = 1.5%. The billboard says 5%.</text>
   </svg>
 );
 
 const SvgBankCapTable = () => (
-  <svg viewBox="0 0 720 220" role="img" aria-label="Monthly cashback cap comparison for top 5 cashback credit cards in India showing Axis Ace HDFC Millennia SBI Cashback Amazon Pay ICICI and Flipkart Axis with their advertised rates and effective rates at different spend levels" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 239" role="img" aria-label="Monthly cashback cap comparison for top 5 cashback credit cards in India showing Axis Ace HDFC Millennia SBI Cashback Amazon Pay ICICI and Flipkart Axis with their advertised rates and effective rates at different spend levels" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">CASHBACK CAP REALITY CHECK · JUNE 2026</text>
     {[{ h: "Card" }, { h: "Headline Rate" }, { h: "Monthly Cap" }, { h: "Cap-binding Spend" }, { h: "Eff. rate at ₹50K/mo" }].map(({ h }, i) => {
       const xs = [20, 170, 290, 400, 530];
@@ -63,26 +63,26 @@ const SvgBankCapTable = () => (
         })}
       </g>
     ))}
-    <text x="20" y="215" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">*SBI Cashback has the highest cap (₹5,000/month) making it genuinely the best cashback card at high spend levels. Amazon Pay ICICI has no cap on Amazon — the only truly uncapped card for a specific ecosystem.</text>
+    <text x="20" y="215" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">*SBI Cashback has the highest cap (₹5,000/month) making it genuinely the best cashback card at high spend levels. Amazon Pay ICICI has no cap on Amazon — the only truly uncapped card for a specific ecosystem.</text>
   </svg>
 );
 
 const SvgGSTOnCashback = () => (
-  <svg viewBox="0 0 720 180" role="img" aria-label="GST on credit card annual fee affecting net cashback earned showing that at high annual fees the GST adds to effective cost reducing net return" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 192" role="img" aria-label="GST on credit card annual fee affecting net cashback earned showing that at high annual fees the GST adds to effective cost reducing net return" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">THE FEE + GST DRAG · WHAT ANNUAL FEE REALLY COSTS YOUR CASHBACK MATH</text>
     <rect x="20" y="35" width="680" height="120" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="8" />
     <text x="30" y="56" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text)">Example: Card with ₹1,000 annual fee earning 2% cashback</text>
     <text x="30" y="76" fontFamily="system-ui" fontSize="12" fill="var(--text)">Annual fee + 18% GST = ₹1,180 total fee cost</text>
     <text x="30" y="94" fontFamily="system-ui" fontSize="12" fill="var(--text)">Break-even spend for just covering the fee: ₹1,180 / 2% = ₹59,000/year = ₹4,916/month</text>
-    <text x="30" y="112" fontFamily="system-ui" fontSize="12" fill="var(--text)">At ₹20,000/month spend (₹2,40,000/year): cashback = ₹4,800 — less than fee of ₹1,180 ONLY at 0.49% effective</text>
+    <text x="30" y="112" fontFamily="system-ui" fontSize="10" fill="var(--text)">At ₹20,000/month spend (₹2,40,000/year): cashback = ₹4,800 — less than fee of ₹1,180 ONLY at 0.49% effective</text>
     <text x="30" y="130" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#dc2626">Wait: ₹4,800 cashback minus ₹1,180 fee = ₹3,620 net benefit. Still positive — but NOT 2%.</text>
     <text x="30" y="148" fontFamily="system-ui" fontSize="12" fill="var(--text)">True effective cashback rate after fee: ₹3,620 / ₹2,40,000 = 1.51%. Every fee card does this.</text>
-    <text x="20" y="168" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Always calculate: (annual cashback earned - annual fee - GST on fee) / total annual spend = TRUE cashback rate. Not the headline.</text>
+    <text x="20" y="168" fontFamily="system-ui" fontSize="8" fill="var(--text-muted)">Always calculate: (annual cashback earned - annual fee - GST on fee) / total annual spend = TRUE cashback rate. Not the headline.</text>
   </svg>
 );
 
 const SvgPartnerSpendOnly = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="Credit card cashback only on partner merchants showing that most of your spending may not qualify for the advertised high cashback rate" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 216" role="img" aria-label="Credit card cashback only on partner merchants showing that most of your spending may not qualify for the advertised high cashback rate" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">WHAT YOUR ACTUAL MONTHLY SPEND EARNS · HDFC MILLENNIA EXAMPLE</text>
     {[
       { cat: "Amazon / Flipkart (5%)", spend: 8000, earn: 400, pct: "5.0%", col: "#16a34a" },
@@ -97,12 +97,12 @@ const SvgPartnerSpendOnly = () => (
         <text x={236 + spend / 100} y={51 + i * 30} fontFamily="system-ui" fontSize="11" fill="var(--text)">₹{spend.toLocaleString()} → ₹{earn} ({pct})</text>
       </g>
     ))}
-    <text x="20" y="192" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Total ₹45,000 spend → ₹880 earned → effective rate: 1.96%. The card advertises "5% on partner merchants." Your real portfolio earns under 2%.</text>
+    <text x="20" y="192" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Total ₹45,000 spend → ₹880 earned → effective rate: 1.96%. The card advertises "5% on partner merchants." Your real portfolio earns under 2%.</text>
   </svg>
 );
 
 const SvgTrueRateComparison = () => (
-  <svg viewBox="0 0 720 200" role="img" aria-label="True effective cashback rate comparison across 5 popular credit cards after accounting for caps fees partner-only restrictions and GST" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 217" role="img" aria-label="True effective cashback rate comparison across 5 popular credit cards after accounting for caps fees partner-only restrictions and GST" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HEADLINE RATE vs TRUE RATE ON ₹40K/MONTH MIXED SPEND · JUNE 2026</text>
     {[
       { card: "Amazon Pay ICICI (Amazon spend)", headline: "5%", true: "4.8%", col: "#16a34a" },
@@ -119,12 +119,12 @@ const SvgTrueRateComparison = () => (
         <text x={296 + parseFloat(headline) * 20 + 60} y={44 + i * 32} fontFamily="system-ui" fontSize="12" fontWeight="700" fill={col}>real: {tr}</text>
       </g>
     ))}
-    <text x="20" y="193" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Amazon Pay ICICI and SBI Cashback hold up best in real-world mixed spend. Axis Ace and Flipkart Axis lose their headline rate fast when you buy outside their partner ecosystem.</text>
+    <text x="20" y="193" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Amazon Pay ICICI and SBI Cashback hold up best in real-world mixed spend. Axis Ace and Flipkart Axis lose their headline rate fast when you buy outside their partner ecosystem.</text>
   </svg>
 );
 
 const SvgHowToFind = () => (
-  <svg viewBox="0 0 720 160" role="img" aria-label="Step by step guide to finding the true cashback rate for any credit card by reading the MITC document" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 177" role="img" aria-label="Step by step guide to finding the true cashback rate for any credit card by reading the MITC document" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW TO FIND THE REAL NUMBER IN 4 STEPS</text>
     {[
       { step: "1. Download the card MITC", detail: "Most Important Terms and Conditions — every card must publish it. Find on bank website under card details." },

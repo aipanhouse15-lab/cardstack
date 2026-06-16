@@ -22,7 +22,7 @@ const COLOR = "#2563eb";
 const UPDATED = "June 4, 2026";
 
 const SvgRateHistory = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="RBI repo rate and home loan EBLR movement from 2020 to June 2026 showing the full rate cycle from 4 percent to 6.5 percent and back" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 299" role="img" aria-label="RBI repo rate and home loan EBLR movement from 2020 to June 2026 showing the full rate cycle from 4 percent to 6.5 percent and back" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">REPO RATE CYCLE 2020-2026 · WHY FIXED RATE "SAFETY" IS NOT FREE</text>
     <line x1="60" y1="240" x2="700" y2="240" stroke="var(--border)" strokeWidth="1" />
     <line x1="60" y1="40" x2="60" y2="240" stroke="var(--border)" strokeWidth="1" />
@@ -46,12 +46,12 @@ const SvgRateHistory = () => (
       <path d="M 540 52 L 552 52" stroke={COLOR} strokeWidth="2" strokeDasharray="4,2" />
       <text x="558" y="56" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">EBLR (home loan rate)</text>
     </g>
-    <text x="20" y="275" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">2022-23 rate hike cycle: EBLR jumped from 6.65% to 9.15% — floating rate borrowers paid ~₹8,000 more EMI per ₹50L. 2024-26 easing: rates fell, they benefited.</text>
+    <text x="20" y="275" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">2022-23 rate hike cycle: EBLR jumped from 6.65% to 9.15% — floating rate borrowers paid ~₹8,000 more EMI per ₹50L. 2024-26 easing: rates fell, they benefited.</text>
   </svg>
 );
 
 const SvgEmiScenarios = () => (
-  <svg viewBox="0 0 720 280" role="img" aria-label="Monthly EMI comparison for 50 lakh home loan under three rate scenarios showing fixed at 9 percent versus floating ranging from 8 to 10 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 299" role="img" aria-label="Monthly EMI comparison for 50 lakh home loan under three rate scenarios showing fixed at 9 percent versus floating ranging from 8 to 10 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">EMI SCENARIOS · ₹50L HOME LOAN · 20 YEARS · FIXED 9.0% vs FLOATING</text>
     {[
       { label: "Fixed @ 9.0% (locked)", emi: "₹44,986", color: "#7c3aed", bar: 270 },
@@ -65,12 +65,12 @@ const SvgEmiScenarios = () => (
         <text x={228 + bar} y={73 + i * 54} fontFamily="system-ui" fontSize="13" fontWeight="800" fill={color}>{emi}/mo</text>
       </g>
     ))}
-    <text x="20" y="275" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Gap between best and worst float: ₹6,429/month = ₹15.4L extra interest over 20 years. Fixed rate eliminates this uncertainty but charges a premium upfront.</text>
+    <text x="20" y="275" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">Gap between best and worst float: ₹6,429/month = ₹15.4L extra interest over 20 years. Fixed rate eliminates this uncertainty but charges a premium upfront.</text>
   </svg>
 );
 
 const SvgBreakEvenAnalysis = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Break-even analysis showing at what interest rate movement the fixed rate home loan becomes cheaper than floating over the full loan tenure" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 279" role="img" aria-label="Break-even analysis showing at what interest rate movement the fixed rate home loan becomes cheaper than floating over the full loan tenure" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">BREAK-EVEN ANALYSIS · WHEN DOES FIXED BEAT FLOATING? · ₹50L / 20 YEARS</text>
     <line x1="60" y1="220" x2="700" y2="220" stroke="var(--border)" />
     <line x1="60" y1="40" x2="60" y2="220" stroke="var(--border)" />
@@ -85,12 +85,12 @@ const SvgBreakEvenAnalysis = () => (
     <text x="300" y="235" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Rates stable</text>
     <text x="550" y="235" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Rates rise 2%+</text>
     <text x="650" y="80" fontFamily="system-ui" fontSize="10" fill="#dc2626">Floating cost</text>
-    <text x="20" y="255" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">If you believe rates will rise more than 1.2% on average over 20 years: fixed wins. If rates stay flat or fall: floating wins.</text>
+    <text x="20" y="255" fontFamily="system-ui" fontSize="8" fill="var(--text-muted)">If you believe rates will rise more than 1.2% on average over 20 years: fixed wins. If rates stay flat or fall: floating wins.</text>
   </svg>
 );
 
 const SvgTotalInterestComparison = () => (
-  <svg viewBox="0 0 720 300" role="img" aria-label="Total interest paid comparison over 20 years at various rate paths for fixed rate at 9 percent versus floating starting at 8.75 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 314" role="img" aria-label="Total interest paid comparison over 20 years at various rate paths for fixed rate at 9 percent versus floating starting at 8.75 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">20-YEAR TOTAL INTEREST COST · ₹50L LOAN · FIXED 9.0% vs FLOATING SCENARIOS</text>
     {[
       { scenario: "Fixed @ 9%", cost: "₹57.97L", color: "#7c3aed", barW: 360 },
@@ -105,12 +105,12 @@ const SvgTotalInterestComparison = () => (
         <text x={210 + barW} y={62 + i * 48} fontFamily="system-ui" fontSize="14" fontWeight="700" fill={color}>{cost}</text>
       </g>
     ))}
-    <text x="20" y="290" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">If rates fall steadily, floating saves ₹9.87L vs fixed. If rates spike sharply, floating costs ₹10.43L more. The question is: which scenario do you believe in?</text>
+    <text x="20" y="290" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">If rates fall steadily, floating saves ₹9.87L vs fixed. If rates spike sharply, floating costs ₹10.43L more. The question is: which scenario do you believe in?</text>
   </svg>
 );
 
 const SvgDecisionTree = () => (
-  <svg viewBox="0 0 720 320" role="img" aria-label="Decision tree for choosing between fixed and floating home loan rate based on loan tenure income stability and rate expectations" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 339" role="img" aria-label="Decision tree for choosing between fixed and floating home loan rate based on loan tenure income stability and rate expectations" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">FIXED vs FLOATING DECISION TREE · ANSWER 3 QUESTIONS</text>
     <rect x="270" y="35" width="180" height="44" fill={COLOR} rx="8" />
     <text x="360" y="55" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#fff">Loan tenure?</text>
@@ -135,12 +135,12 @@ const SvgDecisionTree = () => (
     <rect x="540" y="210" width="160" height="44" fill="#16a34a" rx="8" />
     <text x="620" y="230" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#fff">Floating Rate</text>
     <text x="620" y="246" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#bbf7d0">Statistically cheaper over 20yr</text>
-    <text x="20" y="315" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">No decision tree replaces personal financial planning. If EMI rising 20% would hurt your family's monthly budget, fixed is worth the premium.</text>
+    <text x="20" y="315" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">No decision tree replaces personal financial planning. If EMI rising 20% would hurt your family's monthly budget, fixed is worth the premium.</text>
   </svg>
 );
 
 const SvgBankProductTable = () => (
-  <svg viewBox="0 0 720 240" role="img" aria-label="Fixed and floating home loan rates across SBI HDFC ICICI and Axis Bank as of June 2026 showing rate premium for fixed versus floating" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+  <svg viewBox="0 0 720 254" role="img" aria-label="Fixed and floating home loan rates across SBI HDFC ICICI and Axis Bank as of June 2026 showing rate premium for fixed versus floating" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">FIXED vs FLOATING RATES ACROSS BANKS · JUNE 2026 · ₹50L / 20 YEARS / 750+ CIBIL</text>
     {[{ h: "Bank", w: 100 }, { h: "Floating Rate", w: 110 }, { h: "Fixed Rate", w: 100 }, { h: "Premium", w: 90 }, { h: "Lock-in", w: 100 }, { h: "Verdict", w: 180 }].map(({ h, w }, i) => {
       const x = [20, 120, 230, 330, 420, 520][i];
@@ -161,7 +161,7 @@ const SvgBankProductTable = () => (
         })}
       </g>
     ))}
-    <text x="20" y="230" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">SBI does not offer a true long-term fixed rate product as of June 2026. Axis Bank's fixed rate has the narrowest premium if certainty is your priority.</text>
+    <text x="20" y="230" fontFamily="system-ui" fontSize="7" fill="var(--text-muted)">SBI does not offer a true long-term fixed rate product as of June 2026. Axis Bank's fixed rate has the narrowest premium if certainty is your priority.</text>
   </svg>
 );
 
