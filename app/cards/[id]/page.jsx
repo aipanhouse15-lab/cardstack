@@ -280,7 +280,7 @@ export default function CardPage({ params }) {
                   <div className="disp" style={{ fontSize: "clamp(22px, 2.6vw, 30px)", lineHeight: 1.25, marginBottom: 16 }}>
                     {ed.verdict.headline}
                   </div>
-                  {ed.verdict.body.split("\n\n").map((para, i) => (
+                  {(ed.verdict.body || "").split("\n\n").map((para, i) => (
                     <p key={i} style={{ color: "var(--mut)", fontSize: 15, lineHeight: 1.75, marginBottom: 14 }}>{para}</p>
                   ))}
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 18 }}>
@@ -347,7 +347,7 @@ export default function CardPage({ params }) {
 
                 {ed?.capMath && (
                   <div className="prose" style={{ marginBottom: 24 }}>
-                    {ed.capMath.body.split("\n\n").map((para, i) => (
+                    {(ed.capMath.body || "").split("\n\n").map((para, i) => (
                       <p key={i}>{para}</p>
                     ))}
                   </div>
