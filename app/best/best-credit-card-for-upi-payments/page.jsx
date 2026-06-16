@@ -215,6 +215,20 @@ export default function BestCreditCardForUpiPayments() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1E0B01, #4A1C03, #1E0B01)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #ea580c22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Best Credit Card for UPI Payments in India (June 2026)
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
+        </div>
+      </div>
     <main
       style={{
         maxWidth: 800,
@@ -257,9 +271,6 @@ export default function BestCreditCardForUpiPayments() {
         UPI Payments
       </div>
 
-      <h1 style={{ fontSize: "clamp(26px, 5vw, 38px)", fontWeight: 800, lineHeight: 1.2, margin: "0 0 16px" }}>
-        Best Credit Card for UPI Payments in India (June 2026)
-      </h1>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 12px" }}>
         Paying your Swiggy order on GPay with your Axis ACE card? You earned 0 rewards. Here's what actually works.
@@ -670,5 +681,6 @@ export default function BestCreditCardForUpiPayments() {
         <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. UPI reward structures are based on NPCI and bank communications as of {UPDATED}. RuPay credit card UPI rewards are subject to change by NPCI and individual issuers. This is not financial advice. Verify current reward structures with the issuing bank before making decisions. Assure Fintech may earn referral fees from some card issuers, which does not influence editorial content.
       </footer>
     </main>
+    </>
   );
 }

@@ -288,6 +288,23 @@ export default function BlogShouldYouCloseOldCreditCard() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1C0404, #460C0C, #1C0404)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #dc262622, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Cibil
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Should You Close Your Old Credit Card? The CIBIL Impact Is Real and It Will Surprise You
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Closing an old credit card feels like tidying up your finances. It is actually one of the most common ways people accidentally hurt their credit score right before a major loan.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -296,13 +313,7 @@ export default function BlogShouldYouCloseOldCreditCard() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Should You Close Old Credit Card
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · CIBIL</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>Should You Close Your Old Credit Card? The CIBIL Impact Is Real and It Will Surprise You</h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>Closing an old credit card feels like tidying up your finances. It is actually one of the most common ways people accidentally hurt their credit score right before a major loan.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Myth: Closing Cards Cleans Up Your Credit Profile</h2>
         <p>The thinking is intuitive: fewer cards means simpler finances, less exposure, cleaner credit report. This is wrong. CIBIL and other Indian credit bureaus score you better when you have a long, well-managed credit history across multiple accounts.</p>
         <p>Closing an old card does not remove its positive history from your report immediately, but it does remove it from your live credit age calculation. Within 2-7 years, the closed account drops off your report entirely, erasing years of good behaviour you spent building.</p>
@@ -379,5 +390,6 @@ export default function BlogShouldYouCloseOldCreditCard() {
         Assure Fintech is an independent comparison platform. CIBIL score ranges and home loan interest rate bands are indicative as of June 4, 2026. Actual loan rates depend on bank-specific policies and individual credit profiles. This is not financial advice.
       </footer>
     </main>
+    </>
   );
 }

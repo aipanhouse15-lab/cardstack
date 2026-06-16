@@ -167,17 +167,27 @@ export default function PageHRACalculation() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #021509, #073417, #021509)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #16a34a22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Tax · Hra · Exemption Calculator
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            HRA Calculation: The Exact Formula, With Your Real Numbers for Mumbai, Delhi, and Bangalore
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/tax" style={{ color: "inherit" }}>Tax</Link> / HRA Calculation</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>TAX · HRA · EXEMPTION CALCULATOR</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>HRA Calculation: The Exact Formula, With Your Real Numbers for Mumbai, Delhi, and Bangalore</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>HRA is one of the largest tax exemptions available to salaried employees. Most people know it exists but miscalculate it, miss documentation, or don't claim it at all. Here's the full formula with worked examples.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What HRA Is (And What It's Not)</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>House Rent Allowance (HRA) is a salary component your employer pays to cover your housing costs. It's not a deduction you claim — it's money your employer already gives you. The HRA exemption under Section 10(13A) is what keeps part of that HRA out of your taxable income.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For salaried employees in metro cities paying high rents, this exemption can save ₹60,000-1,00,000+ per year in income tax. It's one of the few genuine benefits of being salaried versus self-employed (who cannot claim HRA, only a deduction against rental income).</p>
@@ -237,5 +247,6 @@ export default function PageHRACalculation() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/tax" style={{ color: COLOR }}>tax hub</Link> · <Link href="/learn/tax/80c-beyond-the-obvious" style={{ color: COLOR }}>80C beyond the obvious</Link> · <Link href="/learn/loans" style={{ color: COLOR }}>home loan guides</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: HRA rules from Income Tax Act Section 10(13A) and Rule 2A. Tax examples for FY 2025-26. Metro city classification per IT department guidelines. Not tax advice — consult a CA for your specific situation. Last verified {UPDATED}.</footer>
     </main>
+    </>
   );
 }

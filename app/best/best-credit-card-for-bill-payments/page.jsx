@@ -185,6 +185,20 @@ export default function BestCreditCardForBillPayments() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #021509, #073417, #021509)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #16a34a22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Best Credit Card for Bill Payments in India (June 2026)
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
+        </div>
+      </div>
     <main
       style={{
         maxWidth: 800,
@@ -227,9 +241,6 @@ export default function BestCreditCardForBillPayments() {
         Utility Bills
       </div>
 
-      <h1 style={{ fontSize: "clamp(26px, 5vw, 38px)", fontWeight: 800, lineHeight: 1.2, margin: "0 0 16px" }}>
-        Best Credit Card for Bill Payments in India (June 2026)
-      </h1>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 12px" }}>
         Axis ACE is the only card that rewards your electricity bill at 5%. Everyone else gives you 1% or nothing.
@@ -665,5 +676,6 @@ export default function BestCreditCardForBillPayments() {
         <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Reward rates and exclusions are based on issuer terms as of {UPDATED}. BBPS routing and MCC classifications can vary. Always confirm the applicable reward rate on your specific bill payment with the card issuer before relying on this guide for financial planning. Assure Fintech may earn referral fees from some card issuers.
       </footer>
     </main>
+    </>
   );
 }

@@ -148,17 +148,29 @@ export default function BlogBuild3CardStack() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #10071E, #27124B, #10071E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #7c3aed22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Strategy · Card Stacking
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            How to Build a 3-Card Stack: Cover Every Rupee at 3-5% (Instead of 1%)
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            One card can't cover all your spending at the best rate. But 3 well-chosen cards, used correctly, can raise your blended cashback from 1% to 3.5-4.5% across your entire monthly spend. Here's the strategy.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Build 3-Card Stack Guide</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · STRATEGY · CARD STACKING</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>How to Build a 3-Card Stack: Cover Every Rupee at 3-5% (Instead of 1%)</h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>One card can't cover all your spending at the best rate. But 3 well-chosen cards, used correctly, can raise your blended cashback from 1% to 3.5-4.5% across your entire monthly spend. Here's the strategy.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
-
-      <section style={{ marginBottom: 28 }}>
+<section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Core Principle: No Single Card Wins Everything</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Every cashback card in India is optimized for specific categories — Amazon, Swiggy, fuel, travel. Using one card for all spending means you're earning the best rate only on spending that hits the card's specific strength, and a generic 1% on everything else.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>A 3-card stack solves this. Each card covers one or two categories at maximum rate, and together they cover your full spend. The result: 3-4.5% effective rate versus 1.5-2% on a single card.</p>
@@ -204,5 +216,6 @@ export default function BlogBuild3CardStack() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 16 }}>Related: <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder tool</Link> · <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> · <Link href="/blog/cashback-rate-is-a-lie" style={{ color: COLOR }}>cashback rate is a lie</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>Card details verified as of {UPDATED}. Cashback rates and caps subject to change. Not financial advice.</footer>
     </main>
+    </>
   );
 }

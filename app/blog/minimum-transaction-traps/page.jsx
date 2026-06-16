@@ -315,6 +315,23 @@ export default function BlogMinimumTransactionTraps() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1C0404, #460C0C, #1C0404)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #dc262622, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Warning
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Read This Before You Swipe: The Minimum Transaction Traps Eating Your Rewards
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            From the ₹100 floor that silently kills small-purchase rewards to a cash advance that costs 92% annualised — here is the fine print your card company hoped you would not read.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -323,17 +340,7 @@ export default function BlogMinimumTransactionTraps() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Minimum Transaction Traps
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · WARNING</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>
-        Read This Before You Swipe: The Minimum Transaction Traps Eating Your Rewards
-      </h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>
-        From the ₹100 floor that silently kills small-purchase rewards to a cash advance that costs 92% annualised — here is the fine print your card company hoped you would not read.
-      </p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
-
-      <div style={{ background: "var(--red-dim)", border: "1px solid rgba(255,90,72,.3)", borderRadius: 8, padding: "16px 20px", marginBottom: 24 }}>
+<div style={{ background: "var(--red-dim)", border: "1px solid rgba(255,90,72,.3)", borderRadius: 8, padding: "16px 20px", marginBottom: 24 }}>
         <p style={{ fontSize: 14, fontWeight: 700, color: COLOR, margin: "0 0 6px" }}>Before you spend another rupee on rewards</p>
         <p style={{ fontSize: 13, color: "var(--text-muted)", margin: 0 }}>
           This article documents traps that exist in the terms and conditions of cards issued by HDFC, Axis, SBI, ICICI, and Kotak — all legal, all disclosed, and almost never explained at point of sale. Knowing these will save you real money.
@@ -459,5 +466,6 @@ export default function BlogMinimumTransactionTraps() {
         Assure Fintech is an independent comparison site. Rates, fees, and terms cited are for informational purposes and may change. Always verify current terms with your card issuer before making financial decisions. This article is not financial advice. Last reviewed June 4, 2026.
       </footer>
     </main>
+    </>
   );
 }

@@ -259,6 +259,23 @@ export default function BlogRegaliaVsInfinia() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #10071E, #27124B, #10071E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #7c3aed22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Premium Comparison
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            HDFC Regalia vs Infinia: The Definitive 2026 Comparison
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            One is the country's most popular premium card. The other is its richer, harder-to-get sibling. Here's the honest numbers-first breakdown of which one actually makes sense for you.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -267,13 +284,7 @@ export default function BlogRegaliaVsInfinia() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / HDFC Regalia vs Infinia
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · PREMIUM COMPARISON</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>HDFC Regalia vs Infinia: The Definitive 2026 Comparison</h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>One is the country's most popular premium card. The other is its richer, harder-to-get sibling. Here's the honest numbers-first breakdown of which one actually makes sense for you.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
-
-      <section style={{ marginBottom: 28 }}>
+<section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Setup: Two Different Markets</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>HDFC Regalia and Infinia are not actually competing for the same customer. Regalia targets professionals spending ₹3 to 8 lakh a year who want a premium card without a premium headache. Infinia targets high-networth individuals spending ₹10 lakh or more who fly internationally and value unlimited lounge access above all else.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>The problem is that everyone in between, the ₹8 to 12 lakh spender, gets misled by the brand aspirationality of Infinia without doing the actual math. Let's fix that.</p>
@@ -357,5 +368,6 @@ export default function BlogRegaliaVsInfinia() {
         Assure Fintech is an independent comparison platform. Reward rates, fees, and benefit structures change periodically. The analysis above uses HDFC's published terms as of June 2026. Verify current terms on HDFC's website before applying. We may earn a referral fee on approved applications.
       </footer>
     </main>
+    </>
   );
 }

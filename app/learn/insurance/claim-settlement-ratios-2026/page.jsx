@@ -157,17 +157,27 @@ export default function PageClaimSettlementRatios() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1D0309, #480917, #1D0309)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #e11d4822, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Insurance · Claim Settlement · Irdai Data
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Claim Settlement Ratios 2026: The Only Insurer Metric That Actually Matters
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/insurance" style={{ color: "inherit" }}>Insurance</Link> / Claim Settlement Ratios 2026</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>INSURANCE · CLAIM SETTLEMENT · IRDAI DATA</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Claim Settlement Ratios 2026: The Only Insurer Metric That Actually Matters</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Every insurer advertises a high CSR. But CSR alone hides a lot. The complaint ratio, the ICR for health insurance, and the rejection reasons tell a more complete story — and some insurers don't want you reading them together.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What CSR Actually Measures (And Its Blind Spots)</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Claim Settlement Ratio (CSR) is the percentage of claims settled by an insurer in a financial year out of total claims received. A CSR of 98.5% means 98.5 out of every 100 claims were paid. Sounds great. And it generally is — but with important caveats.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>CSR counts numbers of claims, not value of claims. An insurer can settle 1,000 small claims of ₹10,000 each (total ₹1 crore) and reject one large claim of ₹1 crore — and still report a 99.9% CSR. The single large rejected claim represents 50% of the payout value, but barely moves the CSR needle.</p>
@@ -226,5 +236,6 @@ export default function PageClaimSettlementRatios() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link> · <Link href="/learn/insurance/term-insurance-real-value" style={{ color: COLOR }}>term insurance real value</Link> · <Link href="/learn/insurance/health-insurance-for-parents" style={{ color: COLOR }}>health insurance for parents</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: CSR and ICR data from IRDAI Annual Report 2025-26 (irdai.gov.in). Complaint ratios from IRDAI Integrated Grievance Management System. Not financial advice. Buy insurance from licensed intermediaries. Last verified {UPDATED}.</footer>
     </main>
+    </>
   );
 }

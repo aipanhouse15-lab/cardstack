@@ -205,6 +205,20 @@ export default function PagePersonalLoanAPR() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #040C1E, #0B1F4B, #040C1E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #2563eb22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Loans · Personal Loans · Apr Explained
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Your Personal Loan Is Not 10.5% — The Real APR Is Closer to 14%
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -213,13 +227,8 @@ export default function PagePersonalLoanAPR() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Personal Loan APR
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>LOANS · PERSONAL LOANS · APR EXPLAINED</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Your Personal Loan Is Not 10.5% — The Real APR Is Closer to 14%</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Banks advertise the interest rate. They bury the processing fee, GST, insurance add-on, and net disbursement gap. Add it all up and the honest number is 3–5% higher than what the billboard says.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Loan That Didn't Quite Make Sense</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Rohan is a 28-year-old software engineer in Bangalore with a ₹85,000 monthly salary and a CIBIL score of 762. He needed ₹5 lakh for a home renovation, applied to HDFC Bank, and got an offer at "10.5% interest."</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>He accepted. When the money hit his account, he noticed ₹4,80,250 instead of ₹5,00,000. His EMI was ₹16,247 for 36 months. He ran the math. Total repaid: ₹5,84,892. Plus the ₹19,750 already deducted upfront. Total outgo: ₹6,04,642.</p>
@@ -319,5 +328,6 @@ export default function PagePersonalLoanAPR() {
         Editorial disclaimer: rates and fees verified against SBI, HDFC Bank, ICICI Bank, Axis Bank, and Kotak Mahindra Bank public disclosures as of {UPDATED}. RBI guidelines referenced from Master Directions on Interest Rate on Advances (2016, updated 2024). Not financial advice. Rates change — verify with lender before applying.
       </footer>
     </main>
+    </>
   );
 }

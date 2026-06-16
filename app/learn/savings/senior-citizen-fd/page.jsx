@@ -150,17 +150,27 @@ export default function PageSeniorCitizenFD() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1A1100, #402C01, #1A1100)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #ca8a0422, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Savings · Fixed Deposits · Senior Citizens
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Senior Citizen FD Rates June 2026: The 0.5% Extra Is Worth ₹1.8L on ₹20L Over 5 Years
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/savings" style={{ color: "inherit" }}>Savings</Link> / Senior Citizen FD</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>SAVINGS · FIXED DEPOSITS · SENIOR CITIZENS</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Senior Citizen FD Rates June 2026: The 0.5% Extra Is Worth ₹1.8L on ₹20L Over 5 Years</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Senior citizens get 0.25-0.50% more than regular FD rates — and with Section 80TTB and Form 15H, many retired investors pay zero tax on ₹50,000 of interest income. Here's the full picture with June 2026 rates.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Senior Citizen Rate Advantage</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Banks are required by RBI to offer senior citizens (age 60 and above) at least 0.25% extra interest on FDs compared to the general public rate. Most banks offer 0.50% extra for 1-3 year FDs, their most common senior citizen product.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>On ₹20 lakh invested at 7.5% (SBI senior rate) versus 7.0% (SBI regular rate): the extra 0.50% generates ₹10,000 per year more in interest. Over 5 years with reinvestment, that's approximately ₹1.8 lakh extra. Free money, purely for being above 60 years of age.</p>
@@ -207,5 +217,6 @@ export default function PageSeniorCitizenFD() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/savings" style={{ color: COLOR }}>savings hub</Link> · <Link href="/learn/savings/fd-real-return" style={{ color: COLOR }}>FD real return</Link> · <Link href="/learn/savings/ppf-vs-fd-vs-debt-fund" style={{ color: COLOR }}>PPF vs FD vs Debt Fund</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: FD rates from bank websites as of {UPDATED}. SCSS rate from Ministry of Finance Q1 FY 2026-27. 80TTB from Income Tax Act. DICGC from dicgc.rbi.org.in. Not financial advice.</footer>
     </main>
+    </>
   );
 }

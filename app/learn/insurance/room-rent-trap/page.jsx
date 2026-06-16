@@ -158,17 +158,27 @@ export default function PageRoomRentTrap() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1D0309, #480917, #1D0309)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #e11d4822, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Insurance · Health Insurance · Claim Traps
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            The Room Rent Trap: How a 1% Limit Turns Your ₹5L Claim Into a ₹1.8L Payout
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/insurance" style={{ color: "inherit" }}>Insurance</Link> / Room Rent Trap</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>INSURANCE · HEALTH INSURANCE · CLAIM TRAPS</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>The Room Rent Trap: How a 1% Limit Turns Your ₹5L Claim Into a ₹1.8L Payout</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>You have a ₹5 lakh health insurance policy. You're admitted to hospital. You choose a comfortable single AC room. Your insurer pays ₹1.8 lakh. The rest is on you. The room rent sub-limit clause is the most underdiscussed trap in health insurance.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Meera's Hospital Bill: A ₹1.65L Surprise</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Meera had a ₹2 lakh health insurance policy — one she'd been paying premiums on for 6 years. When she needed a knee surgery, she was admitted to a good network hospital in Pune, chose a single AC room (₹3,000/day), had a smooth 5-day stay, and came home relieved that insurance would cover most of it.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Her total bill was ₹5,00,000. The insurer settled ₹3,35,000. She owed ₹1,65,000 out of her own pocket. Her policy's sum insured was ₹5 lakh — more than the entire bill. She should have been covered in full. What happened?</p>
@@ -225,5 +235,6 @@ export default function PageRoomRentTrap() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link> · <Link href="/learn/insurance/copay-vs-no-copay" style={{ color: COLOR }}>copay vs no copay</Link> · <Link href="/learn/insurance/health-insurance-for-parents" style={{ color: COLOR }}>health insurance for parents</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: insurer policy terms from policy wordings as of {UPDATED}. Proportionate deduction examples are illustrative based on standard 1% SI/day limit policies. Always read your specific policy document. Not financial advice.</footer>
     </main>
+    </>
   );
 }

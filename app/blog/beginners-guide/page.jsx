@@ -252,6 +252,23 @@ export default function BlogBeginnersGuide() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #011217, #022E38, #011217)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #0891b222, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Beginners
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Your First Credit Card in India: Everything You Actually Need to Know (2026)
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            A credit card is one of the most useful financial tools in India when used correctly. It is also the most expensive debt you can carry. This guide covers both sides, so you start on the right foot.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -260,20 +277,7 @@ export default function BlogBeginnersGuide() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / First Credit Card Guide India
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · BEGINNERS</div>
-
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>
-        Your First Credit Card in India: Everything You Actually Need to Know (2026)
-      </h1>
-
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>
-        A credit card is one of the most useful financial tools in India when used correctly. It is also the most expensive debt you can carry. This guide covers both sides, so you start on the right foot.
-      </p>
-
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What a credit card actually is</h2>
         <p>A credit card is a short-term loan facility from a bank. You spend on the card, the bank pays the merchant on your behalf, and you repay the bank by the due date. If you repay the full amount, you pay zero interest. If you carry any balance past the due date, you pay 3% to 3.5% monthly interest, which is 36% to 42% per year.</p>
         <p>The reason to get a credit card is not to borrow money. It is to use the 20-50 day free credit window while earning rewards on spending you were going to do anyway. Think of it as a tool that pays you to buy groceries and Zomato orders, as long as you pay the full bill every month without fail.</p>
@@ -379,5 +383,6 @@ export default function BlogBeginnersGuide() {
         Assure Fintech is an independent financial comparison site. This guide is for educational purposes only and does not constitute financial advice. CIBIL score impacts, interest rates, and card recommendations are based on publicly available data as of June 2026. Actual card terms, approval criteria, and interest rates vary by bank and applicant profile. Consult the issuing bank's MITC document before applying. Assure Fintech receives no payment from card issuers for editorial coverage.
       </footer>
     </main>
+    </>
   );
 }

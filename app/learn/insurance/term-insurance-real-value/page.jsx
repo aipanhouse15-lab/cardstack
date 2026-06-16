@@ -160,17 +160,27 @@ export default function PageTermInsuranceRealValue() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1D0309, #480917, #1D0309)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #e11d4822, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Insurance · Term Life · Coverage Math
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Is ₹1 Crore Term Cover Actually Enough? The Inflation Math Your Agent Won't Show You
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/insurance" style={{ color: "inherit" }}>Insurance</Link> / Term Insurance Real Value</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>INSURANCE · TERM LIFE · COVERAGE MATH</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Is ₹1 Crore Term Cover Actually Enough? The Inflation Math Your Agent Won't Show You</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Everyone sells you ₹1 crore term cover. After 30 years of inflation, that ₹1 crore has the purchasing power of ₹17 lakh. Meanwhile, your family's actual financial need is 2-4× more than the round number being advertised.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The ₹1 Crore Illusion</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Walk into any insurance comparison website in India and the default recommendation is ₹1 crore term cover. It's a clean, easy-to-remember number. It's also frequently wrong for most salaried Indians.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The problem is twofold. First, ₹1 crore sounds like a lot but may be insufficient for your family's actual needs — especially if you have a home loan, kids with 10+ years of education ahead, and aging parents who depend on you. Second, ₹1 crore in 2026 is not ₹1 crore in 2046 or 2056.</p>
@@ -230,5 +240,6 @@ export default function PageTermInsuranceRealValue() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link> · <Link href="/learn/insurance/claim-settlement-ratios-2026" style={{ color: COLOR }}>claim settlement ratios 2026</Link> · <Link href="/learn/insurance/health-insurance-for-parents" style={{ color: COLOR }}>health insurance for parents</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: premiums from Tata AIA, HDFC Life, Max Life, ICICI Pru, LIC online portals as of {UPDATED}. IRDAI CSR from Annual Report 2025-26. Inflation projections are illustrative. Not financial advice.</footer>
     </main>
+    </>
   );
 }

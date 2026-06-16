@@ -267,6 +267,20 @@ export default function BestCreditCardForGroceries() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #021509, #073417, #021509)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #16a34a22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Best Credit Card for Groceries in India (June 2026)
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -279,10 +293,6 @@ export default function BestCreditCardForGroceries() {
       <div style={{ display: "inline-block", background: COLOR, color: "#fff", fontSize: 11, fontWeight: 700, letterSpacing: 1, padding: "4px 10px", borderRadius: 4, marginBottom: 16 }}>
         CREDIT CARDS · GROCERIES
       </div>
-
-      <h1 style={{ fontSize: "clamp(24px, 4vw, 36px)", fontWeight: 800, color: "var(--text)", marginBottom: 12, lineHeight: 1.2 }}>
-        Best Credit Card for Groceries in India (June 2026)
-      </h1>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", marginBottom: 16 }}>
         The April 2026 Axis Airtel devaluation killed the most popular grocery card. Here is what to use now, including one card most people have never heard of.
@@ -449,5 +459,6 @@ export default function BestCreditCardForGroceries() {
         <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Card terms including grocery category inclusions, caps, and partner lists verified as of {UPDATED}. The Axis Airtel card devaluation details are based on the April 2026 revised terms. RBL ShopRite terms subject to change. Always verify current benefit terms with the issuing bank before applying. This is not financial advice.
       </footer>
     </main>
+    </>
   );
 }

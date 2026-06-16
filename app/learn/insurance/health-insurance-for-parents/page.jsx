@@ -155,17 +155,27 @@ export default function PageHealthInsuranceParents() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1D0309, #480917, #1D0309)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #e11d4822, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Insurance · Health · Senior Citizen Policies
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Health Insurance for Parents Above 60: Real Prices, Real Waiting Periods, Real Traps (June 2026)
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/insurance" style={{ color: "inherit" }}>Insurance</Link> / Health Insurance for Parents</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>INSURANCE · HEALTH · SENIOR CITIZEN POLICIES</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Health Insurance for Parents Above 60: Real Prices, Real Waiting Periods, Real Traps (June 2026)</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Premium jumps 5x between age 35 and 60. Pre-existing diseases mean your parents may not be covered for their most likely health events for 2-4 years. And the cheapest policies have room rent traps. Here's what to actually buy.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Why Parents' Health Insurance Is a Different Problem</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Buying health insurance for a 30-year-old is straightforward. Buy any decent plan, it's affordable, and the probability of a major claim in the next 10 years is low. Buying for parents above 60 is a completely different exercise.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The premium is 4-8x higher. Pre-existing conditions (diabetes, hypertension, heart issues — conditions extremely common in Indians above 60) trigger multi-year waiting periods. Insurers are stricter about what they'll cover. And the stakes are higher — the probability of hospitalization above 60 is significantly higher than at 35.</p>
@@ -217,5 +227,6 @@ export default function PageHealthInsuranceParents() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link> · <Link href="/learn/insurance/room-rent-trap" style={{ color: COLOR }}>room rent trap</Link> · <Link href="/learn/insurance/copay-vs-no-copay" style={{ color: COLOR }}>copay vs no copay</Link> · <Link href="/learn/insurance/claim-settlement-ratios-2026" style={{ color: COLOR }}>claim settlement ratios 2026</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: premiums approximate for age 60-62, non-smoking, ₹5L SI from insurer websites as of {UPDATED}. Policy terms from product wordings. IRDAI portability guidelines from irdai.gov.in. Not financial advice. Get personalized quotes before buying.</footer>
     </main>
+    </>
   );
 }

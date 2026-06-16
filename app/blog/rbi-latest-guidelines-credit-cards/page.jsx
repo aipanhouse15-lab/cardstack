@@ -255,6 +255,23 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1C0404, #460C0C, #1C0404)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #dc262622, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Regulation
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            RBI Credit Card Guidelines 2026: What Changed and What It Means for You
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Seven regulations that give Indian credit card holders concrete rights. Most people do not know these exist, which is exactly why banks sometimes ignore them.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -263,16 +280,7 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / RBI Credit Card Guidelines 2026
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · REGULATION</div>
-
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>
-        RBI Credit Card Guidelines 2026: What Changed and What It Means for You
-      </h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>
-        Seven regulations that give Indian credit card holders concrete rights. Most people do not know these exist, which is exactly why banks sometimes ignore them.
-      </p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
+<div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
         Last updated {UPDATED} · By Ash K · 11 min read
       </div>
 
@@ -361,5 +369,6 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
         This article is based on RBI's Master Direction on Credit Card and Debit Card Issuance and Conduct and associated circulars current as of June 2026. Regulatory guidelines are subject to revision. Verify the current position of any rule at rbi.org.in before taking action. Assure Fintech is not a legal or financial advisory firm. This content is for informational purposes only. Last verified June 4, 2026.
       </footer>
     </main>
+    </>
   );
 }

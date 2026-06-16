@@ -153,17 +153,27 @@ export default function PagePPFvsFDvsDebtFund() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1A1100, #402C01, #1A1100)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #ca8a0422, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Savings · Comparison · Tax-efficient Instruments
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            PPF vs FD vs Debt Mutual Fund: Who Wins ₹10L Over 10 Years? (June 2026)
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/savings" style={{ color: "inherit" }}>Savings</Link> / PPF vs FD vs Debt Fund</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>SAVINGS · COMPARISON · TAX-EFFICIENT INSTRUMENTS</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>PPF vs FD vs Debt Mutual Fund: Who Wins ₹10L Over 10 Years? (June 2026)</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Three products. All "safe." Very different post-tax outcomes over 10 years. For a 30% slab investor, PPF returns ₹19.7L, debt fund ₹16.8L, and FD ₹13.6L on the same ₹10L. The difference is almost entirely tax treatment.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The 10-Year Math Fight</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>All three products are commonly described as "safe" — and they are, in the sense that capital loss is minimal to zero. But safety in nominal terms doesn't mean identical outcomes. Over 10 years, the gap between best and worst case is ₹6.1 lakh on a ₹10L investment. That's 61% of the original principal as the difference between choosing wisely and choosing lazily.</p>
         <SvgOutcome10yr />
@@ -211,5 +221,6 @@ export default function PagePPFvsFDvsDebtFund() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/savings" style={{ color: COLOR }}>savings hub</Link> · <Link href="/learn/savings/fd-real-return" style={{ color: COLOR }}>FD real return</Link> · <Link href="/learn/savings/tax-saving-fd-vs-elss-vs-ppf" style={{ color: COLOR }}>tax saving FD vs ELSS vs PPF</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: PPF rate from Ministry of Finance Q1 FY 2026-27. FD rates from bank websites as of {UPDATED}. Tax treatment from Income Tax Act (Finance Act 2025). Not financial advice.</footer>
     </main>
+    </>
   );
 }

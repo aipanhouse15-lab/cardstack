@@ -225,6 +225,20 @@ export default function BestCreditCardForHighIncomeEarners() {
   ];
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #07080A, #111419, #07080A)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #37415122, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Best Credit Card for High Income Earners in India (June 2026)
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -239,10 +253,6 @@ export default function BestCreditCardForHighIncomeEarners() {
         <IconPremium />
         <span style={{ background: ACCENT, color: "#fff", borderRadius: 20, padding: "3px 12px", fontSize: 12, fontWeight: 600, letterSpacing: 0.4 }}>PREMIUM GUIDE</span>
       </div>
-
-      <h1 style={{ fontSize: "clamp(24px,4vw,36px)", fontWeight: 800, lineHeight: 1.25, marginBottom: 14, color: ACCENT }}>
-        Best Credit Card for High Income Earners in India (June 2026)
-      </h1>
 
       <p style={{ fontSize: 18, color: "var(--text-muted,#475569)", marginBottom: 10, fontWeight: 500 }}>
         At ₹15 lakh+ annual income, the credit card math changes dramatically. Reward rates that seemed niche now pay for themselves in months, and the invite-only tier opens up.
@@ -502,5 +512,6 @@ export default function BestCreditCardForHighIncomeEarners() {
         </p>
       </footer>
     </main>
+    </>
   );
 }

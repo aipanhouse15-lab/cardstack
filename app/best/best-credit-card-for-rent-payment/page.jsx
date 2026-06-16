@@ -209,6 +209,20 @@ export default function BestCreditCardForRentPayment() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1C0404, #460C0C, #1C0404)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #dc262622, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Best Credit Card for Rent Payment in India (June 2026)
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+        </div>
+      </div>
     <main
       style={{
         maxWidth: 800,
@@ -251,9 +265,6 @@ export default function BestCreditCardForRentPayment() {
         Rent Payments
       </div>
 
-      <h1 style={{ fontSize: "clamp(26px, 5vw, 38px)", fontWeight: 800, lineHeight: 1.2, margin: "0 0 16px" }}>
-        Best Credit Card for Rent Payment in India (June 2026)
-      </h1>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 12px" }}>
         Paying rent on a credit card sounds smart. The math usually says otherwise. Here's when it works and when it quietly costs you money.
@@ -651,5 +662,6 @@ export default function BestCreditCardForRentPayment() {
         <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Processing fees and reward structures are based on platform and issuer terms as of {UPDATED} and are subject to change. Always verify current fees on the payment platform and reward rates on the card issuer's website before making rent payment decisions. This is not financial advice. Assure Fintech may earn referral fees from some card issuers.
       </footer>
     </main>
+    </>
   );
 }

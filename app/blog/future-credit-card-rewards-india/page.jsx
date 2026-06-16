@@ -273,6 +273,23 @@ export default function BlogFutureCreditCardRewardsIndia() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #011217, #022E38, #011217)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #0891b222, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Strategy
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            The Future of Credit Card Rewards in India: What Survives, What Doesn't
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            UPI is eating card volume, ONDC could kill co-branded rewards overnight, and lounge access is being gated behind spend thresholds. The structural pressures on Indian credit card rewards are real and not reversing. Here is what that means for your card strategy.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -281,16 +298,7 @@ export default function BlogFutureCreditCardRewardsIndia() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Future Credit Card Rewards India
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · STRATEGY</div>
-
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>
-        The Future of Credit Card Rewards in India: What Survives, What Doesn't
-      </h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>
-        UPI is eating card volume, ONDC could kill co-branded rewards overnight, and lounge access is being gated behind spend thresholds. The structural pressures on Indian credit card rewards are real and not reversing. Here is what that means for your card strategy.
-      </p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
+<div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
         Last updated {UPDATED} · By Ash K · 10 min read
       </div>
 
@@ -374,5 +382,6 @@ export default function BlogFutureCreditCardRewardsIndia() {
         Forward-looking analysis in this article is based on publicly available information about market trends, regulatory announcements, and bank communications current as of June 2026. Predictions about future reward structures are the editorial opinion of Assure Fintech and not guarantees. Verify all card terms, reward rates, and policies at the issuing bank's official website before making financial decisions. Assure Fintech is an independent comparison platform and is not affiliated with any bank, airline, or loyalty program mentioned. Last verified June 4, 2026.
       </footer>
     </main>
+    </>
   );
 }

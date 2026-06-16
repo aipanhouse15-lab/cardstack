@@ -276,6 +276,23 @@ export default function BlogRightWayPayCreditCardBill() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #011217, #022E38, #011217)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #0891b222, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · How-to
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            The Right Way to Pay Your Credit Card Bill — Most People Do This Wrong
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Missing the due date by one day on a ₹50,000 balance can cost ₹2,750 in fees and interest — wiping out a whole quarter of rewards. Here is every decision point, with the correct answer.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -284,17 +301,7 @@ export default function BlogRightWayPayCreditCardBill() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Right Way to Pay Credit Card Bill
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · HOW-TO</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>
-        The Right Way to Pay Your Credit Card Bill — Most People Do This Wrong
-      </h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>
-        Missing the due date by one day on a ₹50,000 balance can cost ₹2,750 in fees and interest — wiping out a whole quarter of rewards. Here is every decision point, with the correct answer.
-      </p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Single Most Important Decision: Full Amount or Minimum Due</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           Your statement shows two numbers: the total amount due and the minimum amount due. Most cardholders understand these are different; far fewer understand how catastrophically different the consequences are.
@@ -411,5 +418,6 @@ export default function BlogRightWayPayCreditCardBill() {
         Assure Fintech is an independent comparison site. Interest rates, fees, and terms cited are for illustrative purposes based on commonly observed card terms as of June 2026. Always verify current rates with your specific card issuer. This article is not financial advice.
       </footer>
     </main>
+    </>
   );
 }

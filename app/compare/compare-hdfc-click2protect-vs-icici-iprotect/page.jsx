@@ -72,6 +72,23 @@ export default function CompareHdfcVsIciciTerm() {
   const Td = ({ children, hi }) => <td style={{ padding: 12, fontSize: 14, borderBottom: "1px solid var(--border)", color: hi ? COLOR : "var(--text)", fontWeight: hi ? 700 : 400 }}>{children}</td>;
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1C050F, #460C26, #1C050F)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #DB277722, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Insurance · Compare · Term Life
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            HDFC Click 2 Protect Super vs ICICI Pru iProtect Smart — term life face-off in 2026
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Two of the most-applied online term plans in India. Both have 99%+ claim settlement ratios, identical 100-year max expiry, and substantially the same coverage scope. The differentiator is premium — and ICICI runs roughly 1-3% cheaper across most age bands.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -80,16 +97,7 @@ export default function CompareHdfcVsIciciTerm() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 20 }} aria-label="Breadcrumb">
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/compare" style={{ color: "inherit" }}>Compare</Link> / Click 2 Protect vs iProtect Smart
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>INSURANCE · COMPARE · TERM LIFE</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>
-        HDFC Click 2 Protect Super vs ICICI Pru iProtect Smart — term life face-off in 2026
-      </h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 22px" }}>
-        Two of the most-applied online term plans in India. Both have 99%+ claim settlement ratios, identical 100-year max expiry, and substantially the same coverage scope. The differentiator is premium — and ICICI runs roughly 1-3% cheaper across most age bands.
-      </p>
-
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
+<div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span><span>·</span><span>By Ash K</span>
       </div>
 
@@ -181,5 +189,6 @@ export default function CompareHdfcVsIciciTerm() {
         Editorial disclaimer — sum assured ranges, rider menus, and CSR figures sourced from each insurer's policy wording, brochures, and IRDAI FY25 annual report, verified on {UPDATED}. Premium illustrations are indicative; actual premium depends on age, gender, smoking, occupation, and full medical underwriting. Not insurance advice; consult a licensed advisor.
       </footer>
     </main>
+    </>
   );
 }

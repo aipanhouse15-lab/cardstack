@@ -336,6 +336,20 @@ export default function BestCreditCardForTravel() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #011217, #022E38, #011217)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #0891b222, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Best Credit Card for Travel in India (June 2026)
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+        </div>
+      </div>
     <main
       style={{
         maxWidth: 800,
@@ -370,10 +384,6 @@ export default function BestCreditCardForTravel() {
       >
         Travel Cards
       </div>
-
-      <h1 style={{ fontSize: "clamp(24px, 4vw, 34px)", fontWeight: 800, lineHeight: 1.2, marginBottom: 14, color: "var(--text)" }}>
-        Best Credit Card for Travel in India (June 2026)
-      </h1>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", marginBottom: 10 }}>
         Most travel cards in India advertise miles but never tell you how far those miles actually fly you. Here is the honest number.
@@ -684,5 +694,6 @@ export default function BestCreditCardForTravel() {
         <strong>Disclaimer:</strong> Assure Fintech is an independent editorial site. We do not have a banking license and do not provide financial advice regulated under SEBI or RBI guidelines. Card terms, rewards rates, and partner lists change frequently. Verify all details with the issuing bank before applying. Some links on this page may earn us a referral fee, which does not influence our rankings or editorial opinions.
       </footer>
     </main>
+    </>
   );
 }

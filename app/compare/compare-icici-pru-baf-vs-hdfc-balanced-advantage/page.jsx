@@ -76,6 +76,23 @@ export default function CompareIciciVsHdfcBaf() {
   const Td = ({ children, hi }) => <td style={{ padding: 12, fontSize: 14, borderBottom: "1px solid var(--border)", color: hi ? COLOR : "var(--text)", fontWeight: hi ? 700 : 400 }}>{children}</td>;
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #011217, #022E38, #011217)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #0891B222, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Mutual Funds · Compare · Balanced Advantage
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            ICICI Pru BAF vs HDFC Balanced Advantage — defensive vs growth BAF in 2026
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Both are equity-tax-treated dynamic allocation funds. Same SEBI category, same arbitrage-based 65% equity floor — but two completely different valuation philosophies translate into different risk profiles. Pick by the drawdown you can stomach, not the headline CAGR.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 880, margin: "0 auto", padding: "48px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -84,16 +101,7 @@ export default function CompareIciciVsHdfcBaf() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 20 }} aria-label="Breadcrumb">
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/compare" style={{ color: "inherit" }}>Compare</Link> / ICICI Pru BAF vs HDFC BAF
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>MUTUAL FUNDS · COMPARE · BALANCED ADVANTAGE</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>
-        ICICI Pru BAF vs HDFC Balanced Advantage — defensive vs growth BAF in 2026
-      </h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 22px" }}>
-        Both are equity-tax-treated dynamic allocation funds. Same SEBI category, same arbitrage-based 65% equity floor — but two completely different valuation philosophies translate into different risk profiles. Pick by the drawdown you can stomach, not the headline CAGR.
-      </p>
-
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
+<div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span><span>·</span><span>By Ash K</span>
       </div>
 
@@ -180,5 +188,6 @@ export default function CompareIciciVsHdfcBaf() {
         Editorial disclaimer — equity-allocation ranges, CAGR, drawdown, AUM, and TER figures from AMC factsheets and AMFI consolidated data verified on {UPDATED}. BAF tax treatment requires gross 65%+ equity (including arbitrage) and is subject to scheme-specific certification. Not investment advice; consult a SEBI-registered advisor.
       </footer>
     </main>
+    </>
   );
 }

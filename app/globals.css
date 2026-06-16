@@ -492,3 +492,7 @@ main p:last-child { margin-bottom: 0; }
 main section { margin-bottom: 22px; }
 main h2 { margin-top: 8px; }
 main h3 { margin-top: 4px; }
+
+/* ── ARTICLE CONTENT SPACING ── */
+main p { margin: 0 0 14px; }
+main p:last-child { margin-bottom: 0; }

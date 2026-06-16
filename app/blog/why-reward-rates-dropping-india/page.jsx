@@ -271,6 +271,23 @@ export default function BlogWhyRewardRatesDropping() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1E0B01, #4A1C03, #1E0B01)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #ea580c22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Investigative
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Why Indian Credit Card Reward Rates Are Dropping — And What It Means for Your Card
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Axis Atlas just cut travel rewards by 50%. Scapia slashed its international rate twice. HDFC split its Swiggy card. This is not a coincidence — there is a structural economic story here, and understanding it changes how you should manage your cards.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -279,17 +296,7 @@ export default function BlogWhyRewardRatesDropping() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Why Reward Rates Are Dropping in India
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · INVESTIGATIVE</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>
-        Why Indian Credit Card Reward Rates Are Dropping — And What It Means for Your Card
-      </h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>
-        Axis Atlas just cut travel rewards by 50%. Scapia slashed its international rate twice. HDFC split its Swiggy card. This is not a coincidence — there is a structural economic story here, and understanding it changes how you should manage your cards.
-      </p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Headline: What Has Actually Been Cut</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           In the 18 months between January 2025 and June 2026, nearly every premium Indian credit card has seen a meaningful reduction in its headline reward rate. Some cuts were announced with fanfare — "restructuring for better value." Most were buried in MITC updates that 95% of cardholders never read.
@@ -395,5 +402,6 @@ export default function BlogWhyRewardRatesDropping() {
         Assure Fintech is an independent comparison site. Devaluation dates and rate changes are based on publicly available MITC documents and cardholder reports tracked by Assure Fintech as of June 2026. The Axis Atlas, Scapia, and HDFC Swiggy data reflects changes communicated via MITC updates. Always verify current terms with your issuer. This article is not financial advice.
       </footer>
     </main>
+    </>
   );
 }

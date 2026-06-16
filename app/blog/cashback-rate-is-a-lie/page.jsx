@@ -161,17 +161,29 @@ export default function BlogCashbackRateIsALie() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #10071E, #27124B, #10071E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #7c3aed22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Cashback · Math Check
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            The Cashback Rate Is a Lie: Your 5% Card Is Probably Earning You 1.5-2%
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Monthly caps. Partner-only rates. Annual fee drag. By the time you add it all up, that flashy 5% cashback card is giving most households about 1.5-2% on their actual spending. Here's the honest math.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / The Cashback Rate Is a Lie</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · CASHBACK · MATH CHECK</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>The Cashback Rate Is a Lie: Your 5% Card Is Probably Earning You 1.5-2%</h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>Monthly caps. Partner-only rates. Annual fee drag. By the time you add it all up, that flashy 5% cashback card is giving most households about 1.5-2% on their actual spending. Here's the honest math.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
-
-      <section style={{ marginBottom: 28 }}>
+<section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Monthly Cap Problem</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Every popular cashback card in India has a monthly cap — a maximum amount of cashback you can earn in a calendar month. The Axis Ace card, India's most talked-about cashback card, advertises 5% on Swiggy, Zomato, Ola, Uber, and other UPI-linked apps. That's real. The cap: ₹500 per month across all these categories combined.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>₹500 cap at 5% means the cap binds once you've spent ₹10,000 in those categories. If you order Swiggy ₹6,000, Ola ₹3,000, and Zomato ₹5,000 per month (₹14,000 total), the extra ₹4,000 earns exactly zero additional cashback. Your effective rate just dropped to 3.57%. At ₹20,000 monthly in those categories: 2.5%. At ₹33,000: 1.5%.</p>
@@ -219,5 +231,6 @@ export default function BlogCashbackRateIsALie() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 16 }}>Related: <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link> · <Link href="/blog/reward-points-vs-cashback" style={{ color: COLOR }}>reward points vs cashback</Link> · <Link href="/blog/build-3-card-stack-guide" style={{ color: COLOR }}>build a 3-card stack</Link> · <Link href="/blog/best-free-cards" style={{ color: COLOR }}>best free cards</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>Card terms verified against MITC documents as of {UPDATED}. Effective rates are estimates based on typical spend distributions. Not financial advice.</footer>
     </main>
+    </>
   );
 }

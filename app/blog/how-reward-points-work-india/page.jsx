@@ -205,17 +205,29 @@ export default function BlogHowRewardPointsWorkIndia() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #10071E, #27124B, #10071E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #7c3aed22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Rewards Explained
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            How Reward Points Actually Work in India: Earn Rates, Expiry, and Real Rupee Value
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Your card says "5x reward points." What does that actually mean in rupees? Less than the bank wants you to think, and more than you are probably getting right now.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / How Reward Points Work in India</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · REWARDS EXPLAINED</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>How Reward Points Actually Work in India: Earn Rates, Expiry, and Real Rupee Value</h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>Your card says "5x reward points." What does that actually mean in rupees? Less than the bank wants you to think, and more than you are probably getting right now.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
-
-      <section style={{ marginBottom: 28 }}>
+<section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 1: Understanding How Points Are Earned</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Every Indian credit card earns points based on your spend, but the units and thresholds vary by bank. HDFC Reward Points are earned per ₹150 spent. Amex Membership Rewards are earned per ₹50 spent. SBI and Kotak cards typically use ₹100 as the base unit.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This matters because if you spend ₹149 on HDFC Millennia, you earn zero points for that transaction. Amounts that do not hit the earn threshold are essentially free money for the bank.</p>
@@ -295,5 +307,6 @@ export default function BlogHowRewardPointsWorkIndia() {
         Editorial note: Assure Fintech does not accept payment for favorable coverage. Reward point values cited are based on bank redemption portals as of June 2026. Portal values and transfer partners change frequently. Verify current redemption rates before making large redemption decisions. This article is for informational purposes and does not constitute financial advice.
       </footer>
     </main>
+    </>
   );
 }

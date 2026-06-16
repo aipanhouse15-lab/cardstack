@@ -260,6 +260,20 @@ export default function BestCreditCardForInsurancePremium() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #011217, #022E38, #011217)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #0891b222, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Best Credit Card for Insurance Premium Payment in India (June 2026)
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+        </div>
+      </div>
     <main
       style={{
         maxWidth: 800,
@@ -302,9 +316,6 @@ export default function BestCreditCardForInsurancePremium() {
         Insurance Premiums
       </div>
 
-      <h1 style={{ fontSize: "clamp(26px, 5vw, 38px)", fontWeight: 800, lineHeight: 1.2, margin: "0 0 16px" }}>
-        Best Credit Card for Insurance Premium Payment in India (June 2026)
-      </h1>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 12px" }}>
         Paying your ₹50,000 annual insurance premium on the wrong card costs you ₹665 in lost rewards. Here's how to not leave it on the table.
@@ -708,5 +719,6 @@ export default function BestCreditCardForInsurancePremium() {
         <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Reward structures, exclusion lists, and insurance premium policies are based on issuer terms as of {UPDATED}. Reward values listed are estimates based on standard redemption rates and may vary. This is not insurance advice or financial advice. Verify current card T&amp;C with the issuing bank and insurance terms with your insurer. Assure Fintech may earn referral fees from some card issuers.
       </footer>
     </main>
+    </>
   );
 }

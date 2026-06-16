@@ -162,17 +162,27 @@ export default function PageDirectVsRegular() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #10071E, #27124B, #10071E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #7c3aed22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Mutual Funds · Direct Plans · Expense Ratio
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Direct vs Regular Mutual Fund: The 1% That Becomes ₹47 Lakh Over 20 Years
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/mutual-funds" style={{ color: "inherit" }}>Mutual Funds</Link> / Direct vs Regular</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>MUTUAL FUNDS · DIRECT PLANS · EXPENSE RATIO</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Direct vs Regular Mutual Fund: The 1% That Becomes ₹47 Lakh Over 20 Years</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Same fund, same fund manager, same portfolio. Just 1% higher expense ratio in the regular plan. On a ₹10,000 SIP for 20 years, that 1% costs you ₹47 lakh. And your bank RM benefits from every rupee of it.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Same Fund, Two Prices</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Every mutual fund in India exists in two versions: direct plan and regular plan. Same fund manager. Same portfolio of stocks or bonds. Same investment objective. The only difference is the expense ratio — the annual fee the fund charges as a percentage of assets under management.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Direct plans have lower expense ratios because there's no distributor commission. Regular plans pay a trailing commission (typically 0.5-1.5% per year) to whoever sold you the fund — your bank RM, ICICI Direct, Zerodha Regular (if you bought through a broker), or an independent financial advisor.</p>
@@ -227,5 +237,6 @@ export default function PageDirectVsRegular() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link> · <Link href="/learn/mutual-funds/cagr-vs-actual-return" style={{ color: COLOR }}>CAGR vs actual return</Link> · <Link href="/learn/mutual-funds/sip-advertised-vs-actual" style={{ color: COLOR }}>SIP advertised vs actual</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: expense ratio data from AMFI and fund house websites as of {UPDATED}. Wealth projections based on 12% gross return assumption. Past performance not indicative of future returns. Not investment advice.</footer>
     </main>
+    </>
   );
 }

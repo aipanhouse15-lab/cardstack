@@ -151,17 +151,27 @@ export default function PageSIPAdvertisedVsActual() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #10071E, #27124B, #10071E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #7c3aed22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Mutual Funds · Sip · Realistic Returns
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            SIP Returns: Why the 15% You See in Ads Often Becomes 10-12% in Your Account
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/mutual-funds" style={{ color: "inherit" }}>Mutual Funds</Link> / SIP Advertised vs Actual</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>MUTUAL FUNDS · SIP · REALISTIC RETURNS</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>SIP Returns: Why the 15% You See in Ads Often Becomes 10-12% in Your Account</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Fund advertisements always show the best possible return window. Your SIP starts at a different time. Here's the realistic expectation, how to set real goals, and why step-up SIP is the only honest fix for the inflation problem.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Advertisement's Honest Asterisk</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Every mutual fund advertisement in India has a disclaimer: "Past performance is not indicative of future returns." It's printed in small type at the bottom. The headline in big type says "18% returns in 10 years" or "₹10,000 SIP becomes ₹3 crore."</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The headline is technically accurate. For the specific 10-year window the fund chose to show. The small print captures the rest of the truth: that window was cherry-picked, your entry point is different, and the exact sequence of annual returns determines what you actually earn.</p>
@@ -209,5 +219,6 @@ export default function PageSIPAdvertisedVsActual() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link> · <Link href="/learn/mutual-funds/cagr-vs-actual-return" style={{ color: COLOR }}>CAGR vs actual return</Link> · <Link href="/learn/mutual-funds/direct-vs-regular" style={{ color: COLOR }}>direct vs regular</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: return data from AMFI, Value Research, and NSE India. Rolling return analysis based on Nifty 50 TRI data. Projections for illustrative purposes. Not investment advice. Past returns do not guarantee future performance. Last verified {UPDATED}.</footer>
     </main>
+    </>
   );
 }

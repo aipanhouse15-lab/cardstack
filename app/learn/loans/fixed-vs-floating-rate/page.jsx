@@ -187,6 +187,20 @@ export default function PageFixedVsFloating() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #040C1E, #0B1F4B, #040C1E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #2563eb22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Loans · Home Loans · Rate Type
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Fixed vs Floating Home Loan Rate: The ₹10L Question Nobody Answers For You
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -195,13 +209,8 @@ export default function PageFixedVsFloating() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Fixed vs Floating Rate
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>LOANS · HOME LOANS · RATE TYPE</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Fixed vs Floating Home Loan Rate: The ₹10L Question Nobody Answers For You</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Over 20 years, picking the wrong rate type can cost you more than a decent used car. The answer depends on one number banks don't proactively tell you: the break-even rate movement.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Choice That Matters More Than the Bank You Pick</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Most people spend hours comparing banks when they take a home loan. Which bank has the lower rate? Which has better customer service? Those are fine questions. But the fixed-vs-floating decision can swing your total interest cost by ₹8–15 lakh over a 20-year loan — far more than the rate difference between SBI and HDFC.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>And yet, banks actively discourage this comparison. Fixed rate products are aggressively pitched during rate-hike cycles ("lock in before it goes higher!"). Floating products are pushed during falling rate environments ("why pay a premium for certainty you don't need?"). The advice always favours selling you the more profitable product at that moment.</p>
@@ -288,5 +297,6 @@ export default function PageFixedVsFloating() {
         Editorial disclaimer: rates verified against SBI, HDFC Bank, ICICI Bank, and Axis Bank public disclosures as of {UPDATED}. RBI repo rate history from RBI.org.in. EBLR data from respective bank websites. Not financial advice — consult a SEBI-registered financial advisor before making long-tenure loan decisions.
       </footer>
     </main>
+    </>
   );
 }

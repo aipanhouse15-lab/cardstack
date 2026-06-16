@@ -248,6 +248,23 @@ export default function BlogFuelTrick() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #10071E, #27124B, #10071E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #7c3aed22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Fuel Optimization
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            The Fuel Card Trick: Stop Paying the 1% Surcharge and Earn 4-7% Back at the Pump
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Every time you pay fuel with a regular credit card, you lose about ₹118 per ₹10,000. The right fuel card flips that into a ₹425-725 gain. Here is the complete optimization guide.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -256,20 +273,7 @@ export default function BlogFuelTrick() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Fuel Card Trick
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · FUEL OPTIMIZATION</div>
-
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>
-        The Fuel Card Trick: Stop Paying the 1% Surcharge and Earn 4-7% Back at the Pump
-      </h1>
-
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>
-        Every time you pay fuel with a regular credit card, you lose about ₹118 per ₹10,000. The right fuel card flips that into a ₹425-725 gain. Here is the complete optimization guide.
-      </p>
-
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The surcharge problem nobody explains clearly</h2>
         <p>When you swipe any credit card at a petrol bunk, the Visa or Mastercard network adds a 1% fuel surcharge to your transaction. This is not charged by the petrol station, it is levied by the card network for fuel category transactions. The government then charges 18% GST on this surcharge, so your actual extra cost is 1.18% above the pump price.</p>
         <p>On ₹5,000/month in fuel, that is ₹59/month or ₹708/year quietly exiting your wallet. A fuel-specific card eliminates this and adds rewards on top.</p>
@@ -351,5 +355,6 @@ export default function BlogFuelTrick() {
         Assure Fintech is an independent comparison site. Fuel surcharge waiver terms, reward rates, and annual fee conditions are based on publicly available bank documentation as of June 2026. Petrol station brand availability varies by city and location. Verify all terms at the issuing bank's website before applying. Assure Fintech receives no payment from banks for editorial coverage.
       </footer>
     </main>
+    </>
   );
 }

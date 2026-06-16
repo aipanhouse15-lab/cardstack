@@ -187,6 +187,20 @@ export default function PagePrepaymentTrap() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #040C1E, #0B1F4B, #040C1E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #2563eb22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Loans · Home Loans · Traps To Avoid
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            The Prepayment Trap: Banks Quietly Collect ₹60,000–₹1.6L When You Try to Become Debt-Free Early
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -195,13 +209,8 @@ export default function PagePrepaymentTrap() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Prepayment Penalty Trap
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>LOANS · HOME LOANS · TRAPS TO AVOID</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>The Prepayment Trap: Banks Quietly Collect ₹60,000–₹1.6L When You Try to Become Debt-Free Early</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>You get a bonus. You decide to kill your home loan faster. You call your bank. Then the executive mentions a "small prepayment charge." It isn't small. And nobody told you this when you signed.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Priya's Story: The Bonus That Didn't Help</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Priya took a ₹50L home loan from HDFC Bank in 2021 at a fixed rate of 8.35% for 20 years. By mid-2024, she'd been promoted twice and got a ₹15L performance bonus. Her first thought: knock a chunk off the home loan. Less debt, less stress.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>She called HDFC. The executive told her she could prepay, but there would be a 2.5% prepayment penalty on the outstanding amount. Her outstanding balance was ₹47.8L. Penalty: ₹1,19,500. Plus 18% GST: ₹21,510. Total cost to prepay: ₹1,41,010.</p>
@@ -284,5 +293,6 @@ export default function PagePrepaymentTrap() {
         Editorial disclaimer: prepayment penalty terms verified against SBI, HDFC Bank, ICICI Bank, Axis Bank, and Kotak sanction letter templates as of {UPDATED}. RBI Master Directions on prepayment penalties cited from rbi.org.in. Not financial advice. Loan terms vary by applicant profile and may have changed after this publication date.
       </footer>
     </main>
+    </>
   );
 }

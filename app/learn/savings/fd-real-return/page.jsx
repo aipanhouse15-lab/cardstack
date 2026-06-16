@@ -158,17 +158,27 @@ export default function PageFDRealReturn() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1A1100, #402C01, #1A1100)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #ca8a0422, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Savings · Fixed Deposits · Real Returns
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Your FD Is Not Giving You 7%: The Real Return (After Tax and Inflation) Is Often Near Zero
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/savings" style={{ color: "inherit" }}>Savings</Link> / FD Real Return</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>SAVINGS · FIXED DEPOSITS · REAL RETURNS</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Your FD Is Not Giving You 7%: The Real Return (After Tax and Inflation) Is Often Near Zero</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>A 7% FD looks safe and reliable. But at 30% tax slab, the post-tax return is 4.9%. After 5% inflation, the real wealth gain is 0.4% — and in some years negative. Here's the full picture your bank branch doesn't show you.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The 7% That Isn't 7%</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>India's largest banks offer FD rates between 7.00% and 7.40% for regular citizens as of June 2026. The advertising emphasizes these rates prominently. What's rarely discussed is what actually reaches your pocket after the government takes its cut and after you account for rising prices.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The honest accounting has three steps: gross FD rate, minus your income tax rate applied to the interest, minus the year's consumer price inflation. What remains is your real return — the actual increase in your purchasing power.</p>
@@ -224,5 +234,6 @@ export default function PageFDRealReturn() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/savings" style={{ color: COLOR }}>savings hub</Link> · <Link href="/learn/savings/ppf-vs-fd-vs-debt-fund" style={{ color: COLOR }}>PPF vs FD vs Debt Fund</Link> · <Link href="/learn/savings/senior-citizen-fd" style={{ color: COLOR }}>senior citizen FD</Link> · <Link href="/learn/savings/tax-saving-fd-vs-elss-vs-ppf" style={{ color: COLOR }}>tax saving FD vs ELSS vs PPF</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: FD rates from SBI, HDFC Bank, ICICI Bank, Kotak, Unity SFB, Suryoday SFB websites as of {UPDATED}. Tax slabs from Income Tax Act (Finance Act 2025). CPI from MOSPI data. Not financial advice.</footer>
     </main>
+    </>
   );
 }

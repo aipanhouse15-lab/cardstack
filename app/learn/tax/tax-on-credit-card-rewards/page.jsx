@@ -160,17 +160,27 @@ export default function PageTaxOnCreditCardRewards() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #021509, #073417, #021509)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #16a34a22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Tax · Credit Cards · Reward Points
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Are Your Credit Card Reward Points Taxable? It Depends on One Thing Banks Never Tell You
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/tax" style={{ color: "inherit" }}>Tax</Link> / Tax on Credit Card Rewards</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>TAX · CREDIT CARDS · REWARD POINTS</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Are Your Credit Card Reward Points Taxable? It Depends on One Thing Banks Never Tell You</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>For most personal card users: no, rewards are not taxable. But business card rewards, referral bonuses, lucky draw prizes, and redemptions above ₹50,000 from non-spend sources are a different story.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The CBDT Position: Rewards Are Discounts, Not Income</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The Central Board of Direct Taxes has never issued a comprehensive circular specifically on credit card rewards. This silence is itself the answer: the operating interpretation in practice (and accepted in most CA opinions) is that reward points earned on personal card spending are a form of rebate or discount on the purchase price — not income.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The logic: when you spend ₹100 and earn 5 reward points worth ₹5, you effectively paid ₹95 for the item. The ₹5 in rewards is not additional income — it's a reduction in your effective purchase cost. Airlines and hotels treat frequent flyer miles the same way: a discount on future purchases, not taxable income.</p>
@@ -224,5 +234,6 @@ export default function PageTaxOnCreditCardRewards() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/tax" style={{ color: COLOR }}>tax hub</Link> · <Link href="/learn/tax/80c-beyond-the-obvious" style={{ color: COLOR }}>80C beyond the obvious</Link> · <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link></p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: tax interpretation based on Income Tax Act provisions and prevailing CA community practice as of {UPDATED}. CBDT has not issued specific guidance on credit card rewards. This is general information, not tax advice. Consult a CA for your specific situation.</footer>
     </main>
+    </>
   );
 }

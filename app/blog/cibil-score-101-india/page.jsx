@@ -217,17 +217,29 @@ export default function BlogCibilScore101India() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1E0B01, #4A1C03, #1E0B01)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #ea580c22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Score · Fundamentals
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            CIBIL Score 101: Ranges, Factors, How to Read Your Report, and Fastest Ways to Improve
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Your CIBIL score follows you to every bank, every loan application, and every credit card you ever apply for. Here is everything you need to know to understand it, read it, and improve it.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / CIBIL Score 101</nav>
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT SCORE · FUNDAMENTALS</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>CIBIL Score 101: Ranges, Factors, How to Read Your Report, and Fastest Ways to Improve</h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>Your CIBIL score follows you to every bank, every loan application, and every credit card you ever apply for. Here is everything you need to know to understand it, read it, and improve it.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
-
-      <section style={{ marginBottom: 28 }}>
+<section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What Is a CIBIL Score and Why Does It Matter?</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>TransUnion CIBIL is the largest credit bureau in India. Your CIBIL score is a three-digit number between 300 and 900 that summarizes your creditworthiness based on your past borrowing and repayment behavior.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Banks use it to decide two things: whether to approve your loan or credit card application, and at what interest rate. A difference of 50 points can be the difference between a 8.5% and a 9.5% home loan. On ₹50 lakhs over 20 years, that 1% gap is about ₹6-8 lakh in extra interest.</p>
@@ -312,5 +324,6 @@ export default function BlogCibilScore101India() {
         Editorial note: Assure Fintech does not accept payment for favorable coverage. Score ranges, factor weights, and regulatory timelines are sourced from TransUnion CIBIL published documentation and RBI circulars as of June 2026. Individual score impacts vary by credit profile. This article is for informational purposes only and does not constitute financial advice. For personal credit advice, consult a SEBI-registered financial advisor.
       </footer>
     </main>
+    </>
   );
 }

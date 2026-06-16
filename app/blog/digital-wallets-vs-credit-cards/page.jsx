@@ -268,6 +268,23 @@ export default function BlogDigitalWalletsVsCreditCards() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #011217, #022E38, #011217)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #0891b222, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Wallets
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Digital Wallets vs Credit Cards: Which One Actually Pays You Back in India?
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Paytm, PhonePe, Google Pay — everyone uses them. But wallets stopped rewarding you years ago. Here is what the honest math looks like in 2026.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -276,13 +293,7 @@ export default function BlogDigitalWalletsVsCreditCards() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Digital Wallets vs Credit Cards
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · WALLETS</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>Digital Wallets vs Credit Cards: Which One Actually Pays You Back in India?</h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>Paytm, PhonePe, Google Pay — everyone uses them. But wallets stopped rewarding you years ago. Here is what the honest math looks like in 2026.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Core Confusion: Wallet vs Payment Rail</h2>
         <p>Most people think of PhonePe or Google Pay as "wallets." They are not — they are UPI apps that use your bank account as the payment source. A wallet is a separate stored-balance product, like Paytm Wallet or Amazon Pay Balance.</p>
         <p>The distinction matters enormously for rewards. UPI bank transfers earn zero reward. Wallets earn zero reward. Your credit card, however, earns 1-5% back on the same rupee — which is why choosing the right payment method is worth the two extra seconds.</p>
@@ -359,5 +370,6 @@ export default function BlogDigitalWalletsVsCreditCards() {
         Assure Fintech is an independent comparison platform. Card features, reward rates, and RBI regulations are accurate as of June 4, 2026, but may change. Verify current terms on the issuing bank's website before applying. This is not financial advice.
       </footer>
     </main>
+    </>
   );
 }

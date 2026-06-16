@@ -247,6 +247,23 @@ export default function BlogBestCardInsurancePremiums2026() {
   };
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #1E0B01, #4A1C03, #1E0B01)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #ea580c22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Insurance
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Best Credit Card for Insurance Premium Payments in India 2026: The Tricky Part Nobody Mentions
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            You pay ₹20,000-₹60,000 a year in insurance premiums. Most credit cards earn you nothing on it. The ones that do earn can return ₹500-₹900 per year from that spend alone.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -255,13 +272,7 @@ export default function BlogBestCardInsurancePremiums2026() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Best Card for Insurance Premiums 2026
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · INSURANCE</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 14px" }}>Best Credit Card for Insurance Premium Payments in India 2026: The Tricky Part Nobody Mentions</h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>You pay ₹20,000-₹60,000 a year in insurance premiums. Most credit cards earn you nothing on it. The ones that do earn can return ₹500-₹900 per year from that spend alone.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Why Insurance Premiums Are the Most Misunderstood Spend Category</h2>
         <p>Insurance premiums are typically the largest annual credit card transaction most families make outside of EMIs. A family of four paying LIC, health insurance, and term insurance can easily put ₹70,000-₹1,00,000 a year through their card from insurance alone.</p>
         <p>The problem is that the most popular cashback cards in India — SBI Cashback Card being the most prominent example — explicitly exclude insurance from their high-reward categories. Millions of people pay their premiums on these cards assuming they are earning 5% cashback. They are earning nothing.</p>
@@ -336,5 +347,6 @@ export default function BlogBestCardInsurancePremiums2026() {
         Assure Fintech is an independent comparison platform. Insurance premium earning rules, card fees, and reward rates are accurate as of June 4, 2026 and subject to change by issuing banks. Always verify current terms directly with your card issuer before making a large premium payment. This is not financial advice and does not constitute insurance or investment advice. Insurance products are regulated by IRDAI.
       </footer>
     </main>
+    </>
   );
 }

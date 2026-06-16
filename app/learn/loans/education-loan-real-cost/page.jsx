@@ -193,6 +193,20 @@ export default function PageEducationLoanRealCost() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #040C1E, #0B1F4B, #040C1E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #2563eb22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Loans · Education Loans · The Full Math
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            Your ₹15L Education Loan Becomes ₹22L Before Your First Job: The Complete Cost Breakdown
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -201,13 +215,8 @@ export default function PageEducationLoanRealCost() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Education Loan Real Cost
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>LOANS · EDUCATION LOANS · THE FULL MATH</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Your ₹15L Education Loan Becomes ₹22L Before Your First Job: The Complete Cost Breakdown</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Banks explain the moratorium. They rarely explain what happens to your loan amount during it. Here's the full math on interest capitalization, the 80E benefit, and how to minimise total repayment.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Ananya's Loan: The Number That Kept Growing</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Ananya was 22 when she got into a two-year MBA program at a reputed private business school. Tuition, hostel, and living expenses came to ₹15 lakh over two years. She applied to Axis Bank's education loan product, got approved at 11% interest, and signed without reading the fine print carefully.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The RM explained: "Your loan has a moratorium. You don't pay anything during your studies and for 6 months after graduation. You start EMI when you get a job." This sounded generous. Ananya agreed.</p>
@@ -293,5 +302,6 @@ export default function PageEducationLoanRealCost() {
         Editorial disclaimer: loan rates verified against SBI, Axis Bank, HDFC Credila, Bank of Baroda, and IDBI Bank public disclosures as of {UPDATED}. Section 80E reference from Income Tax Act, 1961 (updated through Finance Act 2025). SBI Scholar Loan eligible institute list from SBI.co.in. Not financial advice. Rates change — verify with lender before applying.
       </footer>
     </main>
+    </>
   );
 }

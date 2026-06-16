@@ -94,6 +94,23 @@ export default function CompareSbiVsAmazonIcici() {
   const Td = ({ children, hi }) => <td style={{ padding: 12, fontSize: 14, borderBottom: "1px solid var(--border)", color: hi ? COLOR : "var(--text)", fontWeight: hi ? 700 : 400 }}>{children}</td>;
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #10071E, #27124B, #10071E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #7C3AED22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Compare
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            SBI Cashback vs Amazon Pay ICICI 2026 — which online-shopper card actually wins
+          </h1>
+          <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.65, maxWidth: 560, marginBottom: 20 }}>
+            Direct answer: it depends on your Amazon concentration. If your monthly online spend is Amazon Prime-heavy (above ₹15,000 of monthly Amazon spend), the lifetime-free Amazon Pay ICICI wins through the no-cap 5 percent Prime rate. If your online spend is diversified across Flipkart, Myntra, Cleartrip, and other platforms, SBI Cashback's 5 percent flat rate on all online merchants beats ICICI's 1 percent rate on non-Amazon online. The two cards target opposite spend patterns despite both being "online cashback" products. The fee differential matters too — ICICI is free, SBI charges ₹999.
+          </p>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 880, margin: "0 auto", padding: "44px 22px 96px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -102,16 +119,7 @@ export default function CompareSbiVsAmazonIcici() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }} aria-label="Breadcrumb">
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/compare" style={{ color: "inherit" }}>Compare</Link> / SBI Cashback vs Amazon ICICI
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · COMPARE</div>
-      <h1 style={{ fontSize: 32, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>
-        SBI Cashback vs Amazon Pay ICICI 2026 — which online-shopper card actually wins
-      </h1>
-      <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 22px" }}>
-        Direct answer: it depends on your Amazon concentration. If your monthly online spend is Amazon Prime-heavy (above ₹15,000 of monthly Amazon spend), the lifetime-free Amazon Pay ICICI wins through the no-cap 5 percent Prime rate. If your online spend is diversified across Flipkart, Myntra, Cleartrip, and other platforms, SBI Cashback's 5 percent flat rate on all online merchants beats ICICI's 1 percent rate on non-Amazon online. The two cards target opposite spend patterns despite both being "online cashback" products. The fee differential matters too — ICICI is free, SBI charges ₹999.
-      </p>
-
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
+<div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span><span>·</span>
         <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span><span>·</span>
         <span>Verified from issuer MITC schedules</span>
@@ -323,5 +331,6 @@ export default function CompareSbiVsAmazonIcici() {
         </p>
       </footer>
     </main>
+    </>
   );
 }

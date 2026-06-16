@@ -204,6 +204,20 @@ export default function PageSBIvsHDFCvsICICI() {
   ]};
 
   return (
+    <>
+      {/* HERO BANNER */}
+      <div style={{ background: "linear-gradient(135deg, #040C1E, #0B1F4B, #040C1E)", padding: "52px 32px 56px", position: "relative", overflow: "hidden", marginTop: 64 }}>
+        <div style={{ position: "absolute", top: -100, right: -50, width: 500, height: 500, background: "radial-gradient(circle, #2563eb22, transparent 65%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 700, margin: "0 auto", position: "relative", zIndex: 2 }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 18 }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Loans · Home Loans · Bank Comparison
+          </div>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
+            SBI vs HDFC Bank vs ICICI Bank Home Loan: The Only Comparison That Uses Real Numbers (June 2026)
+          </h1>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 14 min read</div>
+        </div>
+      </div>
     <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
@@ -212,13 +226,8 @@ export default function PageSBIvsHDFCvsICICI() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / SBI vs HDFC vs ICICI
       </nav>
-
-      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>LOANS · HOME LOANS · BANK COMPARISON</div>
-      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>SBI vs HDFC Bank vs ICICI Bank Home Loan: The Only Comparison That Uses Real Numbers (June 2026)</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Three banks. One loan. Wildly different total costs over 20 years. Here's the complete picture, including the fees banks prefer you don't compare.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 14 min read</div>
-
-      <section style={{ marginBottom: 24 }}>
+<section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Why This Comparison Is Different</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Every financial website compares these three banks. They show you three rates, a table with basic features, and call it a day. The problem: that comparison ends where the real cost begins.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The rate difference between SBI (8.50%) and HDFC Bank (8.75%) is 0.25%. On a ₹50L, 20-year loan, that's roughly ₹6,000 more EMI per year, or ₹1.2L over 20 years. That's significant but manageable.</p>
@@ -300,5 +309,6 @@ export default function PageSBIvsHDFCvsICICI() {
         Editorial disclaimer: rates, fees, and processing times verified against SBI, HDFC Bank, and ICICI Bank public disclosures, sanction letter templates, and branch-level quotes as of {UPDATED}. Data changes frequently — verify directly with the bank before applying. Not financial advice.
       </footer>
     </main>
+    </>
   );
 }
