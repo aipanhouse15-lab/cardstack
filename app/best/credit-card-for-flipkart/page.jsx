@@ -27,10 +27,10 @@ function NamingConfusionChart() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Side by side comparison of Axis Flipkart card versus Flipkart Axis SuperCoin card showing key structural differences"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)" }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)" }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Two Cards. One Confusing Name. Very Different Structures.</text>
-      <rect x="20" y="38" width="300" height="148" fill="#fff" stroke={COLOR} strokeWidth="2" rx="8" />
+      <rect x="20" y="38" width="300" height="148" fill="var(--raise)" stroke={COLOR} strokeWidth="2" rx="8" />
       <text x="170" y="58" textAnchor="middle" fill={COLOR} fontSize="13" fontWeight="700">Axis Bank Flipkart Credit Card</text>
       <text x="170" y="76" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Annual Fee: ₹500</text>
       <text x="170" y="93" textAnchor="middle" fill="var(--text)" fontSize="12">5% on Flipkart</text>
@@ -39,7 +39,7 @@ function NamingConfusionChart() {
       <text x="170" y="140" textAnchor="middle" fill="var(--text)" fontSize="12">1.5% base on all other spends</text>
       <text x="170" y="158" textAnchor="middle" fill={COLOR} fontSize="11" fontWeight="700">Best overall structure</text>
       <text x="170" y="175" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Co-brand: Axis + Flipkart</text>
-      <rect x="360" y="38" width="300" height="148" fill="#fff" stroke="#94a3b8" strokeWidth="1" rx="8" />
+      <rect x="360" y="38" width="300" height="148" fill="var(--raise)" stroke="var(--hair2)" strokeWidth="1" rx="8" />
       <text x="510" y="58" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Flipkart Axis SuperCoin Card</text>
       <text x="510" y="76" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Annual Fee: ₹500</text>
       <text x="510" y="93" textAnchor="middle" fill="var(--text)" fontSize="12">5% on Flipkart</text>
@@ -67,7 +67,7 @@ function CapComparisonBars() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Monthly cashback earned on Flipkart at different spend levels comparing Axis Flipkart, SuperCoin card, and SBI Cashback"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Monthly Earnings: Cap Bites at ₹24,000 on SuperCoin Card</text>
       {scenarios.map((s, i) => {
@@ -80,7 +80,7 @@ function CapComparisonBars() {
             <text x={x + 45} y={baseY + 16} textAnchor="middle" fill="var(--text-muted)" fontSize="10">{s.label}</text>
             <rect x={x} y={baseY - h(s.axis)} width={barW} height={h(s.axis)} fill={COLOR} rx="3" />
             <text x={x + 14} y={baseY - h(s.axis) - 5} textAnchor="middle" fill={COLOR} fontSize="9">₹{s.axis}</text>
-            <rect x={x + 34} y={baseY - h(s.superCoin)} width={barW} height={h(s.superCoin)} fill="#f59e0b" rx="3" />
+            <rect x={x + 34} y={baseY - h(s.superCoin)} width={barW} height={h(s.superCoin)} fill="var(--raise)" rx="3" />
             <text x={x + 48} y={baseY - h(s.superCoin) - 5} textAnchor="middle" fill="#f59e0b" fontSize="9">₹{s.superCoin}</text>
             <rect x={x + 68} y={baseY - h(s.sbi)} width={barW} height={h(s.sbi)} fill="#10b981" rx="3" />
             <text x={x + 82} y={baseY - h(s.sbi) - 5} textAnchor="middle" fill="#10b981" fontSize="9">₹{s.sbi}</text>
@@ -91,7 +91,7 @@ function CapComparisonBars() {
       <g>
         <rect x="80" y="274" width="10" height="10" fill={COLOR} rx="2" />
         <text x="94" y="283" fill="var(--text-muted)" fontSize="11">Axis Flipkart (5%, no cap)</text>
-        <rect x="280" y="274" width="10" height="10" fill="#f59e0b" rx="2" />
+        <rect x="280" y="274" width="10" height="10" fill="var(--raise)" rx="2" />
         <text x="294" y="283" fill="var(--text-muted)" fontSize="11">SuperCoin Card (5%, cap ₹2k)</text>
         <rect x="490" y="274" width="10" height="10" fill="#10b981" rx="2" />
         <text x="504" y="283" fill="var(--text-muted)" fontSize="11">SBI Cashback (5%, cap ₹5k)</text>
@@ -114,7 +114,7 @@ function BBDStrategyTimeline() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Big Billion Days preparation timeline showing steps to maximise Flipkart card rewards"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Big Billion Days Strategy: The Timeline</text>
       <line x1="80" y1="50" x2="80" y2="195" stroke={COLOR} strokeWidth="2" />
@@ -144,7 +144,7 @@ function BaseRateAdvantageChart() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Base rate comparison on non-Flipkart categories showing Axis Flipkart 1.5 percent advantage over zero base on SBI Cashback"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">The 1.5% Base Rate: Where Axis Flipkart Quietly Wins</text>
       {categories.map((c, i) => {
@@ -171,7 +171,7 @@ function FlipkartDecisionFlow() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Decision flowchart: which Flipkart card to pick based on monthly spend and other category needs"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Which Card Is Right for You?</text>
       <rect x="240" y="34" width="200" height="36" fill={COLOR} rx="8" />
@@ -183,13 +183,13 @@ function FlipkartDecisionFlow() {
       <text x="160" y="82" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Under ₹20,000</text>
       <text x="340" y="82" textAnchor="middle" fill="var(--text-muted)" fontSize="10">₹20,000-50,000</text>
       <text x="520" y="82" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Over ₹50,000</text>
-      <rect x="60" y="92" width="200" height="50" fill="#eff6ff" stroke={COLOR} rx="8" />
+      <rect x="60" y="92" width="200" height="50" fill="var(--raise)" stroke={COLOR} rx="8" />
       <text x="160" y="113" textAnchor="middle" fill={COLOR} fontSize="12" fontWeight="700">Axis Flipkart</text>
       <text x="160" y="130" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Best overall: no cap, 4% dining, 1.5% base</text>
-      <rect x="240" y="92" width="200" height="50" fill="#eff6ff" stroke={COLOR} rx="8" />
+      <rect x="240" y="92" width="200" height="50" fill="var(--raise)" stroke={COLOR} rx="8" />
       <text x="340" y="113" textAnchor="middle" fill={COLOR} fontSize="12" fontWeight="700">Axis Flipkart</text>
       <text x="340" y="130" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Still wins: cap advantage kicks in here</text>
-      <rect x="420" y="92" width="200" height="50" fill="#f0fdf4" stroke="#16a34a" rx="8" />
+      <rect x="420" y="92" width="200" height="50" fill="var(--raise)" stroke="#16a34a" rx="8" />
       <text x="520" y="113" textAnchor="middle" fill="#16a34a" fontSize="12" fontWeight="700">SBI Cashback</text>
       <text x="520" y="130" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Cap ₹5,000/mo covers more spend</text>
     </svg>
@@ -335,7 +335,7 @@ export default function BestCreditCardForFlipkart() {
             caveat: "Shared cap is the main limitation. If you already have Axis Flipkart, Millennia adds little."
           },
         ].map(card => (
-          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "#fff" }}>
+          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "var(--raise)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 8 }}>
               <div>
                 <span style={{ background: COLOR + "22", color: COLOR, fontSize: 11, fontWeight: 700, padding: "2px 8px", borderRadius: 4, marginRight: 8 }}>{card.badge}</span>
@@ -405,7 +405,7 @@ export default function BestCreditCardForFlipkart() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 40, background: "var(--surface, #f8fafc)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
+      <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
         <p>Axis Bank Flipkart Credit Card is the right card for Flipkart. The naming confusion with the SuperCoin card causes a lot of people to end up with the inferior product at the same ₹500 annual fee. The cap difference alone makes Axis Flipkart the structurally superior choice.</p>
         <p>For very high Flipkart spenders exceeding ₹50,000 per month, or for households that spread online spend across many platforms, SBI Cashback becomes competitive. It does not have the dining benefit but the all-online 5% with a higher ₹5,000 cap covers more ground.</p>

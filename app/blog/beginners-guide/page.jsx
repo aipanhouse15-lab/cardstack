@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgCreditCardLifecycle = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Timeline showing how a credit card billing cycle works from purchase to due date" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">How One Month of Credit Card Billing Works</text>
     {/* Timeline line */}
     <line x1="60" y1="100" x2="660" y2="100" stroke="var(--border)" strokeWidth="3" />
@@ -49,12 +49,12 @@ const SvgCreditCardLifecycle = () => (
 
 const SvgInterestVsInvestment = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Comparison showing Rs 10000 credit card debt interest cost vs the same amount in a fixed deposit over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">₹10,000 for 12 Months: Credit Card Debt vs Fixed Deposit</text>
     {/* Credit card */}
-    <rect x="50" y="50" width="270" height="180" rx="10" fill="white" stroke="#ef4444" strokeWidth="2" />
-    <rect x="50" y="50" width="270" height="42" rx="10" fill="#ef4444" />
-    <rect x="50" y="76" width="270" height="16" fill="#ef4444" />
+    <rect x="50" y="50" width="270" height="180" rx="10" fill="var(--raise)" stroke="#ef4444" strokeWidth="2" />
+    <rect x="50" y="50" width="270" height="42" rx="10" fill="var(--raise)" />
+    <rect x="50" y="76" width="270" height="16" fill="var(--raise)" />
     <text x="185" y="78" textAnchor="middle" fontSize="13" fontWeight="800" fill="white">₹10,000 Unpaid Balance</text>
     <text x="185" y="115" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Interest rate: 3.5%/month</text>
     <text x="185" y="135" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Annual rate: 42%</text>
@@ -64,7 +64,7 @@ const SvgInterestVsInvestment = () => (
     {/* vs */}
     <text x="360" y="148" textAnchor="middle" fontSize="26" fontWeight="700" fill="var(--text-muted)">vs</text>
     {/* FD */}
-    <rect x="400" y="50" width="270" height="180" rx="10" fill="white" stroke="#16a34a" strokeWidth="2" />
+    <rect x="400" y="50" width="270" height="180" rx="10" fill="var(--raise)" stroke="#16a34a" strokeWidth="2" />
     <rect x="400" y="50" width="270" height="42" rx="10" fill="#16a34a" />
     <rect x="400" y="76" width="270" height="16" fill="#16a34a" />
     <text x="535" y="78" textAnchor="middle" fontSize="13" fontWeight="800" fill="white">₹10,000 in Fixed Deposit</text>
@@ -78,7 +78,7 @@ const SvgInterestVsInvestment = () => (
 
 const SvgFirstCardByIncome = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Table recommending first credit cards for different income brackets in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="280" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="280" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Your First Card by Income Bracket (June 2026)</text>
     <rect x="20" y="40" width="680" height="34" fill={COLOR} rx="4" />
     <text x="120" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Monthly Income</text>
@@ -92,7 +92,7 @@ const SvgFirstCardByIncome = () => (
       ["Above ₹1L/month", "HDFC Diners Black or Amex Platinum", "Premium lounges, concierge, high reward rates", "₹10,000+"],
     ].map(([income, card, why, fee], i) => (
       <g key={i}>
-        <rect x="20" y={76 + i * 48} width="680" height="48" fill={i % 2 === 0 ? "white" : "var(--surface, #f8fafc)"} />
+        <rect x="20" y={76 + i * 48} width="680" height="48" fill={i % 2 === 0 ? "var(--raise2)" : "var(--raise)"} />
         <text x="120" y={96 + i * 48} textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>{income}</text>
         <text x="280" y={92 + i * 48} textAnchor="middle" fontSize="11" fontWeight="600" fill="var(--text)">{card.split(" or ")[0]}</text>
         <text x="280" y={108 + i * 48} textAnchor="middle" fontSize="10" fill="var(--text-muted)">or {card.split(" or ")[1]}</text>
@@ -105,7 +105,7 @@ const SvgFirstCardByIncome = () => (
 
 const SvgGoldenRules = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Four golden rules for responsible credit card use as a beginner in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">The Four Golden Rules of Credit Cards (Non-Negotiable)</text>
     {[
       { x: 30, num: "1", rule: "Pay the full amount", detail: "Always pay the full statement balance, not just the minimum. The minimum due is a trap." },
@@ -114,7 +114,7 @@ const SvgGoldenRules = () => (
       { x: 570, num: "4", rule: "Never use for cash withdrawal", detail: "ATM cash from credit card = 2.5% fee + interest from day one. Use a debit card instead." },
     ].map(({ x, num, rule, detail }) => (
       <g key={x}>
-        <rect x={x} y="44" width="160" height="148" rx="8" fill="white" stroke={COLOR} strokeWidth="1.5" />
+        <rect x={x} y="44" width="160" height="148" rx="8" fill="var(--raise)" stroke={COLOR} strokeWidth="1.5" />
         <circle cx={x + 80} cy="72" r="20" fill={COLOR} />
         <text x={x + 80} y="78" textAnchor="middle" fontSize="18" fontWeight="800" fill="white">{num}</text>
         <text x={x + 80} y="112" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">{rule}</text>
@@ -129,7 +129,7 @@ const SvgGoldenRules = () => (
 
 const SvgCibilImpact = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Chart showing how responsible credit card use improves CIBIL score over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">CIBIL Score Growth: Responsible Card Use Over 12 Months</text>
     {/* Score line */}
     {[
@@ -156,7 +156,7 @@ const SvgCibilImpact = () => (
 
 const SvgMissedPaymentCost = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Table showing cost of missing or delaying credit card payment in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">What Happens When You Miss a Credit Card Payment</text>
     <rect x="20" y="38" width="680" height="30" fill="#1e293b" rx="4" />
     <text x="160" y="58" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">What happens</text>
@@ -169,7 +169,7 @@ const SvgMissedPaymentCost = () => (
       ["CIBIL score hit", "-50 to -100 points on 30-day delay", "Within 45 days"],
     ].map(([what, cost, timing], i) => (
       <g key={i}>
-        <rect x="20" y={70 + i * 26} width="680" height="26" fill={i % 2 === 0 ? "white" : "var(--surface, #f8fafc)"} />
+        <rect x="20" y={70 + i * 26} width="680" height="26" fill={i % 2 === 0 ? "var(--raise2)" : "var(--raise)"} />
         <text x="160" y={88 + i * 26} textAnchor="middle" fontSize="11" fill="var(--text)">{what}</text>
         <text x="380" y={88 + i * 26} textAnchor="middle" fontSize="11" fontWeight="700" fill="#ef4444">{cost}</text>
         <text x="590" y={88 + i * 26} textAnchor="middle" fontSize="11" fill="var(--text-muted)">{timing}</text>

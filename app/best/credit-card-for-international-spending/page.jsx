@@ -31,7 +31,7 @@ function ForexMarkupExplainer() {
       aria-label="Diagram showing how forex markup cost adds up on ₹1 lakh of international spending"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="230" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="230" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">What 3.5% Forex Markup Actually Costs You</text>
       {[
         { label: "₹50,000 abroad", at35: "₹1,750", atZero: "₹0", saved: "₹1,750" },
@@ -41,7 +41,7 @@ function ForexMarkupExplainer() {
       ].map((r, i) => (
         <g key={i}>
           <text x="30" y={70 + i * 38} fontSize="12" fontWeight="600" fill="var(--text)">{r.label}</text>
-          <rect x="210" y={54 + i * 38} width="120" height="22" rx="4" fill="#ef4444" opacity="0.15" />
+          <rect x="210" y={54 + i * 38} width="120" height="22" rx="4" fill="var(--raise)" opacity="0.15" />
           <text x="270" y={70 + i * 38} textAnchor="middle" fontSize="12" fill="#ef4444" fontWeight="700">{r.at35}</text>
           <rect x="350" y={54 + i * 38} width="120" height="22" rx="4" fill="#22c55e" opacity="0.15" />
           <text x="410" y={70 + i * 38} textAnchor="middle" fontSize="12" fill="#22c55e" fontWeight="700">{r.atZero}</text>
@@ -70,7 +70,7 @@ function CardSegmentTable() {
       aria-label="Table recommending best international credit cards by travel budget segment"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="250" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="250" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Best Card by Travel Budget Segment</text>
       {["Traveler Type", "Card", "Forex", "Fee", "Why"].map((h, i) => (
         <text key={h} x={[20, 175, 335, 400, 480][i]} y="48" fontSize="10.5" fontWeight="700" fill="var(--text)">{h}</text>
@@ -99,18 +99,18 @@ function DCCWarningDiagram() {
       aria-label="Diagram explaining Dynamic Currency Conversion trap and how to avoid it abroad"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="200" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The DCC Trap: Always Pay in Local Currency</text>
       {/* DCC path */}
-      <rect x="20" y="50" width="150" height="50" rx="8" fill="#ef4444" opacity="0.12" stroke="#ef4444" strokeWidth="1.2" />
+      <rect x="20" y="50" width="150" height="50" rx="8" fill="var(--raise)" opacity="0.12" stroke="#ef4444" strokeWidth="1.2" />
       <text x="95" y="71" textAnchor="middle" fontSize="11" fontWeight="700" fill="#ef4444">Pay in INR</text>
       <text x="95" y="87" textAnchor="middle" fontSize="10" fill="var(--text-muted)">(DCC chosen)</text>
       <text x="198" y="79" fontSize="20" fill="var(--text-muted)">→</text>
-      <rect x="215" y="50" width="170" height="50" rx="8" fill="#ef4444" opacity="0.08" />
+      <rect x="215" y="50" width="170" height="50" rx="8" fill="var(--raise)" opacity="0.08" />
       <text x="300" y="71" textAnchor="middle" fontSize="10.5" fill="var(--text)">Merchant converts at</text>
       <text x="300" y="85" textAnchor="middle" fontSize="10.5" fill="#ef4444" fontWeight="700">their rate (1-3% markup)</text>
       <text x="402" y="79" fontSize="20" fill="var(--text-muted)">→</text>
-      <rect x="420" y="50" width="240" height="50" rx="8" fill="#ef4444" opacity="0.12" stroke="#ef4444" strokeWidth="1.2" />
+      <rect x="420" y="50" width="240" height="50" rx="8" fill="var(--raise)" opacity="0.12" stroke="#ef4444" strokeWidth="1.2" />
       <text x="540" y="71" textAnchor="middle" fontSize="10.5" fill="#ef4444" fontWeight="700">You pay INR + DCC fee</text>
       <text x="540" y="85" textAnchor="middle" fontSize="10" fill="var(--text-muted)">PLUS your bank's forex markup</text>
       {/* Good path */}
@@ -138,7 +138,7 @@ function ZeroForexComparisonChart() {
       aria-label="Comparison chart of forex markup rates across major Indian credit cards"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="220" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="220" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Forex Markup Rate by Card (June 2026)</text>
       {[
         { card: "IDFC FIRST WOW", markup: 0, label: "0%" },
@@ -172,7 +172,7 @@ function ATMVsCardChart() {
       aria-label="Cost comparison of withdrawing cash at ATM abroad vs paying directly with card"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="180" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="180" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">ATM Abroad vs Card: What Actually Costs More?</text>
       {[
         { method: "ATM (normal card)", cost: "3.5% forex + ₹150-400 withdrawal fee + ATM fee", verdict: "Most expensive" },
@@ -413,7 +413,7 @@ export default function BestCreditCardForInternationalSpending() {
               display: "flex",
               gap: 18,
               alignItems: "flex-start",
-              background: "var(--surface, #f8fafc)",
+              background: "var(--raise)",
             }}
           >
             <div

@@ -36,7 +36,7 @@ function RupayBadgeIcon() {
       <text x="22" y="27" textAnchor="middle" fontSize="10" fill={COLOR} fontWeight="800">RuPay</text>
       <path d="M36 10v24" stroke={COLOR} strokeWidth="0.5" strokeDasharray="3 2"/>
       <circle cx="38" cy="9" r="5" fill="#22c55e"/>
-      <path d="M36 9l1.5 1.5 2.5-2.5" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M36 9l1.5 1.5 2.5-2.5" stroke="var(--hair)" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
 }
@@ -44,7 +44,7 @@ function RupayBadgeIcon() {
 function BlockedIcon() {
   return (
     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blocked icon showing Visa and Mastercard credit cards do not earn rewards on UPI">
-      <rect x="2" y="10" width="40" height="24" rx="4" fill="#fef2f2" stroke="#fca5a5" strokeWidth="1.5"/>
+      <rect x="2" y="10" width="40" height="24" rx="4" fill="var(--raise)" stroke="#fca5a5" strokeWidth="1.5"/>
       <line x1="10" y1="10" x2="34" y2="34" stroke="#ef4444" strokeWidth="2.5" strokeLinecap="round"/>
       <line x1="34" y1="10" x2="10" y2="34" stroke="#ef4444" strokeWidth="2.5" strokeLinecap="round"/>
     </svg>
@@ -54,7 +54,7 @@ function BlockedIcon() {
 function PhonePayIcon() {
   return (
     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Phone showing UPI payment app">
-      <rect x="10" y="4" width="20" height="32" rx="4" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5"/>
+      <rect x="10" y="4" width="20" height="32" rx="4" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
       <rect x="13" y="9" width="14" height="18" rx="1" fill={COLOR} fillOpacity="0.15"/>
       <circle cx="20" cy="32" r="2" fill={COLOR} fillOpacity="0.5"/>
       <text x="20" y="21" textAnchor="middle" fontSize="8" fill={COLOR} fontWeight="700">GPay</text>
@@ -65,7 +65,7 @@ function PhonePayIcon() {
 function ZeroRewardBadge() {
   return (
     <svg width="60" height="32" viewBox="0 0 60 32" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zero rewards earned badge">
-      <rect width="60" height="32" rx="16" fill="#fef2f2" stroke="#fca5a5" strokeWidth="1.5"/>
+      <rect width="60" height="32" rx="16" fill="var(--raise)" stroke="#fca5a5" strokeWidth="1.5"/>
       <text x="30" y="21" textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="800">0%</text>
     </svg>
   );
@@ -272,7 +272,7 @@ export default function BestCreditCardForUpiPayments() {
       {/* The single most important fact */}
       <div
         style={{
-          background: "#fef2f2",
+          background: "var(--red-dim)",
           border: "2px solid #ef4444",
           borderRadius: 10,
           padding: "20px 22px",
@@ -308,7 +308,7 @@ export default function BestCreditCardForUpiPayments() {
             alignItems: "center",
             gap: 10,
             padding: "16px",
-            background: "var(--surface, #f8fafc)",
+            background: "var(--raise)",
             border: "1px solid var(--border)",
             borderRadius: 8,
             marginTop: 16,
@@ -371,7 +371,7 @@ export default function BestCreditCardForUpiPayments() {
                 border: card.best ? `2px solid ${COLOR}` : "1.5px solid var(--border)",
                 borderRadius: 10,
                 padding: "18px 20px",
-                background: card.best ? `${COLOR}07` : "var(--surface, #f8fafc)",
+                background: card.best ? `${COLOR}07` : "var(--raise)",
                 position: "relative",
               }}
             >
@@ -461,7 +461,7 @@ export default function BestCreditCardForUpiPayments() {
                 ["Amazon", "0% reward", "5% (Prime, Amazon Pay ICICI)", "Amazon Pay ICICI"],
                 ["Bigbasket", "0% reward", "1-2% varies", "HDFC Millennia"],
               ].map(([merchant, upiRate, directRate, bestCard], i) => (
-                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)" }}>
+                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px", fontWeight: 600 }}>{merchant}</td>
                   <td style={{ padding: "10px 14px" }}>
                     <ZeroRewardBadge />
@@ -565,7 +565,7 @@ export default function BestCreditCardForUpiPayments() {
                 ["SBI", "SimplySAVE RuPay", "BHIM SBI Pay", "Yes, limited categories"],
                 ["Axis Bank", "Axis RuPay (limited rollout)", "Axis Mobile", "Partial rollout June 2026"],
               ].map(([bank, card, app, reward], i) => (
-                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)" }}>
+                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px", fontWeight: 600 }}>{bank}</td>
                   <td style={{ padding: "10px 14px" }}>{card}</td>
                   <td style={{ padding: "10px 14px", color: "var(--text-muted)" }}>{app}</td>

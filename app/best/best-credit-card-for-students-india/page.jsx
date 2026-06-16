@@ -340,7 +340,7 @@ export default function BestCreditCardForStudentsIndia() {
             <div
               key={stat.label}
               style={{
-                background: "var(--surface, #f8fafc)",
+                background: "var(--raise)",
                 border: "1px solid var(--border)",
                 borderRadius: 8,
                 padding: "14px 16px",
@@ -369,7 +369,7 @@ export default function BestCreditCardForStudentsIndia() {
 
         <div
           style={{
-            background: "var(--surface, #f8fafc)",
+            background: "var(--raise)",
             border: "1px solid var(--border)",
             borderRadius: 8,
             padding: "18px 20px",
@@ -442,7 +442,7 @@ export default function BestCreditCardForStudentsIndia() {
               <div key={p} style={{ fontSize: 13, marginBottom: 4, color: "#166534" }}>+ {p}</div>
             ))}
           </div>
-          <div style={{ background: "#fef2f2", border: "1px solid #fca5a5", borderRadius: 8, padding: "14px 16px" }}>
+          <div style={{ background: "var(--red-dim)", border: "1px solid #fca5a5", borderRadius: 8, padding: "14px 16px" }}>
             <div style={{ fontWeight: 700, color: "#991b1b", marginBottom: 8 }}>Cons of add-on card</div>
             {[
               "No CIBIL history built for you",
@@ -471,7 +471,7 @@ export default function BestCreditCardForStudentsIndia() {
                 border: card.best ? `2px solid ${COLOR}` : "1.5px solid var(--border)",
                 borderRadius: 10,
                 padding: "18px 20px",
-                background: card.best ? `${COLOR}07` : "var(--surface, #f8fafc)",
+                background: card.best ? `${COLOR}07` : "var(--raise)",
                 position: "relative",
               }}
             >
@@ -558,7 +558,7 @@ export default function BestCreditCardForStudentsIndia() {
                 display: "flex",
                 gap: 14,
                 padding: "16px 18px",
-                background: "var(--surface, #f8fafc)",
+                background: "var(--raise)",
                 border: "1px solid var(--border)",
                 borderRadius: 8,
               }}
@@ -601,7 +601,7 @@ export default function BestCreditCardForStudentsIndia() {
                 ["Recharges and internet", "₹400 to ₹800", "Any card", "1%"],
                 ["Travel (trains, buses)", "₹500 to ₹2,000", "IRCTC SBI card", "Points on railway"],
               ].map(([cat, amt, card, reward], i) => (
-                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)" }}>
+                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px" }}>{cat}</td>
                   <td style={{ padding: "10px 14px", color: "var(--text-muted)" }}>{amt}</td>
                   <td style={{ padding: "10px 14px", fontWeight: 600 }}>{card}</td>
@@ -622,7 +622,7 @@ export default function BestCreditCardForStudentsIndia() {
 
         <div
           style={{
-            background: "var(--surface, #f8fafc)",
+            background: "var(--raise)",
             border: "1px solid var(--border)",
             borderRadius: 8,
             padding: "18px 20px",

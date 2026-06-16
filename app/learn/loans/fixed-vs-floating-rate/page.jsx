@@ -154,7 +154,7 @@ const SvgBankProductTable = () => (
       ["Axis Bank", "8.70%", "9.10%", "+0.40%", "1 year", "Best fixed premium in market"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={61 + ri * 38} width={700} height="38" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={61 + ri * 38} width={700} height="38" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const x = [20, 120, 230, 330, 420, 520][ci];
           return <text key={ci} x={x + 6} y={85 + ri * 38} fontFamily="system-ui" fontSize="11" fill={ci === 4 ? "#dc2626" : "var(--text)"}>{cell}</text>;

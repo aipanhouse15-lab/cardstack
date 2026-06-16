@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgMinimumDueTrap = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Compound interest trap: paying minimum due on ₹50,000 balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Minimum Due Trap: ₹50,000 balance at 3.5%/month</text>
     {[
       { label: "Month 1", interest: 1750, y: 60 },
@@ -46,13 +46,13 @@ const SvgMinimumDueTrap = () => (
 
 const SvgCibilAgeImpact = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Credit age impact on CIBIL score when closing old card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Closing an old card: what actually happens to your CIBIL score</text>
     <rect x="36" y="60" width="200" height="50" fill="#d1fae5" rx="6" />
     <text x="136" y="80" fontSize="12" fontWeight="700" fill="#166534" textAnchor="middle" fontFamily="system-ui">Before closing</text>
     <text x="136" y="98" fontSize="18" fontWeight="800" fill="#166534" textAnchor="middle" fontFamily="system-ui">760</text>
     <text x="290" y="90" fontSize="22" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">to</text>
-    <rect x="320" y="60" width="200" height="50" fill="#fee2e2" rx="6" />
+    <rect x="320" y="60" width="200" height="50" fill="var(--raise)" rx="6" />
     <text x="420" y="80" fontSize="12" fontWeight="700" fill={COLOR} textAnchor="middle" fontFamily="system-ui">After closing 7yr old card</text>
     <text x="420" y="98" fontSize="18" fontWeight="800" fill={COLOR} textAnchor="middle" fontFamily="system-ui">710-730</text>
     <text x="560" y="90" fontSize="13" fill="var(--text-muted)" fontFamily="system-ui">30-50 pt drop</text>
@@ -63,11 +63,11 @@ const SvgCibilAgeImpact = () => (
 
 const SvgUtilizationSpread = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Concentrating spend on one card vs spreading across two cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Same ₹40,000 spend. Very different utilization.</text>
-    <rect x="36" y="56" width="290" height="130" fill="#fee2e2" rx="8" />
+    <rect x="36" y="56" width="290" height="130" fill="var(--raise)" rx="8" />
     <text x="181" y="80" fontSize="12" fontWeight="700" fill={COLOR} textAnchor="middle" fontFamily="system-ui">Bad: One card (₹50,000 limit)</text>
-    <rect x="56" y="94" width="250" height="22" fill="#fca5a5" rx="4" />
+    <rect x="56" y="94" width="250" height="22" fill="var(--raise)" rx="4" />
     <rect x="56" y="94" width="200" height="22" fill={COLOR} rx="4" />
     <text x="181" y="132" fontSize="13" fontWeight="800" fill={COLOR} textAnchor="middle" fontFamily="system-ui">Utilization: 80%</text>
     <text x="181" y="152" fontSize="11" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">Expected CIBIL drop: 40-60 pts</text>
@@ -84,7 +84,7 @@ const SvgUtilizationSpread = () => (
 
 const SvgForexMarkup = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Forex markup fee comparison across Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Forex Markup Fees on a $1,000 international transaction (approx ₹83,500)</text>
     {[
       { bank: "HDFC Regalia / Infinia", markup: "2%", rupees: "1,670", barW: 100 },
@@ -94,7 +94,7 @@ const SvgForexMarkup = () => (
     ].map((d, i) => (
       <g key={i}>
         <text x="36" y={70 + i * 32} fontSize="12" fill="var(--text)" fontFamily="system-ui">{d.bank}</text>
-        <rect x="280" y={55 + i * 32} width={d.barW} height="18" fill={i < 2 ? COLOR : "#86efac"} rx="3" />
+        <rect x="280" y={55 + i * 32} width={d.barW} height="18" fill={i < 2 ? COLOR : "rgba(62,224,143,.35)"} rx="3" />
         <text x="460" y={70 + i * 32} fontSize="12" fontWeight="700" fill="var(--text)" fontFamily="system-ui">{d.markup} markup = ₹{d.rupees} extra</text>
       </g>
     ))}
@@ -103,15 +103,15 @@ const SvgForexMarkup = () => (
 
 const SvgCashAdvanceCost = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="True cost breakdown of a ₹10,000 credit card cash advance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">True cost of a ₹10,000 credit card cash advance (repaid in 30 days)</text>
-    <rect x="36" y="56" width="160" height="50" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" rx="6" />
+    <rect x="36" y="56" width="160" height="50" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="6" />
     <text x="116" y="76" fontSize="11" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">Cash advance fee</text>
     <text x="116" y="94" fontSize="15" fontWeight="800" fill={COLOR} textAnchor="middle" fontFamily="system-ui">₹250-500</text>
-    <rect x="216" y="56" width="160" height="50" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" rx="6" />
+    <rect x="216" y="56" width="160" height="50" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="6" />
     <text x="296" y="76" fontSize="11" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">Interest (from day 1)</text>
     <text x="296" y="94" fontSize="15" fontWeight="800" fill={COLOR} textAnchor="middle" fontFamily="system-ui">₹350-420</text>
-    <rect x="396" y="56" width="180" height="50" fill="#fee2e2" stroke={COLOR} strokeWidth="1.5" rx="6" />
+    <rect x="396" y="56" width="180" height="50" fill="var(--raise)" stroke={COLOR} strokeWidth="1.5" rx="6" />
     <text x="486" y="76" fontSize="11" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">Total effective cost</text>
     <text x="486" y="96" fontSize="16" fontWeight="800" fill={COLOR} textAnchor="middle" fontFamily="system-ui">₹600-920 on ₹10K</text>
     <text x="36" y="150" fontSize="12" fill="var(--text-muted)" fontFamily="system-ui">No grace period. Interest starts from the ATM transaction second. No reward points earned on cash advances.</text>
@@ -120,7 +120,7 @@ const SvgCashAdvanceCost = () => (
 
 const SvgRewardExpiry = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Reward point expiry timelines across major Indian banks" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Reward Point Expiry: How long before your points vanish?</text>
     {[
       { bank: "HDFC Bank", expiry: "2-3 years from earn date" },
@@ -142,7 +142,7 @@ const SvgRewardExpiry = () => (
 
 const SvgSpendCap = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Accelerated reward earn category caps on popular Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Category Spend Caps: the small print that limits your rewards</text>
     <text x="36" y="58" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Card</text>
     <text x="220" y="58" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Accelerated Category</text>
@@ -154,7 +154,7 @@ const SvgSpendCap = () => (
       { card: "ICICI Amazon Pay", cat: "Amazon purchases", cap: "No cap (1.5% base)" },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="24" y={68 + i * 28} width="672" height="26" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "white"} rx="2" />
+        <rect x="24" y={68 + i * 28} width="672" height="26" fill={i % 2 === 0 ? "var(--raise)" : "white"} rx="2" />
         <text x="36" y={86 + i * 28} fontSize="12" fill="var(--text)" fontFamily="system-ui">{d.card}</text>
         <text x="220" y={86 + i * 28} fontSize="12" fill="var(--text-muted)" fontFamily="system-ui">{d.cat}</text>
         <text x="460" y={86 + i * 28} fontSize="12" fontWeight="600" fill={COLOR} fontFamily="system-ui">{d.cap}</text>
@@ -253,7 +253,7 @@ export default function BlogCreditCardMistakesIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Before choosing a card for a specific spend category, check the T&C for monthly caps. Use our <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link> to find which card gives you the best rate for your real spend pattern.</p>
       </section>
 
-      <section style={{ background: "var(--surface, #f8fafc)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 32 }}>
+      <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 32 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2 }}>
           <li>Log into your card portal and check if you have any points expiring in the next 6 months.</li>

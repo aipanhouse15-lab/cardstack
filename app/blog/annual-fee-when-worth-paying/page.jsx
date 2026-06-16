@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgBreakevenFormula = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Break-even spend formula: annual fee divided by reward rate equals minimum annual spend required" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="360" y="30" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Break-Even Formula for Any Fee Card</text>
     <rect x="60" y="48" width="180" height="68" rx="8" fill={COLOR} opacity="0.12" stroke={COLOR} strokeWidth="1.5" />
     <text x="150" y="78" textAnchor="middle" fontSize="14" fontWeight="700" fill={COLOR}>Annual Fee + GST</text>
@@ -42,7 +42,7 @@ const SvgBreakevenFormula = () => (
 
 const SvgFiveCardBreakeven = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Break-even spend for 5 popular fee cards: HDFC Regalia, ICICI Emeralde, Axis Magnus, SBI Elite, Amex MRCC" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="280" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="280" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Break-Even Spend: 5 Popular Fee Cards (June 2026)</text>
     <text x="20" y="50" fontSize="10" fontWeight="700" fill="var(--text-muted)">CARD</text>
     <text x="230" y="50" fontSize="10" fontWeight="700" fill="var(--text-muted)">FEE+GST</text>
@@ -86,7 +86,7 @@ const SvgFiveCardBreakeven = () => (
 
 const SvgLoungeValue = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="How lounge access reduces the effective annual fee of premium credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Hidden Benefit Math: How Lounge Access Slashes Effective Fee</text>
     <text x="30" y="56" fontSize="12" fontWeight="600" fill="var(--text)">HDFC Regalia Gold</text>
     <text x="30" y="76" fontSize="11" fill="var(--text-muted)">Annual fee: ₹2,500 + GST = ₹2,950</text>
@@ -106,7 +106,7 @@ const SvgLoungeValue = () => (
 
 const SvgFeeWaiverConditions = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Fee waiver conditions for popular credit cards: minimum annual spend required" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Fee Waiver Conditions: Can You Hit Them?</text>
     <text x="30" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">CARD</text>
     <text x="280" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">WAIVER CONDITION</text>
@@ -136,9 +136,9 @@ const SvgFeeWaiverConditions = () => (
 
 const SvgFreeCardWins = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="Scenarios where a zero-fee credit card genuinely beats a paid card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">When Free Cards Genuinely Win</text>
-    <rect x="30" y="44" width="310" height="126" rx="8" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="30" y="44" width="310" height="126" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="185" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Fee Card Loses When...</text>
     <text x="185" y="90" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Spend under ₹1.2L/year (can't break even)</text>
     <text x="185" y="108" textAnchor="middle" fontSize="11" fill="var(--text-muted)">You never use lounge access</text>
@@ -157,13 +157,13 @@ const SvgFreeCardWins = () => (
 
 const SvgDecisionTree = () => (
   <svg viewBox="0 0 720 300" role="img" aria-label="Decision tree: should you pay an annual fee for a credit card?" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="300" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="300" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Should You Pay This Annual Fee? Decision Tree</text>
     <rect x="260" y="42" width="200" height="42" rx="8" fill={COLOR} opacity="0.15" stroke={COLOR} strokeWidth="1.5" />
     <text x="360" y="60" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Annual fee card you are considering</text>
     <text x="360" y="76" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Calculate fee + 18% GST first</text>
     <line x1="360" y1="84" x2="360" y2="110" stroke="var(--text-muted)" strokeWidth="1.5" />
-    <rect x="220" y="110" width="280" height="36" rx="8" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+    <rect x="220" y="110" width="280" height="36" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
     <text x="360" y="132" textAnchor="middle" fontSize="12" fill="var(--text)">Will you spend above break-even amount?</text>
     <line x1="220" y1="128" x2="100" y2="180" stroke="var(--text-muted)" strokeWidth="1.5" />
     <line x1="500" y1="128" x2="620" y2="180" stroke="var(--text-muted)" strokeWidth="1.5" />
@@ -172,7 +172,7 @@ const SvgDecisionTree = () => (
     <rect x="20" y="180" width="200" height="36" rx="8" fill="#dc2626" opacity="0.1" stroke="#dc2626" strokeWidth="1.5" />
     <text x="120" y="200" textAnchor="middle" fontSize="12" fontWeight="600" fill="#dc2626">Skip. Use free card.</text>
     <text x="120" y="216" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Net negative position</text>
-    <rect x="500" y="180" width="200" height="36" rx="8" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+    <rect x="500" y="180" width="200" height="36" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
     <text x="600" y="200" textAnchor="middle" fontSize="12" fill="var(--text)">Do you use lounge benefits?</text>
     <line x1="500" y1="198" x2="380" y2="246" stroke="var(--text-muted)" strokeWidth="1.5" />
     <line x1="700" y1="198" x2="660" y2="246" stroke="var(--text-muted)" strokeWidth="1.5" />
@@ -332,7 +332,7 @@ export default function BlogAnnualFeeWhenWorthPaying() {
         <SvgDecisionTree />
       </section>
 
-      <section style={{ background: "var(--surface, #f8fafc)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: "var(--raise)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 32 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 10px", color: COLOR }}>Three Things to Do Before Your Next Fee Card Decision</h2>
         <p style={{ margin: "0 0 10px" }}>First, calculate your actual monthly card spend for the last 3 months and project annually. Second, count how many times you flew and used (or would have used) a lounge. Third, run the formula: fee + GST divided by reward rate.</p>
         <p style={{ margin: 0 }}>Use our <Link href="/smart-swipe" style={{ color: COLOR, fontWeight: 600 }}>Smart Swipe tool</Link> to compare net annual value across cards at your actual spend level. Also read: <Link href="/blog/regalia-vs-infinia" style={{ color: COLOR }}>Regalia vs Infinia head-to-head</Link> and <Link href="/blog/best-free-cards" style={{ color: COLOR }}>best zero-fee credit cards in India</Link>.</p>

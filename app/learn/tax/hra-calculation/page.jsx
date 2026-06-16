@@ -89,7 +89,7 @@ const SvgDocumentation = () => (
       { doc: "Employer declaration", req: "HRA declaration to HR typically required in April and at year-end (December/January).", status: "EMPLOYER ASKS", color: "#ca8a04" },
     ].map(({ doc, req, status, color }, i) => (
       <g key={doc}>
-        <rect x="20" y={35 + i * 32} width={700} height="26" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={35 + i * 32} width={700} height="26" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={52 + i * 32} fontFamily="system-ui" fontSize="11" fontWeight="600" fill="var(--text)">{doc}</text>
         <rect x="200" y={37 + i * 32} width="120" height="22" fill={color} rx="3" opacity="0.85" />
         <text x="260" y={52 + i * 32} textAnchor="middle" fontFamily="system-ui" fontSize="9" fontWeight="700" fill="#fff">{status}</text>
@@ -106,7 +106,7 @@ const SvgHRAvsHomeLoan = () => (
     <rect x="20" y="38" width="680" height="50" fill="var(--surface, #f0fdf4)" stroke={COLOR} strokeWidth="1.5" rx="8" />
     <text x="30" y="58" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>YES — if you rent in the city you work and own property in a different city.</text>
     <text x="30" y="78" fontFamily="system-ui" fontSize="12" fill="var(--text)">Example: Neha owns a flat in Nagpur (rented out, no self-occupation) but lives and works in Pune on rent. She can claim HRA on Pune rent AND Section 24(b) on home loan interest of her Nagpur property.</text>
-    <rect x="20" y="100" width="680" height="50" fill="#fef2f2" stroke="#dc2626" strokeWidth="1" rx="8" />
+    <rect x="20" y="100" width="680" height="50" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="8" />
     <text x="30" y="120" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#dc2626">NOT ALLOWED — if you own property in the SAME city you're claiming HRA for.</text>
     <text x="30" y="140" fontFamily="system-ui" fontSize="12" fill="var(--text)">Example: Owning a flat in Bangalore but renting nearby to avoid commute. The IT department can question the need for renting — you'll need to show genuine reason (under construction, occupied by parents, etc.).</text>
     <text x="20" y="190" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Always consult a CA for the same-city situation. The IT department scrutinizes HRA + home loan combinations in the same city closely. Genuine scenarios (parental occupation, under-construction flat) are generally accepted.</text>

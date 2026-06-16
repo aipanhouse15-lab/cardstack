@@ -30,7 +30,7 @@ function NoCap5PercentVisual() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Annual cashback comparison showing Amazon Pay ICICI uncapped return vs HDFC Millennia capped return across 12 months"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)" }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)" }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">No Cap vs Capped: What You Actually Earn Each Month</text>
       {months.map((m, i) => {
@@ -71,7 +71,7 @@ function TrifectaExplainer() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="The rare trifecta: Amazon Pay ICICI card has zero annual fee, 5 percent cashback, and no monthly cap simultaneously"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="26" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">The Rarest Trifecta in Indian Credit Cards</text>
       {[
@@ -98,7 +98,7 @@ function SaleStrategyGrid() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Amazon sale strategy grid showing how cashback stacks with bank offers during Great Indian Sale and Prime Day"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Sale Season Stack: What You Actually Save</text>
       {[
@@ -111,7 +111,7 @@ function SaleStrategyGrid() {
         <g key={ri}>
           {row.map((cell, ci) => (
             <g key={ci}>
-              <rect x={10 + ci * 132} y={36 + ri * 34} width={130} height={32} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "#fff" : "var(--surface, #f8fafc)"} rx="2" />
+              <rect x={10 + ci * 132} y={36 + ri * 34} width={130} height={32} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "#fff" : "var(--raise)"} rx="2" />
               <text x={75 + ci * 132} y={55 + ri * 34} textAnchor="middle" fill={ri === 0 ? "#fff" : ci === 4 ? COLOR : "var(--text)"} fontSize="10" fontWeight={ri === 0 || ci === 0 ? "700" : "400"}>{cell}</text>
             </g>
           ))}
@@ -129,7 +129,7 @@ function EMIDecisionTree() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Decision tree: when to use no-cost EMI on Amazon versus paying in full with 5 percent cashback"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">No-Cost EMI vs Full Payment: Which Earns More?</text>
       <rect x="240" y="38" width="200" height="42" fill={COLOR} rx="8" />
@@ -139,11 +139,11 @@ function EMIDecisionTree() {
       <line x1="500" y1="80" x2="500" y2="108" stroke="var(--border)" strokeWidth="1" />
       <line x1="180" y1="80" x2="340" y2="80" stroke="var(--border)" strokeWidth="1" />
       <line x1="340" y1="80" x2="500" y2="80" stroke="var(--border)" strokeWidth="1" />
-      <rect x="80" y="108" width="200" height="56" fill="#fef2f2" stroke="#fca5a5" rx="8" />
+      <rect x="80" y="108" width="200" height="56" fill="var(--raise)" stroke="#fca5a5" rx="8" />
       <text x="180" y="128" textAnchor="middle" fill="#dc2626" fontSize="12" fontWeight="600">No-Cost EMI</text>
       <text x="180" y="145" textAnchor="middle" fill="#991b1b" fontSize="11">Cashback on upfront amount only.</text>
       <text x="180" y="160" textAnchor="middle" fill="#991b1b" fontSize="11">Interest waived but cashback lost on EMI instalments.</text>
-      <rect x="400" y="108" width="200" height="56" fill="#f0fdf4" stroke="#86efac" rx="8" />
+      <rect x="400" y="108" width="200" height="56" fill="var(--raise)" stroke="rgba(62,224,143,.35)" rx="8" />
       <text x="500" y="128" textAnchor="middle" fill="#16a34a" fontSize="12" fontWeight="600">Pay in Full</text>
       <text x="500" y="145" textAnchor="middle" fill="#166534" fontSize="11">5% cashback on full amount.</text>
       <text x="500" y="160" textAnchor="middle" fill="#166534" fontSize="11">On ₹20,000 item: ₹1,000 back immediately.</text>
@@ -158,7 +158,7 @@ function WhenOtherCardsBeat() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Scenarios where HDFC Millennia or SBI Cashback beats Amazon Pay ICICI despite lower rates"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">When Another Card Beats Amazon Pay ICICI</text>
       {[
@@ -167,11 +167,11 @@ function WhenOtherCardsBeat() {
         { label: "Mixed online: Amazon + Myntra + Ajio + others", card: "SBI Cashback", reason: "5% ALL online, not just Amazon, cap ₹5,000" },
       ].map((item, i) => (
         <g key={i}>
-          <rect x="10" y={42 + i * 36} width="320" height="30" fill="#fff" stroke="var(--border)" rx="4" />
+          <rect x="10" y={42 + i * 36} width="320" height="30" fill="var(--raise)" stroke="var(--border)" rx="4" />
           <text x="170" y={61 + i * 36} textAnchor="middle" fill="var(--text)" fontSize="11">{item.label}</text>
           <rect x="344" y={42 + i * 36} width="160" height="30" fill={COLOR + "22"} stroke={COLOR} rx="4" />
           <text x="424" y={61 + i * 36} textAnchor="middle" fill={COLOR} fontSize="11" fontWeight="700">{item.card}</text>
-          <rect x="518" y={42 + i * 36} width="152" height="30" fill="var(--surface, #f8fafc)" stroke="var(--border)" rx="4" />
+          <rect x="518" y={42 + i * 36} width="152" height="30" fill="var(--raise)" stroke="var(--border)" rx="4" />
           <text x="594" y={54 + i * 36} textAnchor="middle" fill="var(--text-muted)" fontSize="9">{item.reason.slice(0, 28)}</text>
           <text x="594" y={66 + i * 36} textAnchor="middle" fill="var(--text-muted)" fontSize="9">{item.reason.slice(28)}</text>
         </g>
@@ -324,7 +324,7 @@ export default function BestCreditCardForAmazon() {
             caveat: "2% is significantly lower than 5%. Only use if you cannot get Amazon Pay ICICI."
           },
         ].map(card => (
-          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "#fff" }}>
+          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "var(--raise)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 8 }}>
               <div>
                 <span style={{ background: COLOR + "22", color: COLOR, fontSize: 11, fontWeight: 700, padding: "2px 8px", borderRadius: 4, marginRight: 8 }}>{card.badge}</span>
@@ -389,7 +389,7 @@ export default function BestCreditCardForAmazon() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 40, background: "var(--surface, #f8fafc)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
+      <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
         <p>Amazon Pay ICICI is not the best card in your wallet. It is the best card for one specific thing: buying on Amazon. Within that use case, it is almost impossible to beat: free, 5%, uncapped, and backed by ICICI Bank which is one of the most reliable issuers in India for prompt cashback credit.</p>
         <p>If you already have HDFC Millennia, it covers Amazon at the same 5% rate and handles a wider range of categories. But if Amazon is your primary online shopping platform, and for many Indian households it is, the dedicated Amazon Pay ICICI is the better choice because you will eventually spend more than ₹20,000/month on Amazon during sale months, and that is when the no-cap advantage shows its value.</p>

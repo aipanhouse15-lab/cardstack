@@ -36,7 +36,7 @@ const SvgExpenseRatio = () => (
       ["Nifty 50 Index Fund (UTI)", "0.18%", "0.38%", "0.20%", "~₹200/yr per ₹1L"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={59 + ri * 30} width={700} height="30" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={59 + ri * 30} width={700} height="30" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 200, 330, 460, 560];
           const isGood = ci === 1;
@@ -112,7 +112,7 @@ const SvgPlatformComparison = () => (
       ["AMC website directly", "Fund house", "Direct only", "FREE", "Best for single fund — SBI, HDFC, ICICI etc."],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={59 + ri * 26} width={700} height="22" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={59 + ri * 26} width={700} height="22" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 160, 280, 430, 520];
           return <text key={ci} x={xs[ci] + 5} y={74 + ri * 26} fontFamily="system-ui" fontSize="10" fill={cell === "FREE" ? COLOR : "var(--text)"}>{cell}</text>;

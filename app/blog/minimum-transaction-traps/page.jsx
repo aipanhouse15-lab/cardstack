@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgCashAdvanceCost = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Cash advance cost breakdown: ₹10,000 for 30 days totals ₹768 in fees" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="14" fontWeight="700" fill="var(--text)">Cash Advance ₹10,000 — 30-Day Total Cost Breakdown</text>
     <rect x="36" y="56" width="160" height="36" rx="4" fill="#dc2626" opacity="0.15" />
     <text x="116" y="79" textAnchor="middle" fontSize="13" fontWeight="600" fill="#dc2626">Processing Fee</text>
@@ -50,7 +50,7 @@ const SvgCashAdvanceCost = () => (
 
 const SvgRewardExclusionTable = () => (
   <svg viewBox="0 0 720 320" role="img" aria-label="Reward exclusion categories by major Indian credit card issuers" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="320" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="320" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="14" fontWeight="700" fill="var(--text)">Reward Exclusion Categories — Common Indian Cards (June 2026)</text>
     <rect x="36" y="52" width="648" height="28" rx="4" fill="var(--border)" opacity="0.5" />
     <text x="50" y="71" fontSize="12" fontWeight="700" fill="var(--text)">Category</text>
@@ -81,7 +81,7 @@ const SvgRewardExclusionTable = () => (
 
 const SvgMinimumTransactionBar = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Minimum transaction thresholds for reward earning on Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Minimum Transaction to Earn Rewards (₹)</text>
     {[
       { label: "SBI SimplyCLICK", val: 100, max: 500 },
@@ -102,7 +102,7 @@ const SvgMinimumTransactionBar = () => (
 
 const SvgMilestoneTrap = () => (
   <svg viewBox="0 0 720 230" role="img" aria-label="Milestone bonus spend thresholds versus average cardholder monthly spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="230" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="230" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Milestone Bonus Threshold vs. Avg Monthly Spend (India, 2026)</text>
     <text x="36" y="58" fontSize="12" fill="var(--text-muted)">Most cardholders never reach the milestone that unlocks the "headline" bonus.</text>
     <rect x="36" y="80" width="210" height="90" rx="6" fill="var(--border)" opacity="0.3" />
@@ -123,7 +123,7 @@ const SvgMilestoneTrap = () => (
 
 const SvgRewardReversalFlow = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="How reward reversal works when you return a purchase" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">The Reward Reversal Trap — Step by Step</text>
     {[
       { x: 36, label: "1. You buy ₹5,000 item", sub: "500 points credited" },
@@ -144,14 +144,14 @@ const SvgRewardReversalFlow = () => (
 
 const SvgGSTOnInterest = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="How GST compounds on top of credit card interest in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">GST Stacks on Top of Interest — Most People Miss This</text>
     <text x="36" y="58" fontSize="13" fill="var(--text-muted)">Outstanding balance: ₹50,000 | 30 days revolving</text>
     <rect x="36" y="74" width="200" height="52" rx="6" fill="var(--border)" opacity="0.4" />
     <text x="136" y="100" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Interest charge</text>
     <text x="136" y="118" textAnchor="middle" fontSize="18" fontWeight="800" fill="var(--text)">₹1,750</text>
     <text x="252" y="106" fontSize="20" fill="var(--text-muted)">+</text>
-    <rect x="272" y="74" width="200" height="52" rx="6" fill="#ea580c" opacity="0.15" />
+    <rect x="272" y="74" width="200" height="52" rx="6" fill="var(--raise)" opacity="0.15" />
     <text x="372" y="100" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">18% GST on interest</text>
     <text x="372" y="118" textAnchor="middle" fontSize="18" fontWeight="800" fill="#ea580c">₹315</text>
     <text x="488" y="106" fontSize="20" fill="var(--text-muted)">=</text>
@@ -165,7 +165,7 @@ const SvgGSTOnInterest = () => (
 
 const SvgAnnualisedCostComparison = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Annualised cost comparison of cash advance versus other borrowing options in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">True Annualised Cost — Cash Advance vs Other Credit Options</text>
     {[
       { label: "Credit card cash advance", pct: 92, color: "#dc2626" },
@@ -186,7 +186,7 @@ const SvgAnnualisedCostComparison = () => (
 
 const SvgSpendCategories = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Which card spend categories typically earn no rewards in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Categories That Often Earn Zero Rewards (Read Your MITC)</text>
     {[
       ["Fuel surcharge transactions", "#dc2626"],
@@ -333,7 +333,7 @@ export default function BlogMinimumTransactionTraps() {
       </p>
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
 
-      <div style={{ background: "#fef2f2", border: "1px solid #fecaca", borderRadius: 8, padding: "16px 20px", marginBottom: 32 }}>
+      <div style={{ background: "var(--red-dim)", border: "1px solid rgba(255,90,72,.3)", borderRadius: 8, padding: "16px 20px", marginBottom: 32 }}>
         <p style={{ fontSize: 14, fontWeight: 700, color: COLOR, margin: "0 0 6px" }}>Before you spend another rupee on rewards</p>
         <p style={{ fontSize: 13, color: "var(--text-muted)", margin: 0 }}>
           This article documents traps that exist in the terms and conditions of cards issued by HDFC, Axis, SBI, ICICI, and Kotak — all legal, all disclosed, and almost never explained at point of sale. Knowing these will save you real money.
@@ -423,7 +423,7 @@ export default function BlogMinimumTransactionTraps() {
         </p>
       </section>
 
-      <section style={{ background: "#fef2f2", border: "1px solid #fecaca", borderRadius: 8, padding: "20px 24px", marginBottom: 36 }}>
+      <section style={{ background: "var(--red-dim)", border: "1px solid rgba(255,90,72,.3)", borderRadius: 8, padding: "20px 24px", marginBottom: 36 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>Before Your Next Transaction: A 30-Second Checklist</h2>
         <ol style={{ fontSize: 14, color: "var(--text)", lineHeight: 2, paddingLeft: 20 }}>
           <li>Is this transaction above my card's minimum (₹100/₹200)? If not, consider combining purchases.</li>

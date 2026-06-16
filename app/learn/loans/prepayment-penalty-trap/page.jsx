@@ -34,7 +34,7 @@ const SvgPenaltyMath = () => (
     <text x="540" y="110" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">(3% of ₹40L outstanding)</text>
     <path d="M 320 65 L 398 65" stroke="#f59e0b" strokeWidth="3" markerEnd="url(#arrow)" />
     <text x="340" y="85" fontFamily="system-ui" fontSize="10" fill="#f59e0b" fontWeight="700">vs</text>
-    <rect x="200" y="150" width="320" height="60" fill="#f59e0b" rx="8" />
+    <rect x="200" y="150" width="320" height="60" fill="var(--raise)" rx="8" />
     <text x="360" y="175" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#fff">Net saving after penalty</text>
     <text x="360" y="200" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill="#fff">₹2,00,000</text>
     <text x="360" y="240" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">Still worth it — but only after penalty payback period of ~22 months</text>
@@ -62,7 +62,7 @@ const SvgBankPenaltyComparison = () => (
       ["Kotak", "NIL", "2% + GST", "6 months", "₹5,000 + GST", "₹0 (float) / ₹94,400 (fixed)"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={61 + ri * 36} width={700} height="36" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={61 + ri * 36} width={700} height="36" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const x = [20, 110, 220, 330, 440, 580][ci];
           const isNil = cell.startsWith("NIL");
@@ -125,7 +125,7 @@ const SvgEscapeFlowchart = () => (
     <text x="490" y="92" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Fixed rate loan</text>
     <rect x="20" y="100" width="200" height="40" fill="#16a34a" rx="8" />
     <text x="120" y="125" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="600" fill="#fff">Go ahead — zero penalty</text>
-    <rect x="500" y="100" width="200" height="40" fill="#f59e0b" rx="8" />
+    <rect x="500" y="100" width="200" height="40" fill="var(--raise)" rx="8" />
     <text x="600" y="118" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="600" fill="#fff">Calculate penalty first</text>
     <text x="600" y="133" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fff">(2-4% of outstanding)</text>
     <path d="M 600 140 L 600 175" stroke="var(--border)" strokeWidth="2" />
@@ -150,7 +150,7 @@ const SvgLockInImpact = () => (
     <rect x="20" y="40" width="200" height="8" fill="#dc2626" rx="4" />
     <text x="120" y="65" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="600" fill="#dc2626">Lock-in: 6 months</text>
     <text x="120" y="80" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Cannot prepay or switch</text>
-    <rect x="240" y="95" width="3" height="60" fill="#f59e0b" />
+    <rect x="240" y="95" width="3" height="60" fill="var(--raise)" />
     <text x="250" y="115" fontFamily="system-ui" fontSize="11" fill="#f59e0b" fontWeight="700">Rate drops 1%</text>
     <text x="250" y="130" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">You can't refinance yet</text>
     <text x="250" y="145" fontFamily="system-ui" fontSize="10" fill="#dc2626">Cost: ~₹4,000-6,000/month</text>
@@ -158,7 +158,7 @@ const SvgLockInImpact = () => (
     <text x="460" y="115" fontFamily="system-ui" fontSize="11" fill="#16a34a" fontWeight="700">Lock-in ends</text>
     <text x="460" y="130" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Now you can refinance</text>
     <text x="460" y="145" fontFamily="system-ui" fontSize="10" fill="#16a34a">But you've lost ₹24,000–36,000</text>
-    <rect x="20" y="175" width="680" height="30" fill="#fef2f2" stroke="#dc2626" strokeWidth="1" rx="4" />
+    <rect x="20" y="175" width="680" height="30" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="4" />
     <text x="36" y="188" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#dc2626">On ₹50L loan: 6-month lock-in during a 1% rate cut = ₹24,000–30,000 in missed savings. A hidden cost of "free" loan offers.</text>
     <text x="36" y="202" fontFamily="system-ui" fontSize="12" fill="#dc2626">Ask upfront: "What is the lock-in period and what is the penalty if I exit during lock-in?" This is non-negotiable to ask before signing.</text>
   </svg>

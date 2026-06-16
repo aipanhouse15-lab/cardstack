@@ -96,7 +96,7 @@ function UpgradeArrowIcon() {
 function CalendarIcon() {
   return (
     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendar showing 12 to 18 month CIBIL building period">
-      <rect x="4" y="8" width="36" height="32" rx="3" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5"/>
+      <rect x="4" y="8" width="36" height="32" rx="3" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
       <line x1="4" y1="17" x2="40" y2="17" stroke="var(--border)" strokeWidth="1.5"/>
       <rect x="13" y="4" width="4" height="8" rx="2" fill={COLOR}/>
       <rect x="27" y="4" width="4" height="8" rx="2" fill={COLOR}/>
@@ -351,7 +351,7 @@ export default function BestCreditCardForBeginnersIndia() {
             <div
               key={item.title}
               style={{
-                background: "var(--surface, #f8fafc)",
+                background: "var(--raise)",
                 border: "1px solid var(--border)",
                 borderRadius: 8,
                 padding: "14px 16px",
@@ -380,7 +380,7 @@ export default function BestCreditCardForBeginnersIndia() {
                 border: card.highlight ? `2px solid ${COLOR}` : "1.5px solid var(--border)",
                 borderRadius: 10,
                 padding: "20px 22px",
-                background: card.highlight ? `${COLOR}07` : "var(--surface, #f8fafc)",
+                background: card.highlight ? `${COLOR}07` : "var(--raise)",
                 position: "relative",
               }}
             >
@@ -453,7 +453,7 @@ export default function BestCreditCardForBeginnersIndia() {
           </div>
         </div>
 
-        <div style={{ background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 22px", marginTop: 16 }}>
+        <div style={{ background: "var(--raise)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 22px", marginTop: 16 }}>
           <div style={{ fontWeight: 700, marginBottom: 12 }}>The one-card strategy (12 to 18 months)</div>
           {[
             "Use the card for all your regular monthly expenses — groceries, fuel, subscriptions, phone bill.",
@@ -505,7 +505,7 @@ export default function BestCreditCardForBeginnersIndia() {
                 ["₹25,000 to ₹40,000", "SBI SimplySAVE", "₹499", "10X on spend you're already doing"],
                 ["₹40,000+", "HDFC MoneyBack+", "₹500", "Easy upgrade path to HDFC Regalia later"],
               ].map(([income, card, fee, why], i) => (
-                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)" }}>
+                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px" }}>{income}</td>
                   <td style={{ padding: "10px 14px", fontWeight: 600 }}>{card}</td>
                   <td style={{ padding: "10px 14px", color: COLOR }}>{fee}</td>
@@ -587,8 +587,8 @@ export default function BestCreditCardForBeginnersIndia() {
               style={{
                 display: "flex",
                 gap: 12,
-                background: "#fff7ed",
-                border: "1px solid #fed7aa",
+                background: "rgba(212,168,83,.06)",
+                border: "1px solid rgba(212,168,83,.25)",
                 borderRadius: 8,
                 padding: "14px 16px",
               }}

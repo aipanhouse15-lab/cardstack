@@ -63,7 +63,7 @@ const SvgTotalCost20yr = () => (
         <text x="125" y={70 + i * 64} fontFamily="system-ui" fontSize="11" fill="#fff">{interest} interest {fees} fees</text>
       </g>
     ))}
-    <rect x="120" y="220" width="680" height="36" fill="#fef2f2" stroke="#dc2626" strokeWidth="1" rx="4" />
+    <rect x="120" y="220" width="680" height="36" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="4" />
     <text x="130" y="237" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#dc2626">SBI saves ₹1.7L over HDFC on total 20-year cost. But 15–25 day processing vs HDFC's 3–5 days. Pick based on your timeline urgency.</text>
     <text x="130" y="252" fontFamily="system-ui" fontSize="12" fill="#dc2626">ICICI is a good middle ground — cheaper than HDFC, faster than SBI. Especially competitive for existing ICICI account holders.</text>
   </svg>
@@ -105,7 +105,7 @@ const SvgFeatureMatrix = () => (
       ["Pre-approved offers", "Limited", "Strong (app-based)", "Very strong (app)"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={61 + ri * 32} width={700} height="32" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={61 + ri * 32} width={700} height="32" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const x = [20, 200, 360, 520][ci];
           const isGood = cell === "NIL" || cell === "None forced" || cell === "Excellent" || cell === "Very strong (app)";
@@ -130,7 +130,7 @@ const SvgBorrowerProfile = () => (
       { profile: "NRI home loan", winner: "HDFC / ICICI", reason: "Both have dedicated NRI home loan products and international processing teams.", color: HDFC },
     ].map(({ profile, winner, reason, color }, i) => (
       <g key={profile}>
-        <rect x="20" y={40 + i * 36} width={700} height="28" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} rx="0" />
+        <rect x="20" y={40 + i * 36} width={700} height="28" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} rx="0" />
         <text x="26" y={58 + i * 36} fontFamily="system-ui" fontSize="11" fill="var(--text)">{profile}</text>
         <rect x="310" y={42 + i * 36} width="80" height="24" fill={color} rx="4" />
         <text x="350" y={58 + i * 36} textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#fff">{winner}</text>

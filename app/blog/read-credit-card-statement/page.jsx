@@ -23,16 +23,16 @@ const UPDATED = "June 4, 2026";
 
 const SvgStatementAnatomy = () => (
   <svg viewBox="0 0 720 300" role="img" aria-label="Annotated credit card statement showing key sections and their meaning" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="300" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="300" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Your Credit Card Statement: What Each Section Actually Means</text>
     <rect x="20" y="38" width="680" height="52" rx="6" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5" />
     <text x="36" y="58" fontSize="12" fontWeight="700" fill={COLOR}>STATEMENT SUMMARY</text>
     <text x="36" y="76" fontSize="11" fill="var(--text-muted)">Statement Date: 15 May 2026  |  Payment Due Date: 5 Jun 2026  |  Credit Limit: ₹1,50,000</text>
-    <rect x="20" y="100" width="220" height="70" rx="6" fill="#fef9c3" stroke="#ca8a04" strokeWidth="1" />
+    <rect x="20" y="100" width="220" height="70" rx="6" fill="var(--raise)" stroke="#ca8a04" strokeWidth="1" />
     <text x="30" y="120" fontSize="11" fontWeight="700" fill="#854d0e">Total Amount Due</text>
     <text x="30" y="138" fontSize="18" fontWeight="800" fill="#854d0e">₹42,380</text>
     <text x="30" y="156" fontSize="10" fill="#854d0e">Pay in full to avoid interest</text>
-    <rect x="260" y="100" width="220" height="70" rx="6" fill="#fee2e2" stroke="#dc2626" strokeWidth="1" />
+    <rect x="260" y="100" width="220" height="70" rx="6" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" />
     <text x="270" y="120" fontSize="11" fontWeight="700" fill="#991b1b">Minimum Amount Due</text>
     <text x="270" y="138" fontSize="18" fontWeight="800" fill="#991b1b">₹2,119</text>
     <text x="270" y="156" fontSize="10" fill="#991b1b">TRAP: costs you thousands more</text>
@@ -40,10 +40,10 @@ const SvgStatementAnatomy = () => (
     <text x="510" y="120" fontSize="11" fontWeight="700" fill="#14532d">Available Credit</text>
     <text x="510" y="138" fontSize="18" fontWeight="800" fill="#14532d">₹1,07,620</text>
     <text x="510" y="156" fontSize="10" fill="#14532d">Limit minus balance</text>
-    <rect x="20" y="184" width="680" height="44" rx="6" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+    <rect x="20" y="184" width="680" height="44" rx="6" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
     <text x="36" y="203" fontSize="11" fontWeight="700" fill="var(--text)">Reward Points Balance: 8,420 pts  (expires Dec 2026)</text>
     <text x="36" y="220" fontSize="10" fill="var(--text-muted)">Redemption value approx ₹842 at 10p per point. Don't let these expire!</text>
-    <rect x="20" y="240" width="680" height="44" rx="6" fill="#faf5ff" stroke="#7c3aed" strokeWidth="1" />
+    <rect x="20" y="240" width="680" height="44" rx="6" fill="var(--raise)" stroke="#7c3aed" strokeWidth="1" />
     <text x="36" y="259" fontSize="11" fontWeight="700" fill="#7c3aed">Unbilled Transactions: ₹6,200</text>
     <text x="36" y="276" fontSize="10" fill="var(--text-muted)">Purchases made after statement date. Will appear on next month's statement. Not included in ₹42,380.</text>
   </svg>
@@ -51,14 +51,14 @@ const SvgStatementAnatomy = () => (
 
 const SvgDatesExplained = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Credit card date timeline: statement date, payment due date, and interest-free period" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Confusing Date Trinity, Explained on One Timeline</text>
     <line x1="40" y1="90" x2="680" y2="90" stroke="var(--border)" strokeWidth="2" />
     {[
-      { x: 40, label: "Billing cycle\nstarts", sub: "1 Apr", color: "#64748b" },
+      { x: 40, label: "Billing cycle\nstarts", sub: "1 Apr", color: "var(--mut)" },
       { x: 260, label: "Statement\nDate", sub: "30 Apr", color: "#ca8a04" },
       { x: 480, label: "Payment\nDue Date", sub: "20 May", color: "#dc2626" },
-      { x: 680, label: "Next\nStatement", sub: "30 May", color: "#64748b" },
+      { x: 680, label: "Next\nStatement", sub: "30 May", color: "var(--mut)" },
     ].map((d, i) => (
       <g key={i}>
         <circle cx={d.x} cy="90" r="8" fill={d.color} />
@@ -75,7 +75,7 @@ const SvgDatesExplained = () => (
 
 const SvgMinDueTrap = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Minimum amount due trap: total cost of only paying minimum on a 50000 rupee balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Minimum Due Trap: ₹50,000 Balance at 3.5%/Month</text>
     <text x="360" y="44" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Paying only ₹2,500 minimum each month (5% of balance)</text>
     {[
@@ -96,7 +96,7 @@ const SvgMinDueTrap = () => (
 
 const SvgRewardPointsDecoder = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="Reward points value decoder for major Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">What Are Your Reward Points Actually Worth?</text>
     {["Card", "Points per ₹150", "Value per Point", "Effective Rate", "Expiry"].map((h, i) => (
       <text key={i} x={[30, 180, 310, 440, 600][i]} y="50" fontSize="11" fontWeight="700" fill="var(--text-muted)">{h}</text>
@@ -109,7 +109,7 @@ const SvgRewardPointsDecoder = () => (
       ["SBI SimplySAVE", "1 pt/₹100", "₹0.25", "0.25%", "2 years"],
     ].map((row, i) => (
       <g key={i}>
-        <rect x="20" y={58 + i * 24} width="680" height="22" rx="3" fill={i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)"} />
+        <rect x="20" y={58 + i * 24} width="680" height="22" rx="3" fill={i % 2 === 0 ? "transparent" : "var(--raise)"} />
         {row.map((cell, j) => (
           <text key={j} x={[30, 180, 310, 440, 600][j]} y={73 + i * 24} fontSize="11" fill={j === 3 ? COLOR : "var(--text)"}>{cell}</text>
         ))}
@@ -120,7 +120,7 @@ const SvgRewardPointsDecoder = () => (
 
 const SvgEmiBreakdown = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Credit card EMI breakdown on statement showing principal, interest, and remaining balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">How an EMI Conversion Appears on Your Statement</text>
     <text x="360" y="44" textAnchor="middle" fontSize="11" fill="var(--text-muted)">₹30,000 converted to 6-month EMI at 13% p.a. (no-cost EMI: 0%)</text>
     {["Month", "EMI Amount", "Principal", "Interest (13% p.a.)", "Outstanding"].map((h, i) => (
@@ -133,7 +133,7 @@ const SvgEmiBreakdown = () => (
       ["Month 6", "₹5,000", "₹4,946", "₹54", "₹0"],
     ].map((row, i) => (
       <g key={i}>
-        <rect x="20" y={74 + i * 26} width="680" height="24" rx="3" fill={i % 2 === 0 ? "transparent" : "#f0fdf4"} />
+        <rect x="20" y={74 + i * 26} width="680" height="24" rx="3" fill={i % 2 === 0 ? "transparent" : "var(--green-dim)"} />
         {row.map((cell, j) => (
           <text key={j} x={[30, 150, 270, 390, 560][j]} y={90 + i * 26} fontSize="11" fill={j === 3 ? "#dc2626" : "var(--text)"}>{cell}</text>
         ))}
@@ -145,10 +145,10 @@ const SvgEmiBreakdown = () => (
 
 const SvgUnbilledVsBilled = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Difference between billed and unbilled transactions on a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Billed vs Unbilled: Where Your Money Hides</text>
     <rect x="20" y="40" width="320" height="104" rx="8" fill="#dcfce7" />
-    <rect x="380" y="40" width="320" height="104" rx="8" fill="#fef9c3" />
+    <rect x="380" y="40" width="320" height="104" rx="8" fill="var(--raise)" />
     <text x="180" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="#14532d">Billed Transactions</text>
     <text x="540" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="#854d0e">Unbilled Transactions</text>
     <text x="36" y="82" fontSize="11" fill="#14532d">Appear on current statement</text>
@@ -164,7 +164,7 @@ const SvgUnbilledVsBilled = () => (
 
 const SvgInterestFreeCalc = () => (
   <svg viewBox="0 0 720 170" role="img" aria-label="Interest-free period calculator showing different purchase dates" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="170" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="170" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Interest-Free Days Depend on When You Buy</text>
     <text x="360" y="44" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Statement date: 15th of every month. Due date: 5th of next month.</text>
     {["Purchase Date", "Days to Due Date", "Interest-Free Days", "Smart Move?"].map((h, i) => (
@@ -177,7 +177,7 @@ const SvgInterestFreeCalc = () => (
       ["14th of month", "1 day to statement + 20 days", "~21 days", "Worst timing"],
     ].map((row, i) => (
       <g key={i}>
-        <rect x="20" y={74 + i * 22} width="680" height="20" rx="3" fill={i % 2 === 0 ? "transparent" : "#f0fdf4"} />
+        <rect x="20" y={74 + i * 22} width="680" height="20" rx="3" fill={i % 2 === 0 ? "transparent" : "var(--green-dim)"} />
         {row.map((cell, j) => (
           <text key={j} x={[30, 220, 380, 540][j]} y={88 + i * 22} fontSize="11" fill={j === 3 ? (cell === "Best" ? COLOR : cell === "Worst timing" ? "#dc2626" : "var(--text)") : "var(--text)"}>{cell}</text>
         ))}

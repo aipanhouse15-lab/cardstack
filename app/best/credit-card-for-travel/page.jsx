@@ -31,7 +31,7 @@ function MilesVsCashbackChart() {
       aria-label="Bar chart comparing value per ₹100 spent for miles-based vs cashback travel cards"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="260" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="260" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="30" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Value per ₹100 Spent: Miles vs Cashback</text>
       {/* Y axis labels */}
       {[0, 1, 2, 3, 4, 5].map((v, i) => (
@@ -84,7 +84,7 @@ function AtlasDevaluationTimeline() {
       aria-label="Timeline of Axis Atlas card devaluation events from 2024 to 2026"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="220" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="220" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Axis Atlas: Key Changes Timeline</text>
       <line x1="60" y1="60" x2="620" y2="60" stroke="var(--border)" strokeWidth="2" />
       {events.map((ev, i) => {
@@ -120,7 +120,7 @@ function LoungeAccessTable() {
       aria-label="Table showing lounge access benefits for top Indian travel credit cards"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="300" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="300" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Lounge Access Comparison (June 2026)</text>
       {/* Header */}
       {["Card", "Domestic", "International", "Annual Fee"].map((h, i) => (
@@ -129,7 +129,7 @@ function LoungeAccessTable() {
       <line x1="16" y1="58" x2="664" y2="58" stroke="var(--border)" strokeWidth="1" />
       {rows.map((r, i) => (
         <g key={i}>
-          <rect x="16" y={62 + i * 36} width="648" height="35" rx="3" fill={i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)"} opacity="0.6" />
+          <rect x="16" y={62 + i * 36} width="648" height="35" rx="3" fill={i % 2 === 0 ? "transparent" : "var(--raise)"} opacity="0.6" />
           <text x="24" y={84 + i * 36} fontSize="11" fill="var(--text)">{r.card}</text>
           <text x="240" y={84 + i * 36} fontSize="11" fill="var(--text-muted)">{r.domestic}</text>
           <text x="380" y={84 + i * 36} fontSize="11" fill="var(--text-muted)">{r.international}</text>
@@ -150,7 +150,7 @@ function TravelCardDecisionFlow() {
       aria-label="Decision flowchart to choose the right travel credit card based on travel frequency and spending"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="380" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="380" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Which Travel Card Is Right for You?</text>
       {/* Start */}
       <rect x="240" y="44" width="200" height="38" rx="8" fill={COLOR} />
@@ -158,7 +158,7 @@ function TravelCardDecisionFlow() {
       {/* Branch 1 */}
       <line x1="240" y1="63" x2="120" y2="130" stroke="var(--border)" strokeWidth="1.5" />
       <text x="150" y="120" fontSize="10" fill="var(--text-muted)">Less than 4x/year</text>
-      <rect x="40" y="130" width="160" height="36" rx="7" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.2" />
+      <rect x="40" y="130" width="160" height="36" rx="7" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.2" />
       <text x="120" y="152" textAnchor="middle" fontSize="11" fill="var(--text)">Scapia Federal</text>
       <text x="120" y="166" textAnchor="middle" fontSize="10" fill="var(--text-muted)">(Free, zero forex)</text>
       {/* Branch 2 */}
@@ -175,7 +175,7 @@ function TravelCardDecisionFlow() {
       {/* Sub-branch Air India yes */}
       <line x1="265" y1="168" x2="175" y2="228" stroke="var(--border)" strokeWidth="1.5" />
       <text x="188" y="220" fontSize="10" fill="var(--text-muted)">Yes, Air India</text>
-      <rect x="80" y="228" width="185" height="36" rx="7" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.2" />
+      <rect x="80" y="228" width="185" height="36" rx="7" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.2" />
       <text x="172" y="248" textAnchor="middle" fontSize="11" fill="var(--text)">HDFC Tata Neu Infinity</text>
       <text x="172" y="262" textAnchor="middle" fontSize="10" fill="var(--text-muted)">(₹1,499/yr, 10% NeuCoins)</text>
       {/* Sub-branch no Air India */}
@@ -202,7 +202,7 @@ function MilesValueCalculator() {
       aria-label="Reference table showing break-even spend for Axis Atlas card to justify the annual fee"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="200" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Axis Atlas: Does the ₹5,000 Fee Pay Off?</text>
       {[
         { spend: "₹50,000/mo", miles: "12,000 EDGE Miles/yr", value: "~₹4,800", verdict: "Borderline — barely covers fee" },
@@ -444,7 +444,7 @@ export default function BestCreditCardForTravel() {
               display: "flex",
               gap: 18,
               alignItems: "flex-start",
-              background: "var(--surface, #f8fafc)",
+              background: "var(--raise)",
             }}
           >
             <div

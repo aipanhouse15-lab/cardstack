@@ -87,7 +87,7 @@ const SvgSCSSvsfd = () => (
       ["Premature closure", "Penalty 1-1.5%", "Penalty 0.5-1%"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={59 + ri * 19} width={700} height="19" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={59 + ri * 19} width={700} height="19" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 220, 480];
           const isGoodSCSS = ci === 1 && (cell.includes("govt") || cell.includes("Sovereign") || cell.includes("8.20"));

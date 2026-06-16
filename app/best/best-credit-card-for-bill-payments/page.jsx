@@ -73,7 +73,7 @@ function FivePercentBadge() {
 function CalendarCashIcon() {
   return (
     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendar with cash symbol representing monthly bill payment schedule">
-      <rect x="4" y="8" width="36" height="32" rx="3" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5"/>
+      <rect x="4" y="8" width="36" height="32" rx="3" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
       <line x1="4" y1="17" x2="40" y2="17" stroke="var(--border)" strokeWidth="1.5"/>
       <rect x="13" y="4" width="4" height="8" rx="2" fill={COLOR}/>
       <rect x="27" y="4" width="4" height="8" rx="2" fill={COLOR}/>
@@ -277,7 +277,7 @@ export default function BestCreditCardForBillPayments() {
 
         <div
           style={{
-            background: "var(--surface, #f8fafc)",
+            background: "var(--raise)",
             border: `1.5px solid ${COLOR}`,
             borderRadius: 10,
             padding: "20px 22px",
@@ -413,7 +413,7 @@ export default function BestCreditCardForBillPayments() {
                 border: "1.5px solid var(--border)",
                 borderRadius: 8,
                 padding: "16px 18px",
-                background: "var(--surface, #f8fafc)",
+                background: "var(--raise)",
               }}
             >
               <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8, marginBottom: 8 }}>
@@ -468,7 +468,7 @@ export default function BestCreditCardForBillPayments() {
                 ["Broadband", "₹600", "₹30", "₹6", "₹12"],
                 ["Gas/PNG", "₹400", "₹20", "₹4", "₹8"],
               ].map(([cat, spend, ace, millennia, amzn], i) => (
-                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)" }}>
+                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px" }}>{cat}</td>
                   <td style={{ padding: "10px 14px", color: "var(--text-muted)" }}>{spend}</td>
                   <td style={{ padding: "10px 14px", color: COLOR, fontWeight: 600 }}>{ace}</td>
@@ -565,7 +565,7 @@ export default function BestCreditCardForBillPayments() {
                 ["15th to 20th", "Piped gas / LPG", "Google Pay Bill Pay", "Axis ACE", "5%"],
                 ["Any", "Amazon subscriptions", "Amazon Pay ICICI direct", "Amazon Pay ICICI", "2%"],
               ].map(([date, bill, route, card, reward], i) => (
-                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)" }}>
+                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "8px 12px", color: "var(--text-muted)" }}>{date}</td>
                   <td style={{ padding: "8px 12px" }}>{bill}</td>
                   <td style={{ padding: "8px 12px", color: "var(--text-muted)" }}>{route}</td>

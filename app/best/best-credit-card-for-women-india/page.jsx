@@ -29,7 +29,7 @@ const IconSpark = () => (
 
 const IconShopping = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Online shopping spend category">
-    <rect x="5" y="10" width="18" height="14" rx="2" fill="var(--surface,#f8fafc)" stroke={COLOR} strokeWidth="1.8"/>
+    <rect x="5" y="10" width="18" height="14" rx="2" fill="var(--raise)" stroke={COLOR} strokeWidth="1.8"/>
     <path d="M10 10V8C10 5.8 11.8 4 14 4C16.2 4 18 5.8 18 8V10" fill="none" stroke={COLOR} strokeWidth="1.8" strokeLinecap="round"/>
     <circle cx="10.5" cy="16" r="1.5" fill={COLOR} opacity="0.6"/>
     <circle cx="17.5" cy="16" r="1.5" fill={COLOR} opacity="0.6"/>
@@ -267,7 +267,7 @@ export default function BestCreditCardForWomenIndia() {
           { category: "Health + Insurance", detail: "Pharmacy, health insurance, labs", share: "~9%", icon: <IconCheck /> },
           { category: "Travel + Fuel", detail: "Flights, cabs, petrol", share: "~8%", icon: <IconCheck /> }
         ].map(({ category, detail, share, icon }, i) => (
-          <div key={i} style={{ background: "var(--surface,#f8fafc)", border: "1px solid var(--border,#e2e8f0)", borderRadius: 10, padding: "14px 16px", display: "flex", gap: 12, alignItems: "flex-start" }}>
+          <div key={i} style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 10, padding: "14px 16px", display: "flex", gap: 12, alignItems: "flex-start" }}>
             <div style={{ flexShrink: 0 }}>{icon}</div>
             <div style={{ flex: 1 }}>
               <div style={{ fontWeight: 700, fontSize: 14 }}>{category}</div>
@@ -284,7 +284,7 @@ export default function BestCreditCardForWomenIndia() {
 
       <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
         {profiles.map(({ label, spends, primaryPick, secondaryPick, reason }, i) => (
-          <div key={i} style={{ border: `2px solid ${i === 0 ? COLOR : "var(--border,#e2e8f0)"}`, borderRadius: 14, padding: "20px 22px", background: i === 0 ? `${COLOR}05` : "transparent" }}>
+          <div key={i} style={{ border: `2px solid ${i === 0 ? COLOR : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: i === 0 ? `${COLOR}05` : "transparent" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
               {i === 0 && <IconStar />}
               <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700 }}>{label}</h3>
@@ -299,7 +299,7 @@ export default function BestCreditCardForWomenIndia() {
                 <div style={{ fontSize: 11, color: COLOR, fontWeight: 700, marginBottom: 4, textTransform: "uppercase", letterSpacing: 0.5 }}>Primary Card</div>
                 <div style={{ fontWeight: 700, fontSize: 14 }}>{primaryPick}</div>
               </div>
-              <div style={{ background: "var(--surface,#f8fafc)", border: "1px solid var(--border,#e2e8f0)", borderRadius: 8, padding: "10px 14px" }}>
+              <div style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 8, padding: "10px 14px" }}>
                 <div style={{ fontSize: 11, color: "var(--text-muted,#64748b)", fontWeight: 700, marginBottom: 4, textTransform: "uppercase", letterSpacing: 0.5 }}>Pair With</div>
                 <div style={{ fontWeight: 700, fontSize: 14 }}>{secondaryPick}</div>
               </div>
@@ -345,7 +345,7 @@ export default function BestCreditCardForWomenIndia() {
             link: "/cards/amex-mrcc"
           }
         ].map(({ name, fee, why, link }, i) => (
-          <div key={i} style={{ border: "1px solid var(--border,#e2e8f0)", borderRadius: 12, padding: "18px 20px" }}>
+          <div key={i} style={{ border: "1px solid var(--border,var(--hair))", borderRadius: 12, padding: "18px 20px" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
                 <div style={{ background: COLOR, color: "#fff", borderRadius: "50%", width: 26, height: 26, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700, flexShrink: 0 }}>{i + 1}</div>
@@ -379,7 +379,7 @@ export default function BestCreditCardForWomenIndia() {
             <strong>Annual reward est.:</strong> ₹2,400 to ₹4,500 on ₹60K/yr mix
           </div>
         </div>
-        <div style={{ flex: 1, minWidth: 200, background: "var(--surface,#f8fafc)", border: "1px solid var(--border,#e2e8f0)", borderRadius: 12, padding: "16px 18px" }}>
+        <div style={{ flex: 1, minWidth: 200, background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 12, padding: "16px 18px" }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
             <IconStack />
             <strong style={{ color: "var(--text-muted,#475569)" }}>Stack B: Professional (₹3K/yr)</strong>
@@ -414,7 +414,7 @@ export default function BestCreditCardForWomenIndia() {
         </div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
           <Link href="/stack-builder" style={{ display: "inline-block", padding: "10px 18px", background: COLOR, color: "#fff", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Use Stack Builder</Link>
-          <Link href="/blog/women-credit-card-india-2026" style={{ display: "inline-block", padding: "10px 18px", background: "var(--surface,#f8fafc)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>In-Depth Blog Post</Link>
+          <Link href="/blog/women-credit-card-india-2026" style={{ display: "inline-block", padding: "10px 18px", background: "var(--raise)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>In-Depth Blog Post</Link>
         </div>
       </div>
 
@@ -422,7 +422,7 @@ export default function BestCreditCardForWomenIndia() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20 }}>Frequently Asked Questions</h2>
       <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 44 }}>
         {faq.mainEntity.map((item, i) => (
-          <details key={i} style={{ border: "1px solid var(--border,#e2e8f0)", borderRadius: 10 }}>
+          <details key={i} style={{ border: "1px solid var(--border,var(--hair))", borderRadius: 10 }}>
             <summary style={{ padding: "14px 18px", fontWeight: 600, fontSize: 15, cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               {item.name}
               <span style={{ color: COLOR, fontSize: 18, flexShrink: 0, marginLeft: 12 }}>+</span>
@@ -434,7 +434,7 @@ export default function BestCreditCardForWomenIndia() {
         ))}
       </div>
 
-      <footer style={{ borderTop: "1px solid var(--border,#e2e8f0)", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border,var(--hair))", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
         <p style={{ margin: "0 0 6px" }}>
           <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Card features and reward rates change frequently. Verify details with the issuing bank before applying. Spend pattern data is industry-level aggregate, not personal financial data.
         </p>

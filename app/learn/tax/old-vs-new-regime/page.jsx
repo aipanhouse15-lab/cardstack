@@ -18,7 +18,7 @@ const SvgSlabComparison = () => (
     {[
       { range: "Up to ₹4L", rate: "0%", c: "#dcfce7" },
       { range: "₹4-8L", rate: "5%", c: "#bbf7d0" },
-      { range: "₹8-12L", rate: "10%", c: "#86efac" },
+      { range: "₹8-12L", rate: "10%", c: "rgba(62,224,143,.35)" },
       { range: "₹12-16L", rate: "15%", c: "#4ade80" },
       { range: "₹16-20L", rate: "20%", c: "#22c55e" },
       { range: "₹20-24L", rate: "25%", c: "#16a34a" },
@@ -26,8 +26,8 @@ const SvgSlabComparison = () => (
     ].map((b, i) => (
       <g key={i} transform={`translate(${20 + i * 90}, 36)`}>
         <rect x="0" y="0" width="86" height="42" fill={b.c} stroke="var(--border)" />
-        <text x="43" y="18" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#0f172a" fontWeight="600">{b.range}</text>
-        <text x="43" y="34" textAnchor="middle" fontFamily="system-ui" fontSize="13" fill="#0f172a" fontWeight="700">{b.rate}</text>
+        <text x="43" y="18" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text)" fontWeight="600">{b.range}</text>
+        <text x="43" y="34" textAnchor="middle" fontFamily="system-ui" fontSize="13" fill="var(--text)" fontWeight="700">{b.rate}</text>
       </g>
     ))}
     <line x1="20" y1="92" x2="290" y2="92" stroke={COLOR} strokeWidth="3" />
@@ -35,15 +35,15 @@ const SvgSlabComparison = () => (
 
     <text x="20" y="148" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">OLD REGIME · 4 SLABS · UNCHANGED</text>
     {[
-      { range: "Up to ₹2.5L", rate: "0%", c: "#f1f5f9" },
-      { range: "₹2.5-5L", rate: "5%", c: "#e2e8f0" },
-      { range: "₹5-10L", rate: "20%", c: "#cbd5e1" },
+      { range: "Up to ₹2.5L", rate: "0%", c: "var(--raise)" },
+      { range: "₹2.5-5L", rate: "5%", c: "var(--hair)" },
+      { range: "₹5-10L", rate: "20%", c: "var(--hair2)" },
       { range: "Above ₹10L", rate: "30%", c: "#94a3b8" },
     ].map((b, i) => (
       <g key={i} transform={`translate(${20 + i * 158}, 162)`}>
         <rect x="0" y="0" width="154" height="48" fill={b.c} stroke="var(--border)" />
-        <text x="77" y="22" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#0f172a" fontWeight="600">{b.range}</text>
-        <text x="77" y="40" textAnchor="middle" fontFamily="system-ui" fontSize="14" fill="#0f172a" fontWeight="700">{b.rate}</text>
+        <text x="77" y="22" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)" fontWeight="600">{b.range}</text>
+        <text x="77" y="40" textAnchor="middle" fontFamily="system-ui" fontSize="14" fill="var(--text)" fontWeight="700">{b.rate}</text>
       </g>
     ))}
     <text x="320" y="248" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Old regime: ₹50k standard deduction + 80C, 80D, HRA, 24(b), 80CCD all available</text>
@@ -67,7 +67,7 @@ const SvgBreakeven = () => (
     <text x="490" y="78" fontFamily="system-ui" fontSize="10" fill={COLOR} fontWeight="700">New regime · linear after ₹12L</text>
 
     <path d="M 60 200 L 170 178 L 280 152 L 390 134 L 500 102 L 610 84" fill="none" stroke="#0f172a" strokeWidth="3" strokeDasharray="6 4" />
-    <text x="490" y="118" fontFamily="system-ui" fontSize="10" fill="#0f172a" fontWeight="700">Old regime · ₹3.75L deductions</text>
+    <text x="490" y="118" fontFamily="system-ui" fontSize="10" fill="var(--text)" fontWeight="700">Old regime · ₹3.75L deductions</text>
 
     <circle cx="385" cy="132" r="6" fill={COLOR} />
     <text x="395" y="148" fontFamily="system-ui" fontSize="11" fill={COLOR} fontWeight="700">Crossover ₹19.5L · ₹3.75L deductions</text>

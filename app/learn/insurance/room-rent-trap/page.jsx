@@ -24,7 +24,7 @@ const UPDATED = "June 4, 2026";
 const SvgProportionateDeduction = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Room rent trap proportionate deduction calculation showing how choosing a room that costs 3000 per day when policy limit is 2000 per day results in 33 percent deduction on entire hospital bill not just room charges" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW PROPORTIONATE DEDUCTION WORKS · THE TRAP MOST POLICYHOLDERS NEVER ANTICIPATE</text>
-    <rect x="20" y="40" width="680" height="50" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" rx="4" />
+    <rect x="20" y="40" width="680" height="50" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="4" />
     <text x="30" y="60" fontFamily="system-ui" fontSize="12" fill="var(--text)">Policy Room Rent Limit: <tspan fontWeight="700">1% of Sum Insured per day</tspan> = ₹2,000/day on ₹2L policy</text>
     <text x="30" y="78" fontFamily="system-ui" fontSize="12" fill="var(--text)">Meera chose: <tspan fontWeight="700" fill="#dc2626">Single AC room at ₹3,000/day</tspan> (she thought it was only ₹1,000 over limit)</text>
     <rect x="20" y="105" width="320" height="140" fill={COLOR} rx="8" opacity="0.1" stroke={COLOR} strokeWidth="1" />
@@ -62,7 +62,7 @@ const SvgInsurerComparison = () => (
       ["United India (Individual)", "1% of SI/day", "2% of SI/day", "Similar trap to New India — watch out"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={59 + ri * 25} width={700} height="25" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={59 + ri * 25} width={700} height="25" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 180, 360, 520];
           const isGood = cell.includes("No limit") || cell.includes("Best") || cell.includes("excellent");
@@ -88,7 +88,7 @@ const SvgBillComponent = () => (
       { item: "Room rent itself", cut: "YES", reason: "Only paid up to policy limit, balance borne by patient" },
     ].map(({ item, cut, reason }, i) => (
       <g key={item}>
-        <rect x="20" y={35 + i * 26} width={700} height="22" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={35 + i * 26} width={700} height="22" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={51 + i * 26} fontFamily="system-ui" fontSize="11" fill="var(--text)">{item}</text>
         <rect x="360" y={37 + i * 26} width="70" height="18" fill={cut === "YES" ? "#dc2626" : cut === "SOMETIMES" ? "#f59e0b" : "#16a34a"} rx="3" />
         <text x="395" y={50 + i * 26} textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#fff">{cut}</text>

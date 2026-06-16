@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgRewardPressureMap = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Structural pressures reducing credit card reward rates in India 2024 to 2028" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Why Reward Rates Are Under Structural Pressure</text>
     <circle cx="360" cy="120" r="48" fill={COLOR} opacity="0.12" />
     <text x="360" y="116" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Reward</text>
@@ -49,7 +49,7 @@ const SvgRewardPressureMap = () => (
 
 const SvgRewardSurvivalChart = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Which credit card reward types will survive and which will compress most" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Reward Type Survival Forecast: 2026-2030</text>
     <text x="24" y="54" fontSize="10" fill="var(--text)">Airline miles (direct earning)</text>
     <rect x="240" y="40" width="300" height="16" rx="4" fill="var(--border)" opacity="0.3" />
@@ -65,18 +65,18 @@ const SvgRewardSurvivalChart = () => (
     <text x="406" y="111" fontSize="9" fill="var(--text-muted)">54% — direct bank cost, first to compress</text>
     <text x="24" y="141" fontSize="10" fill="var(--text)">Partner app rewards (Swiggy, Zomato)</text>
     <rect x="240" y="127" width="300" height="16" rx="4" fill="var(--border)" opacity="0.3" />
-    <rect x="240" y="127" width="114" height="16" rx="4" fill="#ef4444" opacity="0.5" />
+    <rect x="240" y="127" width="114" height="16" rx="4" fill="var(--raise)" opacity="0.5" />
     <text x="358" y="140" fontSize="9" fill="var(--text-muted)">38% — ONDC migration could kill overnight</text>
     <text x="24" y="170" fontSize="10" fill="var(--text)">Lounge access (unlimited)</text>
     <rect x="240" y="156" width="300" height="16" rx="4" fill="var(--border)" opacity="0.3" />
-    <rect x="240" y="156" width="90" height="16" rx="4" fill="#ef4444" opacity="0.5" />
+    <rect x="240" y="156" width="90" height="16" rx="4" fill="var(--raise)" opacity="0.5" />
     <text x="334" y="169" fontSize="9" fill="var(--text-muted)">30% — overcrowded, expect tighter milestone gating</text>
   </svg>
 );
 
 const SvgDevaluationHistory = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="Timeline of major credit card reward devaluations in India 2022 to 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Indian Card Devaluations: The Pattern</text>
     <rect x="24" y="40" width="672" height="22" rx="4" fill="var(--border)" opacity="0.2" />
     <text x="36" y="56" fontSize="10" fontWeight="600" fill="var(--text-muted)">Aug 2023</text>
@@ -106,7 +106,7 @@ const SvgDevaluationHistory = () => (
 
 const SvgOndcWildcard = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="How ONDC could make credit card partner app rewards worthless" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">The ONDC Wildcard: How It Kills Partner Rewards</text>
     <rect x="24" y="44" width="300" height="110" rx="8" fill="var(--border)" opacity="0.2" />
     <text x="174" y="66" textAnchor="middle" fontSize="11" fontWeight="600" fill="var(--text)">Today (Branded Apps)</text>
@@ -126,7 +126,7 @@ const SvgOndcWildcard = () => (
 
 const SvgRuPayUpiOpportunity = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="RuPay credit card on UPI possibility and impact on rewards landscape" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">RuPay Credit on UPI: Game Changer or False Dawn?</text>
     <rect x="24" y="44" width="672" height="50" rx="6" fill={COLOR} opacity="0.08" />
     <text x="360" y="66" textAnchor="middle" fontSize="12" fontWeight="600" fill={COLOR}>The Promise: Earn credit card rewards on UPI transactions</text>
@@ -144,7 +144,7 @@ const SvgRuPayUpiOpportunity = () => (
 
 const SvgMaximizeNow = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Strategies to maximise credit card rewards now before further devaluation" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Maximise Now: What to Do Before the Next Devaluation</text>
     <rect x="24" y="40" width="672" height="24" rx="5" fill={COLOR} opacity="0.06" />
     <circle cx="42" cy="52" r="9" fill={COLOR} opacity="0.2" />
@@ -169,7 +169,7 @@ const SvgMaximizeNow = () => (
 
 const SvgLoungeGating = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Credit card lounge access milestone gating trend as lounges become overcrowded" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Lounge Access: Why It Will Keep Getting Harder</text>
     <text x="24" y="48" fontSize="11" fill="var(--text-muted)">Average lounge visits per cardholder per year (approximate industry trend)</text>
     <text x="36" y="76" fontSize="10" fill="var(--text-muted)">2022</text>
@@ -189,7 +189,7 @@ const SvgLoungeGating = () => (
 
 const SvgHonestForecast = () => (
   <svg viewBox="0 0 720 140" role="img" aria-label="Honest forecast for credit card rewards in India over the next five years" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="140" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="140" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">The Honest Forecast: Rewards in 2028 and Beyond</text>
     <rect x="24" y="44" width="672" height="80" rx="8" fill={COLOR} opacity="0.06" />
     <text x="42" y="66" fontSize="11" fill="var(--text)">Rewards will continue declining, not recovering. UPI volume growth, MDR sensitivity, lounge overcrowding, and ONDC disruption</text>

@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgHeroFlow = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Shift from influencer reviews to AI-driven card comparison" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <rect x="30" y="40" width="180" height="140" rx="8" fill="var(--border)" opacity="0.4" />
     <text x="120" y="75" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text-muted)">BEFORE</text>
     <text x="120" y="98" textAnchor="middle" fontSize="11" fill="var(--text-muted)">YouTube review</text>
@@ -46,7 +46,7 @@ const SvgHeroFlow = () => (
 
 const SvgGenericVsReal = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="Generic AI answer vs personalised Smart Swipe output comparison" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise)" rx="10" />
     <text x="24" y="32" fontSize="13" fontWeight="700" fill="var(--text)">You ask ChatGPT: "Best cashback card in India?"</text>
     <rect x="24" y="44" width="320" height="110" rx="6" fill="var(--border)" opacity="0.25" />
     <text x="36" y="68" fontSize="11" fontWeight="600" fill="var(--text-muted)">Generic answer</text>
@@ -65,7 +65,7 @@ const SvgGenericVsReal = () => (
 
 const SvgBankComplexityTrend = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Banks increasing product complexity in response to AI comparison tools" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">How Banks Are Responding to AI Comparison Tools</text>
     {[
       ["More niche co-branded cards", "Example: SBI BPCL vs HPCL variants — hard to compare"],
@@ -86,7 +86,7 @@ const SvgBankComplexityTrend = () => (
 
 const SvgSmartSwipeHow = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="How Smart Swipe works: spend input to cap-adjusted card recommendation" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Smart Swipe: How It Works</text>
     {[
       { x: 60, label: "1. Input spend", sub: "Monthly categories\n+ amounts" },
@@ -111,7 +111,7 @@ const SvgSmartSwipeHow = () => (
 
 const SvgAiLimits = () => (
   <svg viewBox="0 0 720 170" role="img" aria-label="What AI tools cannot do when picking credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="170" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="170" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">What AI Still Cannot Do for Card Picks</text>
     {[
       "Verify your actual spend pattern (it takes your word for it)",
@@ -129,9 +129,9 @@ const SvgAiLimits = () => (
 
 const SvgInputGuide = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="What to input and ignore when using AI for credit card selection" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <rect x="24" y="20" width="320" height="140" rx="8" fill="#22c55e" opacity="0.07" />
-    <rect x="376" y="20" width="320" height="140" rx="8" fill="#ef4444" opacity="0.07" />
+    <rect x="376" y="20" width="320" height="140" rx="8" fill="var(--raise)" opacity="0.07" />
     <text x="184" y="44" textAnchor="middle" fontSize="12" fontWeight="700" fill="#22c55e">INPUT THIS</text>
     <text x="536" y="44" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ef4444">IGNORE THIS</text>
     {[
@@ -155,11 +155,11 @@ const SvgInputGuide = () => (
 
 const SvgRewardCapExposed = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="How AI tools expose hidden reward caps that banks do not advertise" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">The Cap Trap AI Now Exposes</text>
     <text x="24" y="50" fontSize="11" fill="var(--text-muted)">HDFC Millennia advertises "5% cashback on Amazon"</text>
     <rect x="24" y="62" width="460" height="16" rx="4" fill="var(--border)" opacity="0.4" />
-    <rect x="24" y="62" width="90" height="16" rx="4" fill="#ef4444" opacity="0.7" />
+    <rect x="24" y="62" width="90" height="16" rx="4" fill="var(--raise)" opacity="0.7" />
     <text x="290" y="75" textAnchor="middle" fontSize="10" fill="var(--text-muted)">₹1,000/month cap = max ₹12,000/year even if you spend ₹5L on Amazon</text>
     <text x="24" y="104" fontSize="11" fill="var(--text-muted)">Axis Ace advertises "2% on all spends" (lower headline)</text>
     <rect x="24" y="116" width="460" height="16" rx="4" fill="var(--border)" opacity="0.4" />
@@ -171,7 +171,7 @@ const SvgRewardCapExposed = () => (
 
 const SvgBankSweat = () => (
   <svg viewBox="0 0 720 150" role="img" aria-label="Why banks are uncomfortable with AI-driven credit card comparisons" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="150" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="150" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Why Banks Are Uncomfortable With AI Comparisons</text>
     {[
       ["Fee traps exposed", "₹500 joining fee offset by ₹250 welcome voucher — net cost ₹250"],

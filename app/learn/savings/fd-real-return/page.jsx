@@ -54,7 +54,7 @@ const SvgPostTaxBySlab = () => (
       { slab: "30% slab (above ₹15L)", tax: "30%", postTax: "4.90%", real: "~-0.10%", color: "#dc2626" },
     ].map(({ slab, tax, postTax, real, color }, i) => (
       <g key={slab}>
-        <rect x="20" y={45 + i * 46} width={700} height="38" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={45 + i * 46} width={700} height="38" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={68 + i * 46} fontFamily="system-ui" fontSize="12" fill="var(--text)">{slab}</text>
         <text x="310" y={68 + i * 46} fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">Tax: {tax}</text>
         <rect x="370" y={49 + i * 46} width={parseFloat(postTax) * 26} height="26" fill={color} rx="4" opacity="0.8" />

@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgUtilizationMeter = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Credit utilization ratio ranges and their CIBIL score impact" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Credit Utilization Zones: how each range affects your CIBIL score</text>
     {[
       { label: "0-10%", desc: "Excellent", color: "#16a34a", x: 36, w: 120 },
@@ -54,16 +54,16 @@ const SvgUtilizationMeter = () => (
 
 const SvgRealMathExample = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Real math example showing CIBIL score impact of 45 percent vs 10 percent utilization on a 1 lakh credit limit" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">₹1 lakh credit limit: the CIBIL difference between ₹45,000 and ₹10,000 balance</text>
-    <rect x="36" y="56" width="290" height="130" fill="#fef2f2" rx="8" />
+    <rect x="36" y="56" width="290" height="130" fill="var(--raise)" rx="8" />
     <text x="181" y="80" fontSize="12" fontWeight="700" fill="#dc2626" textAnchor="middle" fontFamily="system-ui">Scenario A: ₹45,000 balance</text>
     <text x="181" y="104" fontSize="22" fontWeight="800" fill="#dc2626" textAnchor="middle" fontFamily="system-ui">45% utilization</text>
-    <rect x="56" y="116" width="250" height="16" fill="#fee2e2" rx="3" />
+    <rect x="56" y="116" width="250" height="16" fill="var(--raise)" rx="3" />
     <rect x="56" y="116" width="112" height="16" fill="#dc2626" rx="3" />
     <text x="181" y="150" fontSize="13" fontWeight="600" fill="#dc2626" textAnchor="middle" fontFamily="system-ui">CIBIL score: ~700-720</text>
     <text x="181" y="168" fontSize="11" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">Loan approval: possible, higher interest rate</text>
-    <rect x="394" y="56" width="290" height="130" fill="#f0fdf4" rx="8" />
+    <rect x="394" y="56" width="290" height="130" fill="var(--raise)" rx="8" />
     <text x="539" y="80" fontSize="12" fontWeight="700" fill={COLOR} textAnchor="middle" fontFamily="system-ui">Scenario B: ₹10,000 balance</text>
     <text x="539" y="104" fontSize="22" fontWeight="800" fill={COLOR} textAnchor="middle" fontFamily="system-ui">10% utilization</text>
     <rect x="414" y="116" width="250" height="16" fill="#dcfce7" rx="3" />
@@ -76,16 +76,16 @@ const SvgRealMathExample = () => (
 
 const SvgPerCardVsOverall = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Difference between per-card utilization and overall portfolio utilization" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Per-card vs overall utilization: CIBIL checks both and penalizes either</text>
     <text x="36" y="62" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Situation: ₹20,000 balance across two cards</text>
-    <rect x="36" y="80" width="300" height="130" fill="#fef9c3" rx="8" />
+    <rect x="36" y="80" width="300" height="130" fill="var(--raise)" rx="8" />
     <text x="186" y="106" fontSize="12" fontWeight="700" fill="#a16207" textAnchor="middle" fontFamily="system-ui">Card 1: ₹20K on ₹25K limit = 80%</text>
     <text x="186" y="130" fontSize="20" fontWeight="800" fill="#a16207" textAnchor="middle" fontFamily="system-ui">80% per-card util.</text>
     <text x="186" y="154" fontSize="11" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">Card 2: ₹0 on ₹75K limit = 0%</text>
     <text x="186" y="174" fontSize="12" fontWeight="600" fill="#a16207" textAnchor="middle" fontFamily="system-ui">Overall: 20% (looks okay)</text>
     <text x="186" y="196" fontSize="11" fill="#dc2626" textAnchor="middle" fontFamily="system-ui">But Card 1 at 80% still hurts CIBIL</text>
-    <rect x="384" y="80" width="300" height="130" fill="#f0fdf4" rx="8" />
+    <rect x="384" y="80" width="300" height="130" fill="var(--raise)" rx="8" />
     <text x="534" y="106" fontSize="12" fontWeight="700" fill={COLOR} textAnchor="middle" fontFamily="system-ui">Card 1: ₹10K on ₹25K limit = 40%</text>
     <text x="534" y="130" fontSize="20" fontWeight="800" fill={COLOR} textAnchor="middle" fontFamily="system-ui">40% per-card util.</text>
     <text x="534" y="154" fontSize="11" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">Card 2: ₹10K on ₹75K limit = 13%</text>
@@ -97,7 +97,7 @@ const SvgPerCardVsOverall = () => (
 
 const SvgMidCyclePayment = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="How paying mid-billing-cycle can lower reported utilization to CIBIL" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">The mid-cycle payment: CIBIL sees your balance on statement date, not payment date</text>
     <line x1="60" y1="120" x2="660" y2="120" stroke="var(--border)" strokeWidth="2" />
     {[
@@ -113,14 +113,14 @@ const SvgMidCyclePayment = () => (
         <text x={d.x} y="152" fontSize="9" fill="var(--text-muted)" textAnchor="middle" fontFamily="system-ui">{d.desc2}</text>
       </g>
     ))}
-    <rect x="36" y="170" width="648" height="20" fill="#f0fdf4" rx="4" />
+    <rect x="36" y="170" width="648" height="20" fill="var(--raise)" rx="4" />
     <text x="360" y="184" fontSize="11" fontWeight="600" fill={COLOR} textAnchor="middle" fontFamily="system-ui">Pay down balance BEFORE statement date to reduce the utilization CIBIL records this month</text>
   </svg>
 );
 
 const SvgFixItFast = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Three fastest ways to fix high credit utilization ratio" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">3 fastest ways to fix high utilization (and how long each takes to reflect in CIBIL)</text>
     {[
       { title: "1. Pay Down Balance", desc: "Fastest if you have cash. Pay extra before your statement date. Reflects in CIBIL within 30-45 days of next reporting cycle.", time: "30-45 days", color: COLOR },
@@ -128,7 +128,7 @@ const SvgFixItFast = () => (
       { title: "3. Get a New Card", desc: "Adds available credit to your total limit, lowering overall utilization. Caveat: new inquiry slightly reduces score short-term. Better long run.", time: "60-90 days", color: "#7c3aed" },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="36" y={60 + i * 60} width="580" height="48" fill="var(--surface, #f8fafc)" stroke={d.color} strokeWidth="1.5" rx="6" />
+        <rect x="36" y={60 + i * 60} width="580" height="48" fill="var(--raise)" stroke={d.color} strokeWidth="1.5" rx="6" />
         <text x="52" y={80 + i * 60} fontSize="12" fontWeight="700" fill={d.color} fontFamily="system-ui">{d.title}</text>
         <text x="52" y={98 + i * 60} fontSize="11" fill="var(--text-muted)" fontFamily="system-ui">{d.desc}</text>
         <rect x="630" y={60 + i * 60} width="80" height="48" fill={d.color} rx="6" />
@@ -142,7 +142,7 @@ const SvgFixItFast = () => (
 
 const SvgCibilWeightChart = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="CIBIL score factor weights with payment history and credit utilization as top two" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">What makes up your CIBIL score: utilization is the #2 factor at 30%</text>
     {[
       { factor: "Payment History", weight: 35, color: "#dc2626" },
@@ -166,9 +166,9 @@ const SvgCibilWeightChart = () => (
 
 const SvgStatementDateTrap = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="The common mistake of paying full balance after the statement date still showing high utilization" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">The statement date trap: paying in full does not always mean low utilization</text>
-    <rect x="36" y="56" width="644" height="80" fill="#fef2f2" rx="8" />
+    <rect x="36" y="56" width="644" height="80" fill="var(--raise)" rx="8" />
     <text x="52" y="80" fontSize="12" fill="var(--text)" fontFamily="system-ui">Billing cycle: 1st to 30th. Statement generated 1st. Due date 20th.</text>
     <text x="52" y="100" fontSize="12" fill="var(--text)" fontFamily="system-ui">You spent ₹45,000. Statement on 1st: CIBIL records ₹45,000 balance = 45% utilization.</text>
     <text x="52" y="120" fontSize="12" fontWeight="600" fill="#dc2626" fontFamily="system-ui">You pay ₹45,000 in full on the 20th. Bank is happy. But CIBIL already recorded 45%.</text>
@@ -263,7 +263,7 @@ export default function BlogCreditUtilizationRatioGuide() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you are building your CIBIL from scratch and considering a new card, check our <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL Score 101 article</Link> for how new card applications affect your score temporarily.</p>
       </section>
 
-      <section style={{ background: "var(--surface, #f8fafc)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 32 }}>
+      <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 32 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>Your Action Plan</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2 }}>
           <li>Find your credit card statement generation date. It is on your last statement or in net banking.</li>

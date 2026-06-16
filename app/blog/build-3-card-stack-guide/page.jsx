@@ -38,7 +38,7 @@ const SvgStackPrinciple = () => (
     <text x="360" y="110" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#bbf7d0">SECOND category</text>
     <text x="360" y="130" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#4ade80">eg: Axis Ace</text>
     <text x="360" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#4ade80">(5% Swiggy/Ola/UPI)</text>
-    <rect x="500" y="35" width="200" height="130" fill="#f59e0b" rx="8" opacity="0.85" />
+    <rect x="500" y="35" width="200" height="130" fill="var(--raise)" rx="8" opacity="0.85" />
     <text x="600" y="60" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#fff">CARD 3</text>
     <text x="600" y="78" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#fde68a">Catch-All / Premium</text>
     <text x="600" y="95" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#fde68a">Travel benefits +</text>
@@ -79,7 +79,7 @@ const SvgWhenToUseWhich = () => (
       { spend: "International travel", card: "Axis Magnus / Infinia", rate: "Miles!", note: "Use travel card for foreign currency — earn miles, no forex markup*", col: "#ca8a04" },
     ].map(({ spend, card, rate, note, col }, i) => (
       <g key={spend}>
-        <rect x="20" y={35 + i * 34} width={700} height="26" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={35 + i * 34} width={700} height="26" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={52 + i * 34} fontFamily="system-ui" fontSize="11" fill="var(--text)">{spend}</text>
         <rect x="260" y={37 + i * 34} width="120" height="22" fill={col} rx="4" opacity="0.85" />
         <text x="320" y={52 + i * 34} textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#fff">{card}</text>

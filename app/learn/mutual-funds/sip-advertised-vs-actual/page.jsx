@@ -32,7 +32,7 @@ const SvgAdvertisedVsActual = () => (
       { scenario: "Average of all 10-yr windows (2010-2026)", returns: "12.1%", corpus: "₹1.93Cr", color: COLOR, note: "Most honest number. This is realistic." },
     ].map(({ scenario, returns, corpus, color, note }, i) => (
       <g key={scenario}>
-        <rect x="20" y={40 + i * 42} width={700} height="34" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} rx="3" />
+        <rect x="20" y={40 + i * 42} width={700} height="34" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} rx="3" />
         <text x="26" y={55 + i * 42} fontFamily="system-ui" fontSize="11" fill="var(--text)">{scenario}</text>
         <text x="26" y={68 + i * 42} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{note}</text>
         <rect x="520" y={44 + i * 42} width="70" height="26" fill={color} rx="4" />
@@ -67,7 +67,7 @@ const SvgOneCroreIn15yr = () => (
 const SvgInflationAdjusted = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Inflation adjusted value of 1 crore rupees in 15 years showing that 1 crore in 2041 is worth only about 48 lakh in today purchasing power at 5 percent inflation" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">INFLATION REALITY CHECK · WHAT ₹1 CRORE IN 2041 IS WORTH IN TODAY'S MONEY</text>
-    <rect x="20" y="38" width="680" height="60" fill="#fef2f2" stroke="#dc2626" strokeWidth="1" rx="8" />
+    <rect x="20" y="38" width="680" height="60" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="8" />
     <text x="30" y="62" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="#dc2626">₹1 Crore in 2041 = ₹48.1 Lakh in today's purchasing power (at 5% annual inflation)</text>
     <text x="30" y="84" fontFamily="system-ui" fontSize="12" fill="var(--text)">That is, if you achieve your ₹1Cr goal in 15 years, you'll be able to buy what ₹48 Lakh buys today. Not ₹1 Crore worth of today's goods.</text>
     <text x="20" y="122" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="var(--text)">Correct target: ₹2.08 Crore in 15 years = ₹1 Crore of today's purchasing power</text>
@@ -76,7 +76,7 @@ const SvgInflationAdjusted = () => (
       { target: "₹2.08Cr real", rate: "12%", sip: "₹33,700/mo" },
     ].map(({ target, rate, sip }, i) => (
       <g key={target}>
-        <rect x="20" y={132 + i * 34} width={700} height="26" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={132 + i * 34} width={700} height="26" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={150 + i * 34} fontFamily="system-ui" fontSize="12" fill="var(--text)">Goal: {target} by 2041 at {rate} CAGR = SIP of {sip}</text>
       </g>
     ))}
@@ -119,7 +119,7 @@ const SvgRealisticTargetSetting = () => (
       { item: "Invest in regular plans because the bank RM said so without checking direct plan option", status: "AVOID", color: "#dc2626" },
     ].map(({ item, status, color }, i) => (
       <g key={item}>
-        <rect x="20" y={35 + i * 24} width={700} height="20" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={35 + i * 24} width={700} height="20" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <rect x="20" y={37 + i * 24} width="70" height="16" fill={color} rx="3" opacity="0.85" />
         <text x="55" y={49 + i * 24} textAnchor="middle" fontFamily="system-ui" fontSize="9" fontWeight="700" fill="#fff">{status}</text>
         <text x="98" y={50 + i * 24} fontFamily="system-ui" fontSize="11" fill="var(--text)">{item}</text>

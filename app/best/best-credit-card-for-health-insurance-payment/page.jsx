@@ -36,7 +36,7 @@ const IconRupee = () => (
 
 const IconCalendar = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Annual payment timing calendar">
-    <rect x="3" y="5" width="22" height="20" rx="3" fill="var(--surface,#f8fafc)" stroke={COLOR} strokeWidth="1.8"/>
+    <rect x="3" y="5" width="22" height="20" rx="3" fill="var(--raise)" stroke={COLOR} strokeWidth="1.8"/>
     <rect x="3" y="10" width="22" height="3" fill={COLOR} opacity="0.2"/>
     <rect x="8" y="3" width="2" height="5" rx="1" fill={COLOR}/>
     <rect x="18" y="3" width="2" height="5" rx="1" fill={COLOR}/>
@@ -48,8 +48,8 @@ const IconCalendar = () => (
 const IconWarn = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Exclusion warning">
     <path d="M12 3L22 20H2L12 3Z" fill="#fff7ed" stroke="#f97316" strokeWidth="1.8"/>
-    <rect x="11" y="9" width="2" height="6" rx="1" fill="#f97316"/>
-    <rect x="11" y="17" width="2" height="2" rx="1" fill="#f97316"/>
+    <rect x="11" y="9" width="2" height="6" rx="1" fill="var(--raise)"/>
+    <rect x="11" y="17" width="2" height="2" rx="1" fill="var(--raise)"/>
   </svg>
 );
 
@@ -241,7 +241,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
         The mismatch is worst on cashback-optimised cards. SBI Cashback Card and HDFC Millennia are the two most popular cards for household spend — and both explicitly exclude insurance from their 5% cashback tier. You find this only in the MITC, not in the marketing.
       </p>
 
-      <div style={{ background: "#fff7ed", border: "1.5px solid #fdba74", borderRadius: 10, padding: "14px 18px", marginBottom: 28, display: "flex", gap: 10 }}>
+      <div style={{ background: "rgba(212,168,83,.06)", border: "1.5px solid #fdba74", borderRadius: 10, padding: "14px 18px", marginBottom: 28, display: "flex", gap: 10 }}>
         <IconWarn />
         <p style={{ margin: 0, fontSize: 13, color: "var(--text-muted,#475569)" }}>
           Both SBI Cashback Card and HDFC Millennia explicitly list "insurance premium payments" in their reward exclusion list (MITC, 2026 editions). If you pay health insurance on these cards believing you earn 5%, you are getting 1%.
@@ -257,7 +257,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
 
       <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 12 }}>
         {premiumBreakdown.map(({ type, annual }, i) => (
-          <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 16px", background: i % 2 === 0 ? "var(--surface,#f8fafc)" : "transparent", borderRadius: 8, border: "1px solid var(--border,#e2e8f0)", flexWrap: "wrap", gap: 6 }}>
+          <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 16px", background: i % 2 === 0 ? "var(--raise)" : "transparent", borderRadius: 8, border: "1px solid var(--border,var(--hair))", flexWrap: "wrap", gap: 6 }}>
             <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
               <IconFamily />
               <span style={{ fontSize: 14 }}>{type}</span>
@@ -296,7 +296,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
               <li>Recommended for most cardholders</li>
             </ul>
           </div>
-          <div style={{ background: "var(--surface,#f8fafc)", border: "1px solid var(--border,#e2e8f0)", borderRadius: 10, padding: "16px 18px" }}>
+          <div style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 10, padding: "16px 18px" }}>
             <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
               <IconCalendar />
               <strong style={{ color: "var(--text-muted,#475569)", fontSize: 14 }}>Monthly Payment</strong>
@@ -309,7 +309,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
             </ul>
           </div>
         </div>
-        <div style={{ background: "#eff6ff", border: "1px solid #93c5fd", borderRadius: 8, padding: "12px 16px", fontSize: 13, color: "#1e40af" }}>
+        <div style={{ background: "rgba(94,177,255,.08)", border: "1px solid #93c5fd", borderRadius: 8, padding: "12px 16px", fontSize: 13, color: "#1e40af" }}>
           <strong>Example:</strong> A ₹24,000 annual health premium paid monthly at 3% surcharge = ₹720 extra cost. The same card earning 2% on annual payment = ₹480 reward. Monthly mode costs you ₹1,200 more in total.
         </div>
       </div>
@@ -322,17 +322,17 @@ export default function BestCreditCardForHealthInsurancePayment() {
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
           <thead>
             <tr style={{ background: `${COLOR}12` }}>
-              <th style={{ padding: "10px 12px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Card</th>
-              <th style={{ padding: "10px 12px", textAlign: "center", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Earns?</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Effective Rate</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>On ₹30K</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>On ₹60K</th>
-              <th style={{ padding: "10px 12px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Note</th>
+              <th style={{ padding: "10px 12px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Card</th>
+              <th style={{ padding: "10px 12px", textAlign: "center", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Earns?</th>
+              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Effective Rate</th>
+              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>On ₹30K</th>
+              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>On ₹60K</th>
+              <th style={{ padding: "10px 12px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Note</th>
             </tr>
           </thead>
           <tbody>
             {comparisonData.map((row, i) => (
-              <tr key={i} style={{ borderBottom: "1px solid var(--border,#e2e8f0)", background: i % 2 === 0 ? "transparent" : "var(--surface,#f8fafc)" }}>
+              <tr key={i} style={{ borderBottom: "1px solid var(--border,var(--hair))", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                 <td style={{ padding: "10px 12px", fontWeight: 600 }}>{row.card}</td>
                 <td style={{ padding: "10px 12px", textAlign: "center" }}>
                   {row.earnsOnInsurance ? <IconCheck /> : <IconCross />}
@@ -386,7 +386,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
             ]
           }
         ].map(({ rank, name, tagline, details }) => (
-          <div key={rank} style={{ border: `2px solid ${rank === 1 ? COLOR : "var(--border,#e2e8f0)"}`, borderRadius: 14, padding: "20px 22px", background: rank === 1 ? `${COLOR}05` : "transparent" }}>
+          <div key={rank} style={{ border: `2px solid ${rank === 1 ? COLOR : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: rank === 1 ? `${COLOR}05` : "transparent" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 10 }}>
               {rank === 1 && <IconStar />}
               <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>#{rank} {name}</h3>
@@ -427,7 +427,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
         </div>
         <div style={{ marginTop: 16, display: "flex", gap: 12, flexWrap: "wrap" }}>
           <Link href="/learn/insurance" style={{ display: "inline-block", padding: "10px 18px", background: COLOR, color: "#fff", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Insurance Learning Centre</Link>
-          <Link href="/stack-builder" style={{ display: "inline-block", padding: "10px 18px", background: "var(--surface,#f8fafc)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Build Your Card Stack</Link>
+          <Link href="/stack-builder" style={{ display: "inline-block", padding: "10px 18px", background: "var(--raise)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Build Your Card Stack</Link>
         </div>
       </div>
 
@@ -435,7 +435,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20 }}>Frequently Asked Questions</h2>
       <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 44 }}>
         {faq.mainEntity.map((item, i) => (
-          <details key={i} style={{ border: "1px solid var(--border,#e2e8f0)", borderRadius: 10 }}>
+          <details key={i} style={{ border: "1px solid var(--border,var(--hair))", borderRadius: 10 }}>
             <summary style={{ padding: "14px 18px", fontWeight: 600, fontSize: 15, cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               {item.name}
               <span style={{ color: COLOR, fontSize: 18, flexShrink: 0, marginLeft: 12 }}>+</span>
@@ -447,7 +447,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
         ))}
       </div>
 
-      <footer style={{ borderTop: "1px solid var(--border,#e2e8f0)", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border,var(--hair))", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
         <p style={{ margin: "0 0 6px" }}>
           <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Reward rates, exclusions, and fee waivers are subject to change. Verify MITC details with your card issuer before making premium payments. This page does not recommend specific insurance products.
         </p>

@@ -247,7 +247,7 @@ export default function SipCalcClient() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, alignItems: "start" }}>
 
         {/* LEFT — Inputs */}
-        <div style={{ background: "var(--surface, #f8fafc)", borderRadius: 14, padding: "24px 22px", border: "1px solid var(--border)" }}>
+        <div style={{ background: "var(--raise)", borderRadius: 14, padding: "24px 22px", border: "1px solid var(--border)" }}>
 
           {mode === "sip" ? (
             <div style={inputGroupStyle}>
@@ -306,7 +306,7 @@ export default function SipCalcClient() {
               position: "relative", cursor: "pointer", transition: "background 0.2s",
             }}>
               <div style={{
-                width: 16, height: 16, borderRadius: "50%", background: "#fff",
+                width: 16, height: 16, borderRadius: "50%", background: "var(--raise)",
                 position: "absolute", top: 2, left: showInflation ? 20 : 2, transition: "left 0.2s",
               }} />
             </div>
@@ -341,18 +341,18 @@ export default function SipCalcClient() {
 
           {/* Breakdown */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 14 }}>
-            <div style={{ background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", borderRadius: 10, padding: "14px 16px" }}>
+            <div style={{ background: "var(--raise)", border: "1px solid var(--border)", borderRadius: 10, padding: "14px 16px" }}>
               <div style={{ fontSize: 11, color: "var(--text-muted)", fontWeight: 600, marginBottom: 4 }}>INVESTED</div>
               <div style={{ fontSize: 20, fontWeight: 700 }}>{formatINR(result.invested)}</div>
             </div>
-            <div style={{ background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", borderRadius: 10, padding: "14px 16px" }}>
+            <div style={{ background: "var(--raise)", border: "1px solid var(--border)", borderRadius: 10, padding: "14px 16px" }}>
               <div style={{ fontSize: 11, color: "var(--text-muted)", fontWeight: 600, marginBottom: 4 }}>GAINS</div>
               <div style={{ fontSize: 20, fontWeight: 700, color: COLOR }}>{formatINR(result.gains)}</div>
             </div>
           </div>
 
           {/* Donut */}
-          <div style={{ display: "flex", alignItems: "center", gap: 20, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", borderRadius: 10, padding: "14px 16px", marginBottom: 14 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 20, background: "var(--raise)", border: "1px solid var(--border)", borderRadius: 10, padding: "14px 16px", marginBottom: 14 }}>
             <DonutChart invested={result.invested} gains={result.gains} />
             <div>
               <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 6 }}>
@@ -366,7 +366,7 @@ export default function SipCalcClient() {
 
           {/* Inflation adjusted */}
           {showInflation && (
-            <div style={{ border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "14px 16px", background: "var(--surface, #f8fafc)" }}>
+            <div style={{ border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "14px 16px", background: "var(--raise)" }}>
               <div style={{ fontSize: 11, fontWeight: 700, color: COLOR, letterSpacing: 1, marginBottom: 6 }}>INFLATION-ADJUSTED (REAL TERMS)</div>
               <div style={{ fontSize: 20, fontWeight: 800, marginBottom: 2 }}>{formatINR(realResult.maturity)}</div>
               <div style={{ fontSize: 12, color: "var(--text-muted)" }}>Real return: {realRate.toFixed(2)}% p.a. after {inflation}% inflation</div>
@@ -391,7 +391,7 @@ export default function SipCalcClient() {
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
             <thead>
-              <tr style={{ background: "var(--surface, #f8fafc)" }}>
+              <tr style={{ background: "var(--raise)" }}>
                 <th style={{ padding: "10px 14px", textAlign: "left", borderBottom: "2px solid var(--border)", color: "var(--text-muted)", fontWeight: 700, fontSize: 12 }}>TENURE</th>
                 {[8, 10, 12, 15].map(r => (
                   <th key={r} style={{ padding: "10px 14px", textAlign: "right", borderBottom: "2px solid var(--border)", color: r === 12 ? COLOR : "var(--text-muted)", fontWeight: 700, fontSize: 12 }}>
@@ -402,7 +402,7 @@ export default function SipCalcClient() {
             </thead>
             <tbody>
               {[5, 10, 15, 20, 25, 30].map((y, i) => (
-                <tr key={y} style={{ background: i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)" }}>
+                <tr key={y} style={{ background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px", borderBottom: "1px solid var(--border)", fontWeight: 700 }}>{y} years</td>
                   {[8, 10, 12, 15].map(r => {
                     const { maturity } = calcSIP(10000, r, y);
@@ -421,7 +421,7 @@ export default function SipCalcClient() {
       </section>
 
       {/* Honest take section */}
-      <section style={{ background: "var(--surface, #f8fafc)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 10px 10px 0", padding: "20px 24px", marginBottom: 36 }}>
+      <section style={{ background: "var(--raise)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 10px 10px 0", padding: "20px 24px", marginBottom: 36 }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>The Numbers Your AMC Won't Show You</h2>
         <p style={{ fontSize: 15, margin: "0 0 10px" }}>
           Fund fact sheets advertise CAGR — but your real return is lower. A fund with 15% CAGR and 1.5% expense ratio delivers 13.5% to you. At ₹10,000/month for 20 years, that 1.5% difference costs you approximately ₹28 L in final corpus.

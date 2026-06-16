@@ -54,7 +54,7 @@ const SvgBankCapTable = () => (
       ["Flipkart Axis", "5% on Flipkart", "₹2,000/mo", "₹40,000", "1.5%"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={52 + ri * 28} width={700} height="26" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={52 + ri * 28} width={700} height="26" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 170, 290, 400, 530];
           const isGood = cell === "No cap!" || cell === "No cap" || cell === "5.0%" || cell.includes("4.5");
@@ -70,7 +70,7 @@ const SvgBankCapTable = () => (
 const SvgGSTOnCashback = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="GST on credit card annual fee affecting net cashback earned showing that at high annual fees the GST adds to effective cost reducing net return" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">THE FEE + GST DRAG · WHAT ANNUAL FEE REALLY COSTS YOUR CASHBACK MATH</text>
-    <rect x="20" y="35" width="680" height="120" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" rx="8" />
+    <rect x="20" y="35" width="680" height="120" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="8" />
     <text x="30" y="56" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text)">Example: Card with ₹1,000 annual fee earning 2% cashback</text>
     <text x="30" y="76" fontFamily="system-ui" fontSize="12" fill="var(--text)">Annual fee + 18% GST = ₹1,180 total fee cost</text>
     <text x="30" y="94" fontFamily="system-ui" fontSize="12" fill="var(--text)">Break-even spend for just covering the fee: ₹1,180 / 2% = ₹59,000/year = ₹4,916/month</text>

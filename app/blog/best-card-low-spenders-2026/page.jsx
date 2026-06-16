@@ -23,19 +23,19 @@ const UPDATED = "June 4, 2026";
 
 const SvgLowSpenderDefinition = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Definition of low spender: under 15000 rupees per month on credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Who Counts as a Low Spender?</text>
     <rect x="30" y="44" width="195" height="90" rx="8" fill={COLOR} opacity="0.12" stroke={COLOR} strokeWidth="2" />
     <text x="127" y="68" textAnchor="middle" fontSize="20" fontWeight="800" fill={COLOR}>Low</text>
     <text x="127" y="88" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Under ₹15,000/month</text>
     <text x="127" y="108" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Under ₹1.8L/year</text>
     <text x="127" y="126" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Can't clear most fee waivers</text>
-    <rect x="263" y="44" width="195" height="90" rx="8" fill="#ea580c" opacity="0.1" stroke="#ea580c" strokeWidth="1.5" />
+    <rect x="263" y="44" width="195" height="90" rx="8" fill="var(--raise)" opacity="0.1" stroke="#ea580c" strokeWidth="1.5" />
     <text x="360" y="68" textAnchor="middle" fontSize="20" fontWeight="800" fill="#ea580c">Mid</text>
     <text x="360" y="88" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">₹15K - ₹40K/month</text>
     <text x="360" y="108" textAnchor="middle" fontSize="11" fill="var(--text-muted)">₹1.8L - ₹4.8L/year</text>
     <text x="360" y="126" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Some fee cards start to make sense</text>
-    <rect x="495" y="44" width="195" height="90" rx="8" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="495" y="44" width="195" height="90" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="592" y="68" textAnchor="middle" fontSize="20" fontWeight="800" fill="var(--text-muted)">High</text>
     <text x="592" y="88" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Above ₹40K/month</text>
     <text x="592" y="108" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Above ₹4.8L/year</text>
@@ -46,7 +46,7 @@ const SvgLowSpenderDefinition = () => (
 
 const SvgWhyFeeCardsPunishLowSpenders = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Why fee cards net negative for low spenders: real numbers at 10000 rupees per month spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Fee Cards at ₹10,000/Month Spend: Net Negative Reality</text>
     <text x="30" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">CARD</text>
     <text x="230" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">ANNUAL FEE+GST</text>
@@ -78,7 +78,7 @@ const SvgWhyFeeCardsPunishLowSpenders = () => (
 
 const SvgTopPicksGrid = () => (
   <svg viewBox="0 0 720 320" role="img" aria-label="Top credit card picks for low spenders in India 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="320" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="320" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Best Cards for Low Spenders: June 2026 Rankings</text>
     <rect x="20" y="40" width="330" height="120" rx="8" fill={COLOR} opacity="0.08" stroke={COLOR} strokeWidth="2" />
     <text x="34" y="62" fontSize="10" fontWeight="700" letterSpacing="1" fill={COLOR}>RANK 1 · BEST OVERALL</text>
@@ -101,7 +101,7 @@ const SvgTopPicksGrid = () => (
     <text x="34" y="256" fontSize="11" fill="var(--text)">10X points on dining, groceries, movies</text>
     <text x="34" y="274" fontSize="11" fill="var(--text)">1X on all other spends</text>
     <text x="34" y="292" fontSize="11" fill="var(--text)">Fuel surcharge waiver: Yes</text>
-    <rect x="370" y="178" width="330" height="120" rx="8" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="370" y="178" width="330" height="120" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="384" y="200" fontSize="10" fontWeight="700" letterSpacing="1" fill="var(--text-muted)">RANK 4 · LOWEST FEE ENTRY</text>
     <text x="384" y="220" fontSize="14" fontWeight="800" fill="var(--text)">Axis Neo</text>
     <text x="384" y="238" fontSize="11" fill="var(--text-muted)">Annual fee: ₹250 (waived at ₹35K spend)</text>
@@ -113,7 +113,7 @@ const SvgTopPicksGrid = () => (
 
 const SvgAmazonPayMath = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Amazon Pay ICICI card earnings at 10000 rupees monthly spend with 30 percent on Amazon" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Amazon Pay ICICI: Real Earnings at ₹10,000/Month Spend</text>
     <text x="30" y="54" fontSize="11" fontWeight="700" fill="var(--text-muted)">SPEND CATEGORY</text>
     <text x="280" y="54" fontSize="11" fontWeight="700" fill="var(--text-muted)">MONTHLY AMOUNT</text>
@@ -144,7 +144,7 @@ const SvgAmazonPayMath = () => (
 
 const SvgWhatToLookFor = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="What to look for in a credit card when you are a low spender" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Low Spender Checklist: What Actually Matters</text>
     <rect x="30" y="44" width="310" height="116" rx="8" fill={COLOR} opacity="0.07" stroke={COLOR} strokeWidth="1.5" />
     <text x="185" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Must-Haves</text>
@@ -163,7 +163,7 @@ const SvgWhatToLookFor = () => (
 
 const SvgCardsToAvoid = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Credit cards low spenders should avoid in 2026: Axis Magnus and HDFC Infinia" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Cards to Avoid If You Spend Under ₹15K/Month</text>
     <rect x="30" y="44" width="310" height="116" rx="8" fill="#dc2626" opacity="0.06" stroke="#dc2626" strokeWidth="1.5" />
     <text x="185" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill="#dc2626">Axis Magnus (₹10,000 fee)</text>
@@ -311,7 +311,7 @@ export default function BlogBestCardLowSpenders2026() {
         <SvgCardsToAvoid />
       </section>
 
-      <section style={{ background: "var(--surface, #f8fafc)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: "var(--raise)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 32 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 10px", color: COLOR }}>Your Next Step</h2>
         <p style={{ margin: "0 0 10px" }}>If you are not already on Amazon Pay ICICI and you shop on Amazon at all, that is the first application to make today. If you prefer broad category rewards and want something that earns on dining and groceries at local stores, IDFC FIRST Classic is your pick. Both take under 10 minutes to apply for online.</p>
         <p style={{ margin: 0 }}>Use <Link href="/smart-swipe" style={{ color: COLOR, fontWeight: 600 }}>Smart Swipe</Link> to verify which card earns most against your actual spend pattern. Also read: <Link href="/blog/best-free-cards" style={{ color: COLOR }}>best zero-fee credit cards complete list</Link> and <Link href="/blog/annual-fee-when-worth-paying" style={{ color: COLOR }}>when an annual fee finally makes sense</Link>.</p>

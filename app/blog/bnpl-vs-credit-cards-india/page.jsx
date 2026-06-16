@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgBnplLandscape = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Overview of major BNPL providers in India with their rates and key terms" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">India's Major BNPL Players: The Honest Numbers</text>
     {["Provider", "30-Day Free?", "APR After Free Period", "Late Fee", "Reports to CIBIL?"].map((h, i) => (
       <text key={i} x={[30, 160, 290, 460, 580][i]} y="50" fontSize="10.5" fontWeight="700" fill="var(--text-muted)">{h}</text>
@@ -49,7 +49,7 @@ const SvgBnplLandscape = () => (
 
 const SvgBnplHowItWorks = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="How BNPL buy now pay later works in India: free period then high interest" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">How BNPL Actually Works: The Free Period Ends</text>
     <line x1="40" y1="90" x2="680" y2="90" stroke="var(--border)" strokeWidth="2" />
     {[
@@ -73,9 +73,9 @@ const SvgBnplHowItWorks = () => (
 
 const SvgRealMathComparison = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Real cost comparison of a 10000 rupee purchase on BNPL vs credit card no-cost EMI over 3 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">₹10,000 Purchase: 3-Month EMI — BNPL vs Credit Card</text>
-    <rect x="20" y="38" width="320" height="186" rx="8" fill="#fef2f2" />
+    <rect x="20" y="38" width="320" height="186" rx="8" fill="var(--raise)" />
     <rect x="380" y="38" width="320" height="186" rx="8" fill="#dcfce7" />
     <text x="180" y="60" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>LazyPay BNPL (24% APR)</text>
     <text x="540" y="60" textAnchor="middle" fontSize="12" fontWeight="700" fill="#14532d">Credit Card No-Cost EMI</text>
@@ -100,7 +100,7 @@ const SvgRealMathComparison = () => (
 
 const SvgHiddenCharges = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="Hidden charges in BNPL products in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Hidden Charges BNPL Doesn't Advertise</text>
     {[
       { charge: "EMI processing fee", amount: "1-2% upfront", trap: "Applied at conversion. Feels like nothing, is ₹200 on ₹10,000." },
@@ -110,7 +110,7 @@ const SvgHiddenCharges = () => (
       { charge: "Penal interest after default", amount: "2-4% extra/month", trap: "Stacks on top of the EMI rate. Rarely disclosed upfront." },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="20" y={38 + i * 28} width="680" height="24" rx="4" fill={i % 2 === 0 ? "#fef2f2" : "var(--surface, #f8fafc)"} />
+        <rect x="20" y={38 + i * 28} width="680" height="24" rx="4" fill={i % 2 === 0 ? "#fef2f2" : "var(--raise)"} />
         <text x="30" y={54 + i * 28} fontSize="11" fontWeight="700" fill={COLOR}>{d.charge}:</text>
         <text x="200" y={54 + i * 28} fontSize="11" fontWeight="600" fill="#7f1d1d">{d.amount}</text>
         <text x="310" y={54 + i * 28} fontSize="10.5" fill="var(--text-muted)">{d.trap}</text>
@@ -121,9 +121,9 @@ const SvgHiddenCharges = () => (
 
 const SvgCibilImpact = () => (
   <svg viewBox="0 0 720 170" role="img" aria-label="Credit bureau reporting comparison between BNPL and credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="170" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="170" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">CIBIL Score Impact: Where BNPL Fails You Long-Term</text>
-    <rect x="20" y="38" width="320" height="116" rx="8" fill="#fef2f2" />
+    <rect x="20" y="38" width="320" height="116" rx="8" fill="var(--raise)" />
     <rect x="380" y="38" width="320" height="116" rx="8" fill="#dcfce7" />
     <text x="180" y="60" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>BNPL (LazyPay, Simpl)</text>
     <text x="540" y="60" textAnchor="middle" fontSize="12" fontWeight="700" fill="#14532d">Credit Card</text>
@@ -142,7 +142,7 @@ const SvgCibilImpact = () => (
 
 const SvgWhenBnplWins = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Situations where BNPL is genuinely better than a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The 3 Situations Where BNPL Actually Makes Sense</text>
     {[
       {
@@ -159,7 +159,7 @@ const SvgWhenBnplWins = () => (
       },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="20" y={38 + i * 38} width="680" height="32" rx="4" fill={i % 2 === 0 ? "#f0fdf4" : "var(--surface, #f8fafc)"} />
+        <rect x="20" y={38 + i * 38} width="680" height="32" rx="4" fill={i % 2 === 0 ? "var(--green-dim)" : "var(--raise)"} />
         <text x="30" y={57 + i * 38} fontSize="11" fontWeight="700" fill="#16a34a">{i + 1}. {d.title}</text>
         <text x="30" y={72 + i * 38} fontSize="10.5" fill="var(--text-muted)">{d.detail}</text>
       </g>
@@ -169,7 +169,7 @@ const SvgWhenBnplWins = () => (
 
 const SvgAprWarningChart = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="APR comparison chart showing BNPL rates against other consumer debt options in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">BNPL APR in Context: Where It Sits Among Indian Debt</text>
     {[
       { label: "Home loan (SBI)", rate: "8.5%", bar: 51, color: "#16a34a" },

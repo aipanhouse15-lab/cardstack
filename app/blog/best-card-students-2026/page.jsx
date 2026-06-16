@@ -36,7 +36,7 @@ const SvgStudentCards = () => (
       ["ICICI Coral (FD-backed)", "₹500/yr", "Any approval", "Very Easy", "Builds CIBIL from day 1"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={52 + ri * 32} width={700} height="28" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={52 + ri * 32} width={700} height="28" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 180, 290, 480, 560];
           const isGood = cell === "FREE" || cell === "Easy" || cell === "Very Easy";
@@ -108,7 +108,7 @@ const SvgFirstCardMistakes = () => (
       { mistake: "Using card for cash withdrawal", impact: "2.5% cash advance fee + interest from withdrawal date — no grace period", col: "#dc2626" },
     ].map(({ mistake, impact, col }, i) => (
       <g key={mistake}>
-        <rect x="20" y={35 + i * 28} width={700} height="22" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={35 + i * 28} width={700} height="22" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={50 + i * 28} fontFamily="system-ui" fontSize="10" fontWeight="700" fill={col}>{mistake}</text>
         <text x="220" y={50 + i * 28} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{impact}</text>
       </g>

@@ -23,24 +23,24 @@ const UPDATED = "June 4, 2026";
 
 const SvgFuelSurchargeExplainer = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Diagram showing how the 1% fuel surcharge works on credit card payments at petrol stations" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">How the 1% Fuel Surcharge Actually Works</text>
     {/* Flow */}
-    <rect x="30" y="55" width="140" height="60" rx="8" fill="white" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="30" y="55" width="140" height="60" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="100" y="82" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">You pay</text>
     <text x="100" y="100" textAnchor="middle" fontSize="16" fontWeight="800" fill={COLOR}>₹5,000</text>
     <text x="100" y="115" textAnchor="middle" fontSize="10" fill="var(--text-muted)">at petrol bunk</text>
 
     <text x="210" y="90" textAnchor="middle" fontSize="22" fill="var(--text-muted)">+</text>
 
-    <rect x="240" y="55" width="160" height="60" rx="8" fill="#fef2f2" stroke="#ef4444" strokeWidth="1.5" />
+    <rect x="240" y="55" width="160" height="60" rx="8" fill="var(--raise)" stroke="#ef4444" strokeWidth="1.5" />
     <text x="320" y="78" textAnchor="middle" fontSize="11" fontWeight="700" fill="#ef4444">1% fuel surcharge</text>
     <text x="320" y="95" textAnchor="middle" fontSize="16" fontWeight="800" fill="#ef4444">₹50</text>
     <text x="320" y="112" textAnchor="middle" fontSize="10" fill="var(--text-muted)">added by card network</text>
 
     <text x="450" y="90" textAnchor="middle" fontSize="22" fill="var(--text-muted)">+</text>
 
-    <rect x="470" y="55" width="160" height="60" rx="8" fill="#fef2f2" stroke="#f59e0b" strokeWidth="1.5" />
+    <rect x="470" y="55" width="160" height="60" rx="8" fill="var(--raise)" stroke="#f59e0b" strokeWidth="1.5" />
     <text x="550" y="78" textAnchor="middle" fontSize="11" fontWeight="700" fill="#f59e0b">18% GST on surcharge</text>
     <text x="550" y="95" textAnchor="middle" fontSize="16" fontWeight="800" fill="#f59e0b">₹9</text>
     <text x="550" y="112" textAnchor="middle" fontSize="10" fill="var(--text-muted)">tax on a fee</text>
@@ -53,7 +53,7 @@ const SvgFuelSurchargeExplainer = () => (
 
 const SvgCardComparison = () => (
   <svg viewBox="0 0 720 300" role="img" aria-label="Comparison table of best fuel credit cards in India with surcharge waiver and reward details" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="300" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="300" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Best Fuel Cards in India: June 2026</text>
     <rect x="20" y="36" width="680" height="32" fill={COLOR} rx="4" />
     <text x="100" y="57" textAnchor="middle" fontSize="11" fontWeight="700" fill="white">Card</text>
@@ -70,7 +70,7 @@ const SvgCardComparison = () => (
       ["Standard card", "No waiver", "1X pts on fuel", "All pumps", "-0.5% (net loss)"],
     ].map(([card, waiver, reward, where, net], i) => (
       <g key={i}>
-        <rect x="20" y={70 + i * 36} width="680" height="36" fill={i % 2 === 0 ? "white" : "var(--surface, #f8fafc)"} />
+        <rect x="20" y={70 + i * 36} width="680" height="36" fill={i % 2 === 0 ? "var(--raise2)" : "var(--raise)"} />
         <text x="100" y={93 + i * 36} textAnchor="middle" fontSize="11" fontWeight="600" fill="var(--text)">{card}</text>
         <text x="230" y={93 + i * 36} textAnchor="middle" fontSize="11" fill={waiver === "No waiver" ? "#ef4444" : "#16a34a"} fontWeight="600">{waiver}</text>
         <text x="360" y={93 + i * 36} textAnchor="middle" fontSize="11" fill="var(--text)">{reward}</text>
@@ -83,16 +83,16 @@ const SvgCardComparison = () => (
 
 const SvgBrandMap = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Map showing which fuel card brand works at which petrol station chain in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Card-to-Pump Brand Matching: Use the Wrong Card and You Earn Nothing</text>
     {[
       { brand: "BPCL Pumps", card: "BPCL SBI / Octane", color: "#f59e0b", x: 60 },
       { brand: "HPCL Pumps", card: "HPCL Coral RBL", color: "#ef4444", x: 240 },
       { brand: "IOCL Pumps", card: "IndianOil Kotak", color: "#16a34a", x: 420 },
-      { brand: "Any Pump", card: "HDFC Regalia (lower rate)", color: "#64748b", x: 600 },
+      { brand: "Any Pump", card: "HDFC Regalia (lower rate)", color: "var(--mut)", x: 600 },
     ].map(({ brand, card, color, x }) => (
       <g key={x}>
-        <rect x={x} y="44" width="160" height="100" rx="8" fill="white" stroke={color} strokeWidth="2" />
+        <rect x={x} y="44" width="160" height="100" rx="8" fill="var(--raise)" stroke={color} strokeWidth="2" />
         <rect x={x} y="44" width="160" height="32" rx="8" fill={color} />
         <rect x={x} y="60" width="160" height="16" fill={color} />
         <text x={x + 80} y="65" textAnchor="middle" fontSize="11" fontWeight="800" fill="white">{brand}</text>
@@ -106,11 +106,11 @@ const SvgBrandMap = () => (
 
 const SvgAnnualSavingsChart = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Bar chart comparing annual fuel savings at Rs 5000 per month spend with and without a fuel card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="280" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="280" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Annual Impact at ₹5,000/month Fuel Spend (₹60,000/year)</text>
     {[
       { label: "No card (surcharge paid)", val: -600, color: "#ef4444", x: 80, desc: "You lose ₹600/year in surcharge" },
-      { label: "HDFC Regalia", val: 600, color: "#94a3b8", x: 230, desc: "~2% rewards, surcharge waived" },
+      { label: "HDFC Regalia", val: 600, color: "var(--dim)", x: 230, desc: "~2% rewards, surcharge waived" },
       { label: "IndianOil Kotak", val: 2400, color: "#16a34a", x: 380, desc: "~4% at IOCL + waiver" },
       { label: "BPCL SBI Card", val: 3150, color: COLOR, x: 530, desc: "4.25% at BPCL + waiver" },
       { label: "BPCL SBI Octane", val: 4350, color: "#4c1d95", x: 600, desc: "7.25% at BPCL + waiver" },
@@ -137,19 +137,19 @@ const SvgAnnualSavingsChart = () => (
 
 const SvgGSTBreakdown = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Breakdown showing GST charged on fuel surcharge amounts to paying tax on a fee" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">The GST-on-Surcharge Problem: Paying Tax on a Fee</text>
-    <rect x="40" y="44" width="180" height="90" rx="8" fill="white" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="40" y="44" width="180" height="90" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="130" y="68" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Fuel purchase</text>
     <text x="130" y="90" textAnchor="middle" fontSize="18" fontWeight="800" fill="var(--text)">₹10,000</text>
     <text x="130" y="110" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Your actual fuel</text>
     <text x="250" y="95" textAnchor="middle" fontSize="24" fill="var(--text-muted)">+</text>
-    <rect x="280" y="44" width="180" height="90" rx="8" fill="#fef2f2" stroke="#ef4444" strokeWidth="1.5" />
+    <rect x="280" y="44" width="180" height="90" rx="8" fill="var(--raise)" stroke="#ef4444" strokeWidth="1.5" />
     <text x="370" y="68" textAnchor="middle" fontSize="11" fill="#ef4444">1% surcharge</text>
     <text x="370" y="90" textAnchor="middle" fontSize="18" fontWeight="800" fill="#ef4444">₹100</text>
     <text x="370" y="110" textAnchor="middle" fontSize="10" fill="var(--text-muted)">card network charge</text>
     <text x="490" y="95" textAnchor="middle" fontSize="24" fill="var(--text-muted)">+</text>
-    <rect x="520" y="44" width="180" height="90" rx="8" fill="#fff7ed" stroke="#f59e0b" strokeWidth="1.5" />
+    <rect x="520" y="44" width="180" height="90" rx="8" fill="var(--raise)" stroke="#f59e0b" strokeWidth="1.5" />
     <text x="610" y="68" textAnchor="middle" fontSize="11" fill="#f59e0b">18% GST on surcharge</text>
     <text x="610" y="90" textAnchor="middle" fontSize="18" fontWeight="800" fill="#f59e0b">₹18</text>
     <text x="610" y="110" textAnchor="middle" fontSize="10" fill="var(--text-muted)">govt tax on a private fee</text>
@@ -159,23 +159,23 @@ const SvgGSTBreakdown = () => (
 
 const SvgStackingFlow = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Strategy guide showing how to stack a fuel card with a cashback card for maximum return" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Stacking Strategy: Fuel Card + Cashback Card</text>
-    <rect x="30" y="50" width="190" height="110" rx="8" fill="white" stroke={COLOR} strokeWidth="2" />
+    <rect x="30" y="50" width="190" height="110" rx="8" fill="var(--raise)" stroke={COLOR} strokeWidth="2" />
     <text x="125" y="76" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">At BPCL pump?</text>
     <text x="125" y="98" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Use BPCL SBI Card</text>
     <text x="125" y="115" textAnchor="middle" fontSize="14" fontWeight="800" fill={COLOR}>4.25% value</text>
     <text x="125" y="133" textAnchor="middle" fontSize="10" fill="var(--text-muted)">+ no surcharge</text>
     <text x="125" y="148" textAnchor="middle" fontSize="10" fill="var(--text-muted)">+ no GST on surcharge</text>
     <line x1="220" y1="105" x2="280" y2="105" stroke="var(--border)" strokeWidth="2" strokeDasharray="4,3" />
-    <rect x="270" y="50" width="190" height="110" rx="8" fill="white" stroke="#16a34a" strokeWidth="2" />
+    <rect x="270" y="50" width="190" height="110" rx="8" fill="var(--raise)" stroke="#16a34a" strokeWidth="2" />
     <text x="365" y="76" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Not brand-specific?</text>
     <text x="365" y="98" textAnchor="middle" fontSize="11" fill="var(--text-muted)">HDFC Regalia / Diners</text>
     <text x="365" y="115" textAnchor="middle" fontSize="14" fontWeight="800" fill="#16a34a">~2% value</text>
     <text x="365" y="133" textAnchor="middle" fontSize="10" fill="var(--text-muted)">+ partial surcharge waiver</text>
     <text x="365" y="148" textAnchor="middle" fontSize="10" fill="var(--text-muted)">(₹400-₹5,000 range)</text>
     <line x1="460" y1="105" x2="510" y2="105" stroke="var(--border)" strokeWidth="2" strokeDasharray="4,3" />
-    <rect x="500" y="50" width="190" height="110" rx="8" fill="white" stroke="#f59e0b" strokeWidth="2" />
+    <rect x="500" y="50" width="190" height="110" rx="8" fill="var(--raise)" stroke="#f59e0b" strokeWidth="2" />
     <text x="595" y="76" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">No fuel card at all?</text>
     <text x="595" y="98" textAnchor="middle" fontSize="11" fill="var(--text-muted)">You pay 1% surcharge</text>
     <text x="595" y="115" textAnchor="middle" fontSize="14" fontWeight="800" fill="#ef4444">-1.18% net</text>
@@ -304,7 +304,7 @@ export default function BlogFuelTrick() {
       <section style={{ marginBottom: 32 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Real math: ₹5,000/month fuel spend</h2>
 
-        <div style={{ background: "var(--surface, #f8fafc)", padding: "16px 20px", borderRadius: 8, marginBottom: 16 }}>
+        <div style={{ background: "var(--raise)", padding: "16px 20px", borderRadius: 8, marginBottom: 16 }}>
           <p style={{ margin: "0 0 8px", fontWeight: 700 }}>Scenario: BPCL pump, ₹5,000/month spend</p>
           <p style={{ margin: "0 0 4px", fontSize: 14 }}><strong>Without fuel card:</strong> ₹5,000 x 1.18% surcharge+GST = ₹59/month lost. Annual loss: ₹708.</p>
           <p style={{ margin: "0 0 4px", fontSize: 14 }}><strong>With BPCL SBI Card (₹499 annual fee, waivable at ₹50K):</strong> Surcharge waived + 4.25% rewards = ₹212.50/month earned. Annual: ₹2,550. Net after fee: +₹2,051/year.</p>
@@ -322,7 +322,7 @@ export default function BlogFuelTrick() {
 
       <SvgStackingFlow />
 
-      <section style={{ marginBottom: 32, padding: "20px 24px", background: "#f5f3ff", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
+      <section style={{ marginBottom: 32, padding: "20px 24px", background: "rgba(157,140,255,.08)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 12px" }}>Your fuel card action plan</h2>
         <p style={{ margin: "0 0 8px" }}><strong>Step 1:</strong> Note which petrol brand (BPCL, HPCL, IOCL) you fill up at most often. Check your last 3 fuel receipts.</p>
         <p style={{ margin: "0 0 8px" }}><strong>Step 2:</strong> Apply for the matching co-branded card. BPCL pump users: BPCL SBI Card. HPCL users: HPCL Coral RBL. IOCL users: IndianOil Kotak.</p>

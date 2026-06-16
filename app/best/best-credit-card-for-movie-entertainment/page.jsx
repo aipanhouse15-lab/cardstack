@@ -50,7 +50,7 @@ const IconBogo = () => (
 
 const IconOTT = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OTT streaming subscription reward">
-    <rect x="4" y="7" width="20" height="14" rx="2" fill="var(--surface,#f8fafc)" stroke={COLOR} strokeWidth="1.8"/>
+    <rect x="4" y="7" width="20" height="14" rx="2" fill="var(--raise)" stroke={COLOR} strokeWidth="1.8"/>
     <rect x="7" y="10" width="14" height="8" rx="1" fill={COLOR} opacity="0.15"/>
     <path d="M11 12L17 14L11 16V12Z" fill={COLOR} opacity="0.7"/>
     <path d="M10 21L18 21" stroke={COLOR} strokeWidth="2" strokeLinecap="round"/>
@@ -274,7 +274,7 @@ export default function BestCreditCardForMovieEntertainment() {
           { scenario: "1 ticket only → Offer not applicable (minimum 2 tickets required)", good: false },
           { scenario: "3rd and 4th ticket in same booking → No additional discount", good: false }
         ].map(({ scenario, good }, i) => (
-          <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "10px 14px", background: good ? "#f0fdf4" : "var(--surface,#f8fafc)", border: `1px solid ${good ? "#86efac" : "var(--border,#e2e8f0)"}`, borderRadius: 8 }}>
+          <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "10px 14px", background: good ? "var(--green-dim)" : "var(--raise)", border: `1px solid ${good ? "rgba(62,224,143,.35)" : "var(--hair)"}`, borderRadius: 8 }}>
             {good ? <IconCheck /> : <IconCross />}
             <span style={{ fontSize: 13, color: "var(--text-muted,#475569)" }}>{scenario}</span>
           </div>
@@ -302,7 +302,7 @@ export default function BestCreditCardForMovieEntertainment() {
           </thead>
           <tbody>
             {bmsCards.map((row, i) => (
-              <tr key={i} style={{ borderBottom: "1px solid var(--border,#e2e8f0)", background: i === 0 ? `${COLOR}05` : i % 2 === 0 ? "transparent" : "var(--surface,#f8fafc)" }}>
+              <tr key={i} style={{ borderBottom: "1px solid var(--border,var(--hair))", background: i === 0 ? `${COLOR}05` : i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                 <td style={{ padding: "10px 14px" }}>
                   <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
                     {i === 0 && <IconStar />}
@@ -372,7 +372,7 @@ export default function BestCreditCardForMovieEntertainment() {
             link: "/cards/axis-myzone"
           }
         ].map(({ rank, name, fee, headline, benefits, math, link }) => (
-          <div key={rank} style={{ border: `2px solid ${rank === 1 ? COLOR : "var(--border,#e2e8f0)"}`, borderRadius: 14, padding: "20px 22px", background: rank === 1 ? `${COLOR}05` : "transparent" }}>
+          <div key={rank} style={{ border: `2px solid ${rank === 1 ? COLOR : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: rank === 1 ? `${COLOR}05` : "transparent" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8, flexWrap: "wrap", gap: 8 }}>
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
                 {rank === 1 && <IconStar />}
@@ -412,7 +412,7 @@ export default function BestCreditCardForMovieEntertainment() {
           </thead>
           <tbody>
             {ottTable.map(({ platform, cost, bestCard, reward, note }, i) => (
-              <tr key={i} style={{ borderBottom: "1px solid var(--border,#e2e8f0)", background: i % 2 === 0 ? "transparent" : "var(--surface,#f8fafc)" }}>
+              <tr key={i} style={{ borderBottom: "1px solid var(--border,var(--hair))", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                 <td style={{ padding: "10px 12px", fontWeight: 600 }}>{platform}</td>
                 <td style={{ padding: "10px 12px", textAlign: "right" }}>{cost}</td>
                 <td style={{ padding: "10px 12px" }}>{bestCard}</td>
@@ -438,7 +438,7 @@ export default function BestCreditCardForMovieEntertainment() {
           { label: "Gaming (Steam, Xbox, PS Store)", card: "Any international card with low forex", note: "IDFC WOW or Scapia best for USD charges" },
           { label: "Standup Comedy Shows", card: "ICICI Coral (BMS offer applies)", note: "BookMyShow-listed shows eligible" }
         ].map(({ label, card, note }, i) => (
-          <div key={i} style={{ background: "var(--surface,#f8fafc)", border: "1px solid var(--border,#e2e8f0)", borderRadius: 8, padding: "14px 16px" }}>
+          <div key={i} style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 8, padding: "14px 16px" }}>
             <div style={{ fontWeight: 700, fontSize: 13, color: COLOR, marginBottom: 4 }}>{label}</div>
             <div style={{ fontSize: 13, fontWeight: 600, marginBottom: 4 }}>{card}</div>
             <div style={{ fontSize: 12, color: "var(--text-muted,#64748b)" }}>{note}</div>
@@ -475,8 +475,8 @@ export default function BestCreditCardForMovieEntertainment() {
         </div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
           <Link href="/cards/icici-coral" style={{ display: "inline-block", padding: "10px 18px", background: COLOR, color: "#fff", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>ICICI Coral Full Review</Link>
-          <Link href="/smart-swipe" style={{ display: "inline-block", padding: "10px 18px", background: "var(--surface,#f8fafc)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Calculate Your Savings</Link>
-          <Link href="/blog/bookmyshow-credit-card-offers-2026" style={{ display: "inline-block", padding: "10px 18px", background: "var(--surface,#f8fafc)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>BMS Offers Deep Dive</Link>
+          <Link href="/smart-swipe" style={{ display: "inline-block", padding: "10px 18px", background: "var(--raise)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Calculate Your Savings</Link>
+          <Link href="/blog/bookmyshow-credit-card-offers-2026" style={{ display: "inline-block", padding: "10px 18px", background: "var(--raise)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>BMS Offers Deep Dive</Link>
         </div>
       </div>
 
@@ -484,7 +484,7 @@ export default function BestCreditCardForMovieEntertainment() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20 }}>Frequently Asked Questions</h2>
       <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 44 }}>
         {faq.mainEntity.map((item, i) => (
-          <details key={i} style={{ border: "1px solid var(--border,#e2e8f0)", borderRadius: 10 }}>
+          <details key={i} style={{ border: "1px solid var(--border,var(--hair))", borderRadius: 10 }}>
             <summary style={{ padding: "14px 18px", fontWeight: 600, fontSize: 15, cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               {item.name}
               <span style={{ color: COLOR, fontSize: 18, flexShrink: 0, marginLeft: 12 }}>+</span>
@@ -496,7 +496,7 @@ export default function BestCreditCardForMovieEntertainment() {
         ))}
       </div>
 
-      <footer style={{ borderTop: "1px solid var(--border,#e2e8f0)", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border,var(--hair))", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
         <p style={{ margin: "0 0 6px" }}>
           <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. BookMyShow offers and credit card benefits are subject to change. Verify current offer terms on the BookMyShow app and your bank's offer page before purchasing tickets.
         </p>

@@ -35,7 +35,7 @@ const SvgFlatVsReducing = () => (
     <text x="360" y="195" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill="#fff">₹87,000</text>
     <text x="360" y="215" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#93c5fd">total interest</text>
     <text x="360" y="275" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">EMI: ₹16,247/mo</text>
-    <rect x="500" y="195" width="140" height="65" fill="#f59e0b" rx="6" opacity="0.85" />
+    <rect x="500" y="195" width="140" height="65" fill="var(--raise)" rx="6" opacity="0.85" />
     <text x="570" y="184" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#f59e0b">YOU OVERPAY</text>
     <text x="570" y="225" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill="#fff">₹70,500</text>
     <text x="570" y="245" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#fde68a">if quoted flat rate</text>
@@ -50,10 +50,10 @@ const SvgHiddenCostStack = () => (
     <rect x="40" y="40" width="200" height="36" fill={COLOR} rx="4" />
     <text x="50" y="63" fontFamily="system-ui" fontSize="13" fontWeight="600" fill="#fff">Advertised interest (10.5%)</text>
     <text x="350" y="63" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>₹87,000</text>
-    <rect x="40" y="86" width="200" height="36" fill="#f59e0b" rx="4" />
+    <rect x="40" y="86" width="200" height="36" fill="var(--raise)" rx="4" />
     <text x="50" y="109" fontFamily="system-ui" fontSize="13" fontWeight="600" fill="#fff">Processing fee (2.5%)</text>
     <text x="350" y="109" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#f59e0b">+₹12,500</text>
-    <rect x="40" y="132" width="200" height="36" fill="#f97316" rx="4" />
+    <rect x="40" y="132" width="200" height="36" fill="var(--raise)" rx="4" />
     <text x="50" y="155" fontFamily="system-ui" fontSize="13" fontWeight="600" fill="#fff">GST on processing fee (18%)</text>
     <text x="350" y="155" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#f97316">+₹2,250</text>
     <rect x="40" y="178" width="200" height="36" fill="#dc2626" rx="4" />
@@ -121,12 +121,12 @@ const SvgCibilVsRate = () => (
 const SvgApRFormula = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="APR calculation formula showing how to compute annual percentage rate from EMI principal and tenure to find your real cost of borrowing" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW TO CALCULATE YOUR REAL APR IN 3 STEPS</text>
-    <rect x="20" y="35" width="200" height="60" fill="var(--surface, #f8fafc)" stroke={COLOR} strokeWidth="2" rx="8" />
+    <rect x="20" y="35" width="200" height="60" fill="var(--raise)" stroke={COLOR} strokeWidth="2" rx="8" />
     <text x="120" y="58" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill={COLOR}>STEP 1</text>
     <text x="120" y="75" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Net disbursement</text>
     <text x="120" y="90" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">(Loan - all fees)</text>
     <path d="M 222 65 L 248 65" stroke={COLOR} strokeWidth="2" markerEnd="url(#arr)" />
-    <rect x="250" y="35" width="200" height="60" fill="var(--surface, #f8fafc)" stroke={COLOR} strokeWidth="2" rx="8" />
+    <rect x="250" y="35" width="200" height="60" fill="var(--raise)" stroke={COLOR} strokeWidth="2" rx="8" />
     <text x="350" y="58" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill={COLOR}>STEP 2</text>
     <text x="350" y="75" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Monthly EMI you pay</text>
     <text x="350" y="90" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">(from sanction letter)</text>
@@ -136,7 +136,7 @@ const SvgApRFormula = () => (
     <text x="590" y="75" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#bfdbfe">Solve: PV(EMIs) =</text>
     <text x="590" y="90" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#bfdbfe">Net disbursement → r = APR</text>
     <text x="20" y="120" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="var(--text)">Quick check: APR on ₹5L loan, ₹4,80,250 net disbursement, ₹16,247 EMI, 36 months</text>
-    <rect x="20" y="132" width="680" height="36" fill="#fef2f2" stroke="#dc2626" strokeWidth="1" rx="4" />
+    <rect x="20" y="132" width="680" height="36" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="4" />
     <text x="36" y="148" fontFamily="system-ui" fontSize="12" fill="#dc2626" fontWeight="600">Solve: 4,80,250 = 16,247 × [1-(1+r)^-36] / r</text>
     <text x="36" y="163" fontFamily="system-ui" fontSize="12" fill="#dc2626">Result: r = 1.12%/month = 13.5% APR (not 10.5%). Use our EMI calculator at /tools/emi-calculator to back-derive.</text>
   </svg>

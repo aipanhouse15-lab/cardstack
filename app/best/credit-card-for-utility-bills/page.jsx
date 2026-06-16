@@ -38,7 +38,7 @@ function UtilityRewardRateComparison() {
       aria-label="Bar chart comparing reward rates on utility bill payments across major Indian credit cards"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="260" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="260" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Reward Rate on Utility Bills by Card (June 2026)</text>
       {[0, 1, 2, 3, 4, 5].map((v) => (
         <g key={v}>
@@ -51,7 +51,7 @@ function UtilityRewardRateComparison() {
         const x = 68 + i * 114;
         return (
           <g key={c.name}>
-            <rect x={x} y={215 - barH} width="68" height={Math.max(barH, 4)} rx="4" fill={c.rate >= 5 ? COLOR : c.rate >= 2 ? "#86efac" : "var(--border)"} opacity="0.9" />
+            <rect x={x} y={215 - barH} width="68" height={Math.max(barH, 4)} rx="4" fill={c.rate >= 5 ? COLOR : c.rate >= 2 ? "rgba(62,224,143,.35)" : "var(--border)"} opacity="0.9" />
             {c.rate > 0 && (
               <text x={x + 34} y={210 - barH} textAnchor="middle" fontSize="11" fontWeight="700" fill={c.rate >= 5 ? COLOR : "var(--text-muted)"}>{c.rate}%</text>
             )}
@@ -74,17 +74,17 @@ function MDRExplainerDiagram() {
       aria-label="Diagram explaining why MDR economics make utility bill rewards rare in India"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="200" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Why Utility Rewards Are Rare: The MDR Problem</text>
       <rect x="20" y="44" width="140" height="56" rx="8" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.2" />
       <text x="90" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>Normal Purchase</text>
       <text x="90" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">MDR: 1.5-2.5%</text>
       <text x="90" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Bank earns ₹25 per ₹1,000</text>
-      <rect x="270" y="44" width="140" height="56" rx="8" fill="#f59e0b" opacity="0.1" stroke="#f59e0b" strokeWidth="1.2" />
+      <rect x="270" y="44" width="140" height="56" rx="8" fill="var(--raise)" opacity="0.1" stroke="#f59e0b" strokeWidth="1.2" />
       <text x="340" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill="#f59e0b">Utility via BBPS</text>
       <text x="340" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">MDR: 0-0.5% (capped)</text>
       <text x="340" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Bank earns ₹0-5 per ₹1,000</text>
-      <rect x="520" y="44" width="140" height="56" rx="8" fill="#ef4444" opacity="0.1" stroke="#ef4444" strokeWidth="1.2" />
+      <rect x="520" y="44" width="140" height="56" rx="8" fill="var(--raise)" opacity="0.1" stroke="#ef4444" strokeWidth="1.2" />
       <text x="590" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill="#ef4444">Reward Rate Needed</text>
       <text x="590" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">5% on ₹1,000 = ₹50</text>
       <text x="590" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">But bank earns only ₹5</text>
@@ -113,7 +113,7 @@ function BBPSVsDirectPaymentTable() {
       aria-label="Table comparing reward earning methods for utility bill payment in India"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="260" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="260" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Payment Method vs Reward Rate (Axis ACE)</text>
       {["Payment Method", "Reward", "Works?", "Notes"].map((h, i) => (
         <text key={h} x={[20, 310, 400, 480][i]} y="48" fontSize="10.5" fontWeight="700" fill="var(--text)">{h}</text>
@@ -142,7 +142,7 @@ function MonthlyCapMathTable() {
       aria-label="Table showing Axis ACE cashback earned at different monthly utility spending levels"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="220" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="220" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Axis ACE Utility Cashback: Monthly Spend vs Annual Return</text>
       {[
         { spend: "₹2,000/mo", cashback: "₹100/mo", annual: "₹1,200/yr", vsAnnualFee: "2.4x return on ₹499 fee" },
@@ -176,7 +176,7 @@ function UtilityStackDiagram() {
       aria-label="Diagram showing recommended two-card stack for maximizing utility and online spending rewards"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="200" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Optimal Two-Card Stack for Utility-Heavy Households</text>
       <rect x="30" y="44" width="270" height="80" rx="10" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5" />
       <text x="165" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Card 1: Axis ACE (₹499/yr)</text>
@@ -405,7 +405,7 @@ export default function BestCreditCardForUtilityBills() {
               display: "flex",
               gap: 18,
               alignItems: "flex-start",
-              background: "var(--surface, #f8fafc)",
+              background: "var(--raise)",
             }}
           >
             <div

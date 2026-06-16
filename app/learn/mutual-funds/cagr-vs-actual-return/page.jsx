@@ -71,7 +71,7 @@ const SvgSequenceOfReturns = () => (
 const SvgCherryPickedWindows = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="How mutual fund companies cherry-pick performance windows showing how a fund can show 25 percent 3-year return or 8 percent 5-year return for the same fund depending on start date" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW FUND HOUSES CHERRY-PICK PERFORMANCE WINDOWS · SAME FUND, DIFFERENT STORY</text>
-    <rect x="20" y="38" width="680" height="160" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" rx="8" />
+    <rect x="20" y="38" width="680" height="160" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="8" />
     <text x="30" y="60" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text)">Example: Mirae Asset Large Cap Fund (hypothetical)</text>
     <text x="30" y="80" fontFamily="system-ui" fontSize="12" fill="var(--text-muted)">NAV trend (simplified): Jan 2019 = 100 → Jan 2021 = 80 (COVID crash) → Jan 2024 = 200 → Jan 2026 = 215</text>
     {[

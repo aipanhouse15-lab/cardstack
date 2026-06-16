@@ -53,7 +53,7 @@ const IconCross = () => (
 
 const IconATM = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ATM abroad withdrawal icon">
-    <rect x="4" y="6" width="20" height="16" rx="3" fill="var(--surface,#f8fafc)" stroke={COLOR} strokeWidth="1.8"/>
+    <rect x="4" y="6" width="20" height="16" rx="3" fill="var(--raise)" stroke={COLOR} strokeWidth="1.8"/>
     <rect x="7" y="10" width="8" height="5" rx="1" fill={COLOR} opacity="0.2"/>
     <rect x="17" y="10" width="4" height="2" rx="0.5" fill={COLOR} opacity="0.4"/>
     <rect x="17" y="14" width="4" height="2" rx="0.5" fill={COLOR} opacity="0.4"/>
@@ -64,8 +64,8 @@ const IconATM = () => (
 const IconWarn = () => (
   <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DCC warning">
     <path d="M11 2L21 19H1L11 2Z" fill="#fff7ed" stroke="#f97316" strokeWidth="1.8"/>
-    <rect x="10" y="8" width="2" height="5" rx="1" fill="#f97316"/>
-    <rect x="10" y="15" width="2" height="2" rx="1" fill="#f97316"/>
+    <rect x="10" y="8" width="2" height="5" rx="1" fill="var(--raise)"/>
+    <rect x="10" y="15" width="2" height="2" rx="1" fill="var(--raise)"/>
   </svg>
 );
 
@@ -274,7 +274,7 @@ export default function BestCreditCardWithNoForexMarkup() {
           { label: "Bank forex markup (3.5%)", amount: "₹3,500", isGood: false },
           { label: "GST on markup (18%)", amount: "₹630", isGood: false }
         ].map(({ label, amount, isGood }, i) => (
-          <div key={i} style={{ background: isGood ? "#f0fdf4" : "#fff1f0", border: `1px solid ${isGood ? "#86efac" : "#fca5a5"}`, borderRadius: 8, padding: "12px 14px", textAlign: "center" }}>
+          <div key={i} style={{ background: isGood ? "var(--green-dim)" : "#fff1f0", border: `1px solid ${isGood ? "rgba(62,224,143,.35)" : "#fca5a5"}`, borderRadius: 8, padding: "12px 14px", textAlign: "center" }}>
             <div style={{ fontSize: 12, color: "var(--text-muted,#64748b)", marginBottom: 6 }}>{label}</div>
             <strong style={{ color: isGood ? "#16a34a" : "#dc2626", fontSize: 18 }}>{amount}</strong>
             <div style={{ fontSize: 11, color: "var(--text-muted,#64748b)" }}>per ₹1 lakh spent</div>
@@ -289,7 +289,7 @@ export default function BestCreditCardWithNoForexMarkup() {
       {/* DCC section */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>DCC: The Second Layer of Cost You Must Decline</h2>
 
-      <div style={{ background: "#fff7ed", border: "1.5px solid #f97316", borderRadius: 10, padding: "14px 18px", marginBottom: 16, display: "flex", gap: 10 }}>
+      <div style={{ background: "rgba(212,168,83,.06)", border: "1.5px solid #f97316", borderRadius: 10, padding: "14px 18px", marginBottom: 16, display: "flex", gap: 10 }}>
         <IconWarn />
         <p style={{ margin: 0, fontSize: 13, color: "var(--text-muted,#475569)" }}>
           Dynamic Currency Conversion (DCC) is a merchant-side trap that often catches Indian travellers. When the terminal asks "Pay in Indian Rupees or local currency?", always choose local currency. The DCC rate is 4-7% worse than your card's rate — even on a zero-forex card.
@@ -311,16 +311,16 @@ export default function BestCreditCardWithNoForexMarkup() {
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
           <thead>
             <tr style={{ background: `${COLOR}12` }}>
-              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Intl Spend</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Standard Card (3.5%)</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>OneCard (1%)</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)", color: COLOR }}>IDFC WOW / Scapia (0%)</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Saving vs Std</th>
+              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Intl Spend</th>
+              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Standard Card (3.5%)</th>
+              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>OneCard (1%)</th>
+              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))", color: COLOR }}>IDFC WOW / Scapia (0%)</th>
+              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Saving vs Std</th>
             </tr>
           </thead>
           <tbody>
             {savingsTable.map(([spend, std, onecard, zero, saving], i) => (
-              <tr key={i} style={{ borderBottom: "1px solid var(--border,#e2e8f0)", background: i % 2 === 0 ? "transparent" : "var(--surface,#f8fafc)" }}>
+              <tr key={i} style={{ borderBottom: "1px solid var(--border,var(--hair))", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                 <td style={{ padding: "10px 14px", fontWeight: 600 }}>{spend}</td>
                 <td style={{ padding: "10px 12px", textAlign: "right", color: "#dc2626" }}>{std}</td>
                 <td style={{ padding: "10px 12px", textAlign: "right", color: "#f97316" }}>{onecard}</td>
@@ -340,7 +340,7 @@ export default function BestCreditCardWithNoForexMarkup() {
 
       <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
         {cards.map((card) => (
-          <div key={card.rank} style={{ border: `2px solid ${card.rank <= 2 ? COLOR : "var(--border,#e2e8f0)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${COLOR}06` : "transparent" }}>
+          <div key={card.rank} style={{ border: `2px solid ${card.rank <= 2 ? COLOR : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${COLOR}06` : "transparent" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 {card.rank <= 2 && <IconStar />}
@@ -348,7 +348,7 @@ export default function BestCreditCardWithNoForexMarkup() {
               </div>
               <div style={{ display: "flex", gap: 8 }}>
                 <span style={{ background: card.forex === "0%" ? `${COLOR}15` : "#fef3c7", color: card.forex === "0%" ? COLOR : "#92400e", borderRadius: 20, padding: "3px 10px", fontSize: 12, fontWeight: 700 }}>Forex: {card.forex}</span>
-                <span style={{ background: "var(--surface,#f8fafc)", color: "var(--text-muted,#64748b)", borderRadius: 20, padding: "3px 10px", fontSize: 12, border: "1px solid var(--border,#e2e8f0)" }}>{card.fee}</span>
+                <span style={{ background: "var(--raise)", color: "var(--text-muted,#64748b)", borderRadius: 20, padding: "3px 10px", fontSize: 12, border: "1px solid var(--border,var(--hair))" }}>{card.fee}</span>
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, fontSize: 13, color: "var(--text-muted,#475569)", marginBottom: 12 }}>
@@ -371,7 +371,7 @@ export default function BestCreditCardWithNoForexMarkup() {
       </p>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 32 }}>
-        <div style={{ background: "#f0fdf4", border: "1px solid #86efac", borderRadius: 10, padding: "16px" }}>
+        <div style={{ background: "var(--green-dim)", border: "1px solid #86efac", borderRadius: 10, padding: "16px" }}>
           <strong style={{ color: "#16a34a", display: "block", marginBottom: 8 }}>IDFC FIRST WOW</strong>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
             <IconCheck />
@@ -386,7 +386,7 @@ export default function BestCreditCardWithNoForexMarkup() {
             <span style={{ fontSize: 13 }}>Points never expire</span>
           </div>
         </div>
-        <div style={{ background: "#fff7ed", border: "1px solid #fdba74", borderRadius: 10, padding: "16px" }}>
+        <div style={{ background: "rgba(212,168,83,.06)", border: "1px solid #fdba74", borderRadius: 10, padding: "16px" }}>
           <strong style={{ color: "#c2410c", display: "block", marginBottom: 8 }}>IDFC FIRST Select</strong>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
             <IconCross />
@@ -410,7 +410,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         Even a zero-forex card has costs at international ATMs. Your Indian bank charges a cash advance fee (typically 2.5-3% of the amount, minimum ₹500) every time you withdraw cash abroad. This is separate from the forex markup and applies even when the forex markup is zero.
       </p>
 
-      <div style={{ display: "flex", gap: 12, padding: "14px 16px", background: "var(--surface,#f8fafc)", border: "1px solid var(--border,#e2e8f0)", borderRadius: 10, marginBottom: 12 }}>
+      <div style={{ display: "flex", gap: 12, padding: "14px 16px", background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 10, marginBottom: 12 }}>
         <IconATM />
         <div>
           <strong style={{ fontSize: 14, display: "block", marginBottom: 4 }}>International ATM Withdrawal Cost Example</strong>
@@ -436,7 +436,7 @@ export default function BestCreditCardWithNoForexMarkup() {
           "For online international purchases (subscriptions, Amazon global, Airbnb), use your zero-forex card — these also attract forex markup on standard cards.",
           "Check if your card has international transaction limits. Some base-tier cards have per-transaction or monthly caps on international spend."
         ].map((tip, i) => (
-          <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "12px 14px", background: "var(--surface,#f8fafc)", borderRadius: 8, border: "1px solid var(--border,#e2e8f0)" }}>
+          <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "12px 14px", background: "var(--raise)", borderRadius: 8, border: "1px solid var(--border,var(--hair))" }}>
             <div style={{ background: COLOR, color: "#fff", borderRadius: "50%", width: 22, height: 22, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700, flexShrink: 0, marginTop: 1 }}>{i + 1}</div>
             <span style={{ fontSize: 13, color: "var(--text-muted,#475569)" }}>{tip}</span>
           </div>
@@ -451,8 +451,8 @@ export default function BestCreditCardWithNoForexMarkup() {
         </p>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
           <Link href="/cards/idfc-first-wow" style={{ display: "inline-block", padding: "10px 18px", background: COLOR, color: "#fff", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>IDFC FIRST WOW Full Review</Link>
-          <Link href="/best/credit-card-for-lounge-access" style={{ display: "inline-block", padding: "10px 18px", background: "var(--surface,#f8fafc)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Lounge Access Guide</Link>
-          <Link href="/blog/forex-markup-india-explained" style={{ display: "inline-block", padding: "10px 18px", background: "var(--surface,#f8fafc)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Forex Markup Deep Dive</Link>
+          <Link href="/best/credit-card-for-lounge-access" style={{ display: "inline-block", padding: "10px 18px", background: "var(--raise)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Lounge Access Guide</Link>
+          <Link href="/blog/forex-markup-india-explained" style={{ display: "inline-block", padding: "10px 18px", background: "var(--raise)", color: COLOR, border: `1px solid ${COLOR}`, borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Forex Markup Deep Dive</Link>
         </div>
       </div>
 
@@ -460,7 +460,7 @@ export default function BestCreditCardWithNoForexMarkup() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20 }}>Frequently Asked Questions</h2>
       <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 44 }}>
         {faq.mainEntity.map((item, i) => (
-          <details key={i} style={{ border: "1px solid var(--border,#e2e8f0)", borderRadius: 10 }}>
+          <details key={i} style={{ border: "1px solid var(--border,var(--hair))", borderRadius: 10 }}>
             <summary style={{ padding: "14px 18px", fontWeight: 600, fontSize: 15, cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               {item.name}
               <span style={{ color: COLOR, fontSize: 18, flexShrink: 0, marginLeft: 12 }}>+</span>
@@ -472,7 +472,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         ))}
       </div>
 
-      <footer style={{ borderTop: "1px solid var(--border,#e2e8f0)", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border,var(--hair))", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
         <p style={{ margin: "0 0 6px" }}>
           <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Forex markup rates and card features are subject to change by the issuing bank. Always verify the current forex charges with your bank before international travel.
         </p>

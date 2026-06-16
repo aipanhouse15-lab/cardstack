@@ -27,7 +27,7 @@ function AirtelDevaluationTimeline() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Timeline of Axis Airtel card devaluation showing grocery reward removed in April 2026"
-      style={{ width: "100%", borderRadius: 10, background: "#fef2f2", border: "1px solid #fca5a5" }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--red-dim)", border: "1px solid #fca5a5" }}
     >
       <text x="340" y="24" textAnchor="middle" fill="#dc2626" fontSize="13" fontWeight="700">Axis Airtel Card: The April 2026 Grocery Killer</text>
       <line x1="60" y1="100" x2="620" y2="100" stroke="#dc2626" strokeWidth="2" />
@@ -44,7 +44,7 @@ function AirtelDevaluationTimeline() {
           <text x={e.x} y={i % 2 === 0 ? 56 : 146} textAnchor="middle" fill={e.color} fontSize="9">{e.note.slice(30)}</text>
         </g>
       ))}
-      <rect x="20" y="160" width="640" height="32" fill="#fee2e2" rx="6" />
+      <rect x="20" y="160" width="640" height="32" fill="var(--raise)" rx="6" />
       <text x="340" y="180" textAnchor="middle" fill="#dc2626" fontSize="12" fontWeight="700">If Axis Airtel is your grocery card, it is now earning you 1%. Switch immediately.</text>
     </svg>
   );
@@ -57,7 +57,7 @@ function BigBasketProblemDiagram() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="BigBasket coverage diagram showing which cards cover it at 5 percent versus 1 percent base rate"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">The BigBasket Problem: Which Cards Actually Cover It?</text>
       {[
@@ -71,11 +71,11 @@ function BigBasketProblemDiagram() {
         const y = 36 + i * 24;
         return (
           <g key={item.card}>
-            <rect x="10" y={y} width="180" height="20" fill="#fff" stroke="var(--border)" rx="3" />
+            <rect x="10" y={y} width="180" height="20" fill="var(--raise)" stroke="var(--border)" rx="3" />
             <text x="100" y={y + 14} textAnchor="middle" fill="var(--text)" fontSize="11">{item.card}</text>
-            <rect x="200" y={y} width="60" height="20" fill={item.covers ? "#f0fdf4" : "#fef2f2"} rx="3" />
+            <rect x="200" y={y} width="60" height="20" fill={item.covers ? "var(--green-dim)" : "#fef2f2"} rx="3" />
             <text x="230" y={y + 14} textAnchor="middle" fill={item.color} fontSize="11" fontWeight="700">{item.rate}</text>
-            <rect x="270" y={y} width="400" height="20" fill="var(--surface, #f8fafc)" rx="3" />
+            <rect x="270" y={y} width="400" height="20" fill="var(--raise)" rx="3" />
             <text x="470" y={y + 14} textAnchor="middle" fill="var(--text-muted)" fontSize="10">{item.note}</text>
           </g>
         );
@@ -91,7 +91,7 @@ function OnlineVsOfflineGroceryChart() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Comparison of cashback rates on online grocery apps versus offline supermarkets across major credit cards"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Online Grocery Apps vs Offline Supermarket: Very Different MCCs</text>
       <text x="200" y="40" textAnchor="middle" fill={COLOR} fontSize="12" fontWeight="700">Online Grocery (BigBasket, Blinkit, Instamart)</text>
@@ -127,14 +127,14 @@ function RBLShopRiteSpotlight() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="RBL ShopRite card spotlight showing 5 percent grocery cashback with 1000 rupee monthly cap"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: `1px solid ${COLOR}`, marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: `1px solid ${COLOR}`, marginTop: 8 }}
     >
-      <rect x="0" y="0" width="680" height="160" fill="#f0fdf4" rx="10" />
+      <rect x="0" y="0" width="680" height="160" fill="var(--raise)" rx="10" />
       <text x="340" y="28" textAnchor="middle" fill={COLOR} fontSize="14" fontWeight="700">RBL ShopRite: India's Best Pure Grocery Card (That Nobody Knows)</text>
       <text x="340" y="50" textAnchor="middle" fill="var(--text)" fontSize="12">5% on grocery: BigBasket, Blinkit, Spencer, and more</text>
       <text x="340" y="68" textAnchor="middle" fill="var(--text)" fontSize="12">Annual Fee: ₹500 · Monthly Cap: ₹1,000 (binds at ₹20,000 grocery spend)</text>
       <text x="340" y="88" textAnchor="middle" fill="var(--text)" fontSize="12">2% on utility payments · 1% base on all else</text>
-      <rect x="100" y="104" width="480" height="40" fill="#fff" stroke={COLOR} rx="6" />
+      <rect x="100" y="104" width="480" height="40" fill="var(--raise)" stroke={COLOR} rx="6" />
       <text x="340" y="120" textAnchor="middle" fill="var(--text)" fontSize="11">At ₹10,000/month grocery spend: earns ₹500 cashback. Annual net: ₹5,500 after ₹500 fee.</text>
       <text x="340" y="136" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Most Indian credit card users have never heard of this card. That is a mistake.</text>
     </svg>
@@ -148,17 +148,17 @@ function GroceryStackDiagram() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Grocery spending stack: RBL ShopRite for online grocery, Axis ACE for offline supermarket purchases"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">The Two-Card Grocery Stack</text>
-      <rect x="20" y="38" width="290" height="120" fill="#fff" stroke={COLOR} strokeWidth="2" rx="10" />
+      <rect x="20" y="38" width="290" height="120" fill="var(--raise)" stroke={COLOR} strokeWidth="2" rx="10" />
       <text x="165" y="62" textAnchor="middle" fill={COLOR} fontSize="13" fontWeight="700">RBL ShopRite (₹500/yr)</text>
       <text x="165" y="80" textAnchor="middle" fill="var(--text)" fontSize="11">5% on online grocery: BigBasket, Blinkit</text>
       <text x="165" y="97" textAnchor="middle" fill="var(--text)" fontSize="11">Cap: ₹1,000/mo</text>
       <text x="165" y="114" textAnchor="middle" fill="var(--text)" fontSize="11">Use for all app-based grocery orders</text>
       <text x="165" y="145" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Primary grocery card for online orders</text>
       <text x="340" y="100" textAnchor="middle" fill="var(--text)" fontSize="18" fontWeight="900">+</text>
-      <rect x="370" y="38" width="290" height="120" fill="#fff" stroke="#7c3aed" strokeWidth="2" rx="10" />
+      <rect x="370" y="38" width="290" height="120" fill="var(--raise)" stroke="#7c3aed" strokeWidth="2" rx="10" />
       <text x="515" y="62" textAnchor="middle" fill="#7c3aed" fontSize="13" fontWeight="700">Axis ACE (₹499/yr)</text>
       <text x="515" y="80" textAnchor="middle" fill="var(--text)" fontSize="11">2% on all categories offline too</text>
       <text x="515" y="97" textAnchor="middle" fill="var(--text)" fontSize="11">Use at DMart, Spencer, local market</text>
@@ -175,7 +175,7 @@ function GrocerySpendScenarios() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Annual cashback scenarios for grocery spend at different levels comparing three card options"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Annual Grocery Cashback: What You Actually Earn</text>
       {[
@@ -188,7 +188,7 @@ function GrocerySpendScenarios() {
         <g key={ri}>
           {row.map((cell, ci) => (
             <g key={ci}>
-              <rect x={10 + ci * 165} y={36 + ri * 30} width={163} height={28} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "#fff" : "var(--surface, #f8fafc)"} rx="2" />
+              <rect x={10 + ci * 165} y={36 + ri * 30} width={163} height={28} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "#fff" : "var(--raise)"} rx="2" />
               <text x={91 + ci * 165} y={54 + ri * 30} textAnchor="middle" fill={ri === 0 ? "#fff" : ci > 0 ? (ri > 2 && ci === 3 ? "#7c3aed" : "var(--text)") : "var(--text)"} fontSize="10" fontWeight={ri === 0 || ci === 0 ? "700" : "400"}>{cell}</text>
             </g>
           ))}
@@ -337,7 +337,7 @@ export default function BestCreditCardForGroceries() {
             caveat: "Online only. 0% at physical grocery stores and supermarkets."
           },
         ].map(card => (
-          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "#fff" }}>
+          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "var(--raise)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 8 }}>
               <div>
                 <span style={{ background: COLOR + "22", color: COLOR, fontSize: 11, fontWeight: 700, padding: "2px 8px", borderRadius: 4, marginRight: 8 }}>{card.badge}</span>
@@ -416,7 +416,7 @@ export default function BestCreditCardForGroceries() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 40, background: "var(--surface, #f8fafc)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
+      <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
         <p>RBL ShopRite is the best grocery credit card in India right now. The Axis Airtel situation should remind everyone that card rewards are not permanent: what earned 10% on grocery in 2023 earns 1% in 2026. Reviewing your default cards every 6 months is essential.</p>
         <p>HDFC Millennia is a reasonable grocery card for people who already hold it for other categories. But its shared cap means it is not the right tool if grocery is a significant standalone spend category for your household.</p>

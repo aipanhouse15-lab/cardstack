@@ -52,7 +52,7 @@ const SvgInsurerSeniorComparison = () => (
       ["New India (Varistha)", "₹28,000/yr", "80 yrs", "1 year (only)", "1% SI/day", "Cheapest but room rent trap risk"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={59 + ri * 36} width={700} height="36" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={59 + ri * 36} width={700} height="36" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 160, 290, 390, 490, 590];
           const isGood = cell.includes("No limit") || cell.includes("Best");
@@ -77,7 +77,7 @@ const SvgWaitingPeriod = () => (
       { condition: "General illness / New disease", wait: "30 days", impact: "30-day general waiting period for non-accident claims", color: "#f59e0b" },
     ].map(({ condition, wait, impact, color }, i) => (
       <g key={condition}>
-        <rect x="20" y={35 + i * 30} width={700} height="22" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={35 + i * 30} width={700} height="22" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={50 + i * 30} fontFamily="system-ui" fontSize="11" fill="var(--text)">{condition}</text>
         <rect x="240" y={37 + i * 30} width="70" height="18" fill={color} rx="3" />
         <text x="275" y={50 + i * 30} textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#fff">{wait}</text>
@@ -114,7 +114,7 @@ const SvgSuperTopUpMath = () => (
 const SvgFlaterVsIndividual = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Floater versus individual health insurance policy comparison for parents showing that individual policies are better for older parents with different health profiles" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">FLOATER vs INDIVIDUAL POLICY FOR PARENTS · WHICH ONE TO BUY?</text>
-    <rect x="20" y="38" width="320" height="130" fill="var(--surface, #f8fafc)" stroke={COLOR} strokeWidth="1" rx="8" />
+    <rect x="20" y="38" width="320" height="130" fill="var(--raise)" stroke={COLOR} strokeWidth="1" rx="8" />
     <text x="180" y="60" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>FLOATER (₹5L shared)</text>
     <text x="180" y="80" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">Single policy covers both parents</text>
     <text x="180" y="98" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="var(--text)">If Dad uses all ₹5L: Mom has zero left</text>

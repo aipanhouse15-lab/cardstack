@@ -55,7 +55,7 @@ const SvgTaxTreatment = () => (
       ["Tax label", "EEE (Exempt × 3)", "ETE (Exempt-Taxable-Exempt)", "ETE with indexation (older) / 12.5% LTCG"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={59 + ri * 36} width={700} height="36" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={59 + ri * 36} width={700} height="36" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 160, 340, 530];
           const isGood = cell.includes("FREE") || cell.includes("EEE");
@@ -120,7 +120,7 @@ const SvgWhoPicksWhat = () => (
       { who: "Senior citizen, all income from interest", pick: "FD + SCSS", reason: "80TTB exemption + SCSS 8.2% = best risk-adjusted for seniors", color: "#16a34a" },
     ].map(({ who, pick, reason, color }, i) => (
       <g key={who}>
-        <rect x="20" y={38 + i * 34} width={700} height="26" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={38 + i * 34} width={700} height="26" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={55 + i * 34} fontFamily="system-ui" fontSize="11" fill="var(--text)">{who}</text>
         <rect x="360" y={40 + i * 34} width="70" height="22" fill={color} rx="4" />
         <text x="395" y={55 + i * 34} textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#fff">{pick}</text>

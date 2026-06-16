@@ -33,7 +33,7 @@ function HomeIcon() {
 function CalculatorIcon() {
   return (
     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calculator representing break-even math for rent payment processing fees">
-      <rect x="8" y="4" width="28" height="36" rx="4" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5"/>
+      <rect x="8" y="4" width="28" height="36" rx="4" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
       <rect x="12" y="8" width="20" height="8" rx="2" fill={COLOR} fillOpacity="0.15"/>
       <text x="22" y="15" textAnchor="middle" fontSize="7" fill={COLOR} fontWeight="700">₹ break-even</text>
       {[
@@ -98,7 +98,7 @@ function TruthTable({ data }) {
         </thead>
         <tbody>
           {data.rows.map((row, i) => (
-            <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)" }}>
+            <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
               {row.map((cell, j) => (
                 <td
                   key={j}
@@ -269,7 +269,7 @@ export default function BestCreditCardForRentPayment() {
           display: "grid",
           gridTemplateColumns: "auto 1fr",
           gap: 16,
-          background: "#fef2f2",
+          background: "var(--red-dim)",
           border: `2px solid ${COLOR}60`,
           borderRadius: 10,
           padding: "20px 22px",
@@ -318,7 +318,7 @@ export default function BestCreditCardForRentPayment() {
                 ["Housing.com Pay", "~1.5%", "₹225", "₹375"],
                 ["RedGiraffe / Others", "1.5 to 2.5%", "₹225 to ₹375", "₹375 to ₹625"],
               ].map(([platform, fee, on15k, on25k], i) => (
-                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)" }}>
+                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px", fontWeight: 600 }}>{platform}</td>
                   <td style={{ padding: "10px 14px", color: COLOR, fontWeight: 600 }}>{fee}</td>
                   <td style={{ padding: "10px 14px" }}>{on15k}</td>
@@ -409,7 +409,7 @@ export default function BestCreditCardForRentPayment() {
             <div
               key={i}
               style={{
-                background: "var(--surface, #f8fafc)",
+                background: "var(--raise)",
                 border: "1px solid var(--border)",
                 borderRadius: 8,
                 padding: "14px 16px",
@@ -483,11 +483,11 @@ export default function BestCreditCardForRentPayment() {
             <div
               key={i}
               style={{
-                border: `1px solid ${item.go ? "#86efac" : "#fca5a5"}`,
+                border: `1px solid ${item.go ? "rgba(62,224,143,.35)" : "#fca5a5"}`,
                 borderLeft: `4px solid ${item.go ? "#22c55e" : COLOR}`,
                 borderRadius: 8,
                 padding: "14px 16px",
-                background: item.go ? "#f0fdf4" : "#fef2f2",
+                background: item.go ? "var(--green-dim)" : "#fef2f2",
               }}
             >
               <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
@@ -531,7 +531,7 @@ export default function BestCreditCardForRentPayment() {
 
         <div
           style={{
-            background: "var(--surface, #f8fafc)",
+            background: "var(--raise)",
             border: "1px solid var(--border)",
             borderRadius: 8,
             padding: "18px 20px",

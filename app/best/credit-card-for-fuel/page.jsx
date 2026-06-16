@@ -27,10 +27,10 @@ function SurchargeExplainer() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Explainer diagram showing how the 1 percent fuel surcharge works and how much it costs per year at different spend levels"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)" }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)" }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">What the 1% Fuel Surcharge Actually Is</text>
-      <rect x="20" y="38" width="300" height="140" fill="#fff" stroke="var(--border)" rx="8" />
+      <rect x="20" y="38" width="300" height="140" fill="var(--raise)" stroke="var(--border)" rx="8" />
       <text x="170" y="60" textAnchor="middle" fill="var(--text)" fontSize="12" fontWeight="600">How It Works</text>
       <text x="170" y="78" textAnchor="middle" fill="var(--text-muted)" fontSize="11">You fill petrol worth ₹5,000</text>
       <text x="170" y="95" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Card network charges 1% surcharge</text>
@@ -38,7 +38,7 @@ function SurchargeExplainer() {
       <text x="170" y="130" textAnchor="middle" fill="var(--text-muted)" fontSize="11">You pay ₹5,050 total, not ₹5,000</text>
       <text x="170" y="148" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Waiver cards reverse this ₹50 charge</text>
       <text x="170" y="165" textAnchor="middle" fill={COLOR} fontSize="11">Minimum ₹400, maximum ₹5,000 transaction</text>
-      <rect x="360" y="38" width="300" height="140" fill="#fff" stroke="var(--border)" rx="8" />
+      <rect x="360" y="38" width="300" height="140" fill="var(--raise)" stroke="var(--border)" rx="8" />
       <text x="510" y="60" textAnchor="middle" fill="var(--text)" fontSize="12" fontWeight="600">Annual Surcharge Cost Without Waiver</text>
       {[
         ["₹3,000/mo", "₹360/yr"],
@@ -63,7 +63,7 @@ function PetrolBrandMatchGrid() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Fuel card to petrol brand matching table: use BPCL card at BPCL pumps, IOCL card at IOCL pumps"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Match Your Card to Your Petrol Brand</text>
       {[
@@ -77,7 +77,7 @@ function PetrolBrandMatchGrid() {
         <g key={ri}>
           {row.map((cell, ci) => (
             <g key={ci}>
-              <rect x={10 + ci * 165} y={36 + ri * 28} width={163} height={26} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "#fff" : "var(--surface, #f8fafc)"} rx="2" />
+              <rect x={10 + ci * 165} y={36 + ri * 28} width={163} height={26} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "#fff" : "var(--raise)"} rx="2" />
               <text x={91 + ci * 165} y={53 + ri * 28} textAnchor="middle" fill={ri === 0 ? "#fff" : ci === 2 ? COLOR : "var(--text)"} fontSize="10" fontWeight={ri === 0 || ci === 0 ? "700" : "400"}>{cell}</text>
             </g>
           ))}
@@ -100,7 +100,7 @@ function RealMathAt5000Monthly() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Annual net return comparison for four fuel cards at 5000 rupees monthly fuel spend after annual fee and surcharge waiver included"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Annual Net Return at ₹5,000/Month Fuel Spend</text>
       {cards.map((card, i) => {
@@ -132,17 +132,17 @@ function FuelCardStackDiagram() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Fuel card plus cashback card stack for maximum return on petrol expenses"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">The Fuel + Cashback Stack</text>
-      <rect x="20" y="38" width="290" height="110" fill="#fff" stroke={COLOR} strokeWidth="2" rx="10" />
+      <rect x="20" y="38" width="290" height="110" fill="var(--raise)" stroke={COLOR} strokeWidth="2" rx="10" />
       <text x="165" y="62" textAnchor="middle" fill={COLOR} fontSize="13" fontWeight="700">Primary: Brand Fuel Card</text>
       <text x="165" y="80" textAnchor="middle" fill="var(--text)" fontSize="11">SBI BPCL Octane / Axis IOCL</text>
       <text x="165" y="97" textAnchor="middle" fill="var(--text)" fontSize="11">Use at your regular petrol brand</text>
       <text x="165" y="114" textAnchor="middle" fill="var(--text)" fontSize="11">Earns fuel reward + surcharge waiver</text>
       <text x="165" y="140" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Primary pump card</text>
       <text x="340" y="95" textAnchor="middle" fill="var(--text)" fontSize="18" fontWeight="900">+</text>
-      <rect x="370" y="38" width="290" height="110" fill="#fff" stroke="#7c3aed" strokeWidth="2" rx="10" />
+      <rect x="370" y="38" width="290" height="110" fill="var(--raise)" stroke="#7c3aed" strokeWidth="2" rx="10" />
       <text x="515" y="62" textAnchor="middle" fill="#7c3aed" fontSize="13" fontWeight="700">Fallback: Axis ACE</text>
       <text x="515" y="80" textAnchor="middle" fill="var(--text)" fontSize="11">2% flat on all purchases</text>
       <text x="515" y="97" textAnchor="middle" fill="var(--text)" fontSize="11">Use at unknown pumps or wrong brand</text>
@@ -159,17 +159,17 @@ function RuralUrbanDifference() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Urban versus rural fuel spend patterns showing why rural drivers need universal surcharge waiver more than brand-specific cashback"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Urban vs Rural: Different Needs, Different Cards</text>
-      <rect x="20" y="38" width="300" height="128" fill="#fff" stroke={COLOR} rx="8" />
+      <rect x="20" y="38" width="300" height="128" fill="var(--raise)" stroke={COLOR} rx="8" />
       <text x="170" y="58" textAnchor="middle" fill={COLOR} fontSize="12" fontWeight="700">Urban Driver</text>
       <text x="170" y="76" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Same 2-3 petrol bunks regularly</text>
       <text x="170" y="93" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Brand predictable (BPCL or IOCL)</text>
       <text x="170" y="110" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Lower monthly spend (₹3,000-5,000)</text>
       <text x="170" y="127" textAnchor="middle" fill={COLOR} fontSize="11" fontWeight="600">Best card: Brand-specific (SBI BPCL or Axis IOCL)</text>
       <text x="170" y="148" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Loyalty to one brand maximises category cashback</text>
-      <rect x="360" y="38" width="300" height="128" fill="#fff" stroke="#7c3aed" rx="8" />
+      <rect x="360" y="38" width="300" height="128" fill="var(--raise)" stroke="#7c3aed" rx="8" />
       <text x="510" y="58" textAnchor="middle" fill="#7c3aed" fontSize="12" fontWeight="700">Rural / Highway Driver</text>
       <text x="510" y="76" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Fills up at whatever is available</text>
       <text x="510" y="93" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Brand varies: BPCL, IOCL, HPCL, others</text>
@@ -190,7 +190,7 @@ function SBIBPCLCapCalc() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Monthly fuel spend chart showing where SBI BPCL Octane 6.25 percent cashback cap of 2000 rupees binds at 32000 monthly spend"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">SBI BPCL Octane: Monthly Cashback vs Cap</text>
       {months.map((m, i) => {
@@ -214,7 +214,7 @@ function SBIBPCLCapCalc() {
       <g>
         <rect x="200" y="222" width="10" height="10" fill={COLOR} rx="2" />
         <text x="214" y="231" fill="var(--text-muted)" fontSize="11">Below cap (full 6.25%)</text>
-        <rect x="420" y="222" width="10" height="10" fill="#f59e0b" rx="2" />
+        <rect x="420" y="222" width="10" height="10" fill="var(--raise)" rx="2" />
         <text x="434" y="231" fill="var(--text-muted)" fontSize="11">Cap hit (effective rate drops)</text>
       </g>
     </svg>
@@ -365,7 +365,7 @@ export default function BestCreditCardForFuel() {
             caveat: "Lower headline rate than BPCL/IOCL cards. Best value when combined with lounge benefit usage."
           },
         ].map(card => (
-          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "#fff" }}>
+          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "var(--raise)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 8 }}>
               <div>
                 <span style={{ background: COLOR + "22", color: COLOR, fontSize: 11, fontWeight: 700, padding: "2px 8px", borderRadius: 4, marginRight: 8 }}>{card.badge}</span>
@@ -439,7 +439,7 @@ export default function BestCreditCardForFuel() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 40, background: "var(--surface, #f8fafc)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
+      <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
         <p>Fuel cards are one of the clearest value propositions in Indian credit cards: a specific, unavoidable expense that every car owner faces, with a 1% hidden tax that can be eliminated and replaced with positive cashback. There is no reason to fill petrol with a non-fuel card if you drive regularly.</p>
         <p>SBI BPCL Octane offers the highest headline rate in the market at 6.25%, but only for BPCL-loyal drivers spending enough to justify the ₹1,499 annual fee. Axis IOCL is the more broadly useful card given IOCL's market penetration as the largest petrol retailer in India, the unlimited waiver structure, and the lounge visits that add unrelated but real value.</p>

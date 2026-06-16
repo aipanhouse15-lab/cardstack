@@ -31,7 +31,7 @@ function FreeCardMythBuster() {
       aria-label="Comparison showing free credit cards vs paid cards on annual cashback return"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="210" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="210" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Busting the Myth: Free Cards vs Paid Cards (₹30K/mo Amazon + General Spend)</text>
       {[
         { card: "Amazon Pay ICICI (Free)", annual: 12600, fee: 0, net: 12600, color: COLOR },
@@ -59,12 +59,12 @@ function AmazonPayICICIBreakdown() {
       aria-label="Detailed breakdown of cashback rates for Amazon Pay ICICI credit card"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="240" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="240" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Amazon Pay ICICI: Complete Cashback Rate Map</text>
       {[
         { category: "Amazon.in (Prime member)", rate: "5%", color: COLOR, note: "No cap. Instant cashback to Amazon Pay balance." },
         { category: "Amazon.in (Non-Prime)", rate: "3%", color: "#4ade80", note: "Still strong for non-Prime users." },
-        { category: "Amazon Pay merchant payments", rate: "2%", color: "#86efac", note: "Thousands of apps and billers accept Amazon Pay." },
+        { category: "Amazon Pay merchant payments", rate: "2%", color: "rgba(62,224,143,.35)", note: "Thousands of apps and billers accept Amazon Pay." },
         { category: "All other spends", rate: "1%", color: "var(--border)", note: "1% on every other transaction. No exclusion list." },
       ].map((r, i) => (
         <g key={i}>
@@ -88,7 +88,7 @@ function FreeCardStackDiagram() {
       aria-label="Diagram showing a complete free-card stack covering all spending categories at zero annual fee"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="270" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="270" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Complete Zero-Fee Card Stack (June 2026)</text>
       {[
         { card: "Amazon Pay ICICI", categories: "Online Shopping, Amazon Pay billers", rate: "2-5%", color: "#f59e0b" },
@@ -119,7 +119,7 @@ function WhenToUpgradeChart() {
       aria-label="Guide showing when upgrading from free credit cards to paid cards makes financial sense"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="200" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">When to Upgrade from Free Cards to Paid Cards</text>
       {[
         { trigger: "You fly 4+ times a year internationally", upgrade: "Axis Atlas (₹5,000) for miles", stay: "Keep Scapia + WOW for spending" },
@@ -147,7 +147,7 @@ function ScapiaWOWComparison() {
       aria-label="Side by side comparison of Scapia Federal and IDFC FIRST WOW free credit cards"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="200" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Scapia Federal vs IDFC FIRST WOW: Free International Cards Compared</text>
       {/* Headers */}
       <text x="176" y="50" textAnchor="middle" fontSize="12" fontWeight="700" fill="#0891b2">Scapia Federal</text>
@@ -417,7 +417,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
               display: "flex",
               gap: 18,
               alignItems: "flex-start",
-              background: "var(--surface, #f8fafc)",
+              background: "var(--raise)",
             }}
           >
             <div

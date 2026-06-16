@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgFraudProtectionComparison = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Fraud protection comparison: credit card vs debit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="180" y="36" textAnchor="middle" fontSize="13" fontWeight="700" fill={COLOR}>Credit Card Fraud</text>
     <text x="540" y="36" textAnchor="middle" fontSize="13" fontWeight="700" fill="#dc2626">Debit Card Fraud</text>
     <line x1="360" y1="16" x2="360" y2="210" stroke="var(--border)" strokeWidth="1" />
@@ -35,9 +35,9 @@ const SvgFraudProtectionComparison = () => (
       ["Chargeback rights under Visa/Mastercard", "Limited chargeback protection"],
     ].map(([left, right], i) => (
       <g key={i}>
-        <rect x="20" y={52 + i * 30} width="318" height="24" rx="4" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "#e0f2fe"} />
+        <rect x="20" y={52 + i * 30} width="318" height="24" rx="4" fill={i % 2 === 0 ? "var(--raise)" : "#e0f2fe"} />
         <text x="32" y={68 + i * 30} fontSize="12" fill="var(--text)">{left}</text>
-        <rect x="382" y={52 + i * 30} width="318" height="24" rx="4" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "#fee2e2"} />
+        <rect x="382" y={52 + i * 30} width="318" height="24" rx="4" fill={i % 2 === 0 ? "var(--raise)" : "#fee2e2"} />
         <text x="394" y={68 + i * 30} fontSize="12" fill="var(--text)">{right}</text>
       </g>
     ))}
@@ -46,14 +46,14 @@ const SvgFraudProtectionComparison = () => (
 
 const SvgRewardRateChart = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Reward rates comparison for credit and debit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Effective Reward Rate on ₹1,00,000 Annual Spend</text>
     {[
       { label: "HDFC Regalia (credit)", rate: 1.06, bar: 212, color: COLOR },
       { label: "Axis Ace (credit)", rate: 1.5, bar: 300, color: "#0284c7" },
       { label: "SBI SimplyCLICK (credit)", rate: 1.25, bar: 250, color: "#0369a1" },
-      { label: "SBI Debit Card", rate: 0.0, bar: 4, color: "#94a3b8" },
-      { label: "HDFC Millennia Debit", rate: 0.1, bar: 20, color: "#94a3b8" },
+      { label: "SBI Debit Card", rate: 0.0, bar: 4, color: "var(--dim)" },
+      { label: "HDFC Millennia Debit", rate: 0.1, bar: 20, color: "var(--dim)" },
     ].map((d, i) => (
       <g key={i}>
         <text x="220" y={58 + i * 28} textAnchor="end" fontSize="11" fill="var(--text-muted)">{d.label}</text>
@@ -66,9 +66,9 @@ const SvgRewardRateChart = () => (
 
 const SvgFloatBenefit = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Credit card float benefit: 20 to 50 days interest-free period illustration" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Free Float Window (Credit Card Only)</text>
-    <rect x="30" y="50" width="660" height="30" rx="4" fill="#e2e8f0" />
+    <rect x="30" y="50" width="660" height="30" rx="4" fill="var(--raise)" />
     <rect x="30" y="50" width="220" height="30" rx="4" fill={COLOR} opacity="0.15" />
     <rect x="250" y="50" width="440" height="30" rx="4" fill={COLOR} opacity="0.4" />
     <text x="140" y="70" textAnchor="middle" fontSize="11" fontWeight="600" fill={COLOR}>Statement Period (30d)</text>
@@ -83,7 +83,7 @@ const SvgFloatBenefit = () => (
 
 const SvgCibilImpact = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="CIBIL score impact of credit card vs debit card usage" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Credit Score Building: 12-Month Scenario</text>
     {[
       { month: "Month 1", debit: 650, credit: 650 },
@@ -102,7 +102,7 @@ const SvgCibilImpact = () => (
           <text x={x} y="170" textAnchor="middle" fontSize="10" fill="var(--text-muted)">{d.month}</text>
           {i > 0 && (
             <>
-              <line x1={x - 130} y1={155 - (([650, 650, 650, 650, 650][i - 1] - 630) * 1.2)} x2={x} y2={debitY} stroke="#94a3b8" strokeWidth="1.5" />
+              <line x1={x - 130} y1={155 - (([650, 650, 650, 650, 650][i - 1] - 630) * 1.2)} x2={x} y2={debitY} stroke="var(--hair2)" strokeWidth="1.5" />
               <line x1={x - 130} y1={155 - (([650, 665, 690, 715, 740][i - 1] - 630) * 1.2)} x2={x} y2={creditY} stroke={COLOR} strokeWidth="2" />
             </>
           )}
@@ -118,9 +118,9 @@ const SvgCibilImpact = () => (
 
 const SvgMacBookScenario = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="MacBook purchase scenario: debit card fraud vs credit card dispute resolution" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">₹80,000 MacBook: What Happens If Something Goes Wrong?</text>
-    <rect x="20" y="44" width="330" height="180" rx="8" fill="#fee2e2" />
+    <rect x="20" y="44" width="330" height="180" rx="8" fill="var(--raise)" />
     <rect x="370" y="44" width="330" height="180" rx="8" fill="#dcfce7" />
     <text x="185" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill="#dc2626">Debit Card</text>
     <text x="535" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill="#16a34a">Credit Card</text>
@@ -147,10 +147,10 @@ const SvgMacBookScenario = () => (
 
 const SvgWhenToUseWhich = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Decision guide: when to use credit card vs debit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Quick Decision Guide</text>
     <rect x="20" y="38" width="330" height="148" rx="8" fill={COLOR} opacity="0.08" />
-    <rect x="370" y="38" width="330" height="148" rx="8" fill="#f1f5f9" />
+    <rect x="370" y="38" width="330" height="148" rx="8" fill="var(--raise)" />
     <text x="185" y="58" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Use Credit Card When...</text>
     <text x="535" y="58" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text-muted)">Use Debit Card When...</text>
     {["Purchase above ₹1,000", "Online or travel bookings", "Large purchases (EMI option)", "Building your CIBIL score", "Earning rewards or cashback"].map((t, i) => (
@@ -164,7 +164,7 @@ const SvgWhenToUseWhich = () => (
 
 const SvgInterestRisk = () => (
   <svg viewBox="0 0 720 170" role="img" aria-label="Interest risk comparison: credit card revolving vs debit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="170" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="170" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">What Does Carrying a Balance Actually Cost?</text>
     <text x="360" y="46" textAnchor="middle" fontSize="11" fill="var(--text-muted)">₹50,000 outstanding, paying minimum only (3.5% per month)</text>
     {[

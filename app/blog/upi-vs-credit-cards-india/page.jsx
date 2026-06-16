@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgMythVsReality = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Common myths about UPI vs credit cards debunked with reality checks" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">5 Myths Indians Believe About UPI vs Credit Cards</text>
     {["The Myth", "The Reality"].map((h, i) => (
       <text key={i} x={[36, 386][i]} y="48" fontSize="11" fontWeight="700" fill="var(--text-muted)">{h}</text>
@@ -36,7 +36,7 @@ const SvgMythVsReality = () => (
       ["UPI daily limit is unlimited", "NPCI cap: ₹1,00,000 per transaction/day for most users (June 2026)"],
     ].map((row, i) => (
       <g key={i}>
-        <rect x="20" y={54 + i * 30} width="336" height="26" rx="4" fill="#fef3c7" />
+        <rect x="20" y={54 + i * 30} width="336" height="26" rx="4" fill="var(--raise)" />
         <rect x="364" y={54 + i * 30} width="336" height="26" rx="4" fill="#dcfce7" />
         <text x="30" y={71 + i * 30} fontSize="10.5" fill="#854d0e">{row[0]}</text>
         <text x="374" y={71 + i * 30} fontSize="10.5" fill="#14532d">{row[1]}</text>
@@ -47,7 +47,7 @@ const SvgMythVsReality = () => (
 
 const SvgMdrAndRewardsFlow = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="How MDR merchant discount rate works for credit cards vs UPI and why credit cards earn rewards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Why Credit Cards Earn Rewards But UPI Doesn't</text>
     <rect x="20" y="38" width="660" height="50" rx="6" fill={COLOR} opacity="0.08" />
     <text x="36" y="58" fontSize="12" fontWeight="700" fill={COLOR}>Credit Card Transaction</text>
@@ -55,14 +55,14 @@ const SvgMdrAndRewardsFlow = () => (
     <rect x="20" y="98" width="660" height="50" rx="6" fill="#94a3b8" opacity="0.1" />
     <text x="36" y="118" fontSize="12" fontWeight="700" fill="#64748b">UPI Transaction (Visa/Mastercard linked)</text>
     <text x="36" y="136" fontSize="11" fill="var(--text)">You spend ₹100 → Merchant pays 0% MDR (NPCI mandate) → Bank earns nothing → You earn nothing</text>
-    <rect x="20" y="156" width="660" height="18" rx="4" fill="#fef9c3" />
+    <rect x="20" y="156" width="660" height="18" rx="4" fill="var(--raise)" />
     <text x="36" y="169" fontSize="11" fontWeight="600" fill="#854d0e">Exception: RuPay Credit Card on UPI earns rewards (special NPCI-RBI arrangement). Visa/MC on UPI: zero rewards.</text>
   </svg>
 );
 
 const SvgWhenUpiWins = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="Scenarios where UPI is better than a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">When UPI Genuinely Beats Your Credit Card</text>
     {[
       { title: "Speed at small merchants", detail: "No POS machine needed. Scan and pay in 3 seconds. Most kirana shops, autos, street food." },
@@ -72,7 +72,7 @@ const SvgWhenUpiWins = () => (
       { title: "Government portals, GSTIN payments", detail: "Many govt portals charge 1-2% credit card surcharge. UPI is free." },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="20" y={36 + i * 28} width="680" height="24" rx="4" fill={i % 2 === 0 ? COLOR + "14" : "var(--surface, #f8fafc)"} />
+        <rect x="20" y={36 + i * 28} width="680" height="24" rx="4" fill={i % 2 === 0 ? COLOR + "14" : "var(--raise)"} />
         <text x="30" y={52 + i * 28} fontSize="11" fontWeight="700" fill={COLOR}>{d.title}:</text>
         <text x={32 + d.title.length * 6.8} y={52 + i * 28} fontSize="11" fill="var(--text)">{d.detail}</text>
       </g>
@@ -82,7 +82,7 @@ const SvgWhenUpiWins = () => (
 
 const SvgWhenCreditCardWins = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="Scenarios where a credit card beats UPI" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">When Your Credit Card Beats UPI</text>
     {[
       { title: "Large purchases above ₹5,000", detail: "Rewards, EMI option, chargeback protection, and purchase insurance all kick in." },
@@ -92,7 +92,7 @@ const SvgWhenCreditCardWins = () => (
       { title: "CIBIL score building", detail: "Every credit card transaction is reported to bureaus. UPI has zero impact on your CIBIL score." },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="20" y={36 + i * 28} width="680" height="24" rx="4" fill={i % 2 === 0 ? "#fef3c7" : "var(--surface, #f8fafc)"} />
+        <rect x="20" y={36 + i * 28} width="680" height="24" rx="4" fill={i % 2 === 0 ? "#fef3c7" : "var(--raise)"} />
         <text x="30" y={52 + i * 28} fontSize="11" fontWeight="700" fill="#92400e">{d.title}:</text>
         <text x={32 + d.title.length * 6.8} y={52 + i * 28} fontSize="11" fill="var(--text)">{d.detail}</text>
       </g>
@@ -102,11 +102,11 @@ const SvgWhenCreditCardWins = () => (
 
 const SvgCameraScenario = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Real money comparison for buying a 15000 rupee camera using UPI vs credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">₹15,000 Camera: UPI vs Credit Card Head-to-Head</text>
-    <rect x="20" y="40" width="330" height="186" rx="8" fill="#f1f5f9" />
+    <rect x="20" y="40" width="330" height="186" rx="8" fill="var(--raise)" />
     <rect x="370" y="40" width="330" height="186" rx="8" fill={COLOR + "12"} />
-    <text x="185" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="#475569">Paid via UPI</text>
+    <text x="185" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text-muted)">Paid via UPI</text>
     <text x="535" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Paid via Credit Card</text>
     <text x="36" y="84" fontSize="11" fill="var(--text)">Deducted from bank: ₹15,000 (now)</text>
     <text x="36" y="102" fontSize="11" fill="var(--text)">Rewards earned: ₹0</text>
@@ -114,7 +114,7 @@ const SvgCameraScenario = () => (
     <text x="36" y="138" fontSize="11" fill="#dc2626">EMI available: No (post-purchase)</text>
     <text x="36" y="156" fontSize="11" fill="#dc2626">Dispute if defective: Harder</text>
     <text x="36" y="174" fontSize="11" fill="#dc2626">CIBIL benefit: None</text>
-    <text x="36" y="200" fontSize="11" fontWeight="700" fill="#475569">Net cost: ₹15,000</text>
+    <text x="36" y="200" fontSize="11" fontWeight="700" fill="var(--text-muted)">Net cost: ₹15,000</text>
     <text x="386" y="84" fontSize="11" fill="var(--text)">Deducted from bank: ₹15,000 (in 45d)</text>
     <text x="386" y="102" fontSize="11" fill={COLOR}>Rewards earned: ~₹150-₹225 (1-1.5%)</text>
     <text x="386" y="120" fontSize="11" fill={COLOR}>Float benefit: ~₹90 (savings acct 7%)</text>
@@ -127,10 +127,10 @@ const SvgCameraScenario = () => (
 
 const SvgRuPayUpiAdvantage = () => (
   <svg viewBox="0 0 720 170" role="img" aria-label="How RuPay credit card on UPI earns rewards unlike Visa and Mastercard" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="170" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="170" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">RuPay Credit Card on UPI: The One Exception That Matters</text>
     <rect x="20" y="38" width="200" height="116" rx="8" fill="#e0f2fe" />
-    <rect x="240" y="38" width="200" height="116" rx="8" fill="#fee2e2" />
+    <rect x="240" y="38" width="200" height="116" rx="8" fill="var(--raise)" />
     <rect x="460" y="38" width="240" height="116" rx="8" fill="#dcfce7" />
     <text x="120" y="58" textAnchor="middle" fontSize="11" fontWeight="700" fill="#0369a1">RuPay Credit on UPI</text>
     <text x="340" y="58" textAnchor="middle" fontSize="11" fontWeight="700" fill="#dc2626">Visa/MC Credit on UPI</text>
@@ -152,7 +152,7 @@ const SvgRuPayUpiAdvantage = () => (
 
 const SvgUpiLimits = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="UPI transaction limits in India as of June 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">UPI Limits You Need to Know (NPCI, June 2026)</text>
     {["Category", "Per Transaction", "Daily Limit"].map((h, i) => (
       <text key={i} x={[30, 300, 520][i]} y="50" fontSize="11" fontWeight="700" fill="var(--text-muted)">{h}</text>

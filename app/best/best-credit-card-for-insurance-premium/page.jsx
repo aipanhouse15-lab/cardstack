@@ -53,7 +53,7 @@ function ExcludedBadgeIcon() {
 function IncludedBadgeIcon() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Green checkmark indicating insurance earns rewards">
-      <circle cx="12" cy="12" r="11" fill="#f0fdf4" stroke="#22c55e" strokeWidth="1.5"/>
+      <circle cx="12" cy="12" r="11" fill="var(--green-dim)" stroke="#22c55e" strokeWidth="1.5"/>
       <path d="M7 12l3.5 3.5L17 8" stroke="#22c55e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
@@ -66,7 +66,7 @@ function YearlyVsMonthlyIcon() {
       <text x="13" y="18" textAnchor="middle" fontSize="7" fill={COLOR} fontWeight="700">Annual</text>
       <text x="13" y="28" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="800">1x</text>
       <text x="13" y="37" textAnchor="middle" fontSize="6" fill="var(--text-muted)">payment</text>
-      <rect x="32" y="2" width="22" height="40" rx="3" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5"/>
+      <rect x="32" y="2" width="22" height="40" rx="3" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
       <text x="43" y="16" textAnchor="middle" fontSize="7" fill="var(--text-muted)">Monthly</text>
       <text x="43" y="26" textAnchor="middle" fontSize="9" fill="var(--text-muted)" fontWeight="800">12x</text>
       <text x="43" y="37" textAnchor="middle" fontSize="6" fill="var(--text-muted)">payments</text>
@@ -352,7 +352,7 @@ export default function BestCreditCardForInsurancePremium() {
                 display: "flex",
                 gap: 14,
                 padding: "14px 16px",
-                background: "#fef2f2",
+                background: "var(--red-dim)",
                 border: "1px solid #fca5a5",
                 borderRadius: 8,
               }}
@@ -363,7 +363,7 @@ export default function BestCreditCardForInsurancePremium() {
               <div style={{ flex: 1 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8, marginBottom: 4 }}>
                   <div style={{ fontWeight: 700 }}>{card.name}</div>
-                  <div style={{ fontSize: 12, background: "#fef2f2", border: "1px solid #fca5a5", borderRadius: 12, padding: "2px 8px", color: "#dc2626" }}>
+                  <div style={{ fontSize: 12, background: "var(--red-dim)", border: "1px solid #fca5a5", borderRadius: 12, padding: "2px 8px", color: "#dc2626" }}>
                     Headline: {card.headline}
                   </div>
                 </div>
@@ -389,7 +389,7 @@ export default function BestCreditCardForInsurancePremium() {
                 border: card.best ? `2px solid ${COLOR}` : "1.5px solid var(--border)",
                 borderRadius: 10,
                 padding: "20px 22px",
-                background: card.best ? `${COLOR}07` : "var(--surface, #f8fafc)",
+                background: card.best ? `${COLOR}07` : "var(--raise)",
                 position: "relative",
               }}
             >
@@ -494,7 +494,7 @@ export default function BestCreditCardForInsurancePremium() {
               </div>
             ))}
           </div>
-          <div style={{ background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", borderRadius: 8, padding: "16px 18px" }}>
+          <div style={{ background: "var(--raise)", border: "1px solid var(--border)", borderRadius: 8, padding: "16px 18px" }}>
             <div style={{ fontWeight: 700, color: "var(--text-muted)", marginBottom: 10 }}>Monthly payment: often weaker</div>
             {[
               "12 x ₹4,166 = same total but scattered across cycles",
@@ -536,7 +536,7 @@ export default function BestCreditCardForInsurancePremium() {
                 ["SBI Cashback", "₹999", "0%", "₹0", "-₹999 (fee wasted)"],
                 ["Amazon Pay ICICI", "Free", "1%", "₹500", "+₹500 (net positive)"],
               ].map(([card, fee, rate, reward, net], i) => (
-                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--surface, #f8fafc)" }}>
+                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px", fontWeight: 600 }}>{card}</td>
                   <td style={{ padding: "10px 14px", color: "var(--text-muted)" }}>{fee}</td>
                   <td style={{ padding: "10px 14px" }}>{rate}</td>
@@ -582,7 +582,7 @@ export default function BestCreditCardForInsurancePremium() {
             <div
               key={item.type}
               style={{
-                background: "var(--surface, #f8fafc)",
+                background: "var(--raise)",
                 border: "1px solid var(--border)",
                 borderRadius: 8,
                 padding: "14px 16px",

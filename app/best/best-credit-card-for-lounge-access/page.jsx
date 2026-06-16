@@ -49,8 +49,8 @@ const IconTrophy = () => (
 const IconWarning = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Milestone trap warning">
     <path d="M12 3L22 20H2L12 3Z" fill="#fff7ed" stroke="#f97316" strokeWidth="1.8"/>
-    <rect x="11" y="9" width="2" height="6" rx="1" fill="#f97316"/>
-    <rect x="11" y="17" width="2" height="2" rx="1" fill="#f97316"/>
+    <rect x="11" y="9" width="2" height="6" rx="1" fill="var(--raise)"/>
+    <rect x="11" y="17" width="2" height="2" rx="1" fill="var(--raise)"/>
   </svg>
 );
 
@@ -78,7 +78,7 @@ const IconGlobe = () => (
 
 const IconCard = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Credit card indicator">
-    <rect x="2" y="6" width="24" height="16" rx="3" fill="var(--surface,#f8fafc)" stroke={COLOR} strokeWidth="1.8"/>
+    <rect x="2" y="6" width="24" height="16" rx="3" fill="var(--raise)" stroke={COLOR} strokeWidth="1.8"/>
     <rect x="2" y="11" width="24" height="4" fill={COLOR} opacity="0.15"/>
     <rect x="5" y="18" width="8" height="2" rx="1" fill={COLOR} opacity="0.4"/>
   </svg>
@@ -282,7 +282,7 @@ export default function BestCreditCardForLoungeAccess() {
         <div style={{ fontWeight: 700, fontSize: 15, color: COLOR, marginBottom: 12 }}>Quick Picks by Travel Frequency</div>
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {visitValueTable.map(({ profile, rec, note }, i) => (
-            <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "10px 12px", background: "var(--surface,#f8fafc)", borderRadius: 8 }}>
+            <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "10px 12px", background: "var(--raise)", borderRadius: 8 }}>
               <IconCheck />
               <div style={{ flex: 1 }}>
                 <span style={{ fontWeight: 600, fontSize: 14 }}>{profile}:</span>
@@ -306,7 +306,7 @@ export default function BestCreditCardForLoungeAccess() {
       </p>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 32 }}>
-        <div style={{ background: "var(--surface,#f8fafc)", border: "1px solid var(--border,#e2e8f0)", borderRadius: 10, padding: "16px 18px" }}>
+        <div style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 10, padding: "16px 18px" }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
             <IconCard />
             <strong style={{ color: COLOR, fontSize: 14 }}>DreamFolks (Domestic)</strong>
@@ -318,7 +318,7 @@ export default function BestCreditCardForLoungeAccess() {
             <li>Typical walk-in rate: ₹700-1,200</li>
           </ul>
         </div>
-        <div style={{ background: "var(--surface,#f8fafc)", border: "1px solid var(--border,#e2e8f0)", borderRadius: 10, padding: "16px 18px" }}>
+        <div style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 10, padding: "16px 18px" }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
             <IconGlobe />
             <strong style={{ color: COLOR, fontSize: 14 }}>Priority Pass (International)</strong>
@@ -335,7 +335,7 @@ export default function BestCreditCardForLoungeAccess() {
       {/* The milestone trap */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Milestone Trap: What Changed in 2025</h2>
 
-      <div style={{ background: "#fff7ed", border: "1.5px solid #f97316", borderRadius: 12, padding: "16px 18px", marginBottom: 16, display: "flex", gap: 12, alignItems: "flex-start" }}>
+      <div style={{ background: "rgba(212,168,83,.06)", border: "1.5px solid #f97316", borderRadius: 12, padding: "16px 18px", marginBottom: 16, display: "flex", gap: 12, alignItems: "flex-start" }}>
         <IconWarning />
         <div>
           <strong style={{ fontSize: 14, color: "#c2410c" }}>June 2025 shift: Most mid-range cards now gate lounge access behind quarterly spend milestones.</strong>
@@ -359,7 +359,7 @@ export default function BestCreditCardForLoungeAccess() {
 
       <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
         {cards.map((card) => (
-          <div key={card.rank} style={{ border: `2px solid ${card.rank === 1 ? COLOR : "var(--border,#e2e8f0)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${COLOR}06` : "transparent" }}>
+          <div key={card.rank} style={{ border: `2px solid ${card.rank === 1 ? COLOR : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${COLOR}06` : "transparent" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 {card.rank === 1 && <IconTrophy />}
@@ -395,10 +395,10 @@ export default function BestCreditCardForLoungeAccess() {
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
           <thead>
             <tr style={{ background: `${COLOR}12` }}>
-              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Annual Lounge Visits</th>
-              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Value @ ₹1,000/visit</th>
-              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Net Gain (Regalia ₹2,500)</th>
-              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Net Gain (Infinia ₹12,500)</th>
+              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Annual Lounge Visits</th>
+              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Value @ ₹1,000/visit</th>
+              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Net Gain (Regalia ₹2,500)</th>
+              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Net Gain (Infinia ₹12,500)</th>
             </tr>
           </thead>
           <tbody>
@@ -409,7 +409,7 @@ export default function BestCreditCardForLoungeAccess() {
               ["30 visits", "₹30,000", "Overage charges apply", "+₹17,500"],
               ["50+ visits", "₹50,000+", "Overage charges apply", "+₹37,500+"]
             ].map(([visits, val, regalia, infinia], i) => (
-              <tr key={i} style={{ borderBottom: "1px solid var(--border,#e2e8f0)", background: i % 2 === 0 ? "transparent" : "var(--surface,#f8fafc)" }}>
+              <tr key={i} style={{ borderBottom: "1px solid var(--border,var(--hair))", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                 <td style={{ padding: "10px 14px" }}>{visits}</td>
                 <td style={{ padding: "10px 14px", textAlign: "right" }}>{val}</td>
                 <td style={{ padding: "10px 14px", textAlign: "right", color: regalia.includes("+") ? "#16a34a" : "#dc2626", fontWeight: 600 }}>{regalia}</td>
@@ -453,7 +453,7 @@ export default function BestCreditCardForLoungeAccess() {
           { step: "Arrive at least 2 hours before departure. Lounges sometimes hit capacity during peak hours (6am-9am, 5pm-8pm at major airports). Priority access is not guaranteed.",
             icon: "4" }
         ].map(({ step, icon }, i) => (
-          <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "14px 16px", background: "var(--surface,#f8fafc)", borderRadius: 10, border: "1px solid var(--border,#e2e8f0)" }}>
+          <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "14px 16px", background: "var(--raise)", borderRadius: 10, border: "1px solid var(--border,var(--hair))" }}>
             <div style={{ background: COLOR, color: "#fff", borderRadius: "50%", width: 26, height: 26, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 700, flexShrink: 0, marginTop: 1 }}>{icon}</div>
             <span style={{ fontSize: 14, color: "var(--text-muted,#475569)" }}>{step}</span>
           </div>
@@ -470,10 +470,10 @@ export default function BestCreditCardForLoungeAccess() {
           Lounge access is only one part of the travel credit card equation. Miles earning, forex markup, and hotel status matter just as much for frequent flyers.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-          <Link href="/cards/hdfc-infinia" style={{ display: "block", padding: "12px 14px", background: "var(--surface,#f8fafc)", borderRadius: 8, textDecoration: "none", color: COLOR, fontWeight: 600, fontSize: 13 }}>HDFC Infinia Full Review</Link>
-          <Link href="/cards/axis-magnus" style={{ display: "block", padding: "12px 14px", background: "var(--surface,#f8fafc)", borderRadius: 8, textDecoration: "none", color: COLOR, fontWeight: 600, fontSize: 13 }}>Axis Magnus Full Review</Link>
-          <Link href="/best/credit-card-with-no-forex-markup" style={{ display: "block", padding: "12px 14px", background: "var(--surface,#f8fafc)", borderRadius: 8, textDecoration: "none", color: COLOR, fontWeight: 600, fontSize: 13 }}>Zero Forex Cards Guide</Link>
-          <Link href="/blog/priority-pass-india-guide" style={{ display: "block", padding: "12px 14px", background: "var(--surface,#f8fafc)", borderRadius: 8, textDecoration: "none", color: COLOR, fontWeight: 600, fontSize: 13 }}>Priority Pass Complete Guide</Link>
+          <Link href="/cards/hdfc-infinia" style={{ display: "block", padding: "12px 14px", background: "var(--raise)", borderRadius: 8, textDecoration: "none", color: COLOR, fontWeight: 600, fontSize: 13 }}>HDFC Infinia Full Review</Link>
+          <Link href="/cards/axis-magnus" style={{ display: "block", padding: "12px 14px", background: "var(--raise)", borderRadius: 8, textDecoration: "none", color: COLOR, fontWeight: 600, fontSize: 13 }}>Axis Magnus Full Review</Link>
+          <Link href="/best/credit-card-with-no-forex-markup" style={{ display: "block", padding: "12px 14px", background: "var(--raise)", borderRadius: 8, textDecoration: "none", color: COLOR, fontWeight: 600, fontSize: 13 }}>Zero Forex Cards Guide</Link>
+          <Link href="/blog/priority-pass-india-guide" style={{ display: "block", padding: "12px 14px", background: "var(--raise)", borderRadius: 8, textDecoration: "none", color: COLOR, fontWeight: 600, fontSize: 13 }}>Priority Pass Complete Guide</Link>
         </div>
       </div>
 
@@ -481,7 +481,7 @@ export default function BestCreditCardForLoungeAccess() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20 }}>Frequently Asked Questions</h2>
       <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 44 }}>
         {faq.mainEntity.map((item, i) => (
-          <details key={i} style={{ border: "1px solid var(--border,#e2e8f0)", borderRadius: 10 }}>
+          <details key={i} style={{ border: "1px solid var(--border,var(--hair))", borderRadius: 10 }}>
             <summary style={{ padding: "14px 18px", fontWeight: 600, fontSize: 15, cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               {item.name}
               <span style={{ color: COLOR, fontSize: 18, flexShrink: 0, marginLeft: 12 }}>+</span>
@@ -493,7 +493,7 @@ export default function BestCreditCardForLoungeAccess() {
         ))}
       </div>
 
-      <footer style={{ borderTop: "1px solid var(--border,#e2e8f0)", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border,var(--hair))", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
         <p style={{ margin: "0 0 6px" }}>
           <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Lounge access benefits, visit caps, and spend conditions change frequently. Verify all details on the official bank website or call the card helpline before travelling.
         </p>

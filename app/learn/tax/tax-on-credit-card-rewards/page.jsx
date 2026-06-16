@@ -41,7 +41,7 @@ const SvgTaxabilityFlowchart = () => (
     <text x="160" y="153" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Cash reward / voucher as prize</text>
     <rect x="0" y="160" width="120" height="36" fill={COLOR} rx="8" opacity="0.85" />
     <text x="60" y="182" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#fff">NOT TAXABLE</text>
-    <rect x="140" y="160" width="180" height="36" fill="#f59e0b" rx="8" opacity="0.85" />
+    <rect x="140" y="160" width="180" height="36" fill="var(--raise)" rx="8" opacity="0.85" />
     <text x="230" y="178" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#fff">ABOVE ₹50K?</text>
     <path d="M 140 178 L 80 220" stroke="var(--border)" strokeWidth="2" />
     <path d="M 320 178 L 380 220" stroke="var(--border)" strokeWidth="2" />
@@ -73,7 +73,7 @@ const SvgRewardTypeMatrix = () => (
       ["High-value redemption (business class)", "GREY AREA", "Points as currency — complex treatment", "Moderate"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={59 + ri * 24} width={700} height="22" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={59 + ri * 24} width={700} height="22" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 210, 330, 600];
           const isGood = cell === "NOT TAXABLE" || cell === "Low";
@@ -98,7 +98,7 @@ const SvgHighValueRedemption = () => (
       { scenario: "Reward points transferred/sold to another person", risk: "VERY HIGH", reason: "Points monetization = taxable income. Most card T&Cs prohibit this too.", color: "#7f1d1d" },
     ].map(({ scenario, risk, reason, color }, i) => (
       <g key={scenario}>
-        <rect x="20" y={38 + i * 30} width={700} height="24" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={38 + i * 30} width={700} height="24" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={54 + i * 30} fontFamily="system-ui" fontSize="10" fill="var(--text)">{scenario}</text>
         <rect x="430" y={40 + i * 30} width="60" height="20" fill={color} rx="3" />
         <text x="460" y={54 + i * 30} textAnchor="middle" fontFamily="system-ui" fontSize="9" fontWeight="700" fill="#fff">{risk}</text>
@@ -129,7 +129,7 @@ const SvgPracticalAdvice = () => (
 const SvgBusinessCardTax = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Business credit card reward tax treatment showing that rewards on company expenses belong to the company not the employee and must be declared as business income or employee perquisite" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">BUSINESS CARD REWARDS: THE TAX TREATMENT MOST CORPORATES IGNORE</text>
-    <rect x="20" y="38" width="680" height="120" fill="#fef2f2" stroke="#dc2626" strokeWidth="1" rx="8" />
+    <rect x="20" y="38" width="680" height="120" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="8" />
     <text x="30" y="60" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#dc2626">Situation: Employee uses company credit card for business expenses, accumulates 2L reward points, redeems for personal travel.</text>
     <text x="30" y="82" fontFamily="system-ui" fontSize="12" fill="var(--text)">Tax position: Points accumulated on company spending are technically the company's assets. When an employee personally redeems them, it's a perquisite — taxable as salary.</text>
     <text x="30" y="100" fontFamily="system-ui" fontSize="12" fill="var(--text)">How it's actually handled: Almost no Indian company tracks this. Card companies don't issue Form 26AS or TDS certificates for reward redemptions.</text>

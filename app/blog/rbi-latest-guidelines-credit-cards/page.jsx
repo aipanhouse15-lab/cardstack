@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgRegulatoryTimeline = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Timeline of major RBI credit card regulatory changes 2021 to 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">RBI Credit Card Regulations: Key Milestones</text>
     <line x1="40" y1="60" x2="680" y2="60" stroke="var(--border)" strokeWidth="2" />
     {[
@@ -46,7 +46,7 @@ const SvgRegulatoryTimeline = () => (
 
 const SvgInterestFreePeriod = () => (
   <svg viewBox="0 0 720 170" role="img" aria-label="RBI mandated minimum 14 day interest free period from credit card statement date" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="170" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="170" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 1: Minimum 14-Day Interest-Free Period</text>
     <rect x="24" y="42" width="120" height="100" rx="6" fill="var(--border)" opacity="0.3" />
     <text x="84" y="78" textAnchor="middle" fontSize="10" fontWeight="700" fill="var(--text)">Statement</text>
@@ -65,7 +65,7 @@ const SvgInterestFreePeriod = () => (
 
 const SvgCardClosureRule = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="RBI one click card closure rule requiring banks to close cards within 7 working days" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 2: Card Closure Within 7 Working Days</text>
     {[
       { step: "1", label: "You request closure (app, phone, or branch)", highlight: false },
@@ -85,7 +85,7 @@ const SvgCardClosureRule = () => (
 
 const SvgTokenisation = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="How RBI card tokenisation works and what it means for credit card holders" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 3: Card Tokenisation (What Actually Changed)</text>
     <rect x="24" y="44" width="200" height="110" rx="8" fill="var(--border)" opacity="0.25" />
     <text x="124" y="70" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">Before Tokenisation</text>
@@ -109,7 +109,7 @@ const SvgTokenisation = () => (
 
 const SvgEmiAprTrap = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="No cost EMI true interest rate revealed through processing fee RBI disclosure rules" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 6: No-Cost EMI Effective APR Disclosure</text>
     <text x="24" y="50" fontSize="12" fill="var(--text-muted)">Example: &#8377;60,000 laptop on "0% EMI" for 12 months</text>
     <rect x="24" y="62" width="320" height="100" rx="6" fill="var(--border)" opacity="0.2" />
@@ -128,7 +128,7 @@ const SvgEmiAprTrap = () => (
 
 const SvgMDRUpi = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Why UPI has no rewards but credit cards do - MDR cap impact on reward economics" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 4: MDR Cap and Why Credit Card Rewards Exist</text>
     <rect x="24" y="42" width="310" height="96" rx="6" fill="var(--border)" opacity="0.25" />
     <text x="179" y="65" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">UPI</text>
@@ -146,7 +146,7 @@ const SvgMDRUpi = () => (
 
 const SvgGrievanceEscalation = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="RBI credit card grievance redressal escalation path from bank to ombudsman" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 7: Grievance Escalation Path (Know This)</text>
     {[
       { step: "Step 1", label: "Lodge complaint with bank's credit card grievance team", days: "Day 1-15" },
@@ -167,9 +167,9 @@ const SvgGrievanceEscalation = () => (
 
 const SvgActivationRule = () => (
   <svg viewBox="0 0 720 140" role="img" aria-label="RBI rule that credit cards cannot be auto-activated and must require customer action" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="140" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="140" fill="var(--raise)" rx="10" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Rule 5: No Auto-Activation of Credit Cards</text>
-    <rect x="24" y="44" width="320" height="76" rx="6" fill="#ef4444" opacity="0.07" />
+    <rect x="24" y="44" width="320" height="76" rx="6" fill="var(--raise)" opacity="0.07" />
     <text x="184" y="67" textAnchor="middle" fontSize="11" fontWeight="600" fill="#ef4444">Old Practice (Pre-RBI Circular)</text>
     <text x="184" y="87" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Card delivered, auto-activated</text>
     <text x="184" y="105" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Annual fee charged on arrival date</text>

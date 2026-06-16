@@ -31,7 +31,7 @@ function AxisACEReturnCalculator() {
       aria-label="Chart showing annual return on Axis ACE credit card at different spending levels"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="260" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="260" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Axis ACE Annual Net Return vs ₹499 Annual Fee</text>
       {/* Y-axis */}
       {[0, 5000, 10000, 15000, 20000].map((v, i) => (
@@ -75,7 +75,7 @@ function FeeWaiverMathDiagram() {
       aria-label="Diagram explaining Axis ACE fee waiver condition and monthly spend required"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="180" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="180" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Axis ACE Fee Waiver: Easier Than You Think</text>
       <rect x="20" y="42" width="196" height="100" rx="10" fill={COLOR} opacity="0.08" stroke={COLOR} strokeWidth="1.5" />
       <text x="118" y="64" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Annual Fee</text>
@@ -83,7 +83,7 @@ function FeeWaiverMathDiagram() {
       <text x="118" y="104" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Charged every card year</text>
       <text x="118" y="120" textAnchor="middle" fontSize="11" fill="var(--text-muted)">unless waiver condition met</text>
       <text x="230" y="95" fontSize="22" fill="var(--text-muted)" textAnchor="middle">→</text>
-      <rect x="245" y="42" width="196" height="100" rx="10" fill="#f59e0b" opacity="0.08" stroke="#f59e0b" strokeWidth="1.5" />
+      <rect x="245" y="42" width="196" height="100" rx="10" fill="var(--raise)" opacity="0.08" stroke="#f59e0b" strokeWidth="1.5" />
       <text x="343" y="64" textAnchor="middle" fontSize="12" fontWeight="700" fill="#f59e0b">Waiver Condition</text>
       <text x="343" y="84" textAnchor="middle" fontSize="20" fontWeight="800" fill="#f59e0b">₹2,00,000</text>
       <text x="343" y="104" textAnchor="middle" fontSize="11" fill="var(--text-muted)">annual spend on the card</text>
@@ -116,7 +116,7 @@ function Under500CardsComparison() {
       aria-label="Comparison table of all major Indian credit cards under Rs 500 annual fee"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="300" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="300" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">All Cards Under ₹500 Annual Fee (June 2026)</text>
       {["Card", "Fee", "Top Rate", "Best Category", "Verdict"].map((h, i) => (
         <text key={h} x={[20, 175, 235, 315, 510][i]} y="48" fontSize="10.5" fontWeight="700" fill="var(--text)">{h}</text>
@@ -146,7 +146,7 @@ function ACECategoriesBreakdown() {
       aria-label="Breakdown of Axis ACE cashback rates by spending category"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="200" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Axis ACE Cashback Rates by Category (June 2026)</text>
       {[
         { label: "Utility Bills (via Google Pay/BBPS)", rate: 5, color: COLOR },
@@ -177,7 +177,7 @@ function RBLShopRiteGroceryMath() {
       aria-label="Annual cashback calculation for RBL ShopRite card based on grocery spending"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="170" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="170" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">RBL ShopRite: 5% Grocery Math (₹500/yr fee)</text>
       {[
         { spend: "₹5,000/mo grocery", cashback: "₹250/mo", annual: "₹3,000/yr", net: "₹2,500 (after ₹500 fee)" },
@@ -429,7 +429,7 @@ export default function BestCreditCardUnder500AnnualFee() {
               display: "flex",
               gap: 18,
               alignItems: "flex-start",
-              background: card.rank === "1" ? COLOR + "06" : "var(--surface, #f8fafc)",
+              background: card.rank === "1" ? COLOR + "06" : "var(--raise)",
             }}
           >
             <div

@@ -441,7 +441,7 @@ export default function OldVsNewClient() {
       <div className="my-10 rounded-2xl p-6 text-center" style={{ background: "linear-gradient(135deg, #052E16, #166534)", border: "1px solid rgba(74,222,128,0.15)" }}>
         <div className="text-xl font-extrabold mb-2" style={{ color: "#F1F5F9" }}>Don't guess. Calculate.</div>
         <p className="text-sm mb-5" style={{ color: "rgba(255,255,255,0.4)" }}>Enter your salary and deductions. Get the exact tax under both regimes in 30 seconds.</p>
-        <Link href="/tax-calculator" className="inline-block rounded-xl px-8 py-3 text-base font-bold no-underline" style={{ background: "#fff", color: "#111" }}>
+        <Link href="/tax-calculator" className="inline-block rounded-xl px-8 py-3 text-base font-bold no-underline" style={{ background: "var(--raise)", color: "#111" }}>
           Try Tax Regime Calculator →
         </Link>
         <div className="text-xs mt-3" style={{ color: "rgba(255,255,255,0.25)" }}>Free · No sign-up · Uses Budget 2025 slabs</div>

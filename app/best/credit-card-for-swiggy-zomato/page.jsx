@@ -34,7 +34,7 @@ function CapMathChart() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Monthly cashback earned on food delivery at different spend levels across three cards"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)" }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)" }}
     >
       <text x="340" y="28" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Monthly Cashback: Cap Math Visualised</text>
       {data.map((d, i) => {
@@ -74,7 +74,7 @@ function StackPlayDiagram() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Decision flowchart: HDFC Swiggy card for Swiggy orders, Axis ACE for Zomato overflow"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="28" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">The Two-Card Stack Play</text>
       <rect x="20" y="50" width="200" height="60" fill={COLOR} rx="8" />
@@ -103,7 +103,7 @@ function EffectiveRateGrid() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Effective annual return comparison table for food delivery cards"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="26" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Effective Annual Return (After Fees and Caps)</text>
       {[
@@ -117,7 +117,7 @@ function EffectiveRateGrid() {
         <g key={ri}>
           {row.map((cell, ci) => (
             <g key={ci}>
-              <rect x={10 + ci * 132} y={38 + ri * 36} width={130} height={34} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "var(--surface, #f8fafc)" : "#fff"} rx="2" />
+              <rect x={10 + ci * 132} y={38 + ri * 36} width={130} height={34} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "var(--raise)" : "#fff"} rx="2" />
               <text
                 x={75 + ci * 132}
                 y={58 + ri * 36}
@@ -143,22 +143,22 @@ function MCCInfoDiagram() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="MCC code illustration showing how banks categorise Swiggy and Zomato transactions"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="26" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">How MCC Codes Affect Your Reward</text>
-      <rect x="20" y="44" width="190" height="110" fill="#fff" stroke="var(--border)" rx="8" />
+      <rect x="20" y="44" width="190" height="110" fill="var(--raise)" stroke="var(--border)" rx="8" />
       <text x="115" y="65" textAnchor="middle" fill="var(--text)" fontSize="12" fontWeight="600">You pay ₹500 on Swiggy</text>
       <text x="115" y="83" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Payment goes to bank</text>
       <text x="115" y="101" textAnchor="middle" fill="var(--text-muted)" fontSize="11">MCC: 5812 (Restaurants)</text>
       <text x="115" y="119" textAnchor="middle" fill="var(--text-muted)" fontSize="11">or 7372 (Software)</text>
       <text x="115" y="137" textAnchor="middle" fill={COLOR} fontSize="11" fontWeight="600">Card rule fires on MCC</text>
-      <rect x="250" y="44" width="190" height="110" fill="#fff" stroke="var(--border)" rx="8" />
+      <rect x="250" y="44" width="190" height="110" fill="var(--raise)" stroke="var(--border)" rx="8" />
       <text x="345" y="65" textAnchor="middle" fill="var(--text)" fontSize="12" fontWeight="600">HDFC Swiggy Card</text>
       <text x="345" y="83" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Has Swiggy merchant deal</text>
       <text x="345" y="101" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Recognises Swiggy MID</text>
       <text x="345" y="119" textAnchor="middle" fill="#10b981" fontSize="11" fontWeight="600">10% fires correctly</text>
       <text x="345" y="137" textAnchor="middle" fill="var(--text-muted)" fontSize="10">MCC alone not enough</text>
-      <rect x="480" y="44" width="190" height="110" fill="#fff" stroke="var(--border)" rx="8" />
+      <rect x="480" y="44" width="190" height="110" fill="var(--raise)" stroke="var(--border)" rx="8" />
       <text x="575" y="65" textAnchor="middle" fill="var(--text)" fontSize="12" fontWeight="600">Axis ACE via UPI App</text>
       <text x="575" y="83" textAnchor="middle" fill="var(--text-muted)" fontSize="11">UPI transaction routed</text>
       <text x="575" y="101" textAnchor="middle" fill="var(--text-muted)" fontSize="11">via GPAY/PhonePe</text>
@@ -175,9 +175,9 @@ function AirtelDevaluationAlert() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Alert: Axis Airtel card devalued in April 2026, dining and grocery removed from 10 percent category"
-      style={{ width: "100%", borderRadius: 10, background: "#fef2f2", border: "1px solid #fca5a5", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--red-dim)", border: "1px solid #fca5a5", marginTop: 8 }}
     >
-      <rect x="0" y="0" width="680" height="120" fill="#fef2f2" rx="10" />
+      <rect x="0" y="0" width="680" height="120" fill="var(--raise)" rx="10" />
       <text x="340" y="28" textAnchor="middle" fill="#dc2626" fontSize="14" fontWeight="700">Axis Airtel Card: April 2026 Devaluation Alert</text>
       <text x="340" y="52" textAnchor="middle" fill="#991b1b" fontSize="12">Previously: 10% on dining including Swiggy, Zomato</text>
       <text x="340" y="70" textAnchor="middle" fill="#991b1b" fontSize="12">After April 2026: Dining and grocery removed from 10% tier</text>
@@ -194,7 +194,7 @@ function SpendScenarioGrid() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Spend scenario grid: which card wins at different food delivery budget levels"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Which Card Wins at Your Spend Level?</text>
       {[
@@ -206,7 +206,7 @@ function SpendScenarioGrid() {
       ].map((row, ri) => (
         <g key={ri}>
           {row.map((cell, ci) => (
-            <rect key={ci + "bg"} x={10 + ci * 165} y={36 + ri * 30} width={163} height={28} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "#fff" : "var(--surface, #f8fafc)"} rx="2" />
+            <rect key={ci + "bg"} x={10 + ci * 165} y={36 + ri * 30} width={163} height={28} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "#fff" : "var(--raise)"} rx="2" />
           ))}
           {row.map((cell, ci) => (
             <text key={ci} x={91 + ci * 165} y={54 + ri * 30} textAnchor="middle" fill={ri === 0 ? "#fff" : "var(--text)"} fontSize="10" fontWeight={ri === 0 || ci === 0 ? "700" : "400"}>{cell}</text>
@@ -356,7 +356,7 @@ export default function BestCreditCardForSwiggyZomato() {
             caveat: "Higher fee. Only worth it if dining spend is consistently high."
           },
         ].map(card => (
-          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "#fff" }}>
+          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "var(--raise)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 8 }}>
               <div>
                 <span style={{ background: COLOR + "22", color: COLOR, fontSize: 11, fontWeight: 700, padding: "2px 8px", borderRadius: 4, marginRight: 8 }}>{card.badge}</span>
@@ -427,7 +427,7 @@ export default function BestCreditCardForSwiggyZomato() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 40, background: "var(--surface, #f8fafc)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
+      <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
         <p>If you order only from Swiggy and spend ₹8,000-15,000 a month, the HDFC Swiggy Card earns the most cashback of any card available. Full stop. The 10% rate with a ₹1,500 monthly cap is genuinely one of the best category rewards in Indian credit cards right now.</p>
         <p>If you use both apps or want one card to cover food delivery plus other online spending, HDFC Millennia is the most practical choice. The 5% on both Swiggy and Zomato, combined with coverage for Amazon, Flipkart, and BigBasket, makes it an extremely versatile ₹1,000/year card.</p>

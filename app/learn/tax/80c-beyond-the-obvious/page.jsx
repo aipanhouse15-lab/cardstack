@@ -39,7 +39,7 @@ const SvgDeductionsMap = () => (
       { item: "NPS Tier-I (up to 80CCD(1))", max: "10% of salary", color: "#7c3aed", group: "Invest" },
     ].map(({ item, max, color }, i) => (
       <g key={item}>
-        <rect x="20" y={38 + i * 23} width={700} height="20" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={38 + i * 23} width={700} height="20" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <rect x="20" y={38 + i * 23} width="8" height="20" fill={color} />
         <text x="35" y={53 + i * 23} fontFamily="system-ui" fontSize="11" fill="var(--text)">{item}</text>
         <text x="630" y={53 + i * 23} fontFamily="system-ui" fontSize="11" fontWeight="600" fill={color}>{max}</text>
@@ -59,7 +59,7 @@ const SvgMostMissed = () => (
       { item: "Sukanya Samriddhi (daughters below 10)", detail: "8.2% interest, EEE tax, sovereign backed. Better than PPF for girl child savings.", savings30pct: "₹45,000 on ₹1.5L", missed: "Moderate" },
     ].map(({ item, detail, savings30pct, missed }, i) => (
       <g key={item}>
-        <rect x="20" y={38 + i * 44} width={700} height="36" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} rx="2" />
+        <rect x="20" y={38 + i * 44} width={700} height="36" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} rx="2" />
         <text x="26" y={55 + i * 44} fontFamily="system-ui" fontSize="12" fontWeight="700" fill={COLOR}>{item}</text>
         <text x="26" y={70 + i * 44} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{detail.slice(0, 80)}</text>
         <text x="580" y={55 + i * 44} fontFamily="system-ui" fontSize="11" fontWeight="700" fill={COLOR}>Saves: {savings30pct}</text>

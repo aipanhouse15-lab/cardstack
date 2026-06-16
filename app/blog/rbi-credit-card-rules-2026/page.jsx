@@ -41,14 +41,14 @@ const SvgGrievance = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="RBI grievance escalation flowchart from bank customer care through nodal officer to RBI Ombudsman" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">GRIEVANCE ESCALATION · TIMELINE FROM ISSUE RAISE TO RESOLUTION</text>
 
-    <rect x="40" y="60" width="180" height="60" fill="#ede9fe" stroke={COLOR} />
+    <rect x="40" y="60" width="180" height="60" fill="var(--raise)" stroke={COLOR} />
     <text x="130" y="85" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>Step 1</text>
     <text x="130" y="105" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Bank customer care</text>
     <text x="130" y="138" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">Raise complaint · 30-day window</text>
 
     <line x1="220" y1="90" x2="270" y2="90" stroke={COLOR} strokeWidth="2" markerEnd="url(#arr)" />
 
-    <rect x="270" y="60" width="180" height="60" fill="#ede9fe" stroke={COLOR} />
+    <rect x="270" y="60" width="180" height="60" fill="var(--raise)" stroke={COLOR} />
     <text x="360" y="85" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>Step 2</text>
     <text x="360" y="105" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Bank nodal officer</text>
     <text x="360" y="138" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">If no resolution in 30 days</text>

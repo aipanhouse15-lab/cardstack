@@ -60,7 +60,7 @@ const SvgInfiniaVsMagnus = () => (
       ["Invite required", "Yes (generally)", "No (apply directly)"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={52 + ri * 22} width={700} height="20" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={52 + ri * 22} width={700} height="20" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 250, 490];
           const isGoodCol2 = ci === 1 && (cell.includes("Unlimited") || cell.includes("3.3%"));
@@ -83,7 +83,7 @@ const SvgSpendProfile = () => (
       { profile: "HNI with varied high spend", winner: "Amex Platinum", why: "Hotel status, Taj/ITC benefits, concierge — best non-points-math value", col: "#e11d48" },
     ].map(({ profile, winner, why, col }, i) => (
       <g key={profile}>
-        <rect x="20" y={35 + i * 34} width={700} height="26" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={35 + i * 34} width={700} height="26" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={52 + i * 34} fontFamily="system-ui" fontSize="11" fill="var(--text)">{profile}</text>
         <rect x="330" y={37 + i * 34} width="120" height="22" fill={col} rx="4" />
         <text x="390" y={52 + i * 34} textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#fff">{winner}</text>
@@ -123,7 +123,7 @@ const SvgLoungeComparison = () => (
       { card: "HDFC Diners Black", domestic: "Unlimited", intl: "6 Priority Pass/yr", guest: "No guest", col: "#f59e0b" },
     ].map(({ card, domestic, intl, guest, col }, i) => (
       <g key={card}>
-        <rect x="20" y={35 + i * 28} width={700} height="22" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={35 + i * 28} width={700} height="22" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={50 + i * 28} fontFamily="system-ui" fontSize="11" fontWeight="600" fill={col}>{card}</text>
         <text x="200" y={50 + i * 28} fontFamily="system-ui" fontSize="10" fill="var(--text)">Domestic: {domestic}</text>
         <text x="380" y={50 + i * 28} fontFamily="system-ui" fontSize="10" fill="var(--text)">Intl: {intl}</text>

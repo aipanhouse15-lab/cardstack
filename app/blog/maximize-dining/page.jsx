@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgDiningRates = () => (
   <svg viewBox="0 0 720 320" role="img" aria-label="Bar chart comparing dining reward rates across 5 credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="320" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="320" fill="var(--raise)" rx="10" />
     <text x="360" y="30" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Effective Dining Reward Rate (per ₹100 spent)</text>
     {/* Bars */}
     <rect x="60" y="80" width="80" height="140" fill={COLOR} rx="4" />
@@ -31,7 +31,7 @@ const SvgDiningRates = () => (
     <text x="100" y="240" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Axis Ace</text>
     <text x="100" y="254" textAnchor="middle" fontSize="10" fill="var(--text-muted)">(Swiggy/Zomato)</text>
 
-    <rect x="180" y="40" width="80" height="180" fill="#ef4444" rx="4" />
+    <rect x="180" y="40" width="80" height="180" fill="var(--raise)" rx="4" />
     <text x="220" y="33" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">10X pts</text>
     <text x="220" y="240" textAnchor="middle" fontSize="11" fill="var(--text-muted)">HDFC Diners</text>
     <text x="220" y="254" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Black (Swiggy)</text>
@@ -59,7 +59,7 @@ const SvgDiningRates = () => (
 
 const SvgMonthlyEarningsTable = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Table showing monthly dining earnings on ₹8000 spend across 5 cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="280" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="280" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">₹8,000/month dining spend: What you actually earn</text>
     {/* Header row */}
     <rect x="20" y="40" width="680" height="36" fill={COLOR} rx="4" />
@@ -76,7 +76,7 @@ const SvgMonthlyEarningsTable = () => (
       ["Standard card", "1% dining", "Varies", "₹80"],
     ].map(([card, rate, cap, earn], i) => (
       <g key={i}>
-        <rect x="20" y={80 + i * 36} width="680" height="36" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "white"} />
+        <rect x="20" y={80 + i * 36} width="680" height="36" fill={i % 2 === 0 ? "var(--raise)" : "white"} />
         <text x="100" y={103 + i * 36} textAnchor="middle" fontSize="11" fill="var(--text)">{card}</text>
         <text x="280" y={103 + i * 36} textAnchor="middle" fontSize="11" fill="var(--text)">{rate}</text>
         <text x="440" y={103 + i * 36} textAnchor="middle" fontSize="11" fill="var(--text-muted)">{cap}</text>
@@ -89,7 +89,7 @@ const SvgMonthlyEarningsTable = () => (
 
 const SvgZomatoSwiggyTable = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Comparison table of which cards reward Zomato vs Swiggy vs both" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Zomato vs Swiggy: Which Card Covers Which App?</text>
     <rect x="20" y="40" width="680" height="36" fill="#1e293b" rx="4" />
     <text x="160" y="63" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Card</text>
@@ -103,7 +103,7 @@ const SvgZomatoSwiggyTable = () => (
       ["SBI SimplySAVE", "2X (dining)", "2X (dining)", "10X pts"],
     ].map(([card, zomato, swiggy, offline], i) => (
       <g key={i}>
-        <rect x="20" y={80 + i * 38} width="680" height="38" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "white"} />
+        <rect x="20" y={80 + i * 38} width="680" height="38" fill={i % 2 === 0 ? "var(--raise)" : "white"} />
         <text x="160" y={104 + i * 38} textAnchor="middle" fontSize="11" fontWeight="600" fill="var(--text)">{card}</text>
         <text x="340" y={104 + i * 38} textAnchor="middle" fontSize="11" fill="var(--text)">{zomato}</text>
         <text x="490" y={104 + i * 38} textAnchor="middle" fontSize="11" fill="var(--text)">{swiggy}</text>
@@ -115,7 +115,7 @@ const SvgZomatoSwiggyTable = () => (
 
 const SvgDiningScenarioFlowchart = () => (
   <svg viewBox="0 0 720 380" role="img" aria-label="Flowchart to pick the right dining card based on scenario" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="380" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="380" fill="var(--raise)" rx="10" />
     <text x="360" y="30" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Which Card for Which Dining Scenario?</text>
     {/* Start node */}
     <rect x="280" y="45" width="160" height="40" rx="20" fill={COLOR} />
@@ -123,13 +123,13 @@ const SvgDiningScenarioFlowchart = () => (
     {/* Arrow down */}
     <line x1="360" y1="85" x2="360" y2="110" stroke="var(--border)" strokeWidth="2" markerEnd="url(#arrow1)" />
     {/* Diamond */}
-    <polygon points="360,110 430,145 360,180 290,145" fill="#e2e8f0" stroke="var(--border)" strokeWidth="1" />
+    <polygon points="360,110 430,145 360,180 290,145" fill="var(--hair)" stroke="var(--border)" strokeWidth="1" />
     <text x="360" y="148" textAnchor="middle" fontSize="11" fill="var(--text)">Online delivery?</text>
     {/* Yes branch left */}
     <line x1="290" y1="145" x2="160" y2="145" stroke="var(--border)" strokeWidth="2" />
     <line x1="160" y1="145" x2="160" y2="200" stroke="var(--border)" strokeWidth="2" />
     <text x="220" y="138" textAnchor="middle" fontSize="10" fill={COLOR} fontWeight="700">Yes</text>
-    <rect x="80" y="200" width="160" height="50" rx="8" fill="#fef3c7" stroke={COLOR} strokeWidth="1.5" />
+    <rect x="80" y="200" width="160" height="50" rx="8" fill="var(--raise)" stroke={COLOR} strokeWidth="1.5" />
     <text x="160" y="221" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">Axis Ace (both apps)</text>
     <text x="160" y="238" textAnchor="middle" fontSize="10" fill="var(--text-muted)">or HDFC Diners Black</text>
     <text x="160" y="253" textAnchor="middle" fontSize="10" fill="var(--text-muted)">for Swiggy only</text>
@@ -137,12 +137,12 @@ const SvgDiningScenarioFlowchart = () => (
     <line x1="430" y1="145" x2="560" y2="145" stroke="var(--border)" strokeWidth="2" />
     <line x1="560" y1="145" x2="560" y2="200" stroke="var(--border)" strokeWidth="2" />
     <text x="490" y="138" textAnchor="middle" fontSize="10" fill="#16a34a" fontWeight="700">No, offline</text>
-    <rect x="480" y="200" width="160" height="50" rx="8" fill="#f0fdf4" stroke="#16a34a" strokeWidth="1.5" />
+    <rect x="480" y="200" width="160" height="50" rx="8" fill="var(--raise)" stroke="#16a34a" strokeWidth="1.5" />
     <text x="560" y="221" textAnchor="middle" fontSize="11" fontWeight="700" fill="var(--text)">Check UPI category</text>
     <text x="560" y="238" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Some cards classify</text>
     <text x="560" y="253" textAnchor="middle" fontSize="10" fill="var(--text-muted)">UPI pay as utility</text>
     {/* Bottom advice */}
-    <rect x="120" y="290" width="480" height="56" rx="8" fill="white" stroke="var(--border)" strokeWidth="1" />
+    <rect x="120" y="290" width="480" height="56" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
     <text x="360" y="315" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Stack strategy: Axis Ace for delivery + Amex MRCC</text>
     <text x="360" y="332" textAnchor="middle" fontSize="11" fill="var(--text-muted)">for offline restaurants above ₹7,500 transactions</text>
     <text x="360" y="348" textAnchor="middle" fontSize="10" fill={COLOR}>Use /stack-builder to model your combination</text>
@@ -151,7 +151,7 @@ const SvgDiningScenarioFlowchart = () => (
 
 const SvgAnnualEarningsChart = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Bar chart of annual dining rewards earned across card choices at ₹96000 annual spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Annual Dining Rewards at ₹96,000/year spend</text>
     {[
       { label: "HDFC Diners Black", val: 8000, x: 60 },
@@ -177,14 +177,14 @@ const SvgAnnualEarningsChart = () => (
 
 const SvgOfflineVsAppRewards = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Comparison of reward rates for the same restaurant paid via app vs physical card swipe" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Same Restaurant, Different Reward: App vs Card Swipe</text>
-    <rect x="40" y="50" width="280" height="110" rx="8" fill="white" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="40" y="50" width="280" height="110" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="180" y="76" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Swipe Card at Restaurant</text>
     <text x="180" y="100" textAnchor="middle" fontSize="22" fontWeight="800" fill="#16a34a">2-10X points</text>
     <text x="180" y="122" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Classified: Dining / Restaurant</text>
     <text x="180" y="140" textAnchor="middle" fontSize="11" fill="var(--text-muted)">category (higher tier)</text>
-    <rect x="400" y="50" width="280" height="110" rx="8" fill="white" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="400" y="50" width="280" height="110" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="540" y="76" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Pay via UPI / App at Desk</text>
     <text x="540" y="100" textAnchor="middle" fontSize="22" fontWeight="800" fill="#ef4444">1X points</text>
     <text x="540" y="122" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Classified: Utility / Wallet</text>
@@ -195,7 +195,7 @@ const SvgOfflineVsAppRewards = () => (
 
 const SvgStackingTimeline = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Timeline showing how to stack dining card offers for maximum monthly rewards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Smart Stacking: Monthly Dining Optimization</text>
     {[
       { x: 60, label: "Week 1-2", action: "Axis Ace", detail: "Swiggy/Zomato orders hit ₹500 cap threshold" },
@@ -366,7 +366,7 @@ export default function BlogMaximizeDining() {
 
       <SvgStackingTimeline />
 
-      <section style={{ marginBottom: 32, padding: "20px 24px", background: "var(--surface, #f8fafc)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
+      <section style={{ marginBottom: 32, padding: "20px 24px", background: "var(--raise)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>Your action plan</h2>
         <p style={{ margin: "0 0 8px" }}>Step 1: Check your last 3 months of dining spend on Swiggy and Zomato. If combined delivery is under ₹10,000/month, Axis Ace alone is optimal.</p>
         <p style={{ margin: "0 0 8px" }}>Step 2: Check your offline restaurant spend. If it regularly crosses ₹5,000/month, adding a dedicated dining card for those transactions adds real money.</p>

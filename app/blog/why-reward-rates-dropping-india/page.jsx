@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgMdrEconomics = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="How MDR revenue is split between banks, card networks, and merchants in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Where the MDR Goes — Why Reward Rates Have a Ceiling</text>
     <text x="36" y="56" fontSize="12" fill="var(--text-muted)">On a ₹1,000 credit card transaction: MDR is approximately ₹15-20 (1.5-2%)</text>
     <rect x="36" y="74" width="148" height="80" rx="6" fill="#0891b2" opacity="0.15" />
@@ -34,7 +34,7 @@ const SvgMdrEconomics = () => (
     <text x="278" y="106" textAnchor="middle" fontSize="12" fontWeight="700" fill="#7c3aed">Acquiring Bank</text>
     <text x="278" y="124" textAnchor="middle" fontSize="11" fill="var(--text-muted)">(merchant's bank)</text>
     <text x="278" y="144" textAnchor="middle" fontSize="18" fontWeight="800" fill="#7c3aed">~₹3</text>
-    <rect x="372" y="74" width="148" height="80" rx="6" fill="#ea580c" opacity="0.15" />
+    <rect x="372" y="74" width="148" height="80" rx="6" fill="var(--raise)" opacity="0.15" />
     <text x="446" y="106" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ea580c">Issuing Bank</text>
     <text x="446" y="124" textAnchor="middle" fontSize="11" fill="var(--text-muted)">(your card's bank)</text>
     <text x="446" y="144" textAnchor="middle" fontSize="18" fontWeight="800" fill="#ea580c">~₹10</text>
@@ -49,7 +49,7 @@ const SvgMdrEconomics = () => (
 
 const SvgAtlasDevaluation = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Axis Atlas credit card reward rate devaluation timeline April 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Axis Atlas April 2026 Devaluation — The 50% Travel Reward Cut</text>
     <rect x="36" y="54" width="308" height="100" rx="6" fill="#16a34a" opacity="0.1" />
     <text x="190" y="80" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Before April 2026</text>
@@ -70,7 +70,7 @@ const SvgAtlasDevaluation = () => (
 
 const SvgDevaluationTimeline = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Timeline of major Indian credit card reward devaluations 2024 to 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Major Indian Card Devaluations — 24 Months of Cuts (2024-2026)</text>
     <line x1="60" y1="60" x2="60" y2="200" stroke="var(--border)" strokeWidth="2" />
     {[
@@ -93,7 +93,7 @@ const SvgDevaluationTimeline = () => (
 
 const SvgRbiInterventionMap = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="RBI interventions affecting credit card reward economics in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">How RBI Policy Shapes Card Rewards — The Regulatory Pressure</text>
     <rect x="36" y="52" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
     <text x="50" y="70" fontSize="12" fontWeight="700" fill="var(--text)">RBI Action</text>
@@ -119,7 +119,7 @@ const SvgRbiInterventionMap = () => (
 
 const SvgTravelRewardCutReasons = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Why travel credit card rewards are being cut fastest in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Why Travel Rewards Are Being Cut Fastest</text>
     <text x="36" y="58" fontSize="13" fontWeight="600" fill="var(--text)">Airlines are squeezing banks out of the loyalty equation</text>
     <text x="36" y="80" fontSize="12" fill="var(--text-muted)">Airlines have learned that customers who book directly cost them less than those who book through points programs. IndiGo, Air India, and Vistara (Air India Express) have all shifted to direct booking incentives over the past 18 months, making transfer partnerships less economically attractive for both sides.</text>
@@ -132,7 +132,7 @@ const SvgTravelRewardCutReasons = () => (
 
 const SvgWhatToDo = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Action steps for cardholders affected by reward rate devaluations" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">What Smart Cardholders Are Doing in Response</text>
     {[
       { action: "Redeem points before further devaluation", detail: "Points held are points at risk. Lock in redemptions now if you have 50,000+ points sitting idle.", color: "#ea580c" },
@@ -152,7 +152,7 @@ const SvgWhatToDo = () => (
 
 const SvgCashbackVsPoints = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Comparison of cashback and reward points stability in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Cashback vs Reward Points — Devaluation Risk Compared</text>
     <rect x="36" y="52" width="308" height="110" rx="6" fill="#16a34a" opacity="0.08" />
     <text x="190" y="78" textAnchor="middle" fontSize="14" fontWeight="700" fill="#16a34a">Cashback</text>
@@ -160,7 +160,7 @@ const SvgCashbackVsPoints = () => (
     <text x="190" y="118" textAnchor="middle" fontSize="12" fill="var(--text)">Devaluation risk: Low (requires fee change)</text>
     <text x="190" y="136" textAnchor="middle" fontSize="12" fill="var(--text)">Expiry: Usually none or 12 months</text>
     <text x="190" y="154" textAnchor="middle" fontSize="12" fill="#16a34a" fontWeight="600">Best for: simplicity, safety</text>
-    <rect x="376" y="52" width="308" height="110" rx="6" fill="#ea580c" opacity="0.08" />
+    <rect x="376" y="52" width="308" height="110" rx="6" fill="var(--raise)" opacity="0.08" />
     <text x="530" y="78" textAnchor="middle" fontSize="14" fontWeight="700" fill="#ea580c">Reward Points</text>
     <text x="530" y="100" textAnchor="middle" fontSize="12" fill="var(--text)">Value: Variable (bank decides redemption rate)</text>
     <text x="530" y="118" textAnchor="middle" fontSize="12" fill="var(--text)">Devaluation risk: High (can change without notice)</text>
@@ -356,7 +356,7 @@ export default function BlogWhyRewardRatesDropping() {
         <SvgWhatToDo />
       </section>
 
-      <section style={{ background: "#fff7ed", border: "1px solid #fed7aa", borderRadius: 8, padding: "20px 24px", marginBottom: 36 }}>
+      <section style={{ background: "rgba(212,168,83,.06)", border: "1px solid rgba(212,168,83,.25)", borderRadius: 8, padding: "20px 24px", marginBottom: 36 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>Your Devaluation Action Checklist</h2>
         <ol style={{ fontSize: 14, color: "var(--text)", lineHeight: 2.1, paddingLeft: 20 }}>
           <li>Log in and check your current reward point balance on every card today.</li>

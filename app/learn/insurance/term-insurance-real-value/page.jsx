@@ -82,7 +82,7 @@ const SvgRiderMatrix = () => (
       { rider: "Income Benefit Rider", verdict: "SKIP", cost: "+₹1,500-2,500/yr", reason: "Monthly payout instead of lump sum. But lump sum invested by family gives more flexibility and returns.", color: "#dc2626" },
     ].map(({ rider, verdict, cost, reason, color }, i) => (
       <g key={rider}>
-        <rect x="20" y={40 + i * 44} width={700} height="36" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={40 + i * 44} width={700} height="36" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={62 + i * 44} fontFamily="system-ui" fontSize="11" fill="var(--text)">{rider}</text>
         <rect x="290" y={42 + i * 44} width="90" height="28" fill={color} rx="4" />
         <text x="335" y={61 + i * 44} textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#fff">{verdict}</text>
@@ -126,7 +126,7 @@ const SvgLifeStageCoverage = () => (
       { age: "50-60", cover: "10× income or less", note: "Near retirement, assets built. Need may reduce. Evaluate vs existing cover.", color: "#ca8a04" },
     ].map(({ age, cover, note, color }, i) => (
       <g key={age}>
-        <rect x="20" y={40 + i * 38} width={700} height="30" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={40 + i * 38} width={700} height="30" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <rect x="20" y={40 + i * 38} width="80" height="30" fill={color} rx="0" opacity="0.85" />
         <text x="60" y={60 + i * 38} textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#fff">{age}</text>
         <rect x="110" y={44 + i * 38} width="150" height="22" fill={color} rx="4" opacity="0.2" />

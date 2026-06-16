@@ -31,7 +31,7 @@ function DiningVsDeliveryExplainer() {
       aria-label="Diagram explaining the difference between restaurant dining and food delivery for credit card rewards"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="200" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Dining vs Delivery: Different MCCs, Different Rewards</text>
       <rect x="20" y="42" width="290" height="100" rx="10" fill={COLOR} opacity="0.08" stroke={COLOR} strokeWidth="1.5" />
       <text x="165" y="64" textAnchor="middle" fontSize="13" fontWeight="700" fill={COLOR}>Restaurant Dining</text>
@@ -68,7 +68,7 @@ function DiningRewardRateChart() {
       aria-label="Bar chart comparing dining reward rates for major Indian credit cards at restaurants"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="280" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="280" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Effective Dining Reward Rate Comparison (June 2026)</text>
       {[0, 2, 4, 6, 8, 10].map((v) => (
         <g key={v}>
@@ -104,7 +104,7 @@ function HighSpendDinerMathTable() {
       aria-label="Table comparing annual cashback earned by high-spend restaurant diners across different credit cards"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="260" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="260" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">High-Spend Diner Math: ₹20,000/month at Restaurants</text>
       {["Card", "Rate", "Cap", "Actual Monthly Earn", "Annual Benefit"].map((h, i) => (
         <text key={h} x={[20, 170, 250, 360, 510][i]} y="48" fontSize="10.5" fontWeight="700" fill="var(--text)">{h}</text>
@@ -140,7 +140,7 @@ function WeekendDiningBonusCalc() {
       aria-label="Illustration of SBI SimplySAVE weekend dining bonus and how it compares to weekday rates"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="190" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="190" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">SBI SimplySAVE: The Weekend Dining Bonus</text>
       <rect x="30" y="42" width="280" height="100" rx="10" fill="var(--border)" opacity="0.3" />
       <text x="170" y="64" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Weekday Dining (Mon-Thu)</text>
@@ -169,7 +169,7 @@ function DiningCardDecisionMatrix() {
       aria-label="Decision matrix for choosing the best dining credit card based on spending level and usage pattern"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="330" rx="10" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" />
+      <rect width="680" height="330" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Which Dining Card Is Right for You?</text>
       {/* Column headers */}
       <rect x="12" y="36" width="656" height="28" rx="4" fill={COLOR} opacity="0.12" />
@@ -428,7 +428,7 @@ export default function BestCreditCardForDiningRestaurants() {
               display: "flex",
               gap: 18,
               alignItems: "flex-start",
-              background: "var(--surface, #f8fafc)",
+              background: "var(--raise)",
             }}
           >
             <div

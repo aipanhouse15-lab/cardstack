@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgInsurancePaymentProblem = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Why insurance premium payment is tricky on credit cards: most cards exclude it from reward earning" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Insurance Premium Problem Most Cardholders Do Not Know About</text>
     <rect x="30" y="44" width="310" height="116" rx="8" fill="#dc2626" opacity="0.07" stroke="#dc2626" strokeWidth="1.5" />
     <text x="185" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="#dc2626">Cards That Exclude Insurance</text>
@@ -43,7 +43,7 @@ const SvgInsurancePaymentProblem = () => (
 
 const SvgPremiumMath = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Credit card rewards on 50000 rupees annual insurance premium across different cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">₹50,000 Annual Insurance Premium: Which Card Returns the Most?</text>
     <text x="30" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">CARD</text>
     <text x="230" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">EARN ON INSURANCE</text>
@@ -80,18 +80,18 @@ const SvgPremiumMath = () => (
 
 const SvgTermInsuranceTiming = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Term insurance premium timing and credit card billing cycle optimisation for maximum float" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Billing Cycle Optimisation: Maximise Float on Annual Premiums</text>
     <text x="360" y="50" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Pay a large annual insurance premium on Day 1 of your billing cycle to get maximum 45-50 days of interest-free credit</text>
     <rect x="30" y="65" width="100" height="50" rx="6" fill={COLOR} opacity="0.8" />
     <text x="80" y="88" textAnchor="middle" fontSize="11" fontWeight="700" fill="white">Statement</text>
     <text x="80" y="106" textAnchor="middle" fontSize="11" fontWeight="700" fill="white">Date: Day 1</text>
     <line x1="130" y1="90" x2="210" y2="90" stroke="var(--border)" strokeWidth="1.5" strokeDasharray="4,3" />
-    <rect x="210" y="65" width="110" height="50" rx="6" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="210" y="65" width="110" height="50" rx="6" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="265" y="88" textAnchor="middle" fontSize="11" fill="var(--text)">Premium due</text>
     <text x="265" y="106" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>Pay here: Day 1</text>
     <line x1="320" y1="90" x2="400" y2="90" stroke="var(--border)" strokeWidth="1.5" strokeDasharray="4,3" />
-    <rect x="400" y="65" width="120" height="50" rx="6" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="400" y="65" width="120" height="50" rx="6" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="460" y="88" textAnchor="middle" fontSize="11" fill="var(--text)">Next statement</text>
     <text x="460" y="106" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Day 30-31</text>
     <line x1="520" y1="90" x2="600" y2="90" stroke="var(--border)" strokeWidth="1.5" strokeDasharray="4,3" />
@@ -106,9 +106,9 @@ const SvgTermInsuranceTiming = () => (
 
 const SvgHealthVsTermPremium = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Health insurance vs term insurance premium: different amounts and card strategy" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Health vs Term Insurance: Different Premium Sizes, Different Card Strategy</text>
-    <rect x="30" y="44" width="320" height="155" rx="8" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="30" y="44" width="320" height="155" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="190" y="68" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Term Insurance</text>
     <text x="190" y="90" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Typical annual premium: ₹15,000 - ₹30,000</text>
     <text x="190" y="110" textAnchor="middle" fontSize="11" fill="var(--text)">(₹1 crore cover, 35-year-old non-smoker)</text>
@@ -116,7 +116,7 @@ const SvgHealthVsTermPremium = () => (
     <text x="190" y="150" textAnchor="middle" fontSize="11" fill="var(--text)">Reason: Full points on insurance, low fee</text>
     <text x="190" y="170" textAnchor="middle" fontSize="11" fontWeight="600" fill={COLOR}>Rewards on ₹20,000 premium: ₹250</text>
     <text x="190" y="188" textAnchor="middle" fontSize="10" fill="var(--text-muted)">vs ₹0 on SBI Cashback Card</text>
-    <rect x="370" y="44" width="320" height="155" rx="8" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="370" y="44" width="320" height="155" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="530" y="68" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Health Insurance</text>
     <text x="530" y="90" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Typical annual premium: ₹20,000 - ₹60,000</text>
     <text x="530" y="110" textAnchor="middle" fontSize="11" fill="var(--text)">(₹10L cover, family of 4)</text>
@@ -129,7 +129,7 @@ const SvgHealthVsTermPremium = () => (
 
 const SvgMonthlyVsAnnual = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="Annual vs monthly insurance premium payment on credit card: which earns more rewards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Annual vs Monthly Premium Payment: The Credit Card Reward Difference</text>
     <rect x="30" y="44" width="310" height="126" rx="8" fill={COLOR} opacity="0.07" stroke={COLOR} strokeWidth="1.5" />
     <text x="185" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Annual Payment (₹20,000)</text>
@@ -138,7 +138,7 @@ const SvgMonthlyVsAnnual = () => (
     <text x="185" y="128" textAnchor="middle" fontSize="11" fill="var(--text)">Float: up to 50 days on ₹20,000</text>
     <text x="185" y="148" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>Net annual benefit: ₹250 + ₹110 float</text>
     <text x="185" y="164" textAnchor="middle" fontSize="10" fill="var(--text-muted)">(float calculated at 8% savings rate)</text>
-    <rect x="380" y="44" width="310" height="126" rx="8" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="380" y="44" width="310" height="126" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="535" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text-muted)">Monthly Payment (₹1,700/month)</text>
     <text x="535" y="90" textAnchor="middle" fontSize="11" fill="var(--text)">12 transactions x ₹1,700</text>
     <text x="535" y="108" textAnchor="middle" fontSize="11" fill="var(--text)">Rewards: ₹255 (1.5% if above min txn)</text>
@@ -151,7 +151,7 @@ const SvgMonthlyVsAnnual = () => (
 
 const SvgRewardEarningGuide = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Step by step guide to earning maximum credit card rewards on insurance premiums" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Maximum Reward Strategy for Insurance Premiums</text>
     <rect x="30" y="44" width="46" height="46" rx="23" fill={COLOR} opacity="0.15" stroke={COLOR} strokeWidth="1.5" />
     <text x="53" y="72" textAnchor="middle" fontSize="18" fontWeight="800" fill={COLOR}>1</text>
@@ -313,7 +313,7 @@ export default function BlogBestCardInsurancePremiums2026() {
         <SvgRewardEarningGuide />
       </section>
 
-      <section style={{ background: "var(--surface, #f8fafc)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: "var(--raise)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 32 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 10px", color: COLOR }}>What to Do Before Your Next Premium Is Due</h2>
         <p style={{ margin: "0 0 10px" }}>Download your credit card's full terms and conditions and search for "insurance" in the reward earning section. Confirm whether your card earns on insurance premiums and whether any monthly or annual caps apply. If your card is SBI Cashback or Axis Flipkart — switch to HDFC Regalia Gold for this spend.</p>
         <p style={{ margin: 0 }}>For help picking the right card for your full spend profile including insurance: use <Link href="/smart-swipe" style={{ color: COLOR, fontWeight: 600 }}>Smart Swipe</Link>. Read more about how fee card maths works in <Link href="/blog/annual-fee-when-worth-paying" style={{ color: COLOR }}>our annual fee guide</Link>. For the broader picture on insurance products themselves, see our <Link href="/learn/insurance" style={{ color: COLOR }}>insurance comparison section</Link>.</p>

@@ -30,7 +30,7 @@ function PartnerVsAllOnlineMatrix() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Coverage matrix comparing HDFC Millennia partner-only 5 percent versus SBI Cashback all-online 5 percent across 10 merchants"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)" }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)" }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Partner-Only vs All-Online: Where Your 5% Actually Works</text>
       <text x="200" y="44" textAnchor="middle" fill="#6366f1" fontSize="12" fontWeight="700">HDFC Millennia (10 partners)</text>
@@ -40,11 +40,11 @@ function PartnerVsAllOnlineMatrix() {
         return (
           <g key={m}>
             <text x="340" y={y + 4} textAnchor="middle" fill="var(--text)" fontSize="11">{m}</text>
-            <rect x="100" y={y - 8} width="200" height="16" fill={millenniaCovered[i] ? "#ede9fe" : "#f1f5f9"} rx="3" />
+            <rect x="100" y={y - 8} width="200" height="16" fill={millenniaCovered[i] ? "#ede9fe" : "var(--raise)"} rx="3" />
             <text x="200" y={y + 4} textAnchor="middle" fill={millenniaCovered[i] ? "#6366f1" : "var(--text-muted)"} fontSize="11" fontWeight={millenniaCovered[i] ? "700" : "400"}>
               {millenniaCovered[i] ? "5% covered" : "1% base only"}
             </text>
-            <rect x="390" y={y - 8} width="200" height="16" fill="#f5f3ff" rx="3" />
+            <rect x="390" y={y - 8} width="200" height="16" fill="var(--raise)" rx="3" />
             <text x="490" y={y + 4} textAnchor="middle" fill={COLOR} fontSize="11" fontWeight="700">5% covered</text>
           </g>
         );
@@ -68,7 +68,7 @@ function CapMathAtSpendLevels() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Monthly cashback earned across four cards at five different online spend levels from 5000 to 100000 rupees"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Monthly Cashback at Different Spend Levels (Online)</text>
       {spends.map((spend, si) => {
@@ -123,14 +123,14 @@ function MerchantCardMatchGrid() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Merchant to card matching table showing the best card for each major Indian online shopping platform"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Right Card for Each Online Platform</text>
       {[["Platform", "Best Card", "Rate / Structure", "Runner-Up"], ...matches.map(m => [m.merchant, m.bestCard, m.rate, m.runner])].map((row, ri) => (
         <g key={ri}>
           {row.map((cell, ci) => (
             <g key={ci}>
-              <rect x={10 + ci * 165} y={34 + ri * 28} width={163} height={26} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "#fff" : "var(--surface, #f8fafc)"} rx="2" />
+              <rect x={10 + ci * 165} y={34 + ri * 28} width={163} height={26} fill={ri === 0 ? COLOR : ri % 2 === 0 ? "#fff" : "var(--raise)"} rx="2" />
               <text x={91 + ci * 165} y={51 + ri * 28} textAnchor="middle" fill={ri === 0 ? "#fff" : ci === 1 ? COLOR : "var(--text)"} fontSize="10" fontWeight={ri === 0 ? "700" : ci < 2 ? "600" : "400"}>{cell}</text>
             </g>
           ))}
@@ -147,17 +147,17 @@ function FreeCardComboDiagram() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Zero annual fee card combination: Amazon Pay ICICI plus AU Xcite ACE covering all online shopping"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">The Zero-Fee Online Stack</text>
-      <rect x="20" y="38" width="290" height="120" fill="#fff" stroke={COLOR} strokeWidth="2" rx="10" />
+      <rect x="20" y="38" width="290" height="120" fill="var(--raise)" stroke={COLOR} strokeWidth="2" rx="10" />
       <text x="165" y="62" textAnchor="middle" fill={COLOR} fontSize="13" fontWeight="700">Amazon Pay ICICI (Free)</text>
       <text x="165" y="80" textAnchor="middle" fill="var(--text)" fontSize="11">5% on Amazon (Prime)</text>
       <text x="165" y="97" textAnchor="middle" fill="var(--text)" fontSize="11">2% on Amazon Pay partners</text>
       <text x="165" y="114" textAnchor="middle" fill="var(--text)" fontSize="11">1% everywhere else</text>
       <text x="165" y="145" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Annual cost: ₹0</text>
       <text x="340" y="102" textAnchor="middle" fill="var(--text)" fontSize="18" fontWeight="900">+</text>
-      <rect x="370" y="38" width="290" height="120" fill="#fff" stroke="#10b981" strokeWidth="2" rx="10" />
+      <rect x="370" y="38" width="290" height="120" fill="var(--raise)" stroke="#10b981" strokeWidth="2" rx="10" />
       <text x="515" y="62" textAnchor="middle" fill="#10b981" fontSize="13" fontWeight="700">AU Xcite ACE (Free)</text>
       <text x="515" y="80" textAnchor="middle" fill="var(--text)" fontSize="11">2% flat on ALL purchases</text>
       <text x="515" y="97" textAnchor="middle" fill="var(--text)" fontSize="11">No category restrictions</text>
@@ -175,7 +175,7 @@ function HighSpenderBreakeven() {
       xmlns="http://www.w3.org/2000/svg"
       role="img"
       aria-label="Breakeven analysis showing at what monthly online spend each card becomes worth its annual fee"
-      style={{ width: "100%", borderRadius: 10, background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", marginTop: 8 }}
+      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Annual Fee Breakeven: When Each Card Pays for Itself</text>
       {[
@@ -186,13 +186,13 @@ function HighSpenderBreakeven() {
         { card: "AU Xcite ACE", fee: 0, rate: "2%", breakeven: "Instant (free card)", color: "#0891b2" },
       ].map((item, i) => (
         <g key={item.card}>
-          <rect x="10" y={38 + i * 28} width="200" height="24" fill="#fff" stroke="var(--border)" rx="3" />
+          <rect x="10" y={38 + i * 28} width="200" height="24" fill="var(--raise)" stroke="var(--border)" rx="3" />
           <text x="110" y={54 + i * 28} textAnchor="middle" fill="var(--text)" fontSize="11" fontWeight="600">{item.card}</text>
           <rect x="218" y={38 + i * 28} width="80" height="24" fill={item.color + "22"} rx="3" />
           <text x="258" y={54 + i * 28} textAnchor="middle" fill={item.color} fontSize="11">₹{item.fee}/yr</text>
-          <rect x="306" y={38 + i * 28} width="60" height="24" fill="var(--surface, #f8fafc)" rx="3" />
+          <rect x="306" y={38 + i * 28} width="60" height="24" fill="var(--raise)" rx="3" />
           <text x="336" y={54 + i * 28} textAnchor="middle" fill="var(--text)" fontSize="11">{item.rate}</text>
-          <rect x="374" y={38 + i * 28} width="296" height="24" fill={item.fee === 0 ? "#f0fdf4" : "var(--surface, #f8fafc)"} rx="3" />
+          <rect x="374" y={38 + i * 28} width="296" height="24" fill={item.fee === 0 ? "var(--green-dim)" : "var(--raise)"} rx="3" />
           <text x="522" y={54 + i * 28} textAnchor="middle" fill={item.fee === 0 ? "#16a34a" : "var(--text)"} fontSize="11">{item.breakeven}</text>
         </g>
       ))}
@@ -354,7 +354,7 @@ export default function BestCreditCardForOnlineShopping() {
             caveat: "2% is lower than every category-specific card. Use as a fallback, not a primary card."
           },
         ].map(card => (
-          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "#fff" }}>
+          <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "var(--raise)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 8 }}>
               <div>
                 <span style={{ background: COLOR + "22", color: COLOR, fontSize: 11, fontWeight: 700, padding: "2px 8px", borderRadius: 4, marginRight: 8 }}>{card.badge}</span>
@@ -423,7 +423,7 @@ export default function BestCreditCardForOnlineShopping() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 40, background: "var(--surface, #f8fafc)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
+      <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
         <p>SBI Cashback is the single best card for broad online shopping in India in June 2026. Its all-online coverage, high cap, and direct bank account cashback make it the most practical choice for households that shop across many platforms.</p>
         <p>Amazon Pay ICICI wins specifically for Amazon, and that is a meaningful carve-out given how central Amazon is to Indian e-commerce. Holding both at a combined fee of ₹999/year gives you the best of both worlds for the two largest online platforms.</p>

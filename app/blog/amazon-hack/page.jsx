@@ -23,14 +23,14 @@ const UPDATED = "June 4, 2026";
 
 const SvgRewardTiersChart = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Tier chart showing Amazon Pay ICICI card reward rates by spend category" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Amazon Pay ICICI: Reward Rate by Spend Category</text>
     {[
       { label: "Amazon.in (Prime)", pct: 5, color: COLOR, x: 60, note: "Direct cashback" },
       { label: "Amazon.in (non-Prime)", pct: 3, color: "#f97316", x: 200, note: "Direct cashback" },
       { label: "Amazon Pay merchants", pct: 2, color: "#fb923c", x: 340, note: "Direct cashback" },
-      { label: "All other online", pct: 1, color: "#94a3b8", x: 480, note: "Direct cashback" },
-      { label: "Fuel surcharge", pct: 0, color: "#64748b", x: 620, note: "No waiver" },
+      { label: "All other online", pct: 1, color: "var(--dim)", x: 480, note: "Direct cashback" },
+      { label: "Fuel surcharge", pct: 0, color: "var(--mut)", x: 620, note: "No waiver" },
     ].map(({ label, pct, color, x, note }) => {
       const barH = pct === 0 ? 4 : pct * 32;
       const barY = 200 - barH;
@@ -51,7 +51,7 @@ const SvgRewardTiersChart = () => (
 
 const SvgAnnualCashbackTable = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Table showing annual cashback earned on Amazon Pay ICICI at Rs 2 lakh yearly Amazon spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">₹2,00,000 Amazon Annual Spend: The Real Math</text>
     <rect x="20" y="38" width="680" height="32" fill={COLOR} rx="4" />
     <text x="120" y="59" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Spend Mix</text>
@@ -66,7 +66,7 @@ const SvgAnnualCashbackTable = () => (
       ["Total", "₹2,00,000", "", "₹8,000"],
     ].map(([type, amount, rate, cashback], i) => (
       <g key={i}>
-        <rect x="20" y={72 + i * 28} width="680" height="28" fill={i === 4 ? "#fef3c7" : i % 2 === 0 ? "white" : "var(--surface, #f8fafc)"} />
+        <rect x="20" y={72 + i * 28} width="680" height="28" fill={i === 4 ? "#fef3c7" : i % 2 === 0 ? "var(--raise2)" : "var(--raise)"} />
         <text x="120" y={91 + i * 28} textAnchor="middle" fontSize={i === 4 ? "12" : "11"} fontWeight={i === 4 ? "800" : "400"} fill="var(--text)">{type}</text>
         <text x="280" y={91 + i * 28} textAnchor="middle" fontSize="11" fill="var(--text-muted)">{amount}</text>
         <text x="420" y={91 + i * 28} textAnchor="middle" fontSize="11" fill="var(--text)">{rate}</text>
@@ -78,10 +78,10 @@ const SvgAnnualCashbackTable = () => (
 
 const SvgSaleStackingGuide = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Guide showing when card rewards stack with Amazon sale offers and when they do not" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Amazon Sale + Card Rewards: When It Stacks, When It Does Not</text>
     {/* Stacks */}
-    <rect x="30" y="44" width="300" height="170" rx="8" fill="white" stroke="#16a34a" strokeWidth="2" />
+    <rect x="30" y="44" width="300" height="170" rx="8" fill="var(--raise)" stroke="#16a34a" strokeWidth="2" />
     <rect x="30" y="44" width="300" height="34" rx="8" fill="#16a34a" />
     <rect x="30" y="62" width="300" height="16" fill="#16a34a" />
     <text x="180" y="66" textAnchor="middle" fontSize="13" fontWeight="800" fill="white">These Stack WITH Card Rewards</text>
@@ -92,9 +92,9 @@ const SvgSaleStackingGuide = () => (
     <text x="180" y="188" textAnchor="middle" fontSize="12" fontWeight="600" fill="var(--text)">Lightning deal discounts</text>
     <text x="180" y="204" textAnchor="middle" fontSize="11" fill="var(--text-muted)">(price reduction, cashback on discounted price)</text>
     {/* Does not stack */}
-    <rect x="390" y="44" width="300" height="170" rx="8" fill="white" stroke="#ef4444" strokeWidth="2" />
-    <rect x="390" y="44" width="300" height="34" rx="8" fill="#ef4444" />
-    <rect x="390" y="62" width="300" height="16" fill="#ef4444" />
+    <rect x="390" y="44" width="300" height="170" rx="8" fill="var(--raise)" stroke="#ef4444" strokeWidth="2" />
+    <rect x="390" y="44" width="300" height="34" rx="8" fill="var(--raise)" />
+    <rect x="390" y="62" width="300" height="16" fill="var(--raise)" />
     <text x="540" y="66" textAnchor="middle" fontSize="13" fontWeight="800" fill="white">These DO NOT Stack With Rewards</text>
     <text x="540" y="102" textAnchor="middle" fontSize="12" fontWeight="600" fill="var(--text)">Amazon Pay promotional offers</text>
     <text x="540" y="118" textAnchor="middle" fontSize="11" fill="var(--text-muted)">(coupon code offers may exclude cashback)</text>
@@ -107,21 +107,21 @@ const SvgSaleStackingGuide = () => (
 
 const SvgEmiHiddenCostBreakdown = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Diagram showing how no-cost EMI on Amazon hides interest in the product price" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Amazon No-Cost EMI: How the Interest is Hidden in the Price</text>
-    <rect x="30" y="48" width="200" height="120" rx="8" fill="white" stroke="var(--border)" strokeWidth="1.5" />
+    <rect x="30" y="48" width="200" height="120" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="130" y="76" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Listed price</text>
     <text x="130" y="100" textAnchor="middle" fontSize="20" fontWeight="800" fill="var(--text)">₹24,000</text>
     <text x="130" y="120" textAnchor="middle" fontSize="10" fill="var(--text-muted)">shown on product page</text>
     <text x="130" y="140" textAnchor="middle" fontSize="10" fill={COLOR}>You earn 5% = ₹1,200</text>
     <text x="250" y="113" textAnchor="middle" fontSize="22" fill="var(--text-muted)">vs</text>
-    <rect x="280" y="48" width="200" height="120" rx="8" fill="white" stroke="#f59e0b" strokeWidth="1.5" />
+    <rect x="280" y="48" width="200" height="120" rx="8" fill="var(--raise)" stroke="#f59e0b" strokeWidth="1.5" />
     <text x="380" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Pay full price</text>
     <text x="380" y="88" textAnchor="middle" fontSize="20" fontWeight="800" fill="var(--text)">₹24,000</text>
     <text x="380" y="108" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Same cashback</text>
     <text x="380" y="126" textAnchor="middle" fontSize="10" fill="var(--text-muted)">No EMI markup</text>
     <text x="380" y="144" textAnchor="middle" fontSize="10" fill={COLOR}>Pay full now, save ₹0 vs EMI</text>
-    <rect x="500" y="48" width="200" height="120" rx="8" fill="white" stroke="#ef4444" strokeWidth="1.5" />
+    <rect x="500" y="48" width="200" height="120" rx="8" fill="var(--raise)" stroke="#ef4444" strokeWidth="1.5" />
     <text x="600" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">No-cost EMI price</text>
     <text x="600" y="88" textAnchor="middle" fontSize="20" fontWeight="800" fill="var(--text)">₹24,720</text>
     <text x="600" y="108" textAnchor="middle" fontSize="10" fill="var(--text-muted)">+₹720 markup = 3% interest</text>
@@ -132,9 +132,9 @@ const SvgEmiHiddenCostBreakdown = () => (
 
 const SvgPayLaterVsCard = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Comparison between Amazon Pay Later and Amazon Pay ICICI credit card for purchases on Amazon" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Amazon Pay Later vs Amazon Pay ICICI Card: Which Wins?</text>
-    <rect x="30" y="42" width="310" height="112" rx="8" fill="white" stroke={COLOR} strokeWidth="2" />
+    <rect x="30" y="42" width="310" height="112" rx="8" fill="var(--raise)" stroke={COLOR} strokeWidth="2" />
     <text x="185" y="66" textAnchor="middle" fontSize="13" fontWeight="800" fill="var(--text)">Amazon Pay ICICI Card</text>
     <text x="50" y="92" fontSize="11" fill={COLOR}>✓</text>
     <text x="64" y="92" fontSize="11" fill="var(--text)">5% cashback on Amazon (Prime)</text>
@@ -144,7 +144,7 @@ const SvgPayLaterVsCard = () => (
     <text x="64" y="128" fontSize="11" fill="var(--text)">30-50 day free credit window</text>
     <text x="50" y="146" fontSize="11" fill="#ef4444">✗</text>
     <text x="64" y="146" fontSize="11" fill="var(--text-muted)">Requires credit card eligibility</text>
-    <rect x="380" y="42" width="310" height="112" rx="8" fill="white" stroke="#94a3b8" strokeWidth="1.5" />
+    <rect x="380" y="42" width="310" height="112" rx="8" fill="var(--raise)" stroke="var(--hair2)" strokeWidth="1.5" />
     <text x="535" y="66" textAnchor="middle" fontSize="13" fontWeight="800" fill="var(--text)">Amazon Pay Later</text>
     <text x="400" y="92" fontSize="11" fill="#16a34a">✓</text>
     <text x="414" y="92" fontSize="11" fill="var(--text)">Easy KYC, instant credit line</text>
@@ -159,14 +159,14 @@ const SvgPayLaterVsCard = () => (
 
 const SvgGiftCardTrap = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Warning diagram showing gift card purchases on credit cards earn zero reward points" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">The Gift Card Trap: Zero Rewards on Amazon Gift Cards</text>
-    <rect x="40" y="44" width="300" height="96" rx="8" fill="white" stroke="#ef4444" strokeWidth="2" />
+    <rect x="40" y="44" width="300" height="96" rx="8" fill="var(--raise)" stroke="#ef4444" strokeWidth="2" />
     <text x="190" y="72" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Buy ₹10,000 Amazon Gift Card</text>
     <text x="190" y="95" textAnchor="middle" fontSize="22" fontWeight="800" fill="#ef4444">₹0 cashback</text>
     <text x="190" y="118" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Gift card purchases excluded from rewards</text>
     <text x="190" y="133" textAnchor="middle" fontSize="11" fill="var(--text-muted)">by all major banks including ICICI</text>
-    <rect x="380" y="44" width="300" height="96" rx="8" fill="white" stroke="#16a34a" strokeWidth="2" />
+    <rect x="380" y="44" width="300" height="96" rx="8" fill="var(--raise)" stroke="#16a34a" strokeWidth="2" />
     <text x="530" y="72" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Buy ₹10,000 Product on Amazon</text>
     <text x="530" y="95" textAnchor="middle" fontSize="22" fontWeight="800" fill={COLOR}>₹500 cashback</text>
     <text x="530" y="118" textAnchor="middle" fontSize="11" fill="var(--text-muted)">5% on direct Amazon.in purchase</text>
@@ -323,7 +323,7 @@ export default function BlogAmazonHack() {
 
       <SvgGiftCardTrap />
 
-      <section style={{ marginBottom: 32, padding: "20px 24px", background: "#fff7ed", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
+      <section style={{ marginBottom: 32, padding: "20px 24px", background: "rgba(212,168,83,.06)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 12px" }}>Power user checklist</h2>
         <p style={{ margin: "0 0 8px" }}>1. In the Amazon app, set default payment to your Amazon Pay ICICI card, not Amazon Pay balance. This ensures every purchase earns cashback automatically.</p>
         <p style={{ margin: "0 0 8px" }}>2. During sale events, screenshot the bank offer terms before checkout so you know exactly what you will earn on large purchases.</p>

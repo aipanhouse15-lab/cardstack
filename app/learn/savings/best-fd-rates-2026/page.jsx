@@ -76,11 +76,11 @@ const SvgLadderStrategy = () => (
     ].map((b, i) => (
       <g key={i} transform={`translate(${20 + i * 168}, 50)`}>
         <rect x="0" y="0" width="160" height="180" fill={b.c} stroke="var(--border)" />
-        <text x="80" y="28" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#0f172a">{b.tenure}</text>
-        <text x="80" y="68" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill="#0f172a">{b.amt}</text>
-        <text x="80" y="98" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="#0f172a">at {b.rate}</text>
+        <text x="80" y="28" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="var(--text)">{b.tenure}</text>
+        <text x="80" y="68" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill="var(--text)">{b.amt}</text>
+        <text x="80" y="98" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="var(--text)">at {b.rate}</text>
         <foreignObject x="8" y="115" width="144" height="58">
-          <div xmlns="http://www.w3.org/1999/xhtml" style={{ fontFamily: "system-ui", fontSize: 9, color: "#0f172a", lineHeight: 1.85, padding: 4 }}>{b.note}</div>
+          <div xmlns="http://www.w3.org/1999/xhtml" style={{ fontFamily: "system-ui", fontSize: 9, color: "var(--text)", lineHeight: 1.85, padding: 4 }}>{b.note}</div>
         </foreignObject>
       </g>
     ))}

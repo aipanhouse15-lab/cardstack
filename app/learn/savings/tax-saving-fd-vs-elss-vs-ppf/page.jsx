@@ -82,7 +82,7 @@ const SvgRiskReturnPlot = () => (
 const SvgDecisionFramework = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Decision framework for 80C investment showing which instrument to pick based on risk tolerance income level and time horizon" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">80C ALLOCATION STRATEGY · HOW TO SPLIT ₹1.5L FOR MAXIMUM BENEFIT</text>
-    <rect x="20" y="38" width="680" height="140" fill="var(--surface, #f8fafc)" stroke="var(--border)" strokeWidth="1" rx="8" />
+    <rect x="20" y="38" width="680" height="140" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" rx="8" />
     {[
       { profile: "30-40 yrs, steady income, can take risk", alloc: "80% ELSS + 20% PPF", reason: "Maximize returns. Use PPF for guaranteed 80C + long-term tax-free corpus.", color: "#7c3aed" },
       { profile: "40-50 yrs, moderate risk tolerance", alloc: "50% ELSS + 50% PPF", reason: "Balance growth with stability. PPF corpus useful from age 55 onwards.", color: "#16a34a" },

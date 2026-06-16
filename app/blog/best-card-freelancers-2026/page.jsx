@@ -35,14 +35,14 @@ const SvgBracketPlaybook = () => (
 const SvgGstFlow = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="GST input credit recovery flow on a freelancer business spend example showing how 18 percent GST on SaaS subscriptions is recoverable" style={{ width: "100%", maxWidth: 760 }}>
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">GST INPUT CREDIT RECOVERY · ₹60K MONTHLY SAAS SPEND</text>
-    <rect x="40" y="50" width="180" height="60" fill="#ede9fe" stroke={COLOR} />
+    <rect x="40" y="50" width="180" height="60" fill="var(--raise)" stroke={COLOR} />
     <text x="130" y="74" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text)">Step 1</text>
     <text x="130" y="92" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Pay ₹60k/mo SaaS</text>
     <text x="130" y="106" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Includes 18% GST = ₹10.8k</text>
 
     <line x1="220" y1="80" x2="270" y2="80" stroke={COLOR} strokeWidth="2" />
 
-    <rect x="270" y="50" width="180" height="60" fill="#ede9fe" stroke={COLOR} />
+    <rect x="270" y="50" width="180" height="60" fill="var(--raise)" stroke={COLOR} />
     <text x="360" y="74" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text)">Step 2</text>
     <text x="360" y="92" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text)">Get GST invoice</text>
     <text x="360" y="106" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Vendor uploads to GSTR-1</text>

@@ -309,7 +309,7 @@ export default function BestCreditCardForHighIncomeEarners() {
               ["ICICI Emeralde", "₹25L+", "Apply online", "Apply via ICICI website or relationship manager"],
               ["Amex Platinum", "₹50L+ preferred", "Apply online", "Direct application; no relationship requirement"]
             ].map(([card, income, mode, path], i) => (
-              <tr key={i} style={{ borderBottom: "1px solid var(--border,#e2e8f0)", background: i % 2 === 0 ? "transparent" : "var(--surface,#f8fafc)" }}>
+              <tr key={i} style={{ borderBottom: "1px solid var(--border,var(--hair))", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                 <td style={{ padding: "10px 14px", fontWeight: 600 }}>{card}</td>
                 <td style={{ padding: "10px 14px", color: GOLD, fontWeight: 600 }}>{income}</td>
                 <td style={{ padding: "10px 14px" }}>{mode}</td>
@@ -326,7 +326,7 @@ export default function BestCreditCardForHighIncomeEarners() {
 
       <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
         {premiumCards.map((card) => (
-          <div key={card.rank} style={{ border: `2px solid ${card.rank === 1 ? GOLD : "var(--border,#e2e8f0)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${GOLD}06` : "transparent" }}>
+          <div key={card.rank} style={{ border: `2px solid ${card.rank === 1 ? GOLD : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${GOLD}06` : "transparent" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 {card.rank === 1 && <IconStar />}
@@ -334,7 +334,7 @@ export default function BestCreditCardForHighIncomeEarners() {
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                 <span style={{ background: `${GOLD}15`, color: GOLD, borderRadius: 20, padding: "3px 10px", fontSize: 12, fontWeight: 600 }}>{card.fee}</span>
-                <span style={{ background: "var(--surface,#f8fafc)", color: "var(--text-muted,#64748b)", borderRadius: 20, padding: "3px 10px", fontSize: 12, border: "1px solid var(--border,#e2e8f0)" }}>{card.income}</span>
+                <span style={{ background: "var(--raise)", color: "var(--text-muted,#64748b)", borderRadius: 20, padding: "3px 10px", fontSize: 12, border: "1px solid var(--border,var(--hair))" }}>{card.income}</span>
               </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, fontSize: 13, color: "var(--text-muted,#475569)", marginBottom: 12 }}>
@@ -374,7 +374,7 @@ export default function BestCreditCardForHighIncomeEarners() {
               ["₹15L", "₹17,450", "₹37,450", "+₹20,000"],
               ["₹20L", "₹24,100", "₹54,100", "+₹30,000"]
             ].map(([spend, regalia, infinia, delta], i) => (
-              <tr key={i} style={{ borderBottom: "1px solid var(--border,#e2e8f0)", background: i % 2 === 0 ? "transparent" : "var(--surface,#f8fafc)" }}>
+              <tr key={i} style={{ borderBottom: "1px solid var(--border,var(--hair))", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                 <td style={{ padding: "10px 14px", fontWeight: 600 }}>{spend}</td>
                 <td style={{ padding: "10px 12px", textAlign: "right" }}>{regalia}</td>
                 <td style={{ padding: "10px 12px", textAlign: "right", color: GOLD, fontWeight: 700 }}>{infinia}</td>
@@ -405,7 +405,7 @@ export default function BestCreditCardForHighIncomeEarners() {
           { label: "Fee payback requirement", value: "₹60,000 to break even", good: false },
           { label: "Who should skip it", value: "Domestic travellers, {'<'} 8 intl trips/yr", good: false }
         ].map(({ label, value, good }, i) => (
-          <div key={i} style={{ background: good ? `${GOLD}08` : "var(--surface,#f8fafc)", border: `1px solid ${good ? GOLD + "30" : "var(--border,#e2e8f0)"}`, borderRadius: 8, padding: "12px 14px" }}>
+          <div key={i} style={{ background: good ? `${GOLD}08` : "var(--raise)", border: `1px solid ${good ? GOLD + "30" : "var(--hair)"}`, borderRadius: 8, padding: "12px 14px" }}>
             <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 4 }}>
               {good ? <IconShield /> : <IconCheck />}
               <span style={{ fontSize: 13, fontWeight: 600, color: good ? GOLD : "var(--text-muted,#64748b)" }}>{label}</span>
@@ -440,7 +440,7 @@ export default function BestCreditCardForHighIncomeEarners() {
             <li>Annual fee: ₹12,500</li>
           </ul>
         </div>
-        <div style={{ background: "var(--surface,#f8fafc)", border: "1px solid var(--border,#e2e8f0)", borderRadius: 12, padding: "18px" }}>
+        <div style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 12, padding: "18px" }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
             <IconConcierge />
             <strong style={{ color: "var(--text-muted,#64748b)", fontSize: 15 }}>International Spends</strong>
@@ -456,8 +456,8 @@ export default function BestCreditCardForHighIncomeEarners() {
       </div>
 
       {/* Actionable CTA */}
-      <div style={{ background: ACCENT, borderRadius: 16, padding: "24px 26px", marginBottom: 44, color: "#f8fafc" }}>
-        <h3 style={{ margin: "0 0 12px", fontSize: 18, fontWeight: 700, color: "#f8fafc" }}>Your Path to the Invite-Only Tier</h3>
+      <div style={{ background: ACCENT, borderRadius: 16, padding: "24px 26px", marginBottom: 44, color: "var(--raise)" }}>
+        <h3 style={{ margin: "0 0 12px", fontSize: 18, fontWeight: 700, color: "var(--raise)" }}>Your Path to the Invite-Only Tier</h3>
         <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 16 }}>
           {[
             "Open a salary account with HDFC or Axis and route your primary income through it. The bank's invite algorithm prioritises customers with regular salary credits.",
@@ -466,14 +466,14 @@ export default function BestCreditCardForHighIncomeEarners() {
           ].map((step, i) => (
             <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
               <div style={{ background: GOLD, color: "#fff", borderRadius: "50%", width: 22, height: 22, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{i + 1}</div>
-              <span style={{ fontSize: 14, color: "#cbd5e1" }}>{step}</span>
+              <span style={{ fontSize: 14, color: "var(--hair2)" }}>{step}</span>
             </div>
           ))}
         </div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
           <Link href="/cards/hdfc-infinia" style={{ display: "inline-block", padding: "10px 18px", background: GOLD, color: "#fff", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>HDFC Infinia Full Review</Link>
-          <Link href="/stack-builder" style={{ display: "inline-block", padding: "10px 18px", background: "transparent", color: "#f8fafc", border: "1px solid #4b5563", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Premium Stack Builder</Link>
-          <Link href="/blog/invite-only-cards-india-guide" style={{ display: "inline-block", padding: "10px 18px", background: "transparent", color: "#f8fafc", border: "1px solid #4b5563", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>How Invites Work</Link>
+          <Link href="/stack-builder" style={{ display: "inline-block", padding: "10px 18px", background: "transparent", color: "var(--raise)", border: "1px solid #4b5563", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>Premium Stack Builder</Link>
+          <Link href="/blog/invite-only-cards-india-guide" style={{ display: "inline-block", padding: "10px 18px", background: "transparent", color: "var(--raise)", border: "1px solid #4b5563", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>How Invites Work</Link>
         </div>
       </div>
 
@@ -481,7 +481,7 @@ export default function BestCreditCardForHighIncomeEarners() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20 }}>Frequently Asked Questions</h2>
       <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 44 }}>
         {faq.mainEntity.map((item, i) => (
-          <details key={i} style={{ border: "1px solid var(--border,#e2e8f0)", borderRadius: 10 }}>
+          <details key={i} style={{ border: "1px solid var(--border,var(--hair))", borderRadius: 10 }}>
             <summary style={{ padding: "14px 18px", fontWeight: 600, fontSize: 15, cursor: "pointer", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               {item.name}
               <span style={{ color: GOLD, fontSize: 18, flexShrink: 0, marginLeft: 12 }}>+</span>
@@ -493,7 +493,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         ))}
       </div>
 
-      <footer style={{ borderTop: "1px solid var(--border,#e2e8f0)", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border,var(--hair))", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
         <p style={{ margin: "0 0 6px" }}>
           <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Premium card invites are at the sole discretion of the issuing bank. Income thresholds are indicative based on publicly available information and may change. Reward calculations assume full SmartBuy redemption and may differ based on actual redemption method.
         </p>

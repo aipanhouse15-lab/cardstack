@@ -30,7 +30,7 @@ const SvgCopayMath = () => (
       { claim: "₹10L claim (critical illness)", copay: "₹1,00,000", insurer: "₹9,00,000", oopPct: "10%", color: "#dc2626" },
     ].map(({ claim, copay, insurer, oopPct, color }, i) => (
       <g key={claim}>
-        <rect x="20" y={50 + i * 74} width={700} height="60" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} rx="4" />
+        <rect x="20" y={50 + i * 74} width={700} height="60" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} rx="4" />
         <text x="26" y={68 + i * 74} fontFamily="system-ui" fontSize="13" fontWeight="700" fill="var(--text)">{claim}</text>
         <text x="26" y="85"style={{ display: "none" }} />
         <text x="26" y={88 + i * 74} fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Insurer pays: <tspan fill="#16a34a" fontWeight="700">{insurer}</tspan> · You pay (copay): <tspan fill={color} fontWeight="700">{copay}</tspan> ({oopPct} of claim)</text>
@@ -99,7 +99,7 @@ const SvgInsurerCopayTerms = () => (
       ["HDFC Ergo (Optima)", "None", "N/A", "N/A", "No copay, best waiting period too"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={59 + ri * 30} width={700} height="30" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={59 + ri * 30} width={700} height="30" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 170, 280, 450, 560];
           const isGood = cell === "None" || cell === "N/A" || cell.includes("No copay");
@@ -122,7 +122,7 @@ const SvgWhoShouldChoose = () => (
       { profile: "Any age, buying for parents", choice: "No Copay Always", reason: "You're protecting someone else's health. Optimize for coverage, not premium savings.", color: "#dc2626" },
     ].map(({ profile, choice, reason, color }, i) => (
       <g key={profile}>
-        <rect x="20" y={38 + i * 38} width={700} height="30" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={38 + i * 38} width={700} height="30" fill={i % 2 === 0 ? "var(--raise)" : "transparent"} />
         <text x="26" y={56 + i * 38} fontFamily="system-ui" fontSize="11" fill="var(--text)">{profile}</text>
         <rect x="350" y={40 + i * 38} width="120" height="24" fill={color} rx="4" />
         <text x="410" y={57 + i * 38} textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#fff">{choice}</text>

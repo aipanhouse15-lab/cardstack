@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgBankFlexibilityRating = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Annual fee waiver flexibility rating by Indian bank, from most to least flexible" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Annual Fee Waiver Flexibility — Indian Banks Ranked (June 2026)</text>
     {[
       { bank: "Kotak Mahindra", score: 88, label: "Very flexible with good history" },
@@ -45,7 +45,7 @@ const SvgBankFlexibilityRating = () => (
 
 const SvgWaiverOutcomeMatrix = () => (
   <svg viewBox="0 0 720 270" role="img" aria-label="Possible annual fee waiver outcomes when calling retention desk" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="270" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="270" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">What Banks Actually Offer When You Call About Annual Fee</text>
     <rect x="36" y="52" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
     <text x="50" y="70" fontSize="12" fontWeight="700" fill="var(--text)">Outcome</text>
@@ -71,12 +71,12 @@ const SvgWaiverOutcomeMatrix = () => (
 
 const SvgAxisMagnusWaiverMath = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Axis Magnus annual fee waiver savings calculation" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Axis Magnus Annual Fee Waiver — The Real Savings (June 2026)</text>
     <rect x="36" y="54" width="190" height="80" rx="6" fill="var(--border)" opacity="0.3" />
     <text x="131" y="84" textAnchor="middle" fontSize="12" fontWeight="600" fill="var(--text)">Annual fee (ex-GST)</text>
     <text x="131" y="110" textAnchor="middle" fontSize="26" fontWeight="800" fill="var(--text)">₹10,000</text>
-    <rect x="244" y="54" width="190" height="80" rx="6" fill="#ea580c" opacity="0.12" />
+    <rect x="244" y="54" width="190" height="80" rx="6" fill="var(--raise)" opacity="0.12" />
     <text x="339" y="84" textAnchor="middle" fontSize="12" fontWeight="600" fill="var(--text)">18% GST on fee</text>
     <text x="339" y="110" textAnchor="middle" fontSize="26" fontWeight="800" fill="#ea580c">₹1,800</text>
     <rect x="452" y="54" width="232" height="80" rx="6" fill="#16a34a" opacity="0.12" />
@@ -89,12 +89,12 @@ const SvgAxisMagnusWaiverMath = () => (
 
 const SvgCallTimeline = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Best time window to call for annual fee waiver on credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">When to Call — The Optimal Window</text>
     <rect x="36" y="50" width="648" height="16" rx="8" fill="var(--border)" opacity="0.5" />
     <rect x="36" y="50" width="180" height="16" rx="8" fill="#dc2626" opacity="0.5" />
     <rect x="216" y="50" width="200" height="16" rx="8" fill="#16a34a" opacity="0.8" />
-    <rect x="416" y="50" width="140" height="16" rx="8" fill="#f59e0b" opacity="0.7" />
+    <rect x="416" y="50" width="140" height="16" rx="8" fill="var(--raise)" opacity="0.7" />
     <rect x="556" y="50" width="128" height="16" rx="8" fill="#dc2626" opacity="0.4" />
     <text x="126" y="86" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Too early</text>
     <text x="316" y="86" textAnchor="middle" fontSize="11" fontWeight="700" fill="#16a34a">Sweet spot: 30-7 days before renewal</text>
@@ -107,7 +107,7 @@ const SvgCallTimeline = () => (
 
 const SvgEscalationLadder = () => (
   <svg viewBox="0 0 720 230" role="img" aria-label="Escalation steps if first agent refuses annual fee waiver" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="230" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="230" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Escalation Ladder — If the First Agent Says No</text>
     {[
       { step: "Step 1", action: "Ask for retention/loyalty desk specifically", tip: "Say: 'I'd like to speak with your retention department please.'" },
@@ -128,7 +128,7 @@ const SvgEscalationLadder = () => (
 
 const SvgDowngradeVsClose = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Comparison of downgrading versus closing a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Downgrade vs. Close — What Happens to Your Credit Score</text>
     <rect x="36" y="52" width="308" height="130" rx="6" fill="#16a34a" opacity="0.08" />
     <text x="190" y="78" textAnchor="middle" fontSize="14" fontWeight="700" fill="#16a34a">Downgrade Card</text>
@@ -150,7 +150,7 @@ const SvgDowngradeVsClose = () => (
 
 const SvgMetricsTable = () => (
   <svg viewBox="0 0 720 230" role="img" aria-label="Cardholder metrics that strengthen your annual fee waiver case" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="230" fill="var(--surface, #f8fafc)" rx="10" />
+    <rect width="720" height="230" fill="var(--raise)" rx="10" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Metrics That Strengthen Your Waiver Case</text>
     <rect x="36" y="50" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
     <text x="50" y="68" fontSize="12" fontWeight="700" fill="var(--text)">Metric</text>
@@ -329,7 +329,7 @@ export default function BlogGetAnnualFeeWaived() {
       <section style={{ marginBottom: 32 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Script — Word for Word</h2>
 
-        <div style={{ background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 24px", marginBottom: 16 }}>
+        <div style={{ background: "var(--raise)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 24px", marginBottom: 16 }}>
           <p style={{ fontSize: 13, fontWeight: 700, color: COLOR, margin: "0 0 8px" }}>Opening (the first 30 seconds matter most)</p>
           <p style={{ fontSize: 14, fontStyle: "italic", margin: "0 0 8px", color: "var(--text)" }}>
             "Hello, I received the renewal SMS for my [card name] card ending in [XXXX]. I have been a customer for [X] years with a clean payment record and monthly spend of about ₹[amount]. I wanted to speak with someone about my annual fee before I decide on renewal."
@@ -337,7 +337,7 @@ export default function BlogGetAnnualFeeWaived() {
           <p style={{ fontSize: 12, color: "var(--text-muted)", margin: 0 }}>Then stop. Do not fill the silence. Let the agent respond.</p>
         </div>
 
-        <div style={{ background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 24px", marginBottom: 16 }}>
+        <div style={{ background: "var(--raise)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 24px", marginBottom: 16 }}>
           <p style={{ fontSize: 13, fontWeight: 700, color: COLOR, margin: "0 0 8px" }}>If they ask "what do you want?"</p>
           <p style={{ fontSize: 14, fontStyle: "italic", margin: "0 0 8px", color: "var(--text)" }}>
             "I am considering whether to continue with this card or downgrade to [no-fee variant / competitor card]. I wanted to check if there is any loyalty waiver available for long-standing customers before I make a decision."
@@ -345,7 +345,7 @@ export default function BlogGetAnnualFeeWaived() {
           <p style={{ fontSize: 12, color: "var(--text-muted)", margin: 0 }}>The word "downgrade" is important — it signals you will leave the product but stay with the bank, which agents can sometimes count as a partial retention win.</p>
         </div>
 
-        <div style={{ background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 24px", marginBottom: 16 }}>
+        <div style={{ background: "var(--raise)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 24px", marginBottom: 16 }}>
           <p style={{ fontSize: 13, fontWeight: 700, color: COLOR, margin: "0 0 8px" }}>If they offer a spend milestone instead</p>
           <p style={{ fontSize: 14, fontStyle: "italic", margin: "0 0 8px", color: "var(--text)" }}>
             "I understand the milestone option — what is the spend required and by when? Can you confirm that in writing via SMS or email? And is there any option for a partial waiver without a condition?"
@@ -353,7 +353,7 @@ export default function BlogGetAnnualFeeWaived() {
           <p style={{ fontSize: 12, color: "var(--text-muted)", margin: 0 }}>Always get spend milestones in writing — amounts and deadlines sometimes differ from what was said on the call.</p>
         </div>
 
-        <div style={{ background: "var(--surface, #f8fafc)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 24px", marginBottom: 16 }}>
+        <div style={{ background: "var(--raise)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 24px", marginBottom: 16 }}>
           <p style={{ fontSize: 13, fontWeight: 700, color: COLOR, margin: "0 0 8px" }}>If they offer bonus points instead of a waiver</p>
           <p style={{ fontSize: 14, fontStyle: "italic", margin: "0 0 8px", color: "var(--text)" }}>
             "What is the cash value of those points at current redemption rates? [Pause for answer.] So that comes to ₹[X], versus the ₹[fee] I would pay. Is there any way to get that closer to a full value offset?"
@@ -397,7 +397,7 @@ export default function BlogGetAnnualFeeWaived() {
         <SvgDowngradeVsClose />
       </section>
 
-      <section style={{ background: "#f0fdf4", border: "1px solid #bbf7d0", borderRadius: 8, padding: "20px 24px", marginBottom: 36 }}>
+      <section style={{ background: "var(--green-dim)", border: "1px solid rgba(62,224,143,.25)", borderRadius: 8, padding: "20px 24px", marginBottom: 36 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>Your Pre-Call Checklist</h2>
         <ol style={{ fontSize: 14, color: "var(--text)", lineHeight: 2.1, paddingLeft: 20 }}>
           <li>Note your card start date — "customer since [month, year]" lands better than "a few years."</li>

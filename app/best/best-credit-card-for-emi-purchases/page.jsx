@@ -40,7 +40,7 @@ const IconWarning = () => (
 
 const IconCalendar = () => (
   <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Monthly EMI calendar">
-    <rect x="3" y="5" width="22" height="20" rx="3" fill="var(--surface,#f8fafc)" stroke="var(--border,#e2e8f0)" strokeWidth="2"/>
+    <rect x="3" y="5" width="22" height="20" rx="3" fill="var(--raise)" stroke="var(--hair)" strokeWidth="2"/>
     <rect x="3" y="10" width="22" height="3" fill={COLOR} opacity="0.2"/>
     <rect x="8" y="3" width="2" height="5" rx="1" fill={COLOR}/>
     <rect x="18" y="3" width="2" height="5" rx="1" fill={COLOR}/>
@@ -70,7 +70,7 @@ const IconCheck = () => (
 
 const IconInfo = () => (
   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Information note">
-    <circle cx="10" cy="10" r="9" fill="var(--surface,#f8fafc)" stroke={COLOR} strokeWidth="1.5"/>
+    <circle cx="10" cy="10" r="9" fill="var(--raise)" stroke={COLOR} strokeWidth="1.5"/>
     <rect x="9" y="9" width="2" height="5" rx="1" fill={COLOR}/>
     <rect x="9" y="5.5" width="2" height="2" rx="1" fill={COLOR}/>
   </svg>
@@ -276,7 +276,7 @@ export default function BestCreditCardForEMIPurchases() {
         In the first case, your card often earns no reward points because the bank classifies it as a financing transaction. In the second case, you pay full price and the brand covers the interest — but you may have been able to buy the product cheaper with an instant bank discount or during a sale.
       </p>
 
-      <div style={{ background: "var(--surface,#f8fafc)", border: "1px solid var(--border,#e2e8f0)", borderRadius: 10, padding: "16px 20px", marginBottom: 20 }}>
+      <div style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 10, padding: "16px 20px", marginBottom: 20 }}>
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 8 }}>
           <IconInfo />
           <strong style={{ fontSize: 14 }}>RBI Directive (2024, still in force June 2026)</strong>
@@ -302,7 +302,7 @@ export default function BestCreditCardForEMIPurchases() {
       </p>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 20 }}>
-        <div style={{ background: "#f0fdf4", border: "1px solid #86efac", borderRadius: 8, padding: "14px 16px" }}>
+        <div style={{ background: "var(--green-dim)", border: "1px solid #86efac", borderRadius: 8, padding: "14px 16px" }}>
           <strong style={{ fontSize: 13, color: "#16a34a", display: "block", marginBottom: 6 }}>Cost EMI (you pay interest)</strong>
           <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.7 }}>
             <li>HDFC: Points earned on full amount</li>
@@ -311,7 +311,7 @@ export default function BestCreditCardForEMIPurchases() {
             <li>ICICI: Points on principal amount</li>
           </ul>
         </div>
-        <div style={{ background: "#fff7ed", border: "1px solid #fdba74", borderRadius: 8, padding: "14px 16px" }}>
+        <div style={{ background: "rgba(212,168,83,.06)", border: "1px solid #fdba74", borderRadius: 8, padding: "14px 16px" }}>
           <strong style={{ fontSize: 13, color: "#ea580c", display: "block", marginBottom: 6 }}>No-Cost EMI (subvented)</strong>
           <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.7 }}>
             <li>HDFC: Points withheld on select brand EMIs</li>
@@ -337,10 +337,10 @@ export default function BestCreditCardForEMIPurchases() {
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
           <thead>
             <tr style={{ background: `${COLOR}12` }}>
-              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Purchase</th>
-              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>Amount</th>
-              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>1% Fee</th>
-              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,#e2e8f0)" }}>2% Fee</th>
+              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Purchase</th>
+              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Amount</th>
+              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>1% Fee</th>
+              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>2% Fee</th>
             </tr>
           </thead>
           <tbody>
@@ -351,7 +351,7 @@ export default function BestCreditCardForEMIPurchases() {
               ["AC / Refrigerator", "₹45,000", "₹450", "₹900"],
               ["Premium Smartphone (iPhone)", "₹1,20,000", "₹1,200", "₹2,400"]
             ].map(([item, amt, f1, f2], i) => (
-              <tr key={i} style={{ borderBottom: "1px solid var(--border,#e2e8f0)", background: i % 2 === 0 ? "transparent" : "var(--surface,#f8fafc)" }}>
+              <tr key={i} style={{ borderBottom: "1px solid var(--border,var(--hair))", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                 <td style={{ padding: "10px 14px" }}>{item}</td>
                 <td style={{ padding: "10px 14px", textAlign: "right" }}>{amt}</td>
                 <td style={{ padding: "10px 14px", textAlign: "right", color: "#16a34a", fontWeight: 600 }}>{f1}</td>
@@ -368,7 +368,7 @@ export default function BestCreditCardForEMIPurchases() {
 
       <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
         {cards.map((card) => (
-          <div key={card.rank} style={{ border: `2px solid ${card.rank === 1 ? COLOR : "var(--border,#e2e8f0)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${COLOR}06` : "transparent" }}>
+          <div key={card.rank} style={{ border: `2px solid ${card.rank === 1 ? COLOR : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${COLOR}06` : "transparent" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 {card.rank === 1 && <IconStar />}
@@ -403,7 +403,7 @@ export default function BestCreditCardForEMIPurchases() {
           { q: "Does your card earn reward points on this EMI transaction?", ans: "No", action: "A 2% cashback card losing points on a ₹60,000 purchase = ₹1,200 lost reward. Factor this in." },
           { q: "Is the processing fee visible at checkout?", ans: "Not shown", action: "Call your bank before purchasing. Hidden fees are common on offline store EMIs." }
         ].map(({ q, ans, action }, i) => (
-          <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 16px", background: "var(--surface,#f8fafc)", borderRadius: 8, border: "1px solid var(--border,#e2e8f0)" }}>
+          <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 16px", background: "var(--raise)", borderRadius: 8, border: "1px solid var(--border,var(--hair))" }}>
             <div style={{ background: COLOR, color: "#fff", borderRadius: "50%", width: 22, height: 22, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{i + 1}</div>
             <div style={{ flex: 1 }}>
               <div style={{ fontWeight: 600, fontSize: 14, marginBottom: 4 }}>{q}</div>
@@ -436,7 +436,7 @@ export default function BestCreditCardForEMIPurchases() {
           <div style={{ fontWeight: 700, fontSize: 14, color: COLOR, marginBottom: 4 }}>Stack Builder</div>
           <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)" }}>Build your optimal 2-card combo for EMI + everyday spends</div>
         </Link>
-        <Link href="/blog/emi-reward-points-india" style={{ display: "block", padding: "16px", background: "var(--surface,#f8fafc)", borderRadius: 10, border: "1px solid var(--border,#e2e8f0)", textDecoration: "none", color: "var(--text)" }}>
+        <Link href="/blog/emi-reward-points-india" style={{ display: "block", padding: "16px", background: "var(--raise)", borderRadius: 10, border: "1px solid var(--border,var(--hair))", textDecoration: "none", color: "var(--text)" }}>
           <div style={{ fontWeight: 700, fontSize: 14, color: COLOR, marginBottom: 4 }}>EMI Reward Points Deep Dive</div>
           <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)" }}>Bank-by-bank breakdown of when you earn and when you don't</div>
         </Link>
@@ -463,7 +463,7 @@ export default function BestCreditCardForEMIPurchases() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20 }}>Frequently Asked Questions</h2>
       <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 44 }}>
         {faq.mainEntity.map((item, i) => (
-          <details key={i} style={{ border: "1px solid var(--border,#e2e8f0)", borderRadius: 10, padding: "0" }}>
+          <details key={i} style={{ border: "1px solid var(--border,var(--hair))", borderRadius: 10, padding: "0" }}>
             <summary style={{ padding: "14px 18px", fontWeight: 600, fontSize: 15, cursor: "pointer", color: "var(--text)", listStyle: "none", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               {item.name}
               <span style={{ color: COLOR, fontSize: 18, flexShrink: 0, marginLeft: 12 }}>+</span>
@@ -475,7 +475,7 @@ export default function BestCreditCardForEMIPurchases() {
         ))}
       </div>
 
-      <footer style={{ borderTop: "1px solid var(--border,#e2e8f0)", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
+      <footer style={{ borderTop: "1px solid var(--border,var(--hair))", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.7 }}>
         <p style={{ margin: "0 0 6px" }}>
           <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. We are not affiliated with any bank or card issuer. Card features, fees, and reward rates change frequently — verify all details with the issuing bank before applying. This page does not constitute financial advice.
         </p>

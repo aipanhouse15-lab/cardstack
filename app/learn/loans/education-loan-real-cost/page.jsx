@@ -28,12 +28,12 @@ const SvgMoratoriumCost = () => (
     <text x="70" y="135" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#fff">₹15L</text>
     <text x="70" y="152" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#bfdbfe">Borrowed</text>
     <path d="M 122 140 L 178 140" stroke="#f59e0b" strokeWidth="2" />
-    <rect x="180" y="60" width="120" height="160" fill="#f59e0b" rx="6" opacity="0.8" />
+    <rect x="180" y="60" width="120" height="160" fill="var(--raise)" rx="6" opacity="0.8" />
     <text x="240" y="130" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#fff">₹16.8L</text>
     <text x="240" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fff">After Year 1</text>
     <text x="240" y="163" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fde68a">(11% × ₹15L)</text>
     <path d="M 302 140 L 358 140" stroke="#f97316" strokeWidth="2" />
-    <rect x="360" y="40" width="120" height="200" fill="#f97316" rx="6" opacity="0.8" />
+    <rect x="360" y="40" width="120" height="200" fill="var(--raise)" rx="6" opacity="0.8" />
     <text x="420" y="130" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#fff">₹18.7L</text>
     <text x="420" y="148" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fff">After Year 2</text>
     <text x="420" y="163" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="#fed7aa">(study complete)</text>
@@ -71,7 +71,7 @@ const SvgBankComparison = () => (
       ["IDBI Bank", "9.50%", "Course+12mo", "Above ₹7.5L", "Full", "10-15 days"],
     ].map((row, ri) => (
       <g key={row[0]}>
-        <rect x="20" y={61 + ri * 36} width={700} height="36" fill={ri % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={61 + ri * 36} width={700} height="36" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
         {row.map((cell, ci) => {
           const xs = [20, 130, 220, 320, 430, 540];
           const isLow = cell.startsWith("8.") || cell === "None (IIT/IIM)" || cell === "None up to ₹40L";
@@ -123,7 +123,7 @@ const SvgRepaymentTimeline = () => (
         <text x={120 + barW} y={84 + i * 70} fontFamily="system-ui" fontSize="13" fontWeight="700" fill={color}> Total: {totalRepaid}</text>
       </g>
     ))}
-    <rect x="20" y="248" width="680" height="24" fill="#fef2f2" stroke="#dc2626" strokeWidth="1" rx="4" />
+    <rect x="20" y="248" width="680" height="24" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" rx="4" />
     <text x="30" y="264" fontFamily="system-ui" fontSize="12" fill="#dc2626" fontWeight="600">The 15-year option feels easiest month-to-month. It costs ₹11L more in total interest than the 7-year option. If possible, choose 7-10 years and prepay aggressively.</text>
   </svg>
 );
@@ -143,7 +143,7 @@ const SvgInterestVsMoratorium = () => (
     <text x="540" y="110" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="#bbf7d0">Outstanding at EMI start: ₹15L</text>
     <text x="540" y="128" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="#bbf7d0">Monthly EMI (10yr): ₹20,700</text>
     <text x="540" y="146" textAnchor="middle" fontFamily="system-ui" fontSize="12" fill="#bbf7d0">Total repaid: ₹28.4L</text>
-    <rect x="180" y="180" width="360" height="44" fill="#f59e0b" rx="8" />
+    <rect x="180" y="180" width="360" height="44" fill="var(--raise)" rx="8" />
     <text x="360" y="200" textAnchor="middle" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="#fff">You save ₹6L by paying ₹39,600 during study</text>
     <text x="360" y="218" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="#fff">That's a 15:1 return on study-period payments. If parents can help during study: this is the move.</text>
   </svg>
