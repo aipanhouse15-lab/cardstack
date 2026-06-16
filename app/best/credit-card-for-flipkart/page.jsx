@@ -265,7 +265,7 @@ export default function BestCreditCardForFlipkart() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -286,7 +286,7 @@ export default function BestCreditCardForFlipkart() {
         The best Flipkart card is not the Flipkart card. Here is the cap-by-cap breakdown of which card earns the most on Flipkart and why the naming of two very similar cards trips everyone up.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 32 }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         Last updated {UPDATED} · By Ash K · 8 min read
       </div>
 

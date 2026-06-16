@@ -218,7 +218,7 @@ export default function BestCreditCardForMovieEntertainment() {
   ];
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -241,12 +241,12 @@ export default function BestCreditCardForMovieEntertainment() {
         The right credit card turns a ₹500 movie ticket into a ₹200 one. Here's exactly how the BookMyShow deal works, which cards deliver it, and what to do about Netflix and live events.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span><span>By Ash K</span><span>8 min read</span>
       </div>
 
       {/* Honest number */}
-      <div style={{ background: `${COLOR}10`, border: `1.5px solid ${COLOR}30`, borderRadius: 12, padding: "18px 22px", marginBottom: 36, display: "flex", gap: 12 }}>
+      <div style={{ background: `${COLOR}10`, border: `1.5px solid ${COLOR}30`, borderRadius: 12, padding: "18px 22px", marginBottom: 28, display: "flex", gap: 12 }}>
         <IconTicket />
         <div>
           <strong style={{ color: COLOR, fontSize: 14, display: "block", marginBottom: 4 }}>The Honest Number on Movie Card Benefits</strong>
@@ -281,7 +281,7 @@ export default function BestCreditCardForMovieEntertainment() {
         ))}
       </div>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         The offer resets monthly, not weekly. Most BMS-linked cards allow 1-2 discounted bookings per calendar month. If you use it on the 2nd of the month, you need to wait until the 1st of next month for the counter to reset.
       </p>
 
@@ -289,7 +289,7 @@ export default function BestCreditCardForMovieEntertainment() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>BookMyShow Credit Card Offers Compared (June 2026)</h2>
       <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 16 }}>Annual value calculated assuming consistent monthly use of full offer.</p>
 
-      <div style={{ overflowX: "auto", marginBottom: 36 }}>
+      <div style={{ overflowX: "auto", marginBottom: 28 }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
           <thead>
             <tr style={{ background: `${COLOR}12` }}>
@@ -324,7 +324,7 @@ export default function BestCreditCardForMovieEntertainment() {
       {/* Card picks detailed */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Top 3 Entertainment Cards: Full Breakdown</h2>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
         {[
           {
             rank: 1,
@@ -399,7 +399,7 @@ export default function BestCreditCardForMovieEntertainment() {
         Streaming subscriptions are one of the most consistent recurring charges in India today. Netflix, Prime, Hotstar, and Spotify together cost a typical household ₹8,000 to ₹11,000 per year. Choosing the right card for these auto-debits adds up.
       </p>
 
-      <div style={{ overflowX: "auto", marginBottom: 32 }}>
+      <div style={{ overflowX: "auto", marginBottom: 24 }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
           <thead>
             <tr style={{ background: `${COLOR}10` }}>
@@ -450,7 +450,7 @@ export default function BestCreditCardForMovieEntertainment() {
         For gaming spend (PlayStation Store, Steam, Xbox Game Pass), international charges in USD or GBP attract forex markup on most cards. A zero-forex card like IDFC FIRST WOW saves you 3.5% on every in-game purchase or DLC download.
       </p>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         See the <Link href="/best/credit-card-with-no-forex-markup" style={{ color: COLOR }}>zero forex card guide</Link> for more on managing international digital spend.
       </p>
 

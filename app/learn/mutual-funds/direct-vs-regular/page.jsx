@@ -162,7 +162,7 @@ export default function PageDirectVsRegular() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -170,44 +170,44 @@ export default function PageDirectVsRegular() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>MUTUAL FUNDS · DIRECT PLANS · EXPENSE RATIO</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Direct vs Regular Mutual Fund: The 1% That Becomes ₹47 Lakh Over 20 Years</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Same fund, same fund manager, same portfolio. Just 1% higher expense ratio in the regular plan. On a ₹10,000 SIP for 20 years, that 1% costs you ₹47 lakh. And your bank RM benefits from every rupee of it.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Same Fund, Two Prices</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Every mutual fund in India exists in two versions: direct plan and regular plan. Same fund manager. Same portfolio of stocks or bonds. Same investment objective. The only difference is the expense ratio — the annual fee the fund charges as a percentage of assets under management.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Direct plans have lower expense ratios because there's no distributor commission. Regular plans pay a trailing commission (typically 0.5-1.5% per year) to whoever sold you the fund — your bank RM, ICICI Direct, Zerodha Regular (if you bought through a broker), or an independent financial advisor.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This commission is deducted silently from the fund's NAV every single day. You never see a fee in your account statement. But you see it over time in the lower NAV growth of your regular plan versus the direct plan of the same fund.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Expense Ratio Gap: What You're Actually Paying</h2>
         <SvgExpenseRatio />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The Axis Bluechip example is stark: 0.46% for direct, 1.56% for regular — a 1.10% annual difference. On a ₹10L corpus, that's ₹11,000 per year flowing to the distributor. Compounded over 20 years, this becomes the ₹47L difference we're talking about.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Index funds have the smallest gap (0.15-0.30% difference) because their total expense ratios are already low. Active funds have larger gaps. For the most impact, switching from a regular active fund (like Axis Bluechip regular) to the direct plan of the same fund saves the most.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Math: ₹47 Lakh Is Not Hyperbole</h2>
         <SvgWealthDifference20yr />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The compound math is unforgiving. A 1% lower annual return on a growing corpus creates an exponentially larger gap over time. At Year 5: the gap is about ₹2L. At Year 10: about ₹10L. At Year 20: ₹47L. The longer you stay invested, the more expensive the regular plan becomes.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>There's an additional framing worth sitting with: that ₹47L went somewhere. It went to the distributor — your bank, your broker, or your agent. They earned it by doing nothing after the initial sale. The trailing commission is the perfect passive income business, at your expense.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How the Commission System Works</h2>
         <SvgCommissionFlow />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This is why your HDFC Bank relationship manager recommends HDFC Mutual Fund. Not because it's the best fund — it may or may not be. But because HDFC Bank earns trailing commission on HDFC AMC regular plans. The conflict of interest is structural, not personal.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>SEBI has mandated disclosure of distributor commissions in the fund KIM (Key Information Memorandum) and on fund house websites. You can look up exactly how much your distributor earns annually. Most investors never check.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Where to Buy Direct Plans (All Free)</h2>
         <SvgPlatformComparison />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>MF Central is the government-authorized consolidator — all AMCs are available, your portfolio is consolidated, and XIRR is calculated automatically. Kuvera's UI is exceptional and includes features like goal tracking and portfolio overlap analysis. Both are completely free for direct plan investing — no AUM charge, no transaction fee.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Avoid any platform that charges 0.5-1% AUM fee "for using direct plans." That wipes out most of the savings from going direct. Real direct plan platforms earn from premium features or from referrals — not from your investments.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How to Switch: Step by Step</h2>
         <SvgSwitchingProcess />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The most important step: check your tax position before switching. Switching triggers capital gains. If you've held funds for over a year, gains up to ₹1.25L per year are tax-free (LTCG exemption). Plan your switches to stay within this limit each year. A portfolio of ₹20L in regular plans with ₹8L in unrealized gains might need to be switched over 3-4 years to minimize tax.</p>
@@ -215,7 +215,7 @@ export default function PageDirectVsRegular() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>See our <Link href="/learn/mutual-funds/cagr-vs-actual-return" style={{ color: COLOR }}>CAGR vs actual return guide</Link> for understanding how to measure your direct plan performance, and our <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link> for all related content.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>

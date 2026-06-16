@@ -155,7 +155,7 @@ export default function PageHealthInsuranceParents() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -163,9 +163,9 @@ export default function PageHealthInsuranceParents() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>INSURANCE · HEALTH · SENIOR CITIZEN POLICIES</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Health Insurance for Parents Above 60: Real Prices, Real Waiting Periods, Real Traps (June 2026)</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Premium jumps 5x between age 35 and 60. Pre-existing diseases mean your parents may not be covered for their most likely health events for 2-4 years. And the cheapest policies have room rent traps. Here's what to actually buy.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Why Parents' Health Insurance Is a Different Problem</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Buying health insurance for a 30-year-old is straightforward. Buy any decent plan, it's affordable, and the probability of a major claim in the next 10 years is low. Buying for parents above 60 is a completely different exercise.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The premium is 4-8x higher. Pre-existing conditions (diabetes, hypertension, heart issues — conditions extremely common in Indians above 60) trigger multi-year waiting periods. Insurers are stricter about what they'll cover. And the stakes are higher — the probability of hospitalization above 60 is significantly higher than at 35.</p>
@@ -173,7 +173,7 @@ export default function PageHealthInsuranceParents() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The key insight from the premium chart: buy before conditions are diagnosed. A 55-year-old with no declared pre-existing diseases gets a relatively manageable ₹28,500 premium. The same person one year later, after a diabetes diagnosis, will face a 2-3 year PED waiting period at any new insurer and potentially a loaded premium of ₹35,000-40,000. The gap between healthy-at-55 and diagnosed-at-56 can cost you years of full coverage.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Top Insurers for Senior Citizens: June 2026</h2>
         <SvgInsurerSeniorComparison />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>HDFC Ergo Optima Restore is arguably the best overall for parents with pre-existing conditions: 2-year PED waiting period (shortest in the market), no room rent limit, and annual restoration of sum insured (if SI is exhausted in one claim, it's restored for the rest of the year). Premium is higher but the coverage quality is worth it for parents who are likely to actually use the policy.</p>
@@ -181,7 +181,7 @@ export default function PageHealthInsuranceParents() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Avoid New India Assurance Varistha unless the lower premium is genuinely unaffordable. The 1% of SI room rent limit + proportionate deduction clause is a real risk for senior citizen policyholders who are more likely to require private rooms post-surgery for comfort and recovery.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Pre-Existing Disease Trap: The Real Coverage Gap</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This is the single biggest source of claim rejection and disappointment for senior citizen policyholders. Almost every Indian above 60 has at least one pre-existing condition — and all of them have waiting periods.</p>
         <SvgWaitingPeriod />
@@ -189,14 +189,14 @@ export default function PageHealthInsuranceParents() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The solution is timing and honesty. When buying, declare all pre-existing conditions accurately — non-disclosure leads to rejected claims, which is worse than a higher premium. Once enrolled, the waiting period clock starts. Don't switch insurers during the waiting period — you'd restart the clock at the new insurer unless you use IRDAI's portability process correctly.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Floater vs Individual: Which for Parents?</h2>
         <SvgFlaterVsIndividual />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For parents above 65 or with different health conditions, individual policies are the clear recommendation. The risk with a floater: if your father has a major hospitalization that exhausts most of the ₹5L shared cover, your mother has minimal coverage left for the rest of that year. For a senior couple, this scenario is not hypothetical.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Annual restore feature partially mitigates this. Some policies (HDFC Ergo Optima Restore, Niva Bupa Health Companion) automatically restore the full SI if it's exhausted — even for the same person in the same year. If you're buying a floater, this feature is non-negotiable for senior citizen coverage.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Smart Move: Base Policy + Super Top-Up</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Most families buying health insurance for elderly parents face a dilemma: ₹5L feels too low (a major surgery in a private hospital easily costs ₹4-8L), but ₹20L+ policies have very high premiums for ages 60+.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The solution is a two-layer approach: a base ₹5L individual policy for each parent, plus a ₹20L super top-up policy with ₹5L deductible. The super top-up covers any single hospitalization from ₹5L to ₹25L — exactly the catastrophic event zone where regular senior coverage falls short.</p>
@@ -205,7 +205,7 @@ export default function PageHealthInsuranceParents() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>One important nuance: super top-up is aggregate-based (across all hospitalizations in a year) while regular top-up is per-hospitalization. Always buy super top-up, not regular top-up. See also our <Link href="/learn/insurance/copay-vs-no-copay" style={{ color: COLOR }}>copay guide</Link>, our <Link href="/learn/insurance/room-rent-trap" style={{ color: COLOR }}>room rent trap article</Link>, and the <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link>.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>

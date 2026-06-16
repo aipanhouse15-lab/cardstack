@@ -281,7 +281,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
       style={{
         maxWidth: 800,
         margin: "0 auto",
-        padding: "44px 22px 88px",
+        padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
         lineHeight: 1.65,
@@ -320,7 +320,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
         Amazon Pay ICICI is India's best credit card for most people. It is also free. The "no fee means no reward" assumption is one of Indian personal finance's most expensive myths.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 32 }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         Last updated {UPDATED} · By Ash K · 8 min read
       </div>
 
@@ -331,7 +331,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
           border: `1px solid ${COLOR}35`,
           borderRadius: 8,
           padding: "14px 18px",
-          marginBottom: 32,
+          marginBottom: 24,
           fontSize: 14,
         }}
       >

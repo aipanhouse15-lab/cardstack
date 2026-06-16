@@ -196,7 +196,7 @@ export default function BestCreditCardForWomenIndia() {
   ];
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -219,12 +219,12 @@ export default function BestCreditCardForWomenIndia() {
         The "best credit card for women" in India is just the best credit card for your lifestyle. Here's what that actually looks like — without the pink card marketing.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span><span>By Ash K</span><span>9 min read</span>
       </div>
 
       {/* Honest opening */}
-      <div style={{ background: `${COLOR}08`, border: `1.5px solid ${COLOR}30`, borderRadius: 12, padding: "18px 22px", marginBottom: 36 }}>
+      <div style={{ background: `${COLOR}08`, border: `1.5px solid ${COLOR}30`, borderRadius: 12, padding: "18px 22px", marginBottom: 28 }}>
         <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
           <IconCaution />
           <div>
@@ -247,7 +247,7 @@ export default function BestCreditCardForWomenIndia() {
         In 2026, no major Indian bank issues a women-only credit card. The market has essentially concluded that segmenting by gender without delivering better reward rates is a marketing exercise, not a financial product. The RBI's consumer protection guidelines also make it harder to justify different terms for demographic segments without substantive benefit.
       </p>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         The honest way to find the best card for an Indian woman in 2026 is to identify the top 3-4 spending categories and match them to the cards with the highest reward rates in those categories. Gender is not a relevant variable in this calculation.
       </p>
 
@@ -258,7 +258,7 @@ export default function BestCreditCardForWomenIndia() {
         Based on industry spend data compiled from RBI payment statistics and bank portfolio reports through 2025-26, here are the dominant credit card spend categories for Indian women.
       </p>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 32 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 24 }}>
         {[
           { category: "Online Shopping", detail: "Amazon, Myntra, Flipkart, Nykaa", share: "~32%", icon: <IconShopping /> },
           { category: "Food Delivery + Dining", detail: "Swiggy, Zomato, restaurants", share: "~21%", icon: <IconFood /> },
@@ -282,7 +282,7 @@ export default function BestCreditCardForWomenIndia() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 8 }}>Recommendations by Lifestyle</h2>
       <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>Each profile is based on a specific spend mix. Use the one closest to your situation.</p>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
         {profiles.map(({ label, spends, primaryPick, secondaryPick, reason }, i) => (
           <div key={i} style={{ border: `2px solid ${i === 0 ? COLOR : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: i === 0 ? `${COLOR}05` : "transparent" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
@@ -312,7 +312,7 @@ export default function BestCreditCardForWomenIndia() {
       {/* Card spotlights */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Top 5 Cards: Why They Work for Indian Women</h2>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 36 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 28 }}>
         {[
           {
             name: "Amazon Pay ICICI",
@@ -393,7 +393,7 @@ export default function BestCreditCardForWomenIndia() {
         </div>
       </div>
 
-      <p style={{ marginBottom: 32, fontSize: 14, color: "var(--text-muted,#64748b)" }}>
+      <p style={{ marginBottom: 24, fontSize: 14, color: "var(--text-muted,#64748b)" }}>
         Build and compare your custom stack at <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder</Link> — input your actual monthly spend by category and see which combination maximises your annual return.
       </p>
 

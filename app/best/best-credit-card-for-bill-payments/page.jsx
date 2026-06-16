@@ -189,7 +189,7 @@ export default function BestCreditCardForBillPayments() {
       style={{
         maxWidth: 800,
         margin: "0 auto",
-        padding: "44px 22px 88px",
+        padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
         lineHeight: 1.65,
@@ -235,7 +235,7 @@ export default function BestCreditCardForBillPayments() {
         Axis ACE is the only card that rewards your electricity bill at 5%. Everyone else gives you 1% or nothing.
       </p>
 
-      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>
+      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
         Last updated {UPDATED} · By Ash K · 7 min read
       </p>
 
@@ -525,7 +525,7 @@ export default function BestCreditCardForBillPayments() {
                   height: 24,
                   borderRadius: "50%",
                   background: COLOR,
-                  color: "white",
+                  color: "var(--raise)",
                   fontSize: 11,
                   fontWeight: 700,
                   display: "flex",

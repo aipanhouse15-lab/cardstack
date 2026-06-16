@@ -158,7 +158,7 @@ export default function PageFDRealReturn() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -166,9 +166,9 @@ export default function PageFDRealReturn() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>SAVINGS · FIXED DEPOSITS · REAL RETURNS</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Your FD Is Not Giving You 7%: The Real Return (After Tax and Inflation) Is Often Near Zero</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>A 7% FD looks safe and reliable. But at 30% tax slab, the post-tax return is 4.9%. After 5% inflation, the real wealth gain is 0.4% — and in some years negative. Here's the full picture your bank branch doesn't show you.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The 7% That Isn't 7%</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>India's largest banks offer FD rates between 7.00% and 7.40% for regular citizens as of June 2026. The advertising emphasizes these rates prominently. What's rarely discussed is what actually reaches your pocket after the government takes its cut and after you account for rising prices.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The honest accounting has three steps: gross FD rate, minus your income tax rate applied to the interest, minus the year's consumer price inflation. What remains is your real return — the actual increase in your purchasing power.</p>
@@ -176,7 +176,7 @@ export default function PageFDRealReturn() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For a salaried professional earning above ₹15L annually (30% tax slab): 7% gross becomes 4.9% post-tax. India's average CPI inflation for FY 2025-26 was approximately 4.5-5.0%. Real return: 0-0.4%. This is not a great outcome for your long-term wealth. It's a wealth preservation choice, at best.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Tax Slab Is the Biggest Variable</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>FD interest is taxed at your marginal income tax rate — not at a flat rate. This creates wildly different outcomes for different investors holding identical FDs.</p>
         <SvgPostTaxBySlab />
@@ -184,7 +184,7 @@ export default function PageFDRealReturn() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This is why FD recommendations need to be personal. A blanket "FDs are safe and reliable" statement is misleading. Safe: yes, in nominal terms. Reliable: yes, the rate doesn't fluctuate. Wealth-building: only for specific investor profiles.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Where to Get the Best FD Rates Right Now</h2>
         <SvgBankRates />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Small Finance Banks (SFBs) like Unity, Suryoday, and ESAF offer 8.5-9.0% FD rates — 150-200 basis points above large banks. They're RBI-regulated and DICGC-insured. The DICGC cover of ₹5 lakh per depositor per bank means up to ₹5L is as safe at an SFB as at SBI.</p>
@@ -192,27 +192,27 @@ export default function PageFDRealReturn() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Among large banks, Kotak Mahindra Bank (7.40%) beats HDFC (7.25%) and SBI (7.00%). The rate difference between Kotak and SBI is 0.40%. On ₹10L over 1 year, that's ₹4,000 extra — meaningful if you're parking large amounts.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>10 Years of FD vs Inflation: The Purchasing Power Story</h2>
         <SvgFDvsInflation10yr />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This chart shows the fundamental problem with FDs for long-term wealth: the nominal value of your money grows, but so does the price of everything you want to buy. At the end of 10 years, you have more rupees but roughly the same purchasing power — sometimes less.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This is why financial advisors recommend FDs for short-term goals (under 3 years) and equity instruments for long-term goals (above 7 years). The compounding math of equity over long periods overwhelms the tax efficiency advantage FDs have over short periods.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>DICGC Insurance: How to Stay Safe Above ₹5L</h2>
         <SvgDICGCCoverage />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The DICGC limit was raised from ₹1L to ₹5L in February 2020 — a significant improvement. But many people don't know that "₹5L per depositor per bank" means all deposits across all branches of the same bank combined. Spreading deposits across branches of SBI is not the same as spreading across different banks for insurance purposes.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>When FD Is the Right Choice</h2>
         <SvgWhenFDMakesSense />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>FD absolutely makes sense for: emergency funds (park 6 months' expenses in a Flexi FD linked to savings account), goals within 1-3 years (vacation fund, car down payment, marriage costs), and investors in nil or 5% tax slabs for whom the post-tax return is reasonable.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For long-term investing by 30% slab investors, look at PPF (EEE tax status), debt mutual funds with LTCG benefits, or balanced equity-debt portfolios. Our comparisons at <Link href="/learn/savings/ppf-vs-fd-vs-debt-fund" style={{ color: COLOR }}>PPF vs FD vs Debt Fund</Link> and <Link href="/learn/savings/tax-saving-fd-vs-elss-vs-ppf" style={{ color: COLOR }}>Tax Saving FD vs ELSS vs PPF</Link> walk through the numbers.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>

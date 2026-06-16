@@ -311,7 +311,7 @@ export default function BestCreditCardUnder500AnnualFee() {
       style={{
         maxWidth: 800,
         margin: "0 auto",
-        padding: "44px 22px 88px",
+        padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
         lineHeight: 1.65,
@@ -350,7 +350,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         The best credit card in India that charges a fee costs ₹499 per year. And that fee can be waived entirely at ₹2 lakh annual spend.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 32 }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         Last updated {UPDATED} · By Ash K · 8 min read
       </div>
 
@@ -361,7 +361,7 @@ export default function BestCreditCardUnder500AnnualFee() {
           border: `1px solid ${COLOR}35`,
           borderRadius: 8,
           padding: "14px 18px",
-          marginBottom: 32,
+          marginBottom: 24,
           fontSize: 14,
         }}
       >

@@ -166,7 +166,7 @@ export default function HealthInsuranceEffectiveCoverage() {
 
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>INSURANCE · TIER 2 GUIDE · LAYER REVEAL</div>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span>
         <span>·</span>
         <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
@@ -176,7 +176,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         <span>About 11 min read</span>
       </div>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The effective coverage waterfall</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Most health insurance brochures show a sum insured number — ₹5 lakh, ₹10 lakh, ₹25 lakh — as the headline benefit. The number is real, in the sense that it's the upper limit on what the insurer will pay in any policy year. The number is also misleading, because the insurer's actual payout on any specific hospitalisation is constrained by six successive deduction layers that are rarely highlighted at sale.
@@ -189,7 +189,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 1 — room rent cap (the proportional reduction trap)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Most basic health policies cap the daily room rent at 1 percent of sum insured — so ₹5,000 per day on a ₹5 lakh policy, ₹10,000 per day on a ₹10 lakh policy. Some economy plans cap at fixed amounts like ₹2,000 or ₹3,000.
@@ -205,7 +205,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 2 — co-payment (the percentage you always pay)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Co-payment is the share of every claim that the insured pays out of pocket regardless of sum insured. Standard adult policies typically have 0 percent co-pay; senior citizen plans typically carry 10 to 30 percent mandatory co-pay; some plans offer optional co-pay in exchange for premium discount.
@@ -218,7 +218,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 3 — disease-wise sub-limits (the silent caps)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Most policies maintain a sub-limit table that caps reimbursement on specific procedures regardless of overall sum insured. Cataract surgery is typically capped at ₹40,000 per eye. Knee replacement at 50 percent of sum insured (₹5 lakh on a ₹10 lakh policy). Hip replacement at 50 percent. Cardiac procedures (PTCA / angioplasty) at 50 to 75 percent. Cancer surgery at 75 percent on most policies, fully covered on premium tiers.
@@ -231,7 +231,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 4 — non-medical consumables (the IRDAI exclusion list)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           IRDAI's standardised exclusion list (List I, last updated 2020) covers items that hospitals charge but health insurance does not pay. The list includes gloves, masks, sanitisers, syringes, IV sets, ICU disposables, gowns, oxygen masks, dietary supplements, and similar consumables. Cumulatively these run 12 to 15 percent of a typical ₹3 to 5 lakh hospitalisation bill.
@@ -244,7 +244,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 5 — pre and post hospitalisation expenses</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Most policies cover pre-hospitalisation expenses (consultations, diagnostics, medications related to the eventual admission) for 30 to 60 days before admission. Post-hospitalisation expenses (follow-up consultations, medications, rehabilitation) are covered for 60 to 180 days after discharge.
@@ -257,7 +257,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 6 — the claim settlement reality (CSR by amount)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           IRDAI's annual report publishes two CSR figures per insurer. By count: percentage of claims paid out of total claims registered. By amount: percentage of claimed amount actually paid out of total claimed amount. The two figures diverge by 3 to 5 percentage points because of sub-limit and exclusion-driven reductions on individual claims.
@@ -273,7 +273,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Comparing policies on effective coverage, not nominal</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The standard advice — buy a high sum insured because medical costs are rising — is right but incomplete. The right framing is to buy a policy structure that delivers high effective coverage, which is a different optimisation than maximising nominal sum insured.
@@ -289,7 +289,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Three high-effective-coverage policies in 2026</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Three policies stand out for genuinely high effective-to-nominal coverage ratio. Each removes multiple deduction layers that basic policies stack up.
@@ -308,7 +308,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The cashless reality and what to expect at the hospital</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           IRDAI's 2024-25 "Cashless Everywhere" framework requires insurers to honour cashless claims at any approved hospital, not just network hospitals. The mandate has improved real-world cashless availability, but execution quality varies by insurer and hospital.
@@ -321,7 +321,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Working through a real claim — what actually happens</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The mechanics of a real cashless claim help solidify how the deduction layers compound. Take a worked scenario: 58-year-old male, ₹10 lakh sum insured policy with 10 percent voluntary co-pay, knee replacement surgery at a tier-1 metro hospital.
@@ -337,7 +337,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What to do this week — a practical checklist</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Steps to reduce your effective-coverage gap without spending more, and the points where spending more is actually worth it.
@@ -375,7 +375,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         ))}
       </section>
 
-      <section style={{ marginBottom: 36, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
+      <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 8 }}><Link href="/learn/insurance/super-top-up" style={{ color: COLOR }}>Super top-up explained</Link>. The cheap second-tier coverage.</li>
@@ -386,7 +386,7 @@ export default function HealthInsuranceEffectiveCoverage() {
         </ul>
       </section>
 
-      <section style={{ marginBottom: 36, fontSize: 13, color: "var(--text-muted)" }}>
+      <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>IRDAI Annual Report FY 2024-25 — claim settlement ratios by insurer</li>

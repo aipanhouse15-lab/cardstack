@@ -276,7 +276,7 @@ export default function BlogRightWayPayCreditCardBill() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -294,7 +294,7 @@ export default function BlogRightWayPayCreditCardBill() {
       </p>
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Single Most Important Decision: Full Amount or Minimum Due</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           Your statement shows two numbers: the total amount due and the minimum amount due. Most cardholders understand these are different; far fewer understand how catastrophically different the consequences are.
@@ -308,7 +308,7 @@ export default function BlogRightWayPayCreditCardBill() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Understanding Your Billing Cycle — The Dates That Actually Matter</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           Indian credit cards have three key dates: the cycle start date (when new transactions begin accruing), the statement date (when the monthly bill is generated), and the due date (when payment must reach the bank).
@@ -319,7 +319,7 @@ export default function BlogRightWayPayCreditCardBill() {
         <SvgBillingCycleTimeline />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Autopay: Set It Once, Get It Right</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           Autopay on the "minimum due" setting is a trap disguised as convenience. It removes the risk of a late fee but leaves you exposed to 42% annual interest — which compounds quickly.
@@ -330,7 +330,7 @@ export default function BlogRightWayPayCreditCardBill() {
         <SvgAutopayComparison />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Timing Matters: Before Statement Date vs Before Due Date</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           These are two separate strategies and they do different things. Paying before the due date protects you from fees and interest. Paying before the statement date improves your credit score.
@@ -341,7 +341,7 @@ export default function BlogRightWayPayCreditCardBill() {
         <SvgMultiplePaymentsUtilisation />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Which Payment Method to Use — Speed Is the Variable</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           For most of the month, the payment method does not matter much. Near the due date, it matters enormously. NEFT runs in batches and can be unavailable overnight or on bank holidays — a payment initiated at 9 PM on due date evening may not post until the next morning.
@@ -352,7 +352,7 @@ export default function BlogRightWayPayCreditCardBill() {
         <SvgPaymentMethodSpeed />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The 3-Day Buffer Rule</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           Build a personal rule to pay at least 3 working days before the due date whenever you use NEFT, a standing instruction, or a cheque. This buffer absorbs bank processing windows, public holidays, and the occasional technical failure.
@@ -363,7 +363,7 @@ export default function BlogRightWayPayCreditCardBill() {
         <SvgThreeDayBuffer />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What One Missed Payment Actually Costs</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           The numbers are not abstract. On a ₹50,000 balance, missing the due date by one day triggers a late fee of ₹500-1,200, 3.5% monthly interest on the full balance (₹1,750), 18% GST on that interest (₹315), and the loss of the grace period for next cycle's purchases — which means new spend also starts accruing interest immediately.
@@ -374,7 +374,7 @@ export default function BlogRightWayPayCreditCardBill() {
         </p>
       </section>
 
-      <section style={{ background: "#e0f2fe", border: "1px solid #7dd3fc", borderRadius: 8, padding: "20px 24px", marginBottom: 36 }}>
+      <section style={{ background: "#e0f2fe", border: "1px solid #7dd3fc", borderRadius: 8, padding: "20px 24px", marginBottom: 28 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>Your Credit Card Payment System — Set This Up Once</h2>
         <ol style={{ fontSize: 14, color: "var(--text)", lineHeight: 2.1, paddingLeft: 20 }}>
           <li>Set autopay to "full statement amount" on your bank's app or website today.</li>
@@ -386,7 +386,7 @@ export default function BlogRightWayPayCreditCardBill() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

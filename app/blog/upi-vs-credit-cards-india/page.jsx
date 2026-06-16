@@ -243,7 +243,7 @@ export default function BlogUpiVsCreditCardsIndia() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -318,7 +318,7 @@ export default function BlogUpiVsCreditCardsIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you primarily pay everything via UPI from your savings account: set up your credit card on Google Pay or PhonePe via tokenisation, and start using it for purchases above ₹1,000. Pay the full statement balance monthly. You'll earn back 1 to 3 percent on that spend for zero extra effort.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

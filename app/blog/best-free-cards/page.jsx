@@ -112,7 +112,7 @@ const SvgHiddenCostRadar = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Table of hidden fees that free credit cards sometimes charge" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="220" fill="var(--raise)" rx="10" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Hidden Costs That Make 'Free' Cards Not Free</text>
-    <rect x="20" y="36" width="680" height="30" fill="#1e293b" rx="4" />
+    <rect x="20" y="36" width="680" height="30" fill="var(--raise2)" rx="4" />
     <text x="120" y="56" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Fee Type</text>
     <text x="300" y="56" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Typical Amount</text>
     <text x="480" y="56" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">When Charged</text>
@@ -229,7 +229,7 @@ export default function BlogBestFreeCards() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -250,7 +250,7 @@ export default function BlogBestFreeCards() {
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>First: what "free" actually means</h2>
         <p>A credit card is truly free if it charges no joining fee and no annual fee, and that applies every year without a spending condition. Most cards described as "free" are actually one of two other things: conditionally free (fee waived only if you spend a minimum amount per year) or quietly paid (joining fee upfront, which banks count separately from the annual fee).</p>
         <p>This distinction matters because a conditionally free card with a ₹50,000 spend waiver effectively ties you to a usage pattern. If you miss the threshold in any year, you pay the fee. Know which type you are signing up for before you apply.</p>
@@ -258,7 +258,7 @@ export default function BlogBestFreeCards() {
 
       <SvgFreeDefinitionBreakdown />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The ranked list</h2>
 
         <SvgTopCardRanking />
@@ -294,7 +294,7 @@ export default function BlogBestFreeCards() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The real math: free card vs paid card at ₹12,000/month</h2>
         <p>At ₹12,000/month spend, IDFC FIRST Classic earns roughly 3X on most categories. That is 36 points per ₹100, valued at ₹0.25 each, equaling ₹0.75 per ₹100 or effectively 0.75% base rate. On dining and 10X categories, it is 2.5%.</p>
         <p>A ₹2,500-fee premium card at the same spend may offer 2-3% across all categories, giving higher gross rewards. But subtract the ₹2,500 fee and the net advantage shrinks significantly for spend levels below ₹20,000/month. For anyone spending under ₹15,000/month, the truly free card wins.</p>
@@ -302,7 +302,7 @@ export default function BlogBestFreeCards() {
 
       <SvgIDFCvsPremiuum />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The spend-waiver math for conditional cards</h2>
         <p>If a card charges ₹499 and waives it at ₹1 lakh annual spend, calculate whether the rewards you earn on that ₹1 lakh exceed the ₹499 fee. At 1% flat cashback on ₹1 lakh, you earn ₹1,000 in rewards and save ₹499 in fees: net ₹1,499 positive. The fee waiver is not a burden if you are already spending that amount naturally.</p>
         <p>The mistake is chasing the waiver threshold by spending money you would not otherwise spend. Never spend an extra ₹5,000 just to hit a waiver that saves you ₹499.</p>
@@ -310,7 +310,7 @@ export default function BlogBestFreeCards() {
 
       <SvgSpendWaiverBreakeven />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Hidden costs to watch for</h2>
         <p>A card with no annual fee can still charge you in other ways. The most common are joining fees (separate from annual fee, charged once at issuance), reward redemption fees (₹99-₹299 per redemption at some banks), and inactivity fees charged if you do not make even one transaction in 12 months.</p>
         <p>Also check whether the "lifetime free" claim is for the base variant only. HDFC Moneyback+ is sometimes marketed with lifetime free status, but upgrading to the Plus variant brings fees. Read the specific variant's MITC document, not just the marketing page.</p>
@@ -318,14 +318,14 @@ export default function BlogBestFreeCards() {
 
       <SvgHiddenCostRadar />
 
-      <section style={{ marginBottom: 32, padding: "20px 24px", background: "var(--green-dim)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
+      <section style={{ marginBottom: 24, padding: "20px 24px", background: "var(--green-dim)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>Before you apply</h2>
         <p style={{ margin: "0 0 8px" }}>Run your actual monthly spend numbers through <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> to find which free card matches your real usage pattern.</p>
         <p style={{ margin: "0 0 8px" }}>If you spend heavily on Amazon, stop overthinking and get Amazon Pay ICICI first. Add IDFC FIRST Classic as your second card for everything else. That combination costs you nothing and covers most spending categories.</p>
         <p style={{ margin: 0 }}>If you are a complete beginner with no credit history, read our <Link href="/blog/best-card-low-spenders-2026" style={{ color: COLOR }}>guide for low-spender first cards</Link> before applying for any card.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

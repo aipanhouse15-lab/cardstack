@@ -126,7 +126,7 @@ export default function CompareMillenniaVsAce() {
         <span>Verified from issuer MITC schedules</span>
       </div>
 
-      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 24 }}>
         <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, opacity: 0.85 }}>VERDICT</div>
         <h2 style={{ fontSize: 24, fontWeight: 800, margin: "6px 0 10px" }}>Axis Ace wins for most balanced spenders; Millennia for partner-app concentrators</h2>
         <p style={{ margin: 0, fontSize: 15, opacity: 0.95 }}>
@@ -134,7 +134,7 @@ export default function CompareMillenniaVsAce() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -157,7 +157,7 @@ export default function CompareMillenniaVsAce() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Effective rate across four spend profiles</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>
           The chart below runs both cards through four monthly spend profiles representative of typical metro households. Effective rate is net of annual fee and includes the cap-binding effect.
@@ -170,7 +170,7 @@ export default function CompareMillenniaVsAce() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Year-by-year fee economics</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>
           The Millennia welcome voucher closes the year-one gap dramatically. Without it, Ace's lower fee plus higher base rate would compound from day one. With the welcome voucher, Millennia year-one economics actually approach parity with Ace — and beat Ace if your spend is partner-app heavy.
@@ -183,7 +183,7 @@ export default function CompareMillenniaVsAce() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK AXIS ACE IF</div>
           <ul style={{ fontSize: 14, marginTop: 10, paddingLeft: 18, marginBottom: 0 }}>
@@ -204,7 +204,7 @@ export default function CompareMillenniaVsAce() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Where the math actually lands — worked example</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Run the numbers on a household with ₹40,000 monthly spend split as ₹15,000 food and grocery delivery (Swiggy, Zomato, BigBasket) and ₹25,000 miscellaneous (offline grocery, utility via Gpay, fuel, dining, occasional Amazon). Annual spend ₹4,80,000.
@@ -223,7 +223,7 @@ export default function CompareMillenniaVsAce() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The card-stack strategy — hold both</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Most disciplined cardholders end up holding both Millennia and Ace. The two cards rarely fight for the same wallet share. Route Amazon, Flipkart, Tata CLiQ, Swiggy, Zomato, Uber, and BookMyShow to Millennia (5 percent on these). Route Gpay utility bills and Ola to Ace (5 percent and 4 percent respectively). Use Ace's 1.5 percent base for everything offline that doesn't fit either card's accelerator.
@@ -236,7 +236,7 @@ export default function CompareMillenniaVsAce() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Who shouldn't get either card</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Three profiles where Millennia or Ace isn't the right choice. First, frequent international travellers — both charge 3.5 percent forex markup, leaking ₹4,000 to ₹6,000 per ₹1 lakh of international spend versus 2 percent forex cards like HDFC Diners Privilege or zero-forex cards like IDFC FIRST Wealth.
@@ -249,7 +249,7 @@ export default function CompareMillenniaVsAce() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Common operational mistakes</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Three patterns recur on both cards. Forgetting the welcome voucher window (Millennia's ₹1,000 voucher must be used within 30 days of card mailing on Amazon/Flipkart/Tata CLiQ/BookMyShow — miss the window and the voucher expires). Tapping the wrong card at a partner merchant (paying Swiggy through Ace gets 4 percent; paying through Millennia gets 5 percent — small difference per transaction, meaningful over a year). Letting utilisation cross 30 percent of credit limit at statement-cut date, hurting CIBIL even when you pay in full immediately afterward.
@@ -259,7 +259,7 @@ export default function CompareMillenniaVsAce() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Reward credit and redemption mechanics</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Both cards deliver cashback as direct statement credit, avoiding the complexity of points marketplaces. The mechanics differ slightly. Axis Ace credits cashback in the statement immediately following the qualifying transaction — so spend in March cycle, see cashback credit in the April statement. HDFC Millennia uses CashPoints (₹1 CashPoint equals ₹1 cashback) that auto-apply against any statement balance during redemption, but the auto-apply runs once a month at statement close rather than transaction-by-transaction. Net effect: both functionally equivalent, no redemption friction, no minimum redemption thresholds.
@@ -272,7 +272,7 @@ export default function CompareMillenniaVsAce() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Eligibility and approval process</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Both cards target the same broad borrower segment — salaried earners with ₹3 lakh-plus income and CIBIL 720-plus. Approval rates run roughly 75 to 85 percent for clean profiles in this band, dropping sharply below 720 CIBIL. HDFC's underwriting is slightly tighter on first-time card applicants without existing relationship; Axis is marginally more permissive for cross-bank applicants.
@@ -288,7 +288,7 @@ export default function CompareMillenniaVsAce() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

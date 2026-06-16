@@ -274,7 +274,7 @@ export default function BestCreditCardForOnlineShopping() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -295,7 +295,7 @@ export default function BestCreditCardForOnlineShopping() {
         Five percent online cashback exists on four different cards in India right now. But they work completely differently. Here is the precise breakdown of which card is right for your actual spending mix.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 32 }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         Last updated {UPDATED} · By Ash K · 9 min read
       </div>
 

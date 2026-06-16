@@ -155,7 +155,7 @@ export default function Page80CBeyondObvious() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -163,9 +163,9 @@ export default function Page80CBeyondObvious() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>TAX · SECTION 80C · DEDUCTIONS</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>80C: 12 Deductions Beyond ELSS and LIC That Most Salaried Indians Miss</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Everyone knows about PPF and ELSS for 80C. Fewer know that children's tuition fees, home loan principal repayment, and stamp duty also qualify — and for many families, these alone fill most of the ₹1.5L limit without any additional investment.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The 80C Panic: Why It Happens Every March</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Every February-March, the "80C deadline" causes a rush to buy LIC policies, ELSS funds, or Tax Saving FDs. This panic is partly unnecessary. For many salaried employees, the ₹1.5L 80C limit is already partially or fully filled through EPF contributions they're making automatically every month.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The second source of panic: not realizing that money you've already spent on school fees, home loan EMIs, or property registration also qualifies for deduction. These don't require additional investment — they're deductions on spending you'd do anyway.</p>
@@ -173,7 +173,7 @@ export default function Page80CBeyondObvious() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The ₹1.5L limit is a combined cap across all 12 qualifying items. Your job: first tally what you're already contributing (EPF + existing insurance + tuition fees + home loan principal), then invest the gap in the highest-returning available option (usually ELSS or PPF).</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Three Deductions Most People Forget</h2>
         <SvgMostMissed />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Children's tuition fees: this is the single most underutilized 80C deduction. If you have one or two kids in school or college, their full tuition fee (not hostel, not mess, not transport — just tuition/course fees) qualifies. A private school at ₹1.5L/year per child fills your entire 80C limit for that year, requiring zero separate investment.</p>
@@ -181,27 +181,27 @@ export default function Page80CBeyondObvious() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Stamp duty and registration: when you buy property, you pay stamp duty (5-7% of property value) and registration charges. In the year you pay these (not every year, just the year of purchase), this amount qualifies for 80C deduction. On a ₹60L property at 5% stamp duty, that's ₹3L in registration charges — ₹1.5L of which can be claimed under 80C.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The NPS Bonus: ₹50,000 Over and Above 80C</h2>
         <SvgNPSExtra />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Section 80CCD(1B) is the most underused tax-saving provision for salaried people with stable incomes. It lets you claim an additional ₹50,000 deduction on NPS Tier-I contributions, completely separate from the ₹1.5L 80C bucket. For a 30% slab investor, this saves ₹15,600 per year in tax.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>NPS Tier-I is a retirement account — you can't withdraw freely until age 60. At maturity: 60% as lump sum (tax-free), 40% as annuity (taxable). For most employed people who already have EPF as retirement savings, ₹50,000 in NPS is a targeted tax-saving instrument rather than a primary retirement vehicle.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How Much Does 80C Actually Save?</h2>
         <SvgTaxSavedByAmount />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The higher your income, the more valuable every rupee of 80C deduction is. At 30% slab, the ₹1.5L 80C + ₹50K NPS 80CCD(1B) + Section 24(b) home loan interest (₹2L) can collectively save up to ₹1.09L in tax per year — a very significant number that most people don't actively plan for.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The One Instrument Most People Don't Even Know About</h2>
         <SvgSukanyaSamriddhi />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Sukanya Samriddhi Yojana (SSY) is available at post offices and major bank branches. Opening takes 30 minutes and ₹250. If you have a daughter below age 10, this should be your first 80C investment before anything else — it offers 8.20% (currently better than PPF's 7.1%) with full EEE tax treatment and government guarantee.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>See our full guides: <Link href="/learn/savings/tax-saving-fd-vs-elss-vs-ppf" style={{ color: COLOR }}>Tax Saving FD vs ELSS vs PPF</Link> for investment comparison, <Link href="/learn/tax/hra-calculation" style={{ color: COLOR }}>HRA calculation guide</Link> for another major deduction, and the <Link href="/learn/tax" style={{ color: COLOR }}>tax hub</Link> for the full picture.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>

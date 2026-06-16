@@ -184,7 +184,7 @@ const SvgFastestFixes = () => (
       { action: "Avoid applying for multiple cards at once", impact: "Prevent -5 to -30 pts", time: "Immediate", color: "#ca8a04" },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="24" y={62 + i * 30} width="672" height="28" fill={i % 2 === 0 ? "var(--raise)" : "white"} rx="2" />
+        <rect x="24" y={62 + i * 30} width="672" height="28" fill={i % 2 === 0 ? "transparent" : "var(--raise)"} rx="2" />
         <text x="36" y={81 + i * 30} fontSize="11" fill="var(--text)" fontFamily="system-ui">{d.action}</text>
         <text x="380" y={81 + i * 30} fontSize="11" fontWeight="700" fill={d.color} fontFamily="system-ui">{d.impact}</text>
         <text x="520" y={81 + i * 30} fontSize="11" fill="var(--text-muted)" fontFamily="system-ui">{d.time}</text>
@@ -217,7 +217,7 @@ export default function BlogCibilScore101India() {
   ]};
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -283,7 +283,7 @@ export default function BlogCibilScore101India() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>For the utilization piece, see our detailed <Link href="/blog/credit-utilization-ratio-guide" style={{ color: COLOR }}>credit utilization ratio guide</Link> which covers the mid-cycle payment trick that can drop your reported utilization by 20-30% within one billing cycle.</p>
       </section>
 
-      <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 32 }}>
+      <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>Your 5-Step CIBIL Action Plan</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2 }}>
           <li>Download your free CIBIL report from cibil.com. Read every account entry for DPD errors and unknown accounts.</li>
@@ -295,7 +295,7 @@ export default function BlogCibilScore101India() {
         <p style={{ fontSize: 14, color: "var(--text-muted)", margin: "16px 0 0" }}>Once your score crosses 720, check which loans you qualify for in our <Link href="/learn/loans" style={{ color: COLOR }}>loans section</Link> and compare the rate improvement. It is often the most motivating data point.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

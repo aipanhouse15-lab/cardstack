@@ -93,7 +93,7 @@ export default function CompareAmexPlatinumVsDinersPrivilege() {
         <span>Last updated {UPDATED}</span><span>·</span><span>By Ash K</span>
       </div>
 
-      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 24 }}>
         <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, opacity: 0.85 }}>VERDICT</div>
         <h2 style={{ fontSize: 24, fontWeight: 800, margin: "6px 0 10px" }}>Diners Privilege for everyday-spend optimisation; Amex for milestone-driven travellers</h2>
         <p style={{ margin: 0, fontSize: 15, opacity: 0.95 }}>
@@ -101,7 +101,7 @@ export default function CompareAmexPlatinumVsDinersPrivilege() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -124,14 +124,14 @@ export default function CompareAmexPlatinumVsDinersPrivilege() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Annual benefit stack at ₹6L spend</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
           <SvgValueLadder />
         </div>
       </section>
 
-      <section style={{ marginBottom: 32, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK HDFC DINERS PRIVILEGE IF</div>
           <ul style={{ fontSize: 14, marginTop: 10, paddingLeft: 18, marginBottom: 0 }}>
@@ -152,7 +152,7 @@ export default function CompareAmexPlatinumVsDinersPrivilege() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Fee-justification thresholds</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Diners earns its ₹2,500 fee back at roughly ₹75,000 of qualifying spend through point value alone. Amex needs roughly ₹2.5L of spend before the rewards-only return covers the ₹5,000 fee, but the voucher stack changes the maths — first-year voucher haul of ₹65,000 means the ₹5,000 fee is paid back in the first 30 days for anyone genuinely using the Taj vouchers.
@@ -162,7 +162,7 @@ export default function CompareAmexPlatinumVsDinersPrivilege() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

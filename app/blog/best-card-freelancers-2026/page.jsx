@@ -170,7 +170,7 @@ export default function BestCardFreelancers2026() {
 
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · TIER 2 GUIDE · INCOME BRACKET PLAYBOOK</div>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span>
         <span>·</span>
         <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
@@ -180,7 +180,7 @@ export default function BestCardFreelancers2026() {
         <span>About 10 min read</span>
       </div>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The bracket playbook</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Salaried earners are underwritten on income certainty — predictable monthly salary credits make underwriting straightforward. Freelancers are underwritten on filed ITR plus business-vintage signals. Two years of clean ITRs at ₹10 lakh declared income carry more weight than three months of salary slips at ₹15 lakh, because the ITR establishes income consistency and tax-paying compliance.
@@ -193,7 +193,7 @@ export default function BestCardFreelancers2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Bracket A — ₹3 to 5 lakh ITR — building from zero</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           New freelancers in their first 1 to 3 years often hit a bank rejection wall. Banks underwrite on minimum 2 to 3 years of ITRs at consistent declared income; first-year-of-business freelancers don't have that history. The path forward is FD-secured.
@@ -209,7 +209,7 @@ export default function BestCardFreelancers2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Bracket B — ₹5 to 10 lakh ITR — the Amex SmartEarn sweet spot</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Established freelancers with 2 to 3 years of ITRs in the ₹5 to 10 lakh range face a different underwriting situation. Mainstream banks (HDFC, SBI, ICICI) approve at this bracket but offer mid-tier cards without freelancer-specific benefits. American Express specifically markets to self-employed professionals at this tier.
@@ -225,7 +225,7 @@ export default function BestCardFreelancers2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Bracket C — ₹10 to 20 lakh ITR — the two-card stack</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           At this bracket, freelancer eligibility opens up to mainstream cashback cards. The optimal stack is two cards covering different spend categories.
@@ -244,7 +244,7 @@ export default function BestCardFreelancers2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Bracket D — ₹20 lakh-plus ITR — premium with business tracking</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           High-earning freelancers (₹20 lakh ITR plus) should optimise for premium travel benefits, business-spend separation, and active reward redemption. The recommended stack splits across three cards.
@@ -263,7 +263,7 @@ export default function BestCardFreelancers2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The GST input credit angle — recovering 18 percent on business spend</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The most under-utilised lever for GST-registered freelancers is input tax credit on business spend. Every business expense that includes GST is potentially recoverable against your output GST liability — the GST you collect on your client invoices.
@@ -282,7 +282,7 @@ export default function BestCardFreelancers2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Underwriting reality — which banks actually approve self-employed</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Banks differ materially in their willingness to underwrite self-employed credit-card applications. Patterns observed across hundreds of application outcomes through 2024-25:
@@ -295,7 +295,7 @@ export default function BestCardFreelancers2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The freelancer spend profile — and why it matters for card pick</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Freelancer spend profiles look meaningfully different from salaried-employee profiles. SaaS subscriptions, cloud hosting, co-working memberships are larger as a percentage of total spend. Personal grocery and utility are smaller (often delegated to spouse's salary income in dual-earner households). Travel for client meetings is mixed — some claimable, some personal.
@@ -311,7 +311,7 @@ export default function BestCardFreelancers2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Common freelancer mistakes that cost real money</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Five patterns recur in freelancer card-portfolio reviews. Each is fixable in a single quarter.
@@ -333,7 +333,7 @@ export default function BestCardFreelancers2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Cash flow management — the freelancer-specific challenge</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Salaried earners get predictable monthly inflows. Freelancers don't. Client invoice payments lag 30 to 90 days from delivery, larger projects often pay on milestone-based schedules with end-of-project tails, and tax-season GST and TDS obligations create periodic cash-flow drains. The credit card becomes a working-capital tool in addition to a reward-earning instrument.
@@ -352,7 +352,7 @@ export default function BestCardFreelancers2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The forex card-vs-credit card decision for international freelancers</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Many Indian freelancers serve overseas clients (US, UK, EU, Singapore) and hold international subscriptions or pay overseas suppliers. Forex friction matters more for this profile than for purely domestic freelancers.
@@ -381,7 +381,7 @@ export default function BestCardFreelancers2026() {
         ))}
       </section>
 
-      <section style={{ marginBottom: 36, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
+      <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 8 }}><Link href="/best/credit-card-self-employed" style={{ color: COLOR }}>Best credit cards for self-employed</Link>. The shortlist deeper dive.</li>
@@ -392,7 +392,7 @@ export default function BestCardFreelancers2026() {
         </ul>
       </section>
 
-      <section style={{ marginBottom: 36, fontSize: 13, color: "var(--text-muted)" }}>
+      <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>RBI Master Direction on Credit Cards (April 2022) and 2024-25 amendments</li>

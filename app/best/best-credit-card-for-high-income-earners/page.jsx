@@ -18,7 +18,7 @@ export const metadata = {
 // Updated: June 4, 2026
 
 const COLOR = "#374151";
-const ACCENT = "#1e293b";
+const ACCENT = "var(--raise2)";
 const GOLD = "#b45309";
 const UPDATED = "June 4, 2026";
 
@@ -225,7 +225,7 @@ export default function BestCreditCardForHighIncomeEarners() {
   ];
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -248,12 +248,12 @@ export default function BestCreditCardForHighIncomeEarners() {
         At ₹15 lakh+ annual income, the credit card math changes dramatically. Reward rates that seemed niche now pay for themselves in months, and the invite-only tier opens up.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span><span>By Ash K</span><span>11 min read</span>
       </div>
 
       {/* Honest number box */}
-      <div style={{ background: `${GOLD}10`, border: `1.5px solid ${GOLD}40`, borderRadius: 12, padding: "18px 22px", marginBottom: 36, display: "flex", gap: 12 }}>
+      <div style={{ background: `${GOLD}10`, border: `1.5px solid ${GOLD}40`, borderRadius: 12, padding: "18px 22px", marginBottom: 28, display: "flex", gap: 12 }}>
         <IconChart />
         <div>
           <strong style={{ color: GOLD, fontSize: 14, display: "block", marginBottom: 4 }}>The Honest Number at ₹10L Annual Spend</strong>
@@ -274,7 +274,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         At ₹15 lakh income, you become eligible for premium-tier cards. The reward rate jumps from 1.33% to 3.33% — not a marginal improvement but a 2.5x multiplier on money returned. Simultaneously, annual credit card spend tends to rise with income, amplifying the reward difference.
       </p>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         At ₹30 lakh income, invite-only cards (Infinia, Magnus) unlock. This tier also grants access to lounge, concierge, and travel benefits that have real monetary value for the lifestyle that comes with this income level. The card fee, which loomed large at ₹10K/year, now disappears into 1-2 reward transactions.
       </p>
 
@@ -291,7 +291,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         </div>
       </div>
 
-      <div style={{ overflowX: "auto", marginBottom: 32 }}>
+      <div style={{ overflowX: "auto", marginBottom: 24 }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
           <thead>
             <tr style={{ background: `${COLOR}08` }}>
@@ -324,7 +324,7 @@ export default function BestCreditCardForHighIncomeEarners() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6, color: ACCENT }}>Top 5 Premium Cards for High-Income Earners (June 2026)</h2>
       <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>Ranked by total value at ₹10L annual spend, including all measurable benefits.</p>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
         {premiumCards.map((card) => (
           <div key={card.rank} style={{ border: `2px solid ${card.rank === 1 ? GOLD : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${GOLD}06` : "transparent" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
@@ -356,7 +356,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         The following table compares net annual reward value (after card fee) across HDFC Regalia (mid-tier), HDFC Infinia, and Axis Magnus at different annual spend levels.
       </p>
 
-      <div style={{ overflowX: "auto", marginBottom: 32 }}>
+      <div style={{ overflowX: "auto", marginBottom: 24 }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
           <thead>
             <tr style={{ background: `${COLOR}08` }}>
@@ -385,7 +385,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         </table>
       </div>
 
-      <p style={{ marginBottom: 32, fontSize: 13, color: "var(--text-muted,#64748b)" }}>
+      <p style={{ marginBottom: 24, fontSize: 13, color: "var(--text-muted,#64748b)" }}>
         Infinia ROI based on full SmartBuy redemption (3.33%). Actual return varies by redemption method. Lounge value and concierge benefits not included in the above figures.
       </p>
 
@@ -415,7 +415,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         ))}
       </div>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         The Amex Platinum is a lifestyle card, not an arithmetic card. If your income and business require you to be in premium hotel lobbies and airport lounges weekly, the experience and status it confers has real professional value. For everyone else, Infinia or Magnus gives better measurable return at half the fee.
       </p>
 
@@ -426,7 +426,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         The optimal two-card stack for most high-income earners in India as of June 2026.
       </p>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 36 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 28 }}>
         <div style={{ background: `${GOLD}08`, border: `1.5px solid ${GOLD}50`, borderRadius: 12, padding: "18px" }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
             <IconStar />

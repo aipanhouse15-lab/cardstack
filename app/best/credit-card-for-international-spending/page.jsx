@@ -294,7 +294,7 @@ export default function BestCreditCardForInternationalSpending() {
       style={{
         maxWidth: 800,
         margin: "0 auto",
-        padding: "44px 22px 88px",
+        padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
         lineHeight: 1.65,
@@ -333,7 +333,7 @@ export default function BestCreditCardForInternationalSpending() {
         That 3.5% forex markup is costing you ₹3,500 for every ₹1 lakh you spend abroad. Here is how to stop paying it.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 32 }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         Last updated {UPDATED} · By Ash K · 8 min read
       </div>
 

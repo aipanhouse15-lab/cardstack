@@ -157,7 +157,7 @@ export default function PageClaimSettlementRatios() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -165,16 +165,16 @@ export default function PageClaimSettlementRatios() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>INSURANCE · CLAIM SETTLEMENT · IRDAI DATA</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Claim Settlement Ratios 2026: The Only Insurer Metric That Actually Matters</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Every insurer advertises a high CSR. But CSR alone hides a lot. The complaint ratio, the ICR for health insurance, and the rejection reasons tell a more complete story — and some insurers don't want you reading them together.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What CSR Actually Measures (And Its Blind Spots)</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Claim Settlement Ratio (CSR) is the percentage of claims settled by an insurer in a financial year out of total claims received. A CSR of 98.5% means 98.5 out of every 100 claims were paid. Sounds great. And it generally is — but with important caveats.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>CSR counts numbers of claims, not value of claims. An insurer can settle 1,000 small claims of ₹10,000 each (total ₹1 crore) and reject one large claim of ₹1 crore — and still report a 99.9% CSR. The single large rejected claim represents 50% of the payout value, but barely moves the CSR needle.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For life insurance specifically, IRDAI also publishes claim settlement by amount. This is the number you want — it captures whether the big-ticket claims are actually getting paid.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Life Insurance CSR: 2025-26 Rankings</h2>
         <SvgLifeCSR />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Max Life (99.51%) and HDFC Life (99.50%) lead the pack for 2025-26. Tata AIA (99.13%) comes third. All three have maintained high CSRs consistently over 5 years, which is more important than a single-year peak.</p>
@@ -182,7 +182,7 @@ export default function PageClaimSettlementRatios() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Edelweiss (94.20%) and Canara HSBC (96.10%) are at the lower end and have been inconsistent. For term insurance, which involves a claim only in the event of death, choosing an insurer with proven consistency above 98% is non-negotiable.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Health Insurance: ICR Is the Metric CSR Is Not</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For health insurance, CSR is less useful because most non-life claims don't get "rejected" — they get "modified" or "partially paid." An insurer can approve your claim and then apply room rent limits, co-payments, and sub-limits to pay you ₹1.8L on a ₹5L claim. The CSR says 100%. Your wallet says otherwise.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The more useful metric is ICR (Incurred Claims Ratio): total claims paid divided by total premium collected. This tells you the financial health of the insurer and, indirectly, how freely they pay.</p>
@@ -190,7 +190,7 @@ export default function PageClaimSettlementRatios() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>New India Assurance's 112% ICR is a red flag — it's paying out more than it collects. Public sector general insurers have historically had high ICRs because they can't easily reject claims (political pressure) and have less sophisticated underwriting. Expect premium hikes at renewal or coverage modifications from New India if you're currently a policyholder.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Why Claims Get Rejected: The IRDAI Breakdown</h2>
         <SvgRejectionReasons />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Non-disclosure is the dominant rejection reason and it's entirely preventable. When you fill out a proposal form, answer every question with complete honesty. If you've had hypertension for 5 years, declare it. If you smoke occasionally, declare it. If your parent died of cancer below 60, declare it.</p>
@@ -198,7 +198,7 @@ export default function PageClaimSettlementRatios() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Claims during waiting periods (15% of rejections) are another avoidable loss. Every health policy has a 30-day waiting period for new diseases, 1-4 years for pre-existing conditions, and sometimes disease-specific waiting periods (2 years for hernia, joints, etc.). Read these before buying, not after.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Complaint Ratio: The Signal CSR Misses</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Two insurers can have identical 99% CSRs but very different claim experiences. One settles in 7 days with minimal paperwork. The other settles in 45 days after multiple follow-ups, demands for re-submission, and partial pay-outs that require escalation to make whole. The CSR for both is 99%.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The complaint ratio captures this. IRDAI publishes complaints per 10,000 policies for every insurer. Lower is better.</p>
@@ -206,7 +206,7 @@ export default function PageClaimSettlementRatios() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Tata AIA stands out here: 99.1% CSR AND only 2.1 complaints per 10,000 policies. This is the gold standard. SBI Life's combination of lower CSR and 11.4 complaints per 10,000 is the warning sign to watch — they settle eventually but make you work for it.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>When Your Claim Gets Delayed or Rejected: What to Do</h2>
         <SvgClaimProcess />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>IRDAI mandates that insurers acknowledge claims within 3 days, process them within 30 days of receiving all required documents, and pay interest (2% above prevailing bank rate) for delayed settlements. Most policyholders don't know about the interest penalty — insurers certainly don't advertise it.</p>
@@ -214,7 +214,7 @@ export default function PageClaimSettlementRatios() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>See our related guides: <Link href="/learn/insurance/term-insurance-real-value" style={{ color: COLOR }}>term insurance real value</Link>, <Link href="/learn/insurance/health-insurance-for-parents" style={{ color: COLOR }}>health insurance for parents</Link>, and the broader <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link>.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>

@@ -275,7 +275,7 @@ export default function BlogGetAnnualFeeWaived() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -293,7 +293,7 @@ export default function BlogGetAnnualFeeWaived() {
       </p>
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Why This Works — And When It Does Not</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           Banks have a retention budget. Acquiring a new credit card customer costs anywhere from ₹1,500 to ₹4,000 in marketing and onboarding — keeping you is cheaper than finding someone new.
@@ -304,7 +304,7 @@ export default function BlogGetAnnualFeeWaived() {
         <SvgBankFlexibilityRating />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 1: Time Your Call Correctly</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           The renewal SMS is your trigger. Banks typically send it 45-60 days before the renewal date, and most retention desks can act on an active renewal from about 30 days out.
@@ -315,7 +315,7 @@ export default function BlogGetAnnualFeeWaived() {
         <SvgCallTimeline />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 2: Know Your Numbers Before You Dial</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           Agents can pull your account history in 10 seconds. But stating your own metrics first shows you are informed and sets the frame for the conversation.
@@ -326,7 +326,7 @@ export default function BlogGetAnnualFeeWaived() {
         <SvgMetricsTable />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Script — Word for Word</h2>
 
         <div style={{ background: "var(--raise)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 24px", marginBottom: 16 }}>
@@ -362,12 +362,12 @@ export default function BlogGetAnnualFeeWaived() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What Banks Typically Offer</h2>
         <SvgWaiverOutcomeMatrix />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Real Case: Axis Magnus Annual Fee ₹11,800</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           The Axis Magnus charges ₹10,000 plus 18% GST, totalling ₹11,800 annually. For context, the card is primarily valuable for its edge ratio on travel redemptions — but those ratios were cut in April 2026, reducing the card's effective value.
@@ -378,7 +378,7 @@ export default function BlogGetAnnualFeeWaived() {
         <SvgAxisMagnusWaiverMath />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>If They Say No: The Escalation Ladder</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           A flat refusal from the first agent is not the end — it is the beginning of escalation. The first-tier agent often has limited authority; the retention desk does not.
@@ -386,7 +386,7 @@ export default function BlogGetAnnualFeeWaived() {
         <SvgEscalationLadder />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Downgrade as Your Backup — Not a Consolation</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           If neither a waiver nor an acceptable milestone offer materialises, downgrading is the smart move in most cases. It preserves your credit age (a key CIBIL factor), eliminates the annual fee, and keeps your credit limit largely intact.
@@ -397,7 +397,7 @@ export default function BlogGetAnnualFeeWaived() {
         <SvgDowngradeVsClose />
       </section>
 
-      <section style={{ background: "var(--green-dim)", border: "1px solid rgba(62,224,143,.25)", borderRadius: 8, padding: "20px 24px", marginBottom: 36 }}>
+      <section style={{ background: "var(--green-dim)", border: "1px solid rgba(62,224,143,.25)", borderRadius: 8, padding: "20px 24px", marginBottom: 28 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>Your Pre-Call Checklist</h2>
         <ol style={{ fontSize: 14, color: "var(--text)", lineHeight: 2.1, paddingLeft: 20 }}>
           <li>Note your card start date — "customer since [month, year]" lands better than "a few years."</li>
@@ -409,7 +409,7 @@ export default function BlogGetAnnualFeeWaived() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

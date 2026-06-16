@@ -219,7 +219,7 @@ export default function BestCreditCardForUpiPayments() {
       style={{
         maxWidth: 800,
         margin: "0 auto",
-        padding: "44px 22px 88px",
+        padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
         lineHeight: 1.65,
@@ -265,7 +265,7 @@ export default function BestCreditCardForUpiPayments() {
         Paying your Swiggy order on GPay with your Axis ACE card? You earned 0 rewards. Here's what actually works.
       </p>
 
-      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>
+      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
         Last updated {UPDATED} · By Ash K · 7 min read
       </p>
 
@@ -331,7 +331,7 @@ export default function BestCreditCardForUpiPayments() {
               <div
                 key={i}
                 style={{
-                  background: item.highlight ? "#fef2f2" : "white",
+                  background: item.highlight ? "var(--red-dim)" : "var(--raise)",
                   border: item.highlight ? "1.5px solid #ef4444" : "1px solid var(--border)",
                   borderRadius: 6,
                   padding: "8px 14px",
@@ -382,7 +382,7 @@ export default function BestCreditCardForUpiPayments() {
                     top: -12,
                     left: 18,
                     background: COLOR,
-                    color: "white",
+                    color: "var(--raise)",
                     fontSize: 11,
                     fontWeight: 700,
                     padding: "3px 10px",

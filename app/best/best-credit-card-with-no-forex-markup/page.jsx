@@ -219,7 +219,7 @@ export default function BestCreditCardWithNoForexMarkup() {
   ];
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -242,12 +242,12 @@ export default function BestCreditCardWithNoForexMarkup() {
         Every ₹1 lakh you spend internationally costs you ₹3,500 in forex markup on a standard card. Zero-forex cards eliminate this completely. Here's what's actually worth carrying.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span><span>By Ash K</span><span>10 min read</span>
       </div>
 
       {/* Honest number box */}
-      <div style={{ background: `${COLOR}08`, border: `2px solid ${COLOR}30`, borderRadius: 12, padding: "18px 22px", marginBottom: 36, display: "flex", gap: 12, alignItems: "flex-start" }}>
+      <div style={{ background: `${COLOR}08`, border: `2px solid ${COLOR}30`, borderRadius: 12, padding: "18px 22px", marginBottom: 28, display: "flex", gap: 12, alignItems: "flex-start" }}>
         <IconRupeeArrow />
         <div>
           <strong style={{ color: COLOR, fontSize: 14, display: "block", marginBottom: 4 }}>The Honest Number</strong>
@@ -282,7 +282,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         ))}
       </div>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         This fee structure applies on every single international transaction — merchant payments, hotel checkouts, subscription renewals in foreign currency, and international ATM withdrawals. A zero-forex card eliminates the bank markup; GST on zero markup is also zero.
       </p>
 
@@ -300,14 +300,14 @@ export default function BestCreditCardWithNoForexMarkup() {
         DCC is offered at hotel checkouts, restaurants, and shopping malls in tourist destinations. The terminal shows you a rupee amount, which feels convenient but costs you significantly more. The merchant's acquirer bank profits from this conversion.
       </p>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         The rule is universal: always pay in the local currency of the country you're in, not in rupees. This applies even if you have a zero-forex card — DCC adds a separate markup that your zero-forex benefit does not cover.
       </p>
 
       {/* Savings table */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>How Much You Save at Different Spend Levels</h2>
 
-      <div style={{ overflowX: "auto", marginBottom: 32 }}>
+      <div style={{ overflowX: "auto", marginBottom: 24 }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
           <thead>
             <tr style={{ background: `${COLOR}12` }}>
@@ -338,7 +338,7 @@ export default function BestCreditCardWithNoForexMarkup() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>Top Zero and Low Forex Cards in India (June 2026)</h2>
       <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>Verified against official card T&Cs and MITC documents as of {UPDATED}.</p>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
         {cards.map((card) => (
           <div key={card.rank} style={{ border: `2px solid ${card.rank <= 2 ? COLOR : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${COLOR}06` : "transparent" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
@@ -370,7 +370,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         This is the most common zero-forex confusion among Indian credit card applicants in 2026. IDFC FIRST has multiple cards and only one of them — WOW — has zero forex markup.
       </p>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 32 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 24 }}>
         <div style={{ background: "var(--green-dim)", border: "1px solid #86efac", borderRadius: 10, padding: "16px" }}>
           <strong style={{ color: "#16a34a", display: "block", marginBottom: 8 }}>IDFC FIRST WOW</strong>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
@@ -420,14 +420,14 @@ export default function BestCreditCardWithNoForexMarkup() {
         </div>
       </div>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         The recommendation: carry a zero-forex card for all card payments abroad and use ATMs only when merchants require cash. In most developed and major tourist destinations (Dubai, Thailand, Europe, USA), card payments at restaurants, shops, and hotels work seamlessly.
       </p>
 
       {/* Travel checklist */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>International Travel Card Checklist</h2>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 36 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 28 }}>
         {[
           "Carry at least 2 cards on international trips — one as primary (zero-forex), one as backup on a different network (Visa + Mastercard if possible).",
           "Inform your bank of travel dates to prevent fraud blocks. Most banks allow this via the mobile app under 'Travel Notification'.",

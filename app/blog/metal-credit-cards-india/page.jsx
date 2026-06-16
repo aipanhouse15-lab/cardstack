@@ -256,7 +256,7 @@ export default function BlogMetalCreditCardsIndia() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -279,68 +279,68 @@ export default function BlogMetalCreditCardsIndia() {
 
       <SvgMetalVsPlastic />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What a Metal Card Actually Is</h2>
         <p>Metal credit cards in India are typically constructed from stainless steel or tungsten alloy, sometimes with a PVC inlay for the chip and signature strip. They weigh between 16 and 22 grams, compared to 5 grams for a standard PVC card. That weight is the first thing cardholders notice, and the tap sound on a glass table is genuinely different.</p>
         <p>Functionally, the card works identically to plastic at any POS terminal, contactless reader, or ATM. The payment chip, NFC antenna, and magnetic stripe are the same technology. What changes is the construction material and, in some cases, the service tier attached to it.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Myth-Busting Before the Numbers</h2>
         <SvgMythBuster />
         <p>The loudest myth around metal cards is that they come with meaningfully better rewards. In the case of HDFC Infinia, this is false: the Infinia Metal and the plastic Infinia variant carry the same 3.3% reward rate on most spends, the same SmartBuy portal multipliers, and the same lounge access tier. The metal construction is the difference, not the benefits.</p>
         <p>ICICI Sapphiro is often discussed as a metal card within reach of middle-income earners, but at ₹3,500 per year the "metal" construction is more partial than pure, and the benefits are considerably lighter than HDFC Infinia at nearly 4x the fee. The category of "metal card" in India spans a wide quality range.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Fee Reality</h2>
         <SvgCardFeeComparison />
         <p>The annual fee gap between the cheapest metal card (ICICI Sapphiro at ₹3,500) and the most expensive (Amex Platinum at ₹60,000) is enormous. This is not a single category. Treating all metal cards as comparable because they share a construction material is like calling a Maruti Swift and a BMW 7-Series the same because both have four wheels.</p>
         <p>For the mid-range cards, HDFC Infinia Metal at ₹12,500 and Axis Magnus at ₹10,000, the fee waiver conditions matter enormously. Infinia's fee is waived at ₹10 lakh annual spend. Magnus's waiver triggers at ₹15 lakh annual spend. If you are not close to those thresholds, you are paying the full fee, which needs to be offset by actual benefit extraction.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The ₹60,000 Question: Amex Platinum</h2>
         <SvgAmexBreakeven />
         <p>American Express Platinum Charge (the metal card) costs ₹60,000 per year in India. This is not a typo, and it is not a credit card — it is a charge card, meaning the balance must be paid in full every month. The card earns Membership Rewards points, but the real pitch is the bundle of benefits attached.</p>
         <p>Break-even on ₹60,000 requires extracting value from Club Marriott (two stays at a Marriott property can save ₹15,000-₹20,000 versus rack rate), Taj Epicure (restaurant discounts and room upgrade priority), Priority Pass lounge access (which Amex provides in unlimited visits, not capped at 8 like many domestic cards), and Amex's own travel credits. If you use all of these annually, the math can work. Most cardholders in India do not use all of them. If you extract 40% of bundled value, you are paying ₹60,000 for roughly ₹25,000 in value.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Infinia vs Magnus: The Two Worth Comparing</h2>
         <SvgInfiniaMagnusCompare />
         <p>For most high-spending Indians who want a genuine premium metal card without the Amex fee, the real choice is between HDFC Infinia Metal and Axis Magnus Metal. The comparison is not straightforward because they reward different spending patterns.</p>
         <p>Infinia Metal works best if your spend is broad and high-volume — the 3.3% reward rate applies across most categories without the partner-specific complexity that Magnus introduced post-2024. Magnus works better if your spend is concentrated on flight bookings via the Axis portal, where the EDGE Miles earn rate can create outsized value for frequent flyers. See our detailed <Link href="/blog/regalia-vs-infinia" style={{ color: COLOR }}>Regalia vs Infinia comparison</Link> for more on HDFC's internal product positioning.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Social Signal: Not Dismissed Here</h2>
         <SvgSocialSignal />
         <p>We are not going to pretend social signaling does not matter. It does. At a client dinner, pulling out an HDFC Infinia Metal or an Amex Platinum sends a signal about your financial position that a plastic card does not. Restaurant staff at five-star properties do treat metal cardholders differently at the table. This is not imaginary.</p>
         <p>The honest question is what you are paying for that signal. If you are a business owner or a senior professional for whom the client perception genuinely matters and you would spend the money on a similar signal through other means anyway, a metal card may be worth the marginal fee. If you want the feeling of prestige without the client-facing use case, you are paying a social tax that adds no financial value.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Replacement Problem Nobody Mentions</h2>
         <SvgReplacementTime />
         <p>Metal card replacement in India takes 7 to 10 working days. Standard plastic cards take 3 to 5. This matters when your card is lost, damaged, or cloned. In major metros, an emergency card replacement for a plastic card can sometimes be arranged in 24 to 48 hours through bank branches. Metal card manufacturing does not have that flexibility.</p>
         <p>If you rely on one card for business expenses or travel frequently, having your primary card out of commission for 10 days is a real operational problem. The solution is always a backup card on a different network, which also reduces your dependence on any single card's reward structure.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>When Metal Is Worth It and When It Isn't</h2>
         <SvgWhenMetalIsWorth />
         <p>The cleaner framework for this decision: if the metal card's benefits (not just the construction, but the attached services and rewards) are materially better than the next plastic card in the same fee range, the metal premium is justified. If the metal variant's benefits match the plastic variant's benefits and the fee is higher, you are paying purely for construction and signaling.</p>
         <p>Run the numbers on <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> with your actual spend before committing to any annual fee card. The tool will calculate net annual value for both the metal and plastic tier of the same card family if applicable, so you can see the fee-adjusted difference. Also read our piece on <Link href="/blog/annual-fee-when-worth-paying" style={{ color: COLOR }}>when annual fees are actually worth paying</Link> for the broader principle.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Decision Before You Apply</h2>
         <p>Before applying for any metal card, answer three questions honestly. First: can you trigger the annual fee waiver? If yes, the fee question disappears. Second: will you actually use the non-reward benefits (lounge, concierge, hotel memberships)? If no, those benefits have zero value regardless of their stated rupee equivalent. Third: is the reward structure better than the best plastic card at the same or lower fee? If no, the metal is purely aesthetic.</p>
         <p>The card stack builder at <Link href="/stack-builder" style={{ color: COLOR }}>assurefintech.com/stack-builder</Link> lets you model a combination of metal and plastic cards optimised for your spend, so you are not choosing between them but deciding where each sits in a two or three card setup.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

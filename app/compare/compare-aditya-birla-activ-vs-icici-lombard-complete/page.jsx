@@ -96,7 +96,7 @@ export default function CompareAbhVsIciciLombard() {
         <span>Last updated {UPDATED}</span><span>·</span><span>By Ash K</span>
       </div>
 
-      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 24 }}>
         <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, opacity: 0.85 }}>VERDICT</div>
         <h2 style={{ fontSize: 24, fontWeight: 800, margin: "6px 0 10px" }}>ABH Activ for the genuinely active, ICICI Complete for set-and-forget buyers</h2>
         <p style={{ margin: 0, fontSize: 15, opacity: 0.95 }}>
@@ -104,7 +104,7 @@ export default function CompareAbhVsIciciLombard() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -128,7 +128,7 @@ export default function CompareAbhVsIciciLombard() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Effective premium by engagement tier</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
           <SvgWellnessReturn />
@@ -138,7 +138,7 @@ export default function CompareAbhVsIciciLombard() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK ABH ACTIV HEALTH IF</div>
           <ul style={{ fontSize: 14, marginTop: 10, paddingLeft: 18, marginBottom: 0 }}>
@@ -159,7 +159,7 @@ export default function CompareAbhVsIciciLombard() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The behavioural test before committing</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Before picking ABH Activ for the wellness discount, ask: have you logged 60+ active days a year in any of the last three years on your existing fitness tracker? If yes, the 30% credit is realistic. If no, you will likely capture only the 5-10% basic engagement tier, which leaves you paying ABH's higher base premium without the headline savings. Optimism bias is the enemy of insurance economics — pick the plan whose default behaviour you can sustain.
@@ -169,7 +169,7 @@ export default function CompareAbhVsIciciLombard() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

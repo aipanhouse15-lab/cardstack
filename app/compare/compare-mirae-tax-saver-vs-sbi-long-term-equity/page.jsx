@@ -93,7 +93,7 @@ export default function CompareMiraeVsSbiElss() {
         <span>Last updated {UPDATED}</span><span>·</span><span>By Ash K</span>
       </div>
 
-      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 24 }}>
         <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, opacity: 0.85 }}>VERDICT</div>
         <h2 style={{ fontSize: 24, fontWeight: 800, margin: "6px 0 10px" }}>Mirae Asset ELSS Tax Saver wins on CAGR, both win on 80C</h2>
         <p style={{ margin: 0, fontSize: 15, opacity: 0.95 }}>
@@ -101,7 +101,7 @@ export default function CompareMiraeVsSbiElss() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -124,7 +124,7 @@ export default function CompareMiraeVsSbiElss() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>10-year wealth outcome at ₹1.5L/year</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
           <SvgTaxSaved />
@@ -134,7 +134,7 @@ export default function CompareMiraeVsSbiElss() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK MIRAE ASSET ELSS IF</div>
           <ul style={{ fontSize: 14, marginTop: 10, paddingLeft: 18, marginBottom: 0 }}>
@@ -155,7 +155,7 @@ export default function CompareMiraeVsSbiElss() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The 80C decision frame</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           ELSS makes sense only if your 80C basket is not already filled by EPF, PPF, or life insurance premiums. Many salaried earners exhaust 80C with EPF alone — in that case adding an ELSS is investment-bound, not tax-saving. ELSS still offers the shortest lock-in (3 years per tranche) versus PPF (15 years), ULIPs (5 years), or NSC (5 years), making it the most liquid 80C-eligible product.
@@ -165,7 +165,7 @@ export default function CompareMiraeVsSbiElss() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

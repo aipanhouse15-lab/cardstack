@@ -97,7 +97,7 @@ export default function CompareIciciVsHdfcBaf() {
         <span>Last updated {UPDATED}</span><span>·</span><span>By Ash K</span>
       </div>
 
-      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 24 }}>
         <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, opacity: 0.85 }}>VERDICT</div>
         <h2 style={{ fontSize: 24, fontWeight: 800, margin: "6px 0 10px" }}>ICICI Pru BAF for retiree portfolios; HDFC BAF for younger conservative investors</h2>
         <p style={{ margin: 0, fontSize: 15, opacity: 0.95 }}>
@@ -105,7 +105,7 @@ export default function CompareIciciVsHdfcBaf() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -128,14 +128,14 @@ export default function CompareIciciVsHdfcBaf() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Equity allocation behaviour</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
           <SvgEquityBands />
         </div>
       </section>
 
-      <section style={{ marginBottom: 32, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK ICICI PRU BAF IF</div>
           <ul style={{ fontSize: 14, marginTop: 10, paddingLeft: 18, marginBottom: 0 }}>
@@ -156,7 +156,7 @@ export default function CompareIciciVsHdfcBaf() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Why BAFs are the SWP-friendly equity option</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Both funds are popular for systematic withdrawal plans (SWP) — the equity tax treatment makes redemptions tax-efficient, the dynamic allocation cushions sequence-of-returns risk in retirement, and the lower volatility lets retirees draw monthly income without panic during market dips. Compared to debt funds taxed at slab rate post-April-2023, a BAF SWP has a structural after-tax edge for retirees in the 30% slab.
@@ -166,7 +166,7 @@ export default function CompareIciciVsHdfcBaf() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

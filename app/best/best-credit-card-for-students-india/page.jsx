@@ -243,7 +243,7 @@ export default function BestCreditCardForStudentsIndia() {
       style={{
         maxWidth: 800,
         margin: "0 auto",
-        padding: "44px 22px 88px",
+        padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
         lineHeight: 1.65,
@@ -289,7 +289,7 @@ export default function BestCreditCardForStudentsIndia() {
         Credit cards for students in India are either FD-backed or add-ons. Here's the honest guide to which route actually works.
       </p>
 
-      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>
+      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
         Last updated {UPDATED} · By Ash K · 8 min read
       </p>
 
@@ -392,7 +392,7 @@ export default function BestCreditCardForStudentsIndia() {
                   height: 24,
                   borderRadius: "50%",
                   background: COLOR,
-                  color: "white",
+                  color: "var(--raise)",
                   fontSize: 12,
                   fontWeight: 700,
                   display: "flex",
@@ -482,7 +482,7 @@ export default function BestCreditCardForStudentsIndia() {
                     top: -12,
                     left: 18,
                     background: COLOR,
-                    color: "white",
+                    color: "var(--raise)",
                     fontSize: 11,
                     fontWeight: 700,
                     padding: "3px 10px",
@@ -684,7 +684,7 @@ export default function BestCreditCardForStudentsIndia() {
                   height: 22,
                   borderRadius: "50%",
                   background: COLOR,
-                  color: "white",
+                  color: "var(--raise)",
                   fontSize: 11,
                   fontWeight: 700,
                   display: "flex",

@@ -220,7 +220,7 @@ export default function BestCreditCardForEMIPurchases() {
   ];
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -246,14 +246,14 @@ export default function BestCreditCardForEMIPurchases() {
         No-cost EMI sounds free. It isn't. Here's the real cost on every top option, and which card minimises what you actually pay.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span>
         <span>By Ash K</span>
         <span>9 min read</span>
       </div>
 
       {/* The honest number box */}
-      <div style={{ background: `${COLOR}10`, border: `1.5px solid ${COLOR}30`, borderRadius: 12, padding: "18px 20px", marginBottom: 36 }}>
+      <div style={{ background: `${COLOR}10`, border: `1.5px solid ${COLOR}30`, borderRadius: 12, padding: "18px 20px", marginBottom: 28 }}>
         <div style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
           <IconWarning />
           <div>
@@ -290,7 +290,7 @@ export default function BestCreditCardForEMIPurchases() {
         A processing fee of 1-2% on a 6-month no-cost EMI is equivalent to roughly 3.5-7% annual interest. That's not meaningfully cheaper than a standard credit card cost EMI at 12-15% annualised for short tenures.
       </p>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         The only genuinely good use case for no-cost EMI is when you lack the lump sum but the price hasn't been inflated, and your card earns points on the full transaction amount upfront. That combination exists, but you need to verify it card by card.
       </p>
 
@@ -322,7 +322,7 @@ export default function BestCreditCardForEMIPurchases() {
         </div>
       </div>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         Amazon Pay ICICI is an interesting exception: their no-cost EMI on Amazon often still earns the standard 5% back for Prime members because Amazon is both the merchant and the EMI partner. Verify this at checkout before assuming.
       </p>
 
@@ -333,7 +333,7 @@ export default function BestCreditCardForEMIPurchases() {
         A 1% processing fee sounds trivial until you apply it to real purchase sizes. Here's what that looks like across common big-ticket purchases.
       </p>
 
-      <div style={{ overflowX: "auto", marginBottom: 32 }}>
+      <div style={{ overflowX: "auto", marginBottom: 24 }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
           <thead>
             <tr style={{ background: `${COLOR}12` }}>
@@ -366,7 +366,7 @@ export default function BestCreditCardForEMIPurchases() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>Top 4 Cards for EMI Purchases in India (June 2026)</h2>
       <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>Ranked by total EMI cost (processing fee + reward offset) on a ₹50,000 purchase over 6 months.</p>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
         {cards.map((card) => (
           <div key={card.rank} style={{ border: `2px solid ${card.rank === 1 ? COLOR : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${COLOR}06` : "transparent" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
@@ -396,7 +396,7 @@ export default function BestCreditCardForEMIPurchases() {
         Before you click "Convert to EMI" at checkout, run through this logic. It takes 30 seconds and could save you ₹500 to ₹2,000 on a single purchase.
       </p>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 32 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 24 }}>
         {[
           { q: "Can you pay the full amount before the next billing cycle without stress?", ans: "Yes", action: "Pay in full. You get reward points, zero interest, zero processing fee." },
           { q: "Is the no-cost EMI price identical to the cash/full-payment price?", ans: "No (price is higher)", action: "Declining the EMI and paying full price may be cheaper if you have funds." },
@@ -420,7 +420,7 @@ export default function BestCreditCardForEMIPurchases() {
         HDFC's Flexi Pay lets you convert any billing cycle transaction over ₹5,000 into EMI within 90 days of purchase. The annualised interest is 13-18% depending on tenure, which is expensive — but it's a useful escape valve if you miscalculated your cash flow.
       </p>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         The key rule: if you convert to Flexi Pay, you still pay the EMI principal (the bank doesn't waive the purchase). What you avoid is the 3.75% monthly finance charge on the outstanding balance if you'd missed full payment. Use <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> to model both scenarios before committing.
       </p>
 
@@ -431,7 +431,7 @@ export default function BestCreditCardForEMIPurchases() {
         If you regularly make high-value purchases on EMI, consider a two-card approach. Use one card for its broad EMI acceptance network (SBI or HDFC), and a second card that earns strong rewards on all other spends.
       </p>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 36 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 28 }}>
         <Link href="/stack-builder" style={{ display: "block", padding: "16px", background: `${COLOR}10`, borderRadius: 10, border: `1px solid ${COLOR}30`, textDecoration: "none", color: "var(--text)" }}>
           <div style={{ fontWeight: 700, fontSize: 14, color: COLOR, marginBottom: 4 }}>Stack Builder</div>
           <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)" }}>Build your optimal 2-card combo for EMI + everyday spends</div>

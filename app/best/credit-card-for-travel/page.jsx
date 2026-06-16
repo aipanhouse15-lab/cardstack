@@ -340,7 +340,7 @@ export default function BestCreditCardForTravel() {
       style={{
         maxWidth: 800,
         margin: "0 auto",
-        padding: "44px 22px 88px",
+        padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
         lineHeight: 1.65,
@@ -379,7 +379,7 @@ export default function BestCreditCardForTravel() {
         Most travel cards in India advertise miles but never tell you how far those miles actually fly you. Here is the honest number.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 32 }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         Last updated {UPDATED} · By Ash K · 9 min read
       </div>
 

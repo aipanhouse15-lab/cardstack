@@ -165,7 +165,7 @@ export default function BestCardBeginners2026() {
 
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · TIER 2 GUIDE · PERSONA JOURNEY</div>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span>
         <span>·</span>
         <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
@@ -175,7 +175,7 @@ export default function BestCardBeginners2026() {
         <span>About 9 min read</span>
       </div>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The persona-to-card matrix</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Two variables decide your first card more than any other: your verifiable monthly income and your existing CIBIL band. The matrix below maps the four most common income bands against three CIBIL situations (no CIBIL, sub-720 CIBIL, and 720-plus). Find your cell and the card name in it is the safe default.
@@ -188,7 +188,7 @@ export default function BestCardBeginners2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 1 — Karthik, 22, final-year student, no income</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Karthik is in his final year at IIT Bombay, has a placement offer for ₹18 lakh starting July, but no income today. He wants to start building CIBIL before his first salary so that he can rent a flat in Bangalore and get an unsecured card by year-end.
@@ -204,7 +204,7 @@ export default function BestCardBeginners2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 2 — Riya, 24, junior consultant, ₹6 lakh, no card</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Riya works at a mid-tier consulting firm, salary ₹6 lakh per annum (₹50,000 monthly net). She has a salary account at HDFC, no existing credit card or loan, no CIBIL score yet. Her spend pattern is split: ₹15,000 monthly online (Amazon Prime, Myntra, Cleartrip), ₹8,000 Swiggy and Zomato, ₹6,000 Uber and Ola, ₹5,000 grocery delivery on BigBasket, ₹16,000 offline (rent, utilities, dining).
@@ -220,7 +220,7 @@ export default function BestCardBeginners2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 3 — Sagar, 28, gig-economy professional, ₹4 lakh, irregular income</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Sagar is a freelance UX designer earning ₹4 lakh annually, but his monthly income varies from ₹15,000 in lean months to ₹60,000 in busy months. He has filed two years of ITRs as a self-employed individual under Section 44ADA presumptive taxation. His CIBIL is 0 — never had any credit product.
@@ -236,7 +236,7 @@ export default function BestCardBeginners2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 4 — Meera, 32, homemaker, no formal income</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Meera is a homemaker with two children, husband earns ₹15 lakh per annum at a private bank. She manages all household spend, currently using her husband's add-on card. She wants her own credit card — partly for financial autonomy, partly because the add-on card doesn't build her individual CIBIL.
@@ -252,7 +252,7 @@ export default function BestCardBeginners2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Persona 5 — Aditya, 26, IT engineer, ₹12 lakh, building portfolio fast</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Aditya works at a mid-tier IT services company, earns ₹12 lakh annually, has held a job for 18 months. He wants to optimise cashback aggressively from day one — specifically wants the Axis Magnus or HDFC Diners Privilege premium cards within a year.
@@ -268,7 +268,7 @@ export default function BestCardBeginners2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The first-year math — what you actually earn</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           On a typical first-card profile (₹25,000 monthly spend split across online and offline categories), three popular beginner cards deliver ₹4,500 to ₹5,700 of net first-year benefit. The chart below shows the breakdown.
@@ -281,7 +281,7 @@ export default function BestCardBeginners2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How CIBIL evolves on a first card — the trajectory</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           A first credit card generates your first CIBIL score around month 6 to 9 of usage. Where the score lands depends entirely on your behaviour over those months. The chart below shows three trajectories.
@@ -297,7 +297,7 @@ export default function BestCardBeginners2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Match your spend pattern to a card — the self-test</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The persona walkthrough above covers archetypal cases. Many beginners don't fit cleanly into one persona. Use the spend-pattern self-test below to find the best match for your specific transaction mix.
@@ -310,7 +310,7 @@ export default function BestCardBeginners2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Common first-card mistakes that cost real money</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Five mistakes recur often enough across first-card portfolios to deserve a checklist.
@@ -332,7 +332,7 @@ export default function BestCardBeginners2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What documentation do you actually need?</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The application paperwork is similar across banks but the small differences matter. Here's the standard list, with notes on what most first-time applicants miss.
@@ -357,7 +357,7 @@ export default function BestCardBeginners2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Year 2 onwards — what changes once you have CIBIL</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The first card is mostly about building bureau history, not maximising rewards. Year 2 onwards is when you actually optimise reward earnings — and the toolkit widens dramatically.
@@ -383,7 +383,7 @@ export default function BestCardBeginners2026() {
         ))}
       </section>
 
-      <section style={{ marginBottom: 36, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
+      <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 8 }}><Link href="/blog/how-to-choose-first-credit-card-2026" style={{ color: COLOR }}>How to choose your first credit card in 2026</Link>. Five filters that matter.</li>
@@ -394,7 +394,7 @@ export default function BestCardBeginners2026() {
         </ul>
       </section>
 
-      <section style={{ marginBottom: 36, fontSize: 13, color: "var(--text-muted)" }}>
+      <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>RBI Master Direction on Credit Cards (April 2022) and 2024-25 amendments</li>

@@ -117,7 +117,7 @@ export default function CompareSbiVsAmazonIcici() {
         <span>Verified from issuer MITC schedules</span>
       </div>
 
-      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 24 }}>
         <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, opacity: 0.85 }}>VERDICT</div>
         <h2 style={{ fontSize: 24, fontWeight: 800, margin: "6px 0 10px" }}>Hold both — they're perfectly complementary for online-heavy spenders</h2>
         <p style={{ margin: 0, fontSize: 15, opacity: 0.95 }}>
@@ -125,7 +125,7 @@ export default function CompareSbiVsAmazonIcici() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -148,7 +148,7 @@ export default function CompareSbiVsAmazonIcici() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Effective rate by online spend pattern</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>
           The chart maps both cards across four online spend patterns common to Indian metro households. The crossover between which card wins depends almost entirely on Amazon concentration as a percentage of total online spend.
@@ -161,7 +161,7 @@ export default function CompareSbiVsAmazonIcici() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Lifetime fee economics</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>
           The fee structure differential compounds materially over 5 years. Amazon Pay ICICI's lifetime-free status eliminates renewal anxiety entirely. SBI Cashback's ₹999 fee with ₹2 lakh spend waiver creates a binary outcome — hit the milestone, fee waives from year 2; miss it any year, full ₹999 plus GST is charged.
@@ -174,7 +174,7 @@ export default function CompareSbiVsAmazonIcici() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK AMAZON PAY ICICI IF</div>
           <ul style={{ fontSize: 14, marginTop: 10, paddingLeft: 18, marginBottom: 0 }}>
@@ -197,7 +197,7 @@ export default function CompareSbiVsAmazonIcici() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The cap math, in numbers</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           A user spending exactly ₹50,000 monthly online — say ₹20k Amazon Prime, ₹15k Flipkart, ₹15k other online — earns differently on each card. With Amazon Pay ICICI: ₹20k × 5 percent equals ₹1,000 plus ₹30k × 1 percent equals ₹300 = ₹1,300 monthly cashback = ₹15,600 annually. No fee, fully accessible. Effective rate: 2.6 percent on total ₹6 lakh annual spend.
@@ -213,7 +213,7 @@ export default function CompareSbiVsAmazonIcici() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The festive booster — ICICI's quiet advantage</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Amazon Pay ICICI runs periodic 10x-rewards or instant-discount promotions during major sale events — Amazon Great Indian Festival (October-November), Amazon Republic Day Sale, Amazon Summer Sale, and occasional Prime Day flash promotions. The 10x booster typically translates to 5 percent extra discount on top of the standard 5 percent Prime rate, producing 10 percent effective return during the promotional window.
@@ -226,7 +226,7 @@ export default function CompareSbiVsAmazonIcici() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What each card explicitly excludes</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           The exclusions list matters more than most cardholders realise. SBI Cashback's 5 percent online rate explicitly excludes utility bill payments (electricity, water, gas paid online), education fees, government services, EMI conversions, insurance premiums, and gold or jewellery purchases. These earn the 1 percent offline rate or zero. For households assuming any-online-counts, the actual cashback can come in 30 to 40 percent below expectations.
@@ -239,7 +239,7 @@ export default function CompareSbiVsAmazonIcici() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The two-card stack — combined economics</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Most online-heavy cardholders benefit from holding both. Route all Amazon spend through ICICI (5 percent uncapped Prime). Route Flipkart, Myntra, Cleartrip, MakeMyTrip, Tata CLiQ, Lenskart, and other non-Amazon online merchants through SBI Cashback (5 percent capped ₹5,000/mo). Use either card for the residual offline spend at 1 percent base.
@@ -252,7 +252,7 @@ export default function CompareSbiVsAmazonIcici() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>When to add other cards to the stack</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           For households with significant offline spend (utility bills via Gpay, restaurant dining, fuel, grocery), adding a third card optimised for offline categories meaningfully boosts blended rate. Axis Ace at ₹499 fee delivers 5 percent on Gpay utility (cap ₹500/mo), 4 percent on Swiggy/Zomato/Ola, and 1.5 percent base — covering offline categories the SBI-plus-ICICI stack leaves at 1 percent base.
@@ -262,7 +262,7 @@ export default function CompareSbiVsAmazonIcici() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Behavioural pitfalls — and how to avoid them on either card</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Two operational mistakes recur often enough to highlight. The first: assuming any online transaction earns the 5 percent rate. On SBI Cashback, utility bills paid via the merchant website (BSES electricity, Indane gas booking, etc.) often classify under MCC codes that the card's 5-percent-online-merchants ruleset excludes. Check the first month's statement for actual rates credited; you'll typically find one or two categories you assumed were online-eligible but actually earned only 1 percent.
@@ -275,7 +275,7 @@ export default function CompareSbiVsAmazonIcici() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Approval timing and CIBIL considerations</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Both cards require a hard CIBIL pull at application, dropping your score by 5 to 10 points temporarily. The drop recovers within 30 to 60 days of clean usage. Apply for one card at a time, not both simultaneously — cumulative hard pulls within 90 days drag CIBIL meaningfully and trigger underwriting flags.
@@ -288,7 +288,7 @@ export default function CompareSbiVsAmazonIcici() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

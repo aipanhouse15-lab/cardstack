@@ -273,7 +273,7 @@ export default function BlogFutureCreditCardRewardsIndia() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -296,62 +296,62 @@ export default function BlogFutureCreditCardRewardsIndia() {
 
       <SvgRewardPressureMap />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Pressure Is Structural, Not Cyclical</h2>
         <p>Indian credit card reward rates have been declining since 2022, and this is not a cycle that will reverse when the economy improves. The underlying economics of the credit card reward system depend on interchange income (MDR), and that income base is shrinking as a share of total digital payments because UPI's zero-MDR model now handles the majority of digital transaction volume in India.</p>
         <p>In 2019, before UPI's mass adoption, credit card swipes represented a meaningful slice of all digital payments. By 2025, UPI handles over 14 billion transactions per month while credit card monthly swipes remain in the 300-400 million range. The math is straightforward: less interchange income means less money to fund rewards, and banks are cutting rewards because the revenue pool that funded them is contracting.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Which Rewards Will Survive</h2>
         <SvgRewardSurvivalChart />
         <p>Not all reward types are equally exposed. The key variable is how tightly the reward is coupled to bank interchange income versus to third-party economics that the bank does not fully control.</p>
         <p>Airline miles earned directly on airline purchases are the most defensible. When you earn IndiGo BluChip miles or Air India Flying Returns through a co-branded card, the value of those miles is set by the airline's program. The bank pays the airline for the miles at a negotiated rate, but the airline controls redemption value. As long as you redeem before the airline devalues, your value is locked. Direct airline miles have outlasted multiple bank reward restructurings. See our piece on <Link href="/blog/reward-points-vs-cashback" style={{ color: COLOR }}>reward points vs cashback</Link> for a deeper look at the mechanics.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Devaluation Pattern Is Predictable Now</h2>
         <SvgDevaluationHistory />
         <p>Looking at the last four years of Indian card devaluations, a pattern emerges. Banks announce changes 3 to 6 weeks in advance via email notifications that most cardholders miss. The changes hit the highest-earning categories first: partner-specific accelerated rates, lounge access, flagship reward rates. The changes are rarely reversed.</p>
         <p>Axis Magnus's 2024 restructuring was the most significant in recent memory: the EDGE Miles earn rate on most categories was cut by approximately 35%, and flight redemption was restricted to specific booking windows and partners. Cardholders who had accumulated large unredeemed balances saw the rupee value of their points fall substantially. The lesson is not to avoid Axis Magnus, but to never hold large unredeemed balances in any single loyalty program. We wrote about why <Link href="/blog/why-reward-rates-dropping-india" style={{ color: COLOR }}>reward rates are dropping across Indian cards</Link> for the full context.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Lounge Problem</h2>
         <SvgLoungeGating />
         <p>Lounge access has become the rewards feature most visibly under pressure. In 2022, unlimited domestic lounge access was available on cards costing ₹2,500 per year. By May 2026, HDFC and Axis both tightened their lounge policies to require monthly spend thresholds before visits unlock. This is not a coincidence.</p>
         <p>Airport lounge utilisation per cardholder roughly tripled between 2022 and 2025 as post-COVID travel rebounded and credit card issuance expanded. Lounges charge banks per visit. Banks whose lounge costs scale with usage while MDR income contracts have only one lever: gate the access behind spend that generates enough interchange to cover the cost. Cards that currently offer unlimited lounge access without spend requirements will either add gates or raise fees within 18 months.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The ONDC Wildcard</h2>
         <SvgOndcWildcard />
         <p>ONDC (Open Network for Digital Commerce) is a government initiative that enables any buyer app to connect with any seller, removing the need for vertically integrated platforms like Swiggy, Zomato, or Amazon. It is still in early stages but growing in restaurant and grocery categories.</p>
         <p>The credit card implication is significant and under-discussed. Co-branded cards like the HDFC Swiggy card or the Amazon Pay ICICI card earn their core value from partner-specific accelerated rewards. If consumers shift even 30% of food orders from Swiggy to an ONDC buyer app, the Swiggy card's primary value proposition collapses. A card whose value depends entirely on a single partner app is a fragile card in an ONDC world. Also read our piece on <Link href="/blog/cashback-rate-is-a-lie" style={{ color: COLOR }}>why the cashback rate is a lie</Link> for related dynamics on how partner economics distort card marketing.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>RuPay Credit on UPI: Real Opportunity or Hype?</h2>
         <SvgRuPayUpiOpportunity />
         <p>The possibility that has the most potential to change the rewards picture in a positive direction is RuPay credit cards on UPI. If consumers can link a RuPay credit card to Google Pay or PhonePe and earn credit card rewards on UPI transactions, the zero-MDR limitation on UPI rewards disappears, because the transaction is processed as a credit card transaction even through a UPI rail.</p>
         <p>The problem is the MDR question is unresolved. RBI has not set a consistent MDR framework for credit card transactions via UPI. Some banks are offering limited reward promotions on RuPay credit UPI payments, but these are marketing experiments, not sustainable programs built on interchange economics. Watch this space through 2026 and 2027. If RBI establishes a small MDR on credit card UPI transactions, the reward implications are meaningful. If not, the zero-MDR constraint remains binding.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Honest Forecast</h2>
         <SvgHonestForecast />
         <p>The most honest statement about the next five years of Indian credit card rewards: treat them as a bonus on spending you would do anyway, not as an income source or financial strategy anchor. The structural pressures outlined in this piece are real, documented, and moving in one direction.</p>
         <p>This does not mean rewards are worthless right now. A well-chosen two or three card stack, used correctly, can still return ₹15,000 to ₹35,000 per year for a high-spending household. But that number will decline over time. The strategy of maximising now, burning points actively, and not building financial plans around reward income is the right one for this environment.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What to Do Right Now</h2>
         <SvgMaximizeNow />
         <p>Four concrete actions worth taking this week. First: log into every loyalty program where you have unredeemed points and check balances and expiry dates. Redeem anything expiring within 90 days immediately, even for something imperfect. Second: run your current card stack through <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> and identify whether your cards still match your spend pattern after recent devaluations. Third: if you hold any co-branded card tied to a single app, evaluate whether the partner-specific reward is still your top earner or whether an uncapped general cashback card would now do better.</p>
         <p>Fourth: build your card stack around two or three ecosystems, not one. Airline miles on one carrier plus uncapped general cashback plus optionally one category-specific card. Use the <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder</Link> to model this. Diversification across ecosystems is the only hedge against a devaluation wiping out your entire reward position. Read our piece on <Link href="/blog/reward-points-vs-cashback" style={{ color: COLOR }}>points vs cashback</Link> to understand which ecosystem fits your spend pattern before committing to a rebuild.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

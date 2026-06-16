@@ -243,7 +243,7 @@ export default function BlogAmazonHack() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -264,7 +264,7 @@ export default function BlogAmazonHack() {
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Why this card deserves its own guide</h2>
         <p>The Amazon Pay ICICI Bank Credit Card is one of only two genuinely free, genuinely rewarding credit cards in India, the other being IDFC FIRST Classic. No joining fee, no annual fee, no spend condition, and a 5% cashback rate on Amazon.in that is uncapped. For anyone spending ₹8,000 or more per month on Amazon, this card is a non-negotiable addition to their wallet.</p>
         <p>But the details matter. There are specific traps, including the gift card exclusion, wallet top-up zero-earn, and EMI price markup, that quietly cut into what looks like a clean 5% deal. This guide covers all of them.</p>
@@ -272,7 +272,7 @@ export default function BlogAmazonHack() {
 
       <SvgRewardTiersChart />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The card mechanics: what actually earns cashback</h2>
         <p>The tiered cashback structure is straightforward on paper. Prime members earn 5% on Amazon.in, 2% on Amazon Pay merchant transactions, and 1% on all other purchases. Non-Prime members earn 3% on Amazon.in and the same 2% and 1% on the other categories. Cashback is credited to your Amazon Pay balance within 2 business days, no redemption step required.</p>
         <p>The cashback is truly uncapped. Whether you buy a ₹500 book or a ₹1,50,000 laptop on Amazon.in, the 5% applies to the full amount. No monthly ceiling, no annual ceiling, no minimum transaction size.</p>
@@ -284,7 +284,7 @@ export default function BlogAmazonHack() {
 
       <SvgAnnualCashbackTable />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Sale events: when rewards stack and when they do not</h2>
         <p>The Amazon Great Indian Festival (usually October) and Prime Day (July) bring additional bank-level offers that are separate from the card's regular 5% cashback. The distinction matters: if Amazon is running a "10% off with ICICI card" bank offer, this applies on top of your 5% cashback in most cases, because it is funded by a different budget. But if the offer says "5% cashback with ICICI card," check whether this is your regular card cashback or an incremental offer.</p>
         <p>During major sales, always check the offer terms on the Amazon app under "Your ICICI Bank Offers" before completing a large purchase. Occasionally, a promotional offer replaces rather than adds to the base reward.</p>
@@ -292,7 +292,7 @@ export default function BlogAmazonHack() {
 
       <SvgSaleStackingGuide />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The no-cost EMI truth</h2>
         <p>Amazon's no-cost EMI is a popular feature, and using your Amazon Pay ICICI card for it is fine. The cashback still applies on the EMI purchase amount. But "no-cost" has a hidden meaning: the merchant inflates the price by approximately 1-3% to cover the bank's EMI processing fee, and this markup is embedded in the EMI price you see.</p>
         <p>The practical implication: for large purchases where you can pay upfront, check whether the "pay now" price is lower than the listed EMI price. If there is a ₹500 gap on a ₹25,000 product, paying cash is better even if your cashback amount increases slightly on the higher EMI-inflated price.</p>
@@ -300,7 +300,7 @@ export default function BlogAmazonHack() {
 
       <SvgEmiHiddenCostBreakdown />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Amazon Pay Later vs the credit card</h2>
         <p>Amazon Pay Later is a buy-now-pay-later product offered by a non-banking financial company. It requires minimal documentation and gives a small credit line for Amazon purchases. The big downside: it earns zero cashback. Using Amazon Pay Later instead of the Amazon Pay ICICI card on a ₹50,000 annual Amazon spend costs you ₹2,500 in foregone cashback.</p>
         <p>Amazon Pay Later makes sense only if you cannot get the credit card due to income constraints or credit history gaps. If you have both available, always use the card for purchases.</p>
@@ -308,7 +308,7 @@ export default function BlogAmazonHack() {
 
       <SvgPayLaterVsCard />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The three traps that kill your cashback</h2>
 
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "16px 0 8px", color: "#ef4444" }}>Trap 1: Buying Amazon gift cards</h3>
@@ -323,7 +323,7 @@ export default function BlogAmazonHack() {
 
       <SvgGiftCardTrap />
 
-      <section style={{ marginBottom: 32, padding: "20px 24px", background: "rgba(212,168,83,.06)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
+      <section style={{ marginBottom: 24, padding: "20px 24px", background: "rgba(212,168,83,.06)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 12px" }}>Power user checklist</h2>
         <p style={{ margin: "0 0 8px" }}>1. In the Amazon app, set default payment to your Amazon Pay ICICI card, not Amazon Pay balance. This ensures every purchase earns cashback automatically.</p>
         <p style={{ margin: "0 0 8px" }}>2. During sale events, screenshot the bank offer terms before checkout so you know exactly what you will earn on large purchases.</p>
@@ -332,7 +332,7 @@ export default function BlogAmazonHack() {
         <p style={{ margin: 0 }}>5. If you spend significantly outside Amazon too, pair this card with a general rewards card. Check <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> to find the right complement card for your non-Amazon spend.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

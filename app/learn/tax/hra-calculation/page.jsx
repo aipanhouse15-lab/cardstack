@@ -167,7 +167,7 @@ export default function PageHRACalculation() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -175,57 +175,57 @@ export default function PageHRACalculation() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>TAX · HRA · EXEMPTION CALCULATOR</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>HRA Calculation: The Exact Formula, With Your Real Numbers for Mumbai, Delhi, and Bangalore</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>HRA is one of the largest tax exemptions available to salaried employees. Most people know it exists but miscalculate it, miss documentation, or don't claim it at all. Here's the full formula with worked examples.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What HRA Is (And What It's Not)</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>House Rent Allowance (HRA) is a salary component your employer pays to cover your housing costs. It's not a deduction you claim — it's money your employer already gives you. The HRA exemption under Section 10(13A) is what keeps part of that HRA out of your taxable income.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For salaried employees in metro cities paying high rents, this exemption can save ₹60,000-1,00,000+ per year in income tax. It's one of the few genuine benefits of being salaried versus self-employed (who cannot claim HRA, only a deduction against rental income).</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Critical caveat: HRA exemption is only available under the old tax regime. If you've opted for the new regime, you cannot claim this. Compare both regimes before deciding — the HRA saving can be very significant.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Formula: Minimum of Three Values</h2>
         <SvgHRAFormula />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The formula has three components and you take the minimum. This is where many people go wrong — they assume the full HRA from the salary slip is exempt, when it's actually limited by whichever of the three is lowest.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Component C (rent minus 10% of basic) is the most commonly binding constraint. If your rent is ₹20,000/month and your basic is ₹50,000/month, Component C = (₹2,40,000 - ₹60,000) = ₹1,80,000. If your employer gives ₹20,000 HRA (component A = ₹2,40,000), component C at ₹1,80,000 limits your exemption. The extra ₹60,000 HRA above component C is fully taxable.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Worked Examples: Three Cities</h2>
         <SvgCityExamples />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The Mumbai calculation shows an interesting result: components A and B are both ₹3,60,000, but component C is only ₹2,64,000. The rent paid (₹28,000/month = ₹3,36,000/year) minus 10% of basic (₹72,000) = ₹2,64,000 limits the exemption. Rahul can't claim the full ₹30,000/month HRA from his employer — only ₹22,000 equivalent per month is tax-exempt.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Practical implication: if Rahul moved to a ₹30,000/month flat, component C would rise to ₹2,88,000 and he'd save an extra ₹7,200 in tax (the ₹24,000 difference × 30%). Sometimes paying slightly more rent net saves money after tax benefits.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Tax Saved by City</h2>
         <SvgTaxSavedByCity />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Metro city employees saving ₹70,000-80,000 in tax purely from HRA is not unusual for mid-senior employees. This is why people in Mumbai and Delhi who pay high rents and are on the 30% slab strongly prefer the old tax regime — the HRA exemption alone often justifies it.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Documentation: What You Actually Need</h2>
         <SvgDocumentation />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The most common mistake: paying rent via UPI but not getting a signed rent receipt from the landlord. Bank transfer alone doesn't constitute a "rent receipt" for HRA purposes. Get physical or digital receipts signed by the landlord monthly or quarterly. A good template: "Received from [your name], rent of ₹[amount] for the month of [month] for property at [address]. Signed: [landlord name]. Date: [date]."</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For monthly rents above ₹8,333 (annual rent above ₹1L): the landlord's PAN is mandatory. Most landlords are cooperative — explain that it's a legal requirement and doesn't affect their taxes if they're already declaring rental income. For landlords who genuinely don't have a PAN (rare but possible with elderly landowners), the IT department has provisions for submission of a declaration.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Paying Rent to Parents: Completely Legal</h2>
         <SvgRentFamilyTrap />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This arrangement works particularly well when parents are retired or have lower income (nil or 5% slab). The family as a unit saves tax: you get HRA exemption (saving 30% of rent amount), parents declare rental income (paying 0-5% tax on it). Net family saving on ₹15,000/month rent: roughly ₹54,000/year for a 30% slab earner with parents in nil slab.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The arrangement needs to be genuine: monthly bank transfers, signed rental agreement, proper receipts. Lump-sum transfers at year-end or cash payments invite scrutiny. The IT department has accepted such arrangements in numerous cases — but only when they're conducted with the same formality as a third-party rental.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>HRA and Home Loan: Can You Claim Both?</h2>
         <SvgHRAvsHomeLoan />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This is the most common question from people buying their first home. The answer is yes, in most cases — if you're genuinely renting where you work and the home loan property is in another city or is genuinely unavailable for self-occupation (under construction, occupied by parents, rented out).</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>See our broader <Link href="/learn/tax" style={{ color: COLOR }}>tax hub</Link> and our <Link href="/learn/tax/80c-beyond-the-obvious" style={{ color: COLOR }}>80C beyond the obvious guide</Link> to see how HRA fits into your overall tax planning picture. Also see <Link href="/learn/tax/tax-on-credit-card-rewards" style={{ color: COLOR }}>our credit card rewards tax guide</Link> for another often-misunderstood area.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>

@@ -209,7 +209,7 @@ export default function SipCalcClient() {
   };
 
   return (
-    <main style={{ maxWidth: 860, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 860, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-app" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -226,7 +226,7 @@ export default function SipCalcClient() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 10 }}>MUTUAL FUNDS · CALCULATOR</div>
       <h1 style={{ fontSize: 30, lineHeight: 1.2, fontWeight: 800, margin: "0 0 10px" }}>SIP Calculator</h1>
       <p style={{ fontSize: 16, color: "var(--text-muted)", margin: "0 0 6px" }}>See exactly what your monthly investment will become — with inflation-adjusted real returns.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 32 }}>Updated {UPDATED} · By Ash K</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>Updated {UPDATED} · By Ash K</div>
 
       {/* Mode toggle */}
       <div style={{ display: "flex", gap: 10, marginBottom: 28 }}>
@@ -377,7 +377,7 @@ export default function SipCalcClient() {
 
       {/* Year-by-year chart */}
       {mode === "sip" && (
-        <section style={{ marginTop: 36, marginBottom: 32 }}>
+        <section style={{ marginTop: 36, marginBottom: 24 }}>
           <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 8px" }}>Year-by-Year Corpus Growth</h2>
           <p style={{ fontSize: 15, color: "var(--text-muted)", margin: "0 0 12px" }}>The purple bars show your returns. The grey bars show money you put in. Notice how gains overtake invested amount after about Year {Math.round(years * 0.6)}.</p>
           <GrowthChart monthly={monthly} rate={rate} years={Math.min(years, 30)} />
@@ -385,7 +385,7 @@ export default function SipCalcClient() {
       )}
 
       {/* Comparison table */}
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 14px" }}>What ₹10,000/month SIP Becomes</h2>
         <p style={{ fontSize: 15, color: "var(--text-muted)", margin: "0 0 16px" }}>At different return rates and tenures — so you can set realistic targets.</p>
         <div style={{ overflowX: "auto" }}>
@@ -421,7 +421,7 @@ export default function SipCalcClient() {
       </section>
 
       {/* Honest take section */}
-      <section style={{ background: "var(--raise)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 10px 10px 0", padding: "20px 24px", marginBottom: 36 }}>
+      <section style={{ background: "var(--raise)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 10px 10px 0", padding: "20px 24px", marginBottom: 28 }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>The Numbers Your AMC Won't Show You</h2>
         <p style={{ fontSize: 15, margin: "0 0 10px" }}>
           Fund fact sheets advertise CAGR — but your real return is lower. A fund with 15% CAGR and 1.5% expense ratio delivers 13.5% to you. At ₹10,000/month for 20 years, that 1.5% difference costs you approximately ₹28 L in final corpus.
@@ -435,7 +435,7 @@ export default function SipCalcClient() {
       </section>
 
       {/* How SIP works — editorial */}
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 14px" }}>How the SIP Math Works</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           SIP returns are calculated using the future value of an annuity formula. Each monthly instalment earns compound interest from its investment date until the end. The first instalment earns returns for all {years} years; the last instalment earns only 1 month.
@@ -449,7 +449,7 @@ export default function SipCalcClient() {
       </section>
 
       {/* Direct vs Regular callout */}
-      <section style={{ border: "1px solid var(--border)", borderRadius: 12, padding: "20px 24px", marginBottom: 36 }}>
+      <section style={{ border: "1px solid var(--border)", borderRadius: 12, padding: "20px 24px", marginBottom: 28 }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>Direct Plan vs Regular Plan: The 1% That Costs ₹12L</h2>
         <p style={{ fontSize: 15, margin: "0 0 10px" }}>
           Regular plans pay 0.5-1% annual commission to your distributor. This reduces your effective return by the same amount. On ₹10,000/month SIP at 12% for 20 years: the corpus is ₹99.9L. At 11% (regular plan, 1% commission): ₹85.5L. Difference: ₹14.4L — just from paying commission.
@@ -460,7 +460,7 @@ export default function SipCalcClient() {
       </section>
 
       {/* FAQ */}
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 16px" }}>Frequently Asked Questions</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

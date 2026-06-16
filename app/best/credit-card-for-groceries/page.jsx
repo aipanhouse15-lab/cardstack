@@ -73,7 +73,7 @@ function BigBasketProblemDiagram() {
           <g key={item.card}>
             <rect x="10" y={y} width="180" height="20" fill="var(--raise)" stroke="var(--border)" rx="3" />
             <text x="100" y={y + 14} textAnchor="middle" fill="var(--text)" fontSize="11">{item.card}</text>
-            <rect x="200" y={y} width="60" height="20" fill={item.covers ? "var(--green-dim)" : "#fef2f2"} rx="3" />
+            <rect x="200" y={y} width="60" height="20" fill={item.covers ? "var(--green-dim)" : "var(--red-dim)"} rx="3" />
             <text x="230" y={y + 14} textAnchor="middle" fill={item.color} fontSize="11" fontWeight="700">{item.rate}</text>
             <rect x="270" y={y} width="400" height="20" fill="var(--raise)" rx="3" />
             <text x="470" y={y + 14} textAnchor="middle" fill="var(--text-muted)" fontSize="10">{item.note}</text>
@@ -267,7 +267,7 @@ export default function BestCreditCardForGroceries() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -288,7 +288,7 @@ export default function BestCreditCardForGroceries() {
         The April 2026 Axis Airtel devaluation killed the most popular grocery card. Here is what to use now, including one card most people have never heard of.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 32 }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         Last updated {UPDATED} · By Ash K · 8 min read
       </div>
 

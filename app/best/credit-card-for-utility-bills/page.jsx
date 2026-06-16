@@ -305,7 +305,7 @@ export default function BestCreditCardForUtilityBills() {
       style={{
         maxWidth: 800,
         margin: "0 auto",
-        padding: "44px 22px 88px",
+        padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
         lineHeight: 1.65,
@@ -344,7 +344,7 @@ export default function BestCreditCardForUtilityBills() {
         Axis ACE is the only major credit card that rewards your electricity bill at 5%. Here is why every competitor gave up, and why that makes ACE indispensable for utility-heavy households.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 32 }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         Last updated {UPDATED} · By Ash K · 7 min read
       </div>
 
@@ -355,7 +355,7 @@ export default function BestCreditCardForUtilityBills() {
           border: `1px solid ${COLOR}35`,
           borderRadius: 8,
           padding: "14px 18px",
-          marginBottom: 32,
+          marginBottom: 24,
           fontSize: 14,
         }}
       >

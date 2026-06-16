@@ -76,7 +76,7 @@ const SvgMonthlyEarningsTable = () => (
       ["Standard card", "1% dining", "Varies", "₹80"],
     ].map(([card, rate, cap, earn], i) => (
       <g key={i}>
-        <rect x="20" y={80 + i * 36} width="680" height="36" fill={i % 2 === 0 ? "var(--raise)" : "white"} />
+        <rect x="20" y={80 + i * 36} width="680" height="36" fill={i % 2 === 0 ? "transparent" : "var(--raise)"} />
         <text x="100" y={103 + i * 36} textAnchor="middle" fontSize="11" fill="var(--text)">{card}</text>
         <text x="280" y={103 + i * 36} textAnchor="middle" fontSize="11" fill="var(--text)">{rate}</text>
         <text x="440" y={103 + i * 36} textAnchor="middle" fontSize="11" fill="var(--text-muted)">{cap}</text>
@@ -91,7 +91,7 @@ const SvgZomatoSwiggyTable = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Comparison table of which cards reward Zomato vs Swiggy vs both" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="260" fill="var(--raise)" rx="10" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Zomato vs Swiggy: Which Card Covers Which App?</text>
-    <rect x="20" y="40" width="680" height="36" fill="#1e293b" rx="4" />
+    <rect x="20" y="40" width="680" height="36" fill="var(--raise2)" rx="4" />
     <text x="160" y="63" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Card</text>
     <text x="340" y="63" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Zomato</text>
     <text x="490" y="63" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Swiggy</text>
@@ -103,7 +103,7 @@ const SvgZomatoSwiggyTable = () => (
       ["SBI SimplySAVE", "2X (dining)", "2X (dining)", "10X pts"],
     ].map(([card, zomato, swiggy, offline], i) => (
       <g key={i}>
-        <rect x="20" y={80 + i * 38} width="680" height="38" fill={i % 2 === 0 ? "var(--raise)" : "white"} />
+        <rect x="20" y={80 + i * 38} width="680" height="38" fill={i % 2 === 0 ? "transparent" : "var(--raise)"} />
         <text x="160" y={104 + i * 38} textAnchor="middle" fontSize="11" fontWeight="600" fill="var(--text)">{card}</text>
         <text x="340" y={104 + i * 38} textAnchor="middle" fontSize="11" fill="var(--text)">{zomato}</text>
         <text x="490" y={104 + i * 38} textAnchor="middle" fontSize="11" fill="var(--text)">{swiggy}</text>
@@ -287,7 +287,7 @@ export default function BlogMaximizeDining() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -308,7 +308,7 @@ export default function BlogMaximizeDining() {
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The honest version of dining rewards</h2>
         <p>Most articles list reward rates without mentioning caps, and that omission costs you real money. An "Axis Ace gives 5% on Swiggy" headline sounds great until you realize the monthly cashback cap is ₹500, meaning anything above ₹10,000 in delivery orders earns exactly zero extra.</p>
         <p>This guide covers what each card actually pays after you account for caps, point valuations, and the weird category-coding quirks that can halve your rewards without warning.</p>
@@ -316,7 +316,7 @@ export default function BlogMaximizeDining() {
 
       <SvgDiningRates />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Tier 1: Cards built for dining</h2>
 
         <h3 style={{ fontSize: 17, fontWeight: 700, margin: "20px 0 8px", color: COLOR }}>Axis Ace: The delivery card for most people</h3>
@@ -334,7 +334,7 @@ export default function BlogMaximizeDining() {
 
       <SvgMonthlyEarningsTable />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Zomato vs Swiggy split problem</h2>
         <p>Some cards are explicitly coded only for one platform. HDFC Diners Black's 10X rewards are confirmed for Swiggy in their June 2026 rewards schedule, but Zomato transactions on the same card earn standard dining category points, which is much lower.</p>
         <p>Before you pick a card for delivery, check whether the bank specifies both apps or just one. Axis Ace is one of the few cards that explicitly covers both in the same category.</p>
@@ -342,7 +342,7 @@ export default function BlogMaximizeDining() {
 
       <SvgZomatoSwiggyTable />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The offline restaurant trick most people miss</h2>
         <p>When you pay for a restaurant meal by swiping your credit card, the MCC (Merchant Category Code) is typically 5812 (Eating Places and Restaurants) or 5814 (Fast Food), which cards classify as "Dining" for higher rewards. When you pay the same bill via UPI QR or a payment app at the table, the transaction can be coded as a utility payment or wallet transfer instead.</p>
         <p>This means physically swiping or tapping your card at a restaurant often earns better rewards than scanning the UPI code, even though you are paying the same restaurant. Test your own card by checking the category shown in the rewards app for each transaction type.</p>
@@ -350,7 +350,7 @@ export default function BlogMaximizeDining() {
 
       <SvgOfflineVsAppRewards />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Real math: ₹8,000/month dining spend</h2>
         <p>Say you spend ₹5,000 on Swiggy/Zomato and ₹3,000 at restaurants each month. On Axis Ace alone, you earn ₹250 from delivery (5% of ₹5,000) plus about ₹45 from restaurants (1.5% flat), totaling ₹295/month or ₹3,540/year.</p>
         <p>Stack Axis Ace for delivery and Amex MRCC for restaurants (at 5X points, mid-value redemption = ~2% effective), and you get roughly ₹250 + ₹60 = ₹310/month, or ₹3,720/year. The gain from stacking is modest unless you push restaurant spend higher or redeem Amex points at airline valuations.</p>
@@ -358,7 +358,7 @@ export default function BlogMaximizeDining() {
 
       <SvgAnnualEarningsChart />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How to stack dining cards correctly</h2>
         <p>The most practical stack for most people is: Axis Ace as the primary delivery card (covers both apps, cashback is automatic, no redemption friction) and one dining-category card for offline spend. You do not need three cards for dining.</p>
         <p>If your Swiggy spend alone regularly crosses ₹10,000/month, look at HDFC Diners Black seriously, because the uncapped 10X is the strongest single-app reward available. For everyone else, Axis Ace with a general rewards card as backup is sufficient.</p>
@@ -366,14 +366,14 @@ export default function BlogMaximizeDining() {
 
       <SvgStackingTimeline />
 
-      <section style={{ marginBottom: 32, padding: "20px 24px", background: "var(--raise)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
+      <section style={{ marginBottom: 24, padding: "20px 24px", background: "var(--raise)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>Your action plan</h2>
         <p style={{ margin: "0 0 8px" }}>Step 1: Check your last 3 months of dining spend on Swiggy and Zomato. If combined delivery is under ₹10,000/month, Axis Ace alone is optimal.</p>
         <p style={{ margin: "0 0 8px" }}>Step 2: Check your offline restaurant spend. If it regularly crosses ₹5,000/month, adding a dedicated dining card for those transactions adds real money.</p>
         <p style={{ margin: "0" }}>Step 3: Use <Link href="/stack-builder" style={{ color: COLOR }}>our stack builder</Link> to model your specific combo and see the annual rupee return before you apply for anything.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

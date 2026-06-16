@@ -255,7 +255,7 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -278,68 +278,68 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
 
       <SvgRegulatoryTimeline />
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Why These Rules Matter Now</h2>
         <p>RBI's credit card regulations have accumulated significantly since 2021, but consumer awareness of these rights remains low. Banks operate within these rules when customers push back. When customers do not push back, the rules often exist only on paper.</p>
         <p>This piece covers seven specific regulations that affect your money, your rights on closure and disputes, and how banks must now disclose costs they previously buried. Every rule here is enforceable. Knowing them changes what you can demand.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rule 1: Minimum 14-Day Interest-Free Period</h2>
         <SvgInterestFreePeriod />
         <p>RBI's Master Direction on Credit Card Issuance requires that cardholders receive a minimum 14-day interest-free window from their statement date to the payment due date. Before this rule was enforced clearly, some banks set due dates as close as 10 days after statement generation, particularly for mid-cycle statements. A 10-day window in a busy month is easy to miss.</p>
         <p>In practice, most banks now offer 18 to 25 days. But if you receive a statement with a due date of 12 or 13 days out, that is a violation. Contact the bank's credit card team and cite the RBI Master Direction. Our <Link href="/learn/loans" style={{ color: COLOR }}>loan and credit explainer</Link> has more on how billing cycles work.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rule 2: Card Closure Within 7 Working Days</h2>
         <SvgCardClosureRule />
         <p>This is one of the most practically useful rules and one of the most frequently violated by banks. RBI's updated guidelines state that once a cardholder requests closure, the bank must process it within 7 working days, provided all outstanding dues are cleared. The request can be made through the app, by phone, or in writing.</p>
         <p>Banks routinely try to delay by making retention offers, asking you to "think about it," or routing you through multiple departments. You do not need to engage with any of this. A firm written request via email (so you have a timestamp) starts the 7-day clock. Also see our script for <Link href="/blog/get-annual-fee-waived-scripts" style={{ color: COLOR }}>getting annual fees waived or cards closed</Link> without the runaround.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rule 3: Card-on-File Tokenisation</h2>
         <SvgTokenisation />
         <p>From October 2022, RBI mandated that merchants and payment aggregators cannot store actual card numbers. All saved card credentials must be replaced by tokens issued by the card network (Visa, Mastercard, or RuPay) or the issuing bank. This mandate covers all domestic card-on-file scenarios, from Swiggy to Amazon to your electricity bill auto-debit.</p>
         <p>The consumer impact is largely invisible and positive. If Swiggy's database is breached, the attacker gets a token that is cryptographically tied to that merchant and useless anywhere else. The practical annoyance is that changing your card (due to expiry or replacement) now requires re-adding it to each merchant app, since the token generated for the old card does not carry over.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rule 4: Why UPI Has No Rewards and Cards Do</h2>
         <SvgMDRUpi />
         <p>RBI's decision to set UPI's Merchant Discount Rate at zero has a direct consequence for credit card users: it is the structural reason credit card rewards exist. When you pay via credit card, the merchant pays roughly 1 to 2% as MDR. This interchange revenue flows to the issuing bank, part of which funds cashback and reward points. No MDR means no reward budget.</p>
         <p>This is not academic. If you are wondering why your credit card gives 2% back and your UPI app gives nothing, this is the answer. It also explains why banks have been cutting reward rates as more spend migrates to UPI: fewer card swipes means less interchange income means less money to fund rewards. The UPI-reward economics question becomes more complex if RuPay credit cards on UPI gain traction, which we cover in our <Link href="/blog/future-credit-card-rewards-india" style={{ color: COLOR }}>future of rewards piece</Link>.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rule 5: No Auto-Activation of Credit Cards</h2>
         <SvgActivationRule />
         <p>Before RBI tightened this rule, it was common for banks to auto-activate cards on delivery and immediately charge the annual fee. Cardholders who applied in a moment of enthusiasm and then changed their mind had to close a card they had never used while fighting for a fee refund. The updated guidelines prohibit this.</p>
         <p>If a card arrives at your home unactivated, the annual fee clock does not start. You can let it sit, decide you do not want it, and request closure without ever owing a fee. Read our piece on <Link href="/blog/minimum-transaction-traps" style={{ color: COLOR }}>minimum spend traps</Link> for related tactics banks use on new card onboarding.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rule 6: Effective APR Disclosure on No-Cost EMI</h2>
         <SvgEmiAprTrap />
         <p>The "no-cost EMI" product has been one of the most misleading constructs in Indian consumer lending. The cost was real but hidden: a processing fee charged by the bank or merchant creates an effective interest rate that can run from 5% to 14% APR.</p>
         <p>RBI's updated EMI conversion guidelines require banks to disclose the effective APR to customers before they confirm an EMI conversion, either at the point of purchase or when converting an outstanding balance. If you see a no-cost EMI offer and the effective APR is not disclosed at the checkout or confirmation screen, that is non-compliant. You now have a right to know the actual cost before you say yes.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rule 7: Grievance Redressal and the Ombudsman Path</h2>
         <SvgGrievanceEscalation />
         <p>RBI mandates that banks must resolve credit card complaints within 30 days. This seems generous, but few credit card disputes actually get resolved in 30 days through standard customer service channels. The important lever is the RBI Banking Ombudsman, which most consumers have not used but should know about.</p>
         <p>After 30 days of no resolution, or after a formal rejection of your complaint by the bank, you can file at cms.rbi.org.in. The process is free. Cases are investigated and the Ombudsman's decision is binding on the bank. Knowing this escalation path and mentioning it to a bank's grievance team often accelerates resolution on its own.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Your Action List</h2>
         <p>Three things worth doing this week based on these rules. First: check your statement date and due date and confirm you have at least 14 days between them. If not, contact your bank. Second: if you have a card you have been meaning to close, send a written email request today and note the date. If it is not closed in 7 working days, escalate in writing to the Nodal Officer. Third: review any recent "no-cost EMI" you have taken and check whether the effective APR was disclosed.</p>
         <p>These are not aggressive actions. They are the minimum you are entitled to as a regulated credit card holder in India. Banks comply more consistently with customers who know the rules.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

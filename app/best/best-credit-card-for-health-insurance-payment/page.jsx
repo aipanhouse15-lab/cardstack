@@ -192,7 +192,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
   ];
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -215,12 +215,12 @@ export default function BestCreditCardForHealthInsurancePayment() {
         Your ₹30,000 annual health insurance premium is a reward opportunity. Most popular cards waste it with hidden exclusions. Here's who actually pays you back.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span><span>By Ash K</span><span>10 min read</span>
       </div>
 
       {/* Honest number callout */}
-      <div style={{ background: `${COLOR}08`, border: `1.5px solid ${COLOR}30`, borderRadius: 12, padding: "18px 22px", marginBottom: 36, display: "flex", gap: 12 }}>
+      <div style={{ background: `${COLOR}08`, border: `1.5px solid ${COLOR}30`, borderRadius: 12, padding: "18px 22px", marginBottom: 28, display: "flex", gap: 12 }}>
         <IconRupee />
         <div>
           <strong style={{ color: COLOR, fontSize: 14, display: "block", marginBottom: 4 }}>The Honest Number on Insurance Rewards</strong>
@@ -275,14 +275,14 @@ export default function BestCreditCardForHealthInsurancePayment() {
         A household paying health + term + car insurance could be spending ₹40,000 to ₹65,000 annually just on premiums. At 2% reward return (Amex MRCC via airline transfers), that is ₹800 to ₹1,300 earned from insurance alone.
       </p>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         For more on choosing the right health policy before you worry about which card to pay it on, see <Link href="/learn/insurance" style={{ color: COLOR }}>Assure's insurance learning centre</Link>.
       </p>
 
       {/* Annual vs monthly */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Annual vs Monthly Payment: Which Earns More?</h2>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 32 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
           <div style={{ background: `${COLOR}08`, border: `1px solid ${COLOR}30`, borderRadius: 10, padding: "16px 18px" }}>
             <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
@@ -318,7 +318,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>Card-by-Card Comparison: Insurance Premium Rewards</h2>
       <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 16 }}>All figures based on paying ₹30,000 and ₹60,000 annual insurance premium.</p>
 
-      <div style={{ overflowX: "auto", marginBottom: 36 }}>
+      <div style={{ overflowX: "auto", marginBottom: 28 }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13 }}>
           <thead>
             <tr style={{ background: `${COLOR}12` }}>
@@ -350,7 +350,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
       {/* Picks section */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Top 3 Picks for Insurance Premium Payment</h2>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 36 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 14, marginBottom: 28 }}>
         {[
           {
             rank: 1,
@@ -406,7 +406,7 @@ export default function BestCreditCardForHealthInsurancePayment() {
         If your card has a spend-based milestone (e.g., HDFC Regalia gives a ₹2,500 travel voucher at ₹5L annual spend), plan your insurance renewal so the premium pushes you over the milestone. A ₹28,000 premium paid when you're at ₹4.8L spend tips you past the ₹5L mark.
       </p>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         The reverse also applies: if you're far from a milestone, paying insurance early in the year gives you more time to build toward it. Use the <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe calculator</Link> to model exactly when your milestone triggers.
       </p>
 

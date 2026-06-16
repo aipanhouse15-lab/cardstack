@@ -151,7 +151,7 @@ export default function PageSIPAdvertisedVsActual() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -159,9 +159,9 @@ export default function PageSIPAdvertisedVsActual() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>MUTUAL FUNDS · SIP · REALISTIC RETURNS</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>SIP Returns: Why the 15% You See in Ads Often Becomes 10-12% in Your Account</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Fund advertisements always show the best possible return window. Your SIP starts at a different time. Here's the realistic expectation, how to set real goals, and why step-up SIP is the only honest fix for the inflation problem.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Advertisement's Honest Asterisk</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Every mutual fund advertisement in India has a disclaimer: "Past performance is not indicative of future returns." It's printed in small type at the bottom. The headline in big type says "18% returns in 10 years" or "₹10,000 SIP becomes ₹3 crore."</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The headline is technically accurate. For the specific 10-year window the fund chose to show. The small print captures the rest of the truth: that window was cherry-picked, your entry point is different, and the exact sequence of annual returns determines what you actually earn.</p>
@@ -169,35 +169,35 @@ export default function PageSIPAdvertisedVsActual() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The most honest number is the rolling average: 12.1% XIRR across all 10-year windows since 2010. Not 18%. Not 10%. About 12%. Plan with 12%. Everything above is a bonus.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The ₹1 Crore Goal: How Much SIP Do You Actually Need?</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The ad says: ₹10,000 SIP for 15 years = ₹1 crore. The ad uses 15% CAGR. That's possible — in a good window. Planning with it is dangerous.</p>
         <SvgOneCroreIn15yr />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>If you plan with 15% and get 12%, your ₹10,000 SIP produces ₹50.4 lakh — half your target. You either miss the goal or need to invest significantly more in the final years to compensate. Planning conservatively with 12% and setting your SIP at ₹16,200 ensures you hit the target even in average market conditions, and you celebrate if you get more.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Inflation Problem No SIP Ad Mentions</h2>
         <SvgInflationAdjusted />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>₹1 crore in 2041 feels like a big number today. In terms of what you can buy, it's equivalent to ₹48 lakh today (at 5% inflation). If your actual retirement or goal need is ₹1 crore of today's purchasing power, your nominal 2041 target should be ₹2.08 crore.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This doesn't mean SIP is a bad deal — equity returns at 12% comfortably beat 5% inflation, producing real wealth over time. But your goal should be set in real terms, not nominal ones. Most people set nominal goals and end up with half the purchasing power they needed.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The One SIP Strategy That Actually Beats Inflation</h2>
         <SvgStepUpSIP />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Step-up SIP automatically increases your investment amount each year — matching the natural growth in your income. If your salary grows 8-10% annually, your investable surplus also grows. Routing that increment into your SIP is the single most powerful thing you can do to build real wealth.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The math is dramatic: a flat ₹10,000 SIP for 15 years creates ₹50.4L (nominal). The same ₹10,000 starting SIP with 10% annual step-up creates ₹1.16Cr. More than double the corpus with the same starting investment. Step-up SIP is available on all major platforms — Zerodha Coin, Kuvera, Groww all have a toggle for it in the SIP setup flow.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Realistic Planning Checklist</h2>
         <SvgRealisticTargetSetting />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The core principle: set conservative expectations, invest consistently, and increase periodically. Markets will surprise you — sometimes negatively, sometimes positively. But your investment habit (monthly SIP + annual step-up) is the one thing fully within your control.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Also see: <Link href="/learn/mutual-funds/cagr-vs-actual-return" style={{ color: COLOR }}>CAGR vs actual return</Link> for understanding how to measure your real returns, <Link href="/learn/mutual-funds/direct-vs-regular" style={{ color: COLOR }}>Direct vs Regular plans</Link> so you're not losing 1% to commissions, and the full <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link>.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>

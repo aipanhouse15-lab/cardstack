@@ -43,7 +43,7 @@ function RupeeStackIcon() {
 function ExcludedBadgeIcon() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Red X indicating insurance excluded from card rewards">
-      <circle cx="12" cy="12" r="11" fill="#fef2f2" stroke="#ef4444" strokeWidth="1.5"/>
+      <circle cx="12" cy="12" r="11" fill="var(--red-dim)" stroke="#ef4444" strokeWidth="1.5"/>
       <line x1="7" y1="7" x2="17" y2="17" stroke="#ef4444" strokeWidth="2" strokeLinecap="round"/>
       <line x1="17" y1="7" x2="7" y2="17" stroke="#ef4444" strokeWidth="2" strokeLinecap="round"/>
     </svg>
@@ -264,7 +264,7 @@ export default function BestCreditCardForInsurancePremium() {
       style={{
         maxWidth: 800,
         margin: "0 auto",
-        padding: "44px 22px 88px",
+        padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
         lineHeight: 1.65,
@@ -310,7 +310,7 @@ export default function BestCreditCardForInsurancePremium() {
         Paying your ₹50,000 annual insurance premium on the wrong card costs you ₹665 in lost rewards. Here's how to not leave it on the table.
       </p>
 
-      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>
+      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
         Last updated {UPDATED} · By Ash K · 8 min read
       </p>
 
@@ -400,7 +400,7 @@ export default function BestCreditCardForInsurancePremium() {
                     top: -12,
                     left: 18,
                     background: COLOR,
-                    color: "white",
+                    color: "var(--raise)",
                     fontSize: 11,
                     fontWeight: 700,
                     padding: "3px 10px",

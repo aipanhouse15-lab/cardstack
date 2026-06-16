@@ -93,7 +93,7 @@ export default function CompareRegaliaVsMagnus() {
         <span>Last updated {UPDATED}</span><span>·</span><span>By Ash K</span>
       </div>
 
-      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: COLOR, color: "#fff", borderRadius: 16, padding: "22px 24px", marginBottom: 24 }}>
         <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 1.5, opacity: 0.85 }}>VERDICT</div>
         <h2 style={{ fontSize: 24, fontWeight: 800, margin: "6px 0 10px" }}>Regalia for casual flyers, Magnus for point optimisers</h2>
         <p style={{ margin: 0, fontSize: 15, opacity: 0.95 }}>
@@ -101,7 +101,7 @@ export default function CompareRegaliaVsMagnus() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Spec sheet, side by side</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, overflow: "hidden" }}>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
@@ -123,7 +123,7 @@ export default function CompareRegaliaVsMagnus() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Reward point value across redemption paths</h2>
         <div style={{ border: "1px solid var(--border)", borderRadius: 12, padding: 20, background: "var(--bg-soft)" }}>
           <SvgPointValueLadder />
@@ -133,7 +133,7 @@ export default function CompareRegaliaVsMagnus() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 32, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+      <section style={{ marginBottom: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
         <div style={{ border: `2px solid ${COLOR}`, borderRadius: 12, padding: "18px 18px", background: "var(--bg-soft)" }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.4, color: COLOR }}>PICK AXIS MAGNUS IF</div>
           <ul style={{ fontSize: 14, marginTop: 10, paddingLeft: 18, marginBottom: 0 }}>
@@ -154,7 +154,7 @@ export default function CompareRegaliaVsMagnus() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Honest break-even maths</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
           Magnus only earns its ₹12,500 fee back if you genuinely extract ₹1.00 per EDGE point. At ₹3L monthly spend you accrue roughly 2,16,000 points/year — at ₹1 redemption that is ₹2.16 lakh in value, six-figure delta over the fee. But if you redeem at ₹0.20-0.30 (the default catalogue rate) the value collapses to ₹43-65k, less than half the gain you would get from Regalia's simpler redemption flow at the same spend.
@@ -164,7 +164,7 @@ export default function CompareRegaliaVsMagnus() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

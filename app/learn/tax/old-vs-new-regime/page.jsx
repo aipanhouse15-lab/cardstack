@@ -198,7 +198,7 @@ export default function OldVsNewTaxRegime2026() {
         Direct answer: for salaried earners up to ₹12.75 lakh gross, the new regime is now strictly better. Budget 2025's expanded Section 87A rebate makes that band tax-free. From ₹12.75 lakh up to roughly ₹19 lakh to ₹20 lakh, the new regime usually still wins unless your verifiable deductions clear ₹3.75 lakh combined. Above that, with a home loan plus HRA plus the full 80C and 80D stack, the old regime is the smarter call by between ₹30,000 and ₹90,000 a year depending on your specifics. The rest of this guide does the maths in detail.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span>
         <span>·</span>
         <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
@@ -208,7 +208,7 @@ export default function OldVsNewTaxRegime2026() {
         <span>About 12 min read</span>
       </div>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What Budget 2025 actually changed</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The Finance Act 2025 rewrote the new tax regime in two material ways. The seven-slab structure was kept but the slab boundaries shifted upward, and the Section 87A rebate ceiling jumped from ₹7 lakh of taxable income (introduced in Budget 2023) to ₹12 lakh. That second change is the headline. A salaried earner pulling ₹12.75 lakh gross now pays exactly zero income tax under the new regime, down from a previous tax bill of around ₹62,000 on the same salary just one year ago.
@@ -225,7 +225,7 @@ export default function OldVsNewTaxRegime2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How the new regime computes — including the ₹12L cliff</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The new regime is mechanically simpler than the old. You take your gross salary, subtract the ₹75,000 standard deduction (salaried only), and apply the slab rates to whatever remains. The result is your slab tax. If your taxable income — the post-standard-deduction figure — is at or below ₹12 lakh, the Section 87A rebate cancels the entire slab tax. You pay zero. If your taxable income is above ₹12 lakh, the rebate vanishes entirely and you pay the full slab calculation.
@@ -259,7 +259,7 @@ export default function OldVsNewTaxRegime2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How the old regime stays competitive</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The old regime's slab rates — 0% up to ₹2.5 lakh, 5% on the next ₹2.5 lakh, 20% on the ₹5-10 lakh band, 30% above ₹10 lakh — look harsh next to the new regime's seven gentler slabs. The trade-off is the deduction stack. A diligent salaried earner can knock ₹3 lakh to ₹7 lakh off their taxable income before applying those higher rates, and that arithmetic is what keeps the old regime alive for the right profile.
@@ -298,7 +298,7 @@ export default function OldVsNewTaxRegime2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Three real scenarios — and which regime each one picks</h2>
         <p style={{ fontSize: 17, margin: "0 0 18px" }}>
           The numbers above are abstract until you put them on real lives. Three scenarios drawn from the kind of profiles that actually walk into a CA's office during ITR season.
@@ -363,7 +363,7 @@ export default function OldVsNewTaxRegime2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What about surcharge — the silent extra tax above ₹50 lakh</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Surcharge is the second-order tax that kicks in for higher earners and most articles skip it. Worth a paragraph because the regime choice interacts with surcharge meaningfully above ₹50 lakh.
@@ -379,7 +379,7 @@ export default function OldVsNewTaxRegime2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The breakeven point — where old regime overtakes new</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The crossover income — the point at which old regime starts winning — depends almost entirely on how much you can deduct. There is no single number that applies to everyone. But the function is well-behaved enough that we can plot it.
@@ -402,7 +402,7 @@ export default function OldVsNewTaxRegime2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How to actually switch regimes — and the one-time rule for self-employed</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           For salaried earners the switch is annual and almost frictionless. When you file your ITR (typically ITR-1 or ITR-2 for salaried), the form asks you to elect old or new regime. Pick whichever produces lower tax that year. You can flip back and forth every FY without restriction.
@@ -418,7 +418,7 @@ export default function OldVsNewTaxRegime2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Practical decision framework — five quick checks</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Run through these five questions in order. The answers point you at the right regime without doing the full slab calculation.
@@ -435,7 +435,7 @@ export default function OldVsNewTaxRegime2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>CTC structuring — what to ask payroll to change</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           If you have settled on the new regime, your existing CTC structure may be sub-optimal. Most Indian salary structures were built with the old regime in mind: generous HRA components, LTA buckets, food-coupon allocations, fuel reimbursement clauses. Many of these survive partially or vanish under new.
@@ -460,7 +460,7 @@ export default function OldVsNewTaxRegime2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Five mistakes that cost taxpayers money in 2026</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Patterns we see repeatedly when reviewing actual returns. Each one wastes between ₹15,000 and ₹70,000 a year.
@@ -492,7 +492,7 @@ export default function OldVsNewTaxRegime2026() {
         ))}
       </section>
 
-      <section style={{ marginBottom: 36, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
+      <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 8 }}><Link href="/tools/income-tax-calculator" style={{ color: COLOR }}>Income tax calculator</Link>. Model both regimes against your actual deductions in two minutes</li>
@@ -504,7 +504,7 @@ export default function OldVsNewTaxRegime2026() {
         </ul>
       </section>
 
-      <section style={{ marginBottom: 36, fontSize: 13, color: "var(--text-muted)" }}>
+      <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>Finance Act 2025 — full text, Income Tax Department</li>

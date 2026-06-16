@@ -50,7 +50,7 @@ function CalculatorIcon() {
 function ProcessingFeeWarning() {
   return (
     <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warning flag for processing fee on rent payment platforms">
-      <circle cx="22" cy="22" r="20" fill="#fef2f2" stroke={COLOR} strokeWidth="1.5"/>
+      <circle cx="22" cy="22" r="20" fill="var(--red-dim)" stroke={COLOR} strokeWidth="1.5"/>
       <text x="22" y="20" textAnchor="middle" fontSize="10" fill={COLOR} fontWeight="700">1.49%</text>
       <text x="22" y="30" textAnchor="middle" fontSize="7" fill={COLOR}>processing fee</text>
     </svg>
@@ -213,7 +213,7 @@ export default function BestCreditCardForRentPayment() {
       style={{
         maxWidth: 800,
         margin: "0 auto",
-        padding: "44px 22px 88px",
+        padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
         lineHeight: 1.65,
@@ -259,7 +259,7 @@ export default function BestCreditCardForRentPayment() {
         Paying rent on a credit card sounds smart. The math usually says otherwise. Here's when it works and when it quietly costs you money.
       </p>
 
-      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>
+      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
         Last updated {UPDATED} · By Ash K · 8 min read
       </p>
 
@@ -487,7 +487,7 @@ export default function BestCreditCardForRentPayment() {
                 borderLeft: `4px solid ${item.go ? "#22c55e" : COLOR}`,
                 borderRadius: 8,
                 padding: "14px 16px",
-                background: item.go ? "var(--green-dim)" : "#fef2f2",
+                background: item.go ? "var(--green-dim)" : "var(--red-dim)",
               }}
             >
               <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
@@ -497,7 +497,7 @@ export default function BestCreditCardForRentPayment() {
                     height: 22,
                     borderRadius: "50%",
                     background: item.go ? "#22c55e" : COLOR,
-                    color: "white",
+                    color: "var(--raise)",
                     fontSize: 12,
                     fontWeight: 700,
                     display: "flex",

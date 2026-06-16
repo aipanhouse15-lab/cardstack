@@ -36,7 +36,7 @@ const SvgBnplLandscape = () => (
       ["ZestMoney (wound down)", "N/A", "24-42% APR was charged", "Varied", "Yes"],
     ].map((row, i) => (
       <g key={i}>
-        <rect x="20" y={56 + i * 24} width="680" height="22" rx="3" fill={i % 2 === 0 ? "transparent" : "#fef2f2"} />
+        <rect x="20" y={56 + i * 24} width="680" height="22" rx="3" fill={i % 2 === 0 ? "transparent" : "var(--red-dim)"} />
         <text x="30" y={71 + i * 24} fontSize="11" fill="var(--text)">{row[0]}</text>
         <text x="160" y={71 + i * 24} fontSize="11" fill="#16a34a">{row[1]}</text>
         <text x="290" y={71 + i * 24} fontSize="11" fontWeight="600" fill={COLOR}>{row[2]}</text>
@@ -110,7 +110,7 @@ const SvgHiddenCharges = () => (
       { charge: "Penal interest after default", amount: "2-4% extra/month", trap: "Stacks on top of the EMI rate. Rarely disclosed upfront." },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="20" y={38 + i * 28} width="680" height="24" rx="4" fill={i % 2 === 0 ? "#fef2f2" : "var(--raise)"} />
+        <rect x="20" y={38 + i * 28} width="680" height="24" rx="4" fill={i % 2 === 0 ? "var(--red-dim)" : "var(--raise)"} />
         <text x="30" y={54 + i * 28} fontSize="11" fontWeight="700" fill={COLOR}>{d.charge}:</text>
         <text x="200" y={54 + i * 28} fontSize="11" fontWeight="600" fill="#7f1d1d">{d.amount}</text>
         <text x="310" y={54 + i * 28} fontSize="10.5" fill="var(--text-muted)">{d.trap}</text>
@@ -262,7 +262,7 @@ export default function BlogBnplVsCreditCardsIndia() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -338,7 +338,7 @@ export default function BlogBnplVsCreditCardsIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you're already in BNPL EMI debt: don't take on more BNPL. Consider a personal loan at a lower rate to consolidate the outstanding balance and clear it faster. Check our <Link href="/learn/loans" style={{ color: COLOR }}>loans guide</Link> for current personal loan rates from HDFC, ICICI, Kotak, and IDFC FIRST.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

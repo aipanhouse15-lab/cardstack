@@ -268,7 +268,7 @@ export default function BlogDigitalWalletsVsCreditCards() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -282,67 +282,67 @@ export default function BlogDigitalWalletsVsCreditCards() {
       <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>Paytm, PhonePe, Google Pay — everyone uses them. But wallets stopped rewarding you years ago. Here is what the honest math looks like in 2026.</p>
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Core Confusion: Wallet vs Payment Rail</h2>
         <p>Most people think of PhonePe or Google Pay as "wallets." They are not — they are UPI apps that use your bank account as the payment source. A wallet is a separate stored-balance product, like Paytm Wallet or Amazon Pay Balance.</p>
         <p>The distinction matters enormously for rewards. UPI bank transfers earn zero reward. Wallets earn zero reward. Your credit card, however, earns 1-5% back on the same rupee — which is why choosing the right payment method is worth the two extra seconds.</p>
         <SvgPaymentRail />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What RBI Did to Wallet Rewards (And Why They Are Gone)</h2>
         <p>Before 2022, Paytm Wallet offered 2% cashback on most transactions. PhonePe ran frequent ₹50-₹100 cashback offers. Then RBI tightened MDR (Merchant Discount Rate) regulations and UPI became a zero-cost rail — merchants pay nothing to receive UPI payments, so there is no revenue to fund cashback.</p>
         <p>Wallet providers quietly killed their reward programs one by one. Today, PhonePe scratch cards are essentially lottery tickets averaging ₹0.80 per ₹1,000 spent — not a reward strategy, a marketing gimmick. Your credit card earns 10-60x more on the same spend.</p>
         <SvgRewardsComparison />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>RBI Wallet Limits: The Fine Print That Bites</h2>
         <p>If you have not completed full KYC on your wallet, your balance is capped at ₹10,000 and you cannot transfer money back to your bank account. That is a real problem if you accidentally load ₹15,000 into a minimum KYC wallet.</p>
         <p>Full KYC (Aadhaar-based or in-person) raises limits to ₹2,00,000, but that is still a ceiling with no interest earned on the balance. Your savings account earns 3-7% on the same money. Keeping large balances in a wallet is a hidden opportunity cost.</p>
         <SvgWalletLimits />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The ₹5,000 Swiggy Order Test</h2>
         <p>Here is a real scenario: you order ₹5,000 worth of food on Swiggy. Which payment method leaves you the most money at the end of the month? The answer is not even close.</p>
         <p>Paying via Paytm Wallet balance nets you ₹0 in rewards. Paying via Axis Flipkart credit card or SBI Cashback card nets ₹250 — 5% back. Over a year of similar orders, the credit card user is up ₹3,000. The wallet user is up nothing.</p>
         <SvgSwiggyScenario />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Fraud Protection: This Is Where It Gets Serious</h2>
         <p>Most people assume their wallet is safe because "it is linked to UPI." Wrong. Digital wallets are covered only by the wallet company's own policy — which has no mandated resolution timeline and no chargeback network behind it.</p>
         <p>Credit cards are protected by RBI's zero-liability circular: report fraud within 3 working days, get full reversal, bank must resolve within 90 days. For any transaction above ₹5,000, this protection alone is worth choosing a credit card over a wallet.</p>
         <SvgFraudProtection />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The RuPay Credit Card Exception: Best of Both Worlds</h2>
         <p>Here is the one genuine innovation from the last two years: RuPay credit cards can now be linked to PhonePe and Google Pay. Scan any UPI QR, the charge goes to your credit card, and you earn full credit card rewards.</p>
         <p>HDFC MoneyBack+, IDFC FIRST RuPay Select, and SBI Cashback all come in RuPay variants. If you have one of these, you can use UPI at street vendors, petrol stations, and kirana shops while earning credit card points. This is the single best reason to check if your card has a RuPay variant.</p>
         <SvgRuPayUPI />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Where Wallets Still Make Sense</h2>
         <p>Wallets are not useless — they are just not a reward vehicle. They are convenient when a merchant does not accept credit cards (many small vendors), when you need to split a bill quickly, or when you are buying from a platform that offers wallet-specific discounts from time to time.</p>
         <p>Amazon Pay Balance is a partial exception: if you use an Amazon Pay ICICI credit card to load Amazon Pay Balance on Amazon.in, the card rewards still apply. But that is the credit card doing the work, not the wallet.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Honest Use-Case Map</h2>
         <p>Different scenarios genuinely call for different payment methods. The table below is the honest verdict without any brand loyalty.</p>
         <SvgUseCaseMap />
       </section>
 
-      <section style={{ background: "var(--raise)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: "var(--raise)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 10px", color: COLOR }}>What to Do Right Now</h2>
         <p style={{ margin: "0 0 10px" }}>Check if your credit card has a RuPay variant — if it does, link it to Google Pay or PhonePe today. Use your credit card directly on every major app that accepts it (Swiggy, Zomato, Myntra, Amazon, Flipkart, MakeMyTrip). Keep wallets for the handful of places that do not accept cards.</p>
         <p style={{ margin: 0 }}>Use <Link href="/smart-swipe" style={{ color: COLOR, fontWeight: 600 }}>Smart Swipe</Link> to find which card earns the most at each merchant in your spending pattern. Or read our deep dive on <Link href="/blog/upi-vs-credit-cards-india" style={{ color: COLOR }}>UPI vs Credit Cards</Link> and <Link href="/blog/cashback-rate-is-a-lie" style={{ color: COLOR }}>why the advertised cashback rate is usually a lie</Link>.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

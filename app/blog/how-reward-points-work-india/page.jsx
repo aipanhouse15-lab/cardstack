@@ -59,7 +59,7 @@ const SvgPointValue = () => (
       { prog: "Kotak PVR Points", stmt: "₹0.25", portal: "₹0.30", miles: "N/A" },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="24" y={64 + i * 26} width="672" height="24" fill={i % 2 === 0 ? "var(--raise)" : "white"} rx="2" />
+        <rect x="24" y={64 + i * 26} width="672" height="24" fill={i % 2 === 0 ? "transparent" : "var(--raise)"} rx="2" />
         <text x="36" y={81 + i * 26} fontSize="12" fill="var(--text)" fontFamily="system-ui">{d.prog}</text>
         <text x="260" y={81 + i * 26} fontSize="12" fill="var(--text-muted)" fontFamily="system-ui">{d.stmt}</text>
         <text x="420" y={81 + i * 26} fontSize="12" fontWeight="600" fill={COLOR} fontFamily="system-ui">{d.portal}</text>
@@ -160,7 +160,7 @@ const SvgAcceleratedEarn = () => (
       { card: "ICICI Amazon Pay", cat: "Amazon Prime", rate: "5% cashback", cap: "None" },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="24" y={62 + i * 28} width="672" height="26" fill={i % 2 === 0 ? "var(--raise)" : "white"} rx="2" />
+        <rect x="24" y={62 + i * 28} width="672" height="26" fill={i % 2 === 0 ? "transparent" : "var(--raise)"} rx="2" />
         <text x="36" y={80 + i * 28} fontSize="11" fill="var(--text)" fontFamily="system-ui">{d.card}</text>
         <text x="200" y={80 + i * 28} fontSize="11" fill="var(--text-muted)" fontFamily="system-ui">{d.cat}</text>
         <text x="400" y={80 + i * 28} fontSize="11" fontWeight="700" fill={COLOR} fontFamily="system-ui">{d.rate}</text>
@@ -205,7 +205,7 @@ export default function BlogHowRewardPointsWorkIndia() {
   ]};
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -267,7 +267,7 @@ export default function BlogHowRewardPointsWorkIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Amex has the widest transfer partner network of any card program available in India, including British Airways Avios (useful for short-haul redemptions within India) and Singapore Airlines KrisFlyer (excellent for Southeast Asia and business class to Europe). The caveat: award seats need to be available, which takes some planning.</p>
       </section>
 
-      <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 32 }}>
+      <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2 }}>
           <li>Log into your card's reward portal and check your current balance and the oldest expiry date.</li>
@@ -278,7 +278,7 @@ export default function BlogHowRewardPointsWorkIndia() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

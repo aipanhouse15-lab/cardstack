@@ -161,7 +161,7 @@ export default function BlogCashbackRateIsALie() {
   ]};
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -207,7 +207,7 @@ export default function BlogCashbackRateIsALie() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Also see our <Link href="/blog/reward-points-vs-cashback" style={{ color: COLOR }}>reward points vs cashback comparison</Link> for when points cards actually beat cashback despite the complexity, and our <Link href="/blog/build-3-card-stack-guide" style={{ color: COLOR }}>3-card stack guide</Link> for how to combine cards to cover your full spend at the best rate.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

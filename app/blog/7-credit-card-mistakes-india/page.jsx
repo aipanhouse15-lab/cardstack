@@ -154,7 +154,7 @@ const SvgSpendCap = () => (
       { card: "ICICI Amazon Pay", cat: "Amazon purchases", cap: "No cap (1.5% base)" },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="24" y={68 + i * 28} width="672" height="26" fill={i % 2 === 0 ? "var(--raise)" : "white"} rx="2" />
+        <rect x="24" y={68 + i * 28} width="672" height="26" fill={i % 2 === 0 ? "transparent" : "var(--raise)"} rx="2" />
         <text x="36" y={86 + i * 28} fontSize="12" fill="var(--text)" fontFamily="system-ui">{d.card}</text>
         <text x="220" y={86 + i * 28} fontSize="12" fill="var(--text-muted)" fontFamily="system-ui">{d.cat}</text>
         <text x="460" y={86 + i * 28} fontSize="12" fontWeight="600" fill={COLOR} fontFamily="system-ui">{d.cap}</text>
@@ -185,7 +185,7 @@ export default function BlogCreditCardMistakesIndia() {
   ]};
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -253,7 +253,7 @@ export default function BlogCreditCardMistakesIndia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Before choosing a card for a specific spend category, check the T&C for monthly caps. Use our <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link> to find which card gives you the best rate for your real spend pattern.</p>
       </section>
 
-      <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 32 }}>
+      <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2 }}>
           <li>Log into your card portal and check if you have any points expiring in the next 6 months.</li>
@@ -264,7 +264,7 @@ export default function BlogCreditCardMistakesIndia() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

@@ -193,7 +193,7 @@ export default function PageEducationLoanRealCost() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -205,9 +205,9 @@ export default function PageEducationLoanRealCost() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>LOANS · EDUCATION LOANS · THE FULL MATH</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Your ₹15L Education Loan Becomes ₹22L Before Your First Job: The Complete Cost Breakdown</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Banks explain the moratorium. They rarely explain what happens to your loan amount during it. Here's the full math on interest capitalization, the 80E benefit, and how to minimise total repayment.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 12 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Ananya's Loan: The Number That Kept Growing</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Ananya was 22 when she got into a two-year MBA program at a reputed private business school. Tuition, hostel, and living expenses came to ₹15 lakh over two years. She applied to Axis Bank's education loan product, got approved at 11% interest, and signed without reading the fine print carefully.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The RM explained: "Your loan has a moratorium. You don't pay anything during your studies and for 6 months after graduation. You start EMI when you get a job." This sounded generous. Ananya agreed.</p>
@@ -215,7 +215,7 @@ export default function PageEducationLoanRealCost() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Over 10 years, she'll repay ₹34.4 lakh on a ₹15 lakh loan. That's ₹19.4 lakh in interest. The bank called it a "moratorium." Ananya calls it something else entirely.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How Interest Capitalization Actually Works</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Education loans in India accrue interest from the date of disbursement. The first disbursement typically happens in the first semester. By the time the course ends, 2-4 years of interest has accumulated.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The critical term is capitalization. At the end of each year (or when the moratorium ends, depending on the bank), the accrued interest is added to the outstanding principal. This new, higher principal then attracts interest in the next period. It compounds.</p>
@@ -224,7 +224,7 @@ export default function PageEducationLoanRealCost() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The numbers look worse when you factor in that Ananya received disbursements in installments (semester-wise), not a lump sum. But for simplicity, even on full lump-sum disbursement, the capitalization is brutal.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The One Move That Saves ₹6 Lakh</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>If Ananya's parents could pay the monthly simple interest during her 2.5-year moratorium, the entire capitalization is avoided. At 11% on ₹15L, the monthly interest-only payment is ₹1,375 in Year 1, rising slightly as the nominal principal stays the same.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Total payments during study period: approximately ₹39,600 over 30 months. This keeps the outstanding principal at ₹15L. Her first EMI becomes ₹20,700 instead of ₹28,700. Total repaid: ₹28.4L instead of ₹34.4L.</p>
@@ -233,7 +233,7 @@ export default function PageEducationLoanRealCost() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Even paying interest for just one of the two study years changes the math significantly. Partial interest payments are allowed by all banks — it doesn't have to be all-or-nothing. Even ₹500–1,000/month during study reduces capitalization meaningfully.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Which Bank Should You Actually Pick?</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The rate gap between SBI Scholar Loan (8.15% for premier institutes) and HDFC Credila (11.5-13%) is enormous. On ₹15L over 10 years, the total interest difference is roughly ₹10-13 lakh. This gap is so large that choosing a bank on processing speed alone is financially irrational.</p>
         <SvgBankComparison />
@@ -242,7 +242,7 @@ export default function PageEducationLoanRealCost() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Bank of Baroda's Baroda Education Loan scheme (around 9.70%) with a 12-month moratorium is worth considering for mid-tier colleges that don't qualify for SBI Scholar Loan. It's not the cheapest but offers a longer moratorium that allows more time to establish income before EMI starts.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Section 80E: The Tax Benefit Nobody Explains Clearly</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Section 80E of the Income Tax Act allows full deduction of education loan interest paid during a financial year, with no upper limit. This benefit applies for 8 assessment years starting from the year you begin repayment.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The deduction is only available under the old tax regime. If you've opted for the new regime, you forgo this benefit. For many education loan borrowers, the 80E saving can be large enough to justify staying in the old regime.</p>
@@ -251,7 +251,7 @@ export default function PageEducationLoanRealCost() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Also note: 80E is for the borrower, not the parent co-applicant. If the student is the primary borrower, they claim 80E when they start repaying. If a parent took the loan in their name for the child, the parent claims 80E. This matters for tax planning within the family.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Tenure: The Decision That Controls Everything</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Banks give you flexibility on tenure (typically 5-15 years). The temptation is always to take the longest tenure — lower EMI, less monthly pain. The math says the opposite.</p>
         <SvgRepaymentTimeline />
@@ -259,7 +259,7 @@ export default function PageEducationLoanRealCost() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>A middle path: take a 10-year tenure but aggressively prepay any annual bonus or salary increment windfall. This gives you EMI flexibility (₹27,600/month) while still cutting the tenure short. Most public sector banks allow partial prepayment without penalty on education loans.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The College Tier Question: Does the Loan Make Financial Sense?</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This is the question nobody asks. The loan amount and repayment term should be calibrated against the expected salary from the degree. A ₹15L loan for an IIM-A MBA is financially trivial — the starting CTC is 10-20x the annual EMI. The same ₹15L for a tier-3 MBA with ₹5L average placement is a 10-15 year financial burden.</p>
         <SvgSalaryVsEMI />
@@ -267,7 +267,7 @@ export default function PageEducationLoanRealCost() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Before signing any education loan, look up the college's actual placement reports (not marketing brochures), find the median salary (not average or highest package), and calculate your EMI-to-income ratio using our <Link href="/tools/emi-calculator" style={{ color: COLOR }}>EMI calculator</Link>. If the ratio is above 30%, explore scholarships, partial self-funding, or shorter programs first.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Checklist: What to Do Before and After Taking the Loan</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Before taking the loan: verify your college is on SBI's premier institute list (save ₹3L+ in interest). Calculate the EMI-to-expected-salary ratio. Confirm with the bank whether they add simple or compound interest during moratorium — this changes your outstanding by ₹30,000-1,00,000.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>During the study period: pay at least the simple interest every month if your family can manage it. Even ₹500-1,000/month reduces future capitalization. Ask the bank for a statement showing your accrued interest every semester — this keeps you aware of the growing number.</p>
@@ -275,7 +275,7 @@ export default function PageEducationLoanRealCost() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>See our broader <Link href="/learn/loans" style={{ color: COLOR }}>loans hub</Link> and our <Link href="/learn/tax/80c-beyond-the-obvious" style={{ color: COLOR }}>tax deductions guide</Link> for how education loan interest fits into your overall tax planning alongside 80C, HRA, and home loan interest.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>

@@ -170,7 +170,7 @@ export default function HomeLoanTrueCost() {
 
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>LOANS · TIER 2 GUIDE · COST WATERFALL</div>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span>
         <span>·</span>
         <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
@@ -180,7 +180,7 @@ export default function HomeLoanTrueCost() {
         <span>About 10 min read</span>
       </div>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The cost waterfall — every layer below the EMI</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The EMI calculator on every bank's website shows ₹44,186 per month for a ₹50 lakh loan at 8.75% over 240 months. That number is true and useful, and also incomplete. The lifetime cost has six layers stacked beneath it; only one (the EMI) is visible upfront.
@@ -193,7 +193,7 @@ export default function HomeLoanTrueCost() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 1 — processing fee and GST</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Banks charge a processing fee at sanction, typically 0.25 percent to 2 percent of the loan amount. SBI runs at 0.35 percent (capped at ₹10,000 for many products). HDFC and ICICI run 0.5 percent to 1 percent. LIC Housing Finance often goes higher at 0.5 percent to 1.5 percent. Smaller HFCs and NBFCs sometimes hit 2 percent.
@@ -206,7 +206,7 @@ export default function HomeLoanTrueCost() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 2 — stamp duty and registration (the largest single hit)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Stamp duty is paid to the state government on the property purchase agreement, computed as a percentage of the property value or circle rate (whichever is higher). Registration is paid for recording the transfer at the sub-registrar. Together, these vary dramatically by state.
@@ -222,7 +222,7 @@ export default function HomeLoanTrueCost() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 3 — MOD charges and legal fees</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           MOD stands for Memorandum of Deposit of Title Deeds — the legal instrument that creates the equitable mortgage in favour of the bank. Registration of the MOD costs roughly 0.1 percent to 0.2 percent of the loan amount in most states, payable to the sub-registrar.
@@ -235,7 +235,7 @@ export default function HomeLoanTrueCost() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 4 — the insurance bundle (often optional, often mis-sold)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Banks routinely bundle two insurance products at sanction. Decreasing-term life insurance covers the outstanding loan balance — premium ranges from ₹15,000 to ₹50,000 in year one for a ₹50 lakh loan. Property insurance covers fire, flood, earthquake — typical annual premium ₹3,000 to ₹8,000.
@@ -251,7 +251,7 @@ export default function HomeLoanTrueCost() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 5 — pre-EMI interest during construction</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           For under-construction properties, the bank disburses funds to the builder in tranches linked to construction milestones. Until your loan is fully disbursed and full EMI begins, you pay only interest on the disbursed portion. This is pre-EMI interest, and it can run for 18 to 36 months on typical metro projects.
@@ -267,7 +267,7 @@ export default function HomeLoanTrueCost() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Layer 6 — lifetime interest (the biggest line in the waterfall)</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           On a ₹50 lakh loan at 8.75% over 240 months, total interest paid is ₹56,04,640 — more than the original principal. This is the largest single component of the true cost. It accumulates slowly in early years (when most of the EMI is interest) and accelerates as the loan ages.
@@ -283,7 +283,7 @@ export default function HomeLoanTrueCost() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Floating rate volatility — the hidden cost or saving</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           From October 2019 onwards, RBI mandated External Benchmark Lending Rate (EBLR) for all new retail floating-rate loans. Most home loans are now linked to RBI repo plus a fixed spread. When repo moves, your rate moves within 3 months. This creates real EMI volatility.
@@ -299,7 +299,7 @@ export default function HomeLoanTrueCost() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The tax shelter side — the part most articles skip</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The cost waterfall is real, but so is the tax shelter. Under the old regime, three deductions stack on a home loan and together can save ₹1.5 lakh of annual tax for a 30 percent slab filer.
@@ -318,7 +318,7 @@ export default function HomeLoanTrueCost() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How to negotiate the true cost down</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The headline rate is set by the bank's published EBLR plus spread. The other layers are surprisingly negotiable. Five levers that consistently work.
@@ -340,7 +340,7 @@ export default function HomeLoanTrueCost() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The under-construction trap and how to avoid it</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Buying an under-construction property looks cheaper on paper than a ready-to-move-in flat — typically 10 to 20 percent lower per square foot. The cost gap usually closes when you account for pre-EMI interest, construction-period rent (since you're paying rent on your current home while waiting for delivery), and project-delay risk that has plagued metro real estate since 2014.
@@ -353,7 +353,7 @@ export default function HomeLoanTrueCost() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What this looks like as a homeowner profile</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Take Rohan and Priya, 32 and 30, dual-income couple in Pune. Combined gross ₹35 lakh per year. Looking at a ₹85 lakh apartment, planning ₹65 lakh as home loan over 20 years, ₹20 lakh as own contribution.
@@ -379,7 +379,7 @@ export default function HomeLoanTrueCost() {
         ))}
       </section>
 
-      <section style={{ marginBottom: 36, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
+      <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 8 }}><Link href="/tools/emi-calculator" style={{ color: COLOR }}>EMI calculator</Link>. Run your own loan numbers in 30 seconds.</li>
@@ -390,7 +390,7 @@ export default function HomeLoanTrueCost() {
         </ul>
       </section>
 
-      <section style={{ marginBottom: 36, fontSize: 13, color: "var(--text-muted)" }}>
+      <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>RBI EBLR framework circular, October 2019 — external benchmark linking</li>

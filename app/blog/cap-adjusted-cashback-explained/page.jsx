@@ -166,7 +166,7 @@ export default function CapAdjustedCashbackExplained() {
 
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>CREDIT CARDS · TIER 2 GUIDE · MATH WALKTHROUGH</div>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span>
         <span>·</span>
         <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
@@ -176,7 +176,7 @@ export default function CapAdjustedCashbackExplained() {
         <span>About 9 min read</span>
       </div>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The cap binding curve — visualised</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Take a 5% cashback card with a ₹1,000 monthly cap on the accelerated category. At a partner-spend level of ₹5,000 per month, you earn ₹250 (5%) — well below the cap, so the headline rate holds. At ₹15,000 partner spend you'd earn ₹750, still below the cap. At ₹20,000, you'd earn exactly ₹1,000 — the cap binds for the first time. Every additional rupee of partner spend beyond ₹20,000 earns nothing in the partner rate; it falls to the base rate of typically 1 percent.
@@ -189,7 +189,7 @@ export default function CapAdjustedCashbackExplained() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The general formula</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Effective rate is determined by four inputs: partner-app monthly spend, total monthly spend, the card's specific cap structure, and the annual fee. Combine them and you can compute the real return rate for any card on any spend profile.
@@ -205,7 +205,7 @@ export default function CapAdjustedCashbackExplained() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Applied to five popular cashback cards</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           To make this concrete, here's the same ₹40,000 monthly spend profile (₹10,000 food delivery, ₹15,000 partner online, ₹15,000 other offline) run through five cards. The chart shows effective rate net of annual fee for the second year of holding (year-one welcome benefits excluded for fairness).
@@ -227,7 +227,7 @@ export default function CapAdjustedCashbackExplained() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The card-by-spend-profile matrix</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Different spend profiles have different winners. The matrix below maps five cards across four spend buckets (light at ₹15k/month, modest at ₹30k, heavy at ₹60k, HNI at ₹1L). Read horizontally to find the best card for your profile; vertically to see how a single card performs across spend levels.
@@ -243,7 +243,7 @@ export default function CapAdjustedCashbackExplained() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Why this gap exists — the issuer economics</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Card issuers earn revenue from three sources on every transaction. Merchant Discount Rate (MDR), the fee charged to merchants for accepting card payments, ranges 0.4 to 2 percent depending on category. Interchange fees, paid by the merchant's bank to the issuing bank via the card network, run 0.15 to 0.50 percent. Combined gross revenue per transaction is 0.55 to 2.5 percent.
@@ -259,7 +259,7 @@ export default function CapAdjustedCashbackExplained() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How to maximise effective rate on your existing cards</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           You don't need to add new cards to improve your effective rate. Three operational tweaks on your current card portfolio can lift effective return by 50 to 100 basis points without any change in spend pattern.
@@ -278,7 +278,7 @@ export default function CapAdjustedCashbackExplained() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The credit-revolver penalty — why this article matters most</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Everything above assumes you pay the full statement balance on time every month. The instant you revolve a credit card balance, the math collapses. Indian credit card APRs are 36 to 50 percent. A single month of carrying a ₹50,000 balance costs roughly ₹1,500 in interest, wiping out the cumulative cashback from many months of optimised spending.
@@ -288,7 +288,7 @@ export default function CapAdjustedCashbackExplained() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Spend categorisation — the missing piece in most calculators</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The cap-adjusted formula assumes you can correctly categorise every transaction as "partner spend" versus "base spend." In practice this is harder than it sounds because Indian merchants often classify under non-obvious Merchant Category Codes (MCCs) that determine whether a card's accelerator applies.
@@ -304,7 +304,7 @@ export default function CapAdjustedCashbackExplained() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The exclusions list — what no cashback covers</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Almost every Indian credit card maintains an exclusions list that earns zero rewards regardless of the card's reward structure. Knowing the list saves you from the disappointment of expecting cashback that isn't coming.
@@ -329,7 +329,7 @@ export default function CapAdjustedCashbackExplained() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>A complete worked example for a real household</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Take a household with monthly spend mix that's representative of upper-middle-class urban India. ₹12,000 BigBasket grocery, ₹8,000 Swiggy/Zomato food delivery, ₹6,000 Amazon Prime shopping, ₹5,000 Uber/Ola rides, ₹15,000 fuel, ₹8,000 utility bills via Gpay, ₹10,000 dining (offline), ₹6,000 Cleartrip + MakeMyTrip travel bookings. Total ₹70,000 monthly = ₹8.4 lakh annual.
@@ -351,7 +351,7 @@ export default function CapAdjustedCashbackExplained() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The hidden cost of reward-point cards in this comparison</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           So far this article has assumed cashback in INR. Many premium cards (HDFC Diners Club Privilege, Axis Magnus, American Express Membership Rewards) earn reward points instead. Reward points add a redemption-rate variable that materially changes the effective return.
@@ -377,7 +377,7 @@ export default function CapAdjustedCashbackExplained() {
         ))}
       </section>
 
-      <section style={{ marginBottom: 36, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
+      <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 8 }}><Link href="/tools/cashback-calculator" style={{ color: COLOR }}>Cashback calculator</Link>. Plug in your spend and see effective rate per card.</li>
@@ -388,7 +388,7 @@ export default function CapAdjustedCashbackExplained() {
         </ul>
       </section>
 
-      <section style={{ marginBottom: 36, fontSize: 13, color: "var(--text-muted)" }}>
+      <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>RBI Master Direction on Credit Cards (April 2022) and 2024-25 amendments</li>

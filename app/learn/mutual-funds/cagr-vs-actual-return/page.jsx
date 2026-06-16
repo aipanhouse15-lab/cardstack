@@ -163,7 +163,7 @@ export default function PageCAGRvsActualReturn() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -171,9 +171,9 @@ export default function PageCAGRvsActualReturn() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>MUTUAL FUNDS · RETURNS · HOW TO MEASURE</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>CAGR Is a Lie (Sort Of): Why Your Mutual Fund's 18% CAGR Doesn't Mean What You Think</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>The fund brochure says 18% CAGR. Your portfolio shows 11% XIRR. Both numbers are accurate. They're measuring different things. Understanding the difference could change how you evaluate every investment.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 11 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Fundamental Mismatch</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Compound Annual Growth Rate (CAGR) answers the question: if I had invested a lump sum on date X, what annual return would explain the NAV movement to date Y? It's a clean, simple metric for lump-sum performance evaluation.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>But you didn't invest a lump sum. You invested ₹10,000 every month for 60 months. Your first installment had 60 months in the market. Your last installment had 1 month. The CAGR of the fund measures a different investment pattern than yours. The fund CAGR is not your return.</p>
@@ -181,7 +181,7 @@ export default function PageCAGRvsActualReturn() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>XIRR (Extended Internal Rate of Return) is the correct metric for SIP investors. It accounts for the timing and size of every cash flow. If you invested ₹10,000 in January 2020 and different amounts in subsequent months, XIRR gives you the single annualized return that makes all those cash flows add up correctly. This is your actual return.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Same CAGR, Different Money: The Sequence Problem</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Even more counterintuitive: two funds with identical 10-year CAGR can produce different actual wealth for SIP investors. The reason is the order in which returns occur — the sequence of returns.</p>
         <SvgSequenceOfReturns />
@@ -189,21 +189,21 @@ export default function PageCAGRvsActualReturn() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The lesson: stop worrying about market timing for SIP investments. An immediate crash after you start a SIP is actually good news — you're buying more units at a discount.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How Fund Houses Cherry-Pick Windows</h2>
         <SvgCherryPickedWindows />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Every fund house's marketing team knows that choosing the right 3-year or 5-year window can make any fund look exceptional. Starting the measurement at a market low (like March 2020 COVID crash) and ending at a market high produces spectacular-looking CAGR numbers.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The better metrics: 10-year and 15-year CAGR (captures multiple market cycles), rolling returns (average of all N-year windows since inception), and benchmark comparison (does the fund beat Nifty 50 TRI over 10 years after expenses?). Rolling returns are particularly honest — they can't be cherry-picked because they average all periods.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How to Calculate Your Actual XIRR</h2>
         <SvgXIRRCalculation />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Most modern investment platforms make this easy. Zerodha Coin, Kuvera, and Groww all display XIRR prominently. Paytm Money and ET Money also show it. MF Central (the AMFI-run consolidator) shows XIRR across all your funds in one place — free, with your PAN.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>If your platform shows XIRR significantly lower than the fund's advertised CAGR: that's expected and not a problem. The gap is the difference between how the fund grew and how your specific investment timing translated to returns. As long as your XIRR beats fixed deposits and inflation (comfortably for long-tenure equity SIPs), the investment is doing its job.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Rolling Returns Reality for Nifty 50</h2>
         <SvgRollingReturns />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Nifty 50's rolling 3-year CAGR has averaged approximately 11% over any randomly chosen 3-year window since 2005. Some windows showed -8% (2006-09). Most showed 10-25%. This distribution — one bad period, many good ones — is what long-term equity investing actually looks like.</p>
@@ -211,7 +211,7 @@ export default function PageCAGRvsActualReturn() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>See our related guides: <Link href="/learn/mutual-funds/direct-vs-regular" style={{ color: COLOR }}>Direct vs Regular plans</Link> (don't let expense ratios eat your CAGR), <Link href="/learn/mutual-funds/sip-advertised-vs-actual" style={{ color: COLOR }}>SIP advertised vs actual returns</Link>, and the <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link>.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>

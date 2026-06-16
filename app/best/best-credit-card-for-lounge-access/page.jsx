@@ -250,7 +250,7 @@ export default function BestCreditCardForLoungeAccess() {
   ];
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -273,12 +273,12 @@ export default function BestCreditCardForLoungeAccess() {
         Airport lounges cost ₹800 to ₹2,000 per visit at the door. Your credit card might give you some for free, or it might be trapping you in a milestone game you can't win.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span><span>By Ash K</span><span>10 min read</span>
       </div>
 
       {/* At-a-glance table */}
-      <div style={{ background: `${COLOR}08`, border: `1.5px solid ${COLOR}25`, borderRadius: 12, padding: "18px 20px", marginBottom: 36 }}>
+      <div style={{ background: `${COLOR}08`, border: `1.5px solid ${COLOR}25`, borderRadius: 12, padding: "18px 20px", marginBottom: 28 }}>
         <div style={{ fontWeight: 700, fontSize: 15, color: COLOR, marginBottom: 12 }}>Quick Picks by Travel Frequency</div>
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {visitValueTable.map(({ profile, rec, note }, i) => (
@@ -305,7 +305,7 @@ export default function BestCreditCardForLoungeAccess() {
         Your credit card may give you access to one, both, or neither of these networks. A card that says "unlimited lounge access" in its marketing may mean unlimited DreamFolks but only 6 Priority Pass visits per year. Read the fine print on both systems separately.
       </p>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 32 }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 24 }}>
         <div style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 10, padding: "16px 18px" }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
             <IconCard />
@@ -349,7 +349,7 @@ export default function BestCreditCardForLoungeAccess() {
         The spend thresholds range from ₹35,000 to ₹1,50,000 per quarter depending on the card. For context, a quarterly spend of ₹50,000 is ₹2 lakh per year — which is more than many cardholders put through a single card.
       </p>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         The workaround is straightforward: either use your lounge card as your primary spending card to hit the threshold naturally, or choose a card that does not have spend-gated lounge access. Infinia, Magnus, and AU Ixigo (with a simple ₹5K prior-month requirement) are the cleanest options in 2026.
       </p>
 
@@ -357,7 +357,7 @@ export default function BestCreditCardForLoungeAccess() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>Top 5 Cards for Lounge Access in India (June 2026)</h2>
       <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>Ranked by total annual lounge access value per rupee of card fee.</p>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 36 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
         {cards.map((card) => (
           <div key={card.rank} style={{ border: `2px solid ${card.rank === 1 ? COLOR : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${COLOR}06` : "transparent" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
@@ -391,7 +391,7 @@ export default function BestCreditCardForLoungeAccess() {
         At ₹1,000 per domestic lounge visit and ₹2,250 per international visit (at $27 per Priority Pass entry), here's what lounge access is worth annually across different travel volumes.
       </p>
 
-      <div style={{ overflowX: "auto", marginBottom: 32 }}>
+      <div style={{ overflowX: "auto", marginBottom: 24 }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
           <thead>
             <tr style={{ background: `${COLOR}12` }}>
@@ -420,7 +420,7 @@ export default function BestCreditCardForLoungeAccess() {
         </table>
       </div>
 
-      <p style={{ marginBottom: 32, fontSize: 14, color: "var(--text-muted,#475569)" }}>
+      <p style={{ marginBottom: 24, fontSize: 14, color: "var(--text-muted,#475569)" }}>
         Table uses ₹1,000 per domestic visit. International Priority Pass visits are valued at ₹2,250 per visit. The break-even point for HDFC Infinia purely on lounge value is approximately 13 visits/year.
       </p>
 
@@ -435,14 +435,14 @@ export default function BestCreditCardForLoungeAccess() {
         The practical consequence is that a cardholder who travels internationally frequently is better served by Infinia or Magnus than a domestic-generous card that caps Priority Pass at 6 visits. Six international visits sounds fine until you have a multi-leg trip through Dubai or Singapore.
       </p>
 
-      <p style={{ marginBottom: 32 }}>
+      <p style={{ marginBottom: 24 }}>
         If most of your travel is domestic (Mumbai-Delhi-Bengaluru corridor), AU Ixigo's 16 domestic visits is genuinely excellent for zero annual fee. Pair it with a second card for rewards if you want comprehensive coverage. See the <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder</Link> for the best two-card combos.
       </p>
 
       {/* How to use lounge access */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>How to Actually Use Your Lounge Access</h2>
 
-      <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 36 }}>
+      <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 28 }}>
         {[
           { step: "Download the DreamFolks app and register your card before your first visit. Some banks require pre-activation — doing this at the airport entry gate causes delays.",
             icon: "1" },

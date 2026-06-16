@@ -345,7 +345,7 @@ export default function BlogFirstCardDecisionFramework() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -363,14 +363,14 @@ export default function BlogFirstCardDecisionFramework() {
       </p>
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
 
-      <div style={{ background: "rgba(157,140,255,.08)", border: "1px solid rgba(157,140,255,.25)", borderRadius: 8, padding: "16px 20px", marginBottom: 32 }}>
+      <div style={{ background: "rgba(157,140,255,.08)", border: "1px solid rgba(157,140,255,.25)", borderRadius: 8, padding: "16px 20px", marginBottom: 24 }}>
         <p style={{ fontSize: 14, fontWeight: 700, color: COLOR, margin: "0 0 6px" }}>The one rule that overrides everything else</p>
         <p style={{ fontSize: 13, color: "var(--text-muted)", margin: 0 }}>
           If you cannot commit to paying your full credit card bill before the due date every single month, do not get a credit card yet. The rewards on any card are worth a maximum of 2-5% of your spend — credit card interest costs 42% annualised. The math is not close.
         </p>
       </div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 1: Answer These 5 Questions First</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           Most people start by searching "best credit card India 2026" and end up choosing based on which advertisement they saw last. This guarantees a mismatch.
@@ -381,7 +381,7 @@ export default function BlogFirstCardDecisionFramework() {
         <SvgFiveQuestions />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 2: Use the Decision Tree</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           The top of the tree is the question that matters more than income, more than rewards, more than annual fees: can you always pay in full?
@@ -392,7 +392,7 @@ export default function BlogFirstCardDecisionFramework() {
         <SvgDecisionTree />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 3: Filter by Income Band</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           Card eligibility in India is tightly tied to declared monthly income. Applying above your income band gets you rejected — which leaves a hard inquiry on your CIBIL file for two years.
@@ -403,7 +403,7 @@ export default function BlogFirstCardDecisionFramework() {
         <SvgIncomeCardMatrix />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 4: Match Your Spending Pattern</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           A card with 5% cashback on Amazon is worth nothing if you primarily shop at your local kirana or spend most on fuel. The reward rate that applies to your actual spending is the only one that counts.
@@ -414,7 +414,7 @@ export default function BlogFirstCardDecisionFramework() {
         <SvgSpendPatternMatch />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 5: Apply Without Getting Rejected</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           Each rejected application leaves a hard inquiry on your CIBIL report and reduces your score by 5-15 points. Multiple rejections in a short window create a downward spiral — banks see a string of rejections and become more cautious.
@@ -425,7 +425,7 @@ export default function BlogFirstCardDecisionFramework() {
         <SvgApplicationChecklist />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Real Payoff: Your CIBIL Trajectory</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           A first card applied at age 22 with ₹25,000 monthly income is not just a payment tool — it is a 5-year investment in your credit file. By age 27, with zero late payments and disciplined utilisation, you will have a 760+ CIBIL score.
@@ -436,7 +436,7 @@ export default function BlogFirstCardDecisionFramework() {
         <SvgCibilProjection />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Where You Will Be in 5 Years — The Upgrade Path</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           Your first card is not your forever card — it is your foundation. Banks actively offer upgrades to good customers, and you can request upgrades proactively once your income and CIBIL score cross the next threshold.
@@ -447,7 +447,7 @@ export default function BlogFirstCardDecisionFramework() {
         <SvgUpgradePath />
       </section>
 
-      <section style={{ background: "rgba(157,140,255,.08)", border: "1px solid rgba(157,140,255,.25)", borderRadius: 8, padding: "20px 24px", marginBottom: 36 }}>
+      <section style={{ background: "rgba(157,140,255,.08)", border: "1px solid rgba(157,140,255,.25)", borderRadius: 8, padding: "20px 24px", marginBottom: 28 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>Your First Card Action Plan</h2>
         <ol style={{ fontSize: 14, color: "var(--text)", lineHeight: 2.1, paddingLeft: 20 }}>
           <li>Check your CIBIL score for free via CIBIL.com, Paisabazaar, or your bank app — know where you stand before applying.</li>
@@ -459,7 +459,7 @@ export default function BlogFirstCardDecisionFramework() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

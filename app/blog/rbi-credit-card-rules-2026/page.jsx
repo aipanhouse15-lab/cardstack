@@ -215,7 +215,7 @@ export default function RbiCreditCardRules2026() {
         Direct answer: between April 2022 and March 2025, RBI rewrote the rules for credit card billing transparency, customer consent, grievance handling, and closure procedures. The seven changes that matter most for everyday cardholders are summarised below — each one is enforceable, each one protects you against specific bank tactics, and most cardholders don't know about most of them. The article walks through what each rule says, what it means in practice, and exactly how to use it the next time your bank does something annoying.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span>
         <span>·</span>
         <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
@@ -225,7 +225,7 @@ export default function RbiCreditCardRules2026() {
         <span>About 13 min read</span>
       </div>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Why these rules came into force</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The Indian credit card market grew from roughly 50 million cards in 2018 to over 110 million by early 2026. Card outstandings in the system crossed ₹3 lakh crore in mid-2025. With that growth came a specific set of customer-protection problems — auto-enrolled insurance bundles, opaque APR calculations, retention-team obstacles to card closure, forex-markup creep, and grievance windows that stretched into months. RBI's response came in stages.
@@ -242,7 +242,7 @@ export default function RbiCreditCardRules2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The seven rules at a glance</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Before drilling into each rule, the summary table. Bookmark this; the seven rules cover roughly 90 percent of the friction situations a cardholder is likely to encounter with their issuer.
@@ -252,7 +252,7 @@ export default function RbiCreditCardRules2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 1 — explicit consent for billing items</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           From October 2024 onwards, banks cannot debit your account for fees, charges, or insurance premiums without explicit consent for each item. Pre-checked enrolment boxes for "card protection insurance" or "EMI conversion auto-trigger" are no longer permitted. The bank must obtain a written or digital opt-in for each charge category, and you can revoke consent at any time.
@@ -269,7 +269,7 @@ export default function RbiCreditCardRules2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 2 — minimum 15-day grace from bill date to due date</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The Master Direction mandates at least 15 days between the date your statement is generated and the date payment is due. Banks have historically defaulted to 18 to 21 days, which is good for cardholders. A few have tightened to 15 to 16 days for high-utilisation accounts as a risk-management measure.
@@ -282,7 +282,7 @@ export default function RbiCreditCardRules2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 3 — APR disclosure standardised on every statement</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Indian credit cards advertise monthly interest rates of 3.0% to 3.5%, which sounds modest. The annualised effective rate (APR), accounting for daily compounding of finance charges, is 42% to 50%. The Master Direction mandates that banks disclose both the monthly rate and the effective APR prominently on every statement, plus on the welcome MITC document at issuance.
@@ -298,7 +298,7 @@ export default function RbiCreditCardRules2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 4 — the months-to-clear balance disclosure</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The October 2024 amendment introduced the most cardholder-friendly disclosure in the entire Master Direction. Every statement must show, prominently, how many months it would take to clear the outstanding balance if you continue paying only the minimum due. The number is calculated assuming no further spending — just the existing balance compounding at the card's monthly rate against the minimum-due payment.
@@ -314,7 +314,7 @@ export default function RbiCreditCardRules2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 5 — closure within 7 working days</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Effective January 2025, when you formally request to close a credit card, the bank must complete closure within 7 working days from receipt of the request. After closure, a no-dues certificate (NDC) must be sent by email within an additional 7 working days.
@@ -330,7 +330,7 @@ export default function RbiCreditCardRules2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 6 — forex markup transparency on every transaction line</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The March 2025 amendment requires banks to display the forex markup percentage on every international transaction line in the statement, separately from the underlying foreign-currency-to-INR conversion. The rule was a direct response to issuers quietly raising forex markup over the past 5 years from 2.0% to 3.5% on most cards, often without prominent disclosure to existing cardholders.
@@ -346,7 +346,7 @@ export default function RbiCreditCardRules2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Rule 7 — single grievance window of 30 days</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The Master Direction sets a 30-day window from complaint registration to resolution. If unresolved at the bank level (customer care plus nodal officer), the cardholder can escalate to the RBI Ombudsman via cms.rbi.org.in. Resolution at the Ombudsman stage typically takes 60 to 90 days but the ruling is binding on the bank.
@@ -363,7 +363,7 @@ export default function RbiCreditCardRules2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Bonus protections worth knowing about</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Beyond the seven big rules, three smaller protections tucked into the Master Direction help in specific situations.
@@ -379,7 +379,7 @@ export default function RbiCreditCardRules2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What to do this week — a practical checklist</h2>
         <ol style={{ fontSize: 16, paddingLeft: 24, margin: "0 0 18px" }}>
           <li style={{ marginBottom: 10 }}>Pull your last 3 credit card statements. Look for any charges you didn't actively consent to — insurance bundles, redemption fees, statement-mode fees. Each is potentially refundable.</li>
@@ -392,7 +392,7 @@ export default function RbiCreditCardRules2026() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How major banks have implemented these rules</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The Master Direction is binding on all card issuers, but implementation quality varies materially across banks. Based on customer-complaint patterns and visible statement design through 2025, here's the rough scorecard.
@@ -420,7 +420,7 @@ export default function RbiCreditCardRules2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>CIBIL implications of using these rules</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           A common cardholder concern: will exercising these RBI-granted rights damage my CIBIL score? Specifically, will closing a card, disputing a charge, or filing a grievance hurt my creditworthiness? Mostly no, but the nuances matter.
@@ -442,7 +442,7 @@ export default function RbiCreditCardRules2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>What RBI is likely to regulate next</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Three areas are visibly in RBI's pipeline based on consultative papers and MPC commentary through April 2026.
@@ -461,7 +461,7 @@ export default function RbiCreditCardRules2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Real dispute cases — patterns that keep recurring</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Three patterns dominate the dispute traffic across Indian credit-card grievance forums and CMS portal data. Each has a clean resolution path under the rules above.
@@ -490,7 +490,7 @@ export default function RbiCreditCardRules2026() {
         ))}
       </section>
 
-      <section style={{ marginBottom: 36, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
+      <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 8 }}><Link href="/learn/credit-cards/apr-vs-interest" style={{ color: COLOR }}>APR vs interest rate</Link>. The math your statement does not explicitly show.</li>
@@ -501,7 +501,7 @@ export default function RbiCreditCardRules2026() {
         </ul>
       </section>
 
-      <section style={{ marginBottom: 36, fontSize: 13, color: "var(--text-muted)" }}>
+      <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>RBI Master Direction on Credit Cards (April 2022) and subsequent amendments through March 2025</li>

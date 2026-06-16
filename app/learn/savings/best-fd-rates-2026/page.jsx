@@ -203,7 +203,7 @@ export default function BestFdRates2026() {
         Direct answer: the highest fixed deposit rate in India as of April 2026 is 9.50% at Unity Small Finance Bank for senior citizens on a 3-year tenure. General rate at the same bank is 9.00%. SBI and HDFC sit at 6.80% to 7.50% for the same tenure. The 200 to 250 basis point gap between SFBs and major banks is real, captured safely up to ₹5 lakh per bank under DICGC insurance. Above the leaderboard table, the article covers DICGC mechanics, post-tax yield, the FD ladder strategy, and the repo-rate cycle that decides whether to lock long now or wait. All rates verified from each bank's website on June 3, 2026.
       </p>
 
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36, display: "flex", gap: 16, flexWrap: "wrap" }}>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span>
         <span>·</span>
         <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
@@ -213,7 +213,7 @@ export default function BestFdRates2026() {
         <span>About 12 min read</span>
       </div>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The April 2026 leaderboard — top 10 banks by senior 3-year rate</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Three things shape this leaderboard. The bank's category — Small Finance Bank, NBFC, private bank, or PSU. The DICGC insurance coverage that applies (₹5 lakh per depositor per bank for SFBs and banks; nil for NBFCs). And the senior citizen premium, which most banks add 50 basis points above the general rate, although a few SFBs add 75 bps.
@@ -231,7 +231,7 @@ export default function BestFdRates2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>DICGC insurance — the ₹5 lakh ceiling that decides allocation</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Deposit Insurance and Credit Guarantee Corporation is the RBI-owned subsidiary that insures bank deposits in India. Coverage is ₹5 lakh per depositor per bank, applying to principal plus accrued interest combined. The cover triggers on RBI imposing a moratorium or cancelling the bank's licence. Post the May 2022 amendment, DICGC must pay insured amounts within 90 days of the trigger event, a substantial improvement over the open-ended pre-2022 timeline.
@@ -250,7 +250,7 @@ export default function BestFdRates2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The repo rate cycle and where rates head from here</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           RBI's Monetary Policy Committee cut the repo rate by 100 basis points between December 2024 and April 2026. The repo rate now stands at 5.25%, down from a peak of 6.50% in late 2024. The cycle direction matters because FD rates broadly track repo with a 1 to 3 month lag. Lock long now if you believe rates fall further; ladder shorter tenures if you expect rates to bottom and rise again.
@@ -270,7 +270,7 @@ export default function BestFdRates2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The FD ladder — a structure that survives any rate cycle</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The single best operational tool for any meaningful FD allocation is the ladder. The ladder splits a corpus across four or five tenure rungs — say 1, 2, 3, and 5 years — so that a portion of the corpus matures every year and gets re-priced at then-current rates. Three benefits stack: cycle-resilience (you never miss a peak entirely), forced annual liquidity (one rung matures each year, releasing cash), and yield smoothing (your blended rate stays close to peak even as fresh-deposit rates fall).
@@ -290,7 +290,7 @@ export default function BestFdRates2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Senior citizen rates — and why SCSS often beats them</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Senior citizens (aged 60 and above) get a 50 basis point premium on FD rates at almost every bank. A few SFBs add 75 bps. The premium reflects the policy intent of supporting retiree income and is genuinely accessible — provide PAN and Aadhaar at FD opening with the senior-citizen flag, and the higher rate applies automatically.
@@ -306,7 +306,7 @@ export default function BestFdRates2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Post-tax yield — the number that actually matters</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           A 9% FD at Unity SFB looks dramatically better than a 7% FD at SBI, but the post-tax differential is smaller than the headline gap suggests. Both yields get the same slab rate haircut, and the SFB credit risk premium (the part of the rate that compensates for credit risk above the banking-sector baseline) doesn't survive after-tax in proportion to the headline.
@@ -329,7 +329,7 @@ export default function BestFdRates2026() {
         </div>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>TDS, Form 15G and 15H — getting the cash flow right</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Banks deduct TDS at 10 percent on FD interest if the total interest from that bank exceeds ₹40,000 in the FY (₹50,000 for senior citizens). The TDS is auto-deducted from interest payouts and is fully adjustable against your final tax liability at ITR filing. Most filers see the TDS as a small cash-flow drag rather than a real cost.
@@ -345,7 +345,7 @@ export default function BestFdRates2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>Common mistakes that cost depositors money</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Patterns we see across portfolios. Each one is fixable in a single conversation with your bank or a 30-minute portfolio review.
@@ -367,7 +367,7 @@ export default function BestFdRates2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>FD alternatives — when other instruments beat the FD</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Even at April 2026's elevated rates, the FD is not always the right answer for a given allocation slot. Three alternatives sit in adjacent shelves of the fixed-income aisle and each has a specific use case where it beats the FD.
@@ -386,7 +386,7 @@ export default function BestFdRates2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>The mistakes that cost money beyond the obvious ones</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Beyond the standard mistakes (concentrating one bank, ignoring TDS), three subtler errors recur often enough to deserve their own treatment.
@@ -405,7 +405,7 @@ export default function BestFdRates2026() {
         </p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 26, fontWeight: 700, margin: "0 0 14px" }}>How to actually compare FDs across banks — a 5-minute checklist</h2>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           Comparing fixed deposits is harder than it sounds because banks display rates differently and the specific tenure that's "best" varies by bank. Here is the operational checklist that catches the differences most depositors miss.
@@ -437,7 +437,7 @@ export default function BestFdRates2026() {
         ))}
       </section>
 
-      <section style={{ marginBottom: 36, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
+      <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 8 }}><Link href="/learn/savings/dicgc-explained" style={{ color: COLOR }}>DICGC ₹5 lakh insurance explained</Link>. Coverage rules, payout timeline, and ownership-structure tricks.</li>
@@ -448,7 +448,7 @@ export default function BestFdRates2026() {
         </ul>
       </section>
 
-      <section style={{ marginBottom: 36, fontSize: 13, color: "var(--text-muted)" }}>
+      <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
         <h3 style={{ fontSize: 14, fontWeight: 700, color: "var(--text)", margin: "0 0 10px", letterSpacing: 1.5 }}>SOURCES &amp; FURTHER READING</h3>
         <ul style={{ paddingLeft: 22, margin: 0 }}>
           <li style={{ marginBottom: 6 }}>RBI Monetary Policy statements, December 2024 to April 2026</li>

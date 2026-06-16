@@ -132,7 +132,7 @@ const SvgCategoryMatch = () => (
       { cat: "Hotel stays", winner: "Points", card: "HDFC Infinia (via SmartBuy)", color: COLOR },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="24" y={64 + i * 30} width="672" height="28" fill={i % 2 === 0 ? "var(--raise)" : "white"} rx="2" />
+        <rect x="24" y={64 + i * 30} width="672" height="28" fill={i % 2 === 0 ? "transparent" : "var(--raise)"} rx="2" />
         <text x="36" y={83 + i * 30} fontSize="12" fill="var(--text)" fontFamily="system-ui">{d.cat}</text>
         <rect x="278" y={68 + i * 30} width="80" height="18" fill={d.color} rx="3" />
         <text x="318" y={81 + i * 30} fontSize="11" fontWeight="700" fill="white" textAnchor="middle" fontFamily="system-ui">{d.winner}</text>
@@ -156,7 +156,7 @@ const SvgPortalRisk = () => (
       { factor: "Partner program changes", pts: "Program changes happen", cb: "Not applicable" },
     ].map((d, i) => (
       <g key={i}>
-        <rect x="24" y={64 + i * 28} width="672" height="26" fill={i % 2 === 0 ? "var(--raise)" : "white"} rx="2" />
+        <rect x="24" y={64 + i * 28} width="672" height="26" fill={i % 2 === 0 ? "transparent" : "var(--raise)"} rx="2" />
         <text x="36" y={82 + i * 28} fontSize="12" fill="var(--text)" fontFamily="system-ui">{d.factor}</text>
         <text x="310" y={82 + i * 28} fontSize="12" fill="#dc2626" fontFamily="system-ui">{d.pts}</text>
         <text x="530" y={82 + i * 28} fontSize="12" fontWeight="600" fill="#059669" fontFamily="system-ui">{d.cb}</text>
@@ -205,7 +205,7 @@ export default function BlogRewardPointsVsCashback() {
   ]};
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -267,7 +267,7 @@ export default function BlogRewardPointsVsCashback() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>This approach extracts the highest-value redemption from points (flights and hotels) while capturing guaranteed cashback on routine spend categories. Our <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder tool</Link> recommends card combinations based on your spend pattern.</p>
       </section>
 
-      <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 32 }}>
+      <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>Your Decision in 3 Questions</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2.2 }}>
           <li>Did you book a flight using credit card points in the last 12 months? If yes, keep a points card. If no, switch to cashback for daily spend.</li>
@@ -276,7 +276,7 @@ export default function BlogRewardPointsVsCashback() {
         </ol>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

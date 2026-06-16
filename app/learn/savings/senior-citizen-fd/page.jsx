@@ -150,7 +150,7 @@ export default function PageSeniorCitizenFD() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -158,9 +158,9 @@ export default function PageSeniorCitizenFD() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>SAVINGS · FIXED DEPOSITS · SENIOR CITIZENS</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Senior Citizen FD Rates June 2026: The 0.5% Extra Is Worth ₹1.8L on ₹20L Over 5 Years</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Senior citizens get 0.25-0.50% more than regular FD rates — and with Section 80TTB and Form 15H, many retired investors pay zero tax on ₹50,000 of interest income. Here's the full picture with June 2026 rates.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Senior Citizen Rate Advantage</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Banks are required by RBI to offer senior citizens (age 60 and above) at least 0.25% extra interest on FDs compared to the general public rate. Most banks offer 0.50% extra for 1-3 year FDs, their most common senior citizen product.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>On ₹20 lakh invested at 7.5% (SBI senior rate) versus 7.0% (SBI regular rate): the extra 0.50% generates ₹10,000 per year more in interest. Over 5 years with reinvestment, that's approximately ₹1.8 lakh extra. Free money, purely for being above 60 years of age.</p>
@@ -168,34 +168,34 @@ export default function PageSeniorCitizenFD() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>SCSS (Senior Citizen Savings Scheme) from the post office offers 8.20% — significantly higher than even Kotak's 7.90% for seniors. SCSS is sovereign-guaranteed, pays quarterly, and allows up to ₹30 lakh. For any senior citizen's core retirement corpus: SCSS first, FD for the remaining amount.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How Much Income Can ₹20L Generate?</h2>
         <SvgIncomeOnInvestment />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>On ₹20 lakh in Unity SFB's 9.50% senior FD: ₹1,90,000/year = ₹15,833/month. That's a meaningful monthly income for many retired households — covering daily expenses with some buffer. Even SBI's 7.50%: ₹1,50,000/year = ₹12,500/month.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For tax planning: the 80TTB deduction of ₹50,000 means the first ₹50K of this income is deductible. For a senior citizen with no other income, effective taxable income from FDs is reduced by ₹50K. Combined with the ₹3L basic exemption for seniors, income up to ₹3.5L (under old regime) faces zero tax.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>SCSS vs Senior Citizen FD: Which Is Right?</h2>
         <SvgSCSSvsfd />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The recommendation for most retired senior citizens: put the first ₹30 lakh in SCSS (maximum allowed, government-backed, 8.20%). For amounts above ₹30L, spread across 2-3 bank FDs within the ₹5L DICGC limit per bank to stay fully insured.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>SCSS's quarterly interest payout is ideal for regular income needs — money comes in every March, June, September, and December. Bank FDs offer more flexibility: monthly payouts, cumulative options, flexible tenors from 7 days to 10 years.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Form 15H: How to Avoid TDS</h2>
         <SvgForm15H />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Every April, submit Form 15H at every bank where FDs are held. Most bank apps now allow digital submission — HDFC, ICICI, and SBI all have this in their net banking portal under "FD Services" or "Tax" sections. Submitting Form 15H doesn't mean you don't pay tax; it means the bank doesn't deduct TDS upfront. You declare and pay at ITR filing time if actually liable.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Section 80TTB: The ₹50,000 Tax Break</h2>
         <Svg80TTB />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>80TTB is available only under the old tax regime. If you or your retired parents have switched to the new regime (which has no such exemption), evaluate whether the new regime's lower slab rates save more than 80TTB's ₹50K deduction. For senior citizens with FD income as primary income source, the old regime almost always wins because of 80TTB plus the higher basic exemption of ₹3L.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Also see our broader <Link href="/learn/savings" style={{ color: COLOR }}>savings hub</Link>, our guide to <Link href="/learn/savings/ppf-vs-fd-vs-debt-fund" style={{ color: COLOR }}>PPF vs FD vs Debt Fund</Link>, and our <Link href="/learn/tax/80c-beyond-the-obvious" style={{ color: COLOR }}>80C deductions guide</Link> for how to structure the full retired income plan.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>

@@ -288,7 +288,7 @@ export default function BlogShouldYouCloseOldCreditCard() {
   };
 
   return (
-    <main style={{ maxWidth: 800, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
+    <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -302,67 +302,67 @@ export default function BlogShouldYouCloseOldCreditCard() {
       <p style={{ fontSize: 17, color: "var(--text-muted)", margin: "0 0 16px" }}>Closing an old credit card feels like tidying up your finances. It is actually one of the most common ways people accidentally hurt their credit score right before a major loan.</p>
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Myth: Closing Cards Cleans Up Your Credit Profile</h2>
         <p>The thinking is intuitive: fewer cards means simpler finances, less exposure, cleaner credit report. This is wrong. CIBIL and other Indian credit bureaus score you better when you have a long, well-managed credit history across multiple accounts.</p>
         <p>Closing an old card does not remove its positive history from your report immediately, but it does remove it from your live credit age calculation. Within 2-7 years, the closed account drops off your report entirely, erasing years of good behaviour you spent building.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Double Penalty: Credit Age and Utilisation</h2>
         <p>Closing any credit card hits your score in two ways at once. First, your average credit age drops because one account is no longer averaging into the calculation. Second, your credit utilisation ratio rises because your total available credit limit has shrunk.</p>
         <p>A 5-year-old card closed today drops your CIBIL by an estimated 30-60 points depending on your profile. A 10-year-old card can do even more damage. Recovery takes 6-18 months of clean behaviour.</p>
         <SvgCibilImpact />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Why Your Oldest Card Is the One You Should Never Close</h2>
         <p>CIBIL calculates credit age as an average across all open accounts. Your oldest card anchors the entire calculation. If you have a 2016 SBI Card, a 2020 HDFC Card, and a 2024 Axis Neo — closing the 2016 card drops your average age from roughly 5.7 years to 2.5 years, nearly halved overnight.</p>
         <p>Even if that old SBI card sits untouched, even if its limit is modest, even if the bank charges you a small annual fee to retain it — it is likely worth the cost just to protect your credit age.</p>
         <SvgCreditAgeExplainer />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Utilisation Spike Nobody Talks About</h2>
         <p>When you close a card, your total credit limit goes down. If your outstanding balance stays the same, your utilisation ratio goes up. This is the hidden hit that catches people off guard, particularly when closing a high-limit card.</p>
         <p>The recommended utilisation ratio is below 30%. Many good CIBIL scores are built on 10-15% utilisation. Closing one high-limit card can push that number past 30% with zero change in actual spending behaviour.</p>
         <SvgUtilisationSpike />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What a CIBIL Drop Actually Costs You: Home Loan Math</h2>
         <p>A 30-50 point CIBIL drop sounds abstract until you are sitting across a loan officer. Home loan interest rates in India are directly tiered to credit scores. The difference between 750+ and 700-719 on a ₹50 lakh loan over 20 years is real monthly cash out of your pocket.</p>
         <p>On a ₹50 lakh home loan, a 0.5% higher rate adds roughly ₹1,600 per month to your EMI, totalling ₹3.84 lakh over the loan tenure. That is the true cost of an avoidable CIBIL drop from closing the wrong card at the wrong time.</p>
         <SvgHomeLoanInterest />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>When It IS the Right Call to Close</h2>
         <p>There are genuine reasons to close a card. If you have been defrauded and the bank insists on closing rather than reissuing, if the annual fee is steep and the bank refuses a waiver or downgrade, or if you genuinely cannot manage multiple cards and are missing payments, closing makes sense.</p>
         <p>The key question to ask first: is there a way to keep the account open with zero cost? Almost always, the answer is yes. A free-tier downgrade, a fee waiver call to retention, or simply leaving the card dormant costs nothing and saves your credit history.</p>
         <SvgWhenToClose />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>If You Must Close: The Damage-Minimising Order</h2>
         <p>Close the newest card first, then the card with the lowest limit. Never start with the oldest card or the highest-limit card. The goal is to protect credit age and minimise the utilisation spike.</p>
         <p>Wait 6 months after any closure before applying for a home loan, car loan, or significant personal loan. Your score will partially recover in that window, and lenders will see a cleaner picture.</p>
         <SvgClosingOrder />
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Use This Decision Tree First</h2>
         <p>Before picking up the phone to close any card, walk through this tree. Most people who go through it find they do not actually need to close the card at all.</p>
         <SvgDecisionTree />
       </section>
 
-      <section style={{ background: "var(--raise)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 32 }}>
+      <section style={{ background: "var(--raise)", border: `1.5px solid ${COLOR}`, borderRadius: 10, padding: "22px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 10px", color: COLOR }}>Three Actions Before You Close Anything</h2>
         <p style={{ margin: "0 0 10px" }}>One: call the bank retention team and ask for a fee waiver or free-tier downgrade. Two: make one small transaction on the card every 6 months to prevent bank-initiated closure. Three: check if any home loan or major credit application is coming in the next 6-12 months. If yes, close nothing.</p>
         <p style={{ margin: 0 }}>Read our full guides on <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>understanding your CIBIL score</Link> and <Link href="/blog/credit-utilisation-ratio-guide" style={{ color: COLOR }}>managing credit utilisation</Link>. If you are planning a loan, check our <Link href="/learn/loans" style={{ color: COLOR }}>loan comparison guide</Link> first.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "12px 0" }}>

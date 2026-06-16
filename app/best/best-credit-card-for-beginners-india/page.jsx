@@ -266,7 +266,7 @@ export default function BestCreditCardForBeginnersIndia() {
       style={{
         maxWidth: 800,
         margin: "0 auto",
-        padding: "44px 22px 88px",
+        padding: "32px 22px 48px",
         fontFamily: "system-ui, -apple-system, sans-serif",
         color: "var(--text)",
         lineHeight: 1.65,
@@ -312,7 +312,7 @@ export default function BestCreditCardForBeginnersIndia() {
         Your first credit card shapes your CIBIL score for the next decade. Don't pick wrong.
       </p>
 
-      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>
+      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
         Last updated {UPDATED} · By Ash K · 9 min read
       </p>
 
@@ -324,7 +324,7 @@ export default function BestCreditCardForBeginnersIndia() {
           borderLeft: `4px solid ${COLOR}`,
           borderRadius: 8,
           padding: "16px 20px",
-          marginBottom: 36,
+          marginBottom: 28,
         }}
       >
         <strong style={{ color: COLOR }}>The honest number on this page:</strong> Most beginners apply for the card with the best ad they've seen. The right move is to apply for the card with the lowest barrier to approval and a fee structure you can waive. Rewards come second, always.
@@ -391,7 +391,7 @@ export default function BestCreditCardForBeginnersIndia() {
                     top: -12,
                     left: 20,
                     background: COLOR,
-                    color: "white",
+                    color: "var(--raise)",
                     fontSize: 11,
                     fontWeight: 700,
                     padding: "3px 10px",
@@ -469,7 +469,7 @@ export default function BestCreditCardForBeginnersIndia() {
                   height: 22,
                   borderRadius: "50%",
                   background: COLOR,
-                  color: "white",
+                  color: "var(--raise)",
                   fontSize: 12,
                   fontWeight: 700,
                   display: "flex",

@@ -154,7 +154,7 @@ export default function PageCopayVsNoCopay() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -162,50 +162,50 @@ export default function PageCopayVsNoCopay() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>INSURANCE · HEALTH · POLICY FEATURES</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Copay vs No Copay Health Insurance: The Math That Shows Which Is Cheaper Over 10 Years</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>A copay policy saves ₹6,000-10,000 in annual premium. But one ₹5L hospitalization costs ₹50,000 out of pocket. The question is: how many hospitalizations do you expect in the next 10 years?</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What Copay Actually Means</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Copay is simple in concept: a percentage of every eligible claim that you agree to pay from your own pocket. The insurer covers the remaining percentage. A 10% copay on a ₹5 lakh hospital bill means you pay ₹50,000, the insurer pays ₹4.5 lakh.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The insurer's logic: if you have some financial exposure, you'll be less likely to file small or unnecessary claims, and you'll choose hospitals and procedures more carefully. This reduces claim frequency and size, which allows the insurer to charge lower premiums.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Whether this works out better for you depends entirely on how often you'll use the insurance. Copay is most common in senior citizen policies because insurers know this population will have frequent hospitalizations. The math needs careful examination before you accept it.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Actual Numbers on Your Bill</h2>
         <SvgCopayMath />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The copay percentage applies to the total eligible claim — after sub-limits and deductions. If your policy also has a room rent limit that caused proportionate deductions, copay applies to the already-reduced eligible amount. This stacking effect can leave you with very significant out-of-pocket expenses on a supposedly comprehensive policy.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>A ₹1 lakh out-of-pocket on a ₹10L claim may feel like "only 10%" — but that's the same amount many families spend on a year's groceries. For a retired couple on fixed income, this kind of surprise expense is genuinely stressful.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Premium Trade-Off</h2>
         <SvgPremiumDifference />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The annual premium difference between a copay and no-copay policy for a 62-year-old is typically ₹6,000-12,000. Over 10 years, that's ₹60,000-1,20,000 in premium savings. The question is whether your copay payments over 10 years exceed that amount.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For a healthy 35-year-old with a year or two of no hospitalizations, copay is usually the smarter choice. For anyone above 60 managing chronic conditions, the expected copay payments almost certainly exceed the premium savings.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Break-Even Calculator</h2>
         <SvgBreakEven />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The break-even is approximately 1.6-2 major hospitalizations over 10 years. If you expect fewer, take the copay policy and save on premium. If you expect more, the no-copay policy saves you overall despite higher premium.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Data point: Indians above 60 have an average hospitalization rate of approximately 12-18% per year. Over a 10-year period, that's statistically 1.2-1.8 hospitalizations per person. For a couple, it's 2.4-3.6 combined. The no-copay policy wins the 10-year math for most senior couples.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Which Insurers Have What Copay Terms</h2>
         <SvgInsurerCopayTerms />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The best approach: start your insurer search by filtering for no-copay policies. Niva Bupa and HDFC Ergo have the cleanest no-copay products in the senior citizen category. If budget constraints force a lower premium, Care Senior's buyout option (pay ₹3,000 more per year to eliminate copay) is worth considering — it's a known additional cost versus an unpredictable copay exposure.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Who Should Choose What</h2>
         <SvgWhoShouldChoose />
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The simple rule for most people buying for elderly parents: eliminate copay wherever possible, even at a higher premium. The premium difference is a known, manageable cost. The copay on multiple hospitalizations can be unpredictable and stressful at exactly the moment your parent is already dealing with a health crisis.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Related reads: our <Link href="/learn/insurance/room-rent-trap" style={{ color: COLOR }}>room rent trap guide</Link> for the other big hidden deduction in health policies, our <Link href="/learn/insurance/health-insurance-for-parents" style={{ color: COLOR }}>health insurance for parents</Link> guide for full senior coverage strategy, and the <Link href="/learn/insurance" style={{ color: COLOR }}>insurance hub</Link> for all related topics.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>

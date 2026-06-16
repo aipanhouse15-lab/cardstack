@@ -205,7 +205,7 @@ export default function PagePersonalLoanAPR() {
   ]};
 
   return (
-    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
       <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
       <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
@@ -217,9 +217,9 @@ export default function PagePersonalLoanAPR() {
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>LOANS · PERSONAL LOANS · APR EXPLAINED</div>
       <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>Your Personal Loan Is Not 10.5% — The Real APR Is Closer to 14%</h1>
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Banks advertise the interest rate. They bury the processing fee, GST, insurance add-on, and net disbursement gap. Add it all up and the honest number is 3–5% higher than what the billboard says.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Loan That Didn't Quite Make Sense</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Rohan is a 28-year-old software engineer in Bangalore with a ₹85,000 monthly salary and a CIBIL score of 762. He needed ₹5 lakh for a home renovation, applied to HDFC Bank, and got an offer at "10.5% interest."</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>He accepted. When the money hit his account, he noticed ₹4,80,250 instead of ₹5,00,000. His EMI was ₹16,247 for 36 months. He ran the math. Total repaid: ₹5,84,892. Plus the ₹19,750 already deducted upfront. Total outgo: ₹6,04,642.</p>
@@ -227,7 +227,7 @@ export default function PagePersonalLoanAPR() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>This guide does exactly that.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Trap 1: Flat Rate vs Reducing Balance</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Before we even get to the fees, there's a more fundamental deception some lenders use. Two types of interest calculation exist in India and they are not equivalent.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>With a <strong>flat rate</strong>, interest is calculated on the original loan amount every month, even as you repay the principal. On ₹5L at 10.5% flat over 3 years: interest = 5,00,000 × 10.5% × 3 = ₹1,57,500. Your EMI is ₹18,264. The effective (reducing balance equivalent) APR is ~19.2%.</p>
@@ -237,7 +237,7 @@ export default function PagePersonalLoanAPR() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The rule: always ask if the quoted rate is flat or reducing balance. NBFCs, car dealership finance desks, and some digital lenders still quote flat rates. If they say "monthly rate of 0.8%," convert it. That is 9.6% annual flat, which equals roughly 17.5% reducing balance APR.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Trap 2: The Fee Stack Nobody Totals for You</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Even assuming reducing balance rate (which the big banks use), the 10.5% is still not what you pay. Here is what gets added on top.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Processing fee is standard at 1–2.5% of the loan amount. HDFC charges up to 2.5% (₹12,500 on a ₹5L loan). ICICI charges 2.25% (₹11,250). Axis charges 1.5–2% (₹7,500–10,000). SBI charges 0.5–1% (₹2,500–5,000) — the lowest of the bunch.</p>
@@ -248,7 +248,7 @@ export default function PagePersonalLoanAPR() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>The subtler trap: you receive the loan amount minus all these upfront deductions, but interest is charged on the full sanctioned amount. Rohan borrowed ₹5L but received ₹4,80,250. Every month's interest calculation uses ₹5,00,000 as the base. That's a gap of ₹19,750 that costs him extra interest for 3 years.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How to Calculate Your True APR in 3 Steps</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>You don't need to be a financial mathematician. The concept is simple: find the interest rate that makes your actual cash flows add up correctly.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Step 1: Note your net disbursement. This is the amount actually credited to your account after all deductions. Get this from your sanction letter or bank statement.</p>
@@ -258,7 +258,7 @@ export default function PagePersonalLoanAPR() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For Rohan's loan: he received ₹4,80,250, pays ₹16,247/month for 36 months. Solving that equation gives a monthly rate of about 1.12%, which annualises to 13.5% APR. Add the upfront GST he paid out of pocket (₹2,250) and the effective cost is closer to 13.8%.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What the Five Big Banks Actually Charge (June 2026)</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>We ran the numbers for a ₹5L, 3-year personal loan for a salaried applicant with 750+ CIBIL score, salary account at the same bank. Here's the honest comparison.</p>
         <SvgBankRateComparison />
@@ -267,7 +267,7 @@ export default function PagePersonalLoanAPR() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Kotak Mahindra Bank has the highest stated rate (starts at 10.99%) but offers aggressive pre-approved rates to existing customers. Always check the Kotak 811 app before applying elsewhere — pre-approved offers there can be significantly cheaper than branch-applied rates.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>Your CIBIL Score Is Worth More Than You Think</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Banks price personal loans based on credit risk. Your CIBIL score is the primary risk signal. The difference between 750 and 800 can mean 1–1.5% lower interest rate. On ₹5L over 3 years, 1.5% less interest saves about ₹13,500. That's real money for checking your score, clearing any errors, and paying down credit card utilization before you apply.</p>
         <SvgCibilVsRate />
@@ -275,7 +275,7 @@ export default function PagePersonalLoanAPR() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>One underused tactic: get your free CIBIL report from CIBIL's RBI-mandated free annual report, dispute any incorrect entries, and wait 30–60 days before applying. Hard enquiries from loan applications further lower your score by 5–15 points each — so don't apply to 5 banks in the same week hoping for the best offer.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>How to Negotiate Your Personal Loan Rate</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Most people accept the first offer. That's a mistake. Banks have 2–4% flexibility on personal loan rates and they use every bit of it to maximize margin — unless you push back.</p>
         <SvgNegotiationLevels />
@@ -284,7 +284,7 @@ export default function PagePersonalLoanAPR() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>For the insurance add-on: know that IRDAI guidelines give you the right to decline any bundled insurance. Say clearly: "I don't need the insurance add-on, I have a term plan." A branch RM who insists it's "mandatory" is wrong. Escalate if needed — this is regulated territory.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Full Picture: What 14% vs 10.5% Costs You Over 3 Years</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Here's the stark summary of what your effective APR does to total cost on a ₹5L personal loan.</p>
         <SvgTotalCost5yr />
@@ -292,7 +292,7 @@ export default function PagePersonalLoanAPR() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>If your CIBIL is below 700, the worst case (24% NBFC APR) costs ₹1,09,800 more than the best case on the same ₹5L. That's like paying for a second personal loan on top of your first.</p>
       </section>
 
-      <section style={{ marginBottom: 32 }}>
+      <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>What to Do Before You Apply</h2>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Check your CIBIL score first — free once a year at cibil.com (RBI mandate). If it's below 750, spend 1–3 months fixing it: pay down credit card balances, ensure no missed EMIs, dispute errors if any.</p>
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Check pre-approved offers in your existing bank's mobile app. These are almost always better than walk-in rates and often come with zero processing fee.</p>
@@ -301,7 +301,7 @@ export default function PagePersonalLoanAPR() {
         <p style={{ fontSize: 16, margin: "0 0 14px" }}>Also check if a balance transfer from an existing high-interest loan or credit card makes more sense than a fresh personal loan. Banks like HDFC and ICICI run 0% balance transfer offers periodically. Our <Link href="/learn/loans" style={{ color: COLOR }}>loans hub</Link> tracks these.</p>
       </section>
 
-      <section style={{ marginBottom: 36 }}>
+      <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
         {faq.mainEntity.map((q, i) => (
           <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
