@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgDecisionMatrix = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Decision matrix comparing reward points vs cashback cards based on user habits" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--raise)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Points vs Cashback: Quick Decision Framework</text>
     <rect x="36" y="52" width="310" height="190" fill="#e0f2fe" rx="8" />
     <text x="191" y="78" fontSize="13" fontWeight="700" fill={COLOR} textAnchor="middle" fontFamily="system-ui">Choose REWARD POINTS if you...</text>
@@ -52,7 +52,7 @@ const SvgDecisionMatrix = () => (
 
 const SvgAxisEdgeMathBreakdown = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Math breakdown: 10,000 Axis EDGE Miles as cash vs as airline miles" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">10,000 Axis EDGE Miles: cash in hand vs miles value (honest comparison)</text>
     <rect x="36" y="56" width="280" height="120" fill="#e0f2fe" rx="8" />
     <text x="176" y="82" fontSize="13" fontWeight="700" fill={COLOR} textAnchor="middle" fontFamily="system-ui">Redeem as Cash Value</text>
@@ -71,7 +71,7 @@ const SvgAxisEdgeMathBreakdown = () => (
 
 const SvgHdfcVsAmazonPay = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Comparison of HDFC SmartBuy reward points vs Amazon Pay ICICI cashback on identical spending" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--raise)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Same ₹1,00,000 annual Amazon spend: which card puts more money back?</text>
     <rect x="36" y="56" width="300" height="155" fill="#e0f2fe" rx="8" />
     <text x="186" y="82" fontSize="13" fontWeight="700" fill={COLOR} textAnchor="middle" fontFamily="system-ui">HDFC Millennia (Points)</text>
@@ -92,7 +92,7 @@ const SvgHdfcVsAmazonPay = () => (
 
 const SvgPointsTrap = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="The points trap: earning points you never redeem resulting in zero real value" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">The Points Trap: why many Indians have unredeemed points worth nothing</text>
     <rect x="36" y="56" width="160" height="110" fill="var(--raise)" rx="6" />
     <text x="116" y="84" fontSize="11" fontWeight="700" fill="#dc2626" textAnchor="middle" fontFamily="system-ui">Earn Points</text>
@@ -118,7 +118,7 @@ const SvgPointsTrap = () => (
 
 const SvgCategoryMatch = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Spend category matching: which card type wins for each category" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--raise)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Which wins by spend category: reward points or cashback?</text>
     <text x="36" y="58" fontSize="11" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Spend Category</text>
     <text x="290" y="58" fontSize="11" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Winner</text>
@@ -144,7 +144,7 @@ const SvgCategoryMatch = () => (
 
 const SvgPortalRisk = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Portal risk factors for reward point redemption vs guaranteed cashback" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">The hidden cost of points: portal friction and risk</text>
     <text x="36" y="58" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Risk Factor</text>
     <text x="310" y="58" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Reward Points Cards</text>
@@ -167,7 +167,7 @@ const SvgPortalRisk = () => (
 
 const SvgStackStrategy = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Stack strategy: use a points card for travel and a cashback card for daily spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">The smart play: stack a points card with a cashback card</text>
     <rect x="36" y="52" width="300" height="100" fill="#e0f2fe" rx="8" />
     <text x="186" y="76" fontSize="12" fontWeight="700" fill={COLOR} textAnchor="middle" fontFamily="system-ui">Points Card (travel focus)</text>

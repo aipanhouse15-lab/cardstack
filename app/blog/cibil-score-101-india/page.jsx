@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgScoreRanges = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="CIBIL score ranges from 300 to 900 with lender treatment at each level" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">CIBIL Score Ranges: what lenders actually do at each level (June 2026)</text>
     {[
       { range: "750-900", label: "Excellent", color: "#16a34a", desc: "Best rates, instant approvals, premium card eligibility", y: 56 },
@@ -44,7 +44,7 @@ const SvgScoreRanges = () => (
 
 const SvgFiveFactors = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Five factors that make up your CIBIL score with percentage weights" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="280" fill="var(--raise)" rx="10" />
+    <rect width="720" height="280" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">The 5 CIBIL Score Factors: weights and what they actually mean</text>
     {[
       { factor: "Payment History", weight: 35, color: "#dc2626", what: "On-time payments. One missed EMI = serious damage." },
@@ -68,7 +68,7 @@ const SvgFiveFactors = () => (
 
 const SvgReportStructure = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Structure of a CIBIL credit report showing what each section contains" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">How to Read Your CIBIL Report: the 5 sections you need to check</text>
     {[
       { section: "Personal Info", check: "Name, PAN, DOB, address. Any mismatch can cause loan rejections. Verify carefully." },
@@ -89,7 +89,7 @@ const SvgReportStructure = () => (
 
 const SvgNegativeMarkTimeline = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="How long negative marks stay on your CIBIL report" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">How long do negative marks stay on your CIBIL report?</text>
     <line x1="60" y1="120" x2="660" y2="120" stroke="var(--border)" strokeWidth="2" />
     {[0, 1, 2, 3, 4, 5, 6, 7].map(yr => (
@@ -114,7 +114,7 @@ const SvgNegativeMarkTimeline = () => (
 
 const SvgDisputeProcess = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Step-by-step process to dispute a CIBIL report error" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">How to dispute a CIBIL report error (RBI mandates 30-day resolution)</text>
     {[
       { step: "1", label: "Identify Error", desc: "Download report. Note exact account, wrong field, correct value." },
@@ -136,7 +136,7 @@ const SvgDisputeProcess = () => (
 
 const SvgImprovementTimeline = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Realistic CIBIL score improvement timeline from 650 to 750 plus" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Realistic improvement timeline: 650 to 750+ (with disciplined action)</text>
     <text x="36" y="56" fontSize="11" fill="var(--text-muted)" fontFamily="system-ui">Starting point: 650 score, high utilization, no missed payments in last 6 months</text>
     {(() => {
@@ -170,7 +170,7 @@ const SvgImprovementTimeline = () => (
 
 const SvgFastestFixes = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Fastest actions to improve CIBIL score ranked by impact and time" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--raise)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Fastest CIBIL score improvements: ranked by impact and time required</text>
     <text x="36" y="56" fontSize="11" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Action</text>
     <text x="380" y="56" fontSize="11" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Score Impact</text>

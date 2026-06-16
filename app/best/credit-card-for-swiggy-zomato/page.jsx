@@ -177,7 +177,7 @@ function AirtelDevaluationAlert() {
       aria-label="Alert: Axis Airtel card devalued in April 2026, dining and grocery removed from 10 percent category"
       style={{ width: "100%", borderRadius: 10, background: "var(--red-dim)", border: "1px solid #fca5a5", marginTop: 8 }}
     >
-      <rect x="0" y="0" width="680" height="120" fill="var(--raise)" rx="10" />
+      <rect x="0" y="0" width="680" height="120" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
       <text x="340" y="28" textAnchor="middle" fill="#dc2626" fontSize="14" fontWeight="700">Axis Airtel Card: April 2026 Devaluation Alert</text>
       <text x="340" y="52" textAnchor="middle" fill="#991b1b" fontSize="12">Previously: 10% on dining including Swiggy, Zomato</text>
       <text x="340" y="70" textAnchor="middle" fill="#991b1b" fontSize="12">After April 2026: Dining and grocery removed from 10% tier</text>

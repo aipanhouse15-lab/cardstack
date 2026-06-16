@@ -129,7 +129,7 @@ function RBLShopRiteSpotlight() {
       aria-label="RBL ShopRite card spotlight showing 5 percent grocery cashback with 1000 rupee monthly cap"
       style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: `1px solid ${COLOR}`, marginTop: 8 }}
     >
-      <rect x="0" y="0" width="680" height="160" fill="var(--raise)" rx="10" />
+      <rect x="0" y="0" width="680" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
       <text x="340" y="28" textAnchor="middle" fill={COLOR} fontSize="14" fontWeight="700">RBL ShopRite: India's Best Pure Grocery Card (That Nobody Knows)</text>
       <text x="340" y="50" textAnchor="middle" fill="var(--text)" fontSize="12">5% on grocery: BigBasket, Blinkit, Spencer, and more</text>
       <text x="340" y="68" textAnchor="middle" fill="var(--text)" fontSize="12">Annual Fee: ₹500 · Monthly Cap: ₹1,000 (binds at ₹20,000 grocery spend)</text>

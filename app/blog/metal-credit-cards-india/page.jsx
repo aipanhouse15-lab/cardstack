@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgMetalVsPlastic = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Side-by-side comparison of metal and plastic credit cards in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <rect x="40" y="40" width="270" height="130" rx="12" fill={COLOR} opacity="0.85" />
     <text x="175" y="90" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--raise)">METAL</text>
     <text x="175" y="112" textAnchor="middle" fontSize="11" fill="var(--hair2)">Tungsten / Stainless Steel</text>
@@ -41,7 +41,7 @@ const SvgMetalVsPlastic = () => (
 
 const SvgCardFeeComparison = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Annual fee comparison of major metal credit cards in India 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Metal Card Annual Fees in India (2026)</text>
     {[
       { card: "Amex Platinum Charge", fee: 60000, bar: 600 },
@@ -62,7 +62,7 @@ const SvgCardFeeComparison = () => (
 
 const SvgAmexBreakeven = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Break-even calculation for Amex Platinum Charge card at Rs 60000 annual fee" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--raise)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Amex Platinum &#8377;60,000 Fee: Break-Even Math</text>
     {[
       { benefit: "2x Club Marriott stays (savings vs rack rate)", value: "&#8377;18,000" },
@@ -86,7 +86,7 @@ const SvgAmexBreakeven = () => (
 
 const SvgInfiniaMagnusCompare = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="HDFC Infinia vs Axis Magnus benefit comparison for metal cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--raise)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Infinia Metal vs Magnus Metal: Honest Side-by-Side</text>
     <text x="220" y="50" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>HDFC Infinia Metal</text>
     <text x="520" y="50" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Axis Magnus Metal</text>
@@ -110,7 +110,7 @@ const SvgInfiniaMagnusCompare = () => (
 
 const SvgSocialSignal = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Social signaling value of metal credit cards: real but hard to price" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--raise)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">The Social Signal: Real, But What Is It Worth?</text>
     <rect x="24" y="42" width="320" height="98" rx="8" fill={COLOR} opacity="0.07" />
     <text x="184" y="66" textAnchor="middle" fontSize="11" fontWeight="600" fill={COLOR}>Real social effects of metal cards</text>
@@ -127,7 +127,7 @@ const SvgSocialSignal = () => (
 
 const SvgWhenMetalIsWorth = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="When metal credit cards are worth the premium fee and when they are not" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--raise)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Worth It vs Not Worth It: Metal Edition</text>
     <rect x="24" y="44" width="320" height="128" rx="8" fill="#22c55e" opacity="0.07" />
     <text x="184" y="66" textAnchor="middle" fontSize="11" fontWeight="700" fill="#22c55e">WORTH THE PREMIUM</text>
@@ -150,7 +150,7 @@ const SvgWhenMetalIsWorth = () => (
 
 const SvgReplacementTime = () => (
   <svg viewBox="0 0 720 140" role="img" aria-label="Credit card replacement timelines: metal cards take 7-10 days vs 3-5 for plastic" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="140" fill="var(--raise)" rx="10" />
+    <rect width="720" height="140" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Card Replacement: The Hidden Downside of Metal</text>
     <text x="24" y="52" fontSize="11" fill="var(--text-muted)">Plastic card (HDFC Regalia, Axis Ace, etc.)</text>
     {[1, 2, 3].map(d => (
@@ -170,7 +170,7 @@ const SvgReplacementTime = () => (
 
 const SvgMythBuster = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Common myths about metal credit cards debunked" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="24" y="28" fontSize="13" fontWeight="700" fill="var(--text)">Metal Card Myths vs Reality</text>
     {[
       ["MYTH: Metal means better rewards", "REALITY: Infinia Metal and Infinia plastic have identical reward structures"],

@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgFuelSurchargeExplainer = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Diagram showing how the 1% fuel surcharge works on credit card payments at petrol stations" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">How the 1% Fuel Surcharge Actually Works</text>
     {/* Flow */}
     <rect x="30" y="55" width="140" height="60" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
@@ -53,7 +53,7 @@ const SvgFuelSurchargeExplainer = () => (
 
 const SvgCardComparison = () => (
   <svg viewBox="0 0 720 300" role="img" aria-label="Comparison table of best fuel credit cards in India with surcharge waiver and reward details" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="300" fill="var(--raise)" rx="10" />
+    <rect width="720" height="300" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Best Fuel Cards in India: June 2026</text>
     <rect x="20" y="36" width="680" height="32" fill={COLOR} rx="4" />
     <text x="100" y="57" textAnchor="middle" fontSize="11" fontWeight="700" fill="white">Card</text>
@@ -83,7 +83,7 @@ const SvgCardComparison = () => (
 
 const SvgBrandMap = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Map showing which fuel card brand works at which petrol station chain in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Card-to-Pump Brand Matching: Use the Wrong Card and You Earn Nothing</text>
     {[
       { brand: "BPCL Pumps", card: "BPCL SBI / Octane", color: "#f59e0b", x: 60 },
@@ -106,7 +106,7 @@ const SvgBrandMap = () => (
 
 const SvgAnnualSavingsChart = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Bar chart comparing annual fuel savings at Rs 5000 per month spend with and without a fuel card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="280" fill="var(--raise)" rx="10" />
+    <rect width="720" height="280" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Annual Impact at ₹5,000/month Fuel Spend (₹60,000/year)</text>
     {[
       { label: "No card (surcharge paid)", val: -600, color: "#ef4444", x: 80, desc: "You lose ₹600/year in surcharge" },
@@ -137,7 +137,7 @@ const SvgAnnualSavingsChart = () => (
 
 const SvgGSTBreakdown = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Breakdown showing GST charged on fuel surcharge amounts to paying tax on a fee" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--raise)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">The GST-on-Surcharge Problem: Paying Tax on a Fee</text>
     <rect x="40" y="44" width="180" height="90" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="130" y="68" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Fuel purchase</text>
@@ -159,7 +159,7 @@ const SvgGSTBreakdown = () => (
 
 const SvgStackingFlow = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Strategy guide showing how to stack a fuel card with a cashback card for maximum return" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Stacking Strategy: Fuel Card + Cashback Card</text>
     <rect x="30" y="50" width="190" height="110" rx="8" fill="var(--raise)" stroke={COLOR} strokeWidth="2" />
     <text x="125" y="76" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">At BPCL pump?</text>

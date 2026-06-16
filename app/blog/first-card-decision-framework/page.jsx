@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgDecisionTree = () => (
   <svg viewBox="0 0 720 380" role="img" aria-label="Decision tree for choosing your first credit card in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="380" fill="var(--raise)" rx="10" />
+    <rect width="720" height="380" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="32" fontSize="14" fontWeight="700" fill="var(--text)">First Card Decision Tree — Answer These 3 Questions</text>
     <rect x="260" y="50" width="200" height="40" rx="6" fill="#7c3aed" opacity="0.15" />
     <text x="360" y="75" textAnchor="middle" fontSize="13" fontWeight="700" fill="#7c3aed">Can you always pay in full?</text>
@@ -64,7 +64,7 @@ const SvgDecisionTree = () => (
 
 const SvgIncomeCardMatrix = () => (
   <svg viewBox="0 0 720 270" role="img" aria-label="Credit card recommendations by monthly income band in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="270" fill="var(--raise)" rx="10" />
+    <rect width="720" height="270" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Income-Based Card Recommendations — India, June 2026</text>
     <rect x="36" y="50" width="648" height="28" rx="4" fill="var(--border)" opacity="0.45" />
     <text x="50" y="69" fontSize="12" fontWeight="700" fill="var(--text)">Monthly Income</text>
@@ -92,7 +92,7 @@ const SvgIncomeCardMatrix = () => (
 
 const SvgCibilProjection = () => (
   <svg viewBox="0 0 720 230" role="img" aria-label="CIBIL score projection from age 22 to 27 with disciplined credit card use" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="230" fill="var(--raise)" rx="10" />
+    <rect width="720" height="230" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">CIBIL Score Journey — Age 22 to 27 with Disciplined First Card Use</text>
     <text x="36" y="56" fontSize="12" fill="var(--text-muted)">Starting with FD-backed card or student card at ₹25,000/month income, zero late payments</text>
     {[
@@ -127,7 +127,7 @@ const SvgCibilProjection = () => (
 
 const SvgSpendPatternMatch = () => (
   <svg viewBox="0 0 720 250" role="img" aria-label="Which credit card matches which spending pattern in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="250" fill="var(--raise)" rx="10" />
+    <rect width="720" height="250" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Match Your Spending Pattern to the Right First Card</text>
     <rect x="36" y="50" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
     <text x="50" y="68" fontSize="12" fontWeight="700" fill="var(--text)">Your primary spend</text>
@@ -153,7 +153,7 @@ const SvgSpendPatternMatch = () => (
 
 const SvgApplicationChecklist = () => (
   <svg viewBox="0 0 720 230" role="img" aria-label="Credit card application checklist to maximise approval chances" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="230" fill="var(--raise)" rx="10" />
+    <rect width="720" height="230" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Before You Apply — Maximise Your Approval Chances</text>
     {[
       { ok: true, text: "Check CIBIL score for free via CIBIL.com or bank app — aim for 700+ before applying" },
@@ -175,7 +175,7 @@ const SvgApplicationChecklist = () => (
 
 const SvgUpgradePath = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Typical credit card upgrade path in India from first card to premium" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--raise)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">The Upgrade Path — How a First Card Becomes a Premium Card</text>
     {[
       { x: 36, label: "Year 0", card: "FD/Student card", sub: "CIBIL: 0 → 680" },
@@ -197,7 +197,7 @@ const SvgUpgradePath = () => (
 
 const SvgFiveQuestions = () => (
   <svg viewBox="0 0 720 290" role="img" aria-label="Five questions to answer before getting your first credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="290" fill="var(--raise)" rx="10" />
+    <rect width="720" height="290" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">5 Questions to Answer Before Applying for Any Credit Card</text>
     {[
       {

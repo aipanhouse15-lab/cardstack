@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgPaymentRail = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Payment rails: wallets are a pass-through layer, credit cards are the reward engine underneath" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--raise)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">How Your Payment Actually Flows</text>
     <rect x="30" y="50" width="140" height="48" rx="6" fill={COLOR} opacity="0.15" stroke={COLOR} strokeWidth="1.5" />
     <text x="100" y="70" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>You</text>
@@ -51,7 +51,7 @@ const SvgPaymentRail = () => (
 
 const SvgWalletLimits = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="RBI wallet limits: KYC vs non-KYC transaction and balance caps" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">RBI Wallet Limits (June 2026)</text>
     <rect x="30" y="45" width="300" height="130" rx="8" fill={COLOR} opacity="0.08" stroke={COLOR} strokeWidth="1.5" />
     <text x="180" y="68" textAnchor="middle" fontSize="13" fontWeight="700" fill={COLOR}>Full KYC Wallet</text>
@@ -70,7 +70,7 @@ const SvgWalletLimits = () => (
 
 const SvgRewardsComparison = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Rewards comparison: wallets earn near zero, credit cards earn 1 to 5 percent on the same spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--raise)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Effective Reward Rate on ₹10,000 Spend</text>
     <text x="60" y="60" fontSize="12" fontWeight="600" fill="var(--text)">Paytm Wallet (direct)</text>
     <rect x="300" y="46" width="4" height="22" rx="2" fill="#94a3b8" />
@@ -93,7 +93,7 @@ const SvgRewardsComparison = () => (
 
 const SvgSwiggyScenario = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Real scenario: ₹5000 Swiggy order, which payment method returns the most cashback" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--raise)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Real Scenario: ₹5,000 Swiggy Order — Best Return</text>
     <rect x="30" y="44" width="200" height="195" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
     <text x="130" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Paytm Wallet</text>
@@ -127,7 +127,7 @@ const SvgSwiggyScenario = () => (
 
 const SvgFraudProtection = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Fraud protection comparison: RBI zero liability for credit cards, limited for wallets" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Fraud Protection: What RBI Actually Guarantees</text>
     <rect x="30" y="44" width="310" height="120" rx="8" fill="#16a34a" opacity="0.08" stroke="#16a34a" strokeWidth="1.5" />
     <text x="185" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="#16a34a">Credit Card</text>
@@ -146,7 +146,7 @@ const SvgFraudProtection = () => (
 
 const SvgRuPayUPI = () => (
   <svg viewBox="0 0 720 170" role="img" aria-label="RuPay credit card on UPI: the best of both worlds for small transactions" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="170" fill="var(--raise)" rx="10" />
+    <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">RuPay Credit Card on UPI: Where It Actually Works</text>
     <rect x="30" y="44" width="200" height="100" rx="8" fill={COLOR} opacity="0.1" stroke={COLOR} strokeWidth="1.5" />
     <text x="130" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>What Works</text>
@@ -169,7 +169,7 @@ const SvgRuPayUPI = () => (
 
 const SvgUseCaseMap = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Use case map: when to use wallet vs credit card for different spending scenarios" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Wallet vs Credit Card: Use-Case Verdict</text>
     <text x="30" y="54" fontSize="11" fontWeight="700" fill="var(--text-muted)">SCENARIO</text>
     <text x="340" y="54" fontSize="11" fontWeight="700" fill="var(--text-muted)">BEST METHOD</text>

@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgFreeDefinitionBreakdown = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Three categories of what 'free' means for credit cards in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">What "Free Credit Card" Actually Means</text>
     {[
       { x: 40, color: COLOR, label: "Truly Free", sub1: "No joining fee", sub2: "No annual fee", sub3: "Forever", example: "Amazon Pay ICICI, IDFC FIRST Classic" },
@@ -47,7 +47,7 @@ const SvgFreeDefinitionBreakdown = () => (
 
 const SvgTopCardRanking = () => (
   <svg viewBox="0 0 720 320" role="img" aria-label="Ranked list of best free credit cards in India 2026 with key benefits" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="320" fill="var(--raise)" rx="10" />
+    <rect width="720" height="320" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Best Free Credit Cards in India: June 2026</text>
     <rect x="20" y="40" width="680" height="34" fill={COLOR} rx="4" />
     <text x="36" y="62" fontSize="12" fontWeight="700" fill="white">Rank</text>
@@ -79,7 +79,7 @@ const SvgTopCardRanking = () => (
 
 const SvgIDFCvsPremiuum = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Annual rewards comparison between IDFC FIRST Classic free card and a Rs 2500 fee premium card at Rs 12000 monthly spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--raise)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">₹12,000/month spend: Free Card vs Paid Card Annual Net Return</text>
     {/* IDFC column */}
     <rect x="80" y="55" width="200" height="170" rx="8" fill="var(--raise)" stroke={COLOR} strokeWidth="2" />
@@ -110,7 +110,7 @@ const SvgIDFCvsPremiuum = () => (
 
 const SvgHiddenCostRadar = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Table of hidden fees that free credit cards sometimes charge" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Hidden Costs That Make 'Free' Cards Not Free</text>
     <rect x="20" y="36" width="680" height="30" fill="var(--raise2)" rx="4" />
     <text x="120" y="56" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Fee Type</text>
@@ -136,7 +136,7 @@ const SvgHiddenCostRadar = () => (
 
 const SvgSpendWaiverBreakeven = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Chart showing annual spend required to waive fee for each card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Spend Required to Waive Annual Fee (Conditional Free Cards)</text>
     {[
       { label: "Axis Neo", fee: 250, waiver: 50000, x: 80 },

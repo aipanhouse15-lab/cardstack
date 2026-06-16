@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgBankFlexibilityRating = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Annual fee waiver flexibility rating by Indian bank, from most to least flexible" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--raise)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Annual Fee Waiver Flexibility — Indian Banks Ranked (June 2026)</text>
     {[
       { bank: "Kotak Mahindra", score: 88, label: "Very flexible with good history" },
@@ -45,7 +45,7 @@ const SvgBankFlexibilityRating = () => (
 
 const SvgWaiverOutcomeMatrix = () => (
   <svg viewBox="0 0 720 270" role="img" aria-label="Possible annual fee waiver outcomes when calling retention desk" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="270" fill="var(--raise)" rx="10" />
+    <rect width="720" height="270" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">What Banks Actually Offer When You Call About Annual Fee</text>
     <rect x="36" y="52" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
     <text x="50" y="70" fontSize="12" fontWeight="700" fill="var(--text)">Outcome</text>
@@ -71,7 +71,7 @@ const SvgWaiverOutcomeMatrix = () => (
 
 const SvgAxisMagnusWaiverMath = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Axis Magnus annual fee waiver savings calculation" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Axis Magnus Annual Fee Waiver — The Real Savings (June 2026)</text>
     <rect x="36" y="54" width="190" height="80" rx="6" fill="var(--border)" opacity="0.3" />
     <text x="131" y="84" textAnchor="middle" fontSize="12" fontWeight="600" fill="var(--text)">Annual fee (ex-GST)</text>
@@ -89,7 +89,7 @@ const SvgAxisMagnusWaiverMath = () => (
 
 const SvgCallTimeline = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Best time window to call for annual fee waiver on credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--raise)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">When to Call — The Optimal Window</text>
     <rect x="36" y="50" width="648" height="16" rx="8" fill="var(--border)" opacity="0.5" />
     <rect x="36" y="50" width="180" height="16" rx="8" fill="#dc2626" opacity="0.5" />
@@ -107,7 +107,7 @@ const SvgCallTimeline = () => (
 
 const SvgEscalationLadder = () => (
   <svg viewBox="0 0 720 230" role="img" aria-label="Escalation steps if first agent refuses annual fee waiver" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="230" fill="var(--raise)" rx="10" />
+    <rect width="720" height="230" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Escalation Ladder — If the First Agent Says No</text>
     {[
       { step: "Step 1", action: "Ask for retention/loyalty desk specifically", tip: "Say: 'I'd like to speak with your retention department please.'" },
@@ -128,7 +128,7 @@ const SvgEscalationLadder = () => (
 
 const SvgDowngradeVsClose = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Comparison of downgrading versus closing a credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Downgrade vs. Close — What Happens to Your Credit Score</text>
     <rect x="36" y="52" width="308" height="130" rx="6" fill="#16a34a" opacity="0.08" />
     <text x="190" y="78" textAnchor="middle" fontSize="14" fontWeight="700" fill="#16a34a">Downgrade Card</text>
@@ -150,7 +150,7 @@ const SvgDowngradeVsClose = () => (
 
 const SvgMetricsTable = () => (
   <svg viewBox="0 0 720 230" role="img" aria-label="Cardholder metrics that strengthen your annual fee waiver case" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="230" fill="var(--raise)" rx="10" />
+    <rect width="720" height="230" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Metrics That Strengthen Your Waiver Case</text>
     <rect x="36" y="50" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
     <text x="50" y="68" fontSize="12" fontWeight="700" fill="var(--text)">Metric</text>

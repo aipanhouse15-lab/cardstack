@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgInsurancePaymentProblem = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Why insurance premium payment is tricky on credit cards: most cards exclude it from reward earning" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Insurance Premium Problem Most Cardholders Do Not Know About</text>
     <rect x="30" y="44" width="310" height="116" rx="8" fill="#dc2626" opacity="0.07" stroke="#dc2626" strokeWidth="1.5" />
     <text x="185" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="#dc2626">Cards That Exclude Insurance</text>
@@ -43,7 +43,7 @@ const SvgInsurancePaymentProblem = () => (
 
 const SvgPremiumMath = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Credit card rewards on 50000 rupees annual insurance premium across different cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--raise)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">₹50,000 Annual Insurance Premium: Which Card Returns the Most?</text>
     <text x="30" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">CARD</text>
     <text x="230" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">EARN ON INSURANCE</text>
@@ -80,7 +80,7 @@ const SvgPremiumMath = () => (
 
 const SvgTermInsuranceTiming = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Term insurance premium timing and credit card billing cycle optimisation for maximum float" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Billing Cycle Optimisation: Maximise Float on Annual Premiums</text>
     <text x="360" y="50" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Pay a large annual insurance premium on Day 1 of your billing cycle to get maximum 45-50 days of interest-free credit</text>
     <rect x="30" y="65" width="100" height="50" rx="6" fill={COLOR} opacity="0.8" />
@@ -106,7 +106,7 @@ const SvgTermInsuranceTiming = () => (
 
 const SvgHealthVsTermPremium = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Health insurance vs term insurance premium: different amounts and card strategy" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Health vs Term Insurance: Different Premium Sizes, Different Card Strategy</text>
     <rect x="30" y="44" width="320" height="155" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="190" y="68" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Term Insurance</text>
@@ -129,7 +129,7 @@ const SvgHealthVsTermPremium = () => (
 
 const SvgMonthlyVsAnnual = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="Annual vs monthly insurance premium payment on credit card: which earns more rewards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--raise)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Annual vs Monthly Premium Payment: The Credit Card Reward Difference</text>
     <rect x="30" y="44" width="310" height="126" rx="8" fill={COLOR} opacity="0.07" stroke={COLOR} strokeWidth="1.5" />
     <text x="185" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Annual Payment (₹20,000)</text>
@@ -151,7 +151,7 @@ const SvgMonthlyVsAnnual = () => (
 
 const SvgRewardEarningGuide = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Step by step guide to earning maximum credit card rewards on insurance premiums" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Maximum Reward Strategy for Insurance Premiums</text>
     <rect x="30" y="44" width="46" height="46" rx="23" fill={COLOR} opacity="0.15" stroke={COLOR} strokeWidth="1.5" />
     <text x="53" y="72" textAnchor="middle" fontSize="18" fontWeight="800" fill={COLOR}>1</text>

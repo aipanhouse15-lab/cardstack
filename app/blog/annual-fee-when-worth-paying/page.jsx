@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgBreakevenFormula = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Break-even spend formula: annual fee divided by reward rate equals minimum annual spend required" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--raise)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="30" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Break-Even Formula for Any Fee Card</text>
     <rect x="60" y="48" width="180" height="68" rx="8" fill={COLOR} opacity="0.12" stroke={COLOR} strokeWidth="1.5" />
     <text x="150" y="78" textAnchor="middle" fontSize="14" fontWeight="700" fill={COLOR}>Annual Fee + GST</text>
@@ -42,7 +42,7 @@ const SvgBreakevenFormula = () => (
 
 const SvgFiveCardBreakeven = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Break-even spend for 5 popular fee cards: HDFC Regalia, ICICI Emeralde, Axis Magnus, SBI Elite, Amex MRCC" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="280" fill="var(--raise)" rx="10" />
+    <rect width="720" height="280" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Break-Even Spend: 5 Popular Fee Cards (June 2026)</text>
     <text x="20" y="50" fontSize="10" fontWeight="700" fill="var(--text-muted)">CARD</text>
     <text x="230" y="50" fontSize="10" fontWeight="700" fill="var(--text-muted)">FEE+GST</text>
@@ -86,7 +86,7 @@ const SvgFiveCardBreakeven = () => (
 
 const SvgLoungeValue = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="How lounge access reduces the effective annual fee of premium credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Hidden Benefit Math: How Lounge Access Slashes Effective Fee</text>
     <text x="30" y="56" fontSize="12" fontWeight="600" fill="var(--text)">HDFC Regalia Gold</text>
     <text x="30" y="76" fontSize="11" fill="var(--text-muted)">Annual fee: ₹2,500 + GST = ₹2,950</text>
@@ -106,7 +106,7 @@ const SvgLoungeValue = () => (
 
 const SvgFeeWaiverConditions = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Fee waiver conditions for popular credit cards: minimum annual spend required" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Fee Waiver Conditions: Can You Hit Them?</text>
     <text x="30" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">CARD</text>
     <text x="280" y="52" fontSize="10" fontWeight="700" fill="var(--text-muted)">WAIVER CONDITION</text>
@@ -136,7 +136,7 @@ const SvgFeeWaiverConditions = () => (
 
 const SvgFreeCardWins = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="Scenarios where a zero-fee credit card genuinely beats a paid card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--raise)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">When Free Cards Genuinely Win</text>
     <rect x="30" y="44" width="310" height="126" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="185" y="68" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Fee Card Loses When...</text>
@@ -157,7 +157,7 @@ const SvgFreeCardWins = () => (
 
 const SvgDecisionTree = () => (
   <svg viewBox="0 0 720 300" role="img" aria-label="Decision tree: should you pay an annual fee for a credit card?" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="300" fill="var(--raise)" rx="10" />
+    <rect width="720" height="300" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Should You Pay This Annual Fee? Decision Tree</text>
     <rect x="260" y="42" width="200" height="42" rx="8" fill={COLOR} opacity="0.15" stroke={COLOR} strokeWidth="1.5" />
     <text x="360" y="60" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Annual fee card you are considering</text>

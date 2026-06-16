@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgEarnRateComparison = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Reward earn rates per ₹100 spent across major Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--raise)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Earn Rates: points or cashback per ₹100 spent (base rate, no bonus categories)</text>
     {[
       { card: "HDFC Infinia", rate: "5 pts / ₹150", val: "₹0.83-1.67/₹100", barW: 320 },
@@ -45,7 +45,7 @@ const SvgEarnRateComparison = () => (
 
 const SvgPointValue = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Rupee value of 1 reward point across HDFC, Axis, Amex, and SBI cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">What is 1 reward point actually worth? (June 2026)</text>
     <text x="36" y="56" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Bank / Program</text>
     <text x="260" y="56" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Statement Credit</text>
@@ -72,7 +72,7 @@ const SvgPointValue = () => (
 
 const SvgSmartBuyComparison = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Value of 1 lakh HDFC points on statement credit vs SmartBuy portal" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">1,00,000 HDFC Reward Points: where you redeem matters enormously</text>
     <rect x="36" y="56" width="240" height="100" fill="var(--raise)" rx="8" />
     <text x="156" y="82" fontSize="12" fontWeight="700" fill={COLOR} textAnchor="middle" fontFamily="system-ui">Statement Credit</text>
@@ -90,7 +90,7 @@ const SvgSmartBuyComparison = () => (
 
 const SvgExpiryTimeline = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Timeline showing when reward points expire across major Indian banks" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Reward Point Expiry Timelines (check your card agreement for exact terms)</text>
     <line x1="60" y1="100" x2="660" y2="100" stroke="var(--border)" strokeWidth="2" />
     {[0, 1, 2, 3].map(yr => (
@@ -122,7 +122,7 @@ const SvgExpiryTimeline = () => (
 
 const SvgRedemptionValueGap = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Value gap between different reward point redemption options" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">10,000 HDFC points: how much you get depends entirely on how you redeem</text>
     {[
       { method: "Against statement balance", value: 2500, label: "₹2,500", color: "var(--dim)" },
@@ -145,7 +145,7 @@ const SvgRedemptionValueGap = () => (
 
 const SvgAcceleratedEarn = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Accelerated reward earn rates by spend category across popular Indian cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--raise)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Accelerated Earn Rates: where each card gives you extra points</text>
     <text x="36" y="56" fontSize="11" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Card</text>
     <text x="200" y="56" fontSize="11" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Best Category</text>
@@ -172,7 +172,7 @@ const SvgAcceleratedEarn = () => (
 
 const SvgTransferPartners = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Airline and hotel transfer partners for major Indian credit card reward programs" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Transfer Partners: which programs can you convert your points to?</text>
     <text x="36" y="62" fontSize="12" fontWeight="700" fill={COLOR} fontFamily="system-ui">HDFC SmartBuy</text>
     <text x="36" y="80" fontSize="11" fill="var(--text-muted)" fontFamily="system-ui">IndiGo 6E Rewards, Air India Flying Returns, InterMiles, Vistara Club Vistara (limited)</text>

@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgFeeVsValue = () => (
   <svg viewBox="0 0 720 210" role="img" aria-label="HDFC Regalia vs Infinia: annual fee compared to potential reward value at different spend levels" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="210" fill="var(--raise)" rx="10" />
+    <rect width="720" height="210" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Annual Fee vs Reward Value: The Honest Break-Even</text>
     {["Annual Spend", "Regalia Net Gain", "Infinia Net Gain", "Better Pick"].map((h, i) => (
       <text key={i} x={[30, 200, 390, 570][i]} y="50" fontSize="11" fontWeight="700" fill="var(--text-muted)">{h}</text>
@@ -50,7 +50,7 @@ const SvgFeeVsValue = () => (
 
 const SvgLoungeAccess = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Lounge access comparison between HDFC Regalia and HDFC Infinia credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Airport Lounge Access: Regalia vs Infinia</text>
     <rect x="20" y="40" width="320" height="124" rx="8" fill={COLOR} opacity="0.08" />
     <rect x="380" y="40" width="320" height="124" rx="8" fill="var(--raise)" />
@@ -71,7 +71,7 @@ const SvgLoungeAccess = () => (
 
 const SvgEligibilityGate = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="Eligibility requirements for HDFC Regalia and HDFC Infinia credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--raise)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Can You Even Get These Cards? The Eligibility Gate</text>
     {["Criteria", "HDFC Regalia", "HDFC Infinia"].map((h, i) => (
       <text key={i} x={[30, 290, 510][i]} y="50" fontSize="11" fontWeight="700" fill="var(--text-muted)">{h}</text>
@@ -96,7 +96,7 @@ const SvgEligibilityGate = () => (
 
 const SvgRewardMechanism = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="How reward points accumulate on HDFC Regalia vs Infinia across spending categories" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Reward Rate by Spend Category (Effective Cashback Equivalent)</text>
     {["Category", "Regalia", "Infinia (base)", "Infinia (SmartBuy 10X)"].map((h, i) => (
       <text key={i} x={[30, 240, 380, 520][i]} y="50" fontSize="11" fontWeight="700" fill="var(--text-muted)">{h}</text>
@@ -123,7 +123,7 @@ const SvgRewardMechanism = () => (
 
 const SvgMilestoneComparison = () => (
   <svg viewBox="0 0 720 170" role="img" aria-label="Milestone and annual spend benefits for HDFC Regalia and Infinia" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="170" fill="var(--raise)" rx="10" />
+    <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Milestone Benefits: Regalia vs Infinia</text>
     <rect x="20" y="38" width="320" height="116" rx="8" fill={COLOR} opacity="0.06" />
     <rect x="380" y="38" width="320" height="116" rx="8" fill="var(--raise)" />
@@ -143,7 +143,7 @@ const SvgMilestoneComparison = () => (
 
 const SvgSpendDecisionTree = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Decision tree to choose between HDFC Regalia and Infinia based on annual spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Which Card Should You Pick? (Spend-Based Decision)</text>
     <rect x="270" y="38" width="180" height="34" rx="8" fill={COLOR} opacity="0.15" />
     <text x="360" y="58" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Annual spend?</text>
@@ -168,7 +168,7 @@ const SvgSpendDecisionTree = () => (
 
 const SvgGolfAndConcierge = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Golf and concierge benefits comparison between HDFC Regalia and Infinia" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--raise)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Lifestyle Benefits: The Perks Beyond Points</text>
     {["Benefit", "Regalia", "Infinia"].map((h, i) => (
       <text key={i} x={[30, 280, 500][i]} y="50" fontSize="11" fontWeight="700" fill="var(--text-muted)">{h}</text>

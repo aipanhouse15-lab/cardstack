@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgFraudProtectionComparison = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Fraud protection comparison: credit card vs debit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="180" y="36" textAnchor="middle" fontSize="13" fontWeight="700" fill={COLOR}>Credit Card Fraud</text>
     <text x="540" y="36" textAnchor="middle" fontSize="13" fontWeight="700" fill="#dc2626">Debit Card Fraud</text>
     <line x1="360" y1="16" x2="360" y2="210" stroke="var(--border)" strokeWidth="1" />
@@ -46,7 +46,7 @@ const SvgFraudProtectionComparison = () => (
 
 const SvgRewardRateChart = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Reward rates comparison for credit and debit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Effective Reward Rate on ₹1,00,000 Annual Spend</text>
     {[
       { label: "HDFC Regalia (credit)", rate: 1.06, bar: 212, color: COLOR },
@@ -66,7 +66,7 @@ const SvgRewardRateChart = () => (
 
 const SvgFloatBenefit = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Credit card float benefit: 20 to 50 days interest-free period illustration" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--raise)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">The Free Float Window (Credit Card Only)</text>
     <rect x="30" y="50" width="660" height="30" rx="4" fill="var(--raise)" />
     <rect x="30" y="50" width="220" height="30" rx="4" fill={COLOR} opacity="0.15" />
@@ -83,7 +83,7 @@ const SvgFloatBenefit = () => (
 
 const SvgCibilImpact = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="CIBIL score impact of credit card vs debit card usage" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Credit Score Building: 12-Month Scenario</text>
     {[
       { month: "Month 1", debit: 650, credit: 650 },
@@ -118,7 +118,7 @@ const SvgCibilImpact = () => (
 
 const SvgMacBookScenario = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="MacBook purchase scenario: debit card fraud vs credit card dispute resolution" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--raise)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">₹80,000 MacBook: What Happens If Something Goes Wrong?</text>
     <rect x="20" y="44" width="330" height="180" rx="8" fill="var(--raise)" />
     <rect x="370" y="44" width="330" height="180" rx="8" fill="#dcfce7" />
@@ -147,7 +147,7 @@ const SvgMacBookScenario = () => (
 
 const SvgWhenToUseWhich = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Decision guide: when to use credit card vs debit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Quick Decision Guide</text>
     <rect x="20" y="38" width="330" height="148" rx="8" fill={COLOR} opacity="0.08" />
     <rect x="370" y="38" width="330" height="148" rx="8" fill="var(--raise)" />
@@ -164,7 +164,7 @@ const SvgWhenToUseWhich = () => (
 
 const SvgInterestRisk = () => (
   <svg viewBox="0 0 720 170" role="img" aria-label="Interest risk comparison: credit card revolving vs debit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="170" fill="var(--raise)" rx="10" />
+    <rect width="720" height="170" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">What Does Carrying a Balance Actually Cost?</text>
     <text x="360" y="46" textAnchor="middle" fontSize="11" fill="var(--text-muted)">₹50,000 outstanding, paying minimum only (3.5% per month)</text>
     {[

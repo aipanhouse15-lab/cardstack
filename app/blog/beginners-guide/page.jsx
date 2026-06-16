@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgCreditCardLifecycle = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Timeline showing how a credit card billing cycle works from purchase to due date" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">How One Month of Credit Card Billing Works</text>
     {/* Timeline line */}
     <line x1="60" y1="100" x2="660" y2="100" stroke="var(--border)" strokeWidth="3" />
@@ -49,7 +49,7 @@ const SvgCreditCardLifecycle = () => (
 
 const SvgInterestVsInvestment = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Comparison showing Rs 10000 credit card debt interest cost vs the same amount in a fixed deposit over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--raise)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">₹10,000 for 12 Months: Credit Card Debt vs Fixed Deposit</text>
     {/* Credit card */}
     <rect x="50" y="50" width="270" height="180" rx="10" fill="var(--raise)" stroke="#ef4444" strokeWidth="2" />
@@ -78,7 +78,7 @@ const SvgInterestVsInvestment = () => (
 
 const SvgFirstCardByIncome = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Table recommending first credit cards for different income brackets in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="280" fill="var(--raise)" rx="10" />
+    <rect width="720" height="280" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Your First Card by Income Bracket (June 2026)</text>
     <rect x="20" y="40" width="680" height="34" fill={COLOR} rx="4" />
     <text x="120" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Monthly Income</text>
@@ -105,7 +105,7 @@ const SvgFirstCardByIncome = () => (
 
 const SvgGoldenRules = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Four golden rules for responsible credit card use as a beginner in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">The Four Golden Rules of Credit Cards (Non-Negotiable)</text>
     {[
       { x: 30, num: "1", rule: "Pay the full amount", detail: "Always pay the full statement balance, not just the minimum. The minimum due is a trap." },
@@ -129,7 +129,7 @@ const SvgGoldenRules = () => (
 
 const SvgCibilImpact = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Chart showing how responsible credit card use improves CIBIL score over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">CIBIL Score Growth: Responsible Card Use Over 12 Months</text>
     {/* Score line */}
     {[
@@ -156,7 +156,7 @@ const SvgCibilImpact = () => (
 
 const SvgMissedPaymentCost = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Table showing cost of missing or delaying credit card payment in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">What Happens When You Miss a Credit Card Payment</text>
     <rect x="20" y="38" width="680" height="30" fill="var(--raise2)" rx="4" />
     <text x="160" y="58" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">What happens</text>

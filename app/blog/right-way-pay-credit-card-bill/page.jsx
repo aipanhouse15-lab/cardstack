@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgFullVsMinimumDue = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Comparison of paying full amount versus minimum due on a credit card over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--raise)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Full Amount vs Minimum Due — 12-Month Scenario (₹50,000 balance)</text>
     <rect x="36" y="54" width="308" height="140" rx="6" fill="#0891b2" opacity="0.08" />
     <text x="190" y="80" textAnchor="middle" fontSize="14" fontWeight="700" fill="#0891b2">Pay Full Amount Monthly</text>
@@ -46,7 +46,7 @@ const SvgFullVsMinimumDue = () => (
 
 const SvgPaymentMethodSpeed = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Comparison of credit card payment methods by processing speed in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Payment Method Speed — Critical If You Are Near the Due Date</text>
     <rect x="36" y="50" width="648" height="26" rx="4" fill="var(--border)" opacity="0.4" />
     <text x="50" y="68" fontSize="12" fontWeight="700" fill="var(--text)">Method</text>
@@ -74,7 +74,7 @@ const SvgPaymentMethodSpeed = () => (
 
 const SvgMissedPaymentCost = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Total cost of missing a credit card due date by one day" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Missing Due Date by 1 Day — ₹50,000 Balance (June 2026)</text>
     {[
       { label: "Late payment fee", amount: "₹1,000", color: "#dc2626", desc: "Flat fee on most mid-tier cards" },
@@ -97,7 +97,7 @@ const SvgMissedPaymentCost = () => (
 
 const SvgBillingCycleTimeline = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Credit card billing cycle timeline showing statement date, grace period, and due date" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Understanding Your Billing Cycle — Where the Dates Fall</text>
     <line x1="36" y1="100" x2="684" y2="100" stroke="var(--border)" strokeWidth="2" />
     {[
@@ -120,7 +120,7 @@ const SvgBillingCycleTimeline = () => (
 
 const SvgAutopayComparison = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Autopay settings comparison: minimum due versus full amount" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Autopay Setting — The One Choice That Changes Everything</text>
     <rect x="36" y="52" width="308" height="130" rx="6" fill="#dc2626" opacity="0.07" />
     <text x="190" y="78" textAnchor="middle" fontSize="14" fontWeight="700" fill="#dc2626">Autopay: Minimum Due</text>
@@ -142,7 +142,7 @@ const SvgAutopayComparison = () => (
 
 const SvgMultiplePaymentsUtilisation = () => (
   <svg viewBox="0 0 720 190" role="img" aria-label="How mid-cycle payments reduce credit utilisation ratio" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="190" fill="var(--raise)" rx="10" />
+    <rect width="720" height="190" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Mid-Cycle Payment — Reducing Utilisation Before Statement Date</text>
     <text x="36" y="58" fontSize="12" fill="var(--text-muted)">Scenario: ₹1,00,000 credit limit. You have spent ₹60,000 mid-cycle.</text>
     <rect x="36" y="74" width="308" height="70" rx="6" fill="#dc2626" opacity="0.08" />
@@ -159,7 +159,7 @@ const SvgMultiplePaymentsUtilisation = () => (
 
 const SvgThreeDayBuffer = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Three day buffer rule for safe credit card payments" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--raise)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">The 3-Day Buffer Rule — Pay This Far Before Due Date to Be Safe</text>
     <rect x="36" y="54" width="648" height="20" rx="10" fill="var(--border)" opacity="0.4" />
     <rect x="36" y="54" width="520" height="20" rx="10" fill="#0891b2" opacity="0.2" />

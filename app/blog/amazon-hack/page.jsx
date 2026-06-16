@@ -23,7 +23,7 @@ const UPDATED = "June 4, 2026";
 
 const SvgRewardTiersChart = () => (
   <svg viewBox="0 0 720 260" role="img" aria-label="Tier chart showing Amazon Pay ICICI card reward rates by spend category" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="260" fill="var(--raise)" rx="10" />
+    <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Amazon Pay ICICI: Reward Rate by Spend Category</text>
     {[
       { label: "Amazon.in (Prime)", pct: 5, color: COLOR, x: 60, note: "Direct cashback" },
@@ -51,7 +51,7 @@ const SvgRewardTiersChart = () => (
 
 const SvgAnnualCashbackTable = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Table showing annual cashback earned on Amazon Pay ICICI at Rs 2 lakh yearly Amazon spend" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="220" fill="var(--raise)" rx="10" />
+    <rect width="720" height="220" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">₹2,00,000 Amazon Annual Spend: The Real Math</text>
     <rect x="20" y="38" width="680" height="32" fill={COLOR} rx="4" />
     <text x="120" y="59" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Spend Mix</text>
@@ -78,7 +78,7 @@ const SvgAnnualCashbackTable = () => (
 
 const SvgSaleStackingGuide = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="Guide showing when card rewards stack with Amazon sale offers and when they do not" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="240" fill="var(--raise)" rx="10" />
+    <rect width="720" height="240" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Amazon Sale + Card Rewards: When It Stacks, When It Does Not</text>
     {/* Stacks */}
     <rect x="30" y="44" width="300" height="170" rx="8" fill="var(--raise)" stroke="#16a34a" strokeWidth="2" />
@@ -107,7 +107,7 @@ const SvgSaleStackingGuide = () => (
 
 const SvgEmiHiddenCostBreakdown = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Diagram showing how no-cost EMI on Amazon hides interest in the product price" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="200" fill="var(--raise)" rx="10" />
+    <rect width="720" height="200" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Amazon No-Cost EMI: How the Interest is Hidden in the Price</text>
     <rect x="30" y="48" width="200" height="120" rx="8" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5" />
     <text x="130" y="76" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Listed price</text>
@@ -132,7 +132,7 @@ const SvgEmiHiddenCostBreakdown = () => (
 
 const SvgPayLaterVsCard = () => (
   <svg viewBox="0 0 720 180" role="img" aria-label="Comparison between Amazon Pay Later and Amazon Pay ICICI credit card for purchases on Amazon" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="180" fill="var(--raise)" rx="10" />
+    <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Amazon Pay Later vs Amazon Pay ICICI Card: Which Wins?</text>
     <rect x="30" y="42" width="310" height="112" rx="8" fill="var(--raise)" stroke={COLOR} strokeWidth="2" />
     <text x="185" y="66" textAnchor="middle" fontSize="13" fontWeight="800" fill="var(--text)">Amazon Pay ICICI Card</text>
@@ -159,7 +159,7 @@ const SvgPayLaterVsCard = () => (
 
 const SvgGiftCardTrap = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Warning diagram showing gift card purchases on credit cards earn zero reward points" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <rect width="720" height="160" fill="var(--raise)" rx="10" />
+    <rect width="720" height="160" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">The Gift Card Trap: Zero Rewards on Amazon Gift Cards</text>
     <rect x="40" y="44" width="300" height="96" rx="8" fill="var(--raise)" stroke="#ef4444" strokeWidth="2" />
     <text x="190" y="72" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Buy ₹10,000 Amazon Gift Card</text>
