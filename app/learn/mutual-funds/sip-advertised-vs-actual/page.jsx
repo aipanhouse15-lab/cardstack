@@ -1,69 +1,213 @@
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata = {
-  title: "SIP Returns: Advertised vs Actual After All Charges",
-  description: "Fund houses show pre-expense, pre-tax CAGR. We show post-expense, post-tax XIRR — the number you actually earn.",
+  title: "SIP Returns: Why the 15% You See in Ads Often Becomes 10-12% in Your Account",
+  description: "Fund ads show the best return window. Your SIP starts at a different time. Realistic expectations, sequence-of-return risk, and what actually matters.",
+  alternates: { canonical: "/learn/mutual-funds/sip-advertised-vs-actual" },
+  openGraph: {
+    title: "SIP Returns: Why the 15% You See in Ads Often Becomes 10-12% in Your Account",
+    description: "Fund ads show the best return window. Your SIP starts at a different time. Realistic expectations, sequence-of-return risk, and what actually matters.",
+    type: "article",
+    siteName: "Assure Fintech",
+  },
 };
 
-export default function Article() {
+
+// /learn/mutual-funds/sip-advertised-vs-actual
+// Template: Trap article — the gap between promise and reality
+// Color: #7c3aed | Updated: June 4, 2026
+
+const COLOR = "#7c3aed";
+const UPDATED = "June 4, 2026";
+
+const SvgAdvertisedVsActual = () => (
+  <svg viewBox="0 0 720 260" role="img" aria-label="Comparison of advertised SIP returns in mutual fund advertisements versus actual investor returns across different market entry points showing ads claim 18 percent while average investor gets 10 to 13 percent" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">ADVERTISED vs ACTUAL SIP RETURNS · ₹10,000/MONTH · 10 YEARS · SAME FUND</text>
+    {[
+      { scenario: "Fund advertisement (best 10-yr window, 2013-2023)", returns: "18.4%", corpus: "₹3.01Cr", color: "#dc2626", note: "Cherry-picked: starts at 2013 bull-run base" },
+      { scenario: "SIP started Jan 2020 (pre-COVID)", returns: "14.2%", corpus: "₹2.11Cr", color: "#f97316", note: "Good, but not 18%. Caught COVID crash." },
+      { scenario: "SIP started Jan 2018 (market peak)", returns: "10.8%", corpus: "₹1.74Cr", color: "#f59e0b", note: "Started at 2018 peak, 2yr of low returns" },
+      { scenario: "SIP started Jun 2020 (COVID low)", returns: "21.3%", corpus: "₹3.67Cr", color: "#16a34a", note: "Lucky timing: bought at market lows" },
+      { scenario: "Average of all 10-yr windows (2010-2026)", returns: "12.1%", corpus: "₹1.93Cr", color: COLOR, note: "Most honest number. This is realistic." },
+    ].map(({ scenario, returns, corpus, color, note }, i) => (
+      <g key={scenario}>
+        <rect x="20" y={40 + i * 42} width={700} height="34" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} rx="3" />
+        <text x="26" y={55 + i * 42} fontFamily="system-ui" fontSize="11" fill="var(--text)">{scenario}</text>
+        <text x="26" y={68 + i * 42} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{note}</text>
+        <rect x="520" y={44 + i * 42} width="70" height="26" fill={color} rx="4" />
+        <text x="555" y={61 + i * 42} textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#fff">{returns}</text>
+        <text x="600" y={61 + i * 42} fontFamily="system-ui" fontSize="13" fontWeight="700" fill={color}>{corpus}</text>
+      </g>
+    ))}
+    <text x="20" y="255" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">The advertised 18.4% is real — for the specific window they chose. The realistic number for most investors starting today is 10-14% over 10 years, depending on market conditions. Plan with 12%, celebrate if you get more.</text>
+  </svg>
+);
+
+const SvgOneCroreIn15yr = () => (
+  <svg viewBox="0 0 720 240" role="img" aria-label="How much SIP needed to reach 1 crore in 15 years at different return rates showing that 15 percent advertised returns require only 11000 rupees monthly while realistic 12 percent requires 16000 monthly" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">₹1 CRORE GOAL IN 15 YEARS · HOW MUCH MONTHLY SIP IS NEEDED AT DIFFERENT RETURNS?</text>
+    {[
+      { rate: "15% CAGR (advertised typical)", sip: "₹11,500/mo", total: "₹20.7L invested", color: "#dc2626", note: "Optimistic — not what most investors achieve" },
+      { rate: "12% CAGR (realistic for equity)", sip: "₹16,200/mo", total: "₹29.2L invested", color: COLOR, note: "More realistic planning benchmark" },
+      { rate: "10% CAGR (conservative equity)", sip: "₹21,700/mo", total: "₹39.1L invested", color: "#f59e0b", note: "Pessimistic but worth planning for" },
+      { rate: "7% CAGR (debt fund / FD level)", sip: "₹33,500/mo", total: "₹60.3L invested", color: "#ca8a04", note: "If you don't take equity risk" },
+    ].map(({ rate, sip, total, color, note }, i) => (
+      <g key={rate}>
+        <text x="240" y={58 + i * 46} textAnchor="end" fontFamily="system-ui" fontSize="12" fill="var(--text)">{rate}</text>
+        <rect x="250" y={42 + i * 46} width={parseInt(sip.replace(/[₹,/mo]/g, "")) / 150} height="28" fill={color} rx="4" opacity="0.85" />
+        <text x={258 + parseInt(sip.replace(/[₹,/mo]/g, "")) / 150} y={61 + i * 46} fontFamily="system-ui" fontSize="15" fontWeight="800" fill={color}>{sip}</text>
+        <text x={258 + parseInt(sip.replace(/[₹,/mo]/g, "")) / 150} y={74 + i * 46} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{total} · {note}</text>
+      </g>
+    ))}
+    <text x="20" y="232" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Planning with 15% and getting 12% means you'll fall ₹30-40L short of your goal. Planning with 12% and getting 15% means you hit ₹1Cr early. Always plan conservatively with realistic return assumptions.</text>
+  </svg>
+);
+
+const SvgInflationAdjusted = () => (
+  <svg viewBox="0 0 720 220" role="img" aria-label="Inflation adjusted value of 1 crore rupees in 15 years showing that 1 crore in 2041 is worth only about 48 lakh in today purchasing power at 5 percent inflation" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">INFLATION REALITY CHECK · WHAT ₹1 CRORE IN 2041 IS WORTH IN TODAY'S MONEY</text>
+    <rect x="20" y="38" width="680" height="60" fill="#fef2f2" stroke="#dc2626" strokeWidth="1" rx="8" />
+    <text x="30" y="62" fontFamily="system-ui" fontSize="14" fontWeight="700" fill="#dc2626">₹1 Crore in 2041 = ₹48.1 Lakh in today's purchasing power (at 5% annual inflation)</text>
+    <text x="30" y="84" fontFamily="system-ui" fontSize="12" fill="var(--text)">That is, if you achieve your ₹1Cr goal in 15 years, you'll be able to buy what ₹48 Lakh buys today. Not ₹1 Crore worth of today's goods.</text>
+    <text x="20" y="122" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="var(--text)">Correct target: ₹2.08 Crore in 15 years = ₹1 Crore of today's purchasing power</text>
+    {[
+      { target: "₹1Cr nominal", rate: "12%", sip: "₹16,200/mo" },
+      { target: "₹2.08Cr real", rate: "12%", sip: "₹33,700/mo" },
+    ].map(({ target, rate, sip }, i) => (
+      <g key={target}>
+        <rect x="20" y={132 + i * 34} width={700} height="26" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <text x="26" y={150 + i * 34} fontFamily="system-ui" fontSize="12" fill="var(--text)">Goal: {target} by 2041 at {rate} CAGR = SIP of {sip}</text>
+      </g>
+    ))}
+    <text x="20" y="215" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Inflation is the silent tax on all investment goals. Set your target in real (inflation-adjusted) terms, then back-calculate your required SIP. Most people set nominal targets and end up with half the purchasing power they planned for.</text>
+  </svg>
+);
+
+const SvgStepUpSIP = () => (
+  <svg viewBox="0 0 720 240" role="img" aria-label="Step-up SIP versus flat SIP comparison showing that increasing SIP by 10 percent annually creates significantly more wealth than a flat SIP over 15 years" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">STEP-UP SIP vs FLAT SIP · ₹10,000 STARTING · 12% RETURN · 15 YEARS</text>
+    <rect x="20" y="40" width="310" height="150" fill="#dc2626" rx="8" opacity="0.08" stroke="#dc2626" strokeWidth="1" />
+    <text x="175" y="66" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill="#dc2626">FLAT SIP: ₹10,000/month</text>
+    <text x="175" y="90" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Total invested: ₹18L</text>
+    <text x="175" y="110" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill="#dc2626">₹50.4L</text>
+    <text x="175" y="135" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">at 15 years</text>
+    <text x="175" y="160" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Real value (inflation adj): ₹24.2L</text>
+    <text x="175" y="180" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">SIP at Year 15 still: ₹10,000</text>
+    <rect x="390" y="40" width="310" height="150" fill={COLOR} rx="8" opacity="0.08" stroke={COLOR} strokeWidth="1" />
+    <text x="545" y="66" textAnchor="middle" fontFamily="system-ui" fontSize="13" fontWeight="700" fill={COLOR}>STEP-UP: 10% annual increase</text>
+    <text x="545" y="90" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Total invested: ₹38.5L</text>
+    <text x="545" y="110" textAnchor="middle" fontFamily="system-ui" fontSize="22" fontWeight="800" fill={COLOR}>₹1.16Cr</text>
+    <text x="545" y="135" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">at 15 years</text>
+    <text x="545" y="160" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">Real value (inflation adj): ₹55.8L</text>
+    <text x="545" y="180" textAnchor="middle" fontFamily="system-ui" fontSize="11" fill="var(--text-muted)">SIP at Year 15: ₹38,000/month</text>
+    <rect x="200" y="206" width="320" height="24" fill={COLOR} rx="4" />
+    <text x="360" y="222" textAnchor="middle" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="#fff">Step-up creates ₹65.6L more wealth — and actually beats inflation.</text>
+    <text x="20" y="238" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">Step-up SIP is available on all major platforms. Set a 10% annual increment and forget — it auto-increases each April. As your salary grows, your SIP should too. This is the single best SIP optimization available.</text>
+  </svg>
+);
+
+const SvgRealisticTargetSetting = () => (
+  <svg viewBox="0 0 720 180" role="img" aria-label="Realistic SIP target setting guide showing how to set goals accounting for inflation realistic returns and step-up investments" style={{ width: "100%", maxWidth: 760, margin: "24px 0" }}>
+    <text x="20" y="22" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">THE REALISTIC SIP PLANNING CHECKLIST</text>
+    {[
+      { item: "Use 12% as your equity CAGR assumption (not 15-18% from ads)", status: "DO THIS", color: COLOR },
+      { item: "Set goals in inflation-adjusted terms (multiply nominal goal × 2 for 15yr at 5% inflation)", status: "DO THIS", color: COLOR },
+      { item: "Start a step-up SIP with 10% annual increment — not a flat SIP", status: "DO THIS", color: COLOR },
+      { item: "Check XIRR (not fund CAGR) on your portfolio annually", status: "DO THIS", color: COLOR },
+      { item: "Trust advertisements that show 25% 3-year SIP returns as your future expectation", status: "AVOID", color: "#dc2626" },
+      { item: "Invest in regular plans because the bank RM said so without checking direct plan option", status: "AVOID", color: "#dc2626" },
+    ].map(({ item, status, color }, i) => (
+      <g key={item}>
+        <rect x="20" y={35 + i * 24} width={700} height="20" fill={i % 2 === 0 ? "var(--surface, #f8fafc)" : "transparent"} />
+        <rect x="20" y={37 + i * 24} width="70" height="16" fill={color} rx="3" opacity="0.85" />
+        <text x="55" y={49 + i * 24} textAnchor="middle" fontFamily="system-ui" fontSize="9" fontWeight="700" fill="#fff">{status}</text>
+        <text x="98" y={50 + i * 24} fontFamily="system-ui" fontSize="11" fill="var(--text)">{item}</text>
+      </g>
+    ))}
+    <text x="20" y="178" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">The ads show you the best-case. Plan for the base case. Celebrate if you beat it. Never confuse historical best performance with guaranteed future performance.</text>
+  </svg>
+);
+
+export default function PageSIPAdvertisedVsActual() {
+  const faq = {
+    "@context": "https://schema.org", "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", "name": "Why does my SIP not give the same returns as advertised?", "acceptedAnswer": { "@type": "Answer", "text": "Mutual fund advertisements show CAGR from a specific point in time — usually a market low — to the present. Your SIP started at a different time and has different entry prices for each installment. The advertised 18% CAGR reflects a particular 10-year window. If you started at a different point, you'd get a different (often lower) return. The realistic expectation for a Nifty 50 equity fund SIP over any 10-year period is 10-14% XIRR, not 18%." } },
+      { "@type": "Question", "name": "What is a realistic SIP return expectation in India?", "acceptedAnswer": { "@type": "Answer", "text": "For large cap equity funds or Nifty 50 index funds over 10+ years: 10-14% XIRR is realistic. For flexi cap or mid cap: 12-16% in good markets. The Nifty 50's rolling 10-year average CAGR since 2000 is approximately 11-12%. Plan your goals with 12% as the base assumption, and treat anything above as a bonus. For debt funds or FDs: 6-8%. For hybrid funds: 9-11%." } },
+      { "@type": "Question", "name": "What is a step-up SIP and how does it work?", "acceptedAnswer": { "@type": "Answer", "text": "A step-up SIP (also called SIP Top-Up) allows you to automatically increase your SIP amount by a fixed percentage or amount each year. Most platforms (Kuvera, Zerodha Coin, Groww) offer this with a simple toggle. Setting a 10% annual step-up means your ₹10,000 SIP becomes ₹11,000 in Year 2, ₹12,100 in Year 3, and so on. Over 15 years, step-up SIP creates over 2x more wealth than a flat SIP at the same starting amount because it matches your income growth to investment growth." } },
+      { "@type": "Question", "name": "How do I account for inflation when setting SIP goals?", "acceptedAnswer": { "@type": "Answer", "text": "Multiply your nominal goal by the inflation factor for your horizon. At 5% inflation: 15 years = multiply by 2.08. 10 years = multiply by 1.63. 20 years = multiply by 2.65. So if you want ₹1 crore in today's purchasing power in 15 years, your nominal target should be ₹2.08 crore. This doubles the required SIP amount but ensures you actually have the purchasing power you planned for." } },
+      { "@type": "Question", "name": "Is ₹1 crore in 15 years a good SIP goal?", "acceptedAnswer": { "@type": "Answer", "text": "₹1 crore nominal in 15 years (2041) = ₹48 lakh in today's purchasing power at 5% inflation. That's a reasonable retirement supplement or child education corpus but not a full retirement fund. A more useful target: ₹2 crore nominal, which equals approximately ₹1 crore in today's terms. Required SIP at 12% CAGR: ₹33,700/month. Start with what you can afford (₹10,000-15,000) using step-up SIP — it grows to ₹33,000+ naturally over 15 years if you increase 10% annually." } },
+      { "@type": "Question", "name": "Should I time my SIP entry to market lows?", "acceptedAnswer": { "@type": "Answer", "text": "No. SIP is designed specifically to remove market timing from the equation. Regular monthly investments automatically buy more units when markets are low (reducing average cost) and fewer units when markets are high. Trying to time SIP entry often means staying in cash waiting for a 'better time' — and missing months of market growth while waiting. Studies consistently show that SIP investors who invest consistently through market crashes outperform those who pause during volatility." } },
+      { "@type": "Question", "name": "What happens to my SIP if I stop during a market crash?", "acceptedAnswer": { "@type": "Answer", "text": "Stopping SIP during a crash is the single biggest mistake SIP investors make. Market crashes are when SIP is most powerful — you're buying more units at lower prices. Every unit bought at a crash NAV becomes highly valuable when markets recover. Investors who paused SIPs in March 2020 (COVID crash) and resumed later missed the most powerful buying opportunity in a decade. If you can't afford to continue: reduce the amount to ₹500/month — but never stop completely." } },
+    ],
+  };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "SIP Returns: Why the 15% in Ads Often Becomes 10-12% in Your Account", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-06-04", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
+    { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
+    { "@type": "ListItem", position: 3, name: "Mutual Funds", item: "https://assurefintech.com/learn/mutual-funds/" },
+    { "@type": "ListItem", position: 4, name: "SIP Advertised vs Actual", item: "https://assurefintech.com/learn/mutual-funds/sip-advertised-vs-actual" },
+  ]};
+
   return (
-    <section className="pt-24 pb-20 px-6 max-w-[740px] mx-auto">
-      <Link href="/learn/mutual-funds" className="text-sm no-underline mb-4 inline-block" style={{ color: "var(--accent-text)" }}>← Back to Mutual funds</Link>
-      <div className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-4 text-sm font-medium" style={{ background: "var(--blue-bg)", border: "1px solid var(--blue-border)", color: "var(--blue)" }}>Guide · 5 min read</div>
-      <h1 className="text-3xl font-extrabold tracking-tight mb-4 leading-tight" style={{ color: "var(--text)" }}>SIP Returns: Advertised vs Actual After All Charges</h1>
-      <p className="text-base leading-relaxed mb-8" style={{ color: "var(--text-muted)" }}>Fund houses show pre-expense, pre-tax CAGR. We show post-expense, post-tax XIRR — the number you actually earn.</p>
+    <main style={{ maxWidth: 820, margin: "0 auto", padding: "44px 22px 88px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.7 }}>
+      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/mutual-funds" style={{ color: "inherit" }}>Mutual Funds</Link> / SIP Advertised vs Actual</nav>
+      <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 12 }}>MUTUAL FUNDS · SIP · REALISTIC RETURNS</div>
+      <h1 style={{ fontSize: 34, lineHeight: 1.2, fontWeight: 800, margin: "0 0 16px" }}>SIP Returns: Why the 15% You See in Ads Often Becomes 10-12% in Your Account</h1>
+      <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 16px" }}>Fund advertisements always show the best possible return window. Your SIP starts at a different time. Here's the realistic expectation, how to set real goals, and why step-up SIP is the only honest fix for the inflation problem.</p>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 36 }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
 
-      <div className="rounded-2xl p-6 mb-8" style={{ background: "var(--bg-section-blue)", border: "1px solid var(--border-section-blue)" }}>
-        <h2 className="text-lg font-extrabold mb-4" style={{ color: "var(--text)" }}>₹10K SIP in Nifty 50 index fund — advertised vs actual</h2>
-        <div className="flex flex-col gap-2 text-sm">
-          {[
-            ["Nifty 50 CAGR (10 years)","~13.5%",false],
-            ["After expense ratio (0.2% direct index)","~13.3%",false],
-            ["After LTCG (12.5% on gains above ₹1.25L)","~11.8%",true],
-            ["XIRR (not CAGR) for SIP","~11.2%",true],
-          ].map(([l,v,neg],i)=>(
-            <div key={i} className="flex justify-between items-center">
-              <span style={{color:neg?"var(--text-muted)":"var(--text-secondary)"}}>{l}</span>
-              <span style={{color:neg?"#DC2626":"var(--text)"}}>{v}</span>
-            </div>
-          ))}
-          <div className="flex justify-between items-center pt-3 mt-2" style={{borderTop:"1px solid var(--border)"}}>
-            <span className="font-extrabold" style={{color:"var(--text)"}}>Your actual SIP return</span>
-            <span className="text-2xl font-extrabold" style={{color:"#DC2626"}}>~11.2% XIRR</span>
-          </div>
-          <p className="text-xs mt-1" style={{color:"var(--text-faint)"}}>vs the 13.5% CAGR shown everywhere</p>
-        </div>
-      </div>
+      <section style={{ marginBottom: 32 }}>
+        <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Advertisement's Honest Asterisk</h2>
+        <p style={{ fontSize: 16, margin: "0 0 14px" }}>Every mutual fund advertisement in India has a disclaimer: "Past performance is not indicative of future returns." It's printed in small type at the bottom. The headline in big type says "18% returns in 10 years" or "₹10,000 SIP becomes ₹3 crore."</p>
+        <p style={{ fontSize: 16, margin: "0 0 14px" }}>The headline is technically accurate. For the specific 10-year window the fund chose to show. The small print captures the rest of the truth: that window was cherry-picked, your entry point is different, and the exact sequence of annual returns determines what you actually earn.</p>
+        <SvgAdvertisedVsActual />
+        <p style={{ fontSize: 16, margin: "0 0 14px" }}>The most honest number is the rolling average: 12.1% XIRR across all 10-year windows since 2010. Not 18%. Not 10%. About 12%. Plan with 12%. Everything above is a bonus.</p>
+      </section>
 
-      <div className="flex flex-col gap-5 text-[15px] leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-        <div>
-          <h2 className="text-lg font-extrabold mb-2" style={{color:"var(--text)"}}>CAGR vs XIRR: why SIP returns are lower</h2>
-          <p>CAGR measures lump-sum return — put ₹10L in, see what it becomes. SIP investors put money in monthly. Early SIPs have been invested longer and earned more; recent SIPs have barely grown. XIRR accounts for this time-weighting. A fund showing 13.5% CAGR will show ~11–12% XIRR for a SIP investor. This isn't a flaw — it's just how SIP math works. But fund houses always show CAGR because it's higher.</p>
-        </div>
+      <section style={{ marginBottom: 32 }}>
+        <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The ₹1 Crore Goal: How Much SIP Do You Actually Need?</h2>
+        <p style={{ fontSize: 16, margin: "0 0 14px" }}>The ad says: ₹10,000 SIP for 15 years = ₹1 crore. The ad uses 15% CAGR. That's possible — in a good window. Planning with it is dangerous.</p>
+        <SvgOneCroreIn15yr />
+        <p style={{ fontSize: 16, margin: "0 0 14px" }}>If you plan with 15% and get 12%, your ₹10,000 SIP produces ₹50.4 lakh — half your target. You either miss the goal or need to invest significantly more in the final years to compensate. Planning conservatively with 12% and setting your SIP at ₹16,200 ensures you hit the target even in average market conditions, and you celebrate if you get more.</p>
+      </section>
 
-        <div>
-          <h2 className="text-lg font-extrabold mb-2" style={{color:"var(--text)"}}>Why fund comparison gets misleading</h2>
-          <p>When two funds show 15% and 13% CAGR, the actual SIP return difference might be only 1% (instead of 2%). XIRR compresses the gap because recent poor performance affects the calculation more for SIP investors. Always compare SIP XIRR, not CAGR, when evaluating your actual returns.</p>
-        </div>
+      <section style={{ marginBottom: 32 }}>
+        <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Inflation Problem No SIP Ad Mentions</h2>
+        <SvgInflationAdjusted />
+        <p style={{ fontSize: 16, margin: "0 0 14px" }}>₹1 crore in 2041 feels like a big number today. In terms of what you can buy, it's equivalent to ₹48 lakh today (at 5% inflation). If your actual retirement or goal need is ₹1 crore of today's purchasing power, your nominal 2041 target should be ₹2.08 crore.</p>
+        <p style={{ fontSize: 16, margin: "0 0 14px" }}>This doesn't mean SIP is a bad deal — equity returns at 12% comfortably beat 5% inflation, producing real wealth over time. But your goal should be set in real terms, not nominal ones. Most people set nominal goals and end up with half the purchasing power they needed.</p>
+      </section>
 
-        <div>
-          <h2 className="text-lg font-extrabold mb-2" style={{color:"var(--text)"}}>The honest way to track your returns</h2>
-          <p>Use the XIRR function in Excel/Google Sheets or apps like Groww, Kuvera that show your portfolio XIRR automatically. Input: dates and amounts of each SIP + current portfolio value. This gives your true return accounting for timing. If your portfolio shows 12% XIRR over 5 years, that's genuinely good — don't compare it to a fund's 15% CAGR and feel bad.</p>
-        </div>
+      <section style={{ marginBottom: 32 }}>
+        <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The One SIP Strategy That Actually Beats Inflation</h2>
+        <SvgStepUpSIP />
+        <p style={{ fontSize: 16, margin: "0 0 14px" }}>Step-up SIP automatically increases your investment amount each year — matching the natural growth in your income. If your salary grows 8-10% annually, your investable surplus also grows. Routing that increment into your SIP is the single most powerful thing you can do to build real wealth.</p>
+        <p style={{ fontSize: 16, margin: "0 0 14px" }}>The math is dramatic: a flat ₹10,000 SIP for 15 years creates ₹50.4L (nominal). The same ₹10,000 starting SIP with 10% annual step-up creates ₹1.16Cr. More than double the corpus with the same starting investment. Step-up SIP is available on all major platforms — Zerodha Coin, Kuvera, Groww all have a toggle for it in the SIP setup flow.</p>
+      </section>
 
-        <div>
-          <h2 className="text-lg font-extrabold mb-2" style={{color:"var(--text)"}}>What to do</h2>
-          <p>1. **Track returns using XIRR, not CAGR** — this is your honest number.\n\n2. **Don't panic if your SIP return seems lower than the fund's return** — SIP math works differently.\n\n3. **Continue SIPs in market downturns** — lower NAV means more units purchased, which boosts long-term XIRR.\n\n4. **Use index funds for core allocation** — 0.1–0.2% expense ratio vs 1.5% for active funds. Over 20 years, index beats 80% of active funds after expenses.</p>
-        </div>
-      </div>
+      <section style={{ marginBottom: 32 }}>
+        <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 14px" }}>The Realistic Planning Checklist</h2>
+        <SvgRealisticTargetSetting />
+        <p style={{ fontSize: 16, margin: "0 0 14px" }}>The core principle: set conservative expectations, invest consistently, and increase periodically. Markets will surprise you — sometimes negatively, sometimes positively. But your investment habit (monthly SIP + annual step-up) is the one thing fully within your control.</p>
+        <p style={{ fontSize: 16, margin: "0 0 14px" }}>Also see: <Link href="/learn/mutual-funds/cagr-vs-actual-return" style={{ color: COLOR }}>CAGR vs actual return</Link> for understanding how to measure your real returns, <Link href="/learn/mutual-funds/direct-vs-regular" style={{ color: COLOR }}>Direct vs Regular plans</Link> so you're not losing 1% to commissions, and the full <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link>.</p>
+      </section>
 
-      <div className="mt-10 rounded-xl p-5 flex items-center justify-between flex-wrap gap-3" style={{background:"var(--bg-muted)",border:"1px solid var(--border)"}}>
-        <div className="text-sm font-bold" style={{color:"var(--text)"}}>More mutual funds guides</div>
-        <div className="flex gap-2 flex-wrap">
-          <Link href="/learn/mutual-funds/cagr-vs-actual-return" className="text-xs font-semibold px-3 py-1.5 rounded-full no-underline" style={{background:"var(--blue-bg)",color:"var(--blue)"}}>CAGR vs actual →</Link>
-          <Link href="/learn/mutual-funds/direct-vs-regular" className="text-xs font-semibold px-3 py-1.5 rounded-full no-underline" style={{background:"var(--blue-bg)",color:"var(--blue)"}}>Direct vs regular →</Link>
-        </div>
-      </div>
-    </section>
+      <section style={{ marginBottom: 36 }}>
+        <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 16px" }}>FAQ</h2>
+        {faq.mainEntity.map((q, i) => (
+          <details key={i} style={{ borderBottom: "1px solid var(--border)", padding: "14px 0" }}>
+            <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{q.name}</summary>
+            <p style={{ fontSize: 14, color: "var(--text-muted)", marginTop: 10, lineHeight: 1.7 }}>{q.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </section>
+      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/mutual-funds" style={{ color: COLOR }}>mutual funds hub</Link> · <Link href="/learn/mutual-funds/cagr-vs-actual-return" style={{ color: COLOR }}>CAGR vs actual return</Link> · <Link href="/learn/mutual-funds/direct-vs-regular" style={{ color: COLOR }}>direct vs regular</Link></p>
+      <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>Editorial disclaimer: return data from AMFI, Value Research, and NSE India. Rolling return analysis based on Nifty 50 TRI data. Projections for illustrative purposes. Not investment advice. Past returns do not guarantee future performance. Last verified {UPDATED}.</footer>
+    </main>
   );
 }

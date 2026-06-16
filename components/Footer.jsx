@@ -12,6 +12,7 @@ const COLS = [
       { href: "/fd-calculator", label: "FD Calculator" },
       { href: "/tax-calculator", label: "Tax Calculator" },
       { href: "/insurance-calculator", label: "Insurance Calculator" },
+      { href: "/sip-calculator", label: "SIP Calculator" },
     ],
   },
   {

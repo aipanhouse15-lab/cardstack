@@ -11,15 +11,51 @@ const LEARN_ARTICLES = {
   "mutual-funds": ["cagr-vs-actual-return", "direct-vs-regular", "sip-advertised-vs-actual"],
 };
 
+// New static blog pages (June 2026 content batch)
+const STATIC_BLOG_SLUGS = [
+  "7-credit-card-mistakes-india", "ai-changing-credit-card-picks", "amazon-hack", "annual-fee-when-worth-paying",
+  "beginners-guide", "best-card-high-spenders-2026", "best-card-insurance-premiums-2026", "best-card-low-spenders-2026",
+  "best-card-students-2026", "best-free-cards", "bnpl-vs-credit-cards-india", "build-3-card-stack-guide",
+  "cashback-rate-is-a-lie", "cibil-score-101-india", "credit-card-vs-debit-card", "credit-utilization-ratio-guide",
+  "digital-wallets-vs-credit-cards", "first-card-decision-framework", "fuel-trick", "future-credit-card-rewards-india",
+  "get-annual-fee-waived-scripts", "how-reward-points-work-india", "maximize-dining", "metal-credit-cards-india",
+  "minimum-transaction-traps", "rbi-latest-guidelines-credit-cards", "read-credit-card-statement", "regalia-vs-infinia",
+  "reward-points-vs-cashback", "right-way-pay-credit-card-bill", "should-you-close-old-credit-card",
+  "upi-vs-credit-cards-india", "why-reward-rates-dropping-india",
+];
+
+// New static best-for pages
+const STATIC_BESTFOR_SLUGS = [
+  "best-cashback-credit-card-no-annual-fee", "best-credit-card-for-beginners-india", "best-credit-card-for-bill-payments",
+  "best-credit-card-for-dining-restaurants", "best-credit-card-for-emi-purchases", "best-credit-card-for-health-insurance-payment",
+  "best-credit-card-for-high-income-earners", "best-credit-card-for-insurance-premium", "best-credit-card-for-lounge-access",
+  "best-credit-card-for-movie-entertainment", "best-credit-card-for-rent-payment", "best-credit-card-for-students-india",
+  "best-credit-card-for-upi-payments", "best-credit-card-for-women-india", "best-credit-card-under-500-annual-fee",
+  "best-credit-card-with-no-forex-markup", "credit-card-for-amazon", "credit-card-for-flipkart", "credit-card-for-fuel",
+  "credit-card-for-groceries", "credit-card-for-international-spending", "credit-card-for-online-shopping",
+  "credit-card-for-swiggy-zomato", "credit-card-for-travel", "credit-card-for-utility-bills",
+];
+
+// New static compare pages
+const STATIC_COMPARE_SLUGS = [
+  "compare-aditya-birla-activ-vs-icici-lombard-complete", "compare-amex-platinum-travel-vs-hdfc-diners-privilege",
+  "compare-flipkart-axis-vs-amazon-pay-icici", "compare-hdfc-click2protect-vs-icici-iprotect",
+  "compare-hdfc-millennia-vs-axis-ace", "compare-hdfc-optima-secure-vs-niva-bupa-reassure",
+  "compare-hdfc-regalia-vs-axis-magnus", "compare-icici-pru-baf-vs-hdfc-balanced-advantage",
+  "compare-mirae-tax-saver-vs-sbi-long-term-equity", "compare-parag-parikh-flexi-cap-vs-axis-bluechip",
+  "compare-quant-small-cap-vs-nippon-small-cap", "compare-sbi-cashback-vs-amazon-pay-icici",
+  "compare-star-comprehensive-vs-care-supreme", "compare-tata-neu-plus-vs-amazon-pay-icici",
+  "compare-uti-nifty50-vs-hdfc-nifty50-index",
+];
+
 export default function sitemap() {
   const base = "https://www.assurefintech.com";
 
-  // Static pages
   const staticPages = [
     { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
     { url: `${base}/cards`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
 
-    // Tools (5 original + 4 new calculators)
+    // Tools (5 original + 5 calculators)
     { url: `${base}/smart-swipe`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/stack-builder`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/gap-finder`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
@@ -29,6 +65,7 @@ export default function sitemap() {
     { url: `${base}/fd-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/tax-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/insurance-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/sip-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
 
     // Learn category landing pages
     { url: `${base}/learn/loans`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
@@ -47,45 +84,36 @@ export default function sitemap() {
     { url: `${base}/terms`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
   ];
 
-  // Card pages
+  // Card pages (dynamic from data)
   const cardPages = CARDS.map(card => ({
-    url: `${base}/cards/${card.id}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.8,
+    url: `${base}/cards/${card.id}`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8,
   }));
 
-  // Best-for category pages
-  const bestForPages = BEST_FOR_CATEGORIES.map(cat => ({
-    url: `${base}/best/${cat.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.85,
+  // Best-for pages — dynamic from data + new static pages (deduped)
+  const dynamicBestFor = new Set(BEST_FOR_CATEGORIES.map(c => c.slug));
+  const allBestForSlugs = [...new Set([...dynamicBestFor, ...STATIC_BESTFOR_SLUGS])];
+  const bestForPages = allBestForSlugs.map(slug => ({
+    url: `${base}/best/${slug}`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.85,
   }));
 
-  // Comparison pages
-  const comparisonPages = COMPARISONS.map(comp => ({
-    url: `${base}/compare/${comp.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.8,
+  // Comparison pages — dynamic + new static (deduped)
+  const dynamicCompare = new Set(COMPARISONS.map(c => c.slug));
+  const allCompareSlugs = [...new Set([...dynamicCompare, ...STATIC_COMPARE_SLUGS])];
+  const comparisonPages = allCompareSlugs.map(slug => ({
+    url: `${base}/compare/${slug}`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8,
   }));
 
-  // Blog pages
-  const blogPages = BLOG_POSTS.map(post => ({
-    url: `${base}/blog/${post.id}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.6,
+  // Blog pages — dynamic from data + new static (deduped)
+  const dynamicBlog = new Set(BLOG_POSTS.map(p => p.id));
+  const allBlogSlugs = [...new Set([...dynamicBlog, ...STATIC_BLOG_SLUGS])];
+  const blogPages = allBlogSlugs.map(slug => ({
+    url: `${base}/blog/${slug}`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6,
   }));
 
   // Learn article pages
   const learnArticlePages = Object.entries(LEARN_ARTICLES).flatMap(([category, articles]) =>
     articles.map(slug => ({
-      url: `${base}/learn/${category}/${slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.75,
+      url: `${base}/learn/${category}/${slug}`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.75,
     }))
   );
 
