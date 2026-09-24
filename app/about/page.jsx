@@ -1,8 +1,13 @@
 import Link from "next/link";
+import { CARDS } from "@/data/cards";
+
+const VERIFIED_CARD_COUNT = CARDS.filter(card => card.verified).length;
+const CAPPED_CARD_COUNT = CARDS.filter(card => card.caps).length;
 
 export const metadata = {
   title: "About Assure Fintech — India's Honest Credit Card Tool",
   description: "Assure Fintech helps Indians maximize credit card rewards with real cashback math after caps. Built lean, built honest, built for India.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
@@ -29,8 +34,8 @@ export default function AboutPage() {
             {[
               ["📊", "Real math", "We convert reward points to effective cashback % using the actual formula. 4 points per ₹150 at ₹0.20/point = 1.33%. Not 5%."],
               ["⚡", "Cap-aware", "We're the only Indian site that calculates your effective rate after cashback caps. Axis ACE isn't 5% if you spend ₹20K — it's 2.5%."],
-              ["🔒", "Zero tracking", "No accounts. No cookies. No emails collected. We don't even have a database of users."],
-              ["✅", "Verified data", "All 25 cards verified from bank product pages. Unverified cards are clearly marked."],
+              ["🔒", "No account required", "We don't ask for card numbers, banking credentials, or a user profile to use our tools."],
+              ["✅", "Verified data", `${VERIFIED_CARD_COUNT} cards verified from bank product pages. Unverified cards are clearly marked.`],
               ["🆓", "Free forever", "All tools are free. We plan to earn through optional affiliate links — clearly labeled."],
             ].map(([icon, title, desc], i) => (
               <div key={i} className="flex gap-3">
@@ -43,7 +48,7 @@ export default function AboutPage() {
 
         <h2 className="text-lg font-extrabold mt-2" style={{ color: "var(--text)" }}>The numbers</h2>
         <div className="grid grid-cols-3 gap-4 text-center">
-          {[["75", "Cards listed"], ["11", "With cashback caps"], ["4", "Free tools"]].map(([n, l], i) => (
+          {[[CARDS.length, "Cards listed"], [CAPPED_CARD_COUNT, "With cashback caps"], [5, "Free tools"]].map(([n, l], i) => (
             <div key={i} className="rounded-xl p-4" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
               <div className="text-2xl font-extrabold" style={{ color: "var(--accent-text)" }}>{n}</div>
               <div className="text-xs mt-1" style={{ color: "var(--text-faint)" }}>{l}</div>

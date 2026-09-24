@@ -1,5 +1,6 @@
 // ─── 25 INDIAN CREDIT CARDS ───
-// Last verified: March 2026
+// Source review dates are stored per card when available. Records without a
+// reviewedAt value retain their legacy March 2026 review status.
 // Reward rates show effective cashback %. Partner/SmartBuy rates shown separately.
 // To update: edit values below and push to GitHub. Vercel auto-deploys.
 
@@ -1193,7 +1194,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
 // ═══ AXIS BANK ═══
 
   { id: "axis-airtel", name: "Axis Airtel Credit Card", bank: "Axis", img: "📱", color: "#e60012", fee: 500, feeWaiver: "Spend-based", type: "Cashback", verified: false,
-    rewards: { "Zomato (via app, min ₹499)": "10%", "Blinkit (via app, min ₹499)": "10%", "District Movies (e-comm)": "10%", "Airtel services": "25% (capped at 2× base earned)", "All other spends": "1%" },
+    rewards: { dining: 10, travel: 1, online: 1, groceries: 10, fuel: 0, utilities: 25, entertainment: 10, shopping: 1, default: 1 },
     caps: { monthlyCashback: 500, capRate: 10, fallbackRate: 1, capAppliesTo: ["dining", "groceries", "utilities"] },
     partnerRates: [
       { name: "Airtel Thanks app (bills)", rate: "25% cashback" },
@@ -1321,7 +1322,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     network: "Visa", lounge: "None" },
 
   { id: "hdfc-swiggy-ornge", name: "HDFC Swiggy ORNGE Credit Card", bank: "HDFC", img: "🧡", color: "#f97316", fee: 499, feeWaiver: "Not specified", type: "Entry", verified: false,
-    rewards: { "Swiggy": "5%", "Dining": "3%", "Online": "1%", "All other": "1%" },
+    rewards: { dining: 5, travel: 1, online: 1, groceries: 5, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
     partnerRates: [],
     pointsInfo: "5% Swiggy (min ₹249/txn), 3% dining, 1% everything else · ₹2,500/mo Swiggy cap",
     highlights: ["5% Swiggy cashback (₹2,500/mo cap, min ₹249/txn)", "3% dining", "Lower fee than BLCK (₹499 vs ₹1,499)", "Swiggy One membership included"],
@@ -1331,7 +1332,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
   },
 
   { id: "hdfc-tata-neu-plus", name: "HDFC Tata Neu Plus Credit Card", bank: "HDFC", img: "🟣", color: "#5b21b6", fee: 499, feeWaiver: "₹1L annual spend", type: "Lifestyle", verified: false,
-    rewards: { "Tata brands": "2% NeuCoins (5% via NeuPass + Tata Neu app)", "All other spends": "1%", "Bill Pay, Tanishq, cult.fit, Air India, Tata Play": "2% only (NeuPass bonus excluded)" },
+    rewards: { dining: 1, travel: 2, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 1, shopping: 2, default: 1 },
     caps: { monthlyCashback: 500, capRate: 7, fallbackRate: 1, capAppliesTo: ["travel", "groceries", "shopping"] },
     partnerRates: [
       { name: "Tata Neu (BigBasket/Croma/Westside)", rate: "Up to 7% NeuCoins" },
@@ -1345,7 +1346,7 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
     network: "RuPay", lounge: "4/year (conditional)" },
 
   { id: "hdfc-tata-neu-infinity", name: "HDFC Tata Neu Infinity Credit Card", bank: "HDFC", img: "♾️", color: "#4c1d95", fee: 1499, feeWaiver: "₹3L annual spend", type: "Premium", verified: false,
-    rewards: { "Tata brands (BigBasket, Croma, Westside, Taj, 1mg)": "5% NeuCoins", "Tata brands via Tata Neu app + NeuPass": "10% NeuCoins (5% base + 5% NeuPass bonus)", "All other spends / merchant EMI / UPI": "1.5%", "Bill Pay, Tanishq, cult.fit, Air India, Tata Play": "5% only (NeuPass bonus excluded since Jan 2025)" },
+    rewards: { dining: 1.5, travel: 5, online: 5, groceries: 5, fuel: 0, utilities: 5, entertainment: 1.5, shopping: 5, default: 1.5 },
     partnerRates: [
       { name: "Tata Neu brands", rate: "Up to 10% NeuCoins" },
       { name: "BigBasket/Croma", rate: "Up to 10% NeuCoins" },
@@ -1551,15 +1552,15 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
 
   // ═══ IDFC FIRST ═══
 
-  { id: "idfc-millennia", name: "IDFC FIRST Millennia Credit Card", bank: "IDFC", img: "🌐", color: "#059669", fee: 499, feeWaiver: "₹50K annual spend", type: "Cashback", verified: false,
-    rewards: { dining: 2, travel: 2, online: 2, groceries: 2, fuel: 0, utilities: 2, entertainment: 2, shopping: 2, default: 1 },
-    caps: { monthlyCashback: 500, capRate: 2, fallbackRate: 1, capAppliesTo: ["dining", "travel", "online", "groceries", "utilities", "entertainment", "shopping"] },
+  { id: "idfc-millennia", name: "IDFC FIRST Millennia Credit Card", bank: "IDFC", img: "🌐", color: "#059669", fee: 0, feeWaiver: "Lifetime free", type: "Rewards", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.idfcfirst.bank.in/credit-card/millennia",
+    rewards: { dining: 1.25, travel: 1.25, online: 0.375, groceries: 0.375, fuel: 0, utilities: 0.125, entertainment: 0.375, shopping: 0.375, default: 0.375 },
     partnerRates: [],
-    pointsInfo: "2% cashback on most categories (cap ₹500/mo combined), 1% on other · Auto-credited · Zero forex",
-    highlights: ["2% cashback (cap ₹500/mo)", "Zero forex markup", "Lounge discontinued (June 2025)", "₹500 welcome cashback"],
-    pros: ["Simple 2% cashback", "Zero forex", "Easy fee waiver at ₹50K", "Lounge access"],
-    cons: ["₹500/mo cashback cap is low", "1% fallback rate", "Cap limits heavy spenders"],
-    network: "Visa", lounge: "4/year" },
+    pointsInfo: "10X on eligible dining and travel (1.25%), 3X on most eligible spends (0.375%), 1X on utilities/insurance/railways/FASTag (0.125%) · 1 point = ₹0.25",
+    highlights: ["Lifetime free", "10X on eligible dining and travel", "4 railway lounge visits/quarter", "25% off one movie ticket/month"],
+    pros: ["No joining or annual fee", "Accelerated dining and travel rewards", "Railway lounge access", "Points redeem against online purchases"],
+    cons: ["Low 0.375% regular earn rate", "₹99 + GST redemption fee", "No airport lounge access", "International rewards end 26 Oct 2026"],
+    network: "Visa", lounge: "4 railway visits/quarter",
+    upcoming: { date: "26 October 2026", changes: ["International transactions will stop earning reward points."] } },
 
   { id: "idfc-ashva", name: "IDFC FIRST Ashva Credit Card", bank: "IDFC", img: "🐎", color: "#0d9488", fee: 999, feeWaiver: "₹1.5L annual spend", type: "Premium", verified: false,
     rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 0.5 },
@@ -1581,17 +1582,17 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
 
   // ═══ FEDERAL BANK ═══
 
-  { id: "scapia", name: "Scapia Credit Card", bank: "Federal Bank", img: "🚀", color: "#6366f1", fee: 0, feeWaiver: "Lifetime free", type: "Travel", verified: false,
-    rewards: { "Travel via Scapia app": "4% Scapia Coins (was 5%, reduced Feb 2026)", "All other spends": "2% Scapia Coins", "Utility bills & insurance": "0% (excluded since Feb 2026, don't count toward lounge milestone)" },
+  { id: "scapia", name: "Scapia Credit Card", bank: "Federal Bank", img: "🚀", color: "#6366f1", fee: 0, feeWaiver: "Lifetime free", type: "Travel", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.scapia.cards/product/blog/the-scapia-federal-credit-card-everything-you-need-to-know",
+    rewards: { dining: 2, travel: 4, online: 2, groceries: 2, fuel: 0, utilities: 0, entertainment: 2, shopping: 2, default: 2 },
     partnerRates: [
-      { name: "Scapia Travel", rate: "5% Scapia Coins" },
-      { name: "Partner restaurants", rate: "5% Scapia Coins" },
+      { name: "Scapia app bookings", rate: "20% Coins (4% effective)" },
+      { name: "RuPay UPI spends ₹500+", rate: "5% Coins (1% effective)" },
     ],
-    pointsInfo: "~2% effective on all spends (10 Scapia Coins/₹100, 5 coins = ₹1) · Zero forex · Unlimited domestic lounge (₹20K/mo spend)",
-    highlights: ["4% on travel via Scapia app (was 5%)", "2% base on regular spends", "Utility bills & insurance excluded from rewards", "Lounge: ₹20K/mo spend milestone", "Lifetime free"],
-    pros: ["Lifetime free — no annual fee ever", "4% on travel (still competitive)", "2% base on all regular spends", "₹50K+ intl flight via app → ₹2,000 back for duty-free/dining (new perk)"],
-    cons: ["Travel rate cut from 5% to 4% (Feb 2026)", "Utility bills and insurance earn 0% AND don't count toward lounge spend milestone", "Rewards only redeemable for travel on Scapia app"],
-    network: "Visa", lounge: "Unlimited domestic (₹20K/mo spend req, no intl)" },
+    pointsInfo: "Visa: 10% Coins (2% effective) · RuPay UPI ₹500+: 5% Coins (1% effective) · Scapia app: 20% Coins (4% effective) · 5 Coins = ₹1",
+    highlights: ["4% effective on Scapia app bookings", "2% effective on eligible Visa spends", "Zero forex on Visa", "Airport privileges after ₹20K billing-cycle spend", "Lifetime free"],
+    pros: ["Lifetime free", "4% effective on Scapia app bookings", "2% effective on eligible Visa spends", "Visa and RuPay cards share one limit", "₹50K+ international flight booking unlocks up to ₹2,000 airport credit"],
+    cons: ["Rewards redeem within the Scapia ecosystem", "RuPay UPI earn is only 1% effective and requires ₹500+ transactions", "Airport privileges require ₹20K in the preceding billing cycle"],
+    network: "Visa + RuPay", lounge: "Unlimited domestic airport privileges (₹20K prior billing-cycle spend)" },
 
   // ═══ HSBC ═══
 
@@ -1662,15 +1663,18 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
 
   // ═══ YES BANK ═══
 
-  { id: "yes-kiwi", name: "Kiwi YES Bank Credit Card", bank: "YES Bank", img: "🥝", color: "#16a34a", fee: 0, feeWaiver: "Lifetime free", type: "Cashback", verified: false,
+  { id: "yes-kiwi", name: "Kiwi YES Bank Credit Card", bank: "YES Bank", img: "🥝", color: "#16a34a", fee: 0, feeWaiver: "Lifetime free", type: "UPI Cashback", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.gokiwi.in/cards/yesbank/",
     rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.5 },
-    partnerRates: [],
-    pointsInfo: "2% Kiwi Coins on all spends, but 1 Coin = ₹0.25, so effective rate ~0.5% · Lifetime free",
-    highlights: ["Lifetime free", "2% Kiwi Coins (effective ~0.5%)", "Simple structure"],
-    pros: ["Lifetime free", "Simple flat reward structure"],
-    cons: ["Effective rate only ~0.5% (misleading 2% headline)", "No lounge access", "Kiwi Coin value is low"],
-    redemptionNote: "Card advertises '2% Kiwi Coins' but each Kiwi Coin is worth only ₹0.25, making the effective cashback rate ~0.5%, not 2%.",
-    network: "Visa", lounge: "None" },
+    partnerRates: [
+      { name: "UPI scan & pay via Kiwi", rate: "1.5% cashback" },
+      { name: "Eligible online spends", rate: "0.5% cashback" },
+    ],
+    pointsInfo: "1.5% cashback on eligible UPI scan-and-pay transactions via Kiwi · 0.5% on eligible online spends · Lifetime free",
+    highlights: ["1.5% on UPI scan & pay", "0.5% on online spends", "Lifetime free", "Cashback transfers to bank account"],
+    pros: ["Useful UPI cashback", "No joining or annual fee", "Cashback has direct monetary value"],
+    cons: ["Best rate requires paying through Kiwi", "Only 0.5% on online card spends", "Premium Neon benefits require a paid membership"],
+    redemptionNote: "Base cashback is 1.5% on eligible UPI scan-and-pay transactions through Kiwi and 0.5% on eligible online spends. Optional Kiwi Neon membership has separate pricing and benefits.",
+    network: "RuPay", lounge: "None on free plan" },
 
   { id: "yes-uni", name: "Uni YES Bank Credit Card", bank: "YES Bank", img: "🦄", color: "#7c3aed", fee: 0, feeWaiver: "Lifetime free", type: "Cashback", verified: false,
     rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
@@ -1775,6 +1779,9 @@ Everything else (dining, travel, shopping) earns 0.25% — essentially nothing. 
 ];
 
 export const BANKS = [...new Set(CARDS.map(c => c.bank))].sort();
+// Only these records may drive rankings, recommendations, and savings estimates.
+// Review-pending cards remain searchable in the catalogue and comparison pages.
+export const VERIFIED_CARDS = CARDS.filter(card => card.verified);
 
 export const CATEGORIES = [
   { id: "dining", label: "Dining", icon: "🍽️", desc: "Restaurants, Swiggy, Zomato", avgSpend: 5000 },
@@ -1901,4 +1908,44 @@ export function calcTotalMonthlyReward(card, spending) {
   });
 
   return { total, anyCapped, details };
+}
+
+// Keep every reward record compatible with calculators, rankings, and API averages.
+// Product-specific conditions still live in partnerRates, pointsInfo, highlights, and cons.
+export function validateCardData(cards = CARDS) {
+  const rewardCategories = [...CATEGORIES.map(category => category.id), "default"];
+  const errors = [];
+  const seenIds = new Set();
+
+  cards.forEach((card, index) => {
+    const label = card.id || `card at index ${index}`;
+
+    if (!card.id) errors.push(`Card at index ${index} has no id`);
+    if (seenIds.has(card.id)) errors.push(`${label}: duplicate id`);
+    seenIds.add(card.id);
+
+    if (typeof card.verified !== "boolean") errors.push(`${label}: verified must be a boolean`);
+    if (card.reviewedAt && !card.verified) errors.push(`${label}: reviewedAt requires verified: true`);
+    if (card.reviewedAt && !/^https:\/\//.test(card.sourceUrl || "")) {
+      errors.push(`${label}: newly reviewed cards need an HTTPS sourceUrl`);
+    }
+    if (!Number.isFinite(card.fee) || card.fee < 0) errors.push(`${label}: fee must be a non-negative number`);
+
+    rewardCategories.forEach(categoryId => {
+      const rate = card.rewards?.[categoryId];
+      if (!Number.isFinite(rate) || rate < 0) {
+        errors.push(`${label}: rewards.${categoryId} must be a non-negative number`);
+      }
+    });
+  });
+
+  if (errors.length) {
+    throw new Error(`Invalid card data:\n- ${errors.join("\n- ")}`);
+  }
+
+  return {
+    cards: cards.length,
+    verified: cards.filter(card => card.verified).length,
+    unverified: cards.filter(card => !card.verified).length,
+  };
 }

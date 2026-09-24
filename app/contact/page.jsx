@@ -3,6 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Contact Assure Fintech — Report Issues, Suggest Cards, Say Hi",
   description: "Get in touch with Assure Fintech. Report incorrect data, suggest new cards, share feedback, or just say hello.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

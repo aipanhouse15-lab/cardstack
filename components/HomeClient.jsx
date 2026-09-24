@@ -41,7 +41,7 @@ const GAP_DATA = [
   { card: "HDFC Millennia", adv: "5%", actual: "2.3%", note: "₹1K/mo cap across all categories", id: "hdfc-millennia" },
   { card: "Axis ACE", adv: "5%", actual: "3.8%", note: "₹500/mo cap on bill payments", id: "axis-ace" },
   { card: "HDFC Regalia", adv: "1.33%", actual: "1.33%", note: "Cap at ₹18.75L/mo — effectively uncapped", id: "hdfc-regalia" },
-  { card: "Amazon Pay ICICI", adv: "5%", actual: "5%", note: "No cap — one of the few honest rates", id: "amazon-pay-icici" },
+  { card: "Amazon Pay ICICI", adv: "5%", actual: "5%", note: "No cap — one of the few honest rates", id: "amazon-icici" },
 ];
 
 const HOW_STEPS = [
@@ -51,7 +51,7 @@ const HOW_STEPS = [
 ];
 
 // Get some popular cards for display
-const POPULAR = CARDS.filter(c => ["sbi-cashback", "hdfc-regalia", "axis-ace", "amazon-pay-icici", "hdfc-millennia", "onecard", "au-zenith", "icici-sapphiro"].includes(c.id)).slice(0, 8);
+const POPULAR = CARDS.filter(c => ["sbi-cashback", "hdfc-regalia", "axis-ace", "amazon-icici", "hdfc-millennia", "onecard", "au-zenith", "icici-sapphiro"].includes(c.id)).slice(0, 8);
 
 export default function HomeClient() {
   const [rvReady, setRvReady] = useState(false);
@@ -84,9 +84,9 @@ export default function HomeClient() {
           <div className="stats-in">
             {[
               { n: CARDS.length, sup: "+", l: "CARDS TRACKED" },
-              { n: "6", sup: "", l: "CATEGORIES" },
-              { n: "10", sup: "", l: "FREE TOOLS" },
-              { n: "0", sup: "", l: "TRACKING" },
+              { n: CATS.length, sup: "", l: "CATEGORIES" },
+              { n: TOOLS.length + CALCS.length, sup: "", l: "FREE TOOLS" },
+              { n: "0", sup: "", l: "ACCOUNTS" },
               { n: "∞", sup: "", l: "FREE FOREVER" },
             ].map((s, i) => (
               <div key={i} className="stat">
@@ -136,7 +136,7 @@ export default function HomeClient() {
           <div className="sec-head">
             <div>
               <div className="k accent">CREDIT CARD TOOLS</div>
-              <div className="sec-title">Five tools. <em>Zero tracking.</em></div>
+              <div className="sec-title">Five tools. <em>No account required.</em></div>
             </div>
           </div>
           <div className="acts">
@@ -257,9 +257,9 @@ export default function HomeClient() {
               We publish <em>the second one.</em>
             </h2>
             <p style={{ color: "var(--mut)", fontSize: 16, marginTop: 28, maxWidth: 640, lineHeight: 1.7 }}>
-              No tracking. No login walls. No sponsored rankings. Every rate on this site is manually verified 
-              against the product&apos;s MITC, terms, and fine print. If a bank changes its rewards, we publish 
-              the change before they announce it.
+              No account required. No login walls. No sponsored rankings. Every verified rate on this site is checked 
+              against the product&apos;s MITC, terms, and fine print. When we confirm a change, we update the
+              record and its verification status.
             </p>
           </div>
         </div>
@@ -272,7 +272,7 @@ export default function HomeClient() {
             Stop guessing.<br />
             Start with <em>the honest number.</em>
           </h2>
-          <p>Free. No login. No tracking. Just math.</p>
+          <p>Free. No login. No account required. Just math.</p>
           <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
             <Link href="/smart-swipe" className="btn btn-solid">Find your best card →</Link>
             <Link href="/gap-finder" className="btn btn-line">Find your card gaps →</Link>

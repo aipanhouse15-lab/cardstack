@@ -3,6 +3,7 @@
 // Images should be in /public/cards/[card-id].png
 
 import { useState } from "react";
+import { hasLocalCardImage } from "@/data/card-assets";
 
 const BANK_STYLES = {
   "HDFC": { initials: "HDFC", bg: "#004b87", text: "#fff" },
@@ -22,7 +23,7 @@ const BANK_STYLES = {
 export default function BankLogo({ bank, cardId, size = 40, rounded = 12, fontSize = 11 }) {
   const [imgError, setImgError] = useState(false);
   const style = BANK_STYLES[bank] || { initials: bank?.slice(0, 2) || "??", bg: "#6b7280", text: "#fff" };
-  const imgPath = cardId ? `/cards/${cardId}.png` : null;
+  const imgPath = hasLocalCardImage(cardId) ? `/cards/${cardId}.png` : null;
 
   // Try card image first, fall back to styled initials
   if (imgPath && !imgError) {

@@ -21,7 +21,7 @@ const COLS = [
       { href: "/cards/sbi-cashback", label: "SBI Cashback" },
       { href: "/cards/hdfc-regalia", label: "HDFC Regalia" },
       { href: "/cards/axis-ace", label: "Axis ACE" },
-      { href: "/cards/amazon-pay-icici", label: "Amazon Pay ICICI" },
+      { href: "/cards/amazon-icici", label: "Amazon Pay ICICI" },
       { href: "/cards/hdfc-millennia", label: "HDFC Millennia" },
     ],
   },

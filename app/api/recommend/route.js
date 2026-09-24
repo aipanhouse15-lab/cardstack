@@ -12,6 +12,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
+  const recommendableCards = CARDS.filter(card => card.verified);
 
   // Best card for a specific category
   const forCat = searchParams.get("for");
@@ -20,7 +21,7 @@ export async function GET(request) {
     if (!cat) {
       return json({ error: "Invalid category", available: CATEGORIES.map(c => c.id) }, 400);
     }
-    const ranked = [...CARDS]
+    const ranked = [...recommendableCards]
       .map(c => ({ ...c, rate: c.rewards[forCat] || c.rewards.default }))
       .sort((a, b) => b.rate - a.rate)
       .slice(0, 5);
@@ -36,7 +37,7 @@ export async function GET(request) {
   // Best free cards
   const budget = searchParams.get("budget");
   if (budget === "free") {
-    const freeCards = CARDS.filter(c => c.fee === 0)
+    const freeCards = recommendableCards.filter(c => c.fee === 0)
       .map(c => {
         const rates = Object.values(c.rewards).filter((_, i, arr) => i < arr.length); // all rates
         const avg = Object.entries(c.rewards).filter(([k]) => k !== "default").reduce((s, [, r]) => s + r, 0) / 8;
@@ -53,7 +54,7 @@ export async function GET(request) {
   }
 
   if (budget === "under5000") {
-    const affordable = CARDS.filter(c => c.fee < 5000)
+    const affordable = recommendableCards.filter(c => c.fee < 5000)
       .map(c => {
         const avg = Object.entries(c.rewards).filter(([k]) => k !== "default").reduce((s, [, r]) => s + r, 0) / 8;
         return { ...c, avgRate: parseFloat(avg.toFixed(2)) };
@@ -72,10 +73,13 @@ export async function GET(request) {
   const cardsParam = searchParams.get("cards");
   if (cardsParam) {
     const cardIds = cardsParam.split(",").map(s => s.trim());
-    const ownedCards = cardIds.map(id => CARDS.find(c => c.id === id)).filter(Boolean);
+    const ownedCards = cardIds.map(id => recommendableCards.find(c => c.id === id)).filter(Boolean);
 
     if (ownedCards.length === 0) {
-      return json({ error: "No valid card IDs provided", available: CARDS.map(c => c.id) }, 400);
+      return json({
+        error: "No source-checked card IDs provided",
+        available: recommendableCards.map(c => c.id),
+      }, 400);
     }
 
     const optimization = CATEGORIES.map(cat => {
@@ -87,7 +91,7 @@ export async function GET(request) {
 
       // Find if a better card exists
       let betterCard = null, betterRate = 0;
-      CARDS.forEach(c => {
+      recommendableCards.forEach(c => {
         if (cardIds.includes(c.id)) return;
         const r = c.rewards[cat.id] || c.rewards.default || 0;
         if (r > bestRate && r > betterRate) { betterRate = r; betterCard = c; }
@@ -104,8 +108,8 @@ export async function GET(request) {
     const totalGaps = optimization.filter(o => o.potential_upgrade).length;
 
     return json({
-      query: { type: "optimize_stack", cards: cardIds },
-      owned_cards: ownedCards.map(c => ({ id: c.id, name: c.name })),
+      query: { type: "optimize_stack", cards: ownedCards.map(card => card.id) },
+      owned_cards: ownedCards.map(c => ({ id: c.id, name: c.name, reviewed_at: c.reviewedAt || "March 2026" })),
       optimization,
       summary: {
         total_categories: CATEGORIES.length,
@@ -122,11 +126,11 @@ export async function GET(request) {
   return json({
     name: "Assure Fintech API",
     version: "1.0",
-    description: "Real-time Indian credit card reward data and recommendations. Free to use.",
+    description: "Source-reviewed Indian credit card reward data and recommendations. Free to use.",
     base_url: "https://www.assurefintech.com/api",
     endpoints: {
       "GET /api/cards": {
-        description: "List all 25+ Indian credit cards with reward rates",
+        description: `List all ${CARDS.length} Indian credit cards with reward rates and verification status`,
         params: { bank: "Filter by bank (e.g., HDFC)", free: "true for free cards only", sort: "Sort by category reward (e.g., dining)", limit: "Max results", best_for: "Get single best card for category" },
         example: "/api/cards?bank=HDFC&sort=dining",
       },
@@ -150,7 +154,7 @@ export async function GET(request) {
     },
     available_categories: CATEGORIES.map(c => ({ id: c.id, label: c.label })),
     available_cards: CARDS.map(c => ({ id: c.id, name: c.name, bank: c.bank })),
-    data_updated: "March 2026",
+    data_updated: "Latest source checks through September 2026; see each card's verification status and review date.",
     attribution: "Data by Assure Fintech (assurefintech.com). Free to use with attribution.",
   });
 }

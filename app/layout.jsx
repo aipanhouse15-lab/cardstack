@@ -11,7 +11,7 @@ export const metadata = {
     default: "Assure Fintech — The Honest Number on Every Financial Product",
     template: "%s | Assure Fintech",
   },
-  description: "Banks advertise one number. You take home another. Assure Fintech calculates cap-adjusted effective rates for credit cards, loans, insurance, FDs, and taxes....",
+  description: "Banks advertise one number. You take home another. Assure Fintech calculates cap-adjusted effective rates for credit cards, loans, insurance, FDs, and taxes.",
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -45,9 +45,10 @@ export default function RootLayout({ children }) {
         `}</Script>
       </head>
       <body>
+        <a href="#main-content" className="skip-link">Skip to main content</a>
         <ThemeProvider>
           <Navbar />
-          <main style={{ position: "relative", zIndex: 1 }}>
+          <main id="main-content" style={{ position: "relative", zIndex: 1 }}>
             {children}
           </main>
           <Footer />

@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Script from "next/script";
 
+export const metadata = {
+  title: "Cap-Adjusted Cashback Explained — Why Your 5% Card Returns 2%",
+  description: "Learn how monthly caps turn 5% cashback into a lower effective return, with formulas and worked examples across popular Indian credit cards.",
+  alternates: { canonical: "/blog/cap-adjusted-cashback-explained" },
+};
+
 // ============================================================
 // Tier 2 Article 2 — Cap-Adjusted Cashback Explained
 // URL: /blog/cap-adjusted-cashback-explained

@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Script from "next/script";
 
+export const metadata = {
+  title: "Health Insurance Effective Coverage 2026 — Why ₹10L Can Pay ₹4L",
+  description: "See how room-rent caps, co-pay, sub-limits, and exclusions can reduce the effective payout from an Indian health insurance policy.",
+  alternates: { canonical: "/learn/insurance/health-insurance-effective-coverage" },
+};
+
 // ============================================================
 // Tier 2 Article 4 — Health Insurance Effective Coverage
 // URL: /learn/insurance/health-insurance-effective-coverage

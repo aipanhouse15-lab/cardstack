@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Script from "next/script";
 
+export const metadata = {
+  title: "Best Credit Card for Beginners in India 2026 — Persona-Based Picks",
+  description: "Compare first credit card options for five beginner profiles across income, CIBIL score, and spending, with first-year cost and reward calculations.",
+  alternates: { canonical: "/blog/best-card-beginners-2026" },
+};
+
 // ============================================================
 // Tier 2 Article 3 — Best Credit Card for Beginners 2026
 // URL: /blog/best-card-beginners-2026

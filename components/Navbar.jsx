@@ -57,6 +57,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
+                aria-current={isActive(link.href) ? "page" : undefined}
                 style={isActive(link.href) ? { color: "var(--ivory)" } : undefined}
               >
                 {link.label}
@@ -67,6 +68,17 @@ export default function Navbar() {
           <Link href="/smart-swipe" className="nav-cta">
             Find your card →
           </Link>
+        </div>
+        <div className="mobile-nav" aria-label="Primary navigation">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              aria-current={isActive(link.href) ? "page" : undefined}
+            >
+              {link.label}
+            </Link>
+          ))}
         </div>
       </nav>
     </>

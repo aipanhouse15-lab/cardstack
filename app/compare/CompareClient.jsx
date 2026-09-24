@@ -44,26 +44,32 @@ export default function CompareClient() {
         <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] gap-4 items-end">
           <div>
             <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--text-faint)" }}>Card 1</div>
-            <select value={id1} onChange={e => setId1(e.target.value)}
+            <select aria-label="Choose first card" value={id1} onChange={e => setId1(e.target.value)}
               className="w-full rounded-xl py-3 px-4 text-base font-medium"
               style={{ background: "var(--bg-input)", border: "1px solid var(--border)", color: "var(--text)", fontFamily: "inherit", cursor: "pointer" }}>
               <option value="">Select a card...</option>
-              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank})</option>)}
+              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank}){c.verified ? "" : " — review pending"}</option>)}
             </select>
           </div>
           <div className="hidden sm:flex items-center justify-center w-12 h-12 rounded-full text-xl font-bold" style={{ background: "var(--accent-light)", color: "var(--accent-text)" }}>VS</div>
           <div className="flex sm:hidden items-center justify-center py-1 text-sm font-bold" style={{ color: "var(--text-faint)" }}>— VS —</div>
           <div>
             <div className="text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "var(--text-faint)" }}>Card 2</div>
-            <select value={id2} onChange={e => setId2(e.target.value)}
+            <select aria-label="Choose second card" value={id2} onChange={e => setId2(e.target.value)}
               className="w-full rounded-xl py-3 px-4 text-base font-medium"
               style={{ background: "var(--bg-input)", border: "1px solid var(--border)", color: "var(--text)", fontFamily: "inherit", cursor: "pointer" }}>
               <option value="">Select a card...</option>
-              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank})</option>)}
+              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank}){c.verified ? "" : " — review pending"}</option>)}
             </select>
           </div>
         </div>
       </div>
+
+      {c1 && c2 && (!c1.verified || !c2.verified) && (
+        <div role="status" className="rounded-xl px-4 py-3 mb-6 text-sm" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)", color: "var(--orange)" }}>
+          Review pending: at least one selected card has not yet been rechecked against a current issuer source. Treat this comparison as provisional.
+        </div>
+      )}
 
       {/* Popular Comparisons */}
       {(!c1 || !c2) && (

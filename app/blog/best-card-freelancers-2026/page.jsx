@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Script from "next/script";
 
+export const metadata = {
+  title: "Best Credit Cards for Freelancers in India 2026",
+  description: "Credit card picks for Indian freelancers and self-employed professionals by income bracket, with GST, business-spend, and approval considerations.",
+  alternates: { canonical: "/blog/best-card-freelancers-2026" },
+};
+
 // ============================================================
 // Tier 2 Article 5 — Best Credit Card for Freelancers 2026
 // URL: /blog/best-card-freelancers-2026

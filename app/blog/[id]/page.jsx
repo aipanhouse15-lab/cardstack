@@ -23,10 +23,11 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const post = BLOG_POSTS.find(p => p.id === params.id);
-  if (!post) return { title: "Post Not Found" };
+  if (!post) return { title: "Post Not Found", robots: { index: false, follow: false } };
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${post.id}` },
   };
 }
 

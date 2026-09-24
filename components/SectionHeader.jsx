@@ -11,7 +11,7 @@ export default function SectionHeader({ badge, badgeBg, badgeBorder, badgeColor,
           {badge}
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-3" style={{ color: "var(--text)" }}>{title}</h2>
+      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-3" style={{ color: "var(--text)" }}>{title}</h1>
       {subtitle && <p className="text-base max-w-xl mx-auto" style={{ color: "var(--text-muted)" }}>{subtitle}</p>}
     </div>
   );

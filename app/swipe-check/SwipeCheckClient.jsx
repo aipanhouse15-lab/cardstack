@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { CARDS } from "@/data/cards";
+import { VERIFIED_CARDS } from "@/data/cards";
 import { MERCHANTS } from "@/data/merchants";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -12,6 +12,9 @@ export default function SwipeCheckClient() {
   const merchant = selectedMerchant
     ? Object.values(MERCHANTS).flatMap(c => c.items).find(m => m.id === selectedMerchant)
     : null;
+  const verifiedTips = merchant
+    ? merchant.tips.filter(tip => VERIFIED_CARDS.some(card => card.id === tip.card))
+    : [];
 
   return (
     <section className="pt-24 pb-20 px-6 max-w-[1000px] mx-auto">
@@ -75,8 +78,8 @@ export default function SwipeCheckClient() {
 
           {/* Card Recommendations */}
           <div className="flex flex-col gap-2.5 mb-6">
-            {merchant.tips.map((tip, i) => {
-              const card = CARDS.find(c => c.id === tip.card);
+            {verifiedTips.map((tip, i) => {
+              const card = VERIFIED_CARDS.find(c => c.id === tip.card);
               if (!card) return null;
               return (
                 <div key={i} className="rounded-2xl p-4" style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)", animation: `fadeUp 0.3s ease-out ${i * 0.06}s both` }}>
@@ -96,6 +99,11 @@ export default function SwipeCheckClient() {
                 </div>
               );
             })}
+            {verifiedTips.length === 0 && (
+              <div role="status" className="rounded-xl p-5 text-sm" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)", color: "var(--orange)" }}>
+                No source-checked recommendation is available for this merchant yet. Check back after the next data review.
+              </div>
+            )}
           </div>
 
           {/* Pro Tip */}

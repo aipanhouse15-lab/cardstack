@@ -1,6 +1,6 @@
 "use client";
 import { useState, useMemo } from "react";
-import { CARDS, BANKS, CATEGORIES } from "@/data/cards";
+import { VERIFIED_CARDS, CATEGORIES } from "@/data/cards";
 
 // ─── SECTION HEADER ───
 export function SectionHeader({ badge, badgeBg, badgeBorder, badgeColor, title, subtitle }) {
@@ -18,12 +18,12 @@ export function SectionHeader({ badge, badgeBg, badgeBorder, badgeColor, title, 
           {badge}
         </div>
       )}
-      <h2
+      <h1
         className="text-3xl md:text-4xl font-extrabold tracking-tight mb-3"
         style={{ color: "var(--text)" }}
       >
         {title}
-      </h2>
+      </h1>
       {subtitle && (
         <p className="text-base max-w-xl mx-auto" style={{ color: "var(--text-muted)" }}>
           {subtitle}
@@ -40,7 +40,7 @@ export function CardSelector({ selectedCards, toggleCard }) {
 
   const filtered = useMemo(
     () =>
-      CARDS.filter((c) => {
+      VERIFIED_CARDS.filter((c) => {
         const matchSearch =
           !search ||
           c.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -50,6 +50,10 @@ export function CardSelector({ selectedCards, toggleCard }) {
       }),
     [search, bankFilter]
   );
+  const banks = useMemo(
+    () => [...new Set(VERIFIED_CARDS.map(card => card.bank))].sort(),
+    []
+  );
 
   return (
     <div>
@@ -57,6 +61,7 @@ export function CardSelector({ selectedCards, toggleCard }) {
         <div className="flex-1 min-w-[180px] relative">
           <span className="absolute left-3 top-1/2 -translate-y-1/2 text-base opacity-50">🔍</span>
           <input
+            aria-label="Search source-checked credit cards"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search cards..."
@@ -69,6 +74,7 @@ export function CardSelector({ selectedCards, toggleCard }) {
           />
         </div>
         <select
+          aria-label="Filter cards by bank"
           value={bankFilter}
           onChange={(e) => setBankFilter(e.target.value)}
           className="py-2.5 px-3.5 rounded-lg text-sm cursor-pointer min-w-[120px]"
@@ -79,7 +85,7 @@ export function CardSelector({ selectedCards, toggleCard }) {
           }}
         >
           <option value="All">All Banks</option>
-          {BANKS.map((b) => (
+          {banks.map((b) => (
             <option key={b} value={b}>{b}</option>
           ))}
         </select>
@@ -96,6 +102,10 @@ export function CardSelector({ selectedCards, toggleCard }) {
           </div>
         )}
       </div>
+
+      <p className="text-xs mb-4" style={{ color: "var(--text-faint)" }}>
+        Calculators include only source-checked cards. Review-pending products remain available in the catalogue.
+      </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
         {filtered.map((card) => {

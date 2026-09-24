@@ -1,7 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { CARDS, CATEGORIES, defaultSpending, calcReward } from "@/data/cards";
+import { VERIFIED_CARDS, CATEGORIES, defaultSpending, calcReward } from "@/data/cards";
 import SpendingInput from "@/components/SpendingInput";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -21,7 +21,7 @@ function combinations(arr, k) {
 
 // Calculate total cashback for a combo of cards given spending
 function calcComboSavings(cardIds, spending) {
-  const cards = cardIds.map(id => CARDS.find(c => c.id === id)).filter(Boolean);
+  const cards = cardIds.map(id => VERIFIED_CARDS.find(c => c.id === id)).filter(Boolean);
   let totalCashback = 0;
   const assignments = {};
 
@@ -65,7 +65,7 @@ export default function StackBuilderClient() {
 
   // Filter cards based on fee preference
   const eligibleCards = useMemo(() => {
-    return CARDS.filter(c => {
+    return VERIFIED_CARDS.filter(c => {
       if (feeFilter === "free") return c.fee === 0;
       if (feeFilter === "under5k") return c.fee <= 5000;
       return true;
@@ -83,7 +83,7 @@ export default function StackBuilderClient() {
 
     const scored = allCombos.map(combo => {
       const { totalCashback, assignments } = calcComboSavings(combo, spend);
-      const cards = combo.map(id => CARDS.find(c => c.id === id));
+      const cards = combo.map(id => VERIFIED_CARDS.find(c => c.id === id));
       const totalFee = cards.reduce((s, c) => s + (c?.fee || 0), 0);
       const netSavings = (totalCashback * 12) - totalFee;
       const anyCapped = Object.values(assignments).some(a => a.capped);
@@ -106,7 +106,7 @@ export default function StackBuilderClient() {
         badge="🏗️ Tool #5"
         badgeBg="var(--accent-light)" badgeBorder="var(--accent-border)" badgeColor="var(--accent-text)"
         title="Stack Builder"
-        subtitle="Find the optimal 2 or 3 card combination that maximizes your total cashback. We test every possible combo from 25 cards."
+        subtitle={`Find the optimal 2 or 3 card combination using ${VERIFIED_CARDS.length} source-checked cards and cap-aware reward math.`}
       />
 
       {/* Config */}
@@ -141,7 +141,7 @@ export default function StackBuilderClient() {
                   color: feeFilter === val ? "var(--green)" : "var(--text-muted)",
                   border: feeFilter === val ? "1px solid var(--green-border)" : "1px solid var(--border)",
                 }}>
-                {label} ({CARDS.filter(c => val === "all" ? true : val === "free" ? c.fee === 0 : c.fee <= 5000).length} cards)
+                {label} ({VERIFIED_CARDS.filter(c => val === "all" ? true : val === "free" ? c.fee === 0 : c.fee <= 5000).length} cards)
               </button>
             ))}
           </div>

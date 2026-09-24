@@ -3,8 +3,9 @@ import { MONTHLY_UPDATES } from "@/data/updates";
 import Link from "next/link";
 
 export const metadata = {
-  title: "What Changed — Credit Card Reward Updates | Assure Fintech",
+  title: "What Changed — Credit Card Reward Updates",
   description: "Monthly tracker of Indian credit card reward changes, cap updates, new card launches, and verified rate confirmations. Stay updated so you never miss a change.",
+  alternates: { canonical: "/whats-changed" },
 };
 
 export default function WhatsChangedPage() {

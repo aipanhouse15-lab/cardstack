@@ -32,6 +32,7 @@ export async function GET(request) {
   // Get best card for a category
   const bestFor = searchParams.get("best_for");
   if (bestFor && CATEGORIES.find(c => c.id === bestFor)) {
+    results = results.filter(card => card.verified);
     results.sort((a, b) => (b.rewards[bestFor] || b.rewards.default) - (a.rewards[bestFor] || a.rewards.default));
     results = results.slice(0, 1);
   }

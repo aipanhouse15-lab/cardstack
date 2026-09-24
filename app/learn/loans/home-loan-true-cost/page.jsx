@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Script from "next/script";
 
+export const metadata = {
+  title: "Home Loan True Cost 2026 — What You Pay Beyond the EMI",
+  description: "Calculate the true cost of an Indian home loan beyond EMI: processing fees, stamp duty, insurance, pre-EMI interest, and lifetime interest.",
+  alternates: { canonical: "/learn/loans/home-loan-true-cost" },
+};
+
 // ============================================================
 // Tier 2 Article 1 — Home Loan True Cost 2026
 // URL: /learn/loans/home-loan-true-cost

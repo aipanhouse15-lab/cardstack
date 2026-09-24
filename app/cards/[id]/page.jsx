@@ -189,8 +189,8 @@ export default function CardPage({ params }) {
               <span className="cbadge cb-bank">{card.bank}</span>
               <span className="cbadge" style={{ color: "var(--mut)", border: "1px solid var(--hair2)" }}>{card.type}</span>
               {card.verified
-                ? <span className="cbadge cb-ver">✓ VERIFIED</span>
-                : <span className="cbadge" style={{ color: "var(--gold)", border: "1px solid rgba(212,168,83,.4)" }}>UNVERIFIED</span>
+                ? <span className="cbadge cb-ver">✓ SOURCE-CHECKED · {(card.reviewedAt || "March 2026").toUpperCase()}</span>
+                : <span className="cbadge" style={{ color: "var(--gold)", border: "1px solid rgba(212,168,83,.4)" }}>SOURCE REVIEW PENDING</span>
               }
             </div>
             <h1 className="disp" style={{ fontSize: "clamp(32px, 4.5vw, 52px)", lineHeight: 1.08, letterSpacing: "-.02em", marginBottom: 14 }}>
@@ -201,7 +201,7 @@ export default function CardPage({ params }) {
               {ed?.verdict?.headline || `${card.bank} ${card.type.toLowerCase()} card with up to ${maxRate}% rewards on ${bestCategory}.`}
             </p>
             <p className="mono" style={{ fontSize: 12, color: "var(--dim)", letterSpacing: ".06em" }}>
-              By <span style={{ color: "var(--mut)" }}>Ashutosh</span> · Updated June 2026
+              By <span style={{ color: "var(--mut)" }}>Ashutosh</span> · {card.verified ? `Source-reviewed ${card.reviewedAt || "March 2026"}` : "Issuer-source review pending"}
             </p>
           </div>
 
@@ -564,7 +564,7 @@ export default function CardPage({ params }) {
               <div className="ava">A</div>
               <div>
                 <h5>Ashutosh</h5>
-                <p>Founder of Assure Fintech. Obsessed with the gap between advertised and actual financial returns. Every number on this page is manually verified against the card&apos;s MITC.</p>
+                <p>Founder of Assure Fintech. Obsessed with the gap between advertised and actual financial returns. {card.verified ? `This card record was checked against issuer material in ${card.reviewedAt || "March 2026"}; reconfirm current terms before applying.` : "This record is awaiting a fresh issuer-source review and may contain outdated terms."}</p>
               </div>
             </div>
 
@@ -600,7 +600,7 @@ export default function CardPage({ params }) {
               <div className="row"><span>Best rate</span> <b className="g">{maxRate}%</b></div>
               <div className="row"><span>Network</span> <b>{card.network}</b></div>
               <div className="row"><span>Lounge</span> <b>{card.lounge || "None"}</b></div>
-              <div className="row"><span>Status</span> <b className={card.verified ? "g" : "r"}>{card.verified ? "Verified" : "Unverified"}</b></div>
+              <div className="row"><span>Status</span> <b className={card.verified ? "g" : "r"}>{card.verified ? `Reviewed ${card.reviewedAt || "Mar 2026"}` : "Review pending"}</b></div>
             </div>
 
             {/* TOC */}

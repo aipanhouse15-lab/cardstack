@@ -3,6 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "How We Earn Money — Assure Fintech Transparency",
   description: "Assure Fintech is free for users. Here's exactly how we plan to make money — with full transparency about affiliate links and future revenue.",
+  alternates: { canonical: "/how-we-earn" },
 };
 
 export default function HowWeEarnPage() {

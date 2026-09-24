@@ -1,7 +1,7 @@
 "use client";
 import { useState, useCallback, useMemo } from "react";
 import Link from "next/link";
-import { CARDS, CATEGORIES, defaultSpending, calcReward } from "@/data/cards";
+import { VERIFIED_CARDS, CATEGORIES, defaultSpending, calcReward } from "@/data/cards";
 import CardSelector from "@/components/CardSelector";
 import SpendingInput from "@/components/SpendingInput";
 import SectionHeader from "@/components/SectionHeader";
@@ -24,7 +24,7 @@ export default function SmartSwipeClient() {
       let bestBaseRate = 0;
 
       sel.forEach(cid => {
-        const card = CARDS.find(x => x.id === cid);
+        const card = VERIFIED_CARDS.find(x => x.id === cid);
         if (!card) return;
         const result = calcReward(card, cat.id, spend[cat.id] || 0);
 

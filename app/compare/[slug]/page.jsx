@@ -167,7 +167,7 @@ export default function ComparisonPage({ params }) {
         {c1.name} vs {c2.name}
       </h1>
       <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>
-        Cap-aware comparison at ₹{totalSpend.toLocaleString("en-IN")}/month total spend · Data verified March 2026
+        Cap-aware comparison at ₹{totalSpend.toLocaleString("en-IN")}/month total spend · {c1.verified && c2.verified ? "Source review dates are shown on each card page — reconfirm current issuer terms" : "Includes card data awaiting issuer-source review"}
       </p>
 
       {/* Head-to-Head Summary */}

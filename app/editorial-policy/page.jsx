@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Editorial Policy — How We Review Cards | Assure Fintech",
+  title: "Editorial Policy — How We Review Cards",
   description: "Our methodology for calculating effective cashback rates, verifying card data, handling caps, and ranking credit cards. Full transparency.",
+  alternates: { canonical: "/editorial-policy" },
 };
 
 export default function EditorialPolicyPage() {
