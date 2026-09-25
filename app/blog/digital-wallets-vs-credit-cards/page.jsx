@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/digital-wallets-vs-credit-cards
 // Template: comparison with use-case mapping
-// Color: #0891b2 | Updated: June 4, 2026
+// Color: #0891b2 | Updated: September 26, 2026
 
 const COLOR = "#0891b2";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgPaymentRail = () => (
   <svg viewBox="0 0 720 160" role="img" aria-label="Payment rails: wallets are a pass-through layer, credit cards are the reward engine underneath" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

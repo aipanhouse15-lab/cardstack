@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const metadata = {
   title: "What Changed — Credit Card Reward Updates",
-  description: "Monthly tracker of Indian credit card reward changes, cap updates, new card launches, and verified rate confirmations. Stay updated so you never miss a change.",
+  description: "Historical change notices and current issuer-source review status for Indian credit card data. Always check the issuer for current terms.",
   alternates: { canonical: "/whats-changed" },
 };
 
@@ -48,7 +48,7 @@ export default function WhatsChangedPage() {
           What Changed
         </h1>
         <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-          We track credit card reward changes so you don't have to. Updated monthly with verified rate changes, new card launches, and cap adjustments.
+          Historical notices are preserved below. September includes both an editorial-refresh note and a card-data review-status notice; neither implies that every issuer has been rechecked or that no newer issuer changes exist. Confirm current terms with the issuer before applying.
         </p>
       </div>
 
@@ -114,7 +114,7 @@ export default function WhatsChangedPage() {
                       <span className="text-[10px] font-semibold uppercase rounded px-2 py-0.5" style={{
                         color: style.color, background: style.bg, border: `1px solid ${style.border}`,
                       }}>
-                        {style.label}
+                        {!month.current && entry.type === "verified" ? "HISTORICAL CLAIM" : style.label}
                       </span>
                       <span className="text-[10px]" style={{ color: "var(--text-faint)" }}>{entry.date}</span>
                     </div>

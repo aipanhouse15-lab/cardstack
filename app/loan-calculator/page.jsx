@@ -1,8 +1,8 @@
 import LoanCalculatorClient from "./LoanCalculatorClient";
 
 export const metadata = {
-  title: "Loan Truth Calculator — Your Honest EMI & APR",
-  description: "Input your home loan, personal loan, or education loan details. Get the honest effective APR after processing fees, insurance, and hidden charges.",
+  title: "Loan Repayment & Cost Calculator | Assure Fintech",
+  description: "Estimate loan EMIs and the effect of hypothetical upfront fees. Calculator results are illustrations, not lender quotations or regulatory APR disclosures.",
   alternates: { canonical: "/loan-calculator" },
 };
 

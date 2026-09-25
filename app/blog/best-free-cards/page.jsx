@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/best-free-credit-cards-india-2026
 // Template: ranking article with honest pros/cons
-// Color: #16a34a | Updated: June 4, 2026
+// Color: #16a34a | Updated: September 26, 2026
 
 const COLOR = "#16a34a";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgFreeDefinitionBreakdown = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Three categories of what 'free' means for credit cards in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

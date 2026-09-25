@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/get-annual-fee-waived-scripts
 // Template: practical-how-to
-// Color: #16a34a | Updated: June 4, 2026
+// Color: #16a34a | Updated: September 26, 2026
 
 const COLOR = "#16a34a";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgBankFlexibilityRating = () => (
   <svg viewBox="0 0 720 319" role="img" aria-label="Annual fee waiver flexibility rating by Indian bank, from most to least flexible" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

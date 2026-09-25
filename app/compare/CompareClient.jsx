@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { CARDS, CATEGORIES } from "@/data/cards";
+import { CARDS, CATEGORIES, isSourceReviewed } from "@/data/cards";
 import SectionHeader from "@/components/SectionHeader";
 
 const POPULAR = [
@@ -25,14 +25,14 @@ export default function CompareClient() {
   let s1 = 0, s2 = 0, ties = 0;
   if (c1 && c2) {
     CATEGORIES.forEach(cat => {
-      const r1 = c1.rewards[cat.id] || c1.rewards.default;
-      const r2 = c2.rewards[cat.id] || c2.rewards.default;
+      const r1 = c1.rewards[cat.id] ?? c1.rewards.default;
+      const r2 = c2.rewards[cat.id] ?? c2.rewards.default;
       if (r1 > r2) s1++; else if (r2 > r1) s2++; else ties++;
     });
   }
 
   const maxReward = c1 && c2 ? Math.max(
-    ...CATEGORIES.map(cat => Math.max(c1.rewards[cat.id] || c1.rewards.default, c2.rewards[cat.id] || c2.rewards.default))
+    ...CATEGORIES.map(cat => Math.max(c1.rewards[cat.id] ?? c1.rewards.default, c2.rewards[cat.id] ?? c2.rewards.default))
   ) : 5;
 
   return (
@@ -48,7 +48,7 @@ export default function CompareClient() {
               className="w-full rounded-xl py-3 px-4 text-base font-medium"
               style={{ background: "var(--bg-input)", border: "1px solid var(--border)", color: "var(--text)", fontFamily: "inherit", cursor: "pointer" }}>
               <option value="">Select a card...</option>
-              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank}){c.verified ? "" : " — review pending"}</option>)}
+              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank}){isSourceReviewed(c) ? "" : " — review pending"}</option>)}
             </select>
           </div>
           <div className="hidden sm:flex items-center justify-center w-12 h-12 rounded-full text-xl font-bold" style={{ background: "var(--accent-light)", color: "var(--accent-text)" }}>VS</div>
@@ -59,13 +59,13 @@ export default function CompareClient() {
               className="w-full rounded-xl py-3 px-4 text-base font-medium"
               style={{ background: "var(--bg-input)", border: "1px solid var(--border)", color: "var(--text)", fontFamily: "inherit", cursor: "pointer" }}>
               <option value="">Select a card...</option>
-              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank}){c.verified ? "" : " — review pending"}</option>)}
+              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank}){isSourceReviewed(c) ? "" : " — review pending"}</option>)}
             </select>
           </div>
         </div>
       </div>
 
-      {c1 && c2 && (!c1.verified || !c2.verified) && (
+      {c1 && c2 && (!isSourceReviewed(c1) || !isSourceReviewed(c2)) && (
         <div role="status" className="rounded-xl px-4 py-3 mb-6 text-sm" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)", color: "var(--orange)" }}>
           Review pending: at least one selected card has not yet been rechecked against a current issuer source. Treat this comparison as provisional.
         </div>
@@ -140,8 +140,8 @@ export default function CompareClient() {
             </div>
 
             {CATEGORIES.map((cat, i) => {
-              const r1 = c1.rewards[cat.id] || c1.rewards.default;
-              const r2 = c2.rewards[cat.id] || c2.rewards.default;
+              const r1 = c1.rewards[cat.id] ?? c1.rewards.default;
+              const r2 = c2.rewards[cat.id] ?? c2.rewards.default;
               const w = r1 > r2 ? 1 : r2 > r1 ? 2 : 0;
               const bar1 = (r1 / maxReward) * 100;
               const bar2 = (r2 / maxReward) * 100;

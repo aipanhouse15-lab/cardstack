@@ -18,7 +18,7 @@ export const metadata = {
 // URL: /compare/hdfc-click2protect-vs-icici-iprotect
 
 const COLOR = "#DB2777";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgPremiumLadder = () => (
   <svg viewBox="0 0 520 200" role="img" aria-label="Term plan premium by age and sum assured" style={{ width: "100%" }}>
@@ -64,7 +64,7 @@ export default function CompareHdfcVsIciciTerm() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "HDFC Click 2 Protect Super vs ICICI Pru iProtect Smart — term life face-off, 2026",
     author: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-06-06", dateModified: "2026-06-06",
+    datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 

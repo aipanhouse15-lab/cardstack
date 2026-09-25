@@ -1,8 +1,7 @@
-import { CARDS, CATEGORIES } from "@/data/cards";
+import { CARDS, CATEGORIES, isSourceReviewed } from "@/data/cards";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import BankLogo from "@/components/BankLogo";
-import { getEditorial } from "@/data/editorials";
 
 /* ── Static generation ── */
 export async function generateStaticParams() {
@@ -13,7 +12,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const card = CARDS.find(c => c.id === params.id);
   if (!card) return { title: "Card Not Found" };
-  const ed = card.editorial || getEditorial(card.id);
+  const ed = card.editorial || null;
   const sorted = Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1]);
   const maxRate = sorted[0]?.[1] || 0;
   const bestCat = sorted[0]?.[0] || "";
@@ -50,19 +49,19 @@ function scoreColor(s) {
 
 /* ── TOC sections ── */
 function tocSections(card) {
-  const ed = card.editorial || getEditorial(card.id);
+  const ed = card.editorial || null;
   const items = [
     { id: "verdict", label: "Verdict" },
     { id: "rewards", label: "Reward rates" },
   ];
-  if (ed?.capMath || card.caps) items.push({ id: "caps", label: "Cap math" });
+  if (ed?.capMath) items.push({ id: "caps", label: "Cap terms" });
   if (card.partnerRates?.length) items.push({ id: "partners", label: "Partner rates" });
   items.push({ id: "proscons", label: "Pros & cons" });
   if (ed?.bestFor) items.push({ id: "bestfor", label: "Best used for" });
   if (ed?.avoidFor) items.push({ id: "avoidfor", label: "Switch for" });
   if (ed?.pairWith) items.push({ id: "combos", label: "Best combos" });
   if (ed?.faq) items.push({ id: "faq", label: "FAQ" });
-  items.push({ id: "feemath", label: "Fee math" });
+  items.push({ id: "feemath", label: "Fees" });
   return items;
 }
 
@@ -72,46 +71,19 @@ function tocSections(card) {
 export default function CardPage({ params }) {
   const card = CARDS.find(c => c.id === params.id);
   if (!card) notFound();
+  const sourceReviewed = isSourceReviewed(card);
 
   const sorted = Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1]);
   const maxRate = sorted[0]?.[1] || 0;
   const bestCategory = sorted[0]?.[0] || "";
-  const ed = card.editorial || getEditorial(card.id);
+  const ed = card.editorial || null;
   const score = honestScore(card, maxRate);
   const sColor = scoreColor(score);
   const toc = tocSections(card);
 
-  // Compute cap curve rows (for cards with cap data)
-  const capCurveRows = [];
-  if (card.caps) {
-    const c = card.caps;
-    const spends = [5000, 10000, 25000, 50000, 100000];
-    spends.forEach(spend => {
-      const raw = spend * maxRate / 100;
-      let effective = maxRate;
-      let capped = false;
-      if (c.monthlyCashback !== undefined && raw > c.monthlyCashback) {
-        const maxSpend = c.monthlyCashback / (maxRate / 100);
-        const overflow = spend - maxSpend;
-        const fallback = c.fallbackRate || 0;
-        const total = c.monthlyCashback + (overflow * fallback / 100);
-        effective = parseFloat(((total / spend) * 100).toFixed(2));
-        capped = true;
-      } else if (c.monthlyPoints !== undefined) {
-        const ptsEarned = (spend / (c.spendPer || 100)) * (c.pointsPer || 1);
-        if (ptsEarned > c.monthlyPoints) {
-          effective = parseFloat(((c.monthlyPoints * (c.pointValue || 0.25)) / spend * 100).toFixed(2));
-          capped = true;
-        }
-      }
-      capCurveRows.push({ spend, effective, capped });
-    });
-  }
-
-  // Fee math
+  // Issuer caps use different categories and periods; a universal curve would
+  // overstate rewards for cards whose accelerated rate needs a specific route.
   const feeWithGST = Math.round(card.fee * 1.18);
-  const annualReward = Math.round(maxRate / 100 * 60000 * 12); // rough: best rate × ₹60K/mo
-  const netValue = annualReward - feeWithGST;
 
   /* ── JSON-LD ── */
   const cardSchema = {
@@ -180,6 +152,15 @@ export default function CardPage({ params }) {
         </div>
       )}
 
+      {card.availabilityStatus && (
+        <div className="wrap" role="note">
+          <div className="alert">
+            <span style={{ fontSize: 18 }}>ℹ️</span>
+            <div><b>Availability notice:</b>{" "}<span style={{ color: "var(--mut)" }}>{card.availabilityStatus}</span></div>
+          </div>
+        </div>
+      )}
+
       {/* ═══ CARD HERO ═══ */}
       <div className="wrap">
         <div className="chero">
@@ -188,8 +169,8 @@ export default function CardPage({ params }) {
             <div className="cbadges">
               <span className="cbadge cb-bank">{card.bank}</span>
               <span className="cbadge" style={{ color: "var(--mut)", border: "1px solid var(--hair2)" }}>{card.type}</span>
-              {card.verified
-                ? <span className="cbadge cb-ver">✓ SOURCE-CHECKED · {(card.reviewedAt || "March 2026").toUpperCase()}</span>
+              {sourceReviewed
+                ? <span className="cbadge cb-ver">✓ SOURCE-CHECKED · {card.reviewedAt.toUpperCase()}</span>
                 : <span className="cbadge" style={{ color: "var(--gold)", border: "1px solid rgba(212,168,83,.4)" }}>SOURCE REVIEW PENDING</span>
               }
             </div>
@@ -201,7 +182,7 @@ export default function CardPage({ params }) {
               {ed?.verdict?.headline || `${card.bank} ${card.type.toLowerCase()} card with up to ${maxRate}% rewards on ${bestCategory}.`}
             </p>
             <p className="mono" style={{ fontSize: 12, color: "var(--dim)", letterSpacing: ".06em" }}>
-              By <span style={{ color: "var(--mut)" }}>Ashutosh</span> · {card.verified ? `Source-reviewed ${card.reviewedAt || "March 2026"}` : "Issuer-source review pending"}
+              By <span style={{ color: "var(--mut)" }}>Ashutosh</span> · {sourceReviewed ? `Issuer source linked ${card.reviewedAt}` : "Issuer-source review pending"}
             </p>
           </div>
 
@@ -338,8 +319,8 @@ export default function CardPage({ params }) {
               )}
             </div>
 
-            {/* ── CAP CURVE ── */}
-            {capCurveRows.length > 0 && (
+            {/* ── CAP TERMS ── */}
+            {ed?.capMath && (
               <div id="caps" style={{ marginBottom: 56 }}>
                 <div className="k accent" style={{ marginBottom: 20 }}>
                   {ed?.capMath ? ed.capMath.title.toUpperCase() : "HOW CAPS AFFECT YOUR EFFECTIVE RATE"}
@@ -353,32 +334,6 @@ export default function CardPage({ params }) {
                   </div>
                 )}
 
-                <div className="curve">
-                  <div className="cv-head">
-                    <div className="cv-row" style={{ padding: 0, borderBottom: "none" }}>
-                      <span className="k">Monthly Spend</span>
-                      <span className="k">Effective Rate</span>
-                      <span className="k">Status</span>
-                      <span className="k">Cap Impact</span>
-                    </div>
-                  </div>
-                  {capCurveRows.map((row, i) => {
-                    const pct = (row.effective / maxRate) * 100;
-                    const cls = row.effective >= maxRate * 0.8 ? "g" : row.effective >= maxRate * 0.5 ? "y" : "r";
-                    return (
-                      <div key={i} className="cv-row">
-                        <span className="mono" style={{ fontSize: 13, color: "var(--mut)" }}>₹{row.spend.toLocaleString()}</span>
-                        <span className={`er ${cls}`}>{row.effective}%</span>
-                        <span className="mono" style={{ fontSize: 11, color: row.capped ? "var(--red)" : "var(--green)" }}>
-                          {row.capped ? "CAPPED" : "FULL RATE"}
-                        </span>
-                        <div className="cv-bar">
-                          <i style={{ width: `${Math.min(pct, 100)}%`, background: cls === "g" ? "var(--green)" : cls === "y" ? "var(--gold)" : "var(--red)" }} />
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
               </div>
             )}
 
@@ -526,22 +481,16 @@ export default function CardPage({ params }) {
               </div>
             )}
 
-            {/* ── FEE MATH RECEIPT ── */}
+            {/* ── FEES ── */}
             <div id="feemath" style={{ marginBottom: 56 }}>
-              <div className="k accent" style={{ marginBottom: 20 }}>IS THE FEE WORTH IT?</div>
+              <div className="k accent" style={{ marginBottom: 20 }}>FEES AND WAIVER</div>
               <div className="receipt">
-                <div className="rc-h">ANNUAL FEE MATH — {card.name.toUpperCase()}</div>
+                <div className="rc-h">PUBLISHED FEE — {card.name.toUpperCase()}</div>
                 <div className="rc-r"><span>Annual fee</span> <b>{card.fee === 0 ? "₹0 (FREE)" : `₹${card.fee.toLocaleString()}`}</b></div>
                 {card.fee > 0 && <div className="rc-r"><span>GST (18%)</span> <b className="minus">+₹{(feeWithGST - card.fee).toLocaleString()}</b></div>}
                 {card.fee > 0 && <div className="rc-r"><span>Total cost</span> <b className="minus">₹{feeWithGST.toLocaleString()}</b></div>}
                 <div className="rc-r"><span>Fee waiver</span> <b>{card.feeWaiver || "None"}</b></div>
-                <div className="rc-r"><span>Est. annual rewards (₹60K/mo spend)</span> <b style={{ color: "var(--green)" }}>₹{annualReward.toLocaleString()}</b></div>
-                <div className="rc-t">
-                  <span>Net value</span>
-                  <span style={{ color: netValue >= 0 ? "var(--green)" : "var(--red)" }}>
-                    {netValue >= 0 ? "+" : ""}₹{netValue.toLocaleString()}
-                  </span>
-                </div>
+                <div className="rc-r"><span>Reward value</span> <b>Depends on eligible spend, caps and redemption</b></div>
               </div>
             </div>
 
@@ -550,12 +499,12 @@ export default function CardPage({ params }) {
               <span className="aff-tag">PARTNER LINK</span>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16 }}>
                 <div>
-                  <div style={{ fontWeight: 600, fontSize: 15, marginBottom: 4 }}>Apply for {card.name}</div>
-                  <div className="aff-disc">WE MAY EARN A COMMISSION · AT NO COST TO YOU</div>
+                  <div style={{ fontWeight: 600, fontSize: 15, marginBottom: 4 }}>{card.availabilityStatus ? `Check with HDFC about ${card.name}` : `Apply for ${card.name}`}</div>
+                  <div className="aff-disc">{card.availabilityStatus ? "ISSUER AVAILABILITY MAY BE CLOSED OR LIMITED" : "WE MAY EARN A COMMISSION · AT NO COST TO YOU"}</div>
                 </div>
-                <button className="btn btn-solid" style={{ fontSize: 13, padding: "11px 24px", whiteSpace: "nowrap" }}>
+                {!card.availabilityStatus && <button className="btn btn-solid" style={{ fontSize: 13, padding: "11px 24px", whiteSpace: "nowrap" }}>
                   Check eligibility →
-                </button>
+                </button>}
               </div>
             </div>
 
@@ -564,7 +513,7 @@ export default function CardPage({ params }) {
               <div className="ava">A</div>
               <div>
                 <h5>Ashutosh</h5>
-                <p>Founder of Assure Fintech. Obsessed with the gap between advertised and actual financial returns. {card.verified ? `This card record was checked against issuer material in ${card.reviewedAt || "March 2026"}; reconfirm current terms before applying.` : "This record is awaiting a fresh issuer-source review and may contain outdated terms."}</p>
+                <p>Founder of Assure Fintech. Obsessed with the gap between advertised and actual financial returns. {sourceReviewed ? `An issuer source and review date were recorded in ${card.reviewedAt}; this does not establish every current benefit. Reconfirm terms before applying.` : "This record is awaiting a fresh issuer-source review and may contain outdated terms."}</p>
               </div>
             </div>
 
@@ -600,7 +549,7 @@ export default function CardPage({ params }) {
               <div className="row"><span>Best rate</span> <b className="g">{maxRate}%</b></div>
               <div className="row"><span>Network</span> <b>{card.network}</b></div>
               <div className="row"><span>Lounge</span> <b>{card.lounge || "None"}</b></div>
-              <div className="row"><span>Status</span> <b className={card.verified ? "g" : "r"}>{card.verified ? `Reviewed ${card.reviewedAt || "Mar 2026"}` : "Review pending"}</b></div>
+              <div className="row"><span>Status</span> <b className={sourceReviewed ? "g" : "r"}>{sourceReviewed ? `Reviewed ${card.reviewedAt}` : "Review pending"}</b></div>
             </div>
 
             {/* TOC */}

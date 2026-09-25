@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/read-credit-card-statement
 // Template: Step-by-step how-to walkthrough with annotated sections
-// Color: #16a34a | Updated: June 4, 2026
+// Color: #16a34a | Updated: September 26, 2026
 
 const COLOR = "#16a34a";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgStatementAnatomy = () => (
   <svg viewBox="0 0 720 300" role="img" aria-label="Annotated credit card statement showing key sections and their meaning" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -240,7 +240,7 @@ export default function BlogReadCreditCardStatement() {
     headline: "How to Read Your Credit Card Statement: A Plain-English Walkthrough",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -359,7 +359,7 @@ export default function BlogReadCreditCardStatement() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Assure Fintech is an independent comparison platform. Interest rates and reward point values change without notice. Always verify current rates in your card's most-recent Most Important Terms and Conditions (MITC) document. Data accurate as of June 2026.
+        Assure Fintech is an independent comparison platform. Interest rates and reward point values change without notice. Always verify current rates in your card's most-recent Most Important Terms and Conditions (MITC) document. Reviewed September 26, 2026.
       </footer>
     </main>
     </>

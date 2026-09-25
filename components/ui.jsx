@@ -61,7 +61,7 @@ export function CardSelector({ selectedCards, toggleCard }) {
         <div className="flex-1 min-w-[180px] relative">
           <span className="absolute left-3 top-1/2 -translate-y-1/2 text-base opacity-50">🔍</span>
           <input
-            aria-label="Search source-checked credit cards"
+            aria-label="Search source-linked credit cards"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search cards..."
@@ -104,7 +104,7 @@ export function CardSelector({ selectedCards, toggleCard }) {
       </div>
 
       <p className="text-xs mb-4" style={{ color: "var(--text-faint)" }}>
-        Calculators include only source-checked cards. Review-pending products remain available in the catalogue.
+        Calculators include only source-linked cards. Review-pending products remain available in the catalogue.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">

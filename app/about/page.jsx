@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { CARDS } from "@/data/cards";
 
-const VERIFIED_CARD_COUNT = CARDS.filter(card => card.verified).length;
+const VERIFIED_CARD_COUNT = CARDS.filter(card => card.reviewedAt && /^https:\/\//.test(card.sourceUrl || "")).length;
 const CAPPED_CARD_COUNT = CARDS.filter(card => card.caps).length;
 
 export const metadata = {

@@ -18,7 +18,7 @@ export const metadata = {
 // URL: /compare/icici-pru-baf-vs-hdfc-balanced-advantage
 
 const COLOR = "#0891B2";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgEquityBands = () => (
   <svg viewBox="0 0 520 204" role="img" aria-label="Equity allocation band ranges" style={{ width: "100%" }}>
@@ -68,7 +68,7 @@ export default function CompareIciciVsHdfcBaf() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "ICICI Pru Balanced Advantage vs HDFC Balanced Advantage — defensive vs growth BAFs in 2026",
     author: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-06-06", dateModified: "2026-06-06",
+    datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 

@@ -1,4 +1,4 @@
-import { CARDS, CATEGORIES, BANKS } from "@/data/cards";
+import { CARDS, CATEGORIES, BANKS, isSourceReviewed } from "@/data/cards";
 import { NextResponse } from "next/server";
 
 // Public API: GET /api/cards
@@ -22,7 +22,7 @@ export async function GET(request) {
   // Sort by reward in a specific category
   const sortCat = searchParams.get("sort");
   if (sortCat && CATEGORIES.find(c => c.id === sortCat)) {
-    results.sort((a, b) => (b.rewards[sortCat] || b.rewards.default) - (a.rewards[sortCat] || a.rewards.default));
+    results.sort((a, b) => (b.rewards[sortCat] ?? b.rewards.default) - (a.rewards[sortCat] ?? a.rewards.default));
   }
 
   // Limit results
@@ -32,8 +32,8 @@ export async function GET(request) {
   // Get best card for a category
   const bestFor = searchParams.get("best_for");
   if (bestFor && CATEGORIES.find(c => c.id === bestFor)) {
-    results = results.filter(card => card.verified);
-    results.sort((a, b) => (b.rewards[bestFor] || b.rewards.default) - (a.rewards[bestFor] || a.rewards.default));
+    results = results.filter(isSourceReviewed);
+    results.sort((a, b) => (b.rewards[bestFor] ?? b.rewards.default) - (a.rewards[bestFor] ?? a.rewards.default));
     results = results.slice(0, 1);
   }
 

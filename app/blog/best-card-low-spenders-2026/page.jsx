@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/best-card-low-spenders-2026
 // Template: ranking article with clear criteria
-// Color: #16a34a | Updated: June 4, 2026
+// Color: #16a34a | Updated: September 26, 2026
 
 const COLOR = "#16a34a";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgLowSpenderDefinition = () => (
   <svg viewBox="0 0 720 186" role="img" aria-label="Definition of low spender: under 15000 rupees per month on credit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

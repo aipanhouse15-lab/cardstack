@@ -23,7 +23,7 @@ export const metadata = {
 // ============================================================
 
 const COLOR = "#7C3AED";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgEffectiveRate = () => (
   <svg viewBox="0 0 720 240" role="img" aria-label="HDFC Millennia versus Axis Ace effective cashback rate across four typical monthly spend profiles ranging from light online use to heavy mixed spend" style={{ width: "100%", maxWidth: 760 }}>
@@ -73,7 +73,7 @@ export default function CompareMillenniaVsAce() {
     description: "Detailed head-to-head comparison of HDFC Millennia and Axis Ace credit cards for 2026, with cap-adjusted effective rate across four spend profiles, year-by-year fee economics, and the specific decision framework for each profile.",
     author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
     reviewedBy: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-06-06", dateModified: "2026-06-06",
+    datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/compare/hdfc-millennia-vs-axis-ace" }
   };

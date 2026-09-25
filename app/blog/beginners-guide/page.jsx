@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/first-credit-card-guide-india
 // Template: complete beginner onboarding guide
-// Color: #0891b2 | Updated: June 4, 2026
+// Color: #0891b2 | Updated: September 26, 2026
 
 const COLOR = "#0891b2";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgCreditCardLifecycle = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Timeline showing how a credit card billing cycle works from purchase to due date" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

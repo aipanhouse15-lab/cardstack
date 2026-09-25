@@ -1,7 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { VERIFIED_CARDS, CATEGORIES, defaultSpending, calcReward } from "@/data/cards";
+import { VERIFIED_CARDS, CATEGORIES, defaultSpending, calcReward, capSharedRewardBuckets } from "@/data/cards";
 import SpendingInput from "@/components/SpendingInput";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -22,7 +22,6 @@ function combinations(arr, k) {
 // Calculate total cashback for a combo of cards given spending
 function calcComboSavings(cardIds, spending) {
   const cards = cardIds.map(id => VERIFIED_CARDS.find(c => c.id === id)).filter(Boolean);
-  let totalCashback = 0;
   const assignments = {};
 
   CATEGORIES.forEach(cat => {
@@ -43,7 +42,6 @@ function calcComboSavings(cardIds, spending) {
       }
     });
 
-    totalCashback += bestResult.cashback;
     assignments[cat.id] = {
       card: bestCard,
       cashback: bestResult.cashback,
@@ -53,6 +51,22 @@ function calcComboSavings(cardIds, spending) {
     };
   });
 
+  cards.forEach(card => {
+    const ids = Object.keys(assignments).filter(id => assignments[id].card?.id === card.id);
+    const cardSpending = Object.fromEntries(ids.map(id => [id, spending[id] || 0]));
+    const details = Object.fromEntries(ids.map(id => [id, {
+      cashback: assignments[id].cashback,
+      effectiveRate: assignments[id].rate,
+      capped: assignments[id].capped,
+      capNote: assignments[id].capNote,
+    }]));
+    const adjusted = capSharedRewardBuckets(card, cardSpending, details);
+    ids.forEach(id => {
+      assignments[id] = { ...assignments[id], cashback: adjusted[id].cashback,
+        rate: adjusted[id].effectiveRate, capped: adjusted[id].capped, capNote: adjusted[id].capNote };
+    });
+  });
+  const totalCashback = Object.values(assignments).reduce((sum, item) => sum + item.cashback, 0);
   return { totalCashback, assignments };
 }
 
@@ -84,7 +98,7 @@ export default function StackBuilderClient() {
     const scored = allCombos.map(combo => {
       const { totalCashback, assignments } = calcComboSavings(combo, spend);
       const cards = combo.map(id => VERIFIED_CARDS.find(c => c.id === id));
-      const totalFee = cards.reduce((s, c) => s + (c?.fee || 0), 0);
+      const totalFee = cards.reduce((s, c) => s + Math.round((c?.fee || 0) * 1.18), 0);
       const netSavings = (totalCashback * 12) - totalFee;
       const anyCapped = Object.values(assignments).some(a => a.capped);
       return { combo, cards, totalCashback, totalFee, netSavings, assignments, anyCapped };
@@ -106,7 +120,7 @@ export default function StackBuilderClient() {
         badge="🏗️ Tool #5"
         badgeBg="var(--accent-light)" badgeBorder="var(--accent-border)" badgeColor="var(--accent-text)"
         title="Stack Builder"
-        subtitle={`Find the optimal 2 or 3 card combination using ${VERIFIED_CARDS.length} source-checked cards and cap-aware reward math.`}
+        subtitle={`Explore 2 or 3 card combinations using ${VERIFIED_CARDS.length} source-linked records and illustrative reward estimates. Confirm merchant eligibility and issuer terms.`}
       />
 
       {/* Config */}
@@ -248,17 +262,17 @@ export default function StackBuilderClient() {
                 {/* Savings summary */}
                 <div className="grid grid-cols-3 gap-3 text-center">
                   <div className="rounded-lg p-3" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)" }}>
-                    <div className="text-[10px] uppercase" style={{ color: "var(--green)" }}>Annual cashback</div>
+                    <div className="text-[10px] uppercase" style={{ color: "var(--green)" }}>Estimated annual rewards</div>
                     <div className="text-xl font-extrabold" style={{ color: "var(--green)" }}>₹{(r.totalCashback * 12).toLocaleString()}</div>
                   </div>
                   <div className="rounded-lg p-3" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
-                    <div className="text-[10px] uppercase" style={{ color: "var(--orange)" }}>Total card fees</div>
+                    <div className="text-[10px] uppercase" style={{ color: "var(--orange)" }}>Fees incl. GST</div>
                     <div className="text-xl font-extrabold" style={{ color: r.totalFee === 0 ? "var(--green)" : "var(--orange)" }}>
                       {r.totalFee === 0 ? "₹0" : `₹${r.totalFee.toLocaleString()}`}
                     </div>
                   </div>
                   <div className="rounded-lg p-3" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)" }}>
-                    <div className="text-[10px] uppercase" style={{ color: "var(--accent-text)" }}>Net savings/yr</div>
+                    <div className="text-[10px] uppercase" style={{ color: "var(--accent-text)" }}>Illustrative net/year</div>
                     <div className="text-xl font-extrabold" style={{ color: "var(--accent-text)" }}>₹{r.netSavings.toLocaleString()}</div>
                   </div>
                 </div>
@@ -268,7 +282,7 @@ export default function StackBuilderClient() {
                   onClick={() => {
                     const url = `${window.location.origin}/stack/${r.combo.join("-and-")}`;
                     if (navigator.share) {
-                      navigator.share({ title: `My ${r.combo.length}-Card Stack — ₹${r.netSavings.toLocaleString()}/yr savings`, url });
+                      navigator.share({ title: `My ${r.combo.length}-Card Stack — illustrative comparison`, url });
                     } else {
                       navigator.clipboard.writeText(url);
                       alert("Stack link copied! Share it with friends.");
@@ -287,7 +301,7 @@ export default function StackBuilderClient() {
             <div className="text-sm" style={{ color: "var(--text-muted)" }}>
               A basic 1% card would earn <strong style={{ color: "var(--text)" }}>₹{baseline.toLocaleString()}/year</strong>.
               {results[0] && (
-                <span> The best {comboSize}-card combo saves you <strong style={{ color: "var(--green)" }}>₹{(results[0].netSavings - baseline).toLocaleString()} more</strong> per year — that's <strong style={{ color: "var(--green)" }}>{Math.round((results[0].netSavings / baseline - 1) * 100)}% more</strong> cashback.</span>
+                <span> The highest ranked {comboSize}-card combination estimates <strong style={{ color: "var(--green)" }}>₹{(results[0].netSavings - baseline).toLocaleString()} more</strong> per year under these broad-category assumptions. Actual eligible rewards may differ.</span>
               )}
             </div>
           </div>

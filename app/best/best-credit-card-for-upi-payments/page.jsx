@@ -2,12 +2,12 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for UPI Payments in India (June 2026)",
-  description: "Paying your Swiggy order on GPay with your Axis ACE card? You earned 0 rewards. Here's what actually works.",
+  title: "Best Credit Card for UPI Payments in India: Eligibility, Rewards and Fees",
+  description: "Compare RuPay credit-card-on-UPI eligibility, issuer-specific rewards, fees, and merchant-payment restrictions.",
   alternates: { canonical: "/best/best-credit-card-for-upi-payments" },
   openGraph: {
-    title: "Best Credit Card for UPI Payments in India (June 2026)",
-    description: "Paying your Swiggy order on GPay with your Axis ACE card? You earned 0 rewards. Here's what actually works.",
+    title: "Best Credit Card for UPI Payments in India: Eligibility, Rewards and Fees",
+    description: "Compare RuPay credit-card-on-UPI eligibility, issuer-specific rewards, fees, and merchant-payment restrictions.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -15,10 +15,19 @@ export const metadata = {
 
 
 // /best/credit-card-for-upi-payments
-// Updated: June 4, 2026
+// Reviewed against issuer/network sources: September 26, 2026
 
 const COLOR = "#ea580c";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
+const SOURCES = {
+  npci: "https://www.npci.org.in/PDF/npci/rupay/2022/Operating-circular-for-RuPay-Credit-Cards-linked-to-UPI.pdf",
+  rewards: "https://www.npci.org.in/what-we-do/upi-pay-by-points/faqs/",
+  idfcWow: "https://www.idfcfirstbank.com/content/dam/idfcfirstbank/images/credit-card/cc-details-image/pdf/WOW-Product-Guide.pdf",
+  idfcFees: "https://www.idfcfirstbank.com/credit-card/lifetime-free-credit-card",
+  sbiUpi: "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/simplysave-upi-digi-tnc.pdf",
+  sbiFees: "https://www.sbicard.com/en/most-important-terms-and-conditions.page",
+  axisAce: "https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card",
+};
 
 function UpiLogoIcon() {
   return (
@@ -31,7 +40,7 @@ function UpiLogoIcon() {
 
 function RupayBadgeIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 51" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RuPay card network badge - the only network that earns rewards on UPI">
+    <svg width="44" height="44" viewBox="0 0 44 51" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RuPay network credit cards can be linked to UPI where supported">
       <rect x="2" y="10" width="40" height="24" rx="4" fill={COLOR} fillOpacity="0.1" stroke={COLOR} strokeWidth="1.5"/>
       <text x="22" y="27" textAnchor="middle" fontSize="10" fill={COLOR} fontWeight="800">RuPay</text>
       <path d="M36 10v24" stroke={COLOR} strokeWidth="0.5" strokeDasharray="3 2"/>
@@ -43,7 +52,7 @@ function RupayBadgeIcon() {
 
 function BlockedIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Blocked icon showing Visa and Mastercard credit cards do not earn rewards on UPI">
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Warning icon showing a payment condition that needs checking">
       <rect x="2" y="10" width="40" height="24" rx="4" fill="var(--raise)" stroke="#fca5a5" strokeWidth="1.5"/>
       <line x1="10" y1="10" x2="34" y2="34" stroke="#ef4444" strokeWidth="2.5" strokeLinecap="round"/>
       <line x1="34" y1="10" x2="10" y2="34" stroke="#ef4444" strokeWidth="2.5" strokeLinecap="round"/>
@@ -58,15 +67,6 @@ function PhonePayIcon() {
       <rect x="13" y="9" width="14" height="18" rx="1" fill={COLOR} fillOpacity="0.15"/>
       <circle cx="20" cy="32" r="2" fill={COLOR} fillOpacity="0.5"/>
       <text x="20" y="21" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="700">GPay</text>
-    </svg>
-  );
-}
-
-function ZeroRewardBadge() {
-  return (
-    <svg width="60" height="32" viewBox="0 0 60 45" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zero rewards earned badge">
-      <rect width="60" height="32" rx="16" fill="var(--raise)" stroke="#fca5a5" strokeWidth="1.5"/>
-      <text x="30" y="21" textAnchor="middle" fontSize="13" fill="#dc2626" fontWeight="800">0%</text>
     </svg>
   );
 }
@@ -91,36 +91,36 @@ function InfoIcon() {
 
 const rupayUpiCards = [
   {
-    name: "HDFC Millennia RuPay",
-    issuer: "HDFC Bank",
-    fee: "₹1,000/yr",
-    feeWaiver: "Waived on ₹1L annual spend",
-    upiReward: "5% cashback on UPI (partner merchants)",
-    nonUpiReward: "5% on partner merchants (direct card)",
-    slug: "hdfc-millennia-rupay",
-    note: "Best UPI reward rate but requires HDFC app setup and specific merchant categories apply.",
+    name: "IDFC FIRST EA₹N",
+    issuer: "IDFC FIRST Bank",
+    fee: "₹499 joining and annual fee; FD-backed",
+    feeWaiver: "Confirm any current waiver or welcome offer with the issuer",
+    upiReward: "1% via IDFC FIRST Bank app; 0.5% via other UPI apps; ₹500 cashback cap per statement cycle",
+    nonUpiReward: "0.5% on eligible online, utility, insurance and wallet spends; exclusions apply",
+    slug: "idfc-first-earn",
+    note: "Secured card against a fixed deposit. No cashback on EMI or cash withdrawals; current terms govern eligibility.",
     best: true,
   },
   {
-    name: "IDFC FIRST WOW RuPay",
+    name: "IDFC FIRST WOW! + Digital RuPay",
     issuer: "IDFC FIRST Bank",
-    fee: "Lifetime free (against FD)",
-    feeWaiver: "N/A",
-    upiReward: "Reward points on UPI transactions",
-    nonUpiReward: "Points on all spends",
+    fee: "WOW! lifetime-free; FD-backed",
+    feeWaiver: "Lifetime-free card against FD; check the linked-card setup",
+    upiReward: "3X points above ₹2,000; 1X below ₹2,000",
+    nonUpiReward: "Depends on underlying card",
     slug: "idfc-first-wow-rupay",
-    note: "Zero forex markup. Excellent for UPI users who also travel. FD-backed, so very easy to get.",
+    note: "UPI reward points and app/card availability are subject to current issuer terms. A fixed deposit is required for WOW!.",
     best: false,
   },
   {
-    name: "SBI SimplySAVE RuPay",
+    name: "SimplySAVE UPI SBI Card",
     issuer: "SBI Cards",
     fee: "₹499/yr",
     feeWaiver: "Waived on ₹1L annual spend",
-    upiReward: "Limited rewards on UPI transactions",
-    nonUpiReward: "10X on dining, movies, grocery",
+    upiReward: "Points under the regular eligible-spend rules; merchant category matters",
+    nonUpiReward: "10 points/₹150 in dining, movies, grocery and departmental stores; 1 point/₹150 other eligible spend",
     slug: "sbi-simplysave-rupay",
-    note: "The UPI reward rate is modest but SBI RuPay integration is seamless via BHIM SBI Pay.",
+    note: "SBI's published UPI terms describe category-based points and exclusions; do not assume every UPI merchant transaction is eligible.",
     best: false,
   },
 ];
@@ -132,34 +132,34 @@ export default function BestCreditCardForUpiPayments() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Why don't Visa and Mastercard credit cards earn rewards on UPI payments?",
+        name: "Which credit-card networks can be linked to UPI?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "RBI mandated zero MDR (Merchant Discount Rate) on UPI transactions in 2020. Since card rewards are funded by MDR, Visa and Mastercard credit card issuers earn nothing on UPI transactions and therefore pass zero rewards to cardholders. Only RuPay credit cards on UPI have a separate reward mechanism.",
+          text: "NPCI's credit-card-on-UPI framework is for RuPay credit cards. A saved Visa or Mastercard used at a merchant checkout is a regular card payment, not a credit card linked to UPI. Whether an eligible RuPay-UPI transaction earns rewards depends on the issuer's card-specific programme; zero MDR does not establish a universal rewards rule.",
         },
       },
       {
         "@type": "Question",
-        name: "Which credit cards actually earn rewards on UPI in 2026?",
+        name: "Do RuPay credit-card UPI payments always earn rewards?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Only RuPay credit cards linked to UPI-enabled banking apps earn rewards on UPI transactions. HDFC Millennia RuPay, IDFC FIRST WOW RuPay, and SBI SimplySAVE RuPay are current options. Visa and Mastercard credit cards earn zero rewards on UPI regardless of the card or bank.",
+          text: "No. RuPay is the supported network for linking a credit card to UPI, but each issuer defines eligible spends, earn rates, caps, exclusions and redemption value. NPCI also says reward-point earning depends on the card or bank reward policy.",
         },
       },
       {
         "@type": "Question",
-        name: "If I pay at Swiggy using GPay with my Axis ACE card, do I earn 5%?",
+        name: "Does using Google Pay with Axis ACE at Swiggy earn the ACE partner rate?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. When you use GPay (or PhonePe, Paytm) with a non-RuPay credit card, the transaction is processed as a UPI payment. Your Axis ACE earns 0% on UPI. To earn 5% on Swiggy with Axis ACE, you must add the card directly on Swiggy's payment screen and pay with the card itself.",
+          text: "Axis ACE's advertised 4% partner rate is for eligible Swiggy, Zomato and Ola spends, not 5%. If you select the ACE card directly at checkout, that is a card transaction; paying through a RuPay credit-card-on-UPI setup is a different transaction and follows that issuer's UPI reward terms. Verify the posted transaction and current exclusions.",
         },
       },
       {
         "@type": "Question",
-        name: "Can I link my HDFC Millennia RuPay to Google Pay?",
+        name: "Can I link a RuPay credit card to Google Pay or another UPI app?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "RuPay credit cards on UPI currently require you to use the issuing bank's own UPI app. HDFC Millennia RuPay needs to be linked via HDFC Bank's app (HDFC PayZapp or similar), not Google Pay or PhonePe. This is a known friction point in the RuPay-UPI ecosystem.",
+          text: "NPCI's framework allows linkage on a UPI-enabled app, but actual availability depends on the issuer and app's current support. Follow the issuer's setup instructions; it is not a universal rule that you must use only your bank's own app.",
         },
       },
       {
@@ -167,7 +167,7 @@ export default function BestCreditCardForUpiPayments() {
         name: "What is the best way to pay at Zomato and earn maximum cashback?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Add your credit card directly in the Zomato app under payment methods. Do not use GPay or PhonePe as the payment method. If you use Axis ACE directly, you earn 5% (Zomato is a partner). Using GPay in between drops your reward to 0%.",
+          text: "Choose a payment method whose issuer terms match the transaction. Axis ACE advertises 4% on eligible Zomato spends, while eligible RuPay card-on-UPI payments earn only as specified by that card's UPI reward programme. Do not assume the standard direct-card offer transfers to a UPI transaction.",
         },
       },
       {
@@ -175,7 +175,7 @@ export default function BestCreditCardForUpiPayments() {
         name: "Does UPI credit card work for person-to-person (P2P) transfers?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. RBI does not permit credit cards to be used for P2P UPI transfers. You can only use a UPI-linked credit card for merchant payments (P2M). Sending money to a friend's UPI ID via a credit card is not allowed.",
+          text: "NPCI's operating circular for RuPay credit cards on UPI says P2P, P2PM and card-to-card payments are not permitted. The linked card is intended for eligible merchant payments; follow your issuer and UPI app restrictions.",
         },
       },
       {
@@ -183,7 +183,7 @@ export default function BestCreditCardForUpiPayments() {
         name: "Is it worth getting a RuPay credit card just for UPI rewards?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "It depends on your UPI spend volume. If you spend ₹15,000 to ₹20,000/month via UPI on merchants, a RuPay card earning even 1% gives you ₹1,800 to ₹2,400/year in rewards. Weigh this against the annual fee and the friction of using a separate banking app for UPI.",
+          text: "Compare the issuer's actual rewards and redemption value with any card/add-on fee, required fixed deposit, spending restrictions and convenience. Do not assume a generic 1% return; UPI earn rates differ by card and transaction.",
         },
       },
     ],
@@ -192,10 +192,10 @@ export default function BestCreditCardForUpiPayments() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for UPI Payments in India (June 2026)",
+    headline: "Credit Cards for UPI Payments: Network Eligibility and Issuer Rewards",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -224,7 +224,7 @@ export default function BestCreditCardForUpiPayments() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for UPI Payments in India (June 2026)
+            Best Credit Card for UPI Payments in India
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
         </div>
@@ -273,7 +273,7 @@ export default function BestCreditCardForUpiPayments() {
 
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 12px" }}>
-        Paying your Swiggy order on GPay with your Axis ACE card? You earned 0 rewards. Here's what actually works.
+        Compare RuPay credit-card-on-UPI eligibility, issuer reward rules, payment restrictions and fees before choosing a card.
       </p>
 
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
@@ -291,25 +291,25 @@ export default function BestCreditCardForUpiPayments() {
         }}
       >
         <div style={{ fontWeight: 800, fontSize: 16, color: "#dc2626", marginBottom: 8 }}>
-          The single most important fact on this page
+          The key distinction: UPI eligibility is not a reward rate
         </div>
         <p style={{ margin: 0, fontSize: 15 }}>
-          Visa and Mastercard credit cards earn <strong>zero rewards</strong> on UPI transactions. This applies to every card from HDFC, Axis, SBI, ICICI, Kotak, and every other Indian bank. The only credit cards that earn rewards via UPI are <strong>RuPay credit cards</strong>.
+          NPCI's credit-card-on-UPI framework supports <strong>RuPay credit cards</strong>. That says which network can be linked; it does not promise rewards. Each issuer sets reward eligibility and value, and a card entered directly at merchant checkout is a separate card transaction.
         </p>
         <p style={{ margin: "8px 0 0", fontSize: 13, color: "var(--text-muted)" }}>
-          Source: RBI's zero MDR policy on UPI (2020), confirmed by NPCI circular. Last verified June 2026.
+          Use the issuer's current card terms and NPCI's operating circular; reward accrual depends on the card programme.
         </p>
       </div>
 
       {/* Why this happens */}
       <section style={{ marginBottom: 44 }}>
-        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>Why Visa/Mastercard credit cards earn nothing on UPI</h2>
+        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>Credit card on UPI is different from paying by card online</h2>
 
         <p>
-          Every time you swipe a credit card at a shop, the merchant pays an MDR (Merchant Discount Rate) of typically 1.5 to 2% to the bank. A slice of that MDR funds your reward points.
+          A card saved in Swiggy, Zomato or another merchant checkout is processed as a card payment. Linking an eligible RuPay card to a UPI app lets you select it as the funding source for supported merchant UPI payments. These are different payment routes, with different issuer rules.
         </p>
         <p>
-          In January 2020, RBI mandated zero MDR on all UPI transactions. Merchants pay nothing when you pay via UPI. Without MDR income, banks have no budget to fund rewards, so they simply don't give any.
+          Do not infer card rewards from assumptions about MDR. NPCI states that earning points on UPI depends on the credit card or bank reward programme. Check the issuer's terms for the particular card and merchant transaction.
         </p>
 
         {/* Visual flow */}
@@ -328,13 +328,13 @@ export default function BestCreditCardForUpiPayments() {
           }}
         >
           {[
-            { label: "You tap GPay", sub: "linked to Axis ACE" },
+            { label: "Choose payment route", sub: "direct card or RuPay on UPI" },
             null,
-            { label: "UPI processes", sub: "Zero MDR" },
+            { label: "App / network", sub: "must support the card" },
             null,
-            { label: "Bank earns", sub: "₹0 from merchant" },
+            { label: "Issuer terms", sub: "set eligibility and earn" },
             null,
-            { label: "Your reward", sub: "₹0 on this txn", highlight: true },
+            { label: "Your reward", sub: "check card-specific rules", highlight: true },
           ].map((item, i) =>
             item === null ? (
               <ArrowRightIcon key={i} />
@@ -364,14 +364,14 @@ export default function BestCreditCardForUpiPayments() {
       <section style={{ marginBottom: 44 }}>
         <div style={{ display: "flex", gap: 16, alignItems: "center", marginBottom: 16 }}>
           <RupayBadgeIcon />
-          <h2 style={{ fontSize: 24, fontWeight: 700, margin: 0 }}>What actually earns rewards on UPI: RuPay credit cards</h2>
+          <h2 style={{ fontSize: 24, fontWeight: 700, margin: 0 }}>Examples of issuer-specific RuPay UPI rewards</h2>
         </div>
 
         <p>
-          NPCI (which runs both UPI and RuPay) built a separate incentive structure for RuPay credit cards on UPI. When you pay via UPI with a RuPay credit card, the transaction goes through a different processing rail, which can carry rewards.
+          NPCI enables eligible RuPay credit cards to be linked to UPI apps. Rewards are still set by the issuer: IDFC FIRST EA₹N publishes cashback that varies by UPI app, IDFC FIRST's Digital RuPay add-on advertises tiered points, and SBI's SimplySAVE UPI terms describe category-based points.
         </p>
         <p>
-          The catch: as of June 2026, most RuPay credit cards on UPI require you to use the issuing bank's own UPI app. You can't link your HDFC Millennia RuPay to Google Pay and expect rewards. You need to use HDFC's app.
+          App support varies. NPCI's operating circular describes linking to a VPA on a UPI-enabled app, but check your issuer/app for current card availability and setup steps. Neither app support nor the RuPay network guarantees a particular reward.
         </p>
 
         <div style={{ marginTop: 20, display: "flex", flexDirection: "column", gap: 14 }}>
@@ -402,7 +402,7 @@ export default function BestCreditCardForUpiPayments() {
                     letterSpacing: "0.06em",
                   }}
                 >
-                  Best for UPI
+                  Example UPI earn structure
                 </div>
               )}
               <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8, marginBottom: 10 }}>
@@ -440,17 +440,17 @@ export default function BestCreditCardForUpiPayments() {
       {/* The practical guide: direct vs UPI */}
       <section style={{ marginBottom: 44 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>
-          How to actually pay Swiggy, Zomato, and Blinkit to earn rewards
+          Comparing RuPay UPI with direct card payment
         </h2>
 
         <div style={{ display: "flex", gap: 16, alignItems: "flex-start", flexWrap: "wrap", marginBottom: 20 }}>
           <PhonePayIcon />
           <div style={{ flex: 1 }}>
             <p style={{ margin: 0 }}>
-              The way most people pay online is: open GPay or PhonePe, scan, or use UPI autopay. This kills all rewards on non-RuPay cards.
+              A UPI payment from a bank account is not a credit-card transaction. A RuPay card linked to a supported UPI app is another option, and its reward treatment depends on issuer terms.
             </p>
             <p style={{ margin: "8px 0 0" }}>
-              The right method is to add your credit card directly inside the merchant app and pay through that. One extra step, full rewards.
+              A card entered directly at merchant checkout uses the card's normal card-payment terms. Compare those with RuPay-on-UPI rewards; no route guarantees the highest rate for every card and merchant.
             </p>
           </div>
         </div>
@@ -459,25 +459,25 @@ export default function BestCreditCardForUpiPayments() {
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
             <thead>
               <tr style={{ background: `${COLOR}15`, borderBottom: `2px solid ${COLOR}40` }}>
-                {["Merchant", "Pay via GPay/PhonePe", "Pay directly in app", "Best card for direct pay"].map((h) => (
+                {["Merchant", "RuPay card via UPI", "Card entered at checkout", "Check before paying"].map((h) => (
                   <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700 }}>{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {[
-                ["Swiggy", "0% reward", "5% (Axis ACE partner)", "Axis ACE"],
-                ["Zomato", "0% reward", "5% (Axis ACE partner)", "Axis ACE"],
-                ["Blinkit", "0% reward", "5% (Axis ACE partner)", "Axis ACE"],
-                ["Amazon", "0% reward", "5% (Prime, Amazon Pay ICICI)", "Amazon Pay ICICI"],
-                ["Bigbasket", "0% reward", "1-2% varies", "HDFC Millennia"],
+                ["Swiggy", "Issuer's UPI terms", "Axis ACE advertises 4% on eligible partner spend", "Confirm route and exclusions"],
+                ["Zomato", "Issuer's UPI terms", "Axis ACE advertises 4% on eligible partner spend", "Confirm route and exclusions"],
+                ["Ola", "Issuer's UPI terms", "Axis ACE advertises 4% on eligible partner spend", "Confirm route and exclusions"],
+                ["Amazon", "Issuer's UPI terms", "Amazon Pay ICICI rate varies by Prime/status and transaction", "Check exact transaction type"],
+                ["Other merchants", "Issuer's UPI terms", "Card's standard eligible-spend rate", "No universal winner"],
               ].map(([merchant, upiRate, directRate, bestCard], i) => (
                 <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px", fontWeight: 600 }}>{merchant}</td>
                   <td style={{ padding: "10px 14px" }}>
-                    <ZeroRewardBadge />
+                    {upiRate}
                   </td>
-                  <td style={{ padding: "10px 14px", color: "#16a34a", fontWeight: 600 }}>{directRate}</td>
+                  <td style={{ padding: "10px 14px", color: "var(--text)", fontWeight: 600 }}>{directRate}</td>
                   <td style={{ padding: "10px 14px", color: "var(--text-muted)" }}>{bestCard}</td>
                 </tr>
               ))}
@@ -503,29 +503,29 @@ export default function BestCreditCardForUpiPayments() {
         >
           <InfoIcon />
           <p style={{ margin: 0, fontSize: 14 }}>
-            Even without rewards, using a credit card via UPI gives you the credit period benefit. If your billing cycle closes on the 1st and due date is the 21st, a UPI payment on the 2nd effectively gives you ~50 days of interest-free credit before you pay.
+            A successful RuPay credit-card-on-UPI merchant payment is billed to the linked card and follows its payment due date. The interest-free period varies with statement timing and applies only if you pay the full amount due; fees and rewards are separate.
           </p>
         </div>
 
         {[
           {
-            scenario: "You have a RuPay credit card and use the bank's own UPI app",
-            verdict: "Good. You earn rewards AND get credit period.",
+            scenario: "You have an eligible RuPay card and a supported UPI app",
+            verdict: "Check issuer earn rules, merchant eligibility, fees and posted rewards.",
             verdictColor: "#16a34a",
           },
           {
             scenario: "You want to track all spend in one place (budget management)",
-            verdict: "Acceptable. Consolidates UPI payments to card statement, even if 0% rewards.",
+            verdict: "May be useful for tracking; rewards still depend on issuer terms.",
             verdictColor: COLOR,
           },
           {
-            scenario: "You want to earn 5% on Swiggy using GPay",
-            verdict: "Not possible. Switch to direct card payment in the Swiggy app.",
+            scenario: "You want the Axis ACE Swiggy/Zomato partner rate",
+            verdict: "Axis advertises 4% on eligible partner spend; confirm which payment route qualifies.",
             verdictColor: "#dc2626",
           },
           {
-            scenario: "You want to hit the ₹1L spend threshold for card fee waiver",
-            verdict: "Valid. Even 0%-reward UPI spends count toward spend-based fee waivers on most cards.",
+            scenario: "You want UPI spends to count toward a fee waiver",
+            verdict: "Check the issuer's fee-waiver definition and excluded transactions for that card.",
             verdictColor: "#16a34a",
           },
         ].map((item, i) => (
@@ -551,30 +551,30 @@ export default function BestCreditCardForUpiPayments() {
 
       {/* RuPay landscape 2026 */}
       <section style={{ marginBottom: 44 }}>
-        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>The RuPay credit card landscape in 2026</h2>
+        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>RuPay credit-card-on-UPI: issuer support and rewards</h2>
 
         <p>
-          NPCI has been aggressively pushing RuPay credit cards on UPI since 2023. In 2026, most major banks offer at least one RuPay variant of their popular card, though these are often less prominent than the Visa/Mastercard versions.
+          RuPay credit cards can be linked to UPI under NPCI's framework, subject to issuer and app support. Rewards and card variants differ, so verify the current product terms rather than assuming every bank or card provides the same setup or earn rate.
         </p>
         <p>
-          The friction remains: you must use the issuing bank's UPI app, not Google Pay or PhonePe. NPCI has announced interoperability plans but as of June 2026, implementation is partial.
+          NPCI's operating circular describes linking an eligible card to a VPA on a UPI-enabled app. Availability can still differ by issuer and app; check the supported-app list before applying.
         </p>
 
         <div style={{ overflowX: "auto", marginTop: 16 }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
             <thead>
               <tr style={{ background: `${COLOR}15`, borderBottom: `2px solid ${COLOR}40` }}>
-                {["Bank", "RuPay Credit Card", "UPI App Required", "Rewards on UPI"].map((h) => (
+                {["Bank", "RuPay credit card", "App support", "Issuer reward rule"].map((h) => (
                   <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700 }}>{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {[
-                ["HDFC Bank", "Millennia RuPay", "HDFC Bank app", "Yes, 5% partner categories"],
-                ["IDFC FIRST Bank", "WOW RuPay", "IDFC FIRST Pay", "Yes, reward points"],
-                ["SBI", "SimplySAVE RuPay", "BHIM SBI Pay", "Yes, limited categories"],
-                ["Axis Bank", "Axis RuPay (limited rollout)", "Axis Mobile", "Partial rollout June 2026"],
+                ["IDFC FIRST Bank", "FIRST EA₹N", "Check current supported-app list", "1% via IDFC app; 0.5% via other UPI apps; ₹500 statement-cycle cap"],
+                ["IDFC FIRST Bank", "FIRST WOW! + Digital RuPay", "Supported app; issuer instructions apply", "3X points >₹2,000; 1X below, per issuer guide"],
+                ["SBI Card", "SimplySAVE UPI SBI Card", "Supported app; issuer instructions apply", "Category-based points; see UPI terms"],
+                ["Other issuers", "Check exact RuPay variant", "Confirm issuer/app support", "Rates and exclusions vary"],
               ].map(([bank, card, app, reward], i) => (
                 <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px", fontWeight: 600 }}>{bank}</td>
@@ -601,13 +601,13 @@ export default function BestCreditCardForUpiPayments() {
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 16px" }}>What to do right now</h2>
         <ol style={{ margin: 0, paddingLeft: 20, lineHeight: 2.2, fontSize: 14 }}>
           <li>
-            Check which cards you already own. Any non-RuPay card earns <strong>0 rewards on UPI</strong>.
+            Check whether your card is an eligible RuPay card and whether your UPI app supports linking it.
           </li>
           <li>
-            For Swiggy, Zomato, Blinkit: add your credit card directly in the app. Remove UPI as default payment.
+            Compare issuer UPI terms with direct-card offers. Axis ACE advertises 4% on eligible Swiggy/Zomato/Ola spends, not 5% on Blinkit.
           </li>
           <li>
-            If UPI is your primary payment mode: consider IDFC FIRST WOW RuPay (FD-backed, easy to get, zero forex).
+            If UPI is a priority, compare IDFC FIRST's Digital RuPay and SBI SimplySAVE UPI terms, including fees, reward value and any FD requirement.
           </li>
           <li>
             Use our{" "}
@@ -634,10 +634,10 @@ export default function BestCreditCardForUpiPayments() {
             Best credit card for electricity and utility bill payments
           </Link>
           <Link href="/cards/axis-ace" style={{ color: COLOR, fontSize: 14 }}>
-            Axis ACE credit card full review (5% on Swiggy, Zomato, Blinkit via direct pay)
+            Axis ACE credit card full review (issuer terms and eligible partner rates)
           </Link>
-          <Link href="/blog/zero-mdr-upi-credit-card-india" style={{ color: COLOR, fontSize: 14 }}>
-            Why your credit card earns nothing on UPI: the MDR explainer
+          <Link href="/blog/rupay-credit-card-upi-rewards-india-2026" style={{ color: COLOR, fontSize: 14 }}>
+            RuPay credit cards and UPI rewards: guide
           </Link>
         </div>
       </section>
@@ -678,6 +678,7 @@ export default function BestCreditCardForUpiPayments() {
           lineHeight: 1.8,
         }}
       >
+        <p>Issuer/network references: <a href={SOURCES.npci} target="_blank" rel="noreferrer">NPCI RuPay credit-card-on-UPI operating circular</a> · <a href={SOURCES.rewards} target="_blank" rel="noreferrer">NPCI rewards FAQ</a> · <a href={SOURCES.idfcWow} target="_blank" rel="noreferrer">IDFC FIRST WOW! guide</a> · <a href={SOURCES.idfcFees} target="_blank" rel="noreferrer">IDFC FIRST fee/card information</a> · <a href={SOURCES.sbiUpi} target="_blank" rel="noreferrer">SBI SimplySAVE UPI terms</a> · <a href={SOURCES.sbiFees} target="_blank" rel="noreferrer">SBI fee schedule</a> · <a href={SOURCES.axisAce} target="_blank" rel="noreferrer">Axis ACE terms</a>.</p>
         <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. UPI reward structures are based on NPCI and bank communications as of {UPDATED}. RuPay credit card UPI rewards are subject to change by NPCI and individual issuers. This is not financial advice. Verify current reward structures with the issuing bank before making decisions. Assure Fintech may earn referral fees from some card issuers, which does not influence editorial content.
       </footer>
     </main>

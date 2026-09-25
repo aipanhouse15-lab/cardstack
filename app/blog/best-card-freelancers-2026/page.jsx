@@ -17,7 +17,7 @@ export const metadata = {
 // ============================================================
 
 const COLOR = "#7C3AED";
-const UPDATED = "June 3, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgBracketPlaybook = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Freelancer income bracket playbook mapping four ITR-declared income tiers to specific recommended credit cards" style={{ width: "100%", maxWidth: 760 }}>
@@ -117,7 +117,7 @@ export default function BestCardFreelancers2026() {
     description: "How freelancers and self-employed professionals should pick credit cards across four income brackets. Includes GST input credit mechanics, business-vs-personal spend separation, and the underwriting reality of self-employed applications.",
     author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
     reviewedBy: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-04-20", dateModified: "2026-06-03",
+    datePublished: "2026-04-20", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/best-card-freelancers-2026" }
   };

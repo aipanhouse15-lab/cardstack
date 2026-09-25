@@ -3,11 +3,11 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Best Credit Card for High Income Earners in India (June 2026)",
-  description: "At ₹15 lakh+ annual income, the credit card math changes dramatically. Reward rates that seemed niche now pay for themselves in months, and the invite-only t...",
+  description: "Compare premium credit cards by current eligibility, annual fees, eligible rewards, redemption terms and benefits you will actually use.",
   alternates: { canonical: "/best/best-credit-card-for-high-income-earners" },
   openGraph: {
     title: "Best Credit Card for High Income Earners in India (June 2026)",
-    description: "At ₹15 lakh+ annual income, the credit card math changes dramatically. Reward rates that seemed niche now pay for themselves in months, and the invite-only t...",
+    description: "Compare premium credit cards by current eligibility, annual fees, eligible rewards, redemption terms and benefits you will actually use.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -15,12 +15,12 @@ export const metadata = {
 
 
 // /best/credit-card-for-high-income-earners
-// Updated: June 4, 2026
+// Updated: September 26, 2026
 
 const COLOR = "#374151";
 const ACCENT = "var(--raise2)";
 const GOLD = "#b45309";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const IconPremium = () => (
   <svg width="48" height="48" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Premium credit card for high income earners">
@@ -89,7 +89,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         name: "What income is required for HDFC Infinia credit card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HDFC Infinia is an invite-only card requiring a net annual income of ₹30 lakh or above for salaried individuals, or equivalent net worth documentation for self-employed. HDFC uses an internal scoring model that also considers banking relationship, credit score, and existing investment products. You cannot apply for it directly — you get an invite, typically after holding a mid-tier HDFC card for 12+ months with good usage."
+          text: "HDFC describes Infinia Metal Edition membership as invitation-only. The bank's current public page does not establish a universal income threshold or guaranteed upgrade pathway; confirm eligibility and the offer made to you directly with HDFC."
         }
       },
       {
@@ -97,15 +97,15 @@ export default function BestCreditCardForHighIncomeEarners() {
         name: "What income is required for Axis Magnus?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Axis Magnus is invite-only with an income threshold of approximately ₹24 lakh annually for salaried applicants. Like Infinia, Axis uses a relationship-based invite model. Existing Axis savings account holders with salary credits and a clean credit history are the most likely recipients. The card fee is ₹12,500 per year."
+          text: "Axis publishes Magnus product and fee terms, but eligibility can depend on the application channel and bank assessment. Do not rely on a single income figure or assume an existing Axis account guarantees approval. Check the current fee and any card-specific offer before applying."
         }
       },
       {
         "@type": "Question",
-        name: "Is the Amex Platinum Charge Card worth its ₹60,000 annual fee?",
+        name: "Is the Amex Platinum Charge Card worth its annual fee?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Amex Platinum Charge Card at ₹60,000/year makes financial sense only for individuals spending ₹3 lakh+ annually on travel and dining who can extract the full value of its benefits. These include unlimited Priority Pass + Amex Centurion lounge access (value: ₹20,000-40,000/yr for frequent travellers), Taj and Marriott hotel status, and Global Dining credits. If you don't travel internationally 8+ times a year, the fee does not justify itself."
+          text: "American Express currently lists an annual fee of ₹66,000 plus taxes for the Platinum Charge Card. Whether its benefits justify that fee depends on the value you personally realize; do not assign a fixed rupee value to lounge visits or memberships unless you would otherwise pay for them. American Express currently says it is temporarily pausing new card applications in India; check its official site for availability before acting."
         }
       },
       {
@@ -113,7 +113,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         name: "What is the reward rate on HDFC Infinia?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HDFC Infinia earns 3.33 reward points per ₹150 spent, redeemable at ₹1 per point. The effective rate is 3.33% on most spends when redeemed via the SmartBuy portal. On travel booked through SmartBuy, the rate can reach 5X or higher on select hotel bookings. The card also earns 3.33% on insurance, health, and utility payments — unlike most cards that reduce rates for these categories."
+          text: "HDFC currently lists 5 Reward Points per ₹150 on eligible spends and up to 10X on SmartBuy spends. Point value depends on redemption route, while category exclusions, caps and offer terms apply; do not assume a flat 3.33% cash return on every transaction."
         }
       },
       {
@@ -121,7 +121,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         name: "How much extra do I earn annually switching from a mid-tier card to Infinia?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "At ₹10 lakh annual spend: Infinia at 3.33% earns ₹33,300 in rewards. A mid-tier card (HDFC Regalia) at 1.33% earns ₹13,300. The difference is ₹20,000 per year — against an incremental fee difference of ₹10,000 (Infinia ₹12,500 vs Regalia ₹2,500). Net gain from upgrading: approximately ₹10,000/year at ₹10L spend. The upgrade pays off clearly at ₹7L+ annual spend."
+          text: "There is no universal spend break-even. Estimate rewards on eligible transactions using the card's current earn and redemption terms, subtract the fee you will actually pay after any waiver, and value only benefits you would otherwise purchase. Compare against the card you already hold."
         }
       },
       {
@@ -129,7 +129,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         name: "What concierge benefits do premium cards offer in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HDFC Infinia and Axis Magnus offer 24/7 concierge services that include restaurant reservations, flight bookings, hotel arrangements, gifting, and event ticket procurement. The actual utility depends on usage — the concierge is genuinely useful for last-minute reservations at full restaurants and finding tickets to sold-out events. It is not a meaningful daily-use benefit for most people, but for frequent business travellers and corporate entertainers, it saves significant time."
+          text: "Concierge services and availability vary by issuer and card variant. Review the current service terms and consider whether you would use the service; do not assign a fixed monetary value to it without an actual alternative cost."
         }
       },
       {
@@ -137,7 +137,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         name: "Can high-income earners hold both HDFC Infinia and Axis Magnus?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, and this is actually a popular combination among high-spenders in India. Infinia is used for SmartBuy bookings, insurance, and general high-value spends where the 3.33% base rate applies. Magnus is used for international travel and for converting EDGE Miles into airline miles at preferred partners. The combined annual fee of ₹25,000 is justified if total annual spend exceeds ₹8-10 lakh."
+          text: "Some cardholders may use both, but a two-card stack is not automatically worthwhile. Compare each card's current fee, eligible rewards, excluded spend, foreign-currency costs, transfer terms and benefits you will use. Axis Magnus's renewal-fee waiver currently requires ₹25 lakh of eligible spend in the preceding card-anniversary year; exclusions apply."
         }
       },
       {
@@ -145,7 +145,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         name: "What is HDFC Diners Black and how does it compare to Infinia?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HDFC Diners Black (₹10,000/yr) earns the same 3.33% reward rate as Infinia and offers unlimited lounge access. The main differences: Infinia runs on Visa/Mastercard with near-universal acceptance, while Diners Club acceptance is more limited — particularly at smaller merchants and some international destinations. For pure reward value, Diners Black is slightly cheaper with equal rewards, but Infinia's acceptance makes it the practical choice for most earners."
+          text: "HDFC currently lists ₹10,000 joining/renewal membership fees for Diners Club Black Metal and 5 reward points per ₹150 on eligible spends. Compare its current redemption, milestone and lounge conditions with Infinia; network acceptance can differ by merchant and destination. Verify the exact variant and fee-waiver terms."
         }
       }
     ]
@@ -157,7 +157,7 @@ export default function BestCreditCardForHighIncomeEarners() {
     headline: "Best Credit Card for High Income Earners in India (June 2026)",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -175,52 +175,52 @@ export default function BestCreditCardForHighIncomeEarners() {
     {
       rank: 1,
       name: "HDFC Infinia",
-      fee: "₹12,500/yr",
-      income: "₹30L+ (invite-only)",
-      rewardRate: "3.33% on all spends via SmartBuy",
-      lounge: "Unlimited global (Priority Pass + DreamFolks)",
-      standout: "₹10L spend = ₹33,300 back. Best all-round premium card in India.",
-      roi10L: "₹33,300 (net ₹20,800 after fee)"
+      fee: "₹12,500 + taxes; renewal waiver terms apply",
+      income: "Invitation-only; confirm eligibility with HDFC",
+      rewardRate: "5 points/₹150 on eligible spends; SmartBuy multipliers and redemption rules apply",
+      lounge: "HDFC advertises complimentary global access; visit and guest terms apply",
+      standout: "Compare eligible spend, redemption route, fee waiver, caps and current lounge terms.",
+      roi10L: "Net value depends on eligible spend, redemption and fee waiver."
     },
     {
       rank: 2,
       name: "Axis Magnus",
-      fee: "₹12,500/yr",
-      income: "₹24L+ (invite-only)",
-      rewardRate: "~3% (EDGE Miles, best via airline transfers)",
-      lounge: "Unlimited global (Priority Pass)",
-      standout: "Best for international frequent flyers. Miles earning + concierge strongest at this fee.",
-      roi10L: "₹30,000 (net ₹17,500 after fee)"
+      fee: "₹12,500 + taxes; waiver requires ₹25L eligible preceding-year spend",
+      income: "Eligibility depends on current bank assessment and offer",
+      rewardRate: "EDGE Rewards; earn and transfer value depend on eligible spend and current partner terms",
+      lounge: "Check current domestic/international visit, guest and spend conditions",
+      standout: "Compare eligible reward routes, annual fee and current travel benefits against your own use.",
+      roi10L: "Net value depends on eligible spend, redemption and fee waiver."
     },
     {
       rank: 3,
       name: "HDFC Diners Black",
-      fee: "₹10,000/yr",
-      income: "₹30L+ income or ₹3Cr+ assets",
-      rewardRate: "3.33% (same as Infinia)",
-      lounge: "Unlimited global (Priority Pass)",
-      standout: "Same reward rate as Infinia at lower fee. Diners acceptance gap is the only limitation.",
-      roi10L: "₹33,300 (net ₹23,300 after fee)"
+      fee: "₹10,000 + taxes; variant/waiver terms apply",
+      income: "Check current HDFC eligibility",
+      rewardRate: "5 points/₹150 on eligible spends; redemption terms apply",
+      lounge: "Check current access, guest and network conditions",
+      standout: "Compare the Diners Club network, current benefits and fee against alternatives.",
+      roi10L: "Net value depends on eligible spend, redemption and fee waiver."
     },
     {
       rank: 4,
       name: "ICICI Emeralde",
-      fee: "₹12,000/yr",
-      income: "₹25L+ (open to application)",
-      rewardRate: "~2% on international, 1.5% domestic",
-      lounge: "Unlimited global (Priority Pass + Dreamfolks)",
-      standout: "Lower forex markup + unlimited lounge. Better for international-heavy spenders than domestic ones.",
-      roi10L: "₹15,000-₹20,000 (varies by intl mix)"
+      fee: "Check current ICICI fee and variant terms",
+      income: "Check current ICICI eligibility",
+      rewardRate: "Rewards and redemption depend on the Emeralde variant and eligible transaction",
+      lounge: "Check current visit caps, spend conditions and guest terms",
+      standout: "Compare the exact Emeralde variant's current forex, fee and lounge conditions.",
+      roi10L: "Net value depends on eligible spend, redemption and fee waiver."
     },
     {
       rank: 5,
       name: "Amex Platinum Charge",
-      fee: "₹60,000/yr",
-      income: "₹50L+ (invite preferred)",
+      fee: "₹66,000 + taxes; confirm current availability",
+      income: "Check current American Express eligibility",
       rewardRate: "Membership Rewards + luxury benefits",
-      lounge: "Unlimited (Priority Pass + Amex Centurion)",
-      standout: "Ultra-premium for business travellers. Justify only at 8+ intl trips per year + hotel status use.",
-      roi10L: "Net negative unless travel benefits fully extracted"
+      lounge: "Global Lounge Collection access; lounge and guest terms apply",
+      standout: "American Express currently says new applications in India are temporarily paused. Recheck availability and current terms.",
+      roi10L: "Net value depends on benefits you would otherwise pay for."
     }
   ];
 
@@ -255,7 +255,7 @@ export default function BestCreditCardForHighIncomeEarners() {
       </div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted,#475569)", marginBottom: 10, fontWeight: 500 }}>
-        At ₹15 lakh+ annual income, the credit card math changes dramatically. Reward rates that seemed niche now pay for themselves in months, and the invite-only tier opens up.
+          Premium-card eligibility and value depend on issuer criteria and your actual spending—not income alone. Compare current fees, reward eligibility, redemption rules and benefits you will use.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
@@ -266,9 +266,9 @@ export default function BestCreditCardForHighIncomeEarners() {
       <div style={{ background: `${GOLD}10`, border: `1.5px solid ${GOLD}40`, borderRadius: 12, padding: "18px 22px", marginBottom: 28, display: "flex", gap: 12 }}>
         <IconChart />
         <div>
-          <strong style={{ color: GOLD, fontSize: 14, display: "block", marginBottom: 4 }}>The Honest Number at ₹10L Annual Spend</strong>
+          <strong style={{ color: GOLD, fontSize: 14, display: "block", marginBottom: 4 }}>The honest comparison</strong>
           <p style={{ margin: 0, fontSize: 14, color: "var(--text-muted,#475569)" }}>
-            HDFC Infinia earns ₹33,300 back on ₹10 lakh spend (3.33% via SmartBuy). HDFC Regalia earns ₹13,300 (1.33%). The upgrade fee difference between the two cards is ₹10,000 per year. Net gain from upgrading: ₹10,000 annually at ₹10L spend. If you spend ₹15L/year, the premium card advantage grows to ₹20,000 per year.
+            A reliable net-value comparison needs your card variant, eligible transaction mix, redemption route, fee-waiver eligibility and any benefits you would otherwise buy. A single spend figure cannot guarantee a premium card's return.
           </p>
         </div>
       </div>
@@ -276,16 +276,8 @@ export default function BestCreditCardForHighIncomeEarners() {
       {/* Why the math changes */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>Why the Math Changes at ₹15L+ Income</h2>
 
-      <p style={{ marginBottom: 12 }}>
-        Below ₹10 lakh income, card choices are constrained by eligibility. Most premium cards are closed, and the practical options cluster around 1-2% reward rates. Card fees of ₹2,500-₹5,000 weigh heavily against the reward earned.
-      </p>
-
-      <p style={{ marginBottom: 12 }}>
-        At ₹15 lakh income, you become eligible for premium-tier cards. The reward rate jumps from 1.33% to 3.33% — not a marginal improvement but a 2.5x multiplier on money returned. Simultaneously, annual credit card spend tends to rise with income, amplifying the reward difference.
-      </p>
-
       <p style={{ marginBottom: 24 }}>
-        At ₹30 lakh income, invite-only cards (Infinia, Magnus) unlock. This tier also grants access to lounge, concierge, and travel benefits that have real monetary value for the lifestyle that comes with this income level. The card fee, which loomed large at ₹10K/year, now disappears into 1-2 reward transactions.
+        Higher income does not automatically qualify someone for a premium card or make its fee worthwhile. Eligibility, invitation rules, reward exclusions and benefits vary by issuer and product. Assess your real eligible spend and the fee you would actually pay rather than assuming a particular income unlocks a card.
       </p>
 
       {/* Invite thresholds */}
@@ -296,7 +288,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         <div>
           <strong style={{ color: GOLD, fontSize: 14, display: "block", marginBottom: 4 }}>How Invite-Only Cards Actually Work</strong>
           <p style={{ margin: 0, fontSize: 13, color: "var(--text-muted,#475569)" }}>
-            Both HDFC Infinia and Axis Magnus use a proprietary scoring model that weighs: net annual income, existing banking relationship (salary account, FD, mutual funds), credit score (typically 780+ expected), existing card history with the bank, and total banking assets. Salary slip alone is not sufficient — the relationship matters as much as the income.
+            Each issuer sets its own eligibility and approval criteria, which may change and may not be fully disclosed publicly. Do not rely on a specific credit-score threshold, income amount or relationship path as a guarantee; confirm current eligibility directly with the issuer.
           </p>
         </div>
       </div>
@@ -313,11 +305,11 @@ export default function BestCreditCardForHighIncomeEarners() {
           </thead>
           <tbody>
             {[
-              ["HDFC Infinia", "₹30L+ net annual", "Invite-only", "Hold Regalia/Diners Black 12mo + salary with HDFC"],
-              ["Axis Magnus", "₹24L+ annual", "Invite-only", "Hold Axis ACE/MY Zone + salary credits in Axis"],
-              ["HDFC Diners Black", "₹30L+", "Invite-only", "Same pathway as Infinia — often co-offered"],
-              ["ICICI Emeralde", "₹25L+", "Apply online", "Apply via ICICI website or relationship manager"],
-              ["Amex Platinum", "₹50L+ preferred", "Apply online", "Direct application; no relationship requirement"]
+              ["HDFC Infinia", "Issuer assessment", "Invitation-only", "Confirm current eligibility and offer with HDFC"],
+              ["Axis Magnus", "Issuer assessment", "Check current application route", "Confirm current eligibility and offer with Axis"],
+              ["HDFC Diners Club Black Metal", "Issuer assessment", "Check current application route", "Confirm the exact variant and current terms"],
+              ["ICICI Emeralde", "Issuer assessment", "Check current application route", "Confirm the exact variant and current terms"],
+              ["Amex Platinum Charge", "Issuer assessment", "Applications temporarily paused (check status)", "Check American Express for current availability"]
             ].map(([card, income, mode, path], i) => (
               <tr key={i} style={{ borderBottom: "1px solid var(--border,var(--hair))", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                 <td style={{ padding: "10px 14px", fontWeight: 600 }}>{card}</td>
@@ -331,16 +323,15 @@ export default function BestCreditCardForHighIncomeEarners() {
       </div>
 
       {/* Card picks */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6, color: ACCENT }}>Top 5 Premium Cards for High-Income Earners (June 2026)</h2>
-      <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>Ranked by total value at ₹10L annual spend, including all measurable benefits.</p>
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6, color: ACCENT }}>Premium Cards to Compare</h2>
+      <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>These products are not ranked by a universal ROI. Compare the exact current variant and terms against your own needs.</p>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
         {premiumCards.map((card) => (
-          <div key={card.rank} style={{ border: `2px solid ${card.rank === 1 ? GOLD : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${GOLD}06` : "transparent" }}>
+          <div key={card.rank} style={{ border: "1px solid var(--hair)", borderRadius: 14, padding: "20px 22px", background: "transparent" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                {card.rank === 1 && <IconStar />}
-                <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: ACCENT }}>#{card.rank} {card.name}</h3>
+                <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700, color: ACCENT }}>{card.name}</h3>
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
                 <span style={{ background: `${GOLD}15`, color: GOLD, borderRadius: 20, padding: "3px 10px", fontSize: 12, fontWeight: 600 }}>{card.fee}</span>
@@ -359,36 +350,36 @@ export default function BestCreditCardForHighIncomeEarners() {
         ))}
       </div>
 
-      {/* ROI math at scale */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>Premium Card ROI at Different Spend Levels</h2>
+      {/* Personal value comparison */}
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>How to compare premium-card value</h2>
 
       <p style={{ marginBottom: 16 }}>
-        The following table compares net annual reward value (after card fee) across HDFC Regalia (mid-tier), HDFC Infinia, and Axis Magnus at different annual spend levels.
+        There is no reliable universal ROI table: reward categories, card variants, fee waivers and redemption choices differ. Check these factors for your own profile:
       </p>
 
       <div style={{ overflowX: "auto", marginBottom: 24 }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
           <thead>
             <tr style={{ background: `${COLOR}08` }}>
-              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>Annual Spend</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>Regalia (1.33%, -₹2.5K fee)</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: `2px solid ${GOLD}40`, color: GOLD }}>Infinia (3.33%, -₹12.5K fee)</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>Infinia Advantage</th>
+              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>Factor</th>
+              <th style={{ padding: "10px 12px", textAlign: "left", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>Check with issuer</th>
+              <th style={{ padding: "10px 12px", textAlign: "left", fontWeight: 700, borderBottom: `2px solid ${GOLD}40`, color: GOLD }}>Check against your use</th>
+              <th style={{ padding: "10px 12px", textAlign: "left", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>Why it matters</th>
             </tr>
           </thead>
           <tbody>
             {[
-              ["₹5L", "₹4,150", "₹4,150", "₹0 (break even)"],
-              ["₹7L", "₹6,810", "₹10,810", "+₹4,000"],
-              ["₹10L", "₹10,800", "₹20,800", "+₹10,000"],
-              ["₹15L", "₹17,450", "₹37,450", "+₹20,000"],
-              ["₹20L", "₹24,100", "₹54,100", "+₹30,000"]
+              ["Annual fee", "Joining and renewal fee; eligible spend waiver", "Fee you expect to pay", "Waivers depend on eligible transactions and card year"],
+              ["Reward earn", "Rates, caps, excluded categories", "Your eligible transaction mix", "A headline rate may not apply to all spend"],
+              ["Redemption", "Point value, portal, transfer partners and caps", "Realistic redemption you will use", "Points are not automatically cash at face value"],
+              ["Travel benefits", "Visits, spend triggers, guest and lounge rules", "Trips and benefits you would otherwise buy", "Access can be conditional or space-limited"],
+              ["Net value", "Current card-specific terms", "Eligible rewards + used benefits − fee", "Use your own profile; no guaranteed break-even" ]
             ].map(([spend, regalia, infinia, delta], i) => (
               <tr key={i} style={{ borderBottom: "1px solid var(--border,var(--hair))", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                 <td style={{ padding: "10px 14px", fontWeight: 600 }}>{spend}</td>
-                <td style={{ padding: "10px 12px", textAlign: "right" }}>{regalia}</td>
-                <td style={{ padding: "10px 12px", textAlign: "right", color: GOLD, fontWeight: 700 }}>{infinia}</td>
-                <td style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, color: delta === "₹0 (break even)" ? "var(--text-muted,#64748b)" : "#16a34a" }}>{delta}</td>
+                <td style={{ padding: "10px 12px" }}>{regalia}</td>
+                <td style={{ padding: "10px 12px", color: GOLD, fontWeight: 700 }}>{infinia}</td>
+                <td style={{ padding: "10px 12px", fontWeight: 600, color: "var(--text-muted,#64748b)" }}>{delta}</td>
               </tr>
             ))}
           </tbody>
@@ -396,24 +387,24 @@ export default function BestCreditCardForHighIncomeEarners() {
       </div>
 
       <p style={{ marginBottom: 24, fontSize: 13, color: "var(--text-muted,#64748b)" }}>
-        Infinia ROI based on full SmartBuy redemption (3.33%). Actual return varies by redemption method. Lounge value and concierge benefits not included in the above figures.
+        Reward values vary by eligible transaction, reward cap, redemption route and current fee-waiver terms. This guide does not claim a fixed net return or break-even spend.
       </p>
 
       {/* Amex Platinum question */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>The Amex Platinum Question: ₹60,000 Fee Justified?</h2>
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>The Amex Platinum Charge Card: compare current cost and benefits</h2>
 
       <p style={{ marginBottom: 12 }}>
-        Amex Platinum Charge Card has the highest annual fee of any mainstream credit card in India at ₹60,000 per year. The benefits that justify this are almost entirely travel and hotel-related.
+        American Express currently lists an annual fee of ₹66,000 plus taxes for the Platinum Charge Card and says new card applications in India are temporarily paused. Check official availability and current terms. Benefits are primarily travel and lifestyle related; value depends on what you would actually use.
       </p>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
         {[
-          { label: "Priority Pass + Centurion Lounges", value: "~₹30,000/yr (20+ intl trips)", good: true },
-          { label: "Taj Epicure / ITC membership", value: "~₹10,000/yr if heavily used", good: true },
-          { label: "Marriott Bonvoy Gold status", value: "~₹8,000/yr in upgrades", good: true },
-          { label: "Global Dining Programme credits", value: "~₹12,000/yr if used fully", good: true },
-          { label: "Fee payback requirement", value: "₹60,000 to break even", good: false },
-          { label: "Who should skip it", value: "Domestic travellers, {'<'} 8 intl trips/yr", good: false }
+          { label: "Lounge access", value: "Check included networks, visit and guest terms", good: true },
+          { label: "Hotel benefits", value: "Check current participating properties and conditions", good: true },
+          { label: "Renewal benefit", value: "Review spend threshold and eligible voucher terms", good: true },
+          { label: "Concierge and dining", value: "Value only services you would otherwise use", good: true },
+          { label: "Annual fee", value: "₹66,000 plus applicable taxes", good: false },
+          { label: "Availability", value: "New applications currently paused; recheck issuer site", good: false }
         ].map(({ label, value, good }, i) => (
           <div key={i} style={{ background: good ? `${GOLD}08` : "var(--raise)", border: `1px solid ${good ? GOLD + "30" : "var(--hair)"}`, borderRadius: 8, padding: "12px 14px" }}>
             <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 4 }}>
@@ -426,14 +417,14 @@ export default function BestCreditCardForHighIncomeEarners() {
       </div>
 
       <p style={{ marginBottom: 24 }}>
-        The Amex Platinum is a lifestyle card, not an arithmetic card. If your income and business require you to be in premium hotel lobbies and airport lounges weekly, the experience and status it confers has real professional value. For everyone else, Infinia or Magnus gives better measurable return at half the fee.
+        Consider the card only if it is available to you and the benefits you will actually use justify the fee. Other premium cards have different rewards, costs and eligibility; no one option guarantees better net value for every cardholder.
       </p>
 
       {/* Optimal premium stack */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>Building the Optimal Premium Stack</h2>
 
       <p style={{ marginBottom: 16 }}>
-        The optimal two-card stack for most high-income earners in India as of June 2026.
+        A two-card stack is a possible choice, not a universal recommendation. Check the current product terms and your own eligible spending before combining premium cards.
       </p>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 28 }}>
@@ -444,10 +435,10 @@ export default function BestCreditCardForHighIncomeEarners() {
           </div>
           <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 6 }}>HDFC Infinia</div>
           <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.8 }}>
-            <li>3.33% on all domestic spends</li>
-            <li>SmartBuy hotel and flight bookings</li>
-            <li>Domestic lounge + DreamFolks</li>
-            <li>Annual fee: ₹12,500</li>
+            <li>5 Reward Points per ₹150 on eligible spends; exclusions apply</li>
+            <li>SmartBuy multipliers and redemption terms apply</li>
+            <li>Check current lounge access, guest and network rules</li>
+            <li>₹12,500 + taxes; HDFC lists a renewal waiver at ₹10 lakh eligible spend in the preceding 12 months</li>
           </ul>
         </div>
         <div style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 12, padding: "18px" }}>
@@ -458,9 +449,9 @@ export default function BestCreditCardForHighIncomeEarners() {
           <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 6 }}>Axis Magnus</div>
           <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.8 }}>
             <li>EDGE Miles on intl transactions</li>
-            <li>Unlimited Priority Pass worldwide</li>
-            <li>Miles transfer to airlines</li>
-            <li>Annual fee: ₹12,500</li>
+            <li>Check current lounge access, visit and guest terms</li>
+            <li>EDGE Rewards transfer partners, ratios, caps and exclusions apply</li>
+            <li>₹12,500 + taxes; eligible-spend waiver threshold and exclusions apply</li>
           </ul>
         </div>
       </div>
@@ -470,9 +461,9 @@ export default function BestCreditCardForHighIncomeEarners() {
         <h3 style={{ margin: "0 0 12px", fontSize: 18, fontWeight: 700, color: "var(--raise)" }}>Your Path to the Invite-Only Tier</h3>
         <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 16 }}>
           {[
-            "Open a salary account with HDFC or Axis and route your primary income through it. The bank's invite algorithm prioritises customers with regular salary credits.",
-            "Hold a mid-tier card (Regalia or Axis ACE) for 12 months with consistent usage above ₹30,000/month. This builds the relationship score.",
-            "Maintain a credit score above 780. Premium card invites are never extended to applicants with a recent missed payment or high credit utilisation."
+            "Review the issuer's published eligibility criteria and contact the bank about any invitation or upgrade route; no account relationship guarantees an offer.",
+            "Keep your account in good standing and compare fees, eligible spend requirements and product benefits before accepting an upgrade.",
+            "Review your credit report for accuracy and repay on time. No score threshold guarantees a premium-card invitation or approval."
           ].map((step, i) => (
             <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
               <div style={{ background: GOLD, color: "#fff", borderRadius: "50%", width: 22, height: 22, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{i + 1}</div>

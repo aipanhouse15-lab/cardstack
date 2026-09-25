@@ -2,54 +2,38 @@
 import Link from "next/link";
 
 const GUIDES = [
-  { n: "01", title: "Home loan true cost: what banks hide from you", desc: "Processing fees, mandatory insurance, prepayment penalties — calculated into your real effective APR.", time: "6 min", tag: "Guide", tagColor: "#2563eb", tagBg: "rgba(37,99,235,0.08)", href: "/learn/loans/home-loan-true-cost" },
-  { n: "02", title: "Personal loan: advertised 10.5%, actual 13.1%", desc: "Origination fees, late charges, and foreclosure penalties turn a cheap loan expensive.", time: "5 min", tag: "Guide", tagColor: "#2563eb", tagBg: "rgba(37,99,235,0.08)", href: "/learn/loans/personal-loan-actual-apr" },
-  { n: "03", title: "Fixed vs floating rate: which actually saves more?", desc: "10 years of RBI data. Floating saved ₹4.4L — but with volatility.", time: "7 min", tag: "Analysis", tagColor: "#ea580c", tagBg: "rgba(234,88,12,0.08)", href: "/learn/loans/fixed-vs-floating-rate" },
-  { n: "04", title: "SBI vs HDFC vs ICICI home loan — honest comparison 2026", desc: "Fees, insurance, prepayment terms, and effective APR side by side.", time: "8 min", tag: "Compare", tagColor: "#7C3AED", tagBg: "rgba(124,58,237,0.08)", href: "/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" },
-  { n: "05", title: "Prepayment penalty trap: why no lock-in does not mean free", desc: "Banks say zero penalty but charge 2-4% if you switch. NBFCs are worse.", time: "5 min", tag: "Warning", tagColor: "#DC2626", tagBg: "rgba(220,38,38,0.08)", href: "/learn/loans/prepayment-penalty-trap" },
-  { n: "06", title: "Education loan: real cost after moratorium interest", desc: "₹20L becomes ₹25.7L. Interest piling adds 15-25% to total repayment.", time: "6 min", tag: "Guide", tagColor: "#2563eb", tagBg: "rgba(37,99,235,0.08)", href: "/learn/loans/education-loan-real-cost" },
-];
-
-const BANKS = [
-  { name: "SBI", adv: "7.25%", fee: "0.35% (max ₹10K)", honest: "~8.05%", extra: "₹2.9L" },
-  { name: "HDFC Bank", adv: "7.75%", fee: "0.50% (up to ₹25K)", honest: "~8.55%", extra: "₹3.8L" },
-  { name: "ICICI Bank", adv: "7.45%", fee: "0.50% (negotiable)", honest: "~8.25%", extra: "₹3.2L" },
-  { name: "Axis Bank", adv: "7.50%", fee: "0.50%", honest: "~8.30%", extra: "₹3.3L" },
-  { name: "Kotak", adv: "8.75%", fee: "0.50%", honest: "~9.50%", extra: "₹5.4L" },
+  { n: "01", title: "Home loan costs and charges", desc: "Understand interest, processing fees, optional add-ons and repayment terms.", time: "6 min", tag: "Guide", tagColor: "#2563eb", tagBg: "rgba(37,99,235,0.08)", href: "/learn/loans/home-loan-true-cost" },
+  { n: "02", title: "Personal loan: compare the full cost", desc: "Review the repayment schedule, fees and prepayment conditions before accepting an offer.", time: "5 min", tag: "Guide", tagColor: "#2563eb", tagBg: "rgba(37,99,235,0.08)", href: "/learn/loans/personal-loan-actual-apr" },
+  { n: "03", title: "Fixed vs floating rate: what to compare", desc: "Compare rate-reset terms, repayment scenarios and your ability to manage payment changes.", time: "7 min", tag: "Guide", tagColor: "#ea580c", tagBg: "rgba(234,88,12,0.08)", href: "/learn/loans/fixed-vs-floating-rate" },
+  { n: "04", title: "Comparing home-loan offers", desc: "A checklist for comparing current written offers, fees and terms.", time: "8 min", tag: "Guide", tagColor: "#7C3AED", tagBg: "rgba(124,58,237,0.08)", href: "/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" },
+  { n: "05", title: "Loan prepayment: check the applicable rules", desc: "Charges and protections depend on the loan, lender, purpose and applicable directions.", time: "5 min", tag: "Guide", tagColor: "#DC2626", tagBg: "rgba(220,38,38,0.08)", href: "/learn/loans/prepayment-penalty-trap" },
+  { n: "06", title: "Education loan: understand the repayment schedule", desc: "See how disbursements, moratorium-period interest and repayment choices affect cost.", time: "6 min", tag: "Guide", tagColor: "#2563eb", tagBg: "rgba(37,99,235,0.08)", href: "/learn/loans/education-loan-real-cost" },
 ];
 
 const FAQS = [
-  { q: "Is the advertised rate the true cost?", a: "No. Processing fees, insurance, and lock-in add 0.5-1.0% to your effective rate. On ₹50L, that is ₹3-5L extra over 20 years." },
-  { q: "Can I prepay without penalty?", a: "Floating rate from banks: yes (RBI mandated). Fixed rate and NBFC loans: 2-4% penalty applies." },
-  { q: "Which bank is cheapest?", a: "SBI at ~9.20% honest rate. ₹1.2L cheaper than HDFC over 20 years on ₹50L." },
-  { q: "Fixed or floating?", a: "Floating wins over 10+ years. Saved ₹4.4L vs fixed in the last decade." },
+  { q: "Does the advertised rate show the full cost?", a: "Not always. Compare the rate and repayment schedule alongside applicable processing and third-party charges, optional products, reset terms and prepayment conditions. Request a written breakdown from each lender." },
+  { q: "Can I prepay without a charge?", a: "It depends on the loan terms and applicable RBI directions, including sanction or renewal date, rate type, borrower, loan purpose and lender. Check your agreement and ask the lender to confirm in writing." },
+  { q: "Which lender is cheapest?", a: "There is no single answer for every borrower. Eligibility, negotiated rate, fees, tenure and loan terms vary. Compare current written offers for the same amount and tenure." },
+  { q: "Fixed or floating?", a: "Compare the starting rate, reset rules, total-cost scenarios and whether your budget can handle a higher payment. Future rates and total savings cannot be guaranteed." },
 ];
 
 const HERO_LOANS = [
-  { icon: "🏠", iconBg: "rgba(96,165,250,0.15)", name: "Home loan", sub: "₹50L, 20 years", adv: "8.50%", real: "9.35%" },
-  { icon: "💸", iconBg: "rgba(248,113,113,0.15)", name: "Personal loan", sub: "₹5L, 3 years", adv: "10.50%", real: "13.1%" },
-  { icon: "🎓", iconBg: "rgba(250,204,21,0.15)", name: "Education loan", sub: "₹20L, 2yr course", adv: "₹20L", real: "₹25.7L" },
+  { icon: "🏠", iconBg: "rgba(96,165,250,0.15)", name: "Home loan", sub: "Compare rate, fees and reset terms" },
+  { icon: "💸", iconBg: "rgba(248,113,113,0.15)", name: "Personal loan", sub: "Compare total repayment and fees" },
+  { icon: "🎓", iconBg: "rgba(250,204,21,0.15)", name: "Education loan", sub: "Review moratorium and repayment" },
 ];
 
 const QUICK_NAV = [
-  { icon: "🧮", name: "Loan Calculator", desc: "Calculate your honest APR", href: "/loan-calculator" },
-  { icon: "🏠", name: "Home Loan Guide", desc: "True cost breakdown", href: "/learn/loans/home-loan-true-cost" },
-  { icon: "⚖️", name: "Bank Comparison", desc: "SBI vs HDFC vs ICICI", href: "/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" },
-  { icon: "⚠️", name: "Prepayment Trap", desc: "Hidden penalties", href: "/learn/loans/prepayment-penalty-trap" },
-];
-
-const BREAKDOWN = [
-  ["Advertised interest rate", "8.50%", false],
-  ["+ Processing fee (₹15,000)", "+0.15%", true],
-  ["+ Mandatory insurance (₹42,000)", "+0.42%", true],
-  ["+ Prepayment lock-in (12 months)", "+0.18%", true],
-  ["+ Documentation & legal charges", "+0.10%", true],
+  { icon: "🧮", name: "Loan Calculator", desc: "Estimate EMI and upfront fees", href: "/loan-calculator" },
+  { icon: "🏠", name: "Home Loan Guide", desc: "Rates, fees and terms", href: "/learn/loans/home-loan-true-cost" },
+  { icon: "⚖️", name: "Compare Offers", desc: "A lender checklist", href: "/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" },
+  { icon: "⚠️", name: "Prepayment Guide", desc: "Check applicable rules", href: "/learn/loans/prepayment-penalty-trap" },
 ];
 
 const EXPLORE = [
-  { name: "Credit Cards", desc: "5% → 2.8% after caps", href: "/cards", color: "#7C3AED" },
-  { name: "Insurance", desc: "₹10L → ₹4.2L coverage", href: "/learn/insurance", color: "#DB2777" },
-  { name: "Savings & FDs", desc: "7.5% → 0.15% real return", href: "/learn/savings", color: "#D97706" },
+  { name: "Credit Cards", desc: "Compare current card benefits", href: "/cards", color: "#7C3AED" },
+  { name: "Insurance", desc: "Understand cover and exclusions", href: "/learn/insurance", color: "#DB2777" },
+  { name: "Savings & FDs", desc: "Compare rates and real returns", href: "/learn/savings", color: "#D97706" },
   { name: "Tax Planning", desc: "Old vs new regime math", href: "/learn/tax", color: "#16A34A" },
 ];
 
@@ -63,16 +47,16 @@ export default function LoansClient() {
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-10 items-center relative z-[2]" style={{ maxWidth: 1060, margin: "0 auto" }}>
           <div>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 16 }}>
-              <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#60A5FA" }} /> The honest number on loans
+              <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#60A5FA" }} /> Loan guides and calculators
             </div>
             <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.1, letterSpacing: "-1.5px", color: "#F1F5F9", marginBottom: 12 }}>
-              Your home loan is not <span style={{ color: "#60A5FA" }}>8.5%</span>.<br />It is probably <span style={{ color: "#F87171" }}>9.35%</span>.
+              Understand the <span style={{ color: "#60A5FA" }}>full cost</span> of borrowing.
             </h1>
             <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 420, marginBottom: 20 }}>
-              Banks advertise the base rate. We calculate the true cost — after processing fees, insurance, lock-in, and fine print that adds ₹3-5L over your loan tenure.
+              Compare the interest rate, repayment schedule, fees and terms in each written offer. Costs and eligibility vary by borrower and lender.
             </p>
             <div style={{ display: "flex", gap: 28, flexWrap: "wrap" }}>
-              {[["6", "Honest guides"], ["5", "Banks compared"], ["₹0", "Always free"]].map(([n, l], i) => (
+              {[["6", "Practical guides"], ["0", "Live rate rankings"], ["₹0", "Always free"]].map(([n, l], i) => (
                 <div key={i}><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>{n}</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>{l}</div></div>
               ))}
             </div>
@@ -83,10 +67,6 @@ export default function LoansClient() {
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <div style={{ width: 36, height: 36, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, background: t.iconBg }}>{t.icon}</div>
                   <div><div style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{t.name}</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.35)" }}>{t.sub}</div></div>
-                </div>
-                <div style={{ textAlign: "right" }}>
-                  <div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)", textDecoration: "line-through" }}>{t.adv}</div>
-                  <div style={{ fontSize: 18, fontWeight: 800, color: "#F87171" }}>{t.real}</div>
                 </div>
               </div>
             ))}
@@ -113,55 +93,16 @@ export default function LoansClient() {
       {/* CONTENT */}
       <div style={{ maxWidth: 1060, margin: "0 auto", padding: "0 24px 80px" }}>
 
-        {/* Bank table */}
-        <h2 className="text-lg font-extrabold tracking-tight mb-3" style={{ color: "var(--text)" }}>Bank comparison — honest rates</h2>
-        <div className="rounded-xl overflow-hidden mb-3" style={{ border: "1px solid var(--border)" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-card)" }}>
-            <thead>
-              <tr style={{ background: "var(--bg-muted)" }}>
-                {["Bank", "Advertised", "Processing Fee", "Honest Rate", "Extra Cost (₹50L)"].map(h => (
-                  <th key={h} style={{ textAlign: "left", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", padding: "12px 16px", color: "var(--text-faint)", borderBottom: "1px solid var(--border)" }}>{h}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {BANKS.map((b, i) => (
-                <tr key={i}>
-                  <td style={{ padding: "12px 16px", fontSize: 13, fontWeight: 700, borderBottom: i < BANKS.length - 1 ? "1px solid var(--border-light)" : "none", color: "var(--text)" }}>{b.name}</td>
-                  <td style={{ padding: "12px 16px", fontSize: 13, borderBottom: i < BANKS.length - 1 ? "1px solid var(--border-light)" : "none", color: "var(--text-secondary)" }}>{b.adv}</td>
-                  <td style={{ padding: "12px 16px", fontSize: 13, borderBottom: i < BANKS.length - 1 ? "1px solid var(--border-light)" : "none", color: "var(--text-secondary)" }}>{b.fee}</td>
-                  <td style={{ padding: "12px 16px", fontSize: 13, fontWeight: 700, borderBottom: i < BANKS.length - 1 ? "1px solid var(--border-light)" : "none", color: "#DC2626" }}>{b.honest}</td>
-                  <td style={{ padding: "12px 16px", fontSize: 13, borderBottom: i < BANKS.length - 1 ? "1px solid var(--border-light)" : "none", color: "var(--text-secondary)" }}>{b.extra}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <p className="text-xs mb-8" style={{ color: "var(--text-faint)" }}>Rates as of June 2026. Includes processing fee, insurance, and lock-in.</p>
-
-        {/* Breakdown */}
-        <h2 className="text-lg font-extrabold tracking-tight mb-3" style={{ color: "var(--text)" }}>The math: ₹50L home loan breakdown</h2>
-        <div className="rounded-2xl p-6 mb-8" style={{ background: "var(--bg-section-blue)", border: "1px solid var(--border-section-blue)" }}>
-          {BREAKDOWN.map(([label, val, dim], i) => (
-            <div key={i} className="flex justify-between items-center py-1.5">
-              <span className="text-sm" style={{ color: dim ? "var(--text-muted)" : "var(--text-secondary)" }}>{label}</span>
-              <span className="text-sm" style={{ color: dim ? "var(--text-muted)" : "var(--text)" }}>{val}</span>
-            </div>
-          ))}
-          <div className="flex justify-between items-center pt-3 mt-3" style={{ borderTop: "2px solid var(--border)" }}>
-            <span className="text-sm font-extrabold" style={{ color: "var(--text)" }}>Your honest rate</span>
-            <div style={{ textAlign: "right" }}>
-              <span className="text-2xl font-extrabold" style={{ color: "#DC2626" }}>9.35%</span>
-              <div className="text-xs" style={{ color: "var(--text-faint)" }}>Extra cost over 20 years: ₹4,72,000</div>
-            </div>
-          </div>
+        <div className="rounded-xl p-5 mb-8" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
+          <h2 className="text-lg font-extrabold tracking-tight mb-2" style={{ color: "var(--text)" }}>How to compare loan offers</h2>
+          <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>Compare offers for the same amount and tenure. Ask for the applicable interest rate and reset terms, a repayment schedule, a written list of charges and any prepayment conditions. Do not assume optional insurance or other add-ons are mandatory; confirm the terms directly with the lender.</p>
         </div>
 
         {/* Tool CTA */}
         <div className="rounded-2xl p-6 mb-8 text-center" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)" }}>
           <div className="text-2xl mb-2">🧮</div>
           <h3 className="text-lg font-extrabold mb-2" style={{ color: "var(--text)" }}>Loan Truth Calculator</h3>
-          <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>Input your loan amount, rate, and fees — get your honest effective APR + exact extra cost over tenure.</p>
+          <p className="text-sm mb-3" style={{ color: "var(--text-muted)" }}>Estimate monthly instalments and the effect of upfront charges using your own assumptions.</p>
           <Link href="/loan-calculator" className="inline-block rounded-lg px-5 py-2.5 text-sm font-bold no-underline" style={{ background: "linear-gradient(135deg, \#2563eb, \#1E40AF)", color: "\#fff" }}>Try Loan Calculator →</Link>
         </div>
 

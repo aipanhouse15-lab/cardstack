@@ -1,5 +1,5 @@
 import { COMPARISONS } from "@/data/comparisons";
-import { CARDS, CATEGORIES, calcReward } from "@/data/cards";
+import { CARDS, CATEGORIES, calcTotalMonthlyReward, isSourceReviewed } from "@/data/cards";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import BankLogo from "@/components/BankLogo";
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
   const c2 = CARDS.find(c => c.id === comp.card2);
   if (!c1 || !c2) return { title: "Not Found" };
   const pageTitle = `${c1.name} vs ${c2.name} — Which Credit Card is Better? (2026)`;
-  const pageDesc = `${c1.name} vs ${c2.name}: detailed comparison of rewards, fees, caps, and cashback across 8 spending categories. Cap-aware calculations show which card actually earns more.`;
+  const pageDesc = `${c1.name} vs ${c2.name}: illustrative comparison of rewards, fees and caps across 8 broad spending categories. Confirm merchant eligibility and issuer terms.`;
   return {
     title: pageTitle,
     description: pageDesc,
@@ -101,20 +101,8 @@ export default function ComparisonPage({ params }) {
   if (!c1 || !c2) notFound();
 
   // Calculate rewards for each category
-  const c1Details = {};
-  const c2Details = {};
-  let c1Total = 0;
-  let c2Total = 0;
-
-  CATEGORIES.forEach(cat => {
-    const spend = comp.testSpends[cat.id] || 0;
-    const r1 = calcReward(c1, cat.id, spend);
-    const r2 = calcReward(c2, cat.id, spend);
-    c1Details[cat.id] = r1;
-    c2Details[cat.id] = r2;
-    c1Total += r1.cashback;
-    c2Total += r2.cashback;
-  });
+  const { details: c1Details, total: c1Total } = calcTotalMonthlyReward(c1, comp.testSpends);
+  const { details: c2Details, total: c2Total } = calcTotalMonthlyReward(c2, comp.testSpends);
 
   const totalSpend = Object.values(comp.testSpends).reduce((a, b) => a + b, 0);
   const verdict = generateVerdict(c1, c2, c1Total, c2Total, c1Details, c2Details, CATEGORIES);
@@ -167,7 +155,7 @@ export default function ComparisonPage({ params }) {
         {c1.name} vs {c2.name}
       </h1>
       <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>
-        Cap-aware comparison at ₹{totalSpend.toLocaleString("en-IN")}/month total spend · {c1.verified && c2.verified ? "Source review dates are shown on each card page — reconfirm current issuer terms" : "Includes card data awaiting issuer-source review"}
+        Cap-aware comparison at ₹{totalSpend.toLocaleString("en-IN")}/month total spend · {isSourceReviewed(c1) && isSourceReviewed(c2) ? "Source review dates are shown on each card page — reconfirm current issuer terms" : "Includes card data awaiting issuer-source review"}
       </p>
 
       {/* Head-to-Head Summary */}

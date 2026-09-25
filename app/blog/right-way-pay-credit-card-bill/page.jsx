@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/right-way-pay-credit-card-bill
 // Template: how-to-guide
-// Color: #0891b2 | Updated: June 4, 2026
+// Color: #0891b2 | Updated: September 26, 2026
 
 const COLOR = "#0891b2";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgFullVsMinimumDue = () => (
   <svg viewBox="0 0 720 272" role="img" aria-label="Comparison of paying full amount versus minimum due on a credit card over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

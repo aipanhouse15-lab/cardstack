@@ -18,7 +18,7 @@ export const metadata = {
 // URL: /compare/star-comprehensive-vs-care-supreme
 
 const COLOR = "#DB2777";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgPremiumByAge = () => (
   <svg viewBox="0 0 520 200" role="img" aria-label="Premium by insured age band" style={{ width: "100%" }}>
@@ -68,7 +68,7 @@ export default function CompareStarVsCareSupreme() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "Star Comprehensive vs Care Supreme — health insurance for 40+ in 2026",
     author: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-06-06", dateModified: "2026-06-06",
+    datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 

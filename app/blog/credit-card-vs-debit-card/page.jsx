@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/credit-card-vs-debit-card
 // Template: Side-by-side comparison with decision guide
-// Color: #0891b2 | Updated: June 4, 2026
+// Color: #0891b2 | Updated: September 26, 2026
 
 const COLOR = "#0891b2";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgFraudProtectionComparison = () => (
   <svg viewBox="0 0 720 268" role="img" aria-label="Fraud protection comparison: credit card vs debit card" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -237,7 +237,7 @@ export default function BlogCreditCardVsDebitCard() {
     headline: "Credit Card vs Debit Card: Which Should You Actually Use?",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -352,7 +352,7 @@ export default function BlogCreditCardVsDebitCard() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Assure Fintech is an independent comparison platform. We may earn a referral fee if you apply for a card through our links. This does not affect our editorial analysis. Data accurate as of June 2026. Always check issuer terms before applying.
+        Assure Fintech is an independent comparison platform. We may earn a referral fee if you apply for a card through our links. This does not affect our editorial analysis. Reviewed September 26, 2026. Always check issuer terms before applying.
       </footer>
     </main>
     </>

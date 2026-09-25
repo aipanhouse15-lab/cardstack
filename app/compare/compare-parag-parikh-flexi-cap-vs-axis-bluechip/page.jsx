@@ -18,7 +18,7 @@ export const metadata = {
 // URL: /compare/parag-parikh-flexi-cap-vs-axis-bluechip
 
 const COLOR = "#0891B2";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgRiskReturn = () => (
   <svg viewBox="0 0 520 214" role="img" aria-label="5-year risk-adjusted return scatter" style={{ width: "100%" }}>
@@ -63,7 +63,7 @@ export default function ComparePpfasVsAxisBluechip() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "Parag Parikh Flexi Cap vs Axis Bluechip — diversified growth vs defensive large-cap, 2026",
     author: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-06-06", dateModified: "2026-06-06",
+    datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 

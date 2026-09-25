@@ -18,7 +18,7 @@ export const metadata = {
 // URL: /compare/uti-nifty50-vs-hdfc-nifty50-index
 
 const COLOR = "#0891B2";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgTrackingError = () => (
   <svg viewBox="0 0 520 200" role="img" aria-label="Tracking error and TER comparison" style={{ width: "100%" }}>
@@ -64,7 +64,7 @@ export default function CompareUtiVsHdfcNifty50() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "UTI Nifty 50 vs HDFC Nifty 50 Index: which low-cost index fund wins in 2026",
     author: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-06-06", dateModified: "2026-06-06",
+    datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 

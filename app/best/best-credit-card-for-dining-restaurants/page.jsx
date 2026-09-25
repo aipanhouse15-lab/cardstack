@@ -2,11 +2,11 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Dining and Restaurants in India (June 2026)",
+  title: "Best Credit Card for Dining and Restaurants in India (September 2026)",
   description: "There are two types of dining rewards in India: food delivery and actual restaurant dining. Most cards treat them very differently, and some popular cards gi...",
   alternates: { canonical: "/best/best-credit-card-for-dining-restaurants" },
   openGraph: {
-    title: "Best Credit Card for Dining and Restaurants in India (June 2026)",
+    title: "Best Credit Card for Dining and Restaurants in India (September 2026)",
     description: "There are two types of dining rewards in India: food delivery and actual restaurant dining. Most cards treat them very differently, and some popular cards gi...",
     type: "article",
     siteName: "Assure Fintech",
@@ -15,10 +15,17 @@ export const metadata = {
 
 
 // /best/best-credit-card-for-dining-restaurants
-// Updated: June 4, 2026
+// Updated: September 26, 2026
 
 const COLOR = "#f59e0b";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
+const SOURCES = {
+  hsbc: "https://www.hsbc.co.in/credit-cards/how-does-cashback-work/",
+  bob: "https://bankofbaroda.bank.in/digital-products/cards/credit-cards/eterna",
+  bobcard: "https://www.bobcard.co.in/credit-card-types/eterna",
+  swiggy: "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=%2FPersonal%2FPay%2FCards%2FCredit+Card%2FCredit+Cards%2FSwiggy+HDFC+Bank+Credit+Card%2FT-and-C-Swiggy-HDFC-Bank-Credit-Card.pdf",
+  sbi: "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/simplysave-upi-digi-tnc.pdf",
+};
 
 // --- SVG Components ---
 
@@ -38,14 +45,14 @@ function DiningVsDeliveryExplainer() {
       <text x="165" y="82" textAnchor="middle" fontSize="11" fill="var(--text)">MCC 5812 (Eating Places)</text>
       <text x="165" y="98" textAnchor="middle" fontSize="11" fill="var(--text)">You swipe at the restaurant table</text>
       <text x="165" y="114" textAnchor="middle" fontSize="11" fill="var(--text)">Card earns "dining" category reward</text>
-      <text x="165" y="130" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>HSBC Live+: 10%, BOB Eterna: 3.75%</text>
+      <text x="165" y="130" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>HSBC Live+: 10% (eligible dining)</text>
       <rect x="370" y="42" width="290" height="100" rx="10" fill="#6366f1" opacity="0.22" stroke="#6366f1" strokeWidth="1.5" />
       <text x="515" y="64" textAnchor="middle" fontSize="13" fontWeight="700" fill="#6366f1">Food Delivery Apps</text>
-      <text x="515" y="82" textAnchor="middle" fontSize="11" fill="var(--text)">MCC varies (Swiggy: often 5411/5812)</text>
+      <text x="515" y="82" textAnchor="middle" fontSize="11" fill="var(--text)">Platform and transaction rules apply</text>
       <text x="515" y="98" textAnchor="middle" fontSize="11" fill="var(--text)">You pay via app to aggregator</text>
       <text x="515" y="114" textAnchor="middle" fontSize="11" fill="var(--text)">Card may earn "online" or partner reward</text>
-      <text x="515" y="130" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6366f1">HDFC Swiggy: 10%, Axis ACE: 4%</text>
-      <text x="340" y="162" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ef4444">HDFC Swiggy BLCK does NOT give 10% at physical restaurants.</text>
+      <text x="515" y="130" textAnchor="middle" fontSize="11" fontWeight="700" fill="#6366f1">Swiggy HDFC: 10% on eligible Swiggy app spends</text>
+      <text x="340" y="162" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ef4444">Swiggy HDFC's 10% is for eligible Swiggy app transactions, including Dineout via Swiggy.</text>
       <text x="340" y="180" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Always check: is your card's dining rate for restaurants, delivery apps, or both?</text>
     </svg>
   );
@@ -53,12 +60,10 @@ function DiningVsDeliveryExplainer() {
 
 function DiningRewardRateChart() {
   const cards = [
-    { name: "HSBC Live+", rate: 10, cap: "₹1K/mo cap", type: "Restaurant" },
-    { name: "Axis ACE", rate: 4, cap: "On Swiggy/Zomato", type: "Delivery" },
-    { name: "BOB Eterna", rate: 3.75, cap: "No cap stated", type: "Restaurant" },
-    { name: "HDFC Diners Black", rate: 3.33, cap: "No cap", type: "All dining" },
-    { name: "SBI ELITE", rate: 2.5, cap: "Generous cap", type: "Restaurant" },
-    { name: "SBI SimplySAVE", rate: 2.5, cap: "Weekend 5X", type: "Restaurant" },
+    { name: "HSBC Live+", rate: 10, cap: "₹1,000/mo shared cap", type: "Restaurant" },
+    { name: "Axis ACE", rate: 4, cap: "Swiggy/Zomato/Ola", type: "Delivery" },
+    { name: "BOB Eterna", rate: 3.75, cap: "Check points cap", type: "Restaurant" },
+    { name: "SBI SimplySAVE", rate: 1.67, cap: "5,000 bonus-points cap/mo", type: "Restaurant" },
   ];
   return (
     <svg
@@ -69,7 +74,7 @@ function DiningRewardRateChart() {
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="280" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Effective Dining Reward Rate Comparison (June 2026)</text>
+      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Illustrative dining reward rates (eligibility and caps apply)</text>
       {[0, 2, 4, 6, 8, 10].map((v) => (
         <g key={v}>
           <text x="44" y={228 - v * 18} fontSize="10" fill="var(--text-muted)" textAnchor="end">{v}%</text>
@@ -111,11 +116,10 @@ function HighSpendDinerMathTable() {
       ))}
       <line x1="12" y1="54" x2="668" y2="54" stroke="var(--border)" strokeWidth="1" />
       {[
-        { card: "HSBC Live+", rate: "10%", cap: "₹1,000/mo", monthly: "₹1,000 (capped)", annual: "₹12,000", highlight: false },
-        { card: "BOB Eterna", rate: "3.75%", cap: "None", monthly: "₹750", annual: "₹9,000", highlight: true },
-        { card: "HDFC Diners Black", rate: "3.33%", cap: "None", monthly: "₹666", annual: "₹7,992", highlight: false },
-        { card: "SBI ELITE", rate: "2.5%", cap: "None", monthly: "₹500", annual: "₹6,000", highlight: false },
-        { card: "HDFC Swiggy BLCK", rate: "0%", cap: "N/A", monthly: "₹0 (restaurants excluded)", annual: "₹0", highlight: false },
+        { card: "HSBC Live+", rate: "10%", cap: "₹1,000/mo shared", monthly: "₹1,000 max", annual: "₹12,000 max", highlight: false },
+        { card: "BOB Eterna", rate: "3.75%*", cap: "Check current points cap", monthly: "₹750*", annual: "₹9,000*", highlight: true },
+        { card: "SBI SimplySAVE", rate: "Up to 1.67%*", cap: "5,000-point monthly cap", monthly: "Up to ₹333*", annual: "Up to ₹4,000*", highlight: false },
+        { card: "Swiggy HDFC", rate: "10%**", cap: "₹1,500/cycle", monthly: "₹1,500 max", annual: "₹18,000 max", highlight: false },
       ].map((r, i) => (
         <g key={i}>
           <rect x="12" y={58 + i * 38} width="656" height="36" rx="3" fill={r.highlight ? COLOR : "transparent"} opacity={r.highlight ? "0.06" : "1"} />
@@ -126,7 +130,7 @@ function HighSpendDinerMathTable() {
           <text x="510" y={81 + i * 38} fontSize="10.5" fontWeight="700" fill={r.annual === "₹0" ? "#ef4444" : COLOR}>{r.annual}</text>
         </g>
       ))}
-      <text x="340" y="250" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">HSBC Live+ tops for most with its ₹12,000 cap — but BOB Eterna wins above ₹26,667/month restaurant spend (no cap).</text>
+      <text x="340" y="250" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">*Point values/caps and eligible dining classification apply. **Swiggy HDFC rate is limited to eligible Swiggy app transactions.</text>
     </svg>
   );
 }
@@ -137,25 +141,25 @@ function WeekendDiningBonusCalc() {
       viewBox="0 0 680 208"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Illustration of SBI SimplySAVE weekend dining bonus and how it compares to weekday rates"
+      aria-label="Illustration of SBI SimplySAVE reward points for eligible dining spend"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="190" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">SBI SimplySAVE: The Weekend Dining Bonus</text>
+      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">SBI SimplySAVE: Points on Eligible Dining Spend</text>
       <rect x="30" y="42" width="280" height="100" rx="10" fill="var(--border)" opacity="0.3" />
-      <text x="170" y="64" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Weekday Dining (Mon-Thu)</text>
-      <text x="170" y="84" textAnchor="middle" fontSize="22" fontWeight="800" fill="var(--text-muted)">2.5%</text>
-      <text x="170" y="104" textAnchor="middle" fontSize="11" fill="var(--text-muted)">1 Reward Point per ₹100</text>
-      <text x="170" y="120" textAnchor="middle" fontSize="11" fill="var(--text-muted)">(post-category multiplier)</text>
-      <text x="170" y="136" textAnchor="middle" fontSize="10" fill="var(--text-muted)">₹499 annual fee waivable at ₹1L</text>
+      <text x="170" y="64" textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">Eligible dining spend</text>
+      <text x="170" y="84" textAnchor="middle" fontSize="22" fontWeight="800" fill="var(--text-muted)">10 points</text>
+      <text x="170" y="104" textAnchor="middle" fontSize="11" fill="var(--text-muted)">per ₹150 spent</text>
+      <text x="170" y="120" textAnchor="middle" fontSize="11" fill="var(--text-muted)">4 points = ₹1 at SBI redemption value</text>
+      <text x="170" y="136" textAnchor="middle" fontSize="10" fill="var(--text-muted)">5,000 accelerated points/month cap</text>
       <rect x="370" y="42" width="280" height="100" rx="10" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" />
-      <text x="510" y="64" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Weekend Dining (Fri-Sun)</text>
-      <text x="510" y="84" textAnchor="middle" fontSize="22" fontWeight="800" fill={COLOR}>5X Points</text>
-      <text x="510" y="104" textAnchor="middle" fontSize="11" fill="var(--text)">Effectively 2.5% on dining</text>
-      <text x="510" y="120" textAnchor="middle" fontSize="11" fill="var(--text)">on qualifying weekend spends</text>
-      <text x="510" y="136" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Popular with families dining out Sat/Sun</text>
-      <text x="340" y="170" textAnchor="middle" fontSize="11" fill="var(--text-muted)">SimplySAVE suits occasional diners who mostly eat out on weekends and want a budget card.</text>
-      <text x="340" y="184" textAnchor="middle" fontSize="10" fill="var(--text-muted)">For frequent restaurant-goers, HSBC Live+ or BOB Eterna outperform on annual return.</text>
+      <text x="510" y="64" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Other eligible spends</text>
+      <text x="510" y="84" textAnchor="middle" fontSize="22" fontWeight="800" fill={COLOR}>1 point</text>
+      <text x="510" y="104" textAnchor="middle" fontSize="11" fill="var(--text)">per ₹150 spent</text>
+      <text x="510" y="120" textAnchor="middle" fontSize="11" fill="var(--text)">Category and exclusions apply</text>
+      <text x="510" y="136" textAnchor="middle" fontSize="10" fill="var(--text-muted)">₹499 fee; waiver terms apply</text>
+      <text x="340" y="170" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Dining reward points are category-based, not an extra weekend multiplier.</text>
+      <text x="340" y="184" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Check eligible merchant category, redemption value and the latest card terms.</text>
     </svg>
   );
 }
@@ -177,12 +181,10 @@ function DiningCardDecisionMatrix() {
         <text key={h} x={[24, 160, 310, 450][i]} y="55" fontSize="11" fontWeight="700" fill="var(--text)">{h}</text>
       ))}
       {[
-        { spend: "Under ₹5,000", use: "Mostly delivery", card: "Axis ACE (₹499)", why: "4% on Swiggy/Zomato + utility 5%" },
-        { spend: "₹5K-₹15K", use: "Mix of restaurants + delivery", card: "HSBC Live+ (₹1,999)", why: "10% on both, ₹1K cap rarely hit" },
-        { spend: "₹15K-₹30K", use: "Frequent restaurant dining", card: "BOB Eterna (₹2,499)", why: "3.75% with no monthly cap" },
-        { spend: "Above ₹30K", use: "Heavy restaurant dining", card: "HDFC Diners Black (₹10K)", why: "3.33% uncapped + airport lounge" },
-        { spend: "Occasional, weekends", use: "Family weekend dining", card: "SBI SimplySAVE (₹499)", why: "Budget card, weekend bonus" },
-        { spend: "SBI cardholder existing", use: "Regular restaurant use", card: "SBI Card ELITE (₹4,999)", why: "2.5% solid, works at all restaurants" },
+        { spend: "Any spend", use: "Dining/delivery/grocery", card: "HSBC Live+", why: "10% eligible; ₹1,000 shared monthly cap" },
+        { spend: "Swiggy app user", use: "Delivery or Dineout via Swiggy", card: "Swiggy HDFC", why: "10% eligible app spend; ₹1,500/cycle cap" },
+        { spend: "Eligible partner spend", use: "Swiggy/Zomato/Ola", card: "Axis ACE", why: "4%; ₹500 shared cap with utility tier" },
+        { spend: "Points preferred", use: "Dining at eligible merchants", card: "BOB Eterna / SBI SimplySAVE", why: "Compare point value, caps, fee and eligibility" },
       ].map((r, i) => (
         <g key={i}>
           <rect x="12" y={68 + i * 40} width="656" height="38" rx="3" fill={i % 2 === 0 ? COLOR : "transparent"} opacity={i % 2 === 0 ? "0.04" : "1"} />
@@ -206,7 +208,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "Which credit card gives best rewards on restaurant dining in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HSBC Live+ gives the highest dining reward rate at 10% on dining and grocery, but has a ₹1,000 per month cashback cap. For uncapped dining rewards, BOB Eterna gives 3.75% with no monthly restriction. For very high restaurant spending (above ₹30,000/month), HDFC Diners Black at 3.33% uncapped may return more annually.",
+          text: "HSBC Live+ advertises 10% accelerated cashback on eligible dining, food delivery and grocery, up to ₹1,000 a month, plus 1.5% on most other eligible spends. Its fee is ₹999 and the renewal fee is waived when annual spends exceed ₹2 lakh. Verify the current terms and your eligible spend mix.",
         },
       },
       {
@@ -214,7 +216,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "Does HDFC Swiggy BLCK give rewards at physical restaurants?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. HDFC Swiggy BLCK's 10% reward applies specifically to orders on the Swiggy platform including food delivery, Swiggy Instamart, and Dineout (when booked via Swiggy). If you swipe this card directly at a restaurant that is not part of the Swiggy ecosystem, you earn the standard 1% base rate. The card is excellent for Swiggy app users but not for standalone restaurant visits.",
+          text: "The 10% tier applies to eligible Swiggy app transactions, including food delivery, Instamart, Genie and Dineout, subject to a ₹1,500 billing-cycle cap and exclusions. A direct physical-restaurant transaction is not a Swiggy-app spend; it falls under the applicable other-category terms.",
         },
       },
       {
@@ -222,7 +224,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "What is MCC 5812 and why does it matter for dining rewards?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "MCC 5812 (Eating Places and Restaurants) is the merchant category code assigned to most restaurants when they register for card payment processing. When a card advertises 'dining rewards', it typically applies to transactions coded under MCC 5812. Food delivery apps may settle under different MCCs depending on how they have registered with payment networks.",
+          text: "MCCs are merchant-category codes assigned during merchant onboarding. A card issuer may use transaction category or merchant-specific terms to determine rewards, so do not assume every restaurant or aggregator transaction receives the dining rate. Check the issuer's exclusions and posted rewards.",
         },
       },
       {
@@ -230,7 +232,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "How does HSBC Live+ dining cashback actually work?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HSBC Live+ gives 10% cashback on dining and grocery combined, capped at ₹1,000 cashback per billing cycle. The cap means you effectively get maximum ₹12,000 in dining and grocery cashback annually. Cashback is credited to your statement. The ₹1,999 annual fee makes the card value-positive if you hit the cap for even 4-5 months per year.",
+          text: "HSBC says Live+ earns 10% accelerated cashback, up to ₹1,000 a month, on dining, food delivery and grocery, plus 1.5% unlimited cashback on most other eligible spends. The ₹999 annual fee is waived when annual spends exceed ₹2 lakh. Exclusions apply, so read the current terms.",
         },
       },
       {
@@ -238,7 +240,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "Is BOB Eterna good for dining?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. BOB Eterna (Bank of Baroda) gives 3.75% on dining, travel, and online spends. There is no monthly cap advertised on the dining category. For frequent restaurant-goers spending ₹15,000 to ₹30,000 per month on dining, Eterna often delivers better annual returns than HSBC Live+ because the cap never becomes a constraint. The ₹2,499 annual fee is waivable at ₹1.5 lakh annual spend.",
+          text: "BOBCARD Eterna advertises accelerated dining rewards; its product information lists 15 reward points per ₹100 for dining and values each point at ₹0.25 (3.75% arithmetic before eligibility, caps and fees). The issuer lists ₹2,499 first-year and annual fees. Check current reward caps and fee terms before comparing net value.",
         },
       },
       {
@@ -246,7 +248,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "Does SBI SimplySAVE give extra rewards on weekend dining?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "SBI SimplySAVE gives 10X reward points on dining, movies, and groceries on weekends (Friday through Sunday). The base rate is 1 point per ₹100, so 10X is 10 points per ₹100, equivalent to roughly 2.5% cashback when redeemed at standard SBI points value. For families that primarily eat out on weekends, this is a decent benefit on a budget card with a ₹499 annual fee.",
+          text: "SBI SimplySAVE earns 10 reward points per ₹150 on eligible dining, movies, departmental stores and groceries (not a weekend-only bonus); other eligible spends earn 1 point per ₹150. At SBI's 4 points = ₹1 redemption value, the accelerated tier is about 1.67% before exclusions and the 5,000 accelerated-point monthly cap. Fees and waiver terms apply.",
         },
       },
       {
@@ -254,7 +256,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "Can I get dining rewards when booking via Dineout or EazyDiner?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Dineout bookings paid by card typically settle under MCC 5812 (Eating Places) and qualify for dining rewards on most cards. EazyDiner similarly settles under restaurant MCCs for table bookings. However, when Dineout is accessed through Swiggy, the MCC may vary. Check with your specific card issuer for the exact category classification.",
+          text: "Eligibility depends on the card's terms and the transaction route. Swiggy HDFC's terms include eligible Dineout spends made through the Swiggy app in the 10% category, subject to its cap and exclusions. Other cards may classify aggregator/table-booking charges differently; check with the issuer.",
         },
       },
       {
@@ -262,7 +264,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "Is HDFC Diners Black worth ₹10,000 per year for dining?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HDFC Diners Black is worth the ₹10,000 fee if you have high overall spend, not just dining. The card gives 3.33% on all categories including dining, unlimited lounge access, and premium travel benefits. For someone spending ₹3 lakh+ per month across all categories, the card pays back multiple times. For dining alone, BOB Eterna at ₹2,499 delivers comparable category returns at much lower cost.",
+          text: "That depends on the card variant, annual fee/waiver, how you redeem points and your overall eligible spend. HDFC's terms cap or exclude some categories, so a flat 3.33% on all dining should not be assumed. Compare current issuer terms and benefits you will actually use.",
         },
       },
       {
@@ -270,7 +272,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "What is the best credit card for ordering from Swiggy and Zomato?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "For Swiggy specifically, HDFC Swiggy BLCK gives 10% on all Swiggy app orders. For Zomato orders, Axis ACE gives 4% on food delivery apps. Amazon Pay ICICI gives 2% on Swiggy if Swiggy is linked as an Amazon Pay merchant. For someone who uses both Swiggy and Zomato, Axis ACE covers both platforms at 4% and remains useful for utilities.",
+          text: "Swiggy HDFC advertises 10% on eligible Swiggy app transactions, including delivery and Dineout, subject to a ₹1,500 billing-cycle cap and exclusions. Axis ACE advertises 4% on eligible Swiggy, Zomato and Ola spends. Compare the route-specific terms and caps; do not assume an Amazon Pay merchant rate applies to Swiggy.",
         },
       },
     ],
@@ -279,10 +281,10 @@ export default function BestCreditCardForDiningRestaurants() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for Dining and Restaurants in India (June 2026): HSBC, BOB Eterna, Diners Black",
+    headline: "Dining Credit Cards: Compare Restaurant and Delivery Rewards",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -311,7 +313,7 @@ export default function BestCreditCardForDiningRestaurants() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for Dining and Restaurants in India (June 2026)
+            Best Credit Card for Dining and Restaurants in India (September 2026)
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
@@ -352,7 +354,7 @@ export default function BestCreditCardForDiningRestaurants() {
       </div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", marginBottom: 10 }}>
-        There are two types of dining rewards in India: food delivery and actual restaurant dining. Most cards treat them very differently, and some popular cards give you zero at a sit-down restaurant.
+        Restaurant payments and food-delivery/platform transactions can earn differently. Compare eligible channels, merchant terms, monthly caps and card fees before picking a dining card.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
@@ -367,64 +369,64 @@ export default function BestCreditCardForDiningRestaurants() {
           The Swiggy Card Problem: A Common Misunderstanding
         </h2>
         <p>
-          HDFC Swiggy BLCK is one of the most-searched dining cards in India in 2026. Many people assume that a card named "Swiggy" will reward them at restaurants. It does not, not in the traditional sense.
+          Swiggy HDFC's accelerated rate is tied to eligible Swiggy app transactions, not every restaurant payment.
         </p>
         <p>
-          HDFC Swiggy BLCK gives 10% on orders placed through the Swiggy app, including food delivery, Swiggy Instamart grocery delivery, and Swiggy Dineout restaurant bookings made through the app. If you walk into a restaurant and tap your Swiggy card on their POS machine, you earn the base rate of approximately 1%, not 10%. The card rewards the Swiggy platform, not the dining category.
+          Its current terms list 10% on eligible Swiggy app transactions (food delivery, Instamart, Genie and Dineout) up to ₹1,500 per billing cycle. A card payment made directly at a restaurant is not an app transaction and instead follows the other-category rate/cap. Check exclusions and transaction posting.
         </p>
         <p>
-          This is not a criticism of HDFC Swiggy BLCK. It is an excellent card for its stated purpose. But confusing it with a restaurant dining card is a genuine mistake that costs people money. Always read the reward category fine print, not the card's brand name.
+          The distinction is the payment channel, not just whether the purchase involved a meal. Check the card's current terms rather than inferring eligibility from the card name or merchant alone.
         </p>
       </section>
 
       {/* Top picks */}
       <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 18, color: "var(--text)" }}>Top Dining Cards Ranked</h2>
+        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 18, color: "var(--text)" }}>Selected Cards by Dining Use Case</h2>
 
         {[
           {
             rank: "1",
             name: "HSBC Live+",
-            tag: "Highest Dining Rate",
-            fee: "₹1,999/yr",
-            reward: "10% on dining + grocery (₹1,000/mo cap)",
-            best: "Regular diners spending up to ₹10,000/month at restaurants",
+            tag: "High rate; shared cap",
+            fee: "₹999 joining/annual; renewal waiver above ₹2L spend",
+            reward: "10% dining/delivery/grocery; ₹1,000/month accelerated cap",
+            best: "Eligible dining spend before the shared cap is used",
             slug: "hsbc-live-plus",
           },
           {
             rank: "2",
             name: "BOB Eterna",
-            tag: "Best for High-Spend Diners",
-            fee: "₹2,499/yr",
-            reward: "3.75% on dining, travel, online (no monthly cap)",
-            best: "Frequent diners spending ₹15,000+ per month at restaurants",
+            tag: "Points-based dining rate",
+            fee: "₹2,499 joining and annual fee per issuer page",
+            reward: "15 reward points/₹100 on dining; point value and caps apply",
+            best: "Compare current points cap and redemption value first",
             slug: "bob-eterna",
           },
           {
             rank: "3",
             name: "HDFC Diners Black",
-            tag: "Best Premium All-Rounder",
-            fee: "₹10,000/yr",
-            reward: "3.33% on all categories including dining",
-            best: "High-income diners who want lounge access + flat rewards",
+            tag: "Premium; terms vary by variant",
+            fee: "₹10,000 joining; ₹5,000 renewal (waiver terms apply)",
+            reward: "Reward points; value varies by redemption, exclusions and caps",
+            best: "Review current card variant terms and fee waiver",
             slug: "hdfc-diners-black",
           },
           {
             rank: "4",
             name: "SBI Card ELITE",
-            tag: "Best for SBI Users",
+            tag: "Check current rewards terms",
             fee: "₹4,999/yr",
-            reward: "2.5% on dining",
-            best: "SBI account holders who dine regularly",
+            reward: "Points-based; category and redemption rules apply",
+            best: "Compare eligible reward value against the annual fee",
             slug: "sbi-card-elite",
           },
           {
             rank: "5",
             name: "SBI SimplySAVE",
-            tag: "Best Budget Dining Card",
+            tag: "Eligible dining category",
             fee: "₹499/yr (waivable at ₹1L)",
-            reward: "10X points on weekend dining (approx 2.5%)",
-            best: "Weekend family diners on a budget card",
+            reward: "10 points/₹150 on eligible dining; 5,000-point monthly accelerated cap",
+            best: "Occasional diners; category and point-value rules apply",
             slug: "sbi-simplysave",
           },
         ].map((card) => (
@@ -487,13 +489,13 @@ export default function BestCreditCardForDiningRestaurants() {
           HSBC Live+: The 10% Card That Fills Up Fast
         </h2>
         <p>
-          HSBC Live+ has the highest advertised dining reward rate of any major credit card in India: 10% on dining and grocery combined. The catch is the ₹1,000 per billing cycle cashback cap. Once you have spent ₹10,000 at qualifying restaurants and grocery stores in a month, the rate drops to the base.
+          HSBC currently describes 10% accelerated cashback on eligible dining, food delivery and grocery spends, up to ₹1,000 per month, plus 1.5% cashback on most other eligible spends. The issuer lists a ₹999 annual fee, waived when annual spends exceed ₹2 lakh. Check eligibility and exclusions in current terms.
         </p>
         <p>
-          For most Indian households spending ₹5,000 to ₹8,000 per month on dining, the cap is rarely a binding constraint and the 10% is genuinely realized. At ₹1,999 per year, the card pays back its fee in less than 2 months of full cap utilization, and the annual maximum cashback of ₹12,000 against the ₹1,999 fee is a compelling proposition.
+          The ₹1,000 accelerated cap is shared across dining, food delivery and grocery. Shopping or utilities should not be counted toward that accelerated pool based on the current product information. Compare your eligible spend—not the headline percentage alone.
         </p>
         <p>
-          The problem surfaces for frequent high-spend diners. If you are spending ₹20,000 per month at restaurants, you hit the ₹1,000 cap at ₹10,000 of spend and earn nothing on the remaining ₹10,000. In this scenario, BOB Eterna's uncapped 3.75% returns ₹750 per month versus HSBC Live+'s capped ₹1,000 — they are close, but Eterna becomes the better choice above approximately ₹27,000/month in dining spend.
+          For frequent diners, the cap can be shared with eligible food delivery and grocery spend, leaving less than ₹1,000 for restaurant dining. Compare alternatives only after accounting for their points redemption value, caps and annual fees.
         </p>
       </section>
 
@@ -505,13 +507,13 @@ export default function BestCreditCardForDiningRestaurants() {
           BOB Eterna: The Underrated All-Rounder
         </h2>
         <p>
-          Bank of Baroda's Eterna card does not get enough attention in Indian personal finance discussions. It offers 3.75% on dining, travel bookings, and online shopping — three categories that together cover the bulk of urban discretionary spending. There is no meaningful monthly cap on the dining category.
+          BOBCARD Eterna's product material advertises 15 reward points per ₹100 on dining and states a value of ₹0.25 per point, or 3.75% arithmetic before eligibility, caps, fees and redemption conditions. The issuer page lists a ₹2,499 first-year and annual fee; confirm any current offer and reward cap before applying.
         </p>
         <p>
-          For someone spending ₹20,000 per month on restaurant dining, BOB Eterna returns ₹750 per month, or ₹9,000 annually, against a ₹2,499 annual fee that is waivable at ₹1.5 lakh annual spend. That is a 3.6x return on the fee. The card also covers travel well enough that a dedicated travel card may not be necessary for moderate travelers.
+          At ₹20,000/month, 3.75% would be ₹750/month only if all transactions qualify and the reward cap is not reached. This gross illustration excludes fees and other restrictions; it is not a guaranteed net return.
         </p>
         <p>
-          BOB is not HDFC or Axis, which sometimes makes people hesitant. The card functions fine on Visa and Mastercard networks and is accepted wherever those networks operate. Do not let the issuer's ranking distract from the card's math.
+          Always check the network variant and issuer terms for your own card. A headline point rate alone is not enough to compare value.
         </p>
       </section>
 
@@ -524,10 +526,10 @@ export default function BestCreditCardForDiningRestaurants() {
           When Dining Rewards Don't Trigger: Edge Cases to Know
         </h2>
         <p>
-          Not every restaurant transaction qualifies as "dining" for reward purposes. Restaurants that register as grocery stores, caterers (MCC 5812 vs 5812 sub-codes), or hotel restaurants billed through the hotel's main account can sometimes settle under different MCCs, earning only the base reward rate.
+          Not every restaurant transaction necessarily receives a dining reward. Eligibility depends on issuer terms and how the merchant/transaction is classified; an aggregator or hotel transaction may be treated differently from a direct restaurant purchase.
         </p>
         <p>
-          High-end hotels in India frequently process restaurant bills through the hotel's property MCC rather than a separate restaurant MCC. If you dine at a restaurant inside an ITC, Oberoi, or Taj hotel and pay by card, the reward may apply at the hotel rate rather than the dining rate. This is worth knowing before assuming your premium dining experience is earning dining rewards.
+          For restaurant concessions inside hotels or malls, check the posted transaction and issuer rules rather than assuming the outlet name determines its category.
         </p>
         <p>
           The practical workaround is to monitor your reward credits for the first 2-3 transactions at a new dining venue and confirm the category credited. Banks like HDFC and Axis show the category on the Rewards portal. If you see hotel or services rather than dining, the merchant has registered under a different MCC.
@@ -553,16 +555,16 @@ export default function BestCreditCardForDiningRestaurants() {
             <strong>Estimate your actual monthly restaurant spend</strong> (excluding food delivery apps). This single number determines your best card.
           </li>
           <li>
-            <strong>Under ₹10,000/month:</strong> HSBC Live+ at 10% is your card. The cap will not bind at this spend level.
+            <strong>For eligible dining under the HSBC cap:</strong> Live+ advertises 10% on dining, delivery and groceries, up to ₹1,000/month combined across those categories; grocery or delivery spend may use part of the cap.
           </li>
           <li>
-            <strong>Between ₹15,000 and ₹30,000/month:</strong> BOB Eterna's 3.75% uncapped returns more than HSBC's capped 10%.
+            <strong>For higher restaurant spend:</strong> compare HSBC's remaining accelerated cap with a points card such as Eterna, after verifying its points cap, redemption value and annual fee.
           </li>
           <li>
-            <strong>Above ₹30,000/month:</strong> Evaluate HDFC Diners Black if you also want lounge access and premium benefits.
+            <strong>For premium cards:</strong> compare the current card variant's reward value, point caps, lounge terms and annual fee; do not assume a flat reward rate across categories.
           </li>
           <li>
-            <strong>If you primarily use Swiggy/Zomato</strong> rather than sit-down restaurants: Axis ACE at 4% on food delivery apps is the better pick, not HDFC Swiggy BLCK.
+            <strong>If you primarily use food apps:</strong> compare Swiggy HDFC's eligible 10% Swiggy-app rate (₹1,500 cycle cap) with Axis ACE's 4% eligible Swiggy/Zomato/Ola rate and their respective exclusions.
           </li>
           <li>
             <strong>Test your first few transactions</strong> at new restaurants and verify the reward category triggered in your bank's rewards portal.
@@ -601,6 +603,7 @@ export default function BestCreditCardForDiningRestaurants() {
       </section>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
+        <p>Issuer references: <a href={SOURCES.hsbc} target="_blank" rel="noreferrer">HSBC Live+ cashback details</a> · <a href={SOURCES.bob} target="_blank" rel="noreferrer">Bank of Baroda Eterna details</a> · <a href={SOURCES.bobcard} target="_blank" rel="noreferrer">BOBCARD Eterna rewards/fees</a> · <a href={SOURCES.swiggy} target="_blank" rel="noreferrer">Swiggy HDFC terms</a> · <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI SimplySAVE UPI/rewards terms</a>.</p>
         <strong>Disclaimer:</strong> Assure Fintech is an independent editorial platform. We are not affiliated with any bank and do not hold a banking license. Reward rates and monthly caps on all cards mentioned are subject to change by the issuing bank without notice. Verify current terms before applying. Some links may generate referral commissions that do not affect our editorial independence.
       </footer>
     </main>

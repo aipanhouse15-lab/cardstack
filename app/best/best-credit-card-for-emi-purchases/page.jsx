@@ -15,10 +15,10 @@ export const metadata = {
 
 
 // /best/credit-card-for-emi-purchases
-// Updated: June 4, 2026
+// Updated: September 26, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const IconEMI = () => (
   <svg width="48" height="48" viewBox="0 0 48 59" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="EMI credit card icon">

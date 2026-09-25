@@ -26,9 +26,9 @@ export default function LoanCalculatorClient() {
   const [amount, setAmount] = useState(5000000);
   const [rate, setRate] = useState(8.5);
   const [tenure, setTenure] = useState(20);
-  const [processingPct, setProcessingPct] = useState(0.5);
-  const [insurance, setInsurance] = useState(42000);
-  const [otherCharges, setOtherCharges] = useState(15000);
+  const [processingPct, setProcessingPct] = useState(0);
+  const [insurance, setInsurance] = useState(0);
+  const [otherCharges, setOtherCharges] = useState(0);
 
   const selectLoanType = (id) => {
     const t = LOAN_TYPES.find(l => l.id === id);
@@ -36,45 +36,39 @@ export default function LoanCalculatorClient() {
     setAmount(t.defaultAmount);
     setRate(t.defaultRate);
     setTenure(t.defaultTenure);
-    if (id === "personal") { setProcessingPct(2); setInsurance(0); setOtherCharges(5000); }
-    else if (id === "education") { setProcessingPct(1); setInsurance(0); setOtherCharges(10000); }
-    else { setProcessingPct(0.5); setInsurance(42000); setOtherCharges(15000); }
+    setProcessingPct(0);
+    setInsurance(0);
+    setOtherCharges(0);
   };
 
   const result = useMemo(() => {
     const processingFee = amount * processingPct / 100;
     const totalHiddenCost = processingFee + insurance + otherCharges;
-    const effectiveAmount = amount;
     const emiAdvertised = calcEMI(amount, rate, tenure);
     const totalPayAdvertised = emiAdvertised * tenure * 12;
     const interestAdvertised = totalPayAdvertised - amount;
 
-    // Effective rate: solve for r where EMI(amount - upfront, r, tenure) * n = totalPay + hidden
-    // Approximate: add hidden costs spread over tenure to interest
-    const totalPayHonest = totalPayAdvertised + totalHiddenCost;
-    const interestHonest = totalPayHonest - amount;
-
-    // Back-solve effective rate (Newton approximation)
-    let effRate = rate;
-    for (let i = 0; i < 50; i++) {
-      const emi = calcEMI(amount, effRate, tenure);
-      const total = emi * tenure * 12;
-      const diff = total - totalPayHonest;
-      if (Math.abs(diff) < 100) break;
-      effRate += diff < 0 ? 0.01 : -0.01;
+    // Illustrative annualized cost assumes all entered charges are deducted upfront.
+    const netDisbursed = Math.max(1, amount - totalHiddenCost);
+    const periods = tenure * 12;
+    let low = 0;
+    let high = 1;
+    for (let i = 0; i < 80; i++) {
+      const monthlyRate = (low + high) / 2;
+      const presentValue = monthlyRate === 0
+        ? emiAdvertised * periods
+        : emiAdvertised * (1 - Math.pow(1 + monthlyRate, -periods)) / monthlyRate;
+      if (presentValue > netDisbursed) low = monthlyRate;
+      else high = monthlyRate;
     }
-
-    const extraCost = totalPayHonest - totalPayAdvertised;
-    const processingPctEff = (processingFee / amount * 100);
+    const annualizedCostRate = (Math.pow(1 + (low + high) / 2, 12) - 1) * 100;
+    const extraCost = totalHiddenCost;
 
     return {
       emiAdvertised: Math.round(emiAdvertised),
-      emiHonest: Math.round(calcEMI(amount, effRate, tenure)),
       totalPayAdvertised: Math.round(totalPayAdvertised),
-      totalPayHonest: Math.round(totalPayHonest),
       interestAdvertised: Math.round(interestAdvertised),
-      interestHonest: Math.round(interestHonest),
-      effectiveRate: effRate.toFixed(2),
+      effectiveRate: annualizedCostRate.toFixed(2),
       extraCost: Math.round(extraCost),
       processingFee: Math.round(processingFee),
       totalHiddenCost: Math.round(totalHiddenCost),
@@ -91,7 +85,7 @@ export default function LoanCalculatorClient() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#60A5FA" }} /> Tool
           </div>
           <h1 style={{ fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 800, lineHeight: 1.15, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 8 }}>Loan Truth Calculator</h1>
-          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", maxWidth: 500 }}>Enter your loan details. Get your honest effective APR — after processing fees, insurance, and all hidden charges.</p>
+          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", maxWidth: 500 }}>Estimate an annualized borrowing-cost illustration from your loan details and assumed upfront charges. Not a lender quotation or regulatory APR disclosure.</p>
         </div>
       </div>
 
@@ -126,7 +120,7 @@ export default function LoanCalculatorClient() {
               </div>
             ))}
 
-            <h3 className="text-base font-extrabold mb-4 mt-6 pt-4" style={{ color: "var(--text)", borderTop: "1px solid var(--border)" }}>Hidden costs</h3>
+            <h3 className="text-base font-extrabold mb-4 mt-6 pt-4" style={{ color: "var(--text)", borderTop: "1px solid var(--border)" }}>Assumed upfront charges</h3>
             {[
               { label: "Processing fee (%)", value: processingPct, set: setProcessingPct, min: 0, max: 5, step: 0.1 },
               { label: "Insurance charges (₹)", value: insurance, set: setInsurance, min: 0, max: 200000, step: 1000 },
@@ -147,7 +141,7 @@ export default function LoanCalculatorClient() {
           <div>
             {/* Big number */}
             <div className="rounded-2xl p-6 mb-4 text-center" style={{ background: "var(--bg-section-blue)", border: "1px solid var(--border-section-blue)" }}>
-              <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "var(--text-faint)" }}>Your honest effective rate</div>
+              <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "var(--text-faint)" }}>Illustrative annualized cost rate</div>
               <div className="flex items-center justify-center gap-4">
                 <div>
                   <div className="text-2xl font-extrabold" style={{ color: "var(--text-faint)", textDecoration: "line-through" }}>{rate}%</div>
@@ -156,7 +150,7 @@ export default function LoanCalculatorClient() {
                 <div style={{ fontSize: 18, color: "var(--text-faint)" }}>→</div>
                 <div>
                   <div className="text-4xl font-extrabold" style={{ color: "#DC2626" }}>{result.effectiveRate}%</div>
-                  <div className="text-[10px]" style={{ color: "#DC2626" }}>Honest rate</div>
+                  <div className="text-[10px]" style={{ color: "#DC2626" }}>With assumed upfront charges</div>
                 </div>
               </div>
             </div>
@@ -165,12 +159,10 @@ export default function LoanCalculatorClient() {
             <div className="rounded-2xl p-6 mb-4" style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}>
               <h3 className="text-sm font-extrabold mb-3" style={{ color: "var(--text)" }}>Cost breakdown</h3>
               {[
-                ["Monthly EMI (advertised)", formatINR(result.emiAdvertised), false],
-                ["Monthly EMI (honest)", formatINR(result.emiHonest), true],
-                ["Total interest (advertised)", formatINR(result.interestAdvertised), false],
-                ["Total interest (honest)", formatINR(result.interestHonest), true],
-                ["Processing fee", formatINR(result.processingFee), true],
-                ["Insurance + other charges", formatINR(insurance + otherCharges), true],
+                ["Estimated monthly EMI", formatINR(result.emiAdvertised), false],
+                ["Estimated interest over tenure", formatINR(result.interestAdvertised), false],
+                ["Assumed processing fee", formatINR(result.processingFee), true],
+                ["Other assumed upfront charges", formatINR(insurance + otherCharges), true],
               ].map(([label, val, isRed], i) => (
                 <div key={i} className="flex justify-between py-1.5" style={{ borderBottom: i < 5 ? "1px solid var(--border-light)" : "none" }}>
                   <span className="text-sm" style={{ color: "var(--text-muted)" }}>{label}</span>
@@ -178,16 +170,16 @@ export default function LoanCalculatorClient() {
                 </div>
               ))}
               <div className="flex justify-between pt-3 mt-2" style={{ borderTop: "2px solid var(--border)" }}>
-                <span className="text-sm font-extrabold" style={{ color: "var(--text)" }}>Extra cost vs advertised</span>
+                <span className="text-sm font-extrabold" style={{ color: "var(--text)" }}>Total assumed upfront charges</span>
                 <span className="text-xl font-extrabold" style={{ color: "#DC2626" }}>{formatINR(result.extraCost)}</span>
               </div>
             </div>
 
             {/* Warning */}
             <div className="rounded-xl p-4" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
-              <div className="text-xs font-bold mb-1" style={{ color: "var(--orange)" }}>What this means</div>
+              <div className="text-xs font-bold mb-1" style={{ color: "var(--orange)" }}>Illustration limits</div>
               <div className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                Over {tenure} years, you pay <strong style={{ color: "var(--text)" }}>{formatINR(result.extraCost)}</strong> more than the advertised rate suggests. That is money banks never mention upfront.
+                This illustration assumes charges are deducted from the amount disbursed upfront. Actual timing, taxes, optional products and lender calculations can differ; verify your written offer.
               </div>
             </div>
           </div>

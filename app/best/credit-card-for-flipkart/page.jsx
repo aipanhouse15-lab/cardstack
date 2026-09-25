@@ -2,12 +2,12 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Flipkart (June 2026)",
-  description: "The best Flipkart card is not the Flipkart card. Here is the cap-by-cap breakdown of which card earns the most on Flipkart and why the naming of two very sim...",
+  title: "Best Credit Card for Flipkart: Current Rewards Compared",
+  description: "Compare current Axis Flipkart, SBI Cashback and HDFC Millennia rewards, caps, exclusions and statement-cycle limits before applying.",
   alternates: { canonical: "/best/credit-card-for-flipkart" },
   openGraph: {
-    title: "Best Credit Card for Flipkart (June 2026)",
-    description: "The best Flipkart card is not the Flipkart card. Here is the cap-by-cap breakdown of which card earns the most on Flipkart and why the naming of two very sim...",
+    title: "Best Credit Card for Flipkart: Current Rewards Compared",
+    description: "Compare current Axis Flipkart, SBI Cashback and HDFC Millennia rewards, caps, exclusions and statement-cycle limits before applying.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -15,10 +15,16 @@ export const metadata = {
 
 
 // /best/credit-card-for-flipkart
-// Updated: June 4, 2026
+// Reviewed against issuer sources: September 26, 2026
 
 const COLOR = "#2563eb";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
+const SOURCES = {
+  axis: "https://www.axis.bank.in/cards/credit-card/flipkart-axisbank-credit-card",
+  sbi: "https://www.sbicard.com/en/faq/cashback-sbi-card-faq.page",
+  sbiTerms: "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+  hdfc: "https://www.hdfcbank.com/content/api/contentstream-id/723fb80a-2dde-42a3-9793-7ae1be57c87f/5d94cc09-80b7-4073-8c9f-22fad88054f0",
+};
 
 function NamingConfusionChart() {
   return (
@@ -32,35 +38,35 @@ function NamingConfusionChart() {
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Two Cards. One Confusing Name. Very Different Structures.</text>
       <rect x="20" y="38" width="300" height="148" fill="var(--raise)" stroke={COLOR} strokeWidth="2" rx="8" />
       <text x="170" y="58" textAnchor="middle" fill={COLOR} fontSize="13" fontWeight="700">Axis Bank Flipkart Credit Card</text>
-      <text x="170" y="76" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Annual Fee: ₹500</text>
-      <text x="170" y="93" textAnchor="middle" fill="var(--text)" fontSize="12">5% on Flipkart</text>
-      <text x="170" y="108" textAnchor="middle" fill="#10b981" fontSize="11" fontWeight="700">No explicit cap on 5%</text>
-      <text x="170" y="124" textAnchor="middle" fill="var(--text)" fontSize="12">4% on Swiggy + Dining</text>
-      <text x="170" y="140" textAnchor="middle" fill="var(--text)" fontSize="12">1.5% base on all other spends</text>
-      <text x="170" y="158" textAnchor="middle" fill={COLOR} fontSize="11" fontWeight="700">Best overall structure</text>
-      <text x="170" y="175" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Co-brand: Axis + Flipkart</text>
+      <text x="170" y="76" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Check current joining/annual fee</text>
+      <text x="170" y="93" textAnchor="middle" fill="var(--text)" fontSize="12">5% on Flipkart + Cleartrip</text>
+      <text x="170" y="108" textAnchor="middle" fill="#10b981" fontSize="11" fontWeight="700">₹4,000 / quarter / merchant cap</text>
+      <text x="170" y="124" textAnchor="middle" fill="var(--text)" fontSize="12">7.5% Myntra; 4% preferred merchants</text>
+      <text x="170" y="140" textAnchor="middle" fill="var(--text)" fontSize="12">1% on other eligible spends</text>
+      <text x="170" y="158" textAnchor="middle" fill={COLOR} fontSize="11" fontWeight="700">Quarterly caps matter</text>
+      <text x="170" y="175" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Axis Bank Flipkart Credit Card</text>
       <rect x="360" y="38" width="300" height="148" fill="var(--raise)" stroke="var(--hair2)" strokeWidth="1" rx="8" />
-      <text x="510" y="58" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Flipkart Axis SuperCoin Card</text>
-      <text x="510" y="76" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Annual Fee: ₹500</text>
-      <text x="510" y="93" textAnchor="middle" fill="var(--text)" fontSize="12">5% on Flipkart</text>
-      <text x="510" y="108" textAnchor="middle" fill="#dc2626" fontSize="11" fontWeight="700">Cap ₹2,000/mo on 5%</text>
-      <text x="510" y="124" textAnchor="middle" fill="var(--text)" fontSize="12">Earns SuperCoins, not cashback</text>
-      <text x="510" y="140" textAnchor="middle" fill="var(--text)" fontSize="12">1.5% base on all other spends</text>
-      <text x="510" y="158" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Rewards locked to Flipkart</text>
-      <text x="510" y="175" textAnchor="middle" fill="var(--text-muted)" fontSize="10">SuperCoins = Flipkart-only currency</text>
+      <text x="510" y="58" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Compare named card variants</text>
+      <text x="510" y="76" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Do not infer terms from similar names</text>
+      <text x="510" y="93" textAnchor="middle" fill="var(--text)" fontSize="12">Reward currency may differ</text>
+      <text x="510" y="108" textAnchor="middle" fill="#dc2626" fontSize="11" fontWeight="700">Check variant-specific T&amp;C</text>
+      <text x="510" y="124" textAnchor="middle" fill="var(--text)" fontSize="12">Caps and eligible spends can change</text>
+      <text x="510" y="140" textAnchor="middle" fill="var(--text)" fontSize="12">Confirm fee and redemption value</text>
+      <text x="510" y="158" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Use issuer product name</text>
+      <text x="510" y="175" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Verify directly before applying</text>
     </svg>
   );
 }
 
 function CapComparisonBars() {
   const scenarios = [
-    { label: "₹10,000/mo", axis: 500, superCoin: 500, sbi: 500 },
-    { label: "₹20,000/mo", axis: 1000, superCoin: 1000, sbi: 1000 },
-    { label: "₹30,000/mo", axis: 1500, superCoin: 1200, sbi: 1500 },
-    { label: "₹50,000/mo", axis: 2500, superCoin: 1200, sbi: 2500 },
-    { label: "₹1L/mo", axis: 5000, superCoin: 1200, sbi: 5000 },
+    { label: "₹10,000", axis: 500, superCoin: 500, sbi: 500 },
+    { label: "₹20,000", axis: 1000, superCoin: 1000, sbi: 1000 },
+    { label: "₹30,000", axis: 1500, superCoin: 1500, sbi: 1500 },
+    { label: "₹40,000", axis: 2000, superCoin: 2000, sbi: 2000 },
+    { label: "₹50,000", axis: 2500, superCoin: 2500, sbi: 2000 },
   ];
-  const maxVal = 5000;
+  const maxVal = 2500;
   return (
     <svg
       viewBox="0 0 680 307"
@@ -69,7 +75,7 @@ function CapComparisonBars() {
       aria-label="Monthly cashback earned on Flipkart at different spend levels comparing Axis Flipkart, SuperCoin card, and SBI Cashback"
       style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
-      <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Monthly Earnings: Cap Bites at ₹24,000 on SuperCoin Card</text>
+      <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Illustration: ₹ Flipkart cashback at 5% eligible rate</text>
       {scenarios.map((s, i) => {
         const x = 38 + i * 128;
         const barW = 28;
@@ -90,11 +96,11 @@ function CapComparisonBars() {
       <line x1="30" y1="248" x2="650" y2="248" stroke="var(--border)" strokeWidth="1" />
       <g>
         <rect x="80" y="274" width="10" height="10" fill={COLOR} rx="2" />
-        <text x="94" y="283" fill="var(--text-muted)" fontSize="11">Axis Flipkart (5%, no cap)</text>
+        <text x="94" y="283" fill="var(--text-muted)" fontSize="11">Axis (quarterly merchant cap)</text>
         <rect x="280" y="274" width="10" height="10" fill="var(--raise)" rx="2" />
-        <text x="294" y="283" fill="var(--text-muted)" fontSize="11">SuperCoin Card (5%, cap ₹2k)</text>
+        <text x="294" y="283" fill="var(--text-muted)" fontSize="11">Example only; variant terms differ</text>
         <rect x="490" y="274" width="10" height="10" fill="#10b981" rx="2" />
-        <text x="504" y="283" fill="var(--text-muted)" fontSize="11">SBI Cashback (5%, cap ₹5k)</text>
+        <text x="504" y="283" fill="var(--text-muted)" fontSize="11">SBI: ₹2k online cap / cycle</text>
       </g>
     </svg>
   );
@@ -102,11 +108,11 @@ function CapComparisonBars() {
 
 function BBDStrategyTimeline() {
   const events = [
-    { month: "Sep", action: "Apply for card, get approved, activate", note: "2-3 weeks processing" },
-    { month: "Oct", action: "Pre-register for ICICI/Axis bank offers on Flipkart", note: "Required before BBD" },
-    { month: "Oct 1-7", action: "Big Billion Days: pay via Axis Flipkart card", note: "5% + bank offer stack" },
-    { month: "Oct 8", action: "Check SuperCoin/cashback credit in wallet", note: "Usually credited same day" },
-    { month: "Nov", action: "Use Flipkart wallet for next purchases", note: "Double dip: card + wallet" },
+    { month: "Before", action: "Read the sale offer terms and eligible cards", note: "Offers vary by event and account" },
+    { month: "Before", action: "Check card exclusions, cap and minimum spend", note: "Sale discount may exclude some items" },
+    { month: "Sale", action: "Compare final checkout price across payment options", note: "Do not assume discounts stack" },
+    { month: "After", action: "Keep invoice and check statement rewards", note: "Posting and reversal rules vary" },
+    { month: "Return", action: "Recheck adjusted price and reward reversal", note: "Refunds can change eligible spend" },
   ];
   return (
     <svg
@@ -116,7 +122,7 @@ function BBDStrategyTimeline() {
       aria-label="Big Billion Days preparation timeline showing steps to maximise Flipkart card rewards"
       style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
-      <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Big Billion Days Strategy: The Timeline</text>
+      <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Sale checklist: verify each offer, don't assume stacking</text>
       <line x1="80" y1="50" x2="80" y2="195" stroke={COLOR} strokeWidth="2" />
       {events.map((e, i) => (
         <g key={i}>
@@ -132,11 +138,11 @@ function BBDStrategyTimeline() {
 
 function BaseRateAdvantageChart() {
   const categories = [
-    { label: "Groceries", axis: 1.5, sbi: 0, millennia: 1 },
-    { label: "Fuel", axis: 1.5, sbi: 0, millennia: 1 },
-    { label: "Dining (non-Swiggy)", axis: 4.0, sbi: 0, millennia: 1 },
-    { label: "Travel", axis: 1.5, sbi: 0, millennia: 1 },
-    { label: "Utility Bills", axis: 1.5, sbi: 0, millennia: 1 },
+    { label: "Other eligible spend", axis: 1.0, sbi: 1.0, millennia: 1 },
+    { label: "Preferred merchants", axis: 4.0, sbi: 1.0, millennia: 1 },
+    { label: "Myntra (Axis tier)", axis: 7.5, sbi: 5.0, millennia: 1 },
+    { label: "Flipkart (Axis tier)", axis: 5.0, sbi: 5.0, millennia: 5.0 },
+    { label: "Excluded transaction", axis: 0, sbi: 0, millennia: 0 },
   ];
   return (
     <svg
@@ -146,20 +152,20 @@ function BaseRateAdvantageChart() {
       aria-label="Base rate comparison on non-Flipkart categories showing Axis Flipkart 1.5 percent advantage over zero base on SBI Cashback"
       style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
-      <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">The 1.5% Base Rate: Where Axis Flipkart Quietly Wins</text>
+      <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Illustrative headline earn rates by merchant/category</text>
       {categories.map((c, i) => {
         const y = 44 + i * 36;
         return (
           <g key={c.label}>
             <text x="110" y={y + 14} textAnchor="end" fill="var(--text)" fontSize="11">{c.label}</text>
-            <rect x="120" y={y + 2} width={c.axis * 60} height={18} fill={COLOR} rx="3" />
+            <rect x="120" y={y + 2} width={c.axis * 20} height={18} fill={COLOR} rx="3" />
             <text x={120 + c.axis * 60 + 4} y={y + 15} fill={COLOR} fontSize="11" fontWeight="700">{c.axis}%</text>
-            <rect x="120" y={y + 22} width={Math.max(c.sbi * 60, 2)} height={8} fill="#10b981" rx="2" />
+            <rect x="120" y={y + 22} width={Math.max(c.sbi * 20, 2)} height={8} fill="#10b981" rx="2" />
             <text x={120 + Math.max(c.sbi * 60, 4) + 4} y={y + 30} fill="#10b981" fontSize="9">{c.sbi === 0 ? "0% (offline)" : c.sbi + "%"}</text>
           </g>
         );
       })}
-      <text x="340" y="226" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Blue bars: Axis Flipkart. Green: SBI Cashback (0% offline, 5% online only). Dining earns 4% on Axis.</text>
+      <text x="340" y="226" textAnchor="middle" fill="var(--text-muted)" fontSize="11">Illustrative headline rates only; merchant eligibility and caps apply.</text>
     </svg>
   );
 }
@@ -185,13 +191,13 @@ function FlipkartDecisionFlow() {
       <text x="520" y="82" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Over ₹50,000</text>
       <rect x="60" y="92" width="200" height="50" fill="var(--raise)" stroke={COLOR} rx="8" />
       <text x="160" y="113" textAnchor="middle" fill={COLOR} fontSize="12" fontWeight="700">Axis Flipkart</text>
-      <text x="160" y="130" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Best overall: no cap, 4% dining, 1.5% base</text>
+      <text x="160" y="130" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Check eligible spend and quarterly cap</text>
       <rect x="240" y="92" width="200" height="50" fill="var(--raise)" stroke={COLOR} rx="8" />
       <text x="340" y="113" textAnchor="middle" fill={COLOR} fontSize="12" fontWeight="700">Axis Flipkart</text>
       <text x="340" y="130" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Still wins: cap advantage kicks in here</text>
       <rect x="420" y="92" width="200" height="50" fill="var(--raise)" stroke="#16a34a" rx="8" />
       <text x="520" y="113" textAnchor="middle" fill="#16a34a" fontSize="12" fontWeight="700">SBI Cashback</text>
-      <text x="520" y="130" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Cap ₹5,000/mo covers more spend</text>
+      <text x="520" y="130" textAnchor="middle" fill="var(--text-muted)" fontSize="10">₹2,000 eligible online / statement cycle</text>
     </svg>
   );
 }
@@ -204,42 +210,42 @@ export default function BestCreditCardForFlipkart() {
       {
         "@type": "Question",
         name: "What is the best credit card for Flipkart shopping in India?",
-        acceptedAnswer: { "@type": "Answer", text: "The Axis Bank Flipkart Credit Card is the best card for Flipkart shopping in June 2026. It earns 5% on Flipkart with no explicit monthly cap, plus 4% on Swiggy and dining, and 1.5% base rate on all other spends. This combination beats the dedicated SuperCoin card which caps at ₹2,000 per month." }
+        acceptedAnswer: { "@type": "Answer", text: "There is no single best card for every shopper. Axis Bank Flipkart currently advertises 5% on Flipkart, subject to a ₹4,000 cap per statement quarter per merchant; SBI Cashback advertises 5% eligible online cashback subject to a ₹2,000 online cap per statement cycle, shared across eligible online spends. Compare your total eligible spend, caps, fees and exclusions." }
       },
       {
         "@type": "Question",
         name: "What is the difference between Axis Flipkart card and Flipkart Axis SuperCoin card?",
-        acceptedAnswer: { "@type": "Answer", text: "The Axis Bank Flipkart Credit Card earns cashback with no explicit 5% cap on Flipkart. The Flipkart Axis Bank SuperCoin Card earns SuperCoins (Flipkart's own currency) and caps the 5% earning at ₹2,000 per month, which binds at ₹40,000 Flipkart spend. Both have ₹500 annual fee. For regular shoppers, the Axis Flipkart card is structurally better." }
+        acceptedAnswer: { "@type": "Answer", text: "Do not conflate similarly named products. Confirm the full issuer product name and read that variant's current fee schedule, rewards currency, caps and redemption rules; terms can differ and change. Axis Bank's current product page lists the Flipkart Axis Bank Credit Card and its cashback structure." }
       },
       {
         "@type": "Question",
         name: "Does HDFC Millennia give 5% on Flipkart?",
-        acceptedAnswer: { "@type": "Answer", text: "Yes, HDFC Millennia gives 5% on Flipkart as one of its partner merchants. However, the ₹1,000 monthly cap is shared across all categories, including Amazon, Swiggy, and BigBasket. If you use Millennia for multiple partner sites, your Flipkart portion of the cap gets used up quickly." }
+        acceptedAnswer: { "@type": "Answer", text: "Yes, Flipkart is listed among HDFC Millennia's 5% CashPoints partner merchants. The accelerated merchant tier has a ₹1,000 cap per statement cycle, shared across that tier; eligible transaction conditions and the current issuer terms apply." }
       },
       {
         "@type": "Question",
         name: "When does SBI Cashback beat Axis Flipkart for Flipkart purchases?",
-        acceptedAnswer: { "@type": "Answer", text: "SBI Cashback (₹999/yr, 5% all online, cap ₹5,000/mo) beats Axis Flipkart if your Flipkart spend exceeds ₹40,000 per month and you also shop heavily on other online platforms. At ₹50,000/month Flipkart spend, SBI Cashback earns ₹2,500 vs Axis Flipkart which should also earn ₹2,500 since Axis has no explicit cap. The real advantage of SBI Cashback is covering all other online sites too." }
+        acceptedAnswer: { "@type": "Answer", text: "SBI Cashback's current terms provide 5% on eligible online transactions, with an online cashback cap of ₹2,000 per statement cycle. The limit applies across eligible online spend, not separately to Flipkart. Axis lists a ₹4,000 quarterly cap per merchant for Flipkart. Which yields more depends on your billing cycle, other online purchases, eligibility and fees." }
       },
       {
         "@type": "Question",
         name: "Is Big Billion Days cashback extra on top of the card cashback?",
-        acceptedAnswer: { "@type": "Answer", text: "Bank offers during Big Billion Days are typically additional to your regular card cashback, provided you pre-register your card on Flipkart's offer page before the sale begins. The total effective return can reach 10-15% during BBD when combining 5% card cashback with a 5-10% bank discount offer." }
+        acceptedAnswer: { "@type": "Answer", text: "Not necessarily. Sale discounts, card rewards, eligible products, maximum discounts and stacking rules are event-specific. Read the live checkout and offer terms; do not assume registration is needed, that offers stack, or that a headline discount is guaranteed." }
       },
       {
         "@type": "Question",
         name: "Do SuperCoins from the Flipkart Axis card expire?",
-        acceptedAnswer: { "@type": "Answer", text: "SuperCoins earned on the Flipkart Axis SuperCoin card are valid for a limited period and can only be redeemed within the Flipkart ecosystem. They are not transferable, not withdrawable as cash, and expire if unused. This is a significant disadvantage compared to direct cashback cards." }
+        acceptedAnswer: { "@type": "Answer", text: "Expiry, eligible redemption and transfer rules depend on the specific SuperCoins program terms. Check the current Flipkart terms and the exact card variant; do not assume SuperCoins are cash-equivalent." }
       },
       {
         "@type": "Question",
         name: "Which card is better for Myntra purchases?",
-        acceptedAnswer: { "@type": "Answer", text: "Axis Flipkart card earns 1.5% base rate on Myntra. SBI Cashback earns 5% on Myntra as it is an online merchant. For dedicated Myntra shoppers, SBI Cashback is significantly better since Myntra is not a Flipkart-specific merchant deal on any card." }
+        acceptedAnswer: { "@type": "Answer", text: "Axis currently lists Myntra in a 7.5% cashback tier, capped at ₹4,000 per statement quarter. SBI Cashback may earn 5% on eligible online Myntra transactions subject to its ₹2,000 per-cycle online cap and exclusions. Compare caps across your combined spend." }
       },
       {
         "@type": "Question",
         name: "What happens if I return a Flipkart order? Do I lose the cashback?",
-        acceptedAnswer: { "@type": "Answer", text: "If you return a Flipkart order, the cashback earned on that transaction is typically reversed. For Axis Flipkart card, cashback is credited after the statement cycle and reversed if a return is processed. Partial returns result in partial cashback reversal. Always check your statement after a return to confirm the adjustment." }
+        acceptedAnswer: { "@type": "Answer", text: "Returns or cancellations can reduce eligible spend and lead to reward adjustments or reversals under issuer terms. The exact timing and amount depend on the transaction and issuer rules; check the subsequent statement and the current terms." }
       },
     ]
   };
@@ -247,10 +253,10 @@ export default function BestCreditCardForFlipkart() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for Flipkart Shopping in India (June 2026)",
+    headline: "Best Credit Card for Flipkart Shopping in India: Cashback and Caps",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -274,7 +280,7 @@ export default function BestCreditCardForFlipkart() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for Flipkart (June 2026)
+            Best Credit Card for Flipkart
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
@@ -293,7 +299,7 @@ export default function BestCreditCardForFlipkart() {
       </div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", marginBottom: 16 }}>
-        The best Flipkart card is not the Flipkart card. Here is the cap-by-cap breakdown of which card earns the most on Flipkart and why the naming of two very similar cards trips everyone up.
+        Compare eligible cashback, the cap period and total online spending—not just the headline rate. Terms below are summarized from issuer sources; verify them again before applying.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
@@ -307,42 +313,42 @@ export default function BestCreditCardForFlipkart() {
           {
             name: "Axis Bank Flipkart Credit Card",
             slug: "axis-flipkart",
-            fee: "₹500/yr",
-            rate: "5% on Flipkart + 4% dining",
-            cap: "No explicit cap on 5%",
-            badge: "Best Pick",
-            why: "5% on Flipkart with no stated monthly cap, 4% on Swiggy and dining, and 1.5% base rate on every other purchase. The combination is unusually strong for a ₹500/year card. This is the better of the two Flipkart co-brand cards by structure.",
-            caveat: "Axis Bank terms can change. Verify current cap structure before applying."
+            fee: "Check current issuer fee",
+            rate: "5% on Flipkart and Cleartrip",
+            cap: "₹4,000 per statement quarter, per merchant",
+            badge: "Flipkart-focused option",
+            why: "Axis lists 5% cashback on Flipkart and Cleartrip, 7.5% on Myntra, 4% on preferred merchants and 1% on other eligible spends. Each tier has its own conditions and caps.",
+            caveat: "Confirm current fee, preferred merchant list, exclusions and quarterly caps on Axis's official page."
           },
           {
-            name: "Flipkart Axis Bank SuperCoin Card",
-            slug: "flipkart-axis-supercoin",
-            fee: "₹500/yr",
-            rate: "5% on Flipkart in SuperCoins",
-            cap: "₹2,000/mo (binds at ₹40,000)",
-            badge: "Avoid vs Axis",
-            why: "Same annual fee as the Axis Flipkart card but earns SuperCoins instead of cashback, has a ₹2,000/mo cap, and the SuperCoins are redeemable only within Flipkart. If you are choosing between these two, always pick the Axis Flipkart card.",
-            caveat: "SuperCoins expire. They cannot be withdrawn as cash or used outside the Flipkart ecosystem."
+            name: "Other similarly named Flipkart/Axis variants",
+            slug: "axis-flipkart",
+            fee: "Check issuer terms",
+            rate: "Varies by exact product",
+            cap: "Check variant terms",
+            badge: "Verify first",
+            why: "Product names and reward programs are easy to confuse. Use the full name shown in the application and verify reward currency, earn rates, caps and redemption rules for that exact card.",
+            caveat: "We are not assigning a rate or fee to a product variant without current, unambiguous issuer terms."
           },
           {
             name: "SBI Cashback Credit Card",
             slug: "sbi-cashback",
-            fee: "₹999/yr",
-            rate: "5% all online spends",
-            cap: "₹5,000/mo",
+            fee: "Check current issuer fee",
+            rate: "5% on eligible online spends",
+            cap: "₹2,000 online per statement cycle",
             badge: "High-Volume Pick",
-            why: "If your online spend is spread across Flipkart, Myntra, Nykaa, and other sites, SBI Cashback covers all of them at 5% with a ₹5,000 monthly cap. This is the card to hold alongside Axis Flipkart for purchases that fall outside Flipkart's platform.",
-            caveat: "0% on offline purchases. Cashback credited to bank account."
+            why: "Potentially useful when you have eligible online purchases across several merchants. Its online cap is shared across eligible online transactions, so other shopping can use the same cycle limit.",
+            caveat: "Many transaction types are excluded; see SBI's revised terms and FAQ."
           },
           {
             name: "HDFC Millennia Credit Card",
             slug: "hdfc-millennia",
-            fee: "₹1,000/yr",
+            fee: "Check current issuer fee",
             rate: "5% on Flipkart",
-            cap: "₹1,000/mo shared",
+            cap: "₹1,000 per statement cycle on 5% merchant tier",
             badge: "Versatile but Capped",
-            why: "Covers Flipkart at 5% but the shared ₹1,000/month cap means you cannot separate Flipkart earnings from Amazon or Swiggy. Better as a multi-platform versatility card than a dedicated Flipkart card.",
-            caveat: "Shared cap is the main limitation. If you already have Axis Flipkart, Millennia adds little."
+            why: "Flipkart is one of HDFC's listed 5% CashPoints merchants. The cap is shared across the accelerated merchant tier, which includes multiple named partners.",
+            caveat: "The 5% tier is subject to eligible transaction conditions, including non-EMI terms; verify the current HDFC schedule."
           },
         ].map(card => (
           <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "var(--raise)" }}>
@@ -364,55 +370,53 @@ export default function BestCreditCardForFlipkart() {
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Naming Confusion Problem</h2>
-        <p>Flipkart and Axis Bank have issued two co-branded cards that sound nearly identical, and the worse one has "Flipkart" first in its name, which makes people think it is the "official" Flipkart card. Both are co-brand products with Axis Bank. They are structurally very different.</p>
+        <p>Similar card names do not guarantee the same rewards. This page compares issuer-published features for named products and avoids assigning unverified terms to similarly named variants.</p>
         <NamingConfusionChart />
-        <p style={{ marginTop: 12 }}>The key structural differences are the cap and the reward currency. The Axis Flipkart card earns cashback directly credited to your statement. The Flipkart Axis SuperCoin card earns SuperCoins, which are Flipkart's proprietary loyalty currency. SuperCoins cannot be used outside Flipkart, do not carry over indefinitely, and have no cash redemption value.</p>
-        <p>When someone on a forum says "I got the Flipkart card," ask them: which one? The answer changes whether their ₹40,000 monthly Flipkart spend earns ₹2,000 or hits a ceiling at ₹2,000 cap and then earns nothing extra.</p>
+        <p style={{ marginTop: 12 }}>Axis currently lists 5% cashback on Flipkart and Cleartrip, up to ₹4,000 per statement quarter per merchant; Myntra is listed at 7.5% with its own quarterly cap. Preferred merchants earn 4%, while other eligible spends earn 1%. See the <a href={SOURCES.axis} target="_blank" rel="noreferrer">Axis Bank product page</a> for fees, exclusions and current terms.</p>
+        <p>When a product name is ambiguous, check the full card name and issuer product page. Cashback and loyalty points are different reward currencies and should not be compared at face value.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Cap Math: Where Each Card Breaks</h2>
-        <p>The Axis Flipkart card has no explicitly stated monthly cap on the 5% Flipkart earning. Axis Bank's current terms for this card do not specify a hard rupee ceiling on the 5% merchant category, unlike the SuperCoin card's explicit ₹2,000/month cap.</p>
-        <p>This matters enormously during Big Billion Days and festive sales when a single household might spend ₹50,000-1,00,000 on Flipkart in one week. The difference in earning at these high spend levels is dramatic.</p>
+        <p>These limits use different periods: Axis states a quarterly per-merchant cap for its Flipkart tier, while SBI Cashback caps eligible online cashback per statement cycle across eligible online purchases. A statement cycle is not necessarily a calendar month.</p>
+        <p>The graphic is a simple 5% arithmetic illustration, not a promise of credited rewards. It excludes fees, ineligible transactions, cap timing and reversals. Axis reaches its ₹4,000 cap at ₹80,000 eligible Flipkart spend in a statement quarter; SBI reaches its ₹2,000 online cap at ₹40,000 eligible online spend per statement cycle across merchants.</p>
         <CapComparisonBars />
-        <p style={{ marginTop: 12 }}>At ₹50,000 monthly Flipkart spend, the SuperCoin card earns the equivalent of ₹1,200 in coins (cap binding at ₹24,000 spend) while Axis Flipkart should earn ₹2,500. That is ₹1,300 difference in a single month. Also see our explainer on <Link href="/blog/cashback-rate-is-a-lie">why the advertised cashback rate is a lie</Link>.</p>
+        <p style={{ marginTop: 12 }}>For ₹50,000 eligible Flipkart spend within a quarter, Axis's tier would reach its ₹4,000 cap. SBI is subject to its ₹2,000 online cap per statement cycle shared with other eligible online purchases. Actual reward may be lower. See <Link href="/blog/cashback-rate-is-a-lie">why advertised cashback rates can mislead</Link>.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Big Billion Days: The High-Value Window</h2>
         <p>Big Billion Days, typically held in October, is Flipkart's equivalent of Amazon Prime Day but often larger in scale. The 5-7 day sale window represents months of normal Flipkart earning compressed into a week.</p>
         <BBDStrategyTimeline />
-        <p style={{ marginTop: 12 }}>The critical step that most people miss is pre-registration. Axis Bank and SBI routinely offer additional instant discounts of ₹1,500-3,000 on Flipkart during BBD, but these require pre-registering your card on Flipkart's offer page before the sale opens. The window for registration closes when the sale goes live.</p>
-        <p>At a ₹40,000 BBD spend with a 5% card cashback plus a ₹2,000 bank offer, your total saving is ₹4,000 in a single week. On the SuperCoin card you earn ₹1,200 + ₹2,000 = ₹3,200. The difference is real and compounds over multiple sale seasons. Use our <Link href="/stack-builder">Stack Builder</Link> to model your personal scenario.</p>
+        <p style={{ marginTop: 12 }}>Sale events change each time: eligible cards, products, minimum spends, maximum discounts and stacking rules differ. Review the live offer details and issuer terms at checkout. Do not assume registration is required or that a discount stacks with regular rewards.</p>
+        <p>Do not add a headline sale discount to cashback as guaranteed savings until you verify both sets of terms and the final payable price. Use our <Link href="/stack-builder">Stack Builder</Link> only after checking eligibility.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The 1.5% Base Rate: Why It Matters</h2>
-        <p>Most dedicated merchant cards earn zero or 1% on purchases outside their primary merchant. Axis Flipkart earns 1.5% on all other spends. This seems minor but adds meaningful value across categories like fuel, groceries, and travel.</p>
+        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Headline rates outside Flipkart</h2>
+        <p>Axis lists 4% for preferred merchants and 1% on other eligible spends; this is not a blanket 1.5% rate. SBI Cashback's schedule lists 1% on eligible offline spends, subject to its cap. Issuer exclusions apply.</p>
         <BaseRateAdvantageChart />
-        <p style={{ marginTop: 12 }}>If you spend ₹30,000/month outside Flipkart on general categories, the 1.5% base rate earns ₹450/month or ₹5,400/year. At a ₹500 annual fee, the non-Flipkart base earning alone can justify holding the card even in months when you do not shop on Flipkart.</p>
-        <p>The 4% dining rate deserves a separate mention. Swiggy, Zomato, and restaurants all fall under the dining category on Axis Flipkart card. If you spend ₹5,000/month on dining combined, that is ₹200/month or ₹2,400/year from dining alone. Use the <Link href="/smart-swipe">Smart Swipe guide</Link> to calculate your combined category return.</p>
+        <p style={{ marginTop: 12 }}>These are headline rates, not guaranteed net returns. Check the issuer's preferred-merchant list, exclusions and current fee schedule before estimating value. Use the <Link href="/smart-swipe">Smart Swipe guide</Link> to compare eligible spend.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>When SBI Cashback Beats Dedicated Flipkart Cards</h2>
-        <p>SBI Cashback gives 5% on all online purchases, not just Flipkart. It has a ₹5,000 monthly cap that only binds at ₹1 lakh monthly online spend. For most Indian households, this cap is never reached.</p>
+        <p>SBI Cashback offers 5% on eligible online transactions, not every online purchase. Current revised terms cap online cashback at ₹2,000 per statement cycle, shared across eligible online purchases; several categories and transaction types are excluded.</p>
         <FlipkartDecisionFlow />
-        <p style={{ marginTop: 12 }}>If your online spending is concentrated heavily on Flipkart and dining, Axis Flipkart is the better card. If your spend is spread across Flipkart, Myntra (owned by Flipkart Group), Nykaa, Ajio, and other platforms, SBI Cashback's universal 5% on all online spends is the better tool.</p>
-        <p>The two cards are not mutually exclusive. Holding Axis Flipkart for Flipkart and dining, and SBI Cashback for all other online purchases, is a valid two-card stack at a combined fee of ₹1,499/year.</p>
+        <p style={{ marginTop: 12 }}>Axis may suit eligible Flipkart spending up to its quarterly merchant cap; SBI may suit a range of eligible online purchases until its cycle cap is used. SBI's cap is shared across merchants, and exclusions can change the result. Compare statement periods and fees against your actual spend.</p>
+        <p>Holding multiple cards adds fees and complexity; do not apply based only on this simplified comparison.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>What to Do Right Now</h2>
         <ol style={{ paddingLeft: 20, lineHeight: 2.1 }}>
-          <li>If you currently hold the Flipkart Axis SuperCoin card, calculate how often you hit the ₹2,000/month cap. If you regularly do, switching to Axis Flipkart saves you money at identical annual fee.</li>
-          <li>Apply for the Axis Bank Flipkart Credit Card, not the SuperCoin variant. Search for "Axis Flipkart" specifically and confirm the card name on the application page.</li>
-          <li>Set Axis Flipkart as your default payment on both Flipkart and Myntra.</li>
-          <li>In September-October, pre-register your card for BBD bank offers on Flipkart's offer page before the sale starts.</li>
-          <li>Use Axis Flipkart for all Swiggy and Zomato orders too — you earn 4%, which is better than most dining cards in this fee range.</li>
-          <li>Read our <Link href="/blog/reward-points-vs-cashback">Reward Points vs Cashback analysis</Link> to understand why cashback cards always beat SuperCoin-style programs for most consumers.</li>
+          <li>Identify the exact card and read its latest issuer fee and reward terms.</li>
+          <li>Estimate eligible Flipkart spend over the issuer's statement-quarter or statement-cycle period.</li>
+          <li>Include other merchants that share a reward cap.</li>
+          <li>Check exclusions, EMI eligibility, refund treatment and offer-specific conditions.</li>
+          <li>Compare net value after fees, and do not treat points or temporary discounts as cash without checking redemption terms.</li>
+          <li>Recheck the issuer sources linked below before applying.</li>
         </ol>
       </section>
       <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
-        <p>Axis Bank Flipkart Credit Card is the right card for Flipkart. The naming confusion with the SuperCoin card causes a lot of people to end up with the inferior product at the same ₹500 annual fee. The cap difference alone makes Axis Flipkart the structurally superior choice.</p>
-        <p>For very high Flipkart spenders exceeding ₹50,000 per month, or for households that spread online spend across many platforms, SBI Cashback becomes competitive. It does not have the dining benefit but the all-online 5% with a higher ₹5,000 cap covers more ground.</p>
-        <p>The SuperCoin card's existence is primarily a loyalty play by Flipkart to keep reward currency locked inside their ecosystem. For consumers who prioritize earning flexibility, the cashback-based Axis Flipkart card is the more rational choice.</p>
+        <p>Axis Flipkart is one option for shoppers who use its eligible Flipkart cashback tier within the quarterly cap. SBI Cashback may suit other eligible online spend, but the online limit is shared per statement cycle. HDFC Millennia has a shared partner-merchant CashPoints cap. Fees, exclusions and spend patterns decide; there is no universal winner.</p>
+        <p>Check the current issuer terms for the exact product before applying. Rewards and promotional offers can change; this comparison is not a guarantee of approval, savings or future benefits.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 16 }}>FAQ</h2>
@@ -437,7 +441,7 @@ export default function BestCreditCardForFlipkart() {
       </p>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
-        <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Card terms including caps and rates verified as of {UPDATED}. Axis Bank and Flipkart can change reward structures without notice. SuperCoins redemption terms are set by Flipkart and subject to change. Always verify current terms before applying. This is not financial advice.
+        <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Rewards and fees can change; verify current issuer terms before applying. This is not financial advice. Sources: <a href={SOURCES.axis} target="_blank" rel="noreferrer">Axis Bank</a> · <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI Card FAQ</a> · <a href={SOURCES.sbiTerms} target="_blank" rel="noreferrer">SBI revised terms</a> · <a href={SOURCES.hdfc} target="_blank" rel="noreferrer">HDFC Millennia terms</a>.
       </footer>
     </main>
     </>

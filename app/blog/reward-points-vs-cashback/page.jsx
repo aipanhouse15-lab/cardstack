@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/reward-points-vs-cashback
 // Template: Comparison / decision framework
-// Color: #0891b2 | Updated: June 4, 2026
+// Color: #0891b2 | Updated: September 26, 2026
 
 const COLOR = "#0891b2";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgDecisionMatrix = () => (
   <svg viewBox="0 0 720 278" role="img" aria-label="Decision matrix comparing reward points vs cashback cards based on user habits" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -194,10 +194,10 @@ export default function BlogRewardPointsVsCashback() {
       { "@type": "Question", "name": "What is the points trap and how do I avoid it?", "acceptedAnswer": { "@type": "Answer", "text": "The points trap is when you earn reward points over months or years but never actually redeem them before they expire, resulting in zero real value. Avoid it by setting a 6-month calendar reminder to check your balance, redeeming points as soon as you cross 5,000-10,000 points, and choosing cashback cards for spend categories where you have no redemption plan." } },
       { "@type": "Question", "name": "Can I have both a reward points card and a cashback card?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and this is often the smartest approach. Use a points card for large planned purchases like flights and hotel bookings where you have a clear redemption plan. Use a cashback card for daily spend like groceries, bills, and food delivery where cashback automatically credits to your account. This stack approach maximizes value across your full spend profile." } },
       { "@type": "Question", "name": "Do cashback amounts ever expire on Indian credit cards?", "acceptedAnswer": { "@type": "Answer", "text": "Generally no, as long as your credit card account remains open. Cashback is typically credited to your statement within 45-90 days and reduces your outstanding balance. There is no portal, no deadline, and no action required. This is one of the biggest advantages of cashback cards over reward points programs." } },
-      { "@type": "Question", "name": "Is the SBI Cashback Card good for all online purchases or only specific sites?", "acceptedAnswer": { "@type": "Answer", "text": "The SBI Cashback Card gives 5% cashback on all online transactions (not just specific merchants) up to ₹10,000 spend per month on that category. It is one of the more flexible cashback cards available for online-first spenders who shop across multiple platforms rather than just Amazon or Flipkart." } },
+      { "@type": "Question", "name": "Is the SBI Cashback Card good for all online purchases or only specific sites?", "acceptedAnswer": { "@type": "Answer", "text": "The SBI Cashback Card gives 5% on eligible online purchases across merchants, capped at ₹2,000 online cashback per statement cycle. Utilities, insurance, rent, fuel and other issuer-listed categories are excluded, even if paid online. Confirm the latest SBI terms for your transaction." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Reward Points vs Cashback: Which Credit Card Strategy Is Right for You in India", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-06-04", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Reward Points vs Cashback: Which Credit Card Strategy Is Right for You in India", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-26", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },

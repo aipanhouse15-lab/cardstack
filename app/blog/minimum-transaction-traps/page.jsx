@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/minimum-transaction-traps
 // Template: warning-article
-// Color: #dc2626 | Updated: June 4, 2026
+// Color: #dc2626 | Updated: September 26, 2026
 
 const COLOR = "#dc2626";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgCashAdvanceCost = () => (
   <svg viewBox="0 0 720 264" role="img" aria-label="Cash advance cost breakdown: ₹10,000 for 30 days totals ₹768 in fees" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

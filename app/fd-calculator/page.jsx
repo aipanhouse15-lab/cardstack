@@ -2,7 +2,7 @@ import FDCalculatorClient from "./FDCalculatorClient";
 
 export const metadata = {
   title: "FD Real Return Calculator — Post-Tax, Post-Inflation",
-  description: "Your 7.5% FD returns 0.15% after TDS and inflation. Enter your FD rate, tax bracket, and tenure to see your real return.",
+  description: "Estimate a fixed deposit's post-tax and inflation-adjusted return using your assumptions. Tax liability and bank TDS are different; verify applicable tax-year rules.",
   alternates: { canonical: "/fd-calculator" },
 };
 

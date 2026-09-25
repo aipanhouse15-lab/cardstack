@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/maximize-dining-rewards-india
 // Template: category-specific optimization guide with card tiers
-// Color: #f59e0b | Updated: June 4, 2026
+// Color: #f59e0b | Updated: September 26, 2026
 
 const COLOR = "#f59e0b";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgDiningRates = () => (
   <svg viewBox="0 0 720 320" role="img" aria-label="Bar chart comparing dining reward rates across 5 credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

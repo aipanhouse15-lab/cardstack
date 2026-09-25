@@ -15,10 +15,10 @@ export const metadata = {
 
 
 // /best/credit-card-for-students-india
-// Updated: June 4, 2026
+// Updated: September 26, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 function GraduationCapIcon() {
   return (

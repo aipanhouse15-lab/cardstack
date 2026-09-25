@@ -18,7 +18,7 @@ export const metadata = {
 // URL: /compare/flipkart-axis-vs-amazon-pay-icici
 
 const COLOR = "#7C3AED";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgEcomRevenue = () => (
   <svg viewBox="0 0 520 220" role="img" aria-label="Annual cashback by online platform mix" style={{ width: "100%" }}>
@@ -68,7 +68,7 @@ export default function CompareFlipkartAxisVsAmazonIcici() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "Flipkart Axis vs Amazon Pay ICICI — which platform-native card pays more in 2026",
     author: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-06-06", dateModified: "2026-06-06",
+    datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 

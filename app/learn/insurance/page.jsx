@@ -1,8 +1,8 @@
 import InsuranceClient from "./InsuranceClient";
 
 export const metadata = {
-  title: "Insurance — What Your Policy Actually Covers",
-  description: "Your ₹10L health insurance policy pays out ~₹4.2L after co-pay, room rent sub-limits, disease caps, and waiting periods. We calculate the honest coverage number.",
+  title: "Insurance Guides — Understand Policy Coverage and Claims",
+  description: "Learn how to review insurance coverage, co-payments, exclusions, waiting periods, claim data and policy terms. Benefits vary by product and contract.",
   alternates: { canonical: "/learn/insurance" },
 };
 
@@ -10,8 +10,8 @@ export default function InsurancePage() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Insurance Guides — What Your Policy Actually Covers",
-    description: "Honest number on health insurance, term insurance, and claim settlements. Real effective coverage after all fine print deductions.",
+    name: "Insurance Guides — Understand Policy Coverage and Claims",
+    description: "Guides to health and term insurance, policy terms, claim data and exclusions. Coverage depends on the policy contract and claim circumstances.",
     url: "https://www.assurefintech.com/learn/insurance",
     isPartOf: { "@type": "WebSite", name: "Assure Fintech", url: "https://www.assurefintech.com" },
     breadcrumb: {
@@ -24,9 +24,9 @@ export default function InsurancePage() {
     mainEntity: {
       "@type": "FAQPage",
       mainEntity: [
-        { "@type": "Question", name: "Why does a ₹10L health insurance policy only cover ₹4.2L?", acceptedAnswer: { "@type": "Answer", text: "Co-pay deductions (10-20%), room rent sub-limits (proportional reduction), disease-specific caps (50% of sum insured), consumables exclusions, and waiting periods combine to reduce your effective coverage by 40-60%. Use our Insurance Coverage Calculator to see your policy's real number." } },
-        { "@type": "Question", name: "What is room rent sub-limit in health insurance?", acceptedAnswer: { "@type": "Answer", text: "Room rent sub-limit caps the daily room charge your insurer will cover (e.g., ₹8,000/day). If your actual room costs ₹12,000/day, the insurer applies a proportional reduction (8/12 = 66.7%) to your entire claim — not just the room cost. This is the biggest hidden reducer in health insurance." } },
-        { "@type": "Question", name: "Is co-pay health insurance worth it?", acceptedAnswer: { "@type": "Answer", text: "Co-pay plans cost 15-25% less in premium but you pay 10-20% of every claim from pocket. For healthy young individuals, the premium savings may outweigh the co-pay risk. For families or older adults, no-copay is strongly recommended." } },
+        { "@type": "Question", name: "Why may a health insurance claim be less than the sum insured?", acceptedAnswer: { "@type": "Answer", text: "The payable amount depends on admissible expenses and the policy contract, including any limits, co-payment, deductible, exclusions, waiting periods and claim-specific facts. There is no universal payout figure. Check the policy wording and Customer Information Sheet and ask the insurer about unclear terms." } },
+        { "@type": "Question", name: "How do room rent sub-limits affect a health insurance claim?", acceptedAnswer: { "@type": "Answer", text: "Room and ICU limits and any linked proportional deductions depend on the specific policy wording. Review the limits and ask the insurer how a room choice may affect other admissible expenses under your contract." } },
+        { "@type": "Question", name: "Is a co-pay health insurance policy worth it?", acceptedAnswer: { "@type": "Answer", text: "Compare the quoted premium with the cost-sharing obligation on eligible claims, along with coverage, exclusions and limits. The right choice depends on the policy and the customer's circumstances." } },
       ],
     },
   };

@@ -2,34 +2,34 @@
 import Link from "next/link";
 
 const HERO_ITEMS = [
-  { icon: "📈", iconBg: "rgba(96,165,250,0.15)", name: "Large-cap fund", sub: "₹10K SIP, 10 years", adv: "15.0% CAGR", real: "11.8%" },
-  { icon: "💸", iconBg: "rgba(248,113,113,0.15)", name: "Regular vs direct", sub: "₹10K SIP, 20 years", adv: "₹91.2L", real: "₹1.03Cr" },
-  { icon: "📊", iconBg: "rgba(74,222,128,0.15)", name: "SIP XIRR vs CAGR", sub: "Nifty 50, 10 years", adv: "13.5% CAGR", real: "11.2% XIRR" },
+  { icon: "📈", iconBg: "rgba(96,165,250,0.15)", name: "Return measures", sub: "Match metric to cash flows", adv: "CAGR", real: "XIRR" },
+  { icon: "💸", iconBg: "rgba(248,113,113,0.15)", name: "Plan costs", sub: "Check scheme disclosures", adv: "Regular", real: "Direct" },
+  { icon: "📊", iconBg: "rgba(74,222,128,0.15)", name: "SIP performance", sub: "Dates change the result", adv: "Cash flows", real: "XIRR" },
 ];
 
 const QUICK_NAV = [
   { icon: "📈", name: "CAGR vs Actual", desc: "Net investor return", href: "/learn/mutual-funds/cagr-vs-actual-return" },
-  { icon: "⚖️", name: "Direct vs Regular", desc: "₹12L difference", href: "/learn/mutual-funds/direct-vs-regular" },
+  { icon: "⚖️", name: "Direct vs Regular", desc: "Compare costs and trade-offs", href: "/learn/mutual-funds/direct-vs-regular" },
   { icon: "📊", name: "SIP Real Returns", desc: "XIRR not CAGR", href: "/learn/mutual-funds/sip-advertised-vs-actual" },
 ];
 
 const GUIDES = [
-  { n: "01", title: "Your 15% CAGR fund gives 11.8% after expense ratio + LTCG", desc: "1.5% expense ratio + 12.5% LTCG tax silently eats your returns.", time: "5 min", tag: "Guide", tagColor: "#0891B2", tagBg: "rgba(8,145,178,0.08)", href: "/learn/mutual-funds/cagr-vs-actual-return" },
-  { n: "02", title: "Direct vs regular: the 1% that costs you ₹12L over 20 years", desc: "Regular plans pay distributors 0.5-1.5% annually from your returns.", time: "6 min", tag: "Analysis", tagColor: "#ea580c", tagBg: "rgba(234,88,12,0.08)", href: "/learn/mutual-funds/direct-vs-regular" },
-  { n: "03", title: "SIP returns: advertised vs actual after all charges", desc: "Use XIRR not CAGR. Actual SIP return is 2-3% lower than advertised.", time: "5 min", tag: "Guide", tagColor: "#0891B2", tagBg: "rgba(8,145,178,0.08)", href: "/learn/mutual-funds/sip-advertised-vs-actual" },
+  { n: "01", title: "CAGR vs investor return: choose the right measure", desc: "Understand the limits of annualised returns and how timing and cash flows affect your own result.", time: "5 min", tag: "Guide", tagColor: "#0891B2", tagBg: "rgba(8,145,178,0.08)", href: "/learn/mutual-funds/cagr-vs-actual-return" },
+  { n: "02", title: "Direct vs regular: compare current costs and service", desc: "Plan expenses vary by scheme; use the latest fund-house and AMFI disclosures.", time: "6 min", tag: "Analysis", tagColor: "#ea580c", tagBg: "rgba(234,88,12,0.08)", href: "/learn/mutual-funds/direct-vs-regular" },
+  { n: "03", title: "SIP returns: why results differ across investors", desc: "Cash-flow dates and market path affect personalised returns; historical examples are not forecasts.", time: "5 min", tag: "Guide", tagColor: "#0891B2", tagBg: "rgba(8,145,178,0.08)", href: "/learn/mutual-funds/sip-advertised-vs-actual" },
 ];
 
 const FAQS = [
-  { q: "Why is my SIP return lower than the fund return?", a: "Funds show CAGR (lump-sum return). SIPs earn XIRR (time-weighted). Recent SIPs have barely grown, pulling down the average. XIRR is always lower than CAGR for SIPs." },
-  { q: "Should I switch from regular to direct?", a: "Yes. The 0.5-1.5% annual expense difference compounds to ₹8-12L on a ₹10K SIP over 20 years. Switch via Groww, Kuvera, or AMC website." },
-  { q: "How much does LTCG tax reduce my returns?", a: "Equity LTCG above ₹1.25L gains is taxed at 12.5%. On a ₹12L investment growing to ₹28L, tax is ~₹1.8L. Effective return drops from 15% to ~12.5%." },
+  { q: "Why might my SIP return differ from a fund's published return?", a: "Published returns depend on the selected scheme, plan, period and calculation method. Your contributions happen on different dates and may face different cash flows, so compare like with like and calculate using your own transaction history." },
+  { q: "Should I switch from regular to direct?", a: "There is no universal answer. Compare current scheme costs and the service you receive, then account for possible tax, exit load and operational implications before acting." },
+  { q: "How are mutual-fund gains taxed?", a: "Tax treatment depends on fund classification, acquisition and transfer dates, holding period and the law applicable to your tax year. Verify current Income Tax Department guidance or consult a qualified tax professional." },
 ];
 
 const EXPLORE = [
-  { name: "Credit Cards", desc: "5% → 2.8% after caps", href: "/cards", color: "#7C3AED" },
-  { name: "Loans", desc: "8.5% → 9.35% after fees", href: "/learn/loans", color: "#2563EB" },
-  { name: "Insurance", desc: "₹10L → ₹4.2L coverage", href: "/learn/insurance", color: "#DB2777" },
-  { name: "Savings & FDs", desc: "7.5% → 0.15% real return", href: "/learn/savings", color: "#D97706" },
+  { name: "Credit Cards", desc: "Compare rewards after fees and caps", href: "/cards", color: "#7C3AED" },
+  { name: "Loans", desc: "Compare rates, fees and total cost", href: "/learn/loans", color: "#2563EB" },
+  { name: "Insurance", desc: "Understand policy terms and claims", href: "/learn/insurance", color: "#DB2777" },
+  { name: "Savings & FDs", desc: "Compare product terms and scenarios", href: "/learn/savings", color: "#D97706" },
 ];
 
 export default function MutualFundsClient() {
@@ -41,7 +41,7 @@ export default function MutualFundsClient() {
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-10 items-center relative z-[2]" style={{ maxWidth: 1060, margin: "0 auto" }}>
           <div>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 16 }}><span style={{ width: 6, height: 6, borderRadius: "50%", background: "#22D3EE" }} /> The honest number on mutual funds</div>
-            <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.1, letterSpacing: "-1.5px", color: "#F1F5F9", marginBottom: 12 }}>Your <span style={{ color: "#22D3EE" }}>15% CAGR</span> fund<br />gives you <span style={{ color: "#F87171" }}>11.8%</span> after charges.</h1>
+            <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.1, letterSpacing: "-1.5px", color: "#F1F5F9", marginBottom: 12 }}>Understand your<br /><span style={{ color: "#22D3EE" }}>mutual-fund returns.</span></h1>
             <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 420, marginBottom: 20 }}>Fund houses show gross returns. You earn net returns — after expense ratio, exit load, and capital gains tax. The gap is bigger than you think.</p>
             <div style={{ display: "flex", gap: 28, flexWrap: "wrap" }}>{[["3", "Honest guides"], ["₹0", "Always free"]].map(([n, l], i) => (<div key={i}><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>{n}</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>{l}</div></div>))}</div>
           </div>

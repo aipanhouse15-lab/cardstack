@@ -104,11 +104,11 @@ export const BLOG_POSTS = [
 
 {
   id: "cashback-rate-is-a-lie",
-  title: "Your Credit Card's Cashback Rate Is a Lie. Here's Why.",
-  excerpt: "Banks advertise 5% cashback but hide the monthly cap. Once you hit it, your real rate drops to near zero.",
+  title: "Credit Card Cashback: Why the Headline Rate Is Not Your Return",
+  excerpt: "How exclusions, shared caps, fees and redemption rules change what a card actually pays.",
   category: "Guides",
   color: "#dc2626",
-  date: "Mar 24, 2026",
+  date: "Jun 4, 2026",
   readTime: "8 min",
   featured: true,
   content: [
@@ -234,11 +234,11 @@ export const BLOG_POSTS = [
 // ─── POST 4 of 30: Best Card for High Spenders ───
 {
   id: "best-card-high-spenders-2026",
-  title: "Best Credit Card for High Spenders in India (₹1 Lakh+/Month)",
-  excerpt: "When your monthly spend crosses ₹1 lakh, the rules change. Here's the premium playbook.",
+  title: "Credit Cards for High Spenders in India 2026: Compare by Use",
+  excerpt: "Compare travel rewards and online cashback using eligible spend, caps, redemption and fees.",
   category: "Guides",
   color: "#7c3aed",
-  date: "Mar 11, 2026",
+  date: "Jun 4, 2026",
   readTime: "8 min",
   featured: false,
   content: [
@@ -314,11 +314,11 @@ export const BLOG_POSTS = [
 // ─── POST 7 of 30: What Is Cap-Adjusted Cashback ───
 {
   id: "cap-adjusted-cashback-explained",
-  title: "What Is Cap-Adjusted Cashback (And Why Advertised Rates Lie)",
-  excerpt: "That 5% card? It's probably earning you 1.8%. Here's the math banks don't want you to do.",
+  title: "Cap-Adjusted Cashback: Calculate What Your Card Really Earns",
+  excerpt: "A worked method for checking credit-card rewards after exclusions, caps and fees.",
   category: "Strategy",
   color: "#6366f1",
-  date: "Mar 23, 2026",
+  date: "Apr 20, 2026",
   readTime: "7 min",
   featured: true,
   content: [
@@ -394,11 +394,11 @@ export const BLOG_POSTS = [
 // ─── POST 10 of 30: How to Build a 3-Card Stack ───
 {
   id: "build-3-card-stack-guide",
-  title: "How to Build a 3-Card Stack That Covers Everything",
-  excerpt: "One card can't earn 5% on everything. Three cards can earn 2-5% on almost everything.",
+  title: "Build a Credit Card Stack in India: A Three-Card Decision Guide",
+  excerpt: "Choose complementary cards by eligible spend, caps and fees; calculate the extra value.",
   category: "Strategy",
   color: "#6366f1",
-  date: "Mar 20, 2026",
+  date: "Jun 4, 2026",
   readTime: "9 min",
   featured: true,
   content: [
@@ -705,11 +705,11 @@ export const BLOG_POSTS = [
 // ─── POST 22 of 30: UPI vs Credit Cards ───
 {
   id: "upi-vs-credit-cards-india",
-  title: "UPI vs Credit Cards — Why Smart Indians Use Both",
-  excerpt: "UPI is instant. Credit cards earn rewards. Here's when to use which — and why it's not either/or.",
+  title: "UPI vs Credit Cards in India: How to Choose a Payment Method",
+  excerpt: "Compare bank-account UPI, RuPay credit-card UPI and conventional card payments.",
   category: "Strategy",
   color: "#6366f1",
-  date: "Mar 23, 2026",
+  date: "Jun 4, 2026",
   readTime: "7 min",
   featured: false,
   content: [

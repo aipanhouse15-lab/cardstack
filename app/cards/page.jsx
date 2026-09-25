@@ -1,4 +1,4 @@
-import { CARDS, CATEGORIES, BANKS } from "@/data/cards";
+import { CARDS, CATEGORIES, BANKS, isSourceReviewed } from "@/data/cards";
 import Link from "next/link";
 import CardCatalogClient from "./CardCatalogClient";
 
@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 function getCategoryWinners() {
-  const verifiedCards = CARDS.filter(card => card.verified);
+  const verifiedCards = CARDS.filter(isSourceReviewed);
   const free = verifiedCards.filter(c => c.fee === 0).sort((a, b) => Math.max(...Object.values(b.rewards)) - Math.max(...Object.values(a.rewards)));
   const bestForCategory = (catId) => [...verifiedCards].sort((a, b) => (b.rewards[catId] || 0) - (a.rewards[catId] || 0)).slice(0, 4);
   const premium = verifiedCards.filter(c => c.fee >= 5000).sort((a, b) => {

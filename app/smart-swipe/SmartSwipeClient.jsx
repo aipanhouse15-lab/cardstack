@@ -1,7 +1,7 @@
 "use client";
 import { useState, useCallback, useMemo } from "react";
 import Link from "next/link";
-import { VERIFIED_CARDS, CATEGORIES, defaultSpending, calcReward } from "@/data/cards";
+import { VERIFIED_CARDS, CATEGORIES, defaultSpending, calcReward, capSharedRewardBuckets } from "@/data/cards";
 import CardSelector from "@/components/CardSelector";
 import SpendingInput from "@/components/SpendingInput";
 import SectionHeader from "@/components/SectionHeader";
@@ -18,7 +18,7 @@ export default function SmartSwipeClient() {
   const results = useMemo(() => {
     if (!show || !sel.length) return [];
 
-    return CATEGORIES.map(cat => {
+    const initial = CATEGORIES.map(cat => {
       let bestCard = null;
       let bestResult = { cashback: 0, effectiveRate: 0, capped: false, capNote: null };
       let bestBaseRate = 0;
@@ -32,7 +32,7 @@ export default function SmartSwipeClient() {
         if (result.cashback > bestResult.cashback) {
           bestCard = card;
           bestResult = result;
-          bestBaseRate = card.rewards[cat.id] || card.rewards.default || 0;
+          bestBaseRate = card.rewards[cat.id] ?? card.rewards.default ?? 0;
         }
       });
 
@@ -45,6 +45,16 @@ export default function SmartSwipeClient() {
         capped: bestResult.capped,
         capNote: bestResult.capNote,
       };
+    });
+    return initial.map(row => {
+      if (!row.card) return row;
+      const assigned = initial.filter(item => item.card?.id === row.card.id);
+      const cardSpending = Object.fromEntries(assigned.map(item => [item.cat.id, spend[item.cat.id] || 0]));
+      const cardDetails = Object.fromEntries(assigned.map(item => [item.cat.id, {
+        cashback: item.cashback, effectiveRate: item.effectiveRate, capped: item.capped, capNote: item.capNote,
+      }]));
+      const adjusted = capSharedRewardBuckets(row.card, cardSpending, cardDetails)[row.cat.id];
+      return { ...row, ...adjusted };
     });
   }, [show, sel, spend]);
 
@@ -166,7 +176,7 @@ export default function SmartSwipeClient() {
             </div>
             {anyCapped && (
               <div className="mt-3 text-xs font-semibold" style={{ color: "var(--orange)" }}>
-                ⚠️ Savings calculated with cashback caps applied — these are your REAL savings, not inflated numbers
+                Illustrative estimate only. Merchant eligibility, payment route, exclusions, statement-cycle timing and redemption value can change the actual result. Confirm issuer terms before using a card.
               </div>
             )}
           </div>

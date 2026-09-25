@@ -17,7 +17,7 @@ export const metadata = {
 // ============================================================
 
 const COLOR = "#7C3AED";
-const UPDATED = "June 3, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgPersonaMatrix = () => (
   <svg viewBox="0 0 720 280" role="img" aria-label="Beginner persona matrix mapping income bracket and CIBIL band to recommended first credit card" style={{ width: "100%", maxWidth: 760 }}>
@@ -91,7 +91,7 @@ const SvgSpendCheck = () => (
     <text x="20" y="22" fontFamily="system-ui" fontSize="12" fontWeight="700" fill="var(--text-muted)">MATCH YOUR SPEND TO YOUR FIRST CARD</text>
     {[
       { profile: "Amazon Prime + grocery delivery", card: "Amazon Pay ICICI", reason: "Lifetime free · 5% Amazon Prime · 1% other" },
-      { profile: "Multi-platform online shopper", card: "SBI Cashback (after 18mo CIBIL build)", reason: "5% all online up to ₹5k/mo cap" },
+      { profile: "Multi-platform online shopper", card: "SBI Cashback (if eligible)", reason: "5% eligible online; ₹2k/cycle online cap" },
       { profile: "Utility bills via Gpay + offline", card: "Axis Ace", reason: "5% Gpay util · 1.5% base · ₹499 fee" },
       { profile: "Swiggy + Zomato + Uber heavy", card: "HDFC Millennia (3L+ income)", reason: "5% on 10 partner apps · ₹1k voucher" },
       { profile: "Just want to build CIBIL", card: "FD-secured Axis Insta", reason: "Pledge ₹15k · build score 18 months" },
@@ -112,7 +112,7 @@ export default function BestCardBeginners2026() {
     description: "Five real personas mapped to first-card recommendations across income, CIBIL, and spend pattern. Detailed first-year math and CIBIL-building behaviour guide for first-time Indian cardholders.",
     author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
     reviewedBy: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-04-20", dateModified: "2026-06-03",
+    datePublished: "2026-04-20", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/best-card-beginners-2026" }
   };
@@ -358,7 +358,7 @@ export default function BestCardBeginners2026() {
           The first card is mostly about building bureau history, not maximising rewards. Year 2 onwards is when you actually optimise reward earnings — and the toolkit widens dramatically.
         </p>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
-          With CIBIL 720 plus and 12 to 15 months of clean payment history, you become eligible for stronger products. Co-brand cards (Tata Neu Plus, Flipkart Axis), specialised cashback (Axis Ace 5 percent on utility, SBI Cashback 5 percent online), entry-tier travel (HDFC Regalia, ICICI Sapphiro at the lower-fee end). The reward differential between a beginner card at 1.5 percent effective and a year-2 second card at 2.5 to 3.0 percent on the same spend is roughly ₹15,000 to ₹30,000 annually.
+          A longer record of paying in full and on time may improve your options, but approval depends on each issuer's current underwriting. Compare co-brand and cashback cards against your eligible spending, fees and caps. HDFC says new Regalia sourcing has been discontinued, so it should not be treated as an entry travel application option. Do not assume a fixed credit-score threshold or a guaranteed annual reward gain.
         </p>
         <p style={{ fontSize: 17, margin: "0 0 14px" }}>
           The structural advice: don't try to optimise rewards on the first card. Optimise discipline. Reward optimisation is the second-card and third-card decision, not the first-card decision. Treat year one as the credit-history-building investment that unlocks the bigger benefits in year two and beyond.

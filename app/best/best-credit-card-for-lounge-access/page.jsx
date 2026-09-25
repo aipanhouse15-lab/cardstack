@@ -3,11 +3,11 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Best Credit Card for Airport Lounge Access in India (June 2026)",
-  description: "Airport lounges cost ₹800 to ₹2,000 per visit at the door. Your credit card might give you some for free, or it might be trapping you in a milestone game you...",
+  description: "Compare credit cards for airport lounge access in India. Check visit caps, spend requirements, eligible lounges, guest charges and card-variant terms before travelling.",
   alternates: { canonical: "/best/best-credit-card-for-lounge-access" },
   openGraph: {
     title: "Best Credit Card for Airport Lounge Access in India (June 2026)",
-    description: "Airport lounges cost ₹800 to ₹2,000 per visit at the door. Your credit card might give you some for free, or it might be trapping you in a milestone game you...",
+    description: "Compare credit cards for airport lounge access in India. Check visit caps, spend requirements, eligible lounges, guest charges and card-variant terms before travelling.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -15,10 +15,10 @@ export const metadata = {
 
 
 // /best/credit-card-for-lounge-access
-// Updated: June 4, 2026
+// Updated: September 26, 2026
 
 const COLOR = "#0891b2";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const IconLounge = () => (
   <svg width="48" height="48" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Airport lounge icon">
@@ -94,7 +94,7 @@ export default function BestCreditCardForLoungeAccess() {
         name: "Which credit card gives unlimited free airport lounge access in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HDFC Infinia and Axis Magnus (both ₹12,500/yr) give unlimited global lounge access via Priority Pass with no visit cap in June 2026. HDFC Diners Black and ICICI Emeralde also offer unlimited access. Free cards like AU Ixigo give 17 visits annually — enough for casual travellers."
+          text: "Some premium cards advertise unlimited access for eligible cardholders, but participating lounges, guest access, networks and other conditions still apply. Check the current benefit terms for the exact card variant before travelling."
         }
       },
       {
@@ -102,7 +102,7 @@ export default function BestCreditCardForLoungeAccess() {
         name: "What is Priority Pass and which cards include it?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Priority Pass is a network of 1,400+ airport lounges across 600+ cities worldwide. Cards that include Priority Pass membership: HDFC Infinia (unlimited), Axis Magnus (unlimited), HDFC Regalia (6 international visits/yr), IndusInd Pinnacle (6 international visits/yr), and ICICI Emeralde (unlimited). The membership is typically the paid tier ($429/year value) bundled with premium cards."
+          text: "Priority Pass is a lounge network. Whether visits are complimentary, capped or subject to spend conditions depends on the card issuer and exact membership. Confirm the benefit and guest terms directly with the issuer."
         }
       },
       {
@@ -110,7 +110,7 @@ export default function BestCreditCardForLoungeAccess() {
         name: "Does AU Ixigo credit card really give free lounge access?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. AU Ixigo credit card (lifetime free) gives 16 domestic lounge visits and 1 international Priority Pass visit per calendar year in 2026. Access requires a minimum of ₹5,000 spend in the previous calendar month — so month one has no access. It is the best free card for domestic travellers in India."
+          text: "It may include complimentary visits, subject to the exact card version, spend conditions and participating locations. Confirm current airport, railway and international access rules with AU Small Finance Bank before relying on a visit."
         }
       },
       {
@@ -118,7 +118,7 @@ export default function BestCreditCardForLoungeAccess() {
         name: "What is DreamFolks and how is it different from Priority Pass?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "DreamFolks is an Indian lounge access aggregator that covers 75+ domestic airport lounges. Most Indian bank cards use DreamFolks for domestic lounge access and Priority Pass for international. A card may give unlimited DreamFolks (domestic) access but only 6 Priority Pass (international) visits per year — these are two separate systems."
+          text: "DreamFolks and Priority Pass are separate lounge-access programs. A bank may use one or another, and the card's terms determine the included visits, access method, participating lounges and charges. Check the current directory and your issuer's terms."
         }
       },
       {
@@ -126,7 +126,7 @@ export default function BestCreditCardForLoungeAccess() {
         name: "Do all airport lounge cards still work after the June 2025 milestone changes?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Most mid-range cards (Regalia, Axis My Zone, HDFC Millennia) now require a minimum quarterly spend of ₹35,000 to ₹50,000 to activate lounge access for that quarter. Premium cards (Infinia, Magnus, Diners Black) retain free unlimited access without spend conditions. Always check the current card benefits page, not the welcome kit."
+          text: "There is no single rule across cards. Benefits can be spend-gated, capped, restricted to named lounges or changed for a specific card variant. Check the current issuer terms for your exact card and the lounge list for your airport before travelling."
         }
       },
       {
@@ -134,7 +134,7 @@ export default function BestCreditCardForLoungeAccess() {
         name: "Can I bring a guest to the lounge with my credit card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Premium cards like HDFC Infinia and Axis Magnus include complimentary guest access (1-2 guests per visit). Mid-range cards like HDFC Regalia allow guests at a paid rate of $27 (approximately ₹2,250) per guest per visit via Priority Pass. Budget free cards like AU Ixigo generally do not include guest passes."
+          text: "Guest access is card- and lounge-specific and may use a separate guest quota or incur a fee. Do not assume an advertised complimentary cardholder visit includes a guest. Confirm the guest rules and charges with the issuer or lounge network before arrival."
         }
       },
       {
@@ -142,7 +142,7 @@ export default function BestCreditCardForLoungeAccess() {
         name: "How many times can I visit a lounge per day?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Priority Pass generally allows multiple visits per day at different lounges, but some individual lounges cap stays at 3 hours. Domestic DreamFolks lounges in India typically allow one access per day at each lounge. There is no universal rule — it depends on the specific lounge's terms."
+          text: "Visit frequency, stay duration and repeat-entry rules depend on the card issuer's benefit and the individual lounge's conditions. Check both before planning multiple visits in a day."
         }
       },
       {
@@ -150,7 +150,7 @@ export default function BestCreditCardForLoungeAccess() {
         name: "Is HDFC Regalia good for lounge access?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HDFC Regalia (₹2,500/yr) gives 12 domestic lounge visits via DreamFolks and 6 international Priority Pass visits per year. It is a solid option for travellers taking 6-12 flights annually. Post-2025 devaluation, the card requires ₹1.5 lakh quarterly spend to maintain the lounge benefit — which most Regalia cardholders meet anyway."
+          text: "HDFC Regalia is not the same as Regalia Gold. The current Regalia record lists up to 2 domestic lounge vouchers per quarter after ₹1 lakh eligible quarterly spend and up to 6 international visits per year after at least 4 card transactions. It is discontinued for new sourcing; existing cardholders should confirm their variant's current terms with HDFC."
         }
       },
       {
@@ -158,7 +158,7 @@ export default function BestCreditCardForLoungeAccess() {
         name: "What happens if I exceed my lounge visit limit?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Additional visits are charged directly to your linked credit card at the lounge's walk-in rate, typically $27-32 (₹2,200-2,700) per visit for Priority Pass lounges. For domestic DreamFolks lounges, the excess visit rate is usually ₹500-800 per entry. Check your card's MITC for the exact overage rate."
+          text: "An ineligible or excess visit may be charged to your card, or access may be declined. The amount depends on your issuer, network and lounge; check the applicable terms rather than assuming a standard overage price."
         }
       }
     ]
@@ -167,10 +167,10 @@ export default function BestCreditCardForLoungeAccess() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for Airport Lounge Access in India (June 2026)",
+    headline: "Best Credit Card for Airport Lounge Access in India",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-25",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -191,62 +191,62 @@ export default function BestCreditCardForLoungeAccess() {
       fee: "₹12,500/yr",
       domestic: "Unlimited (DreamFolks + direct)",
       intl: "Unlimited (Priority Pass)",
-      guestPass: "Complimentary (up to 2 guests)",
-      spendCondition: "None",
-      verdict: "Best overall: unlimited lounge globally with no spend trap",
-      access: "Invite-only, ₹30L+ income"
+      guestPass: "Check current HDFC/network terms",
+      spendCondition: "No spend gate listed; issuer/network terms apply",
+      verdict: "Premium pick: unlimited eligible access advertised; verify lounge and guest terms",
+      access: "Invite-only; issuer eligibility applies"
     },
     {
       rank: 2,
       name: "Axis Magnus",
       fee: "₹12,500/yr",
       domestic: "Unlimited",
-      intl: "Unlimited (Priority Pass)",
-      guestPass: "Complimentary (1 guest/visit)",
-      spendCondition: "None post-April 2026",
-      verdict: "Equals Infinia on lounge; stronger for international miles earners",
-      access: "Invite-only, ₹24L+ income"
+      intl: "12 visits/year (Priority Pass)",
+      guestPass: "Check current Axis/network terms",
+      spendCondition: "Current issuer/network terms apply",
+      verdict: "Premium option; verify access and guest limits for your card variant",
+      access: "Eligibility and annual fee waiver terms apply"
     },
     {
       rank: 3,
       name: "IndusInd Pinnacle",
       fee: "₹9,999/yr",
-      domestic: "12 visits/yr",
-      intl: "6 Priority Pass visits/yr",
-      guestPass: "₹500/guest",
-      spendCondition: "₹4L/quarter to retain benefit",
-      verdict: "Best mid-premium option if you travel 10-14 times a year",
-      access: "Open market, ₹15L+ income"
+      domestic: "1 visit/quarter after ₹1.5L prior-quarter spend",
+      intl: "1 visit/calendar quarter",
+      guestPass: "Confirm variant/network terms",
+      spendCondition: "Domestic access requires ₹1.5L eligible prior-quarter spend",
+      verdict: "Published lounge allowance is limited; fee and variant terms need issuer confirmation",
+      access: "Confirm current availability and variant terms with issuer"
     },
     {
       rank: 4,
-      name: "HDFC Regalia Gold",
+      name: "HDFC Regalia (existing cardholders)",
       fee: "₹2,500/yr",
-      domestic: "12 visits/yr (DreamFolks)",
-      intl: "6 Priority Pass visits/yr",
-      guestPass: "$27/guest via Priority Pass",
-      spendCondition: "₹1.5L/quarter",
-      verdict: "Best value for 12-18 trips/year; solid for salaried professionals",
-      access: "Open market, ₹12L+ income"
+      domestic: "Up to 2 vouchers/quarter",
+      intl: "Up to 6/year",
+      guestPass: "Check current HDFC/network terms",
+      spendCondition: "₹1L quarterly spend; international access requires 4 card transactions",
+      verdict: "Existing cardholders only; confirm eligibility and current voucher rules",
+      access: "Discontinued for new sourcing"
     },
     {
       rank: 5,
       name: "AU Ixigo Credit Card",
       fee: "Lifetime Free",
-      domestic: "16 visits/yr",
+      domestic: "2 airport visits/quarter after ₹50K prior-quarter spend",
       intl: "1 Priority Pass visit/yr",
       guestPass: "Not included",
-      spendCondition: "₹5,000 spend in prior month",
-      verdict: "Best free lounge card for domestic-only travellers",
-      access: "Open market, ₹3L+ income"
+      spendCondition: "₹50K eligible spend in preceding quarter for domestic airport visits",
+      verdict: "Lifetime-free offer; includes separate railway access and limited international visits",
+      access: "Current offer and issuer eligibility apply"
     }
   ];
 
   const visitValueTable = [
-    { profile: "1-2 flights/year (rare traveller)", rec: "No dedicated lounge card needed", note: "Airport day pass ≈ ₹800-1,000" },
-    { profile: "4-6 flights/year (occasional traveller)", rec: "AU Ixigo (free)", note: "16 visits covers the year with buffer" },
-    { profile: "10-15 flights/year (regular traveller)", rec: "HDFC Regalia Gold", note: "12 domestic + 6 intl = sweet spot" },
-    { profile: "20+ flights/year (frequent flyer)", rec: "HDFC Infinia or Axis Magnus", note: "Unlimited = guaranteed savings of ₹16,000-₹40,000/yr" }
+    { profile: "1-2 flights/year (rare traveller)", rec: "Compare the card benefit with any lounge entry price offered for your trip", note: "Entry prices vary by airport and lounge" },
+    { profile: "4-6 flights/year (occasional traveller)", rec: "Compare eligible no-fee options", note: "Check prior-quarter spend gates and route coverage" },
+    { profile: "10-15 flights/year (regular traveller)", rec: "Compare capped premium cards", note: "Match domestic and international visits to your itinerary" },
+    { profile: "20+ flights/year (frequent flyer)", rec: "HDFC Infinia or Axis Magnus", note: "Premium fees apply; confirm eligible lounges and terms" }
   ];
 
   return (
@@ -259,7 +259,7 @@ export default function BestCreditCardForLoungeAccess() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for Airport Lounge Access in India (June 2026)
+            Best Credit Card for Airport Lounge Access in India
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
@@ -280,7 +280,7 @@ export default function BestCreditCardForLoungeAccess() {
       </div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted,#475569)", marginBottom: 10, fontWeight: 500 }}>
-        Airport lounges cost ₹800 to ₹2,000 per visit at the door. Your credit card might give you some for free, or it might be trapping you in a milestone game you can't win.
+        Lounge access is useful only when your card's visit allowance, spend conditions and eligible lounges match your itinerary. Verify current terms before relying on a complimentary visit.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
@@ -308,11 +308,11 @@ export default function BestCreditCardForLoungeAccess() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>How Airport Lounge Access Works in India</h2>
 
       <p style={{ marginBottom: 12 }}>
-        There are two parallel systems for lounge access in India. DreamFolks covers 75+ domestic airport lounges across Indian airports, and Priority Pass covers 1,400+ lounges globally including international terminals.
+        Lounge access can be provided through a bank, a lounge network or a third-party access program. The participating locations and eligible terminals vary, so search the current lounge directory for your airport and confirm the card's access method.
       </p>
 
       <p style={{ marginBottom: 16 }}>
-        Your credit card may give you access to one, both, or neither of these networks. A card that says "unlimited lounge access" in its marketing may mean unlimited DreamFolks but only 6 Priority Pass visits per year. Read the fine print on both systems separately.
+        Your card may provide access through one or more programs, with separate domestic and international limits. An “unlimited” headline does not necessarily include guests or every lounge; read the issuer's terms for visit caps, spend gates and eligible locations.
       </p>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 24 }}>
@@ -322,10 +322,10 @@ export default function BestCreditCardForLoungeAccess() {
             <strong style={{ color: COLOR, fontSize: 14 }}>DreamFolks (Domestic)</strong>
           </div>
           <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.8 }}>
-            <li>75+ lounges at Indian airports</li>
-            <li>Covers all major metros + Tier 2</li>
-            <li>Access via app QR code or card swipe</li>
-            <li>Typical walk-in rate: ₹700-1,200</li>
+            <li>Availability depends on the current participating-lounge list</li>
+            <li>Confirm the terminal and departure/arrival access rules</li>
+            <li>Issuer may specify card swipe, app or another access method</li>
+            <li>Check any applicable charge before entry</li>
           </ul>
         </div>
         <div style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 10, padding: "16px 18px" }}>
@@ -334,10 +334,10 @@ export default function BestCreditCardForLoungeAccess() {
             <strong style={{ color: COLOR, fontSize: 14 }}>Priority Pass (International)</strong>
           </div>
           <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.8 }}>
-            <li>1,400+ lounges in 600+ cities</li>
-            <li>Covers DXB, SIN, LHR, JFK and beyond</li>
-            <li>Access via Priority Pass card or app</li>
-            <li>Typical walk-in rate: $27-35 per visit</li>
+            <li>Use the network's current directory to confirm locations</li>
+            <li>Check access at your specific airport and terminal</li>
+            <li>Follow the access method required by your issuer</li>
+            <li>Guest and excess-visit charges vary by card and lounge</li>
           </ul>
         </div>
       </div>
@@ -348,24 +348,24 @@ export default function BestCreditCardForLoungeAccess() {
       <div style={{ background: "rgba(212,168,83,.06)", border: "1.5px solid #f97316", borderRadius: 12, padding: "16px 18px", marginBottom: 16, display: "flex", gap: 12, alignItems: "flex-start" }}>
         <IconWarning />
         <div>
-          <strong style={{ fontSize: 14, color: "#c2410c" }}>June 2025 shift: Most mid-range cards now gate lounge access behind quarterly spend milestones.</strong>
+          <strong style={{ fontSize: 14, color: "#c2410c" }}>Lounge access is card-specific: check spend gates, visit caps, participating lounges and card-variant terms.</strong>
           <p style={{ margin: "6px 0 0", fontSize: 13, color: "var(--text-muted,#475569)" }}>
-            Cards like HDFC Millennia, Axis MyZone, and SBI Pulse shifted from "X visits/year" to "access only if you spent ₹35K-50K last quarter." If you use these cards lightly, you may arrive at the lounge and get declined.
+            Lounge terms change by product and over time. Before travel, check the card-specific spend threshold, eligible lounge list, visit balance and access process; a marketing summary may omit these conditions.
           </p>
         </div>
       </div>
 
       <p style={{ marginBottom: 12 }}>
-        The spend thresholds range from ₹35,000 to ₹1,50,000 per quarter depending on the card. For context, a quarterly spend of ₹50,000 is ₹2 lakh per year — which is more than many cardholders put through a single card.
+        If a visit requires prior-period spend, compare that threshold with your planned eligible spend rather than assuming your everyday transactions count. Issuers can define exclusions and measurement periods differently.
       </p>
 
       <p style={{ marginBottom: 24 }}>
-        The workaround is straightforward: either use your lounge card as your primary spending card to hit the threshold naturally, or choose a card that does not have spend-gated lounge access. Infinia, Magnus, and AU Ixigo (with a simple ₹5K prior-month requirement) are the cleanest options in 2026.
+        The right choice depends on your routes and card variant. Spend-gated visits, railway benefits, international access and guest rules can all be separate; check each benefit in the current issuer terms.
       </p>
 
       {/* Card picks */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>Top 5 Cards for Lounge Access in India (June 2026)</h2>
-      <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>Ranked by total annual lounge access value per rupee of card fee.</p>
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>Cards to compare for lounge access</h2>
+      <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>Compare the listed products against current issuer terms; this is not a guarantee of access or a value ranking.</p>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
         {cards.map((card) => (
@@ -394,59 +394,26 @@ export default function BestCreditCardForLoungeAccess() {
         ))}
       </div>
 
-      {/* Unlimited vs capped math */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Unlimited vs Capped Lounge Access: The Annual Math</h2>
-
-      <p style={{ marginBottom: 12 }}>
-        At ₹1,000 per domestic lounge visit and ₹2,250 per international visit (at $27 per Priority Pass entry), here's what lounge access is worth annually across different travel volumes.
-      </p>
-
-      <div style={{ overflowX: "auto", marginBottom: 24 }}>
-        <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-          <thead>
-            <tr style={{ background: `${COLOR}12` }}>
-              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Annual Lounge Visits</th>
-              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Value @ ₹1,000/visit</th>
-              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Net Gain (Regalia ₹2,500)</th>
-              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Net Gain (Infinia ₹12,500)</th>
-            </tr>
-          </thead>
-          <tbody>
-            {[
-              ["4 visits", "₹4,000", "+₹1,500", "-₹8,500"],
-              ["10 visits", "₹10,000", "+₹7,500", "-₹2,500"],
-              ["18 visits (limit for Regalia)", "₹18,000", "+₹15,500", "+₹5,500"],
-              ["30 visits", "₹30,000", "Overage charges apply", "+₹17,500"],
-              ["50+ visits", "₹50,000+", "Overage charges apply", "+₹37,500+"]
-            ].map(([visits, val, regalia, infinia], i) => (
-              <tr key={i} style={{ borderBottom: "1px solid var(--border,var(--hair))", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
-                <td style={{ padding: "10px 14px" }}>{visits}</td>
-                <td style={{ padding: "10px 14px", textAlign: "right" }}>{val}</td>
-                <td style={{ padding: "10px 14px", textAlign: "right", color: regalia.includes("+") ? "#16a34a" : "#dc2626", fontWeight: 600 }}>{regalia}</td>
-                <td style={{ padding: "10px 14px", textAlign: "right", color: infinia.includes("+") ? "#16a34a" : "#dc2626", fontWeight: 600 }}>{infinia}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      {/* Compare actual visit value rather than assumed walk-in prices */}
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Compare lounge benefits with your own travel</h2>
 
       <p style={{ marginBottom: 24, fontSize: 14, color: "var(--text-muted,#475569)" }}>
-        Table uses ₹1,000 per domestic visit. International Priority Pass visits are valued at ₹2,250 per visit. The break-even point for HDFC Infinia purely on lounge value is approximately 13 visits/year.
+        Add only the visits you can use at participating lounges on your routes. Then compare that benefit with the annual fee (including applicable taxes), any spend required to unlock access, and the cost of visits not covered by the allowance.
       </p>
 
       {/* Domestic vs international gap */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Domestic vs International Gap</h2>
 
       <p style={{ marginBottom: 12 }}>
-        Almost all Indian credit cards are more generous on domestic lounge access than international. The reason is cost: DreamFolks charges banks less per visit than Priority Pass. Banks have responded by capping international visits aggressively.
+        Domestic and international lounge benefits often have different networks, visit limits and spend conditions. Do not assume that an allowance in one category also applies to the other.
       </p>
 
       <p style={{ marginBottom: 12 }}>
-        The practical consequence is that a cardholder who travels internationally frequently is better served by Infinia or Magnus than a domestic-generous card that caps Priority Pass at 6 visits. Six international visits sounds fine until you have a multi-leg trip through Dubai or Singapore.
+        For frequent international trips, compare the exact international lounge allowance and locations against your itinerary; a generous domestic benefit alone may not meet that need.
       </p>
 
       <p style={{ marginBottom: 24 }}>
-        If most of your travel is domestic (Mumbai-Delhi-Bengaluru corridor), AU Ixigo's 16 domestic visits is genuinely excellent for zero annual fee. Pair it with a second card for rewards if you want comprehensive coverage. See the <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder</Link> for the best two-card combos.
+        If most of your travel is domestic, check both airport and railway lounge allowances and any preceding-quarter spend gate. AU ixigo's railway visits are separate from its airport allowance. Pair lounge access with a card that suits your spend only if its fee and terms make sense. See the <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder</Link> for two-card combinations.
       </p>
 
       {/* How to use lounge access */}

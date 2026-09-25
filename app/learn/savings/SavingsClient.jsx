@@ -2,45 +2,42 @@
 import Link from "next/link";
 
 const HERO_ITEMS = [
-  { icon: "🏦", iconBg: "rgba(251,191,36,0.15)", name: "Fixed deposit", sub: "₹10L, 1 year, 30% bracket", adv: "7.50%", real: "0.15%" },
-  { icon: "📈", iconBg: "rgba(96,165,250,0.15)", name: "PPF", sub: "Tax-free, 15yr lock", adv: "7.10%", real: "~2.0%" },
-  { icon: "📊", iconBg: "rgba(22,163,74,0.15)", name: "Debt fund", sub: "Post-2023, slab rate", adv: "6.50%", real: "~1.5%" },
+  { icon: "🏦", iconBg: "rgba(251,191,36,0.15)", name: "Fixed deposit", sub: "Illustrative gross rate", adv: "Before tax", real: "Tax varies" },
+  { icon: "📈", iconBg: "rgba(96,165,250,0.15)", name: "PPF", sub: "Rate notified periodically", adv: "Check current", real: "Tax rules apply" },
+  { icon: "📊", iconBg: "rgba(22,163,74,0.15)", name: "Debt fund", sub: "Returns and tax vary", adv: "Market-linked", real: "No guarantee" },
 ];
 
 const QUICK_NAV = [
   { icon: "🧮", name: "FD Return Calculator", desc: "See your real return", href: "/fd-calculator" },
   { icon: "🏦", name: "FD Real Return", desc: "After tax + inflation", href: "/learn/savings/fd-real-return" },
   { icon: "⚖️", name: "PPF vs FD vs Debt", desc: "Post-tax comparison", href: "/learn/savings/ppf-vs-fd-vs-debt-fund" },
-  { icon: "🏆", name: "Best FD Rates 2026", desc: "Bank-wise ranking", href: "/learn/savings/best-fd-rates-2026" },
+  { icon: "🏆", name: "Compare FD offers", desc: "Checklist for issuer rates and terms", href: "/learn/savings/best-fd-rates-2026" },
 ];
 
 const GUIDES = [
-  { n: "01", title: "FD at 7.5%? Your real return is 0.15% after tax and inflation", desc: "TDS eats 30%, inflation eats the rest. Your money barely grows.", time: "4 min", tag: "Guide", tagColor: "#D97706", tagBg: "rgba(217,119,6,0.08)", href: "/learn/savings/fd-real-return" },
-  { n: "02", title: "PPF vs FD vs debt fund: real post-tax returns compared", desc: "PPF wins on tax, FD wins on safety, debt funds win on flexibility.", time: "7 min", tag: "Compare", tagColor: "#7C3AED", tagBg: "rgba(124,58,237,0.08)", href: "/learn/savings/ppf-vs-fd-vs-debt-fund" },
-  { n: "03", title: "Best FD rates 2026: bank-wise comparison with honest returns", desc: "Big banks have negative real returns. SFBs beat inflation.", time: "6 min", tag: "Rankings", tagColor: "#2563eb", tagBg: "rgba(37,99,235,0.08)", href: "/learn/savings/best-fd-rates-2026" },
-  { n: "04", title: "Senior citizen FD: is the extra 0.5% worth locking in?", desc: "Extra rate + 80TTB deduction makes FDs genuinely useful for seniors.", time: "4 min", tag: "Analysis", tagColor: "#ea580c", tagBg: "rgba(234,88,12,0.08)", href: "/learn/savings/senior-citizen-fd" },
-  { n: "05", title: "Tax-saving FD vs ELSS vs PPF: which wins after 5 years?", desc: "All get 80C deduction. Returns after lock-in, tax, and inflation vary wildly.", time: "6 min", tag: "Compare", tagColor: "#7C3AED", tagBg: "rgba(124,58,237,0.08)", href: "/learn/savings/tax-saving-fd-vs-elss-vs-ppf" },
+  { n: "01", title: "Fixed deposits: estimate returns after tax and inflation", desc: "See how deposit rate, applicable tax and inflation assumptions affect purchasing power.", time: "4 min", tag: "Guide", tagColor: "#D97706", tagBg: "rgba(217,119,6,0.08)", href: "/learn/savings/fd-real-return" },
+  { n: "02", title: "PPF vs FD vs debt fund: compare rules, risk and access", desc: "Compare product rules, liquidity, risk, tax treatment and current terms for your own time horizon.", time: "7 min", tag: "Compare", tagColor: "#7C3AED", tagBg: "rgba(124,58,237,0.08)", href: "/learn/savings/ppf-vs-fd-vs-debt-fund" },
+  { n: "03", title: "FD rates: compare current bank offers and terms", desc: "Rates vary by tenure, customer category and date; verify with the institution before booking.", time: "6 min", tag: "Comparison", tagColor: "#2563eb", tagBg: "rgba(37,99,235,0.08)", href: "/learn/savings/best-fd-rates-2026" },
+  { n: "04", title: "Senior citizen FD: compare terms before locking in", desc: "Check current eligible rates, premature-closure rules, tax treatment and deposit protection before booking.", time: "4 min", tag: "Guide", tagColor: "#ea580c", tagBg: "rgba(234,88,12,0.08)", href: "/learn/savings/senior-citizen-fd" },
+  { n: "05", title: "Tax-saving FD vs ELSS vs PPF: compare lock-ins and rules", desc: "Eligibility, lock-in, risk and tax treatment differ. Check the current regime and scheme rules before investing.", time: "6 min", tag: "Compare", tagColor: "#7C3AED", tagBg: "rgba(124,58,237,0.08)", href: "/learn/savings/tax-saving-fd-vs-elss-vs-ppf" },
 ];
 
 const FD_RATES = [
-  { bank: "SBI", rate: "6.25%", real: "-0.85%", neg: true },
-  { bank: "HDFC Bank", rate: "6.50%", real: "-0.20%", neg: true },
-  { bank: "ICICI Bank", rate: "6.50%", real: "-0.20%", neg: true },
-  { bank: "IndusInd Bank", rate: "7.75%", real: "+0.33%", neg: false },
-  { bank: "Bajaj Finance", rate: "7.85%", real: "+0.68%", neg: false },
-  { bank: "Unity SFB", rate: "8.50%", real: "+1.20%", neg: false },
+  { bank: "Illustration: 6.5% gross", rate: "6.50%", real: "−0.43%", neg: true },
+  { bank: "Illustration: 7.5% gross", rate: "7.50%", real: "+0.24%", neg: false },
+  { bank: "Illustration: 8.5% gross", rate: "8.50%", real: "+0.90%", neg: false },
 ];
 
 const FAQS = [
-  { q: "Is my FD actually losing money?", a: "In the 30% tax bracket, any FD below 7.3% gives negative real returns after TDS + inflation. Most big bank FDs (6.8-7.0%) are effectively losing purchasing power." },
-  { q: "What is the best alternative to FDs?", a: "PPF for tax-free returns (15yr lock). Debt funds for 3+ year horizon. SFB FDs (8-9%) for higher returns with DICGC protection." },
-  { q: "Are small finance bank FDs safe?", a: "Yes, up to ₹5L per bank — covered by DICGC insurance, same as SBI. Spread across multiple SFBs to stay under the limit." },
+  { q: "Can an FD lose purchasing power?", a: "Yes. Compare its after-tax return with inflation using your own tax situation and the deposit's actual rate and compounding terms. TDS is a tax prepayment, not the final tax rate." },
+  { q: "What is the best alternative to FDs?", a: "There is no universal best option. PPF has a long lock-in, debt funds are market-linked, and deposits have issuer-specific terms and risks. Match the product to your time horizon, liquidity needs and risk tolerance." },
+  { q: "Are small finance bank FDs insured?", a: "Eligible deposits at DICGC-insured banks, including small finance banks, are covered up to ₹5 lakh per depositor per insured bank, including principal and interest, in the same right and capacity. Confirm the institution and product type; NBFC company deposits are not covered by DICGC." },
 ];
 
 const EXPLORE = [
-  { name: "Credit Cards", desc: "5% → 2.8% after caps", href: "/cards", color: "#7C3AED" },
-  { name: "Loans", desc: "8.5% → 9.35% after fees", href: "/learn/loans", color: "#2563EB" },
-  { name: "Insurance", desc: "₹10L → ₹4.2L coverage", href: "/learn/insurance", color: "#DB2777" },
+  { name: "Credit Cards", desc: "Compare rewards after fees and caps", href: "/cards", color: "#7C3AED" },
+  { name: "Loans", desc: "Compare rates, fees and total cost", href: "/learn/loans", color: "#2563EB" },
+  { name: "Insurance", desc: "Policy terms and claims", href: "/learn/insurance", color: "#DB2777" },
   { name: "Tax Planning", desc: "Old vs new regime math", href: "/learn/tax", color: "#16A34A" },
 ];
 
@@ -53,9 +50,9 @@ export default function SavingsClient() {
         <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-10 items-center relative z-[2]" style={{ maxWidth: 1060, margin: "0 auto" }}>
           <div>
             <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 16 }}><span style={{ width: 6, height: 6, borderRadius: "50%", background: "#FBBF24" }} /> The honest number on savings</div>
-            <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.1, letterSpacing: "-1.5px", color: "#F1F5F9", marginBottom: 12 }}>Your <span style={{ color: "#FBBF24" }}>7.5% FD</span> returns<br /><span style={{ color: "#F87171" }}>0.15%</span> after tax and inflation.</h1>
-            <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 420, marginBottom: 20 }}>Banks scream high FD rates. Nobody mentions TDS eats 30% and inflation eats the rest. We calculate what you actually take home.</p>
-            <div style={{ display: "flex", gap: 28, flexWrap: "wrap" }}>{[["5", "Honest guides"], ["6", "Banks compared"], ["₹0", "Always free"]].map(([n, l], i) => (<div key={i}><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>{n}</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>{l}</div></div>))}</div>
+            <h1 style={{ fontSize: "clamp(26px, 3.5vw, 38px)", fontWeight: 800, lineHeight: 1.1, letterSpacing: "-1.5px", color: "#F1F5F9", marginBottom: 12 }}>Compare savings<br /><span style={{ color: "#FBBF24" }}>after tax and inflation.</span></h1>
+            <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 420, marginBottom: 20 }}>Use clearly labelled assumptions to estimate purchasing-power changes. Your final tax depends on the tax year and personal circumstances; TDS is not the final tax liability.</p>
+            <div style={{ display: "flex", gap: 28, flexWrap: "wrap" }}>{[["5", "Practical guides"], ["0", "Live rate rankings"], ["₹0", "Always free"]].map(([n, l], i) => (<div key={i}><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>{n}</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>{l}</div></div>))}</div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {HERO_ITEMS.map((t, i) => (<div key={i} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 12, padding: "14px 18px" }}><div style={{ display: "flex", alignItems: "center", gap: 12 }}><div style={{ width: 36, height: 36, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 16, background: t.iconBg }}>{t.icon}</div><div><div style={{ fontSize: 13, fontWeight: 700, color: "#fff" }}>{t.name}</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.35)" }}>{t.sub}</div></div></div><div style={{ textAlign: "right" }}><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)", textDecoration: "line-through" }}>{t.adv}</div><div style={{ fontSize: 18, fontWeight: 800, color: "#F87171" }}>{t.real}</div></div></div>))}
@@ -70,14 +67,14 @@ export default function SavingsClient() {
       </div>
 
       <div style={{ maxWidth: 1060, margin: "0 auto", padding: "0 24px 80px" }}>
-        <h2 className="text-lg font-extrabold tracking-tight mb-3" style={{ color: "var(--text)" }}>FD rates — advertised vs honest (30% bracket)</h2>
+        <h2 className="text-lg font-extrabold tracking-tight mb-3" style={{ color: "var(--text)" }}>Illustrative FD return scenarios</h2>
         <div className="rounded-xl overflow-hidden mb-3" style={{ border: "1px solid var(--border)" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-card)" }}>
-            <thead><tr style={{ background: "var(--bg-muted)" }}>{["Bank", "Advertised Rate", "Real Return (after tax + inflation)"].map(h => (<th key={h} style={{ textAlign: "left", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", padding: "12px 16px", color: "var(--text-faint)", borderBottom: "1px solid var(--border)" }}>{h}</th>))}</tr></thead>
+            <thead><tr style={{ background: "var(--bg-muted)" }}>{["Scenario (not a bank quote)", "Gross rate", "Illustrative real return"].map(h => (<th key={h} style={{ textAlign: "left", fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", padding: "12px 16px", color: "var(--text-faint)", borderBottom: "1px solid var(--border)" }}>{h}</th>))}</tr></thead>
             <tbody>{FD_RATES.map((b, i) => (<tr key={i}><td style={{ padding: "12px 16px", fontSize: 13, fontWeight: 700, borderBottom: i < FD_RATES.length - 1 ? "1px solid var(--border-light)" : "none", color: "var(--text)" }}>{b.bank}</td><td style={{ padding: "12px 16px", fontSize: 13, borderBottom: i < FD_RATES.length - 1 ? "1px solid var(--border-light)" : "none", color: "var(--text-secondary)" }}>{b.rate}</td><td style={{ padding: "12px 16px", fontSize: 13, fontWeight: 700, borderBottom: i < FD_RATES.length - 1 ? "1px solid var(--border-light)" : "none", color: b.neg ? "#DC2626" : "var(--green)" }}>{b.real}</td></tr>))}</tbody>
           </table>
         </div>
-        <p className="text-xs mb-8" style={{ color: "var(--text-faint)" }}>30% tax bracket, 5.1% inflation. Big bank FDs have negative real returns.</p>
+        <p className="text-xs mb-8" style={{ color: "var(--text-faint)" }}>Illustration assumes a 30% marginal tax rate on interest and 5.0% inflation, using (1 + after-tax nominal return) ÷ (1 + inflation) − 1. It is not a current bank-rate comparison or individual tax calculation.</p>
 
         <h2 className="text-lg font-extrabold tracking-tight mb-4" style={{ color: "var(--text)" }}>Savings guides</h2>
         <div className="flex flex-col gap-2.5 mb-8">

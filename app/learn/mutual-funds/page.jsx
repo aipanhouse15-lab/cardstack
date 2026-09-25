@@ -1,8 +1,8 @@
 import MutualFundsClient from "./MutualFundsClient";
 
 export const metadata = {
-  title: "Mutual Funds — Your Real Return After All Charges",
-  description: "Your 15% CAGR fund gives you 11.8% after expense ratio, exit load, and LTCG tax. We calculate the honest number on mutual fund returns.",
+  title: "Mutual Fund Guides: Returns, Costs and Risk",
+  description: "Practical guides to mutual-fund return measures, plan costs, SIPs, risk and current scheme disclosures.",
   alternates: { canonical: "/learn/mutual-funds" },
 };
 
@@ -10,8 +10,8 @@ export default function MutualFundsPage() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: "Mutual Fund Guides — Real Returns After All Charges",
-    description: "Honest number on mutual fund returns: CAGR vs actual, direct vs regular, SIP real returns after expense ratio and tax.",
+    name: "Mutual Fund Guides: Returns, Costs and Risk",
+    description: "Educational guides to mutual-fund return measures, plan costs, SIPs, risk and scheme disclosures.",
     url: "https://www.assurefintech.com/learn/mutual-funds",
     isPartOf: { "@type": "WebSite", name: "Assure Fintech", url: "https://www.assurefintech.com" },
     breadcrumb: {
@@ -24,8 +24,8 @@ export default function MutualFundsPage() {
     mainEntity: {
       "@type": "FAQPage",
       mainEntity: [
-        { "@type": "Question", name: "Why does my 15% CAGR mutual fund only give 11.8%?", acceptedAnswer: { "@type": "Answer", text: "The advertised 15% CAGR doesn't account for expense ratio (1-2.5% annually), exit load (1% if redeemed within 1 year), and LTCG tax (12.5% on gains above ₹1.25L). A direct plan at 1% expense ratio with 12.5% LTCG on a 15% gross return gives ~12.5% net. Regular plans lose another 0.5-1.5% to distributor commission." } },
-        { "@type": "Question", name: "Direct vs regular mutual fund — how much difference?", acceptedAnswer: { "@type": "Answer", text: "Direct plans save 0.5-1.5% annually by cutting distributor commission. On a ₹10,000/month SIP over 20 years at 12% return, this 1% difference means ₹12L more in your corpus — the compounding effect is massive." } },
+        { "@type": "Question", name: "How should I compare mutual-fund returns?", acceptedAnswer: { "@type": "Answer", text: "Use a return measure suited to the cash flows and period being assessed, such as CAGR for a single lump-sum interval or XIRR for dated cash flows. Check the same scheme, plan, option and dates; returns are not guaranteed and do not predict future results." } },
+        { "@type": "Question", name: "What should I check before comparing direct and regular plans?", acceptedAnswer: { "@type": "Answer", text: "Compare the current total expense ratio and scheme documents for the exact plan, then consider distribution or service support, investment risk, tax and any costs of switching. Expense ratios and other terms can change." } },
       ],
     },
   };

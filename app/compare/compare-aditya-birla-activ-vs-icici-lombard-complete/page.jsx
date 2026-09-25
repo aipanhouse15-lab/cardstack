@@ -18,7 +18,7 @@ export const metadata = {
 // URL: /compare/aditya-birla-activ-vs-icici-lombard-complete
 
 const COLOR = "#DB2777";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgWellnessReturn = () => (
   <svg viewBox="0 0 520 200" role="img" aria-label="Wellness reward economic value at full engagement" style={{ width: "100%" }}>
@@ -67,7 +67,7 @@ export default function CompareAbhVsIciciLombard() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "Aditya Birla Activ Health vs ICICI Lombard Complete Health — wellness-driven plans face-off, 2026",
     author: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-06-06", dateModified: "2026-06-06",
+    datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 

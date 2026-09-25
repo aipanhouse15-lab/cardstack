@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/bnpl-vs-credit-cards-india
 // Template: Warning/trap article with real math and decision guide
-// Color: #dc2626 | Updated: June 4, 2026
+// Color: #dc2626 | Updated: September 26, 2026
 
 const COLOR = "#dc2626";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgBnplLandscape = () => (
   <svg viewBox="0 0 720 235" role="img" aria-label="Overview of major BNPL providers in India with their rates and key terms" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -247,7 +247,7 @@ export default function BlogBnplVsCreditCardsIndia() {
     headline: "BNPL vs Credit Cards in India: Read This Before You Sign Up",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -360,7 +360,7 @@ export default function BlogBnplVsCreditCardsIndia() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Assure Fintech is an independent comparison platform. BNPL interest rates, fees, and bureau reporting practices change frequently and vary by provider and user credit profile. ZestMoney's closure and other market changes may affect product availability. Data accurate as of June 2026. This is not financial advice. Always read the full terms before activating any credit product.
+        Assure Fintech is an independent comparison platform. BNPL interest rates, fees, and bureau reporting practices change frequently and vary by provider and user credit profile. ZestMoney's closure and other market changes may affect product availability. Reviewed September 26, 2026; confirm product availability and terms with the provider. This is not financial advice. Always read the full terms before activating any credit product.
       </footer>
     </main>
     </>

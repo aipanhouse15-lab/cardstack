@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/cibil-score-101-india
 // Template: Complete guide / "everything you need to know"
-// Color: #ea580c | Updated: June 4, 2026
+// Color: #ea580c | Updated: September 26, 2026
 
 const COLOR = "#ea580c";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgScoreRanges = () => (
   <svg viewBox="0 0 720 234" role="img" aria-label="CIBIL score ranges from 300 to 900 with lender treatment at each level" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

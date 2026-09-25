@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/future-credit-card-rewards-india
 // Template: forward-looking analysis
-// Color: #0891b2 | Updated: June 4, 2026
+// Color: #0891b2 | Updated: September 26, 2026
 
 const COLOR = "#0891b2";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgRewardPressureMap = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Structural pressures reducing credit card reward rates in India 2024 to 2028" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -261,7 +261,7 @@ export default function BlogFutureCreditCardRewardsIndia() {
     headline: "The Future of Credit Card Rewards in India: What Survives, What Doesn't",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -373,7 +373,7 @@ export default function BlogFutureCreditCardRewardsIndia() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Forward-looking analysis in this article is based on publicly available information about market trends, regulatory announcements, and bank communications current as of June 2026. Predictions about future reward structures are the editorial opinion of Assure Fintech and not guarantees. Verify all card terms, reward rates, and policies at the issuing bank's official website before making financial decisions. Assure Fintech is an independent comparison platform and is not affiliated with any bank, airline, or loyalty program mentioned. Last verified June 4, 2026.
+        Forward-looking analysis in this article is based on publicly available information about market trends, regulatory announcements, and bank communications reviewed through September 26, 2026. Predictions about future reward structures are the editorial opinion of Assure Fintech and not guarantees. Verify all card terms, reward rates, and policies at the issuing bank's official website before making financial decisions. Assure Fintech is an independent comparison platform and is not affiliated with any bank, airline, or loyalty program mentioned. Reviewed September 26, 2026.
       </footer>
     </main>
     </>

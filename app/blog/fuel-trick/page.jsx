@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/fuel-credit-card-trick-india
 // Template: how-to / optimization guide
-// Color: #7c3aed | Updated: June 4, 2026
+// Color: #7c3aed | Updated: September 26, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgFuelSurchargeExplainer = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Diagram showing how the 1% fuel surcharge works on credit card payments at petrol stations" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

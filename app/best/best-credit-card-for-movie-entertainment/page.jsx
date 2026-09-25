@@ -2,12 +2,12 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Movies and Entertainment in India (June 2026)",
-  description: "The right credit card turns a ₹500 movie ticket into a ₹200 one. Here's exactly how the BookMyShow deal works, which cards deliver it, and what to do about N...",
+  title: "Best Credit Card for Movies and Entertainment in India (September 2026)",
+  description: "Compare current movie-ticket promotions, card fees and redemption conditions. Offers vary by card variant, platform and booking date.",
   alternates: { canonical: "/best/best-credit-card-for-movie-entertainment" },
   openGraph: {
-    title: "Best Credit Card for Movies and Entertainment in India (June 2026)",
-    description: "The right credit card turns a ₹500 movie ticket into a ₹200 one. Here's exactly how the BookMyShow deal works, which cards deliver it, and what to do about N...",
+    title: "Best Credit Card for Movies and Entertainment in India (September 2026)",
+    description: "Compare current movie-ticket promotions, card fees and redemption conditions. Offers vary by card variant, platform and booking date.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -15,10 +15,10 @@ export const metadata = {
 
 
 // /best/credit-card-for-movie-entertainment
-// Updated: June 4, 2026
+// Updated: September 26, 2026
 
 const COLOR = "#f59e0b";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const IconMovie = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Movie and entertainment credit card icon">
@@ -88,7 +88,7 @@ export default function BestCreditCardForMovieEntertainment() {
         name: "Which credit card gives the best discount on BookMyShow in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ICICI Coral credit card gives ₹200 off on two BookMyShow movie tickets per month (buy-one-get-one offer, capped at ₹200 discount). SBI Card ELITE gives ₹200 off on BookMyShow once a month. HDFC Regalia (select tier) offers 2-for-1 on BookMyShow Gold bookings. ICICI Coral is the most accessible for the BookMyShow offer, with a low fee of ₹500/year."
+          text: "ICICI's current Coral page advertises 25% off, up to ₹100, on a minimum purchase of two BookMyShow or INOX tickets, twice a month. The same page lists a ₹500 + GST joining fee and ₹500 + GST annual fee from year two, waived after ₹1.5 lakh spend in the previous year. Other card offers vary by variant and may change; check the live offer terms shown at checkout before valuing or applying for a card."
         }
       },
       {
@@ -96,7 +96,7 @@ export default function BestCreditCardForMovieEntertainment() {
         name: "How does the BookMyShow BOGO credit card offer work?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "BOGO (buy-one-get-one) means you pay for one ticket and get a second one free, up to a specified cap. On ICICI Coral, the offer is: buy 2 tickets on BookMyShow, and ₹200 is discounted from the total. The discount applies on a minimum 2-ticket purchase. This is available twice per month for card holders as of June 2026. The discount triggers automatically when you select the card at checkout on the BMS app."
+          text: "Do not assume every movie-card promotion is a literal free ticket. ICICI's current Coral offer is 25% off up to ₹100 on a minimum two-ticket purchase, twice a month, on BookMyShow and INOX. Eligibility, participating ticket types and redemption steps are governed by the offer terms visible at checkout."
         }
       },
       {
@@ -104,7 +104,7 @@ export default function BestCreditCardForMovieEntertainment() {
         name: "Does Amazon Pay ICICI card give cashback on Prime Video subscription?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Amazon Pay ICICI gives 5% cashback for Prime members on all Amazon transactions, which includes Amazon Prime subscription payments. Paying your annual Prime subscription (₹1,499) with this card earns ₹75 back. The same applies to Prime Video rent and buy transactions made within the Amazon ecosystem."
+          text: "Rewards depend on how the subscription is billed and the issuer's eligible-transaction terms. Do not assume a subscription, wallet-funded payment or third-party billing route qualifies for a card's advertised shopping rate; check the transaction route and current exclusions."
         }
       },
       {
@@ -112,7 +112,7 @@ export default function BestCreditCardForMovieEntertainment() {
         name: "Can I use my credit card to pay for Netflix and earn rewards?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Netflix charges your credit card like any other merchant. Most credit cards earn standard reward points on Netflix payments. Some cards do better: Amazon Pay ICICI earns 1-5% (if Netflix is paid through Amazon Pay balance). HDFC Millennia earns 5% on Netflix if paid via its app partner ecosystem. Standard cards earn 1-1.5% on Netflix/Hotstar as a base category."
+          text: "A streaming payment may earn the card's ordinary eligible-spend rate, but partner rates do not automatically apply to subscriptions. The payment channel, merchant classification and issuer exclusions matter; verify the charge route against the current card terms."
         }
       },
       {
@@ -120,7 +120,7 @@ export default function BestCreditCardForMovieEntertainment() {
         name: "Which credit card is best for movie lovers in India in 2026?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "For dedicated movie lovers who watch in cinemas 2+ times a month, ICICI Coral is the best value card. The ₹200 BookMyShow discount used twice per month = ₹400 saved monthly = ₹4,800 per year, against a ₹500 annual card fee. SBI Card ELITE is a close second if you also want premium lifestyle benefits. For everything else (OTT + occasional movies), Amazon Pay ICICI is the most practical free option."
+          text: "There is no universal best card. ICICI Coral's currently published offer is 25% off up to ₹100 on at least two tickets, twice monthly, subject to its live terms. Estimate value from the discount you can actually redeem, card fees you will pay, and offers you would otherwise use."
         }
       },
       {
@@ -128,7 +128,7 @@ export default function BestCreditCardForMovieEntertainment() {
         name: "Does SBI SimplySAVE card give good rewards on movies and dining?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "SBI SimplySAVE earns 10X reward points on movies, dining, and groceries — which sounds high but the base point value is ₹0.20 per point, making the effective return about 1.3% in these categories. At the same fee range, ICICI Coral's direct BookMyShow discount delivers more measurable value for regular movie-goers."
+          text: "SBI SimplySAVE lists accelerated reward points for eligible dining, movies, departmental stores and grocery transactions. Points are not cash; check the current reward programme, eligible transaction classification and redemption value before comparing it with a ticket discount."
         }
       },
       {
@@ -136,7 +136,7 @@ export default function BestCreditCardForMovieEntertainment() {
         name: "Are credit card movie offers valid on all screens including IMAX and 4DX?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Generally yes, but the discount cap matters. If the IMAX ticket costs ₹450 and the BOGO cap is ₹200, you still pay ₹700 for two IMAX tickets instead of ₹900 — a valid saving. The ₹200 cap doesn't cover the full IMAX price premium but still provides partial benefit. Check if the offer applies to all BookMyShow ticket types or is restricted to regular 2D/3D screenings."
+          text: "Not necessarily. Participating formats, venues, ticket types and discount caps are defined by each promotion. Read the live offer terms in the booking flow rather than assuming IMAX, 4DX or other premium formats qualify."
         }
       },
       {
@@ -144,7 +144,7 @@ export default function BestCreditCardForMovieEntertainment() {
         name: "Which credit card is best for live events, concerts, and sports in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "For live events and concerts beyond cinema, HDFC Infinia and Axis Magnus provide concierge-assisted ticket procurement for sold-out events. SBI Card ELITE has specific partnerships with entertainment venues. For IPL, music concerts, and stand-up shows on BookMyShow, the same BMS-linked cards (ICICI Coral, SBI ELITE) apply their discounts. Premium Amex cards have global event access benefits useful for Formula One, international concerts, and sports tours."
+          text: "Event access and ticket discounts are offer- and card-specific, and a movie promotion may not cover concerts, sports or other events. Check the issuer and BookMyShow terms for the exact event, venue, card variant and booking period."
         }
       }
     ]
@@ -153,10 +153,10 @@ export default function BestCreditCardForMovieEntertainment() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for Movies and Entertainment in India (June 2026)",
+    headline: "Best Credit Card for Movies and Entertainment in India (September 2026)",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -173,48 +173,44 @@ export default function BestCreditCardForMovieEntertainment() {
   const bmsCards = [
     {
       card: "ICICI Coral",
-      fee: "₹500/yr",
-      bmsOffer: "₹200 off on 2 tickets, 2x/month",
-      monthlyValue: "₹400",
-      annualValue: "₹4,800",
-      cap: "₹200/offer",
-      verdict: "Best for cinema regulars — offer alone covers fee 9x over"
+      fee: "₹500 + GST joining; ₹500 + GST annual from year two; prior-year ₹1.5L waiver condition",
+      bmsOffer: "25% off up to ₹100; minimum 2 tickets; twice/month",
+      monthlyValue: "Up to ₹200",
+      annualValue: "Up to ₹2,400 gross",
+      cap: "₹100/offer",
+      verdict: "Check offer availability and eligible ticket types at checkout"
     },
     {
       card: "SBI Card ELITE",
-      fee: "₹4,999/yr",
-      bmsOffer: "₹200 off on 2 tickets, 1x/month",
-      monthlyValue: "₹200",
-      annualValue: "₹2,400",
-      cap: "₹200/month",
-      verdict: "Good movie perk but card justifies itself on other lifestyle benefits"
+      fee: "Check current issuer fee schedule",
+      bmsOffer: "Check live issuer/BookMyShow offer",
+      monthlyValue: "Varies",
+      annualValue: "Not estimated",
+      cap: "Variant/offer-specific",
+      verdict: "Do not value without current terms"
     },
     {
       card: "Axis MyZone",
-      fee: "₹500/yr (waived)",
-      bmsOffer: "1 free ticket/month (up to ₹200)",
-      monthlyValue: "₹200",
-      annualValue: "₹2,400",
-      cap: "₹200/month",
-      verdict: "Strong entry card for young professionals who watch monthly"
+      fee: "Check current issuer fee schedule",
+      bmsOffer: "Check live issuer/BookMyShow offer",
+      monthlyValue: "Varies",
+      annualValue: "Not estimated",
+      cap: "Variant/offer-specific",
+      verdict: "Do not value without current terms"
     },
     {
       card: "HDFC Regalia Gold",
-      fee: "₹2,500/yr",
-      bmsOffer: "2-for-1 on BMS Gold tier",
+      fee: "Check current issuer fee schedule",
+      bmsOffer: "Check live issuer/BookMyShow offer",
       monthlyValue: "Varies",
-      annualValue: "₹1,200-₹3,000 est.",
+      annualValue: "Not estimated",
       cap: "BMS Gold prices",
-      verdict: "Better as an all-round card — movie benefit is a bonus, not the main draw"
+      verdict: "Do not value without current terms"
     }
   ];
 
   const ottTable = [
-    { platform: "Amazon Prime (annual)", cost: "₹1,499/yr", bestCard: "Amazon Pay ICICI", reward: "₹75 (5% for Prime)", note: "Paid via Amazon app" },
-    { platform: "Netflix (monthly ₹499)", cost: "₹5,988/yr", bestCard: "HDFC Millennia", reward: "₹300/yr (5%)", note: "On partner Netflix payment" },
-    { platform: "Disney+ Hotstar (annual)", cost: "₹1,499/yr", bestCard: "Any 1.5-2% card", reward: "₹22-30", note: "No specific partnership bonus" },
-    { platform: "Spotify Premium (monthly)", cost: "₹1,188/yr", bestCard: "Any card + auto-pay", reward: "₹12-18 (1-1.5%)", note: "Standard utility rate" },
-    { platform: "Apple TV+ (monthly)", cost: "₹99/mo = ₹1,188/yr", bestCard: "Amazon Pay ICICI (Amazon purchases)", reward: "Varies", note: "Standard merchant rate" }
+    { platform: "Any streaming subscription", cost: "Current plan price", bestCard: "No universal best card", reward: "Depends on eligible transaction route", note: "Check issuer exclusions and payment channel" }
   ];
 
   return (
@@ -227,7 +223,7 @@ export default function BestCreditCardForMovieEntertainment() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for Movies and Entertainment in India (June 2026)
+            Best Credit Card for Movies and Entertainment in India (September 2026)
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
@@ -248,7 +244,7 @@ export default function BestCreditCardForMovieEntertainment() {
       </div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted,#475569)", marginBottom: 10, fontWeight: 500 }}>
-        The right credit card turns a ₹500 movie ticket into a ₹200 one. Here's exactly how the BookMyShow deal works, which cards deliver it, and what to do about Netflix and live events.
+        Compare current ticket offers, issuer fees and redemption conditions. Movie promotions vary by card variant, platform, venue and booking date; verify the offer at checkout.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
@@ -261,7 +257,7 @@ export default function BestCreditCardForMovieEntertainment() {
         <div>
           <strong style={{ color: COLOR, fontSize: 14, display: "block", marginBottom: 4 }}>The Honest Number on Movie Card Benefits</strong>
           <p style={{ margin: 0, fontSize: 14, color: "var(--text-muted,#475569)" }}>
-            ICICI Coral's ₹200 BookMyShow discount used twice a month = ₹4,800 per year. The card costs ₹500 annually. Net benefit: ₹4,300 per year just from the movie offer — before any reward points on other spends. This is one of the highest return-on-fee ratios of any lifestyle card in India if you watch movies regularly.
+            ICICI Bank currently advertises 25% off up to ₹100 on a minimum two-ticket purchase on BookMyShow and INOX, twice a month, for Coral. That is up to ₹200 per month before fees and only when eligible bookings qualify. Coral's published joining fee is ₹500 + GST; annual fee is ₹500 + GST from year two, with a previous-year spend waiver condition.
           </p>
         </div>
       </div>
@@ -274,15 +270,15 @@ export default function BestCreditCardForMovieEntertainment() {
       </p>
 
       <p style={{ marginBottom: 12 }}>
-        The "buy-one-get-one" framing can be misleading. What actually happens: you add 2 tickets to your cart, apply the card offer at checkout, and ₹200 is deducted (or the lower-priced ticket's value up to ₹200). This is a cap-based discount, not a literal free ticket at any price point.
+        Promotion labels can be misleading. For Coral, ICICI currently advertises 25% off up to ₹100 on a minimum two-ticket purchase; this is not a ₹200 discount per booking. The discount depends on the eligible purchase and live terms.
       </p>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 20 }}>
         {[
-          { scenario: "2 tickets at ₹250 each (₹500 total) → Discount: ₹200 → You pay: ₹300", good: true },
-          { scenario: "2 tickets at ₹450 each (IMAX, ₹900 total) → Discount: ₹200 → You pay: ₹700", good: true },
-          { scenario: "1 ticket only → Offer not applicable (minimum 2 tickets required)", good: false },
-          { scenario: "3rd and 4th ticket in same booking → No additional discount", good: false }
+          { scenario: "Two eligible tickets → Coral offer may apply: 25% off, capped at ₹100", good: true },
+          { scenario: "One ticket → Coral offer's minimum two-ticket condition is not met", good: false },
+          { scenario: "Premium format, venue or event → Check offer-specific exclusions", good: false },
+          { scenario: "Additional tickets or repeat bookings → Check checkout counter and monthly limit", good: false }
         ].map(({ scenario, good }, i) => (
           <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "10px 14px", background: good ? "var(--green-dim)" : "var(--raise)", border: `1px solid ${good ? "rgba(62,224,143,.35)" : "var(--hair)"}`, borderRadius: 8 }}>
             {good ? <IconCheck /> : <IconCross />}
@@ -292,11 +288,11 @@ export default function BestCreditCardForMovieEntertainment() {
       </div>
 
       <p style={{ marginBottom: 24 }}>
-        The offer resets monthly, not weekly. Most BMS-linked cards allow 1-2 discounted bookings per calendar month. If you use it on the 2nd of the month, you need to wait until the 1st of next month for the counter to reset.
+        Coral's issuer page says the promotion is available twice a month. Other card-specific counters, reset periods and limits may differ; use the current offer terms displayed during booking.
       </p>
 
       {/* Card comparison table */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>BookMyShow Credit Card Offers Compared (June 2026)</h2>
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>BookMyShow Credit Card Offers: Verify the Live Terms</h2>
       <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 16 }}>Annual value calculated assuming consistent monthly use of full offer.</p>
 
       <div style={{ overflowX: "auto", marginBottom: 28 }}>
@@ -323,7 +319,7 @@ export default function BestCreditCardForMovieEntertainment() {
                 <td style={{ padding: "10px 12px", textAlign: "right", color: COLOR, fontWeight: 700 }}>{row.annualValue}</td>
                 <td style={{ padding: "10px 12px", textAlign: "right" }}>{row.fee}</td>
                 <td style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, color: "#16a34a" }}>
-                  {row.card === "ICICI Coral" ? "+₹4,300" : row.card === "SBI Card ELITE" ? "-₹2,599" : row.card === "Axis MyZone" ? "+₹1,900" : "+₹0 to +₹500"}
+                  Not estimated
                 </td>
               </tr>
             ))}
@@ -339,46 +335,37 @@ export default function BestCreditCardForMovieEntertainment() {
           {
             rank: 1,
             name: "ICICI Coral",
-            fee: "₹500/yr (waived at ₹1.5L spend)",
-            headline: "Best pure-value movie card in India",
+            fee: "₹500 + GST joining; ₹500 + GST annual from year two; prior-year ₹1.5L waiver condition",
+            headline: "Published Coral ticket offer; compare your actual redemption",
             benefits: [
-              "₹200 off on BookMyShow, 2 times per month",
-              "1 complimentary DreamFolks lounge visit/quarter (4/year)",
-              "2 reward points per ₹100 spent on dining and entertainment",
-              "1 reward point per ₹100 on other spends",
-              "Fuel surcharge waiver at HPCL pumps"
+              "25% off up to ₹100 on at least two BookMyShow or INOX tickets, twice monthly",
+              "Check current lounge, reward and fuel terms separately; they are not valued here"
             ],
-            math: "₹200 x 2 offers x 12 months = ₹4,800 value. Annual fee ₹500. Net: +₹4,300.",
+            math: "Maximum advertised discount is up to ₹200/month before fees, only if both eligible bookings qualify; actual savings can be lower.",
             link: "/cards/icici-coral"
           },
           {
             rank: 2,
             name: "SBI Card ELITE",
-            fee: "₹4,999/yr",
+            fee: "Check current issuer fee schedule",
             headline: "Best premium entertainment card — movies are a side benefit",
             benefits: [
-              "₹200 off on BookMyShow, once per month",
-              "5X reward points on dining, entertainment, groceries",
-              "6 domestic lounge visits + 6 Priority Pass visits/year",
-              "₹6,000 e-vouchers on card activation",
-              "Milestone rewards at ₹3L, ₹4L, ₹5L spend"
+              "Movie and entertainment offers are variant- and offer-specific; check current issuer terms",
+              "Evaluate other benefits separately against the current fee"
             ],
-            math: "₹200 x 12 months = ₹2,400 BMS value. Card fee ₹4,999. Movie offer alone doesn't justify the fee — need total lifestyle use.",
+            math: "No annual movie value estimated without a verified current offer for your card variant.",
             link: "/cards/sbi-card-elite"
           },
           {
             rank: 3,
             name: "Axis MyZone",
-            fee: "₹500/yr (waived at ₹2L spend)",
+            fee: "Check current issuer fee schedule",
             headline: "Best entry card for students and early-career professionals",
             benefits: [
-              "1 free BookMyShow movie ticket per month (up to ₹200)",
-              "5% cashback on Zomato, Swiggy",
-              "10% discount on Myntra",
-              "2 DreamFolks lounge visits/quarter",
-              "No forex markup on international transactions (bonus travel benefit)"
+              "Check current MyZone movie promotion, eligible platform and cap",
+              "Check current issuer terms for other benefits and exclusions"
             ],
-            math: "₹200 x 12 months = ₹2,400 BMS value. Fee ₹500 waived at ₹2L/yr. Net: +₹2,400 if fee waived.",
+            math: "No annual movie value estimated without a verified current offer for your card variant.",
             link: "/cards/axis-myzone"
           }
         ].map(({ rank, name, fee, headline, benefits, math, link }) => (
@@ -406,7 +393,7 @@ export default function BestCreditCardForMovieEntertainment() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>OTT Subscriptions and Credit Card Rewards</h2>
 
       <p style={{ marginBottom: 12 }}>
-        Streaming subscriptions are one of the most consistent recurring charges in India today. Netflix, Prime, Hotstar, and Spotify together cost a typical household ₹8,000 to ₹11,000 per year. Choosing the right card for these auto-debits adds up.
+        Subscription prices and eligible reward rates depend on the plan, billing route and issuer terms. Verify the current price and how the transaction is classified before estimating card rewards.
       </p>
 
       <div style={{ overflowX: "auto", marginBottom: 24 }}>
@@ -437,16 +424,16 @@ export default function BestCreditCardForMovieEntertainment() {
       {/* Beyond movies */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Beyond Cinema: Concerts, Gaming, and Events</h2>
 
-      <p style={{ marginBottom: 12 }}>
-        BookMyShow is not just for films — it sells event tickets for IPL, standup comedy, music concerts, and live performances. The same credit card BMS offers apply to event bookings, giving you ₹200 off on event tickets purchased in pairs.
+        <p style={{ marginBottom: 12 }}>
+        BookMyShow lists films and other events, but a movie-ticket card offer may not apply to concerts, sports or live performances. Confirm eligible event types and venues in the offer terms.
       </p>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 20 }}>
         {[
-          { label: "IPL / Sports Tickets", card: "ICICI Coral (BMS offer applies)", note: "₹200 off on 2 IPL tickets" },
-          { label: "Music Concerts / Festivals", card: "HDFC Infinia / Axis Magnus", note: "Concierge for sold-out shows" },
-          { label: "Gaming (Steam, Xbox, PS Store)", card: "Any international card with low forex", note: "IDFC WOW or Scapia best for USD charges" },
-          { label: "Standup Comedy Shows", card: "ICICI Coral (BMS offer applies)", note: "BookMyShow-listed shows eligible" }
+          { label: "Sports and live events", card: "Check event-specific offer terms", note: "A movie offer may not cover events" },
+          { label: "Concerts and festivals", card: "Compare current card benefits", note: "Do not assume concierge access guarantees tickets" },
+          { label: "Gaming subscriptions", card: "Check foreign-currency fee and reward rules", note: "Payment currency and route affect total cost" },
+          { label: "Comedy shows", card: "Check event-specific offer terms", note: "Confirm eligible venue and ticket type" }
         ].map(({ label, card, note }, i) => (
           <div key={i} style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 8, padding: "14px 16px" }}>
             <div style={{ fontWeight: 700, fontSize: 13, color: COLOR, marginBottom: 4 }}>{label}</div>
@@ -457,7 +444,7 @@ export default function BestCreditCardForMovieEntertainment() {
       </div>
 
       <p style={{ marginBottom: 12 }}>
-        For gaming spend (PlayStation Store, Steam, Xbox Game Pass), international charges in USD or GBP attract forex markup on most cards. A zero-forex card like IDFC FIRST WOW saves you 3.5% on every in-game purchase or DLC download.
+        For gaming spend, check whether the charge is processed in foreign currency and compare the card's current forex markup, network conversion and reward exclusions. A zero-markup claim does not necessarily mean the transaction has no conversion cost.
       </p>
 
       <p style={{ marginBottom: 24 }}>
@@ -472,10 +459,10 @@ export default function BestCreditCardForMovieEntertainment() {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 16 }}>
           {[
-            "Set ICICI Coral as your default card in the BookMyShow app. This triggers the offer automatically — you don't need to hunt for a promo code each time.",
-            "Use the BMS offer exactly twice per month. Calendar it if needed. Using it only once per month on ICICI Coral leaves ₹2,400 per year on the table.",
-            "Set OTT auto-debits to whichever card earns the most in that category (Amazon Pay ICICI for Prime, HDFC Millennia for Netflix if available).",
-            "For live events and concerts, book early. Credit card BOGO offers apply regardless of price — saving ₹200 on an ₹800 event ticket is a better discount percentage than on a ₹250 movie ticket."
+            "Check the offer in the BookMyShow or INOX checkout flow before choosing a card; offers can vary by card variant and date.",
+            "Read minimum-ticket, discount-cap, eligible-format and monthly-usage conditions before calculating savings.",
+            "For subscriptions, confirm whether the actual merchant and payment route qualify for the card's advertised reward category.",
+            "Compare the discount you can redeem with joining/annual fees and any spend-based waiver; do not count unused or unavailable offers as savings."
           ].map((tip, i) => (
             <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
               <div style={{ background: COLOR, color: "#fff", borderRadius: "50%", width: 22, height: 22, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{i + 1}</div>

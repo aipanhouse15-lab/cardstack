@@ -4,8 +4,16 @@
 
 export const MONTHLY_UPDATES = [
   {
-    month: "June 2026",
+    month: "September 2026",
     current: true,
+    entries: [
+      { type: "update", icon: "📝", card: "Editorial content refresh", text: "September review of selected savings, loan, insurance, mutual-fund and tax guides. Removed unsupported live-rate rankings, stale product examples and blanket tax or claim outcomes; replaced them with current-source and policy-document checks. Product terms and tax rules still require confirmation for the relevant issuer and period.", date: "Sep 2026" },
+      { type: "update", icon: "🔎", card: "Coverage & freshness", text: "This is a data-status notice, not a claim that an issuer changed its terms. The catalogue currently marks 58 of 76 records as source-linked with a review date; 18 remain pending. Three SBI records were returned to pending because their links did not establish the current card-specific terms. A review marker does not guarantee every benefit or later issuer change. Confirm terms with the issuer before acting.", date: "Sep 2026" },
+    ],
+  },
+  {
+    month: "June 2026",
+    current: false,
     entries: [
       { type: "alert", icon: "🔄", card: "Stale Content Audit", text: "Full data refresh: Axis Airtel, Atlas, Magnus devaluations applied. HDFC Tata Neu Infinity/Plus reward structure corrected. Scapia Feb 2026 changes. HDFC Swiggy ₹249 min + closed to new applicants. StanC availability flagged. Vistara→Air India sitewide.", date: "Jun 2026" },
       { type: "alert", icon: "📉", card: "Loan & FD Rates", text: "RBI repo rate at 5.25% (held Jun 2026). Home loan rates dropped ~125bps — SBI now ~7.25%, HDFC ~7.75%. FD rates down ~50bps across banks. Learn pages updated.", date: "Jun 2026" },
@@ -31,7 +39,7 @@ export const MONTHLY_UPDATES = [
       { type: "verified", icon: "✅", card: "11 Cards Verified", text: "Effective cashback rates verified from bank product pages for HDFC, SBI, ICICI, Axis, and other banks. Cap calculations confirmed.", date: "Mar 2026" },
       { type: "new", icon: "🆕", card: "50 New Cards Added", text: "Database expanded from 25 to 75 cards covering 18+ banks. New cards include Axis Magnus, HDFC Tata Neu, Scapia, HSBC Live+, Amex MRCC, and more. All marked as unverified — verification ongoing.", date: "Mar 2026" },
       { type: "new", icon: "🆕", card: "HDFC Swiggy BLCK", text: "Premium variant of HDFC Swiggy card added. 10% on Swiggy, 5% on travel/online/entertainment. Swiggy One BLCK membership included.", date: "Mar 2026" },
-      { type: "verified", icon: "📊", card: "HDFC Regalia", text: "Base rate confirmed at 1.33% effective (cashback). Travel redemption via SmartBuy gives 3.33% base, up to 13.33% on flights/hotels.", date: "Mar 2026" },
+      { type: "update", icon: "📊", card: "HDFC Regalia", text: "An older review used higher effective-value figures without separating redemption routes. The current card record distinguishes eligible travel redemption from lower-value statement cashback and notes that new Regalia sourcing is discontinued.", date: "Mar 2026" },
       { type: "alert", icon: "⚠️", card: "Axis ACE", text: "Monthly cashback cap is ₹500 on accelerated categories (5% bills + 4% food). After cap, accelerated drops to 0%. Base 1.5% is uncapped.", date: "Mar 2026" },
       { type: "verified", icon: "📦", card: "Amazon Pay ICICI", text: "Confirmed: 5% Prime, 3% non-Prime, 2% Amazon Pay partners, 1% other. No monthly cap. Lifetime free.", date: "Mar 2026" },
       { type: "new", icon: "🚀", card: "Scapia", text: "Federal Bank's zero-forex travel card added. 5% on travel/dining, 2% on everything else, zero forex markup, unlimited lounge with spend criteria. Lifetime free.", date: "Mar 2026" },

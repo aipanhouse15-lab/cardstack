@@ -29,6 +29,18 @@ function calcTax(income, slabs) {
   return Math.round(tax);
 }
 
+function calcTaxAfterRebate(income, slabs, regime) {
+  const tax = calcTax(income, slabs);
+  if (regime === "old") {
+    return income <= 500000 ? Math.max(0, tax - Math.min(tax, 12500)) : tax;
+  }
+  // Rebate and marginal relief for resident individuals, using the current
+  // new-regime thresholds; special-rate income is outside this simplified tool.
+  if (income <= 1200000) return 0;
+  const afterRebate = Math.max(0, tax - Math.min(tax, 60000));
+  return Math.min(afterRebate, income - 1200000);
+}
+
 function formatINR(n) {
   if (Math.abs(n) >= 10000000) return `₹${(n / 10000000).toFixed(2)}Cr`;
   if (Math.abs(n) >= 100000) return `₹${(n / 100000).toFixed(1)}L`;
@@ -49,12 +61,12 @@ export default function TaxCalculatorClient() {
 
     const totalDeductionsOld = stdDeductionOld + hra + Math.min(sec80c, 150000) + Math.min(sec80d, 75000) + Math.min(nps, 50000) + Math.min(homeLoan, 200000);
     const taxableOld = Math.max(0, ctc - totalDeductionsOld);
-    const taxOld = calcTax(taxableOld, OLD_SLABS);
+    const taxOld = calcTaxAfterRebate(taxableOld, OLD_SLABS, "old");
     const cessOld = Math.round(taxOld * 0.04);
     const totalTaxOld = taxOld + cessOld;
 
     const taxableNew = Math.max(0, ctc - stdDeductionNew);
-    const taxNew = calcTax(taxableNew, NEW_SLABS);
+    const taxNew = calcTaxAfterRebate(taxableNew, NEW_SLABS, "new");
     const cessNew = Math.round(taxNew * 0.04);
     const totalTaxNew = taxNew + cessNew;
 
@@ -73,8 +85,8 @@ export default function TaxCalculatorClient() {
           <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 50, padding: "5px 14px", fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginBottom: 14 }}>
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#4ADE80" }} /> Tool
           </div>
-          <h1 style={{ fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 800, lineHeight: 1.15, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 8 }}>Tax Regime Calculator</h1>
-          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", maxWidth: 500 }}>Enter your salary and deductions. See exactly which tax regime saves you more — old or new.</p>
+          <h1 style={{ fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 800, lineHeight: 1.15, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 8 }}>Indicative Tax Regime Estimate · AY 2026–27</h1>
+          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.65)", maxWidth: 680 }}>For an illustrative comparison of eligible individual income and claims for FY 2025–26 (AY 2026–27). This does not cover income earned in Tax Year 2026–27 under the new Act, and is not a tax return calculation.</p>
         </div>
       </div>
 
@@ -85,13 +97,14 @@ export default function TaxCalculatorClient() {
             <h3 className="text-base font-extrabold mb-4" style={{ color: "var(--text)" }}>Your income</h3>
             <div className="mb-4">
               <div className="flex justify-between mb-1.5">
-                <label className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>Annual CTC / Gross income</label>
+                <label className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>Estimated total income before these modelled claims</label>
                 <span className="text-xs font-bold" style={{ color: "var(--text)" }}>{formatINR(ctc)}</span>
               </div>
               <input type="range" min={300000} max={5000000} step={50000} value={ctc} onChange={e => setCTC(Number(e.target.value))} className="w-full" style={{ accentColor: "#16A34A" }} />
             </div>
 
-            <h3 className="text-base font-extrabold mb-4 mt-6 pt-4" style={{ color: "var(--text)", borderTop: "1px solid var(--border)" }}>Deductions (old regime only)</h3>
+            <h3 className="text-base font-extrabold mb-2 mt-6 pt-4" style={{ color: "var(--text)", borderTop: "1px solid var(--border)" }}>Enter amounts you have confirmed are eligible under the old regime</h3>
+            <p className="text-xs mb-4" style={{ color: "var(--text-muted)" }}>Caps are simplified and do not check supporting conditions, age, income type or overlap. Do not enter total premiums, rent or loan interest unless you have verified the eligible claim for the applicable year.</p>
             {[
               { label: "HRA exemption (annual)", value: hra, set: setHRA, max: 600000, step: 10000 },
               { label: "80C (PPF, ELSS, LIC, etc.)", value: sec80c, set: setSec80c, max: 150000, step: 10000 },
@@ -116,12 +129,12 @@ export default function TaxCalculatorClient() {
           <div>
             {/* Winner banner */}
             <div className="rounded-2xl p-6 mb-4 text-center" style={{ background: result.winner === "old" ? "var(--bg-section-green)" : "var(--bg-section-blue)", border: `1px solid ${result.winner === "old" ? "var(--border-section-green)" : "var(--border-section-blue)"}` }}>
-              <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "var(--text-faint)" }}>Better regime for you</div>
+              <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "var(--text-faint)" }}>Lower estimate in this simplified scenario</div>
               <div className="text-3xl font-extrabold mb-1" style={{ color: result.winner === "old" ? "var(--green)" : "var(--blue)" }}>
                 {result.winner === "old" ? "Old Regime" : result.winner === "new" ? "New Regime" : "Both Equal"}
               </div>
               <div className="text-sm font-semibold" style={{ color: "var(--text-muted)" }}>
-                You save <span style={{ color: result.winner === "old" ? "var(--green)" : "var(--blue)", fontWeight: 800 }}>{formatINR(result.savings)}</span> per year
+                Estimated difference: <span style={{ color: result.winner === "old" ? "var(--green)" : "var(--blue)", fontWeight: 800 }}>{formatINR(result.savings)}</span>
               </div>
             </div>
 
@@ -144,9 +157,9 @@ export default function TaxCalculatorClient() {
             </div>
 
             <div className="rounded-xl p-4" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
-              <div className="text-xs font-bold mb-1" style={{ color: "var(--text)" }}>Rule of thumb</div>
+              <div className="text-xs font-bold mb-1" style={{ color: "var(--text)" }}>Scope and limitations</div>
               <div className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                With your current deductions of {formatINR(result.totalDeductionsOld)}, the {result.winner === "old" ? "old" : "new"} regime saves you {formatINR(result.savings)}. Generally, deductions above ~₹3.75L favor old regime, below that favor new regime.
+                This simplified estimate applies AY 2026–27 slabs, a resident-individual rebate assumption and 4% cess. It assumes an individual below age 60 and omits special-rate income, surcharge, detailed eligibility, interactions among claims, business-income regime elections and other circumstances. It does not apply to Tax Year 2026–27 income under the Income-tax Act, 2025. Confirm the rules and compare with the Income Tax Department's official calculator and return instructions before filing.
               </div>
             </div>
           </div>

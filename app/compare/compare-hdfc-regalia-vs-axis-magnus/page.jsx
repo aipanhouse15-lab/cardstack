@@ -18,7 +18,7 @@ export const metadata = {
 // URL: /compare/hdfc-regalia-vs-axis-magnus
 
 const COLOR = "#7C3AED";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgPointValueLadder = () => (
   <svg viewBox="0 0 520 200" role="img" aria-label="Reward point value across redemption modes" style={{ width: "100%" }}>
@@ -64,7 +64,7 @@ export default function CompareRegaliaVsMagnus() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "HDFC Regalia vs Axis Magnus — premium travel rewards face-off, 2026 edition",
     author: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-06-06", dateModified: "2026-06-06",
+    datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 

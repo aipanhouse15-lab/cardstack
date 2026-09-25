@@ -1,4 +1,4 @@
-import { CARDS, CATEGORIES } from "@/data/cards";
+import { CARDS, CATEGORIES, isSourceReviewed } from "@/data/cards";
 import { NextResponse } from "next/server";
 
 // Public API: GET /api/recommend
@@ -12,7 +12,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
-  const recommendableCards = CARDS.filter(card => card.verified);
+  const recommendableCards = CARDS.filter(isSourceReviewed);
 
   // Best card for a specific category
   const forCat = searchParams.get("for");
@@ -22,7 +22,7 @@ export async function GET(request) {
       return json({ error: "Invalid category", available: CATEGORIES.map(c => c.id) }, 400);
     }
     const ranked = [...recommendableCards]
-      .map(c => ({ ...c, rate: c.rewards[forCat] || c.rewards.default }))
+      .map(c => ({ ...c, rate: c.rewards[forCat] ?? c.rewards.default }))
       .sort((a, b) => b.rate - a.rate)
       .slice(0, 5);
 
@@ -77,7 +77,7 @@ export async function GET(request) {
 
     if (ownedCards.length === 0) {
       return json({
-        error: "No source-checked card IDs provided",
+        error: "No source-linked card IDs provided",
         available: recommendableCards.map(c => c.id),
       }, 400);
     }
@@ -85,7 +85,7 @@ export async function GET(request) {
     const optimization = CATEGORIES.map(cat => {
       let bestCard = null, bestRate = 0;
       ownedCards.forEach(c => {
-        const r = c.rewards[cat.id] || c.rewards.default || 0;
+        const r = c.rewards[cat.id] ?? c.rewards.default ?? 0;
         if (r > bestRate) { bestRate = r; bestCard = c; }
       });
 
@@ -93,7 +93,7 @@ export async function GET(request) {
       let betterCard = null, betterRate = 0;
       recommendableCards.forEach(c => {
         if (cardIds.includes(c.id)) return;
-        const r = c.rewards[cat.id] || c.rewards.default || 0;
+        const r = c.rewards[cat.id] ?? c.rewards.default ?? 0;
         if (r > bestRate && r > betterRate) { betterRate = r; betterCard = c; }
       });
 
@@ -109,7 +109,7 @@ export async function GET(request) {
 
     return json({
       query: { type: "optimize_stack", cards: ownedCards.map(card => card.id) },
-      owned_cards: ownedCards.map(c => ({ id: c.id, name: c.name, reviewed_at: c.reviewedAt || "March 2026" })),
+      owned_cards: ownedCards.map(c => ({ id: c.id, name: c.name, reviewed_at: c.reviewedAt })),
       optimization,
       summary: {
         total_categories: CATEGORIES.length,
@@ -126,7 +126,7 @@ export async function GET(request) {
   return json({
     name: "Assure Fintech API",
     version: "1.0",
-    description: "Source-reviewed Indian credit card reward data and recommendations. Free to use.",
+    description: "Source-linked Indian credit card reward data and recommendations. Free to use.",
     base_url: "https://www.assurefintech.com/api",
     endpoints: {
       "GET /api/cards": {

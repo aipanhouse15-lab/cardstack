@@ -2,11 +2,11 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card Under ₹500 Annual Fee in India (June 2026)",
+  title: "Best Credit Card Under ₹500 Annual Fee in India (September 2026)",
   description: "The best credit card in India that charges a fee costs ₹499 per year. And that fee can be waived entirely at ₹2 lakh annual spend.",
   alternates: { canonical: "/best/best-credit-card-under-500-annual-fee" },
   openGraph: {
-    title: "Best Credit Card Under ₹500 Annual Fee in India (June 2026)",
+    title: "Best Credit Card Under ₹500 Annual Fee in India (September 2026)",
     description: "The best credit card in India that charges a fee costs ₹499 per year. And that fee can be waived entirely at ₹2 lakh annual spend.",
     type: "article",
     siteName: "Assure Fintech",
@@ -15,10 +15,10 @@ export const metadata = {
 
 
 // /best/best-credit-card-under-500-annual-fee
-// Updated: June 4, 2026
+// Updated: September 26, 2026
 
 const COLOR = "#ea580c";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 // --- SVG Components ---
 
@@ -32,7 +32,7 @@ function AxisACEReturnCalculator() {
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="260" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Axis ACE Annual Net Return vs ₹499 Annual Fee</text>
+      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Illustrative Axis ACE Annual Cashback Before Fee</text>
       {/* Y-axis */}
       {[0, 5000, 10000, 15000, 20000].map((v, i) => (
         <g key={v}>
@@ -42,14 +42,14 @@ function AxisACEReturnCalculator() {
       ))}
       {/* Fee line */}
       <line x1="56" y1="214" x2="650" y2="214" stroke="#ef4444" strokeWidth="1.5" strokeDasharray="5,4" />
-      <text x="655" y="217" fontSize="9" fill="#ef4444">₹499 fee</text>
+      <text x="655" y="217" fontSize="9" fill="#ef4444">renewal fee</text>
       {[
         { label: "₹5K/mo\nall spend", value: 900, x: 78 },
-        { label: "₹10K/mo\n(₹3K util\n+ ₹7K other)", value: 2820, x: 178 },
-        { label: "₹15K/mo\n(₹5K util\n+ ₹10K)", value: 4500, x: 278 },
-        { label: "₹20K/mo\n(₹7K util\n+ ₹13K)", value: 6150, x: 378 },
-        { label: "₹30K/mo\n(₹10K util\n+ ₹20K)", value: 9000, x: 478 },
-        { label: "₹50K/mo\n(₹15K util\n+ ₹35K)", value: 14400, x: 568 },
+        { label: "₹10K/mo\n(₹3K utility\n+ ₹7K other)", value: 3060, x: 178 },
+        { label: "₹15K/mo\n(₹5K utility\n+ ₹10K other)", value: 4800, x: 278 },
+        { label: "₹20K/mo\n(₹7K utility\n+ ₹13K other)", value: 6540, x: 378 },
+        { label: "₹30K/mo\n(₹10K utility\n+ ₹20K other)", value: 9600, x: 478 },
+        { label: "₹50K/mo\n(₹15K utility\n+ ₹35K other)", value: 12300, x: 568 },
       ].map((item) => {
         const barH = (item.value / 20000) * 160;
         return (
@@ -103,10 +103,10 @@ function Under500CardsComparison() {
   const cards = [
     { name: "Amazon Pay ICICI", fee: "₹0", topRate: "5%", categories: "Amazon + Pay merchants", verdict: "Include always" },
     { name: "Axis ACE", fee: "₹499*", topRate: "5% utility", categories: "Utility, food delivery", verdict: "Best paid card here" },
-    { name: "SBI SimplySAVE", fee: "₹499*", topRate: "2.5% dining", categories: "Dining, grocery, movies", verdict: "Weekend dining users" },
-    { name: "ICICI HPCL Coral", fee: "₹500", topRate: "2% fuel", categories: "HPCL fuel only", verdict: "HPCL fuel-heavy users" },
-    { name: "RBL ShopRite", fee: "₹500", topRate: "5% grocery", categories: "Grocery, supermarket", verdict: "Grocery-heavy families" },
-    { name: "HDFC MoneyBack+", fee: "₹500", topRate: "0.5%", categories: "General spend", verdict: "Avoid in 2026" },
+    { name: "SBI SimplySAVE", fee: "₹499*", topRate: "10 pts/₹150", categories: "Dining, grocery, movies", verdict: "Capped reward points" },
+    { name: "ICICI HPCL Coral", fee: "₹199*", topRate: "2.5% fuel", categories: "HPCL fuel (₹100 cap/mo)", verdict: "HPCL fuel users" },
+    { name: "RBL ShopRite", fee: "Check current schedule", topRate: "Reward points", categories: "Eligible grocery spend", verdict: "Verify current issuer terms" },
+    { name: "HDFC MoneyBack+", fee: "₹500*", topRate: "Up to 2.5%", categories: "Selected merchants", verdict: "Check current terms" },
   ];
   return (
     <svg
@@ -117,7 +117,7 @@ function Under500CardsComparison() {
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="300" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">All Cards Under ₹500 Annual Fee (June 2026)</text>
+      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Cards with annual fees up to ₹500</text>
       {["Card", "Fee", "Top Rate", "Best Category", "Verdict"].map((h, i) => (
         <text key={h} x={[20, 175, 235, 315, 510][i]} y="48" fontSize="10.5" fontWeight="700" fill="var(--text)">{h}</text>
       ))}
@@ -132,7 +132,7 @@ function Under500CardsComparison() {
           <text x="510" y={81 + i * 38} fontSize="10" fontWeight={i === 5 ? "700" : "400"} fill={i === 5 ? "#ef4444" : i === 0 || i === 1 ? COLOR : "var(--text-muted)"}>{r.verdict}</text>
         </g>
       ))}
-      <text x="340" y="294" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">*Axis ACE and SBI SimplySAVE fees waivable on meeting annual spend thresholds. Amazon Pay ICICI is completely free.</text>
+      <text x="340" y="294" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">*Waiver/points rules differ by card; reward points are not cash. Verify current issuer terms.</text>
     </svg>
   );
 }
@@ -147,12 +147,11 @@ function ACECategoriesBreakdown() {
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Axis ACE Cashback Rates by Category (June 2026)</text>
+      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Axis ACE advertised cashback rates (₹500 monthly accelerated cap)</text>
       {[
-        { label: "Utility Bills (via Google Pay/BBPS)", rate: 5, color: COLOR },
-        { label: "Food Delivery (Swiggy, Zomato)", rate: 4, color: "#fb923c" },
-        { label: "Online Recharges, DTH", rate: 4, color: "#fb923c" },
-        { label: "All Other Spends", rate: 1.5, color: "#fed7aa" },
+        { label: "Eligible utility/recharges via Google Pay", rate: 5, color: COLOR },
+        { label: "Swiggy, Zomato & Ola", rate: 4, color: "#fb923c" },
+        { label: "Other eligible spends", rate: 1.5, color: "#fed7aa" },
       ].map((item, i) => {
         const barW = (item.rate / 5) * 340;
         return (
@@ -163,7 +162,7 @@ function ACECategoriesBreakdown() {
           </g>
         );
       })}
-      <text x="340" y="192" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">Cashback credited as statement credit. Category caps apply per billing cycle. Verify current limits with Axis Bank.</text>
+      <text x="340" y="192" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">A combined ₹500/billing-cycle cap applies to 5% and 4% categories; base-rate cashback is separate. Check exclusions.</text>
     </svg>
   );
 }
@@ -174,15 +173,15 @@ function RBLShopRiteGroceryMath() {
       viewBox="0 0 680 313"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Annual cashback calculation for RBL ShopRite card based on grocery spending"
+      aria-label="Reminder to verify current RBL ShopRite issuer terms"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="170" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">RBL ShopRite: 5% Grocery Math (₹500/yr fee)</text>
+      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">RBL ShopRite: verify current terms before estimating value</text>
       {[
-        { spend: "₹5,000/mo grocery", cashback: "₹250/mo", annual: "₹3,000/yr", net: "₹2,500 (after ₹500 fee)" },
-        { spend: "₹10,000/mo grocery", cashback: "₹500/mo", annual: "₹6,000/yr", net: "₹5,500 net" },
-        { spend: "₹15,000/mo grocery", cashback: "₹750/mo", annual: "₹9,000/yr", net: "₹8,500 net" },
+        { spend: "Confirm current fee", cashback: "Confirm current earn rate", annual: "Check monthly cap", net: "Check redemption" },
+        { spend: "Check grocery MCCs", cashback: "Check eligible spend", annual: "Review exclusions", net: "Use your own spend" },
+        { spend: "Ask RBL Bank", cashback: "Read current terms", annual: "Avoid old figures", net: "Then compare" },
       ].map((r, i) => (
         <g key={i}>
           <rect x="12" y={42 + i * 38} width="656" height="36" rx="4" fill={i % 2 === 0 ? COLOR : "transparent"} opacity={i % 2 === 0 ? "0.05" : "1"} />
@@ -192,11 +191,11 @@ function RBLShopRiteGroceryMath() {
           <text x="490" y={65 + i * 38} fontSize="11" fill="var(--text-muted)">{r.net}</text>
         </g>
       ))}
-      <text x="22" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Monthly Grocery Spend</text>
-      <text x="200" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Monthly Cashback</text>
-      <text x="340" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Annual Cashback</text>
-      <text x="490" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Net After Fee</text>
-      <text x="340" y="160" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">RBL ShopRite is niche but excellent for grocery-heavy families. The ₹500 fee pays back at ₹833/month grocery spend.</text>
+      <text x="22" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Fee</text>
+      <text x="200" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Earn rate</text>
+      <text x="340" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Cap</text>
+      <text x="490" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Redemption</text>
+      <text x="340" y="160" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">Current ShopRite terms could not be verified from an authoritative issuer schedule; older estimates may be stale.</text>
     </svg>
   );
 }
@@ -211,7 +210,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "Which is the best credit card under ₹500 annual fee in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Axis ACE at ₹499 per year (waivable at ₹2 lakh annual spend) is the best credit card under ₹500 annual fee in India as of June 2026. It gives 5% cashback on utility bills via Google Pay and BBPS, 4% on food delivery apps, and 1.5% on all other spends. For grocery-heavy households, RBL ShopRite at ₹500 per year with 5% on grocery is a strong specialist option.",
+          text: "Axis ACE is one option at ₹499 annual fee (waived when eligible annual spend exceeds ₹2 lakh). Its advertised rates are 5% on eligible utility bill payments and recharges through Google Pay, 4% on Swiggy, Zomato and Ola, and 1.5% on other eligible spends; the accelerated categories share a ₹500 billing-cycle cap. ShopRite is points-based; verify current RBL Bank terms before estimating its value.",
         },
       },
       {
@@ -219,7 +218,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "Can Axis ACE annual fee be waived?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Axis ACE's ₹499 annual fee is waived if you spend ₹2 lakh or more in the card year (12 months from card issue/renewal date). This works out to approximately ₹16,667 per month across all categories. For most urban Indian households using the card for utilities, food delivery, and daily expenses, this threshold is comfortably achievable.",
+          text: "Axis lists the ₹499 renewal fee as waived when annual eligible spend is greater than ₹2 lakh. Rent and wallet-load transactions do not count toward that waiver. Spend eligibility and timing should be checked in the current fee terms.",
         },
       },
       {
@@ -227,7 +226,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "How does Axis ACE compare to Amazon Pay ICICI?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Amazon Pay ICICI is free and gives 5% on Amazon.in (Prime), 2% on Amazon Pay merchants, 1% elsewhere. Axis ACE costs ₹499 (waivable) and gives 5% on utility bills, 4% on food delivery, 1.5% everywhere. If you have significant utility and food delivery spend, Axis ACE returns more. If you primarily shop on Amazon, Amazon Pay ICICI is better. Most users benefit from holding both.",
+          text: "Amazon Pay ICICI is a no-annual-fee card with Amazon-specific benefits; Axis ACE has a ₹499 annual fee and advertised cashback on eligible Google Pay utility/recharge transactions, Swiggy, Zomato and Ola, plus other eligible spends. Compare current caps, exclusions and your own spend before deciding whether to hold both.",
         },
       },
       {
@@ -235,7 +234,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "What is SBI SimplySAVE and is it worth ₹499 per year?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "SBI SimplySAVE gives 2.5% rewards on dining, grocery, movies, and international transactions. It also has weekend bonuses on these categories. The ₹499 fee is waivable at ₹1 lakh annual spend. For SBI account holders who dine out regularly on weekends or shop at grocery stores, it is a reasonable card. For most other profiles, Axis ACE or Amazon Pay ICICI delivers better returns.",
+          text: "SBI SimplySAVE earns 10 Reward Points per ₹150 on dining, movies, departmental stores and grocery, and 1 point per ₹150 on other eligible spends. The accelerated earn is capped at 5,000 points per month; the catalogue value is ₹0.25 per point. Its ₹499 fee is waived at ₹1 lakh annual spend. These are reward points, not a flat 2.5% cashback or a weekend bonus.",
         },
       },
       {
@@ -243,7 +242,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "Is HDFC MoneyBack+ worth getting in 2026?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. HDFC MoneyBack+ gives approximately 0.5% effective cashback in 2026, which is below what most free cards return. The ₹500 annual fee makes the value proposition clearly negative when better free and sub-₹500 alternatives exist. The only reason to consider it is if you specifically need an HDFC card for HDFC ecosystem benefits.",
+          text: "It depends on your eligible spend and redemption choice. HDFC's current terms list 20 CashPoints per ₹150 at Amazon, BigBasket, Flipkart, Reliance Smart SuperStore and Swiggy, with a 2,500-point calendar-month cap; other eligible spends earn 2 points per ₹150. Exclusions and redemption values apply. Check HDFC's current fee and waiver terms before applying.",
         },
       },
       {
@@ -251,7 +250,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "Which cards under ₹500 fee are good for fuel spending?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ICICI HPCL Coral at ₹500 per year gives 2% rewards on fuel at HPCL petrol stations and a fuel surcharge waiver. If you fill up exclusively at HPCL, this card pays back the fee quickly. Most Indian credit cards exclude fuel surcharge waivers or give 0-1% on fuel. HPCL Coral is the best sub-₹500 fuel card if HPCL is your station.",
+          text: "ICICI HPCL Coral lists a ₹199 annual fee, waived at ₹50,000 annual spend. It advertises 2.5% cashback on HPCL fuel, capped at ₹100 per month, plus a 1% surcharge waiver on eligible transactions. Check transaction eligibility and the cap; the cashback alone does not scale without limit.",
         },
       },
       {
@@ -259,7 +258,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "What is RBL ShopRite and is it good for grocery shopping?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "RBL ShopRite is a credit card from RBL Bank that gives 5% cashback on grocery and supermarket transactions (MCC 5411, 5912). At ₹500 per year, the fee pays back at roughly ₹10,000 per month in grocery spend. For families spending ₹10,000 to ₹20,000 monthly on groceries, ShopRite is one of the best-value grocery cards in India.",
+          text: "ShopRite is a points-based grocery card. I could not confirm a current, authoritative RBL Bank product schedule for its earn rate, fee, waiver and cap in this review, so do not rely on older comparison figures. Verify the latest product page and cardmember terms directly with RBL before applying or estimating its value.",
         },
       },
       {
@@ -267,7 +266,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "Should I get Axis ACE even if I already have Amazon Pay ICICI?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, they complement each other well. Amazon Pay ICICI covers online shopping and Amazon Pay merchants at high rates. Axis ACE covers utility bills and food delivery, which Amazon Pay ICICI handles at only 1-2%. Using both cards for their respective best categories, with the Axis ACE fee waived at ₹2 lakh spend, gives you a highly efficient two-card stack for under ₹500 in net annual cost.",
+          text: "They may complement each other, but compare current merchant eligibility, caps, exclusions and fees first. Amazon Pay ICICI is relevant for its eligible Amazon ecosystem benefits; Axis ACE may suit eligible Google Pay utility payments and listed food/ride merchants. Holding both is not automatically worthwhile for every user.",
         },
       },
       {
@@ -275,7 +274,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "How much can I realistically earn from Axis ACE per year?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A household spending ₹8,000 per month on utility bills (5%), ₹6,000 on food delivery (4%), and ₹12,000 on everything else (1.5%) would earn approximately ₹400 + ₹240 + ₹180 = ₹820 per month, or ₹9,840 per year in cashback. Against a ₹499 annual fee (waived if spend is over ₹2L), this is roughly 20x return on the fee. Numbers scale linearly with spend.",
+          text: "A household spending ₹8,000/month on eligible utility/recharges, ₹6,000 on Swiggy/Zomato/Ola and ₹12,000 elsewhere would not earn the uncapped headline rates on all accelerated spend: those categories share a ₹500 monthly cap. Using the current 1.5% base rate on other eligible spend, the illustrative return is up to ₹680/month before exclusions and fee (₹500 accelerated + ₹180 base), not ₹820. Actual eligible transactions and billing-cycle cap use matter.",
         },
       },
     ],
@@ -284,10 +283,10 @@ export default function BestCreditCardUnder500AnnualFee() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card Under ₹500 Annual Fee in India (June 2026): Axis ACE, RBL ShopRite Compared",
+    headline: "Best Credit Cards with Annual Fees up to ₹500 in India",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -316,7 +315,7 @@ export default function BestCreditCardUnder500AnnualFee() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card Under ₹500 Annual Fee in India (June 2026)
+            Best Credit Cards with Annual Fees up to ₹500 in India (September 2026)
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
@@ -357,11 +356,11 @@ export default function BestCreditCardUnder500AnnualFee() {
       </div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", marginBottom: 10 }}>
-        The best credit card in India that charges a fee costs ₹499 per year. And that fee can be waived entirely at ₹2 lakh annual spend.
+        Compare no-fee and low-fee cards by eligible rewards, caps, waiver rules and redemption value—not headline rates alone.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
-        Last updated {UPDATED} · By Ash K · 8 min read
+        Issuer terms reviewed September 2026 · By Ash K · 8 min read
       </div>
 
       {/* Key stat */}
@@ -375,7 +374,7 @@ export default function BestCreditCardUnder500AnnualFee() {
           fontSize: 14,
         }}
       >
-        <strong style={{ color: COLOR }}>The honest number:</strong> Axis ACE at ₹499/year delivers ₹9,000-15,000 in annual cashback for a typical Indian household. That is a 20-30x return on the annual fee before the waiver kicks in.
+        <strong style={{ color: COLOR }}>The honest number:</strong> Axis ACE's 5% and 4% categories share a ₹500 billing-cycle cashback cap; the 1.5% base rate applies separately to other eligible spends. Your actual return depends on category eligibility and exclusions.
       </div>
 
       {/* Top Picks */}
@@ -404,9 +403,9 @@ export default function BestCreditCardUnder500AnnualFee() {
           {
             rank: "3",
             name: "SBI SimplySAVE",
-            tag: "Best Weekend Dining Budget Card",
+            tag: "Dining, Grocery and Movie Rewards",
             fee: "₹499/yr (waivable at ₹1L spend)",
-            reward: "2.5% dining, grocery, movies. Weekend bonus.",
+            reward: "10 points/₹150 on select categories (₹0.25 catalogue value per point; monthly cap)",
             best: "SBI account holders, weekend diners, movie-goers",
             slug: "sbi-simplysave",
           },
@@ -414,9 +413,9 @@ export default function BestCreditCardUnder500AnnualFee() {
             rank: "4",
             name: "RBL ShopRite",
             tag: "Best for Grocery Households",
-            fee: "₹500/yr",
-            reward: "5% grocery and supermarket",
-            best: "Families spending ₹10,000+ per month on groceries",
+            fee: "Check current issuer schedule",
+            reward: "Points-based grocery rewards; verify rate, cap and redemption value with RBL",
+            best: "Compare only after confirming current issuer terms",
             slug: "rbl-shoprite",
           },
           {
@@ -424,7 +423,7 @@ export default function BestCreditCardUnder500AnnualFee() {
             name: "ICICI HPCL Coral",
             tag: "Best for HPCL Fuel Users",
             fee: "₹500/yr",
-            reward: "2% rewards at HPCL, fuel surcharge waiver",
+            reward: "2.5% HPCL cashback (₹100/month cap) + eligible surcharge waiver",
             best: "High fuel spenders who fill exclusively at HPCL",
             slug: "icici-hpcl-coral",
           },
@@ -488,13 +487,13 @@ export default function BestCreditCardUnder500AnnualFee() {
           Axis ACE: The Best Paid-But-Cheap Card in India Right Now
         </h2>
         <p>
-          Axis ACE has three reward rates: 5% on utility bills and Google Pay transactions, 4% on food delivery apps (Swiggy, Zomato), and 1.5% on all other spends. For a card costing ₹499 per year, this is an extraordinary return structure. No other sub-₹500 card offers a comparable combination of a high rate on a recurring spend category and a meaningfully elevated base rate.
+          Axis ACE advertises 5% on eligible utility bills/recharges through Google Pay, 4% on Swiggy, Zomato and Ola, and 1.5% on other eligible spends. The accelerated categories share a ₹500 billing-cycle cap, so the headline rates do not apply without limit. Check current exclusions and transaction eligibility before estimating returns.
         </p>
         <p>
-          The 5% on utilities is the card's headline feature and the reason it belongs in most Indian households. Electricity, water, broadband, mobile postpaid, LPG cylinder booking — all of these can route through MCC 4900 via BBPS and Google Pay, triggering the 5% cashback. For a household with ₹5,000 in monthly utility bills alone, the annual cashback on utilities is ₹3,000, which covers the ₹499 fee 6 times over.
+          The 5% rate is limited to eligible utility bill payments and recharges via Google Pay. Do not assume every biller, BBPS route or transaction coding qualifies. A ₹5,000 monthly eligible transaction amount would nominally exceed the shared accelerated cap, so the maximum accelerated cashback remains subject to that ₹500 billing-cycle limit.
         </p>
         <p>
-          The 4% on food delivery is the second anchor. Swiggy and Zomato are now central to urban Indian household spending. At 4% on combined food delivery spend of ₹4,000 per month, you earn ₹1,920 annually from food delivery alone. Add utilities and general spend, and the total annual return for a typical household is ₹7,000 to ₹12,000 on a card that costs ₹499.
+          The 4% advertised rate applies to listed merchants (Swiggy, Zomato and Ola) and shares the ₹500 billing-cycle cap with the 5% category. Realized returns depend on how quickly eligible accelerated transactions reach that cap and on the 1.5% base cashback for other eligible spends.
         </p>
         <p>
           Read the complete review: <Link href="/cards/axis-ace">Axis ACE Full Card Review, Benefits, Apply</Link>. Also see our <Link href="/blog/axis-ace-review-2026">detailed breakdown of Axis ACE in 2026</Link> including the MCC eligibility guide.
@@ -510,13 +509,13 @@ export default function BestCreditCardUnder500AnnualFee() {
           The Fee Waiver Math: Why ₹2 Lakh Is Not a Difficult Target
         </h2>
         <p>
-          Axis ACE's annual fee waiver requires ₹2 lakh of spend in the card year. Divided over 12 months, this is ₹16,667 per month — not the total monthly budget, just the portion that flows through the Axis ACE card. For context, ₹5,000 in utility bills, ₹4,000 in food delivery, and ₹8,000 in general online and in-store purchases adds up to ₹17,000.
+          Axis lists renewal-fee waiver when eligible annual spend exceeds ₹2 lakh. Rent and wallet-load transactions do not count. Treat the threshold as a fee term, not a reason to make unnecessary purchases; check the issuer's current definition of eligible spend.
         </p>
         <p>
-          The strategy: designate Axis ACE as your primary card for utilities and food delivery, and let general daily spend (groceries, petrol, subscriptions) also flow through it to pad toward the waiver threshold. You do not need to route everything through ACE, but if you use it as a primary daily card alongside a specialized card for Amazon purchases, the ₹2 lakh threshold is typically reached by Month 10 of the card year.
+          If the card otherwise fits your spending, prioritize eligible Google Pay bills/recharges and listed merchants, and track qualifying annual spend. Avoid relying on an estimated month when the waiver will be reached; excluded transaction types and refunds may affect the total.
         </p>
         <p>
-          If you do not hit ₹2 lakh: pay the ₹499 fee. On ₹1,00,000 of annual card spend, your cashback (even at the 1.5% base rate alone) is ₹1,500. Net of the ₹499 fee, you still profit ₹1,001. This card has a negative floor on net return only if you spend less than ₹33,267 annually on it, which at ₹2,772/month is unlikely for any active user.
+          If you do not meet the waiver, compare the ₹499 fee against the cashback you actually earn after category caps, exclusions and payment behavior. A simple break-even based only on the 1.5% base rate would not account for those details and is not a guaranteed return.
         </p>
       </section>
 
@@ -528,13 +527,13 @@ export default function BestCreditCardUnder500AnnualFee() {
           What You Give Up vs a Free Card: Almost Nothing
         </h2>
         <p>
-          Compared to Amazon Pay ICICI (free), Axis ACE costs ₹499 but covers utility bills at 5% where Amazon Pay ICICI gives only 1-2%. It covers food delivery at 4% where Amazon Pay ICICI gives 1%. And its 1.5% base rate beats Amazon Pay ICICI's 1% base rate on everything that isn't Amazon.
+          Compared with a no-annual-fee card, Axis ACE's ₹499 renewal fee may be worthwhile for a user who can use its eligible Google Pay utility/recharge and listed merchant categories. The shared cap, exclusions and your actual redemption value matter more than comparing headline rates in isolation.
         </p>
         <p>
-          The rational approach is to hold both: Amazon Pay ICICI for Amazon.in purchases and Amazon Pay merchant billers (where it earns 5% and 2% respectively), and Axis ACE for utilities and food delivery. This two-card combination for ₹0 to ₹499 per year covers most Indian household spending at 2-5% effectively, with no category left at 1% or lower if you route correctly.
+          A two-card setup can make sense when each card's eligible categories match your habits. Verify current Amazon Pay ICICI and Axis ACE terms independently, and remember that Axis ACE's accelerated rates share a monthly cap; neither card necessarily covers all spend at its headline rate.
         </p>
         <p>
-          Using our <Link href="/stack-builder">Stack Builder</Link> with a typical ₹50,000/month spend split, the Axis ACE + Amazon Pay ICICI combination returns approximately ₹14,000 to ₹18,000 per year in cashback, against a net annual fee of ₹0 to ₹499. That is effectively a 4-5% blended return across household spend. Few cards at any fee level beat this.
+          Use our <Link href="/stack-builder">Stack Builder</Link> to model your own eligible spending and current issuer terms. We avoid publishing a single annual-return estimate because merchant eligibility, caps, exclusions and product terms can change the result substantially.
         </p>
       </section>
 
@@ -546,13 +545,13 @@ export default function BestCreditCardUnder500AnnualFee() {
           The Niche Specialists Worth Knowing About
         </h2>
         <p>
-          RBL ShopRite at ₹500 per year deserves attention for grocery-heavy households. It gives 5% on grocery and supermarket transactions (MCC 5411), which is the same rate as Amazon Pay ICICI on Amazon.in and Axis ACE on utilities. For a family spending ₹12,000 per month on groceries across Big Bazaar, DMart, Reliance Fresh, or BigBasket, ShopRite returns ₹7,200 annually against a ₹500 annual fee.
+          RBL ShopRite is a points-based grocery card, but its current fee, earn rate, cap and redemption rules should be confirmed from RBL Bank's latest product terms before calculating value.
         </p>
         <p>
-          RBL ShopRite is not widely marketed, which is probably why it does not appear on most comparison lists. The issuer is RBL Bank, which is a scheduled commercial bank regulated by RBI, so the product is legitimate and not a fintech NBFC workaround. Check current reward structure and caps on RBL Bank's website, as grocery reward programs have historically been targets for reductions.
+          We are not publishing a precise ShopRite return illustration until the current issuer schedule can be verified; older third-party pages may describe superseded benefits.
         </p>
         <p>
-          ICICI HPCL Coral is worth mentioning for one narrow use case: if you drive a high-mileage vehicle and fill exclusively at HPCL petrol stations, the 2% reward plus fuel surcharge waiver is the best deal available on a sub-₹500 card for fuel. It is a single-purpose card and should be held alongside a broader card like Axis ACE.
+          ICICI HPCL Coral is a narrow-use option: its ₹199 annual fee (waived at ₹50,000 annual spend) accompanies 2.5% HPCL cashback capped at ₹100/month and an eligible fuel-surcharge waiver. Compare the cap and transaction conditions against your actual fuel use.
         </p>
       </section>
 
@@ -569,22 +568,22 @@ export default function BestCreditCardUnder500AnnualFee() {
         <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 14, color: "var(--text)" }}>Your Action Plan</h2>
         <ol style={{ margin: 0, paddingLeft: 20, lineHeight: 2, fontSize: 15 }}>
           <li>
-            <strong>Apply for Axis ACE.</strong> ₹499 per year, waivable at ₹2 lakh. This is the best-value paid card in India for most households.
+            <strong>Consider Axis ACE if its eligible categories fit your spend.</strong> It costs ₹499 annually; eligible annual spend must exceed ₹2 lakh for the waiver, while accelerated cashback is capped at ₹500 per billing cycle.
           </li>
           <li>
             <strong>If you don't have Amazon Pay ICICI already, get it too.</strong> It is free and covers your Amazon spend at rates Axis ACE cannot match.
           </li>
           <li>
-            <strong>Set Axis ACE as your bill payment card</strong> — all utility bills, food delivery, and daily general spend should route through it.
+            <strong>Route only eligible transactions to Axis ACE:</strong> qualifying Google Pay utility/recharge payments, Swiggy, Zomato and Ola; confirm current exclusions and cap utilization.
           </li>
           <li>
-            <strong>If you spend ₹10,000+ per month on groceries,</strong> evaluate RBL ShopRite as a third card for grocery transactions at 5%.
+            <strong>If you spend heavily on groceries,</strong> verify ShopRite's latest fee, points cap and redemption terms with RBL before comparing it.
           </li>
           <li>
-            <strong>Track your spend in month 10</strong> to see if you are on track for the ₹2L waiver. A quick burst of prepaid utility payments or online purchases in the final 2 months can close the gap.
+            <strong>Track eligible spend toward any fee waiver</strong> and avoid spending just to earn a waiver if it is uneconomic.
           </li>
           <li>
-            <strong>Avoid HDFC MoneyBack+ in 2026.</strong> At 0.5% effective return on a ₹500 annual fee card, it is one of the worst value propositions in this segment.
+            <strong>Assess HDFC MoneyBack+ by actual redemption:</strong> named-merchant accelerated CashPoints and quarterly vouchers may change its value; review current terms and exclusions.
           </li>
         </ol>
         <p style={{ marginTop: 14, fontSize: 14, color: "var(--text-muted)" }}>

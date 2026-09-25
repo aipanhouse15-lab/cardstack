@@ -18,9 +18,9 @@ export default function GapFinderClient() {
     const g = [];
     CATEGORIES.forEach(cat => {
       let bOwned = 0;
-      sel.forEach(cid => { const c = VERIFIED_CARDS.find(x => x.id === cid); if (!c) return; const r = c.rewards[cat.id] || c.rewards.default || 0; if (r > bOwned) bOwned = r; });
+      sel.forEach(cid => { const c = VERIFIED_CARDS.find(x => x.id === cid); if (!c) return; const r = c.rewards[cat.id] ?? c.rewards.default ?? 0; if (r > bOwned) bOwned = r; });
       let bCard = null, bR = 0;
-      VERIFIED_CARDS.forEach(card => { if (sel.includes(card.id)) return; const r = card.rewards[cat.id] || card.rewards.default || 0; if (r > bOwned && r > bR) { bCard = card; bR = r; } });
+      VERIFIED_CARDS.forEach(card => { if (sel.includes(card.id)) return; const r = card.rewards[cat.id] ?? card.rewards.default ?? 0; if (r > bOwned && r > bR) { bCard = card; bR = r; } });
       if (bCard && bR - bOwned >= 0.5) { const extra = Math.round((spend[cat.id] || 0) * 12 * (bR - bOwned) / 100); g.push({ cat, cur: bOwned, card: bCard, rate: bR, imp: bR - bOwned, extra }); }
     });
     return g.sort((a, b) => b.extra - a.extra);

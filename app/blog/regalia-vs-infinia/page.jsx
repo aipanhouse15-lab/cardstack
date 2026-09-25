@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/regalia-vs-infinia
 // Template: Feature-by-feature premium card breakdown with verdict
-// Color: #7c3aed | Updated: June 4, 2026
+// Color: #7c3aed | Updated: September 26, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgFeeVsValue = () => (
   <svg viewBox="0 0 720 236" role="img" aria-label="HDFC Regalia vs Infinia: annual fee compared to potential reward value at different spend levels" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

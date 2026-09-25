@@ -2,12 +2,12 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card with Zero Forex Markup in India (June 2026)",
-  description: "Every ₹1 lakh you spend internationally costs you ₹3,500 in forex markup on a standard card. Zero-forex cards eliminate this completely. Here's what's actual...",
+  title: "Best Credit Card with Zero Forex Markup in India (September 2026 Review)",
+  description: "Compare Indian credit cards with low or zero foreign-currency markup. Learn what zero markup does—and does not—cover, including conversion rates, DCC and cash withdrawals.",
   alternates: { canonical: "/best/best-credit-card-with-no-forex-markup" },
   openGraph: {
-    title: "Best Credit Card with Zero Forex Markup in India (June 2026)",
-    description: "Every ₹1 lakh you spend internationally costs you ₹3,500 in forex markup on a standard card. Zero-forex cards eliminate this completely. Here's what's actual...",
+    title: "Best Credit Card with Zero Forex Markup in India (September 2026 Review)",
+    description: "Compare Indian credit cards with low or zero foreign-currency markup. Learn what zero markup does—and does not—cover, including conversion rates, DCC and cash withdrawals.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -15,10 +15,10 @@ export const metadata = {
 
 
 // /best/credit-card-with-no-forex-markup
-// Updated: June 4, 2026
+// Reviewed: September 26, 2026; originally published June 4, 2026
 
 const COLOR = "#ea580c";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const IconGlobe = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="International spending globe icon">
@@ -85,7 +85,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         name: "What is forex markup on a credit card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Forex markup (or foreign currency markup) is a fee banks charge when you spend in a currency other than Indian rupees. It is applied on top of the RBI reference rate (the true mid-market rate). Most Indian credit cards charge 2.5% to 3.5% as forex markup. On ₹1 lakh of international spending, this is ₹2,500 to ₹3,500 in pure fees — not a government charge, just the bank's margin."
+          text: "Foreign-currency markup is an issuer fee applied to eligible international transactions. The rate and conversion method depend on the card's current terms; GST may apply to the fee. The network or issuer conversion rate can differ from an RBI reference or mid-market rate, so zero markup does not guarantee the reference rate."
         }
       },
       {
@@ -93,7 +93,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         name: "Which Indian credit card has truly zero forex markup?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "As of June 2026, IDFC FIRST WOW credit card (lifetime free) has genuinely zero forex markup — you pay exactly the RBI reference rate with no markup. Scapia Federal credit card (also free) has zero forex markup and additionally earns 4% back on travel booked via the Scapia app. Both cards are currently the best free zero-forex options in India."
+          text: "IDFC FIRST WOW and Scapia Federal currently list zero foreign-currency markup. Zero markup does not mean the card network's exchange rate is identical to the RBI reference rate, and dynamic currency conversion or ATM fees can still add costs. Scapia Coins are available on eligible Scapia-app bookings and eligible domestic Visa purchases; foreign-currency transactions are excluded from rewards under Scapia's published guidance. Check current offer and redemption terms."
         }
       },
       {
@@ -101,7 +101,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         name: "Is IDFC FIRST Select a zero forex card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No, and this is a very common misconception. IDFC FIRST Select charges 3.5% forex markup — it is not a zero-forex card. The confusion arises because IDFC FIRST WOW (a different, lifetime-free card) is zero-forex. Check the specific card name carefully before applying."
+          text: "No. IDFC FIRST's published MITC lists zero markup for FIRST WOW and 1.99% for FIRST Select. Check the current MITC for your exact card and transaction type before applying."
         }
       },
       {
@@ -109,7 +109,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         name: "What is DCC and should I always decline it?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "DCC stands for Dynamic Currency Conversion. When you pay at an international merchant, the terminal may offer to convert the charge to rupees on the spot, showing you the amount in INR. This sounds convenient but the conversion rate used by the merchant's bank is typically 4-7% worse than what your card would apply. Always choose to pay in the local currency — not in rupees. Decline the DCC offer every time."
+          text: "Dynamic Currency Conversion (DCC) is an offer to charge an international purchase in your home currency instead of the merchant's local currency. It uses a rate and any markup disclosed by the merchant or ATM operator, and is separate from your card issuer's forex markup. Compare the disclosed amount and rate; paying in local currency avoids accepting that DCC conversion."
         }
       },
       {
@@ -117,7 +117,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         name: "Does Scapia Federal credit card work everywhere internationally?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Scapia Federal is a Visa card and works at all Visa-accepting merchants globally. The zero-forex markup applies to all international transactions. The 4% travel reward applies only to travel bookings made through the Scapia app. Standard merchant purchases internationally earn a lower reward rate but still with zero markup."
+          text: "Scapia is issued with Visa and RuPay variants, and Federal Bank lists zero forex markup on eligible international transactions. Scapia's published guidance excludes foreign-currency transactions from rewards, so do not count the domestic Visa earn rate on overseas spend. Eligible app bookings and domestic card or UPI transactions have separate reward rates, exclusions and redemption rules; check the current Scapia offer terms. Airport privileges require the applicable spend threshold in the preceding billing cycle."
         }
       },
       {
@@ -125,7 +125,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         name: "Can I use my zero-forex card at ATMs abroad?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, but there are two layers of charges at foreign ATMs. First, forex markup (zero on IDFC WOW and Scapia). Second, a cash advance fee (typically 2.5-3% of the amount withdrawn, charged separately by your Indian bank). Additionally, the foreign ATM's own bank may charge a local fee. Net result: even on a zero-forex card, international ATM withdrawals are more expensive than card swipes. Use your card for spending; minimise ATM withdrawals."
+          text: "A credit-card cash withdrawal is generally treated as a cash advance and can incur issuer fees and interest under the card's terms, even when foreign-currency markup is zero. The ATM operator may charge separately. Check the exact card's fee schedule before withdrawing; a zero-markup feature does not make an ATM advance free."
         }
       },
       {
@@ -133,7 +133,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         name: "How much do I save with a zero-forex card on a 15-day international trip?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A typical 15-day international trip for one person involves ₹80,000 to ₹1,50,000 in local spending (hotels, food, transport, shopping). At 3.5% standard markup versus 0%, you save ₹2,800 to ₹5,250 purely on forex fees. For a couple spending ₹2 lakh, the savings are ₹7,000 — enough to pay for 1-2 extra meals or a day excursion."
+          text: "Savings depend on your actual eligible spend and the markup on the card you would otherwise use. For illustration only, a 3.5% markup on ₹1,00,000 is ₹3,500 before any applicable GST on the fee; a zero-markup card avoids that markup, but conversion-rate differences, DCC and other charges can remain."
         }
       },
       {
@@ -141,7 +141,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         name: "Is OneCard a zero-forex credit card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. OneCard charges 1% forex markup, which is lower than the industry standard of 3-3.5% but not zero. On ₹1 lakh of international spend, OneCard costs you ₹1,000 in forex — compared to ₹0 on IDFC WOW or Scapia. OneCard's strong domestic rewards make it a good everyday card but not the best choice for international travel."
+          text: "OneCard is not included here as a zero-markup option. Its markup can depend on the issuing bank and current card terms; check the current MITC for the exact card variant rather than relying on an older comparison."
         }
       }
     ]
@@ -150,10 +150,10 @@ export default function BestCreditCardWithNoForexMarkup() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card with Zero Forex Markup in India (June 2026)",
+    headline: "Best Credit Card with Zero Forex Markup in India (September 2026 Review)",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -173,49 +173,29 @@ export default function BestCreditCardWithNoForexMarkup() {
       name: "IDFC FIRST WOW",
       fee: "Lifetime Free",
       forex: "0%",
-      rewardRate: "1.5% on international spends",
-      atmFee: "2.5% cash advance (standard)",
+      rewardRate: "0.5% effective on eligible spends (4 points/₹200; ₹0.25/point)",
+      atmFee: "₹199 + GST per cash withdrawal; overseas ATM operator may charge separately",
       bestFor: "Anyone who travels internationally and doesn't want a fee card",
-      keyNote: "TRUE zero forex. Not IDFC FIRST Select (3.5%). Confirm card name at issuance."
+      keyNote: "Zero forex markup; network exchange rate still applies. FD-backed; points expire after 24 months and redemption costs ₹99 + GST. Not IDFC FIRST Select."
     },
     {
       rank: 2,
       name: "Scapia Federal",
       fee: "Lifetime Free",
       forex: "0%",
-      rewardRate: "4% on Scapia travel bookings; 1% on all else",
-      atmFee: "2.5% cash advance",
+      rewardRate: "Eligible app and domestic Visa rewards only; foreign-currency transactions do not earn Scapia Coins",
+      atmFee: "Check current issuer schedule; foreign ATM operator fee may also apply",
       bestFor: "International travellers who book flights and hotels through apps",
-      keyNote: "Zero forex + travel rewards combo. Best free card for international frequent travellers."
+      keyNote: "Zero forex markup on eligible international transactions; these do not earn Scapia Coins. Airport privileges require ₹20K spend in the preceding billing cycle."
     },
-    {
-      rank: 3,
-      name: "ICICI Emeralde",
-      fee: "₹12,000/yr",
-      forex: "1.5% (low, not zero)",
-      rewardRate: "~2% on international + unlimited lounge",
-      atmFee: "Waived on premium tier",
-      bestFor: "High-spenders who want lounge + low forex in one premium card",
-      keyNote: "Not zero-forex but lowest markup among premium cards. Not the right pick if forex saving is the only goal."
-    },
-    {
-      rank: 4,
-      name: "OneCard",
-      fee: "Lifetime Free",
-      forex: "1%",
-      rewardRate: "Up to 5% on top 2 spend categories",
-      atmFee: "2.5% cash advance",
-      bestFor: "Young professionals who travel occasionally and want strong domestic rewards",
-      keyNote: "1% forex is good but not zero. Strong domestic card; not the best dedicated travel card."
-    }
   ];
 
   const savingsTable = [
-    ["₹25,000", "₹875", "₹250", "₹0", "₹0"],
-    ["₹50,000", "₹1,750", "₹500", "₹0", "₹0"],
-    ["₹1,00,000", "₹3,500", "₹1,000", "₹0", "₹0"],
-    ["₹2,00,000", "₹7,000", "₹2,000", "₹0", "₹0"],
-    ["₹5,00,000", "₹17,500", "₹5,000", "₹0", "₹0"]
+    ["₹25,000", "₹1,032.50", "₹295", "₹0", "₹1,032.50"],
+    ["₹50,000", "₹2,065", "₹590", "₹0", "₹2,065"],
+    ["₹1,00,000", "₹4,130", "₹1,180", "₹0", "₹4,130"],
+    ["₹2,00,000", "₹8,260", "₹2,360", "₹0", "₹8,260"],
+    ["₹5,00,000", "₹20,650", "₹5,900", "₹0", "₹20,650"]
   ];
 
   return (
@@ -228,7 +208,7 @@ export default function BestCreditCardWithNoForexMarkup() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card with Zero Forex Markup in India (June 2026)
+            Best Credit Card with Zero Forex Markup in India (September 2026 Review)
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
@@ -249,7 +229,7 @@ export default function BestCreditCardWithNoForexMarkup() {
       </div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted,#475569)", marginBottom: 10, fontWeight: 500 }}>
-        Every ₹1 lakh you spend internationally costs you ₹3,500 in forex markup on a standard card. Zero-forex cards eliminate this completely. Here's what's actually worth carrying.
+        Compare the issuer's foreign-currency markup—not just reward rates—before choosing a card for international spending. Zero markup can reduce one fee, but it does not remove every conversion or transaction cost.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
@@ -262,7 +242,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         <div>
           <strong style={{ color: COLOR, fontSize: 14, display: "block", marginBottom: 4 }}>The Honest Number</strong>
           <p style={{ margin: 0, fontSize: 14, color: "var(--text-muted,#475569)" }}>
-            A standard Indian credit card charges 2.5-3.5% forex markup plus 18% GST on that fee. On ₹2 lakh of international spend (a modest 10-day Europe trip for one), you pay ₹5,900 to ₹8,260 in fees that serve no purpose except bank profit. This is not a government tax, RBI charge, or Visa/Mastercard fee. It is a pure bank margin. Zero-forex cards eliminate it entirely.
+            Card markups vary by issuer, product and transaction type. For illustration, a 3.5% markup on ₹1 lakh is ₹3,500; if 18% GST applies to that fee, the total is ₹4,130. This is only a fee illustration, not a universal rate or trip-spend estimate. A zero-markup card can avoid the issuer markup where its terms apply, while network conversion, DCC and other fees may still affect the final cost.
           </p>
         </div>
       </div>
@@ -271,11 +251,11 @@ export default function BestCreditCardWithNoForexMarkup() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>What Forex Markup Is (and What It Isn't)</h2>
 
       <p style={{ marginBottom: 12 }}>
-        When you swipe your card at a shop in Singapore or pay for a hotel in London, your Indian bank converts that foreign currency amount to rupees. The conversion uses RBI's reference rate as the base — this is the true mid-market rate, the same one you see on Google.
+        When you use an Indian card abroad, the transaction is converted to rupees under the applicable card-network and issuer process. The resulting rate may differ from an RBI reference or mid-market rate.
       </p>
 
       <p style={{ marginBottom: 12 }}>
-        On top of that, the bank adds a forex markup of 2.5% to 3.5%. GST at 18% is then charged on this markup. So the effective extra cost on a 3.5% markup card is approximately 4.13%.
+        The issuer may add a foreign-currency markup; the rate is card-specific. GST may apply to fees and charges. The example below uses a 3.5% markup and 18% GST purely to show the arithmetic, not as a typical rate for all cards.
       </p>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginBottom: 20 }}>
@@ -293,7 +273,7 @@ export default function BestCreditCardWithNoForexMarkup() {
       </div>
 
       <p style={{ marginBottom: 24 }}>
-        This fee structure applies on every single international transaction — merchant payments, hotel checkouts, subscription renewals in foreign currency, and international ATM withdrawals. A zero-forex card eliminates the bank markup; GST on zero markup is also zero.
+        Applicable fees depend on the transaction and issuer schedule. A zero-markup benefit may remove the issuer's markup on eligible purchases, but it does not necessarily waive cash-advance fees, ATM-operator fees, DCC or other charges.
       </p>
 
       {/* DCC section */}
@@ -302,16 +282,16 @@ export default function BestCreditCardWithNoForexMarkup() {
       <div style={{ background: "rgba(212,168,83,.06)", border: "1.5px solid #f97316", borderRadius: 10, padding: "14px 18px", marginBottom: 16, display: "flex", gap: 10 }}>
         <IconWarn />
         <p style={{ margin: 0, fontSize: 13, color: "var(--text-muted,#475569)" }}>
-          Dynamic Currency Conversion (DCC) is a merchant-side trap that often catches Indian travellers. When the terminal asks "Pay in Indian Rupees or local currency?", always choose local currency. The DCC rate is 4-7% worse than your card's rate — even on a zero-forex card.
+          Dynamic Currency Conversion (DCC) offers to charge you in INR using a merchant- or ATM-provided conversion rate. Review the displayed exchange rate, markup and total before accepting; this conversion is separate from your card's foreign-currency markup.
         </p>
       </div>
 
       <p style={{ marginBottom: 12 }}>
-        DCC is offered at hotel checkouts, restaurants, and shopping malls in tourist destinations. The terminal shows you a rupee amount, which feels convenient but costs you significantly more. The merchant's acquirer bank profits from this conversion.
+        DCC may be offered at merchants or ATMs. The displayed INR total and disclosed conversion terms let you compare the offer with paying in local currency and allowing your card's normal conversion process.
       </p>
 
       <p style={{ marginBottom: 24 }}>
-        The rule is universal: always pay in the local currency of the country you're in, not in rupees. This applies even if you have a zero-forex card — DCC adds a separate markup that your zero-forex benefit does not cover.
+        If you do not want the merchant or ATM to perform DCC, select the local currency. Check your issuer's terms as well: zero forex markup does not apply to a separate DCC conversion.
       </p>
 
       {/* Savings table */}
@@ -322,9 +302,9 @@ export default function BestCreditCardWithNoForexMarkup() {
           <thead>
             <tr style={{ background: `${COLOR}12` }}>
               <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Intl Spend</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Standard Card (3.5%)</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>OneCard (1%)</th>
-              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))", color: COLOR }}>IDFC WOW / Scapia (0%)</th>
+              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Illustration: 3.5% + 18% GST</th>
+              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Illustration: 1% + 18% GST</th>
+              <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))", color: COLOR }}>Zero markup, where eligible</th>
               <th style={{ padding: "10px 12px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Saving vs Std</th>
             </tr>
           </thead>
@@ -345,7 +325,7 @@ export default function BestCreditCardWithNoForexMarkup() {
       </div>
 
       {/* Card picks */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>Top Zero and Low Forex Cards in India (June 2026)</h2>
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>Zero and Low Forex Cards to Compare</h2>
       <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>Verified against official card T&Cs and MITC documents as of {UPDATED}.</p>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
@@ -393,14 +373,14 @@ export default function BestCreditCardWithNoForexMarkup() {
           </div>
           <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
             <IconCheck />
-            <span style={{ fontSize: 13 }}>Points never expire</span>
+            <span style={{ fontSize: 13 }}>Points expire after 24 months</span>
           </div>
         </div>
         <div style={{ background: "rgba(212,168,83,.06)", border: "1px solid #fdba74", borderRadius: 10, padding: "16px" }}>
           <strong style={{ color: "#c2410c", display: "block", marginBottom: 8 }}>IDFC FIRST Select</strong>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
             <IconCross />
-            <span style={{ fontSize: 13 }}>3.5% forex markup</span>
+            <span style={{ fontSize: 13 }}>1.99% forex markup (published MITC)</span>
           </div>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
             <IconCheck />
@@ -417,7 +397,7 @@ export default function BestCreditCardWithNoForexMarkup() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Using Your Card at ATMs Abroad: What to Know</h2>
 
       <p style={{ marginBottom: 12 }}>
-        Even a zero-forex card has costs at international ATMs. Your Indian bank charges a cash advance fee (typically 2.5-3% of the amount, minimum ₹500) every time you withdraw cash abroad. This is separate from the forex markup and applies even when the forex markup is zero.
+        Even a zero-forex card can have costs at international ATMs. Cash advances may carry issuer fees and interest, and an ATM operator may charge separately; the amounts depend on the relevant fee schedules.
       </p>
 
       <div style={{ display: "flex", gap: 12, padding: "14px 16px", background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 10, marginBottom: 12 }}>
@@ -425,13 +405,13 @@ export default function BestCreditCardWithNoForexMarkup() {
         <div>
           <strong style={{ fontSize: 14, display: "block", marginBottom: 4 }}>International ATM Withdrawal Cost Example</strong>
           <p style={{ margin: 0, fontSize: 13, color: "var(--text-muted,#475569)" }}>
-            Withdrawing ₹10,000 equivalent abroad on IDFC WOW: forex markup = ₹0, cash advance fee = ₹250 (2.5%), GST on advance fee = ₹45, foreign ATM fee = $3-5 (≈₹250-420). Total: ₹500-720 in fees for a ₹10,000 withdrawal.
+            Costs vary by card and ATM. Check the issuer's current cash-advance fee, applicable GST and interest terms, plus any fee displayed by the foreign ATM operator. The zero-markup feature by itself does not establish the total withdrawal cost.
           </p>
         </div>
       </div>
 
       <p style={{ marginBottom: 24 }}>
-        The recommendation: carry a zero-forex card for all card payments abroad and use ATMs only when merchants require cash. In most developed and major tourist destinations (Dubai, Thailand, Europe, USA), card payments at restaurants, shops, and hotels work seamlessly.
+        Before travel, confirm international usage is enabled and review your card's transaction limits and fee schedule. Keep a backup payment method; acceptance varies by merchant and location.
       </p>
 
       {/* Travel checklist */}
@@ -441,8 +421,8 @@ export default function BestCreditCardWithNoForexMarkup() {
         {[
           "Carry at least 2 cards on international trips — one as primary (zero-forex), one as backup on a different network (Visa + Mastercard if possible).",
           "Inform your bank of travel dates to prevent fraud blocks. Most banks allow this via the mobile app under 'Travel Notification'.",
-          "Always decline DCC at merchant terminals. Pay in local currency, not rupees.",
-          "Keep some local currency cash for taxis, small vendors, and markets. Withdraw from ATMs in larger amounts to minimise fixed fees per withdrawal.",
+          "If you do not want merchant-side conversion, choose the local currency instead of accepting DCC in rupees.",
+          "Keep an appropriate backup payment method and check any issuer or ATM fees before withdrawing cash.",
           "For online international purchases (subscriptions, Amazon global, Airbnb), use your zero-forex card — these also attract forex markup on standard cards.",
           "Check if your card has international transaction limits. Some base-tier cards have per-transaction or monthly caps on international spend."
         ].map((tip, i) => (
@@ -457,7 +437,7 @@ export default function BestCreditCardWithNoForexMarkup() {
       <div style={{ background: `${COLOR}08`, border: `2px solid ${COLOR}`, borderRadius: 16, padding: "24px 26px", marginBottom: 44 }}>
         <h3 style={{ margin: "0 0 12px", fontSize: 18, fontWeight: 700, color: COLOR }}>Planning an International Trip? Do This First.</h3>
         <p style={{ margin: "0 0 16px", fontSize: 14, color: "var(--text-muted,#475569)" }}>
-          Apply for IDFC FIRST WOW or Scapia Federal at least 2 weeks before travel — physical card delivery takes 7-10 working days. Both cards are free and approve quickly. Pair with a lounge card for complete travel coverage.
+          Compare current issuer terms, eligibility and card delivery timelines before travel. IDFC FIRST WOW and Federal Scapia list zero foreign-currency markup, subject to the applicable product terms. Keep a backup payment method.
         </p>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
           <Link href="/cards/idfc-first-wow" style={{ display: "inline-block", padding: "10px 18px", background: COLOR, color: "#fff", borderRadius: 8, textDecoration: "none", fontSize: 13, fontWeight: 600 }}>IDFC FIRST WOW Full Review</Link>

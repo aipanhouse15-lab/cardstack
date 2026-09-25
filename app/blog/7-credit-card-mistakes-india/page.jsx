@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/7-credit-card-mistakes-india
 // Template: Numbered myth-buster / "you're probably doing this wrong"
-// Color: #dc2626 | Updated: June 4, 2026
+// Color: #dc2626 | Updated: September 26, 2026
 
 const COLOR = "#dc2626";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgMinimumDueTrap = () => (
   <svg viewBox="0 0 720 264" role="img" aria-label="Compound interest trap: paying minimum due on ₹50,000 balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -146,12 +146,12 @@ const SvgSpendCap = () => (
     <text x="36" y="36" fontSize="13" fontWeight="700" fill="var(--text)" fontFamily="system-ui">Category Spend Caps: the small print that limits your rewards</text>
     <text x="36" y="58" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Card</text>
     <text x="220" y="58" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Accelerated Category</text>
-    <text x="460" y="58" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Cap Per Month</text>
+    <text x="460" y="58" fontSize="12" fontWeight="600" fill="var(--text)" fontFamily="system-ui">Reward Cap</text>
     {[
-      { card: "HDFC Millennia", cat: "Amazon, Flipkart, Swiggy", cap: "₹10,000 spend max" },
-      { card: "Axis ACE", cat: "Bill pay via GPay", cap: "₹5,000 spend max" },
-      { card: "SBI Cashback", cat: "Online spends", cap: "₹10,000 spend max" },
-      { card: "ICICI Amazon Pay", cat: "Amazon purchases", cap: "No cap (1.5% base)" },
+      { card: "HDFC Millennia", cat: "Named partner merchants", cap: "₹1,000/month cashback" },
+      { card: "Axis ACE", cat: "GPay bills + listed partners", cap: "₹500/cycle combined" },
+      { card: "SBI Cashback", cat: "Eligible online", cap: "₹2,000/cycle online" },
+      { card: "ICICI Amazon Pay", cat: "Eligible Amazon Prime", cap: "No monthly cap (5%)" },
     ].map((d, i) => (
       <g key={i}>
         <rect x="24" y={68 + i * 28} width="672" height="26" fill={i % 2 === 0 ? "transparent" : "var(--raise)"} rx="2" />
@@ -177,7 +177,7 @@ export default function BlogCreditCardMistakesIndia() {
       { "@type": "Question", "name": "Are category spend caps mentioned upfront by banks?", "acceptedAnswer": { "@type": "Answer", "text": "Often not clearly. Banks typically bury caps in the Most Important Terms and Conditions document or the product page footnotes. Always check the card T&C before assuming you will earn accelerated rewards on unlimited spend. Many cards cap the bonus earn at ₹5,000-10,000 spend per month." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "7 Credit Card Mistakes Indians Make (And How to Fix Each One)", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-06-04", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "7 Credit Card Mistakes Indians Make (And How to Fix Each One)", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-26", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },

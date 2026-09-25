@@ -18,7 +18,7 @@ export const metadata = {
 // URL: /compare/tata-neu-plus-vs-amazon-pay-icici
 
 const COLOR = "#7C3AED";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgFunnel = () => (
   <svg viewBox="0 0 520 200" role="img" aria-label="Earn rate funnel by purchase context" style={{ width: "100%" }}>
@@ -64,7 +64,7 @@ export default function CompareTataNeuVsAmazonIcici() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "Tata Neu Plus vs Amazon Pay ICICI — pick your ecosystem in 2026",
     author: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-06-06", dateModified: "2026-06-06",
+    datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 

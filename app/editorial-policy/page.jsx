@@ -59,8 +59,8 @@ export default function EditorialPolicyPage() {
         <h2 className="text-lg font-extrabold" style={{ color: "var(--text)" }}>Data verification</h2>
         <div className="flex flex-col gap-3">
           {[
-            ["✅ Verified", "Data checked directly from the bank's official product page. Fee, reward rates, caps, and benefits confirmed."],
-            ["⚠️ Unverified", "Data sourced from secondary sources or our initial research. May contain errors. Clearly labeled on card pages."],
+            ["🔗 Source-linked", "A dated issuer or product source is recorded. This marker does not confirm every card benefit or protect against later changes."],
+            ["⚠️ Review pending", "Current card-specific terms need another issuer check. These records do not drive automated recommendations."],
             ["🔔 Upcoming changes", "When banks announce changes (like SBI Cashback's April 2026 cap reduction), we show them with date and impact analysis."],
           ].map(([badge, desc], i) => (
             <div key={i} className="flex gap-3 text-sm">
@@ -82,7 +82,7 @@ export default function EditorialPolicyPage() {
         {/* User reports */}
         <h2 className="text-lg font-extrabold" style={{ color: "var(--text)" }}>Community verification</h2>
         <p>
-          Every card page has a "Report an update" button. Users can flag incorrect rates, cap changes, fee changes, or benefit modifications. All reports go to our review queue via Google Forms. We verify and update within 24 hours.
+          Card pages let readers report incorrect rates, cap changes, fee changes or benefit changes. Reports enter our review queue. We investigate against current issuer material and update the page when we can confirm a change; response times vary.
         </p>
         <p>
           Banks change rewards frequently — often without notice. Community reports help us stay accurate faster than any team could alone.
@@ -93,10 +93,10 @@ export default function EditorialPolicyPage() {
           <h2 className="text-lg font-extrabold mb-3" style={{ color: "var(--text)" }}>Update frequency</h2>
           <div className="flex flex-col gap-2 text-sm">
             {[
-              "Card data reviewed monthly against bank product pages",
-              "User-reported changes verified within 24 hours",
-              "Homepage 'What Changed' section updated with every data change",
-              "Upcoming changes section added as soon as banks announce them",
+              "Card records show a source link and review date when one has been recorded",
+              "Reader reports are investigated against issuer material",
+              "Confirmed updates are added to the relevant page and change history",
+              "Announced future changes are shown when the effective date is known",
             ].map((item, i) => (
               <div key={i} className="flex gap-2">
                 <span style={{ color: "var(--green)" }}>•</span>

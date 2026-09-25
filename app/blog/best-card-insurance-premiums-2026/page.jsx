@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/best-card-insurance-premiums-2026
 // Template: specialized guide for a specific use case
-// Color: #ea580c | Updated: June 4, 2026
+// Color: #ea580c | Updated: September 26, 2026
 
 const COLOR = "#ea580c";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgInsurancePaymentProblem = () => (
   <svg viewBox="0 0 720 204" role="img" aria-label="Why insurance premium payment is tricky on credit cards: most cards exclude it from reward earning" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

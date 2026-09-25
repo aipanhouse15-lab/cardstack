@@ -23,7 +23,7 @@ export default function CardSelector({ selected, onToggle }) {
         <div className="flex-1 min-w-[180px] relative">
           <span className="absolute left-3 top-1/2 -translate-y-1/2 text-base opacity-50">🔍</span>
           <input
-            aria-label="Search source-checked credit cards"
+            aria-label="Search source-linked credit cards"
             value={query} onChange={e => setQuery(e.target.value)}
             placeholder="Search cards..."
             className="w-full py-2.5 pl-10 pr-3 rounded-lg text-sm outline-none"
@@ -45,7 +45,7 @@ export default function CardSelector({ selected, onToggle }) {
       </div>
 
       <p className="text-xs mb-4" style={{ color: "var(--text-faint)" }}>
-        Calculators include only source-checked cards. Review-pending products remain available in the catalogue.
+        Calculators include only source-linked cards. Review-pending products remain available in the catalogue.
       </p>
 
       <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))" }}>

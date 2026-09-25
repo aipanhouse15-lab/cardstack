@@ -1,4 +1,4 @@
-import { CARDS, CATEGORIES, calcReward } from "@/data/cards";
+import { CARDS, CATEGORIES, calcReward, capSharedRewardBuckets, isSourceReviewed } from "@/data/cards";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import BankLogo from "@/components/BankLogo";
@@ -11,14 +11,13 @@ export async function generateMetadata({ params }) {
   const canonicalIds = cards.map(card => card.id).sort().join("-and-");
   return {
     title: `${names} — Card Stack`,
-    description: `See how ${names} perform together across 8 spending categories with cap-aware cashback calculations. Built with Assure Fintech Stack Builder.`,
+    description: `Illustrative comparison of ${names} across 8 broad spending categories. Check merchant eligibility, caps and current issuer terms.`,
     alternates: { canonical: `/stack/${canonicalIds}` },
     robots: { index: false, follow: true },
   };
 }
 
 function calcComboSavings(cards, spending) {
-  let totalCashback = 0;
   const assignments = {};
   CATEGORIES.forEach(cat => {
     const spend = spending[cat.id] || 0;
@@ -29,9 +28,22 @@ function calcComboSavings(cards, spending) {
       const result = calcReward(card, cat.id, spend);
       if (result.cashback > bestResult.cashback) { bestCard = card; bestResult = result; }
     });
-    totalCashback += bestResult.cashback;
     assignments[cat.id] = { card: bestCard, cashback: bestResult.cashback, rate: bestResult.effectiveRate, capped: bestResult.capped, capNote: bestResult.capNote };
   });
+  cards.forEach(card => {
+    const ids = Object.keys(assignments).filter(id => assignments[id].card?.id === card.id);
+    const cardSpending = Object.fromEntries(ids.map(id => [id, spending[id] || 0]));
+    const details = Object.fromEntries(ids.map(id => [id, {
+      cashback: assignments[id].cashback, effectiveRate: assignments[id].rate,
+      capped: assignments[id].capped, capNote: assignments[id].capNote,
+    }]));
+    const adjusted = capSharedRewardBuckets(card, cardSpending, details);
+    ids.forEach(id => {
+      assignments[id] = { ...assignments[id], cashback: adjusted[id].cashback,
+        rate: adjusted[id].effectiveRate, capped: adjusted[id].capped, capNote: adjusted[id].capNote };
+    });
+  });
+  const totalCashback = Object.values(assignments).reduce((sum, item) => sum + item.cashback, 0);
   return { totalCashback, assignments };
 }
 
@@ -44,7 +56,7 @@ export default function SharedStackPage({ params }) {
   const defaultSpend = { dining: 5000, travel: 4000, online: 8000, groceries: 6000, fuel: 5000, utilities: 4000, entertainment: 2000, shopping: 5000 };
   const { totalCashback, assignments } = calcComboSavings(cards, defaultSpend);
   const totalSpend = Object.values(defaultSpend).reduce((s, v) => s + v, 0);
-  const totalFee = cards.reduce((s, c) => s + c.fee, 0);
+  const totalFee = cards.reduce((s, c) => s + Math.round(c.fee * 1.18), 0);
   const netSavings = (totalCashback * 12) - totalFee;
   const baseline = Math.round(totalSpend * 0.01 * 12);
   const names = cards.map(c => c.name).join(" + ");
@@ -82,7 +94,7 @@ export default function SharedStackPage({ params }) {
           {names}
         </h1>
       <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-          Cap-aware cashback calculated at ₹{totalSpend.toLocaleString()}/month total spend · {cards.every(card => card.verified) ? "Source review dates are shown on each card page — reconfirm current issuer terms" : "Includes card data awaiting issuer-source review"}
+          Cap-aware cashback calculated at ₹{totalSpend.toLocaleString()}/month total spend · {cards.every(isSourceReviewed) ? "Source review dates are shown on each card page — reconfirm current issuer terms" : "Includes card data awaiting issuer-source review"}
       </p>
       </div>
 
@@ -106,7 +118,7 @@ export default function SharedStackPage({ params }) {
       {/* Savings summary */}
       <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-6">
         <div className="rounded-xl p-3 sm:p-4 text-center" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)" }}>
-          <div className="text-[9px] sm:text-[10px] uppercase tracking-wider" style={{ color: "var(--green)" }}>Annual cashback</div>
+          <div className="text-[9px] sm:text-[10px] uppercase tracking-wider" style={{ color: "var(--green)" }}>Estimated annual rewards</div>
           <div className="text-lg sm:text-2xl font-extrabold font-mono" style={{ color: "var(--green)" }}>₹{(totalCashback * 12).toLocaleString()}</div>
         </div>
         <div className="rounded-xl p-3 sm:p-4 text-center" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
@@ -116,7 +128,7 @@ export default function SharedStackPage({ params }) {
           </div>
         </div>
         <div className="rounded-xl p-3 sm:p-4 text-center" style={{ background: "var(--accent-light)", border: "1px solid var(--accent-border)" }}>
-          <div className="text-[9px] sm:text-[10px] uppercase tracking-wider" style={{ color: "var(--accent-text)" }}>Net savings/yr</div>
+          <div className="text-[9px] sm:text-[10px] uppercase tracking-wider" style={{ color: "var(--accent-text)" }}>Illustrative net/year</div>
           <div className="text-lg sm:text-2xl font-extrabold font-mono" style={{ color: "var(--accent-text)" }}>₹{netSavings.toLocaleString()}</div>
         </div>
       </div>
@@ -161,7 +173,7 @@ export default function SharedStackPage({ params }) {
       <div className="rounded-xl p-4 text-center mb-6" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
         <p className="text-sm" style={{ color: "var(--text-muted)" }}>
           A basic 1% card would earn <strong style={{ color: "var(--text)" }}>₹{baseline.toLocaleString()}/year</strong>.
-          This stack saves <strong style={{ color: "var(--green)" }}>₹{(netSavings - baseline).toLocaleString()} more</strong> — that's <strong style={{ color: "var(--green)" }}>{Math.round((netSavings / Math.max(baseline, 1) - 1) * 100)}% more</strong> cashback.
+          Under the broad-category assumptions, this stack estimates <strong style={{ color: "var(--green)" }}>₹{(netSavings - baseline).toLocaleString()} more</strong> per year before merchant-specific exclusions or changes in issuer terms.
         </p>
       </div>
 

@@ -3,19 +3,16 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 
 const TAX_BRACKETS = [
-  { label: "No tax (below ₹5L)", rate: 0 },
-  { label: "5% (₹5-10L)", rate: 5 },
-  { label: "20% (₹10-12.5L)", rate: 20 },
-  { label: "30% (above ₹12.5L)", rate: 30 },
+  { label: "0% assumption", rate: 0 },
+  { label: "5% assumption", rate: 5 },
+  { label: "20% assumption", rate: 20 },
+  { label: "30% assumption", rate: 30 },
 ];
 
 const POPULAR_FDS = [
-  { bank: "SBI", rate: 6.8 },
-  { bank: "HDFC Bank", rate: 7.0 },
-  { bank: "ICICI Bank", rate: 7.0 },
-  { bank: "IndusInd", rate: 7.75 },
-  { bank: "Bajaj Finance", rate: 8.25 },
-  { bank: "Unity SFB", rate: 9.0 },
+  { bank: "Illustration", rate: 6.5 },
+  { bank: "Illustration", rate: 7.5 },
+  { bank: "Illustration", rate: 8.5 },
 ];
 
 export default function FDCalculatorClient() {
@@ -30,8 +27,8 @@ export default function FDCalculatorClient() {
     const grossInterest = amount * fdRate / 100 * tenure;
     const seniorExemption = isSenior ? Math.min(grossInterest, 50000) : 0;
     const taxableInterest = Math.max(0, grossInterest - seniorExemption);
-    const tds = taxableInterest * taxBracket / 100;
-    const postTaxInterest = grossInterest - tds;
+    const estimatedTax = taxableInterest * taxBracket / 100;
+    const postTaxInterest = grossInterest - estimatedTax;
     const postTaxRate = (postTaxInterest / (amount * tenure)) * 100;
     const inflationLoss = amount * inflation / 100 * tenure;
     const realGain = postTaxInterest - inflationLoss;
@@ -41,7 +38,7 @@ export default function FDCalculatorClient() {
 
     return {
       grossInterest: Math.round(grossInterest),
-      tds: Math.round(tds),
+      estimatedTax: Math.round(estimatedTax),
       postTaxInterest: Math.round(postTaxInterest),
       postTaxRate: postTaxRate.toFixed(2),
       inflationLoss: Math.round(inflationLoss),
@@ -68,7 +65,7 @@ export default function FDCalculatorClient() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#FBBF24" }} /> Tool
           </div>
           <h1 style={{ fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 800, lineHeight: 1.15, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 8 }}>FD Real Return Calculator</h1>
-          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", maxWidth: 500 }}>Your 7.5% FD does not give you 7.5%. Enter your details to see what you actually take home after TDS and inflation.</p>
+          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", maxWidth: 500 }}>Estimate an after-tax, inflation-adjusted return using your assumptions. This simplified tool does not calculate TDS, your final tax liability or a bank's compounding schedule.</p>
         </div>
       </div>
 
@@ -103,7 +100,7 @@ export default function FDCalculatorClient() {
             </div>
 
             <div className="mb-4">
-              <label className="text-xs font-semibold block mb-2" style={{ color: "var(--text-muted)" }}>Your tax bracket</label>
+              <label className="text-xs font-semibold block mb-2" style={{ color: "var(--text-muted)" }}>Assumed marginal tax rate on interest</label>
               <div className="flex gap-2 flex-wrap">
                 {TAX_BRACKETS.map(b => (
                   <button key={b.rate} onClick={() => setTaxBracket(b.rate)}
@@ -125,18 +122,18 @@ export default function FDCalculatorClient() {
 
             <div className="flex items-center gap-2 mt-4 pt-4" style={{ borderTop: "1px solid var(--border)" }}>
               <input type="checkbox" checked={isSenior} onChange={e => setIsSenior(e.target.checked)} id="senior" />
-              <label htmlFor="senior" className="text-xs font-semibold cursor-pointer" style={{ color: "var(--text-muted)" }}>Senior citizen (₹50K interest exempt under 80TTB)</label>
+              <label htmlFor="senior" className="text-xs font-semibold cursor-pointer" style={{ color: "var(--text-muted)" }}>Assume up to ₹50K eligible interest deduction (only if permitted for your tax year and regime)</label>
             </div>
 
             {/* Quick pick */}
             <div className="mt-4 pt-4" style={{ borderTop: "1px solid var(--border)" }}>
-              <div className="text-xs font-bold mb-2" style={{ color: "var(--text-faint)" }}>Quick pick: popular FDs</div>
+              <div className="text-xs font-bold mb-2" style={{ color: "var(--text-faint)" }}>Illustrative rate assumptions (not bank quotes)</div>
               <div className="flex gap-2 flex-wrap">
-                {POPULAR_FDS.map(f => (
-                  <button key={f.bank} onClick={() => setFdRate(f.rate)}
+                {POPULAR_FDS.map((f) => (
+                  <button key={`${f.bank}-${f.rate}`} onClick={() => setFdRate(f.rate)}
                     className="rounded-lg px-3 py-1.5 text-[11px] font-semibold cursor-pointer border-none"
                     style={{ background: fdRate === f.rate ? "#D97706" : "var(--bg-muted)", color: fdRate === f.rate ? "#fff" : "var(--text-muted)" }}>
-                    {f.bank} ({f.rate}%)
+                    {f.rate}% scenario
                   </button>
                 ))}
               </div>
@@ -165,7 +162,7 @@ export default function FDCalculatorClient() {
               {[
                 ["Gross interest earned", formatINR(result.grossInterest), false],
                 ...(isSenior ? [["80TTB exemption", `-${formatINR(result.seniorExemption)}`, false]] : []),
-                [`TDS (${taxBracket}% tax)`, `-${formatINR(result.tds)}`, true],
+                [`Estimated tax (${taxBracket}% assumption)`, `-${formatINR(result.estimatedTax)}`, true],
                 ["Post-tax interest", formatINR(result.postTaxInterest), false],
                 ["Post-tax rate", `${result.postTaxRate}%`, false],
                 ["Inflation erosion", `-${formatINR(result.inflationLoss)}`, true],
@@ -187,7 +184,7 @@ export default function FDCalculatorClient() {
               </div>
               <div className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>
                 {Number(result.realReturn) <= 0
-                  ? `Your ${formatINR(amount)} deposit will be worth ${formatINR(result.purchasingPower)} in purchasing power after ${tenure} year${tenure > 1 ? "s" : ""}. Consider PPF, debt funds, or small finance bank FDs for better real returns.`
+                  ? `Under these simplified assumptions, ${formatINR(amount)} has estimated purchasing power of ${formatINR(result.purchasingPower)} after ${tenure} year${tenure > 1 ? "s" : ""}. Actual outcomes depend on compounding, tax treatment and inflation.`
                   : `Your ${formatINR(amount)} deposit will grow to ${formatINR(result.purchasingPower)} in real purchasing power after ${tenure} year${tenure > 1 ? "s" : ""}.`
                 }
               </div>

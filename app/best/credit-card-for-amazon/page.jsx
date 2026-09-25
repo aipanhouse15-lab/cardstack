@@ -2,12 +2,12 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Amazon India (June 2026)",
-  description: "If you buy on Amazon and are not using Amazon Pay ICICI, you are leaving ₹5,000-10,000 per year on the table. Here is why this free card is genuinely excepti...",
+  title: "Best Credit Card for Amazon India: Rewards, Fees and Exclusions",
+  description: "Compare Amazon Pay ICICI, HDFC Millennia and SBI Cashback by eligible Amazon rewards, caps, fees and exclusions.",
   alternates: { canonical: "/best/credit-card-for-amazon" },
   openGraph: {
-    title: "Best Credit Card for Amazon India (June 2026)",
-    description: "If you buy on Amazon and are not using Amazon Pay ICICI, you are leaving ₹5,000-10,000 per year on the table. Here is why this free card is genuinely excepti...",
+    title: "Best Credit Card for Amazon India: Rewards, Fees and Exclusions",
+    description: "Compare Amazon Pay ICICI, HDFC Millennia and SBI Cashback by eligible Amazon rewards, caps, fees and exclusions.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -15,51 +15,35 @@ export const metadata = {
 
 
 // /best/credit-card-for-amazon
-// Updated: June 4, 2026
+// Reviewed against issuer sources: September 26, 2026
 
 const COLOR = "#ea580c";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 function NoCap5PercentVisual() {
-  const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  const amazonSpend = [12000, 18000, 8000, 22000, 15000, 9000, 30000, 14000, 11000, 20000, 45000, 38000];
-  const maxSpend = 45000;
+  const spends = [10000, 20000, 30000];
   return (
     <svg
-      viewBox="0 0 680 291"
+      viewBox="0 0 680 180"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Annual cashback comparison showing Amazon Pay ICICI uncapped return vs HDFC Millennia capped return across 12 months"
+      aria-label="Illustrative reward calculation for eligible monthly Amazon purchases comparing Amazon Pay ICICI Prime rate and HDFC Millennia cap"
       style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)" }}
     >
-      <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">No Cap vs Capped: What You Actually Earn Each Month</text>
-      {months.map((m, i) => {
-        const x = 28 + i * 54;
-        const spend = amazonSpend[i];
-        const icici5pct = Math.round(spend * 0.05);
-        const millenniaCapped = Math.min(Math.round(spend * 0.05), 1000);
-        const barMax = 2250;
-        const hi = (v) => Math.round((v / barMax) * 180);
-        const baseY = 230;
+      <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Illustrative Monthly Value at 5% (Eligible Transactions Only)</text>
+      {spends.map((spend, i) => {
+        const y = 48 + i * 35;
+        const icici = Math.round(spend * 0.05);
+        const millennia = Math.min(icici, 1000);
         return (
-          <g key={m}>
-            <rect x={x} y={baseY - hi(icici5pct)} width={22} height={hi(icici5pct)} fill={COLOR} rx="2" />
-            <rect x={x + 24} y={baseY - hi(millenniaCapped)} width={22} height={hi(millenniaCapped)} fill="#6366f1" rx="2" />
-            <text x={x + 23} y={baseY + 14} textAnchor="middle" fill="var(--text-muted)" fontSize="9">{m}</text>
-            {spend > 20000 && (
-              <text x={x + 11} y={baseY - hi(icici5pct) - 4} textAnchor="middle" fill={COLOR} fontSize="8">₹{Math.round(icici5pct / 100) * 100}</text>
-            )}
+          <g key={spend}>
+            <text x="26" y={y + 16} fill="var(--text)" fontSize="11">₹{spend.toLocaleString("en-IN")} eligible Amazon spend</text>
+            <text x="300" y={y + 16} fill={COLOR} fontSize="11" fontWeight="700">Amazon Pay ICICI Prime: ₹{icici.toLocaleString("en-IN")}</text>
+            <text x="520" y={y + 16} fill="#6366f1" fontSize="11" fontWeight="700">Millennia: ₹{millennia.toLocaleString("en-IN")}</text>
           </g>
         );
       })}
-      <line x1="20" y1="230" x2="660" y2="230" stroke="var(--border)" strokeWidth="1" />
-      <g>
-        <rect x="100" y="258" width="12" height="10" fill={COLOR} rx="2" />
-        <text x="116" y="267" fill="var(--text-muted)" fontSize="11">Amazon Pay ICICI (5%, no cap)</text>
-        <rect x="370" y="258" width="12" height="10" fill="#6366f1" rx="2" />
-        <text x="386" y="267" fill="var(--text-muted)" fontSize="11">HDFC Millennia (5%, cap ₹1,000/mo)</text>
-      </g>
-      <text x="340" y="248" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Notice October, November, December: ICICI earns significantly more. The cap is where Millennia loses.</text>
+      <text x="340" y="165" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Illustration excludes non-eligible transactions, Prime subscription cost and other card terms. Millennia cap is shared per cycle.</text>
     </svg>
   );
 }
@@ -70,14 +54,14 @@ function TrifectaExplainer() {
       viewBox="0 0 680 186"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="The rare trifecta: Amazon Pay ICICI card has zero annual fee, 5 percent cashback, and no monthly cap simultaneously"
+      aria-label="Amazon Pay ICICI published reward rates by purchase type, with eligibility and exclusions"
       style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
-      <text x="340" y="26" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">The Rarest Trifecta in Indian Credit Cards</text>
+      <text x="340" y="26" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Amazon Pay ICICI: Current Reward Structure (Check Exclusions)</text>
       {[
-        { x: 80, label: "Zero Fee", sub: "Lifetime free", icon: "₹0", ok: true },
-        { x: 280, label: "5% Rate", sub: "On all Amazon", icon: "5%", ok: true },
-        { x: 480, label: "No Cap", sub: "On Amazon spend", icon: "∞", ok: true },
+        { x: 80, label: "No annual fee", sub: "Issuer says no cap on earnings", icon: "₹0", ok: true },
+        { x: 280, label: "Amazon India", sub: "5% Prime / 3% non-Prime*", icon: "5%", ok: true },
+        { x: 480, label: "Other categories", sub: "2%/1% by eligible route*", icon: "1%", ok: true },
       ].map(item => (
         <g key={item.x}>
           <circle cx={item.x + 70} cy={95} r={55} fill={item.ok ? COLOR + "22" : "#fee2e2"} stroke={item.ok ? COLOR : "#dc2626"} strokeWidth="2" />
@@ -86,7 +70,7 @@ function TrifectaExplainer() {
           <text x={item.x + 70} y={122} textAnchor="middle" fill="var(--text-muted)" fontSize="11">{item.sub}</text>
         </g>
       ))}
-      <text x="340" y="162" textAnchor="middle" fill="var(--text)" fontSize="12" fontWeight="600">Every other 5% card in India has either a fee, a cap, or both. Amazon Pay ICICI has neither.</text>
+      <text x="340" y="162" textAnchor="middle" fill="var(--text)" fontSize="12" fontWeight="600">*Reward rates depend on Prime status, purchase type and Amazon Pay checkout path; exclusions apply.</text>
     </svg>
   );
 }
@@ -97,16 +81,16 @@ function SaleStrategyGrid() {
       viewBox="0 0 680 279"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Amazon sale strategy grid showing how cashback stacks with bank offers during Great Indian Sale and Prime Day"
+      aria-label="Checklist for evaluating Amazon sale promotions separately from regular card rewards"
       style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
-      <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Sale Season Stack: What You Actually Save</text>
+      <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Treat Sale Discounts as Separate, Offer-Specific Benefits</text>
       {[
-        ["Scenario", "Card Cashback", "Bank Offer", "Sale Discount", "Total Return"],
-        ["₹10,000 purchase, Prime", "₹500 (5%)", "₹500-1,000 (bank)", "₹1,000-3,000", "₹2,000-4,500"],
-        ["₹20,000 purchase, Prime", "₹1,000 (5%)", "₹1,000-2,000 (bank)", "₹2,000-5,000", "₹4,000-8,000"],
-        ["₹5,000, non-Prime", "₹150 (3%)", "₹250-500 (bank)", "₹500-1,500", "₹900-2,150"],
-        ["₹50,000 big-ticket item", "₹2,500 (5%)", "₹2,500-5,000 (bank)", "₹5,000-10,000", "₹10,000-17,500"],
+        ["Check", "Card reward", "Promo offer", "Order", "Before paying"],
+        ["Amazon purchase", "Eligible rate", "May stack", "Eligible items", "Read offer rules"],
+        ["Part pay", "On card portion", "Min card spend", "Partial pay", "Check threshold"],
+        ["EMI purchase", "No reward per FAQ", "May be separate", "EMI terms", "Compare total cost"],
+        ["Returned order", "May be reversed", "May be cancelled", "Refund rules", "Check both terms"],
       ].map((row, ri) => (
         <g key={ri}>
           {row.map((cell, ci) => (
@@ -117,7 +101,7 @@ function SaleStrategyGrid() {
           ))}
         </g>
       ))}
-      <text x="340" y="210" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Bank offers are additional and require prior card registration. Check Amazon offer page before sale.</text>
+      <text x="340" y="210" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Offers vary by event, card, item and payment route; do not assume fixed discounts or universal stacking.</text>
     </svg>
   );
 }
@@ -128,7 +112,7 @@ function EMIDecisionTree() {
       viewBox="0 0 680 200"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Decision tree: when to use no-cost EMI on Amazon versus paying in full with 5 percent cashback"
+      aria-label="Compare Amazon no-cost EMI and full payment using current card reward eligibility and offer terms"
       style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">No-Cost EMI vs Full Payment: Which Earns More?</text>
@@ -141,12 +125,12 @@ function EMIDecisionTree() {
       <line x1="340" y1="80" x2="500" y2="80" stroke="var(--border)" strokeWidth="1" />
       <rect x="80" y="108" width="200" height="56" fill="var(--raise)" stroke="#fca5a5" rx="8" />
       <text x="180" y="128" textAnchor="middle" fill="#dc2626" fontSize="12" fontWeight="600">No-Cost EMI</text>
-      <text x="180" y="145" textAnchor="middle" fill="#991b1b" fontSize="11">Cashback on upfront amount only.</text>
-      <text x="180" y="160" textAnchor="middle" fill="#991b1b" fontSize="11">Interest waived but cashback lost on EMI instalments.</text>
+      <text x="180" y="145" textAnchor="middle" fill="#991b1b" fontSize="11">ICICI states Amazon EMI purchases earn no rewards.</text>
+      <text x="180" y="160" textAnchor="middle" fill="#991b1b" fontSize="11">Check any separate EMI offer terms.</text>
       <rect x="400" y="108" width="200" height="56" fill="var(--raise)" stroke="rgba(62,224,143,.35)" rx="8" />
       <text x="500" y="128" textAnchor="middle" fill="#16a34a" fontSize="12" fontWeight="600">Pay in Full</text>
-      <text x="500" y="145" textAnchor="middle" fill="#166534" fontSize="11">5% cashback on full amount.</text>
-      <text x="500" y="160" textAnchor="middle" fill="#166534" fontSize="11">On ₹20,000 item: ₹1,000 back immediately.</text>
+      <text x="500" y="145" textAnchor="middle" fill="#166534" fontSize="11">Eligible purchases may earn by Prime status.</text>
+      <text x="500" y="160" textAnchor="middle" fill="#166534" fontSize="11">Check exclusions and current offers.</text>
     </svg>
   );
 }
@@ -157,14 +141,14 @@ function WhenOtherCardsBeat() {
       viewBox="0 0 680 302"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Scenarios where HDFC Millennia or SBI Cashback beats Amazon Pay ICICI despite lower rates"
+      aria-label="Examples where HDFC Millennia or SBI Cashback may suit other eligible merchant spends"
       style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">When Another Card Beats Amazon Pay ICICI</text>
       {[
-        { label: "You also spend heavily on Swiggy/Zomato", card: "HDFC Millennia", reason: "5% on Amazon + Swiggy + Zomato in one card" },
-        { label: "Your Amazon spend is under ₹2,000/mo", card: "AU Xcite ACE", reason: "Free card, 2% flat, no complexity" },
-        { label: "Mixed online: Amazon + Myntra + Ajio + others", card: "SBI Cashback", reason: "5% ALL online, not just Amazon, cap ₹5,000" },
+        { label: "You use several named online merchants", card: "HDFC Millennia", reason: "5% on named merchants; ₹1,000/cycle cap" },
+        { label: "You have eligible online purchases", card: "SBI Cashback", reason: "5% online; ₹2,000/cycle cap" },
+        { label: "You want Amazon Pay balance rewards", card: "Amazon Pay ICICI", reason: "Amazon-linked balance; terms apply" },
       ].map((item, i) => (
         <g key={i}>
           <rect x="10" y={42 + i * 36} width="320" height="30" fill="var(--raise)" stroke="var(--border)" rx="4" />
@@ -188,47 +172,47 @@ export default function BestCreditCardForAmazon() {
       {
         "@type": "Question",
         name: "Which credit card gives maximum cashback on Amazon India?",
-        acceptedAnswer: { "@type": "Answer", text: "Amazon Pay ICICI Credit Card gives 5% cashback on Amazon for Prime members, with no monthly cap and no annual fee. This is the single best card for Amazon spend in India as of June 2026. No other card offers 5% cashback on Amazon without either a monthly cap or an annual fee." }
+        acceptedAnswer: { "@type": "Answer", text: "Amazon Pay ICICI currently lists 5% back for Prime members and 3% for non-Prime members on eligible Amazon India purchases, with no joining or annual fee and no limit on earnings. Exclusions apply, and Amazon earnings are credited as Amazon Pay balance. HDFC Millennia also lists 5% on Amazon within a shared cycle cap. Compare the variant, fees and purchase eligibility that fit your use." }
       },
       {
         "@type": "Question",
         name: "Does Amazon Pay ICICI card work for non-Prime Amazon members?",
-        acceptedAnswer: { "@type": "Answer", text: "Yes, but the cashback rate drops to 3% for non-Prime Amazon members. The card itself is free regardless of Prime status. If you spend more than ₹600/month on Amazon, the Prime subscription pays for itself in extra 2% cashback alone." }
+        acceptedAnswer: { "@type": "Answer", text: "ICICI lists 3% back for non-Prime members on eligible Amazon India products; some digital items and gift cards earn 2%, regardless of Prime status. Prime membership has a separate cost and benefits beyond this card, so calculate its value using your eligible purchases and the current subscription price rather than assuming it pays for itself." }
       },
       {
         "@type": "Question",
         name: "Is there any monthly spending cap on Amazon Pay ICICI cashback?",
-        acceptedAnswer: { "@type": "Answer", text: "There is no monthly cap on cashback earned from Amazon purchases. This is what makes the card genuinely exceptional. Even if you spend ₹1 lakh on Amazon in a month during a big sale, you earn ₹5,000 cashback. No other card in this category offers this." }
+        acceptedAnswer: { "@type": "Answer", text: "ICICI states there is no limit on earnings. The advertised Amazon rate still depends on Prime status and eligible product/payment type; its FAQ lists exclusions including Amazon EMI, rent, fuel, precious metals and tax-related payments. Digital products, gift cards and some Amazon Pay transactions earn at a lower rate, not the Prime 5% tier." }
       },
       {
         "@type": "Question",
         name: "Does Amazon cashback stack with bank offers during Amazon sale?",
-        acceptedAnswer: { "@type": "Answer", text: "Yes, bank offers during Great Indian Sale and Prime Day are typically additional to your regular cashback. You earn your 5% card cashback plus the bank offer discount. However, bank offers often require pre-registration on Amazon's offer page before the sale starts." }
+        acceptedAnswer: { "@type": "Answer", text: "A sale promotion may combine with the card’s regular reward, but this is not guaranteed. Check the offer’s eligible card, products, dates, minimum amount, payment channel, maximum discount and whether EMI or partial Amazon Pay balance payments change eligibility. Promotions can be changed or withdrawn." }
       },
       {
         "@type": "Question",
         name: "Should I use Amazon gift cards to get double cashback?",
-        acceptedAnswer: { "@type": "Answer", text: "This does not work as hoped. Purchasing Amazon gift cards with your credit card and then using those gift cards on Amazon does not earn you 5% on the gift card purchase amount. Banks treat gift card purchases as cash equivalent transactions, which earn base 0.5% or nothing. This is a known trap." }
+        acceptedAnswer: { "@type": "Answer", text: "Do not assume gift cards earn the Prime 5% rate. ICICI’s FAQ says gift cards earn 2% irrespective of Prime status; Amazon Pay money loads and reloads are also listed at 2%. Review current terms and any separate merchant promotion before purchasing." }
       },
       {
         "@type": "Question",
         name: "What cashback do I earn on Amazon Pay partners with the ICICI card?",
-        acceptedAnswer: { "@type": "Answer", text: "Amazon Pay ICICI card earns 2% cashback on Amazon Pay partner merchants. These are merchants where you pay via Amazon Pay at checkout. The list changes, but it typically includes Swiggy, Cleartrip, BookMyShow, and several utility services. Check Amazon's partner list for current inclusions." }
+        acceptedAnswer: { "@type": "Answer", text: "ICICI lists 2% back on 100+ Amazon Pay partner websites when you use the ‘Login and Pay with Amazon’ payment method. A merchant merely accepting Amazon Pay may not qualify; check the current eligible partner list and checkout route." }
       },
       {
         "@type": "Question",
         name: "Does no-cost EMI on Amazon reduce my cashback?",
-        acceptedAnswer: { "@type": "Answer", text: "Yes, this is an important detail. When you choose no-cost EMI, the cashback is typically calculated only on the amount charged to your card in that billing cycle, not the full purchase price. Paying in full gives you 5% on the entire amount upfront." }
+        acceptedAnswer: { "@type": "Answer", text: "ICICI’s FAQ says Amazon EMI purchases do not earn rewards. A separate instant-discount offer may have its own EMI terms. Compare the total payable, processing fee, foregone rewards and offer conditions before choosing EMI." }
       },
       {
         "@type": "Question",
         name: "Can I use HDFC Millennia instead of Amazon Pay ICICI for Amazon shopping?",
-        acceptedAnswer: { "@type": "Answer", text: "HDFC Millennia also gives 5% on Amazon as a partner merchant, but with a shared ₹1,000 monthly cap across all cashback categories. If your Amazon spend regularly exceeds ₹20,000 per month, Amazon Pay ICICI earns significantly more because of the uncapped structure." }
+        acceptedAnswer: { "@type": "Answer", text: "HDFC Millennia lists Amazon among its 10 online 5% merchants, with a maximum of ₹1,000 CashBack/CashPoints per cycle across the offer. Amazon Pay ICICI has no earnings cap according to ICICI, but its rate varies with Prime and item eligibility and pays as Amazon Pay balance. Compare combined category use and reward form." }
       },
       {
         "@type": "Question",
         name: "Is Amazon Pay ICICI a good card for non-Amazon purchases?",
-        acceptedAnswer: { "@type": "Answer", text: "It earns 1% on all other spends outside Amazon and Amazon Pay partners. That is a decent base rate for a free card. For non-Amazon spending, cards like SBI Cashback (5% all online) or Axis ACE (4% via UPI) will earn more. Amazon Pay ICICI is best used exclusively for Amazon and Amazon Pay transactions." }
+        acceptedAnswer: { "@type": "Answer", text: "ICICI lists 1% back on other eligible payments, but exclusions apply. SBI Cashback lists 5% on eligible online transactions subject to a ₹2,000 online cap per statement cycle and category exclusions. Check each card’s current terms; SBI’s advertised online rate is not universal for every website or payment type." }
       },
     ]
   };
@@ -236,10 +220,10 @@ export default function BestCreditCardForAmazon() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for Amazon Shopping in India (June 2026)",
+    headline: "Best Credit Card for Amazon Shopping in India: Rewards, Fees and Exclusions",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -263,7 +247,7 @@ export default function BestCreditCardForAmazon() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for Amazon India (June 2026)
+            Best Credit Card for Amazon India
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
@@ -282,7 +266,7 @@ export default function BestCreditCardForAmazon() {
       </div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", marginBottom: 16 }}>
-        If you buy on Amazon and are not using Amazon Pay ICICI, you are leaving ₹5,000-10,000 per year on the table. Here is why this free card is genuinely exceptional, and when other cards are worth considering instead.
+        Compare Amazon’s eligible reward rates, Prime status, caps, reward form and exclusions before choosing a card for your purchases.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
@@ -290,48 +274,38 @@ export default function BestCreditCardForAmazon() {
       </div>
 
       <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20, color: "var(--text)" }}>Our Top Picks for Amazon Shopping</h2>
+        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20, color: "var(--text)" }}>Cards to Compare for Amazon Shopping</h2>
 
         {[
           {
             name: "Amazon Pay ICICI Credit Card",
             slug: "amazon-pay-icici",
             fee: "Free (lifetime)",
-            rate: "5% (Prime) / 3% (non-Prime)",
-            cap: "No cap on Amazon",
-            badge: "Clear Winner",
-            why: "The only 5% cashback card in India with zero annual fee and no monthly cap on the cashback category. At ₹10,000/month Amazon spend, you earn ₹6,000/year in cashback at zero card cost. There is no sensible argument against holding this card if you use Amazon.",
-            caveat: "3% only if you do not have Prime. Earns only 1% on non-Amazon spends."
+            rate: "5% Prime / 3% non-Prime on eligible Amazon India purchases",
+            cap: "ICICI says no limit on earnings; exclusions apply",
+            badge: "Amazon-linked balance",
+            why: "No joining or annual fee; eligible earnings are automatically credited as Amazon Pay balance. ICICI lists 2% for Amazon Pay partner sites through Login and Pay with Amazon, and 1% on other eligible payments.",
+            caveat: "Prime status and purchase type affect rates; EMI, rent, fuel, precious metals and tax-related payments are excluded."
           },
           {
             name: "HDFC Millennia Credit Card",
             slug: "hdfc-millennia",
-            fee: "₹1,000/yr",
-            rate: "5% on Amazon",
-            cap: "₹1,000/mo shared",
-            badge: "Versatile Backup",
-            why: "Good if you also want 5% on Swiggy, Zomato, and Flipkart under one card. The shared ₹1,000/mo cap limits Amazon-only earnings to ₹12,000/year, but the breadth of partner coverage is unmatched in this tier.",
-            caveat: "Cap is shared across all partner categories. Heavy Amazon use crowds out other rewards."
+            fee: "₹1,000 + taxes/yr",
+            rate: "5% on Amazon and 9 other named online merchants",
+            cap: "₹1,000 CashPoints/cycle shared across categories",
+            badge: "Multi-merchant option",
+            why: "Can suit people who use several of HDFC’s named 5% merchants. The current terms describe the accelerated reward as CashPoints, not direct statement cashback.",
+            caveat: "Eligibility and cap are shared across listed merchants; non-EMI transactions only."
           },
           {
             name: "SBI Cashback Credit Card",
             slug: "sbi-cashback",
-            fee: "₹999/yr",
-            rate: "5% all online spends",
-            cap: "₹5,000/mo",
-            badge: "High-Volume Pick",
-            why: "If your combined online spend across Amazon, Myntra, Nykaa, and other sites exceeds ₹30,000/month, SBI Cashback starts competing. The ₹5,000 monthly cap binds only at ₹1 lakh of online spend, giving it the largest effective earning ceiling of any 5% card.",
-            caveat: "Not as good as Amazon Pay ICICI for pure Amazon spend unless you are a very high spender."
-          },
-          {
-            name: "AU Xcite ACE Credit Card",
-            slug: "au-xcite-ace",
-            fee: "Free (lifetime)",
-            rate: "2% flat all purchases",
-            cap: "No cap",
-            badge: "Budget Option",
-            why: "If Amazon Pay ICICI application is declined or you want a simple backup, AU Xcite ACE gives 2% flat cashback with no cap and no fee. The rate is lower but the simplicity is real.",
-            caveat: "2% is significantly lower than 5%. Only use if you cannot get Amazon Pay ICICI."
+            fee: "₹999 + taxes/yr",
+            rate: "5% eligible online / 1% eligible offline",
+            cap: "₹2,000 online and offline each per statement cycle",
+            badge: "Broader online use",
+            why: "Can be considered for eligible online purchases across merchants beyond Amazon, within SBI’s current terms and caps.",
+            caveat: "Not every online transaction qualifies; exclusions apply and card fees may apply."
           },
         ].map(card => (
           <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "var(--raise)" }}>
@@ -352,52 +326,48 @@ export default function BestCreditCardForAmazon() {
         ))}
       </section>
       <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Why Amazon Pay ICICI Is Genuinely Exceptional</h2>
-        <p>In the Indian credit card market, high cashback rates almost always come with one of two catches: a significant annual fee or a strict monthly cap. Amazon Pay ICICI eliminates both for Amazon spend. This is not normal. It is the rarest combination in the market.</p>
-        <p>The card is issued by ICICI Bank under a co-brand agreement with Amazon India. The economics work because Amazon subsidises the reward cost in exchange for payment exclusivity and customer lock-in. You benefit from that business arrangement.</p>
+        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>How Amazon Pay ICICI Rewards Work</h2>
+        <p>ICICI’s current FAQ lists no joining or annual fee and no limit on earnings. On eligible Amazon India purchases it lists 5% for Prime members and 3% for non-Prime members; digital products and gift cards earn 2% regardless of Prime status. Amazon EMI purchases and several other categories earn no rewards.</p>
+        <p>Amazon Pay partner-site purchases earn 2% when you use the specific “Login and Pay with Amazon” route. Other eligible payments earn 1%. Rewards are credited to Amazon Pay balance, not a bank account. Check the issuer’s exclusions and eligible payment path before relying on a headline rate.</p>
         <TrifectaExplainer />
-        <p style={{ marginTop: 12 }}>The annual savings compound quickly. A household spending ₹15,000/month on Amazon earns ₹9,000/year in cashback at zero card cost. The same household on a capped 5% card like HDFC Millennia earns at most ₹12,000 per year but pays ₹1,000 in fee, netting ₹11,000. On the uncapped free card they net ₹9,000. Wait, that is actually less.</p>
-        <p>The key insight is that Millennia wins only if you stay within its ₹1,000/month cap, meaning you are spending under ₹20,000/month on Amazon. Above ₹20,000/month on Amazon, Amazon Pay ICICI wins decisively because Millennia is capped and the free card earns 5% on every rupee. Read our breakdown of <Link href="/blog/cashback-rate-is-a-lie">why the cashback rate is always a lie</Link> at the margins.</p>
+        <p style={{ marginTop: 12 }}>At ₹15,000 of fully eligible Amazon purchases in a month, the headline reward would be ₹750 for a Prime Amazon Pay ICICI cardholder or ₹450 for a non-Prime cardholder. HDFC Millennia’s nominal 5% at that spend is constrained by its ₹1,000 CashPoints-per-cycle cap across ten merchants; fees and other category use matter too.</p>
+        <p>There is no single comparison that fits every user: Amazon Pay ICICI credits Amazon Pay balance, while Millennia rewards are CashPoints and SBI Cashback has separate online/offline caps and exclusions. See our <Link href="/blog/cashback-rate-is-a-lie">cap structure explainer</Link> before treating a headline rate as money saved.</p>
         <NoCap5PercentVisual />
-        <p style={{ marginTop: 12 }}>The chart above shows a typical Indian household's Amazon spend across a year, spiking in July (Prime Day) and October-December (festive season). The uncapped ICICI card earns proportionally more in those peak months while Millennia hits its ₹1,000 ceiling and leaves money on the table.</p>
+        <p style={{ marginTop: 12 }}>This is an illustration for eligible purchases at the Prime 5% Amazon Pay ICICI rate and HDFC Millennia’s 5% rate, capped at ₹1,000 per cycle across its named merchants. It excludes Prime subscription cost, fees, other category spend and reward exclusions.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Amazon Sale Strategy</h2>
-        <p>Great Indian Festival, Prime Day, and the Republic Day and Independence Day sales represent the highest-value weeks of the year for Amazon shoppers. The card cashback stacks with Amazon bank offers, creating a combined return that can reach 15-25% on some purchases.</p>
-        <p>The key is pre-registration. Bank offers during Amazon sales require you to register your card on Amazon's offer page before the sale goes live. Missing this step means you get only your card's base cashback and forfeit the bank offer amount.</p>
+        <p>Sale discounts are campaign-specific and can have their own eligible cards, products, order minimums, caps, payment paths and dates. Do not assume a bank offer combines with the card’s regular reward or applies to every Amazon item.</p>
         <SaleStrategyGrid />
-        <p style={{ marginTop: 12 }}>ICICI Bank typically offers ₹1,500-3,000 instant discount on purchases above ₹5,000 during major Amazon sales, on top of the 5% card cashback. This is not guaranteed every sale, but ICICI Amazon co-brand cards have historically been included in almost every major Amazon sale offer.</p>
+        <p style={{ marginTop: 12 }}>Check the live Amazon offer page and linked issuer terms for each event. A promotion may be limited by minimum card-paid amount, eligible products or a per-card maximum, and could treat EMI or returned orders differently.</p>
         <p>For a structured approach to maximising returns across all online platforms, visit our <Link href="/smart-swipe">Smart Swipe guide</Link> or build your optimal card combination at <Link href="/stack-builder">Stack Builder</Link>.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>EMI on Amazon: The Hidden Cashback Trap</h2>
-        <p>No-cost EMI sounds like a free service, and on the interest side it largely is. But when you choose no-cost EMI on Amazon, your card is typically charged in monthly instalments, not the full amount upfront.</p>
+        <p>“No-cost EMI” still has terms and may include processing fees or foregone rewards. ICICI’s current Amazon Pay card FAQ says Amazon EMI purchases do not earn rewards; evaluate the full payable and any separate instant discount before choosing it.</p>
         <EMIDecisionTree />
-        <p style={{ marginTop: 12 }}>If you pay ₹24,000 for a laptop on 3-month no-cost EMI, your card is charged ₹8,000 per month. You earn 5% cashback on ₹8,000 in the first month, not ₹24,000. The total cashback across 3 months is still ₹1,200, which is the same as paying full upfront. However, the cashback arrives in smaller tranches and the processing fee sometimes charged for no-cost EMI can reduce the effective return.</p>
-        <p>For high-value purchases during sale, paying in full typically gives you access to larger bank offer discounts that exceed any EMI convenience benefit. Do the math on your specific purchase before choosing EMI.</p>
+        <p style={{ marginTop: 12 }}>Reward eligibility and campaign discounts are separate questions. Read the card’s EMI exclusion and exact offer terms, then compare the total payable, processing fee and any foregone reward before committing.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Gift Card Trap</h2>
         <p>A common question: can you buy Amazon gift cards with your credit card and then use those gift cards on Amazon to effectively earn 5% on everything including categories that might otherwise be excluded?</p>
-        <p>No. Banks classify gift card purchases as cash-equivalent transactions. The Amazon Pay ICICI card terms explicitly exclude gift card purchases from the 5% cashback. Gift card purchases typically earn 0% or the base 1% rate. This is a well-documented trap that gets repeated on reward forums, and it does not work.</p>
+        <p>Gift cards do not earn the Prime 5% Amazon rate under ICICI’s current FAQ; it lists gift-card purchases at 2% irrespective of Prime status. Check current terms and any separate merchant promotion before buying.</p>
         <WhenOtherCardsBeat />
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>What to Do Right Now</h2>
         <ol style={{ paddingLeft: 20, lineHeight: 2.1 }}>
-          <li>If you do not have Amazon Pay ICICI, apply now. It is free, approval is typically quick for existing ICICI customers, and the value addition is immediate.</li>
-          <li>If you are an Amazon Prime member, confirm you get the 5% rate. Check your Amazon wallet section after your first purchase to confirm the rate applied.</li>
-          <li>Set Amazon Pay ICICI as your default payment method in the Amazon app and on the website.</li>
-          <li>Before the next Amazon sale, check the ICICI Bank offer page on Amazon and pre-register your card for additional discounts.</li>
-          <li>Do not use this card for non-Amazon spending if you have better category cards. Reserve it for Amazon purchases only.</li>
-          <li>If your Amazon spend exceeds ₹30,000/month and you also shop on other sites, consider pairing with <Link href="/cards/sbi-cashback">SBI Cashback</Link> for non-Amazon online purchases.</li>
+          <li>Review Amazon Pay ICICI’s eligibility, fees and terms if you want Amazon Pay balance rewards; approval is subject to ICICI’s assessment.</li>
+          <li>Check Prime status, product type and payment route; digital products and gift cards may earn a lower rate.</li>
+          <li>For Amazon Pay partners, use the eligible “Login and Pay with Amazon” route and confirm the site is on the current list.</li>
+          <li>Read current sale-offer conditions; discounts may have their own caps and exclusions.</li>
+          <li>For other online purchases, compare the current SBI Cashback exclusions and ₹2,000 online statement-cycle cap.</li>
         </ol>
       </section>
       <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
-        <p>Amazon Pay ICICI is not the best card in your wallet. It is the best card for one specific thing: buying on Amazon. Within that use case, it is almost impossible to beat: free, 5%, uncapped, and backed by ICICI Bank which is one of the most reliable issuers in India for prompt cashback credit.</p>
-        <p>If you already have HDFC Millennia, it covers Amazon at the same 5% rate and handles a wider range of categories. But if Amazon is your primary online shopping platform, and for many Indian households it is, the dedicated Amazon Pay ICICI is the better choice because you will eventually spend more than ₹20,000/month on Amazon during sale months, and that is when the no-cap advantage shows its value.</p>
-        <p>One final honest note: cashback on this card is credited as Amazon Pay balance, not direct bank credit. Amazon Pay balance is spendable on Amazon and Amazon Pay partner merchants, not directly withdrawable. If you prefer bank-account cashback, the SBI Cashback card is the alternative.</p>
+        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Practical Comparison</h2>
+        <p>Amazon Pay ICICI may suit eligible Amazon purchases if you value Amazon Pay balance and meet the relevant Prime and purchase rules. HDFC Millennia may suit someone using several named partner merchants; SBI Cashback may fit eligible online spend beyond Amazon. Each has distinct reward forms, fees, caps and exclusions.</p>
+        <p>Choose based on your actual eligible purchases and the reward you will use—not a promise of annual savings. Amazon Pay ICICI earnings are credited as Amazon Pay balance; they are not a bank-account credit.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 16 }}>FAQ</h2>
@@ -409,6 +379,13 @@ export default function BestCreditCardForAmazon() {
             </details>
           ))}
         </div>
+      </section>
+
+      <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>
+        <strong style={{ color: "var(--text)" }}>Issuer references:</strong>{" "}
+        <a href="https://www.icicibank.com/personal-banking/cards/credit-card/amazon-pay-credit-card/amazon-pay-faq" target="_blank" rel="noreferrer">ICICI Amazon Pay card FAQ</a>{" · "}
+        <a href="https://www.hdfcbank.com/content/api/contentstream-id/723fb80a-2dde-42a3-9793-7ae1be57c87f/5d94cc09-80b7-4073-8c9f-22fad88054f0" target="_blank" rel="noreferrer">HDFC Millennia terms</a>{" · "}
+        <a href="https://www.sbicard.com/cashback-revised" target="_blank" rel="noreferrer">SBI Cashback revised terms</a>.
       </section>
 
       <p style={{ fontSize: 14, color: "var(--text-muted)", marginBottom: 24 }}>

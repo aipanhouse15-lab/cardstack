@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/how-reward-points-work-india
 // Template: Educational explainer with real bank examples
-// Color: #7c3aed | Updated: June 4, 2026
+// Color: #7c3aed | Updated: September 26, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgEarnRateComparison = () => (
   <svg viewBox="0 0 720 281" role="img" aria-label="Reward earn rates per ₹100 spent across major Indian credit cards" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

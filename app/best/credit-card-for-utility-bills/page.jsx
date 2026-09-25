@@ -2,12 +2,12 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Utility Bills in India (June 2026)",
-  description: "Axis ACE is the only major credit card that rewards your electricity bill at 5%. Here is why every competitor gave up, and why that makes ACE indispensable f...",
+  title: "Best Credit Cards for Utility Bills: Current Rewards Compared",
+  description: "Compare utility-bill card rewards, payment-platform conditions, shared caps and transaction fees using issuer terms.",
   alternates: { canonical: "/best/credit-card-for-utility-bills" },
   openGraph: {
-    title: "Best Credit Card for Utility Bills in India (June 2026)",
-    description: "Axis ACE is the only major credit card that rewards your electricity bill at 5%. Here is why every competitor gave up, and why that makes ACE indispensable f...",
+    title: "Best Credit Cards for Utility Bills: Current Rewards Compared",
+    description: "Compare utility-bill card rewards, payment-platform conditions, shared caps and transaction fees using issuer terms.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -15,20 +15,27 @@ export const metadata = {
 
 
 // /best/credit-card-for-utility-bills
-// Updated: June 4, 2026
+// Updated: September 26, 2026
 
 const COLOR = "#16a34a";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
+const SOURCES = {
+  ace: "https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card",
+  aceTerms: "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-axis-bank-ace-credit-card.pdf?sfvrsn=1109dfe1_2",
+  amazon: "https://www.icicibank.com/personal-banking/cards/credit-card/amazon-pay-credit-card/amazon-pay-faq",
+  millennia: "https://www.hdfcbank.com/content/api/contentstream-id/723fb80a-2dde-42a3-9793-7ae1be57c87f/5d94cc09-80b7-4073-8c9f-22fad88054f0",
+  sbi: "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
+};
 
 // --- SVG Components ---
 
 function UtilityRewardRateComparison() {
   const cards = [
-    { name: "Axis ACE", rate: 5, note: "Utility via Google Pay" },
-    { name: "Amazon Pay ICICI", rate: 2, note: "Amazon Pay billers only" },
-    { name: "HDFC Millennia", rate: 1, note: "Not all utilities qualify" },
-    { name: "SBI SimplySAVE", rate: 0, note: "Utilities excluded" },
-    { name: "Standard Bank Card", rate: 0.3, note: "Base reward on all spend" },
+    { name: "Axis ACE", rate: 5, note: "Google Pay only; shared ₹500 cap" },
+    { name: "Amazon Pay ICICI", rate: 2, note: "Eligible Amazon Pay billers" },
+    { name: "HDFC Millennia", rate: 1, note: "Other eligible spend tier" },
+    { name: "SBI Cashback", rate: 0, note: "Utility spends excluded" },
+    { name: "Other cards", rate: 0, note: "Check each issuer's terms" },
   ];
   return (
     <svg
@@ -39,7 +46,7 @@ function UtilityRewardRateComparison() {
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="260" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Reward Rate on Utility Bills by Card (June 2026)</text>
+      <text x="340" y="28" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Selected headline utility reward terms (eligibility and caps apply)</text>
       {[0, 1, 2, 3, 4, 5].map((v) => (
         <g key={v}>
           <text x="42" y={215 - v * 32} fontSize="11" fill="var(--text-muted)" textAnchor="end">{v}%</text>
@@ -60,7 +67,7 @@ function UtilityRewardRateComparison() {
           </g>
         );
       })}
-      <text x="340" y="258" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">Axis ACE's 5% on utilities is the highest rate in India. All other major cards give 0-2% on utility payments.</text>
+      <text x="340" y="258" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">This is not a universal ranking; platform, merchant, cap, and exclusions determine eligible cashback.</text>
     </svg>
   );
 }
@@ -71,38 +78,38 @@ function MDRExplainerDiagram() {
       viewBox="0 0 680 211"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Diagram explaining why MDR economics make utility bill rewards rare in India"
+      aria-label="Diagram showing how payment channel and issuer rules determine utility bill rewards"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Why Utility Rewards Are Rare: The MDR Problem</text>
+      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Why utility rewards need careful eligibility checks</text>
       <rect x="20" y="44" width="140" height="56" rx="8" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.2" />
-      <text x="90" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>Normal Purchase</text>
-      <text x="90" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">MDR: 1.5-2.5%</text>
-      <text x="90" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Bank earns ₹25 per ₹1,000</text>
+      <text x="90" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>Utility bill</text>
+      <text x="90" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Payment channel</text>
+      <text x="90" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Biller / transaction details</text>
       <rect x="270" y="44" width="140" height="56" rx="8" fill="var(--raise)" opacity="0.25" stroke="#f59e0b" strokeWidth="1.2" />
-      <text x="340" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill="#f59e0b">Utility via BBPS</text>
-      <text x="340" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">MDR: 0-0.5% (capped)</text>
-      <text x="340" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Bank earns ₹0-5 per ₹1,000</text>
+      <text x="340" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill="#f59e0b">Issuer terms</text>
+      <text x="340" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Eligible platform</text>
+      <text x="340" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Merchant and cap rules</text>
       <rect x="520" y="44" width="140" height="56" rx="8" fill="var(--raise)" opacity="0.25" stroke="#ef4444" strokeWidth="1.2" />
-      <text x="590" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill="#ef4444">Reward Rate Needed</text>
-      <text x="590" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">5% on ₹1,000 = ₹50</text>
-      <text x="590" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">But bank earns only ₹5</text>
-      <text x="340" y="128" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ef4444">Banks LOSE money giving rewards on utility bills</text>
-      <text x="340" y="148" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Axis ACE subsidizes utility rewards from revenue on other categories (food delivery, general spend).</text>
-      <text x="340" y="165" textAnchor="middle" fontSize="11" fill="var(--text-muted)">This is why most banks silently cap, reduce, or exclude utility rewards.</text>
+      <text x="590" y="68" textAnchor="middle" fontSize="11" fontWeight="700" fill="#ef4444">Reward outcome</text>
+      <text x="590" y="84" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Rate and cap apply</text>
+      <text x="590" y="97" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Only if transaction qualifies</text>
+      <text x="340" y="128" textAnchor="middle" fontSize="12" fontWeight="700" fill="#ef4444">The issuer's current card terms control</text>
+      <text x="340" y="148" textAnchor="middle" fontSize="11" fill="var(--text-muted)">For Axis ACE, accelerated utility cashback is limited to Google Pay.</text>
+      <text x="340" y="165" textAnchor="middle" fontSize="11" fill="var(--text-muted)">The eligible utility/recharge tier shares a ₹500 statement-cycle cap with 4% categories.</text>
       <rect x="60" y="175" width="560" height="18" rx="4" fill={COLOR} opacity="0.07" />
-      <text x="340" y="187" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="600">Axis ACE is structurally unique: it is the only card that still offers 5% on eligible utility MCCs as of June 2026.</text>
+      <text x="340" y="187" textAnchor="middle" fontSize="9" fill={COLOR} fontWeight="600">Check current card terms, platform eligibility, caps, and fee thresholds before paying.</text>
     </svg>
   );
 }
 
 function BBPSVsDirectPaymentTable() {
   const rows = [
-    { method: "BBPS via PhonePe/GPay + Axis ACE", reward: "5% (MCC 4900 qualifies)", works: "Yes, usually", note: "Most reliable route" },
-    { method: "BBPS via bank's own app", reward: "5%", works: "Yes", note: "Safest but slower" },
-    { method: "Direct on electricity website", reward: "5%", works: "Sometimes", note: "MCC depends on biller" },
-    { method: "Amazon Pay bill payment", reward: "2% (Amazon Pay ICICI)", works: "Yes", note: "Only if biller listed" },
+    { method: "Google Pay + Axis ACE", reward: "5% utility tier*", works: "Terms apply", note: "Shared ₹500 cap/cycle" },
+    { method: "BBPS via another app/card", reward: "No ACE 5% assumed", works: "Check terms", note: "Google Pay required" },
+    { method: "Direct on biller's website", reward: "No ACE 5% assumed", works: "Check terms", note: "Non-GPay utility excluded" },
+    { method: "Amazon Pay bill payment", reward: "Up to 2%*", works: "Biller-specific", note: "Eligible partner only" },
     { method: "Auto-debit from savings account", reward: "0%", works: "N/A", note: "Not a credit card payment" },
   ];
   return (
@@ -114,7 +121,7 @@ function BBPSVsDirectPaymentTable() {
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="260" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Payment Method vs Reward Rate (Axis ACE)</text>
+      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Payment Method vs Reward Eligibility</text>
       {["Payment Method", "Reward", "Works?", "Notes"].map((h, i) => (
         <text key={h} x={[20, 310, 400, 480][i]} y="48" fontSize="10.5" fontWeight="700" fill="var(--text)">{h}</text>
       ))}
@@ -128,7 +135,7 @@ function BBPSVsDirectPaymentTable() {
           <text x="480" y={81 + i * 38} fontSize="10" fill="var(--text-muted)">{r.note}</text>
         </g>
       ))}
-      <text x="340" y="252" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">MCC 4900 (utilities) is the key code. If the biller settles under MCC 4900, Axis ACE rewards it at 5%.</text>
+      <text x="340" y="252" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">*Issuer terms, eligible billers, transaction classification, caps, and fees apply.</text>
     </svg>
   );
 }
@@ -143,12 +150,12 @@ function MonthlyCapMathTable() {
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="220" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Axis ACE Utility Cashback: Monthly Spend vs Annual Return</text>
+      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Illustrative ACE Utility Cashback Before Fees</text>
       {[
-        { spend: "₹2,000/mo", cashback: "₹100/mo", annual: "₹1,200/yr", vsAnnualFee: "2.4x return on ₹499 fee" },
-        { spend: "₹5,000/mo", cashback: "₹250/mo", annual: "₹3,000/yr", vsAnnualFee: "6x return on fee" },
-        { spend: "₹10,000/mo", cashback: "₹500/mo", annual: "₹6,000/yr", vsAnnualFee: "12x return on fee" },
-        { spend: "₹20,000/mo", cashback: "₹1,000/mo", annual: "₹12,000/yr", vsAnnualFee: "24x return on fee" },
+        { spend: "₹2,000/mo", cashback: "Up to ₹100/mo", annual: "Up to ₹1,200/yr", vsAnnualFee: "If cap is unused" },
+        { spend: "₹5,000/mo", cashback: "Up to ₹250/mo", annual: "Up to ₹3,000/yr", vsAnnualFee: "If cap is unused" },
+        { spend: "₹10,000/mo", cashback: "Up to ₹500/mo", annual: "Up to ₹6,000/yr", vsAnnualFee: "Uses full shared cap" },
+        { spend: "₹20,000/mo", cashback: "₹500/mo max*", annual: "₹6,000/yr max*", vsAnnualFee: "Shared cap reached" },
       ].map((r, i) => (
         <g key={i}>
           <rect x="16" y={50 + i * 38} width="648" height="36" rx="4" fill={i % 2 === 0 ? COLOR : "transparent"} opacity={i % 2 === 0 ? "0.04" : "1"} />
@@ -161,8 +168,8 @@ function MonthlyCapMathTable() {
       <text x="30" y="50" fontSize="10.5" fontWeight="700" fill="var(--text)">Monthly Utility Spend</text>
       <text x="190" y="50" fontSize="10.5" fontWeight="700" fill="var(--text)">Monthly Cashback</text>
       <text x="340" y="50" fontSize="10.5" fontWeight="700" fill="var(--text)">Annual Cashback</text>
-      <text x="480" y="50" fontSize="10.5" fontWeight="700" fill="var(--text)">vs ₹499 Fee</text>
-      <text x="340" y="212" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">Axis ACE utility cashback is credited as statement credit. No points conversion needed. Cap applies per billing cycle.</text>
+      <text x="480" y="50" fontSize="10.5" fontWeight="700" fill="var(--text)">Assumption</text>
+      <text x="340" y="212" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">*5% applies only to eligible Google Pay utility/recharge spend; ₹500/cycle shared with 4% categories. Before fees/surcharges.</text>
     </svg>
   );
 }
@@ -173,24 +180,24 @@ function UtilityStackDiagram() {
       viewBox="0 0 680 214"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Diagram showing recommended two-card stack for maximizing utility and online spending rewards"
+      aria-label="Diagram showing conditions and limits for two cards used for utility and online spending"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="200" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Optimal Two-Card Stack for Utility-Heavy Households</text>
+      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Two-Card Combination: Check Eligibility and Costs</text>
       <rect x="30" y="44" width="270" height="80" rx="10" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" />
-      <text x="165" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Card 1: Axis ACE (₹499/yr)</text>
-      <text x="165" y="84" textAnchor="middle" fontSize="10.5" fill="var(--text)">Electricity, water, broadband</text>
-      <text x="165" y="100" textAnchor="middle" fontSize="10.5" fill="var(--text)">Mobile recharge, LPG bills</text>
-      <text x="165" y="116" textAnchor="middle" fontSize="10.5" fontWeight="700" fill={COLOR}>Earn 5% cashback</text>
+      <text x="165" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Axis ACE (fee and waiver terms apply)</text>
+      <text x="165" y="84" textAnchor="middle" fontSize="10.5" fill="var(--text)">Eligible utilities/recharges via Google Pay</text>
+      <text x="165" y="100" textAnchor="middle" fontSize="10.5" fill="var(--text)">5% tier: ₹500/cycle shared cap</text>
+      <text x="165" y="116" textAnchor="middle" fontSize="10.5" fontWeight="700" fill={COLOR}>Utility fee threshold also applies</text>
       <rect x="380" y="44" width="270" height="80" rx="10" fill="#0891b2" opacity="0.25" stroke="#0891b2" strokeWidth="1.5" />
-      <text x="515" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill="#0891b2">Card 2: Amazon Pay ICICI (Free)</text>
-      <text x="515" y="84" textAnchor="middle" fontSize="10.5" fill="var(--text)">Online shopping, Amazon purchases</text>
-      <text x="515" y="100" textAnchor="middle" fontSize="10.5" fill="var(--text)">Amazon Pay merchant bills</text>
-      <text x="515" y="116" textAnchor="middle" fontSize="10.5" fontWeight="700" fill="#0891b2">Earn 2-5% cashback</text>
-      <text x="340" y="156" textAnchor="middle" fontSize="12" fontWeight="600" fill="var(--text)">Combined annual return for ₹8,000/mo utility + ₹15,000/mo online:</text>
-      <text x="340" y="174" textAnchor="middle" fontSize="13" fontWeight="700" fill={COLOR}>~₹7,800/yr on zero fees (ACE fee waived at ₹2L spend)</text>
-      <text x="340" y="190" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">Estimates based on June 2026 reward rates. Actual results vary by spending mix and category caps.</text>
+      <text x="515" y="66" textAnchor="middle" fontSize="12" fontWeight="700" fill="#0891b2">Amazon Pay ICICI (no joining/annual fee)</text>
+      <text x="515" y="84" textAnchor="middle" fontSize="10.5" fill="var(--text)">Amazon purchases and eligible merchants</text>
+      <text x="515" y="100" textAnchor="middle" fontSize="10.5" fill="var(--text)">2% only at eligible Amazon Pay billers</text>
+      <text x="515" y="116" textAnchor="middle" fontSize="10.5" fontWeight="700" fill="#0891b2">Check eligible merchant list</text>
+      <text x="340" y="156" textAnchor="middle" fontSize="12" fontWeight="600" fill="var(--text)">There is no universal best stack or guaranteed annual return.</text>
+      <text x="340" y="174" textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>Compare eligible spend, shared caps, fees, and utility surcharges.</text>
+      <text x="340" y="190" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">Verify each issuer's current terms before payment.</text>
     </svg>
   );
 }
@@ -205,7 +212,7 @@ export default function BestCreditCardForUtilityBills() {
         name: "Which credit card gives best rewards on electricity and utility bills in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Axis ACE is the only major Indian credit card that gives 5% cashback on utility bill payments as of June 2026. No other mainstream card comes close to this rate on electricity, water, broadband, or mobile recharge payments. Amazon Pay ICICI gives 2% on certain Amazon Pay utility billers.",
+          text: "There is no universal best card for every utility bill. Axis ACE advertises 5% on eligible utility bills and recharges paid through Google Pay, subject to a shared ₹500 statement-cycle cap and applicable fees. Amazon Pay ICICI offers rewards only on eligible Amazon Pay merchants.",
         },
       },
       {
@@ -213,7 +220,7 @@ export default function BestCreditCardForUtilityBills() {
         name: "Does Axis ACE give 5% on all utility bills?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Axis ACE gives 5% on utility payments made via Google Pay or other UPI/payment apps that route the transaction under MCC 4900 (utilities). The reward applies when the biller settles the transaction under eligible merchant category codes. Not all payment methods or billers qualify. Paying through BBPS (Bharat Bill Payment System) via Google Pay, PhonePe, or the BBPS portal is the most reliable route.",
+          text: "No. Axis ACE's accelerated utility/recharge offer is limited to eligible transactions through Google Pay; using PhonePe, another BBPS app, or a biller's website does not qualify for that 5% offer. A shared statement-cycle cap applies. See Axis's current product terms.",
         },
       },
       {
@@ -221,7 +228,7 @@ export default function BestCreditCardForUtilityBills() {
         name: "Why do most credit cards not give rewards on utility bills?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Utility bill payments have low or zero Merchant Discount Rate (MDR) under RBI regulations. Banks earn very little interchange revenue from utility transactions. Giving 5% cashback on a category where the bank earns near-zero revenue is a loss-leader strategy. Axis ACE can sustain this by earning margin on food delivery (4%) and general spend (1.5%) categories.",
+          text: "Reward eligibility is set by each issuer's product terms and can depend on the payment channel, merchant eligibility, exclusions, and caps. We do not infer a bank's reward economics from a bill's payment category.",
         },
       },
       {
@@ -229,7 +236,7 @@ export default function BestCreditCardForUtilityBills() {
         name: "Is there a cap on Axis ACE utility cashback?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Axis ACE has a monthly cashback cap that applies to the 5% Google Pay and utility category. The cap varies and has been adjusted over the card's history. As of June 2026, the cashback cap for the utility category is applied per billing cycle. Check the current Axis Bank terms as caps change. For most households spending under ₹20,000/month on utilities, the cap is unlikely to be a binding constraint.",
+          text: "Axis ACE's 5% Google Pay utility/recharge tier shares a ₹500 cap per statement cycle with its 4% Swiggy, Zomato, and Ola categories. Other fees and eligibility rules can affect net value; consult the current Axis terms.",
         },
       },
       {
@@ -237,7 +244,7 @@ export default function BestCreditCardForUtilityBills() {
         name: "Is Axis ACE annual fee waivable?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Axis ACE has an annual fee of ₹499 which is waived if you spend ₹2 lakh or more in the card year. At ₹16,667 per month average spend across all categories, the fee is waived. For most active credit card users, this threshold is easily met.",
+          text: "Axis lists a ₹499 joining fee and ₹499 annual fee from the second year, with a waiver when eligible spends in the preceding card year exceed ₹2 lakh. Check the current fee terms and qualifying-spend exclusions before applying.",
         },
       },
       {
@@ -245,7 +252,7 @@ export default function BestCreditCardForUtilityBills() {
         name: "What is BBPS and should I use it for utility bill payments?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "BBPS (Bharat Bill Payment System) is RBI's official standardized platform for recurring bill payments including electricity, water, gas, broadband, and DTH. Paying through BBPS via Google Pay, PhonePe, or Amazon Pay ensures the transaction is routed under the correct MCC for utility rewards on Axis ACE. It also gives you a centralized payment record and official receipt.",
+          text: "BBPS is a bill-payment system, but using a BBPS-enabled app does not by itself make a payment eligible for Axis ACE's 5% offer. The ACE utility offer specifies Google Pay. Check both the card issuer's and payment app's current terms.",
         },
       },
       {
@@ -253,7 +260,7 @@ export default function BestCreditCardForUtilityBills() {
         name: "Does Amazon Pay ICICI give cashback on electricity bills?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Amazon Pay ICICI gives 2% cashback on bill payments made to Amazon Pay merchant billers. This applies to some but not all electricity and utility billers listed on Amazon. If your utility biller is not on Amazon Pay, you earn the base 1% rate. Compared to Axis ACE's 5%, Amazon Pay ICICI is a distant second for dedicated utility spend.",
+          text: "It offers 2% at eligible Amazon Pay partner merchants, not on every bill payment. Confirm that the specific biller and transaction appear in the issuer's eligible merchant terms; do not assume an unlisted bill earns 2%.",
         },
       },
       {
@@ -261,7 +268,7 @@ export default function BestCreditCardForUtilityBills() {
         name: "Can I use Axis ACE for LPG cylinder booking?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, LPG cylinder bookings made online through IndianOil, HP Gas, or Bharat Gas portals are eligible for utility rewards on Axis ACE if the transaction is coded under MCC 4900. However, rewards may not apply if you book via the IVRS helpline or in person. Online payment through the official app or BBPS gives the best chance of earning the 5% rate.",
+          text: "Axis ACE's advertised accelerated utility/recharge offer requires payment through Google Pay and remains subject to transaction and issuer eligibility. The biller's name or an assumed merchant category alone does not guarantee 5% cashback; verify the current terms for your transaction.",
         },
       },
       {
@@ -269,7 +276,7 @@ export default function BestCreditCardForUtilityBills() {
         name: "Is the two-card strategy (Axis ACE + Amazon Pay ICICI) really the best approach?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "For most Indian households with significant utility spend plus regular online shopping, yes. Axis ACE handles utilities at 5% and food delivery at 4%. Amazon Pay ICICI (free) handles Amazon purchases at 5% (Prime) and other online merchants at 2%. The combination covers most household spending categories with above-average returns and minimal annual fees.",
+          text: "It may suit some households, but it is not automatically best. Compare your eligible Google Pay utility spend, ACE's shared ₹500 cap and fee threshold, plus Amazon Pay ICICI's eligible merchant rules against the cards you already hold.",
         },
       },
     ],
@@ -278,10 +285,10 @@ export default function BestCreditCardForUtilityBills() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for Utility Bills in India (June 2026): Axis ACE Dominates",
+    headline: "Best Credit Cards for Utility Bills: Current Rewards Compared",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -351,7 +358,7 @@ export default function BestCreditCardForUtilityBills() {
       </div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", marginBottom: 10 }}>
-        Axis ACE is the only major credit card that rewards your electricity bill at 5%. Here is why every competitor gave up, and why that makes ACE indispensable for utility-heavy households.
+        Utility-bill rewards depend on the card, payment platform, eligible biller, caps and fees. Axis ACE advertises 5% on eligible utility payments and recharges through Google Pay, subject to a shared cap and additional terms.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
@@ -369,7 +376,7 @@ export default function BestCreditCardForUtilityBills() {
           fontSize: 14,
         }}
       >
-        <strong style={{ color: COLOR }}>Key finding:</strong> Axis ACE gives 5% cashback on utility bill payments via Google Pay and BBPS. No other mainstream Indian credit card comes close to this rate on electricity, water, broadband, or mobile recharge. The card costs ₹499/year, waivable at ₹2L annual spend.
+        <strong style={{ color: COLOR }}>Key finding:</strong> Axis ACE advertises 5% on eligible utility/recharge payments through Google Pay only. This tier shares a ₹500 statement-cycle cap with its 4% categories. Axis also lists a 1% fee when cumulative utility spends reach ₹25,000 or more in a statement cycle; check the current fee schedule and eligibility terms.
       </div>
 
       {/* Top Picks */}
@@ -380,10 +387,10 @@ export default function BestCreditCardForUtilityBills() {
           {
             rank: "1",
             name: "Axis ACE",
-            tag: "Clear Winner",
-            fee: "₹499/yr (waivable at ₹2L)",
-            reward: "5% on utility bills via Google Pay/BBPS",
-            best: "Anyone with electricity + broadband + gas bills",
+            tag: "For eligible GPay bills",
+            fee: "₹499 joining; ₹499 from year 2; spend waiver applies",
+            reward: "5% on eligible utilities/recharges via Google Pay",
+            best: "Compare eligible spend against shared cap and fees",
             slug: "axis-ace",
           },
           {
@@ -391,7 +398,7 @@ export default function BestCreditCardForUtilityBills() {
             name: "Amazon Pay ICICI",
             tag: "Best Free Alternative",
             fee: "Free",
-            reward: "2% on Amazon Pay utility billers",
+            reward: "2% at eligible Amazon Pay partner merchants",
             best: "If your utility biller is listed on Amazon Pay",
             slug: "amazon-pay-icici",
           },
@@ -400,7 +407,7 @@ export default function BestCreditCardForUtilityBills() {
             name: "HDFC Millennia",
             tag: "Passable, Not Great",
             fee: "₹1,000/yr",
-            reward: "1% base on utility (most categories excluded from 5%)",
+            reward: "Potentially 1% as other eligible spend; check terms",
             best: "If you already have this card and want to use one card",
             slug: "hdfc-millennia",
           },
@@ -464,17 +471,17 @@ export default function BestCreditCardForUtilityBills() {
           Why Does Almost No Card Reward Utility Bills?
         </h2>
         <p>
-          Credit card rewards are funded by interchange fee revenue (MDR — Merchant Discount Rate), the small percentage a merchant pays when you swipe your card. On a restaurant bill, the bank earns 1.5-2% of the transaction amount. On a grocery purchase, around 0.5-1.5%. This revenue funds rewards, cashback, and the card program costs.
+          A card's advertised reward rate does not establish whether a particular bill payment qualifies. The issuer's current product terms specify eligible platforms, transaction types, exclusions, caps and fees.
         </p>
         <p>
-          Utility bills are different. RBI and NPCI have capped MDR on utility payments made through BBPS at near-zero levels to promote digital payments. When you pay your electricity bill via BBPS, the bank earns almost nothing. Giving you 5% rewards on a transaction where the bank earns 0.1-0.3% is genuinely a loss-making activity.
+          For Axis ACE, the Google Pay requirement, shared cashback cap and utility-fee threshold materially affect the result. Other cards and payment services have their own rules; we do not assume that a generic BBPS or merchant-category label qualifies.
         </p>
         <MDRExplainerDiagram />
         <p>
-          Axis Bank makes this math work on ACE because the card earns above-average margins on food delivery (4% you earn, but that category has decent MDR) and general purchases (1.5%). The utility reward is effectively subsidized by profitable categories. This is a calculated customer acquisition strategy, not charity, but the result benefits you as long as the rate holds.
+          Use the official issuer links below to confirm current terms before paying. Rates and eligibility may change, and a headline percentage is not a guaranteed net return.
         </p>
         <p>
-          Several major banks, including HDFC, SBI, and Kotak, have silently reduced or excluded utility rewards from their cards' top reward tiers over the last two years. This is why the Axis ACE advantage is worth protecting: <Link href="/blog/credit-card-utility-rewards-history-india">see how utility reward rates have changed</Link> across Indian cards since 2022.
+          For example, SBI Card excludes utility spends from Cashback Card rewards, while other issuers may treat them under a base-spend tier. Review each product's exclusions rather than relying on broad card rankings.
         </p>
       </section>
 
@@ -486,16 +493,16 @@ export default function BestCreditCardForUtilityBills() {
           Axis ACE: How the 5% Utility Cashback Actually Works
         </h2>
         <p>
-          Axis ACE gives 5% cashback on transactions that are coded under specific utility merchant category codes (MCCs), primarily MCC 4900 (Electric, Gas, Sanitary, and Water Utilities). When you pay your BESCOM or MSEB electricity bill through Google Pay, the payment is routed through BBPS and typically settles under MCC 4900, triggering the 5% rate.
+          Axis advertises 5% cashback on eligible utility bill payments, DTH and mobile recharges through Google Pay. The offer is channel-specific: using another app or a biller's website does not qualify for this accelerated ACE tier, even if the transaction appears to be a utility payment. Do not rely on MCC 4900 alone to predict cashback.
         </p>
         <p>
-          The practical implication: the payment method matters, but the biller matters more. If your electricity board is on BBPS, paying via Google Pay or PhonePe is the most reliable path. Paying directly on the electricity board's website sometimes works and sometimes settles under a different MCC, resulting in the base 1.5% rate instead.
+          The 5% utility/recharge tier shares a ₹500 cap per statement cycle with the card's 4% Swiggy, Zomato and Ola categories. Cashback may therefore be lower if those categories have already used part of the shared cap.
         </p>
         <p>
-          For mobile recharge and broadband bills, the MCC situation is less consistent. Jio, Airtel, and Vi bill payments via BBPS typically qualify at 5%. Broadband payments vary by provider and payment portal. Test your specific billers with a small payment first before assuming the 5% applies.
+          Axis also lists a 1% fee when cumulative utility spends reach ₹25,000 or more in a statement cycle. Check the latest fee schedule and calculate the net benefit before routing large bills to the card.
         </p>
         <p>
-          Cashback on Axis ACE is credited as statement credit, typically within 2-3 billing cycles of the transaction. Unlike reward points, this is actual money off your next bill. No points portal, no redemption complications.
+          Consult the issuer's current product terms for reward crediting, eligibility and exclusions; do not assume a payment qualifies until the transaction is posted and assessed.
         </p>
       </section>
 
@@ -507,10 +514,10 @@ export default function BestCreditCardForUtilityBills() {
           The Utility Card Stack: ACE Plus One More
         </h2>
         <p>
-          Axis ACE is a narrow specialist: exceptional on utilities (5%) and food delivery (4%), decent on everything else (1.5%). The optimal approach is to use ACE specifically for bills and food delivery, and pair it with a stronger card for online shopping and other categories.
+          Axis ACE's advertised rates apply only when eligibility conditions are met: 5% on eligible Google Pay utility/recharge transactions and 4% on specified partners, with the accelerated categories sharing a cap. Compare those conditions with your actual spending.
         </p>
         <p>
-          The most common and effective pairing is Axis ACE with Amazon Pay ICICI (free). Amazon Pay ICICI covers Amazon purchases at 5% (Prime users), Amazon Pay merchant transactions at 2%, and everything else at 1%. Together, these two cards cover most household spending at above-average rates with only ₹499 in annual fees (waivable), and that fee pays back dozens of times over in utility cashback alone.
+          Amazon Pay ICICI has no joining or annual fee and provides rewards under its eligible Amazon and partner-merchant terms. Pairing it with ACE may make sense, but calculate net rewards after caps, fees and biller eligibility rather than assuming a fixed annual return.
         </p>
         <UtilityStackDiagram />
         <p>
@@ -531,22 +538,22 @@ export default function BestCreditCardForUtilityBills() {
         <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 14, color: "var(--text)" }}>Action Plan for Utility-Heavy Households</h2>
         <ol style={{ margin: 0, paddingLeft: 20, lineHeight: 2, fontSize: 15 }}>
           <li>
-            <strong>Apply for Axis ACE</strong> if you spend more than ₹2,000/month on utility bills. The cashback covers the annual fee in 2 months at that spend level.
+            <strong>Estimate net value first.</strong> Calculate eligible Google Pay bills, how much of ACE's shared ₹500 cap remains after 4% categories, annual fee and any utility transaction fee.
           </li>
           <li>
-            <strong>Set up all your recurring utility bills</strong> through Google Pay or BBPS, linked to your Axis ACE card as the payment source.
+            <strong>Use Google Pay for the ACE accelerated offer.</strong> A different BBPS app or biller website is not covered by the advertised 5% channel condition.
           </li>
           <li>
-            <strong>Test your billers.</strong> Pay one bill and check your Axis rewards statement within 2 billing cycles to confirm the 5% MCC was triggered.
+            <strong>Verify the posted reward</strong> against the issuer's current terms; do not assume a biller or MCC guarantees the advertised rate.
           </li>
           <li>
             <strong>Pair with Amazon Pay ICICI</strong> (free) for online shopping and Amazon Pay merchant transactions.
           </li>
           <li>
-            <strong>Hit ₹2 lakh annual spend</strong> across all categories to get the ₹499 fee waived. At ₹16,667/month total card spend, this is achievable for most urban households.
+            <strong>Check the fee-waiver definition</strong> and exclusions in Axis's current terms before counting spending toward the ₹2 lakh threshold.
           </li>
           <li>
-            <strong>Do not use Axis ACE for dining or groceries in physical stores</strong> where better-rate cards (HSBC Live+ at 10% dining, SBI SimplySAVE) would serve better.
+            <strong>Compare other cards on their own current terms;</strong> avoid assuming a headline rate applies to a particular merchant or payment type.
           </li>
         </ol>
         <p style={{ marginTop: 14, fontSize: 14, color: "var(--text-muted)" }}>
@@ -582,6 +589,7 @@ export default function BestCreditCardForUtilityBills() {
       </section>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
+        <p>Issuer references: <a href={SOURCES.ace} target="_blank" rel="noreferrer">Axis ACE product page</a> · <a href={SOURCES.aceTerms} target="_blank" rel="noreferrer">Axis ACE terms</a> · <a href={SOURCES.amazon} target="_blank" rel="noreferrer">Amazon Pay ICICI FAQ</a> · <a href={SOURCES.millennia} target="_blank" rel="noreferrer">HDFC Millennia terms</a> · <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI Cashback terms</a>.</p>
         <strong>Disclaimer:</strong> Assure Fintech is an independent editorial site with no banking license. Cashback rates, MCC eligibility, and monthly caps on Axis ACE change periodically. Always verify current terms on the Axis Bank website before relying on specific reward rates. Some links may earn a referral commission that does not influence our editorial positions.
       </footer>
     </main>

@@ -10,54 +10,31 @@ function formatINR(n) {
 
 export default function InsuranceCalculatorClient() {
   const [sumInsured, setSumInsured] = useState(1000000);
+  const [claimAmount, setClaimAmount] = useState(500000);
   const [copay, setCopay] = useState(20);
   const [roomRentCap, setRoomRentCap] = useState(8000);
+  const [chosenRoomRent, setChosenRoomRent] = useState(12000);
   const [diseaseSubLimit, setDiseaseSubLimit] = useState(50);
-  const [waitingPeriod, setWaitingPeriod] = useState(3);
-  const [consumablesExcluded, setConsumablesExcluded] = useState(true);
-  const [isYear1, setIsYear1] = useState(true);
+  const [proportionateClauseApplies, setProportionateClauseApplies] = useState(true);
 
   const result = useMemo(() => {
-    // Simulate a ₹5L hospitalization claim
-    const claimAmount = Math.min(500000, sumInsured);
-    let balance = claimAmount;
-    
-    // STEP 1: Waiting period — if pre-existing disease claim in year 1, insurer may reject or reduce
-    const waitingPenalty = isYear1 && waitingPeriod > 0 ? Math.round(balance * 0.15) : 0;
-    balance -= waitingPenalty;
-    
-    // STEP 2: Consumables exclusion — flat deduction (gloves, PPE, syringes, etc. typically 5-10% of bill)
-    const consumablesCost = consumablesExcluded ? Math.round(claimAmount * 0.08) : 0;
-    balance -= consumablesCost;
-    balance = Math.max(0, balance);
-    
-    // STEP 3: Room rent proportional reduction
-    // If room rent cap is ₹8K/day but patient takes ₹12K room, entire claim proportionally reduced by 8/12
-    const avgRoomCost = 12000;
-    const roomRentRatio = roomRentCap >= avgRoomCost ? 1 : roomRentCap / avgRoomCost;
-    const beforeRoomRent = balance;
-    balance = Math.round(balance * roomRentRatio);
-    const roomRentLoss = beforeRoomRent - balance;
-    
-    // STEP 4: Disease sub-limit — caps payout at X% of sum insured for specific diseases
+    const cappedClaim = Math.min(claimAmount, sumInsured);
+    // This is only an illustrative scenario: proportionate deductions depend on the exact contract and claim.
+    const roomRentRatio = proportionateClauseApplies && chosenRoomRent > roomRentCap ? roomRentCap / chosenRoomRent : 1;
+    const afterRoomRent = Math.round(cappedClaim * roomRentRatio);
+    const roomRentLoss = cappedClaim - afterRoomRent;
     const maxForDisease = Math.round(sumInsured * diseaseSubLimit / 100);
-    const beforeSubLimit = balance;
-    balance = Math.min(balance, maxForDisease);
-    const diseaseLoss = beforeSubLimit - balance;
-    
-    // STEP 5: Co-pay — patient pays X% of admissible claim (applied last on remaining balance)
-    const copayAmount = Math.round(balance * copay / 100);
-    balance -= copayAmount;
-    
-    const finalPayout = Math.max(0, balance);
-    const outOfPocket = claimAmount - finalPayout;
-    const effectiveCoverage = claimAmount > 0 ? Math.round((finalPayout / claimAmount) * sumInsured) : 0;
-    const lostPercent = claimAmount > 0 ? Math.round((1 - finalPayout / claimAmount) * 100) : 0;
+    const beforeSubLimit = afterRoomRent;
+    const afterSubLimit = Math.min(beforeSubLimit, maxForDisease);
+    const diseaseLoss = beforeSubLimit - afterSubLimit;
+    const copayAmount = Math.round(afterSubLimit * copay / 100);
+    const finalPayout = Math.max(0, afterSubLimit - copayAmount);
+    const outOfPocket = Math.max(0, claimAmount - finalPayout);
+    const effectiveCoverage = cappedClaim > 0 ? Math.round((finalPayout / cappedClaim) * sumInsured) : 0;
+    const lostPercent = cappedClaim > 0 ? Math.round((1 - finalPayout / cappedClaim) * 100) : 0;
 
     return {
-      claimAmount,
-      waitingPenalty,
-      consumablesCost,
+      claimAmount: cappedClaim,
       roomRentLoss,
       diseaseLoss,
       copayAmount,
@@ -65,9 +42,9 @@ export default function InsuranceCalculatorClient() {
       outOfPocket,
       effectiveCoverage,
       lostPercent,
-      coverageRatio: claimAmount > 0 ? Math.round(finalPayout / claimAmount * 100) : 0,
+      coverageRatio: cappedClaim > 0 ? Math.round(finalPayout / cappedClaim * 100) : 0,
     };
-  }, [sumInsured, copay, roomRentCap, diseaseSubLimit, consumablesExcluded, waitingPeriod, isYear1]);
+  }, [sumInsured, claimAmount, copay, roomRentCap, chosenRoomRent, diseaseSubLimit, proportionateClauseApplies]);
 
   return (
     <>
@@ -78,7 +55,7 @@ export default function InsuranceCalculatorClient() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#F472B6" }} /> Tool
           </div>
           <h1 style={{ fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 800, lineHeight: 1.15, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 8 }}>Insurance Coverage Calculator</h1>
-          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.4)", maxWidth: 500 }}>Enter your policy details. See what your health insurance actually pays on a ₹5L hospitalization claim.</p>
+          <p style={{ fontSize: 14, color: "rgba(255,255,255,0.65)", maxWidth: 620 }}>Illustrate how selected limits could affect an assumed claim. This is not a claim prediction: actual admissibility, exclusions and deductions depend on your policy wording and claim facts.</p>
         </div>
       </div>
 
@@ -90,28 +67,25 @@ export default function InsuranceCalculatorClient() {
 
             {[
               { label: "Sum insured", value: sumInsured, set: setSumInsured, min: 300000, max: 5000000, step: 100000, format: true, color: "#DB2777" },
+              { label: "Assumed admissible claim before these limits", value: claimAmount, set: setClaimAmount, min: 50000, max: 5000000, step: 50000, format: true, color: "#DB2777" },
               { label: "Co-pay (%)", value: copay, set: setCopay, min: 0, max: 50, step: 5, format: false, color: "#DC2626" },
               { label: "Room rent cap (₹/day)", value: roomRentCap, set: setRoomRentCap, min: 3000, max: 25000, step: 1000, format: true, color: "#DC2626" },
+              { label: "Chosen room rent (₹/day)", value: chosenRoomRent, set: setChosenRoomRent, min: 3000, max: 40000, step: 1000, format: true, color: "#DC2626" },
               { label: "Disease sub-limit (% of SI)", value: diseaseSubLimit, set: setDiseaseSubLimit, min: 25, max: 100, step: 5, format: false, color: "#DC2626" },
-              { label: "Pre-existing waiting (years)", value: waitingPeriod, set: setWaitingPeriod, min: 0, max: 4, step: 1, format: false, color: "#DC2626" },
             ].map((f, i) => (
               <div key={i} className="mb-4">
                 <div className="flex justify-between mb-1.5">
                   <label className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>{f.label}</label>
                   <span className="text-xs font-bold" style={{ color: "var(--text)" }}>{f.format ? formatINR(f.value) : f.label.includes("%") ? `${f.value}%` : f.value}</span>
                 </div>
-                <input type="range" min={f.min} max={f.max} step={f.step} value={f.value} onChange={e => f.set(Number(e.target.value))} className="w-full" style={{ accentColor: f.color }} />
+                <input aria-label={f.label} type="range" min={f.min} max={f.max} step={f.step} value={f.value} onChange={e => f.set(Number(e.target.value))} className="w-full" style={{ accentColor: f.color }} />
               </div>
             ))}
 
             <div className="flex flex-col gap-3 mt-4 pt-4" style={{ borderTop: "1px solid var(--border)" }}>
               <div className="flex items-center gap-2">
-                <input type="checkbox" checked={consumablesExcluded} onChange={e => setConsumablesExcluded(e.target.checked)} id="consumables" />
-                <label htmlFor="consumables" className="text-xs font-semibold cursor-pointer" style={{ color: "var(--text-muted)" }}>Consumables excluded (gloves, PPE, etc.)</label>
-              </div>
-              <div className="flex items-center gap-2">
-                <input type="checkbox" checked={isYear1} onChange={e => setIsYear1(e.target.checked)} id="year1" />
-                <label htmlFor="year1" className="text-xs font-semibold cursor-pointer" style={{ color: "var(--text-muted)" }}>Claiming in year 1 (waiting period applies)</label>
+                <input type="checkbox" checked={proportionateClauseApplies} onChange={e => setProportionateClauseApplies(e.target.checked)} id="proportionate" />
+                <label htmlFor="proportionate" className="text-xs font-semibold cursor-pointer" style={{ color: "var(--text-muted)" }}>Illustrate a proportionate room-rent deduction (only if my policy wording applies it)</label>
               </div>
             </div>
           </div>
@@ -119,7 +93,7 @@ export default function InsuranceCalculatorClient() {
           {/* Results */}
           <div>
             <div className="rounded-2xl p-6 mb-4 text-center" style={{ background: "var(--bg-section-pink)", border: "1px solid var(--border-section-pink)" }}>
-              <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "var(--text-faint)" }}>On a ₹5L claim, your policy pays</div>
+              <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "var(--text-faint)" }}>Illustrative payout on the entered claim</div>
               <div className="flex items-center justify-center gap-4">
                 <div>
                   <div className="text-2xl font-extrabold" style={{ color: "var(--text-faint)", textDecoration: "line-through" }}>{formatINR(result.claimAmount)}</div>
@@ -128,7 +102,7 @@ export default function InsuranceCalculatorClient() {
                 <div style={{ fontSize: 18, color: "var(--text-faint)" }}>→</div>
                 <div>
                   <div className="text-4xl font-extrabold" style={{ color: "#DC2626" }}>{formatINR(result.finalPayout)}</div>
-                  <div className="text-[10px]" style={{ color: "#DC2626" }}>{result.lostPercent}% lost to fine print</div>
+                  <div className="text-[10px]" style={{ color: "#DC2626" }}>{result.lostPercent}% not represented in this illustrative payout</div>
                 </div>
               </div>
 
@@ -140,16 +114,14 @@ export default function InsuranceCalculatorClient() {
             </div>
 
             <div className="rounded-2xl p-6 mb-4" style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}>
-              <h3 className="text-sm font-extrabold mb-3" style={{ color: "var(--text)" }}>Deduction waterfall (in order)</h3>
+              <h3 className="text-sm font-extrabold mb-3" style={{ color: "var(--text)" }}>Illustrative limits applied (order simplified)</h3>
               {[
                 ["Claim amount", formatINR(result.claimAmount), false, formatINR(result.claimAmount)],
-                ["① Waiting period penalty", `-${formatINR(result.waitingPenalty)}`, true, formatINR(result.claimAmount - result.waitingPenalty)],
-                ["② Consumables excluded", `-${formatINR(result.consumablesCost)}`, true, formatINR(result.claimAmount - result.waitingPenalty - result.consumablesCost)],
-                ["③ Room rent reduction", `-${formatINR(result.roomRentLoss)}`, true, null],
-                ["④ Disease sub-limit cap", `-${formatINR(result.diseaseLoss)}`, true, null],
-                [`⑤ Co-pay (${copay}%)`, `-${formatINR(result.copayAmount)}`, true, null],
+                ["Room-rent proportional adjustment", `-${formatINR(result.roomRentLoss)}`, true, null],
+                ["Disease sub-limit cap (if applicable)", `-${formatINR(result.diseaseLoss)}`, true, null],
+                [`Co-pay (${copay}%)`, `-${formatINR(result.copayAmount)}`, true, null],
               ].map(([label, val, isRed, running], i) => (
-                <div key={i} className="flex justify-between py-1.5" style={{ borderBottom: i < 5 ? "1px solid var(--border-light)" : "none" }}>
+                <div key={i} className="flex justify-between py-1.5" style={{ borderBottom: i < 3 ? "1px solid var(--border-light)" : "none" }}>
                   <span className="text-sm" style={{ color: "var(--text-muted)" }}>{label}</span>
                   <span className="text-sm font-bold" style={{ color: isRed ? "#DC2626" : "var(--text)" }}>{val}</span>
                 </div>
@@ -167,7 +139,7 @@ export default function InsuranceCalculatorClient() {
             <div className="rounded-xl p-4" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
               <div className="text-xs font-bold mb-1" style={{ color: "var(--orange)" }}>Effective coverage of your {formatINR(sumInsured)} policy</div>
               <div className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                Based on these terms, your {formatINR(sumInsured)} policy effectively covers about <strong style={{ color: "var(--text)" }}>{formatINR(result.effectiveCoverage)}</strong>. Consider a no co-pay, no room rent limit policy for full coverage — or add a super top-up.
+                In this scenario only, the payout corresponds to about <strong style={{ color: "var(--text)" }}>{formatINR(result.effectiveCoverage)}</strong> of the entered sum insured. Waiting periods, exclusions, non-payable items, restoration benefits and claim-specific admissibility are not modelled. Check the policy wording and Customer Information Sheet; this result is not advice to buy or change a policy.
               </div>
             </div>
           </div>

@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/ai-changing-credit-card-picks
 // Template: trend-piece
-// Color: #7c3aed | Updated: June 4, 2026
+// Color: #7c3aed | Updated: September 26, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgHeroFlow = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Shift from influencer reviews to AI-driven card comparison" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -241,7 +241,7 @@ export default function BlogAiChangingCreditCardPicks() {
     headline: "How AI Is Changing the Way Indians Pick Credit Cards",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -356,7 +356,7 @@ export default function BlogAiChangingCreditCardPicks() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Assure Fintech is an independent comparison platform. We do not issue credit cards and are not affiliated with any bank. Reward rates, caps, and card terms change frequently. Verify all figures against the bank's most current terms before applying. This article is for informational purposes only and does not constitute financial advice. Last verified June 4, 2026.
+        Assure Fintech is an independent comparison platform. We do not issue credit cards and are not affiliated with any bank. Reward rates, caps, and card terms change frequently. Verify all figures against the bank's most current terms before applying. This article is for informational purposes only and does not constitute financial advice. Reviewed September 26, 2026.
       </footer>
     </main>
     </>

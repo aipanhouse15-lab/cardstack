@@ -8,11 +8,11 @@ import Script from "next/script";
 // ============================================================
 // Tier F — SIP Calculator
 // URL: /calculators/sip-calculator
-// Author: Ash K · Updated: June 6, 2026
+// Author: Ash K · Updated: September 26, 2026
 // ============================================================
 
 const COLOR = "#7c3aed";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 function formatINR(n) {
   if (n >= 10000000) return "₹" + (n / 10000000).toFixed(2) + " Cr";
@@ -166,7 +166,7 @@ export default function SipCalcClient() {
     description: "Calculate SIP returns with inflation adjustment, year-by-year corpus growth, and lumpsum comparison. Free SIP calculator for India with accurate 2026 tax and return assumptions.",
     author: { "@type": "Person", name: "Ash K" },
     publisher: { "@type": "Organization", name: "Assure Fintech" },
-    dateModified: "2026-06-06",
+    dateModified: "2026-09-26",
   };
 
   const breadcrumb = {

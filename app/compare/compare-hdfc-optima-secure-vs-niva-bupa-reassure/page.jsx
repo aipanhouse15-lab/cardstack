@@ -18,7 +18,7 @@ export const metadata = {
 // URL: /compare/hdfc-optima-secure-vs-niva-bupa-reassure
 
 const COLOR = "#DB2777";
-const UPDATED = "June 6, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgEffectiveCover = () => (
   <svg viewBox="0 0 520 200" role="img" aria-label="Effective cover after deduction stack" style={{ width: "100%" }}>
@@ -65,7 +65,7 @@ export default function CompareOptimaVsReassure() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "HDFC ERGO Optima Secure vs Niva Bupa Reassure 2.0 — health insurance face-off, 2026",
     author: { "@type": "Person", name: "Ash K" },
-    datePublished: "2026-06-06", dateModified: "2026-06-06",
+    datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 

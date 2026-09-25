@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/first-card-decision-framework
 // Template: decision-tree-framework
-// Color: #7c3aed | Updated: June 4, 2026
+// Color: #7c3aed | Updated: September 26, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgDecisionTree = () => (
   <svg viewBox="0 0 720 380" role="img" aria-label="Decision tree for choosing your first credit card in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

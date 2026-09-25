@@ -50,8 +50,8 @@ export default function CompareClient() {
               <span className="text-xs font-semibold text-center" style={{ color: c2.color }}>{c2.name}</span>
             </div>
             {CATEGORIES.map((cat, i) => {
-              const r1 = c1.rewards[cat.id] || c1.rewards.default;
-              const r2 = c2.rewards[cat.id] || c2.rewards.default;
+              const r1 = c1.rewards[cat.id] ?? c1.rewards.default;
+              const r2 = c2.rewards[cat.id] ?? c2.rewards.default;
               const w = r1 > r2 ? 1 : r2 > r1 ? 2 : 0;
               return (
                 <div key={cat.id} className="grid grid-cols-[1.2fr_1fr_1fr] p-3 px-4" style={{ borderBottom: i < CATEGORIES.length - 1 ? "1px solid var(--border-light)" : "none" }}>
@@ -65,7 +65,7 @@ export default function CompareClient() {
 
           {(() => {
             let s1 = 0, s2 = 0;
-            CATEGORIES.forEach(cat => { const r1 = c1.rewards[cat.id] || c1.rewards.default, r2 = c2.rewards[cat.id] || c2.rewards.default; if (r1 > r2) s1++; else if (r2 > r1) s2++; });
+            CATEGORIES.forEach(cat => { const r1 = c1.rewards[cat.id] ?? c1.rewards.default, r2 = c2.rewards[cat.id] ?? c2.rewards.default; if (r1 > r2) s1++; else if (r2 > r1) s2++; });
             return (
               <div className="grid grid-cols-2 gap-4 mt-4">
                 {[[s1, c1.name, s1 >= s2], [s2, c2.name, s2 > s1]].map(([s, n, win], i) => (

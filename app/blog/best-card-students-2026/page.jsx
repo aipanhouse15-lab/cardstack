@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/best-card-students-2026
 // Template: Buying guide for first-timers
-// Color: #7c3aed | Updated: June 4, 2026
+// Color: #7c3aed | Updated: September 26, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgStudentCards = () => (
   <svg viewBox="0 0 720 282" role="img" aria-label="Best credit cards for students and young adults in India 2026 showing HDFC Millennia SBI Student Plus ICICI Coral and Amazon Pay ICICI with their key features and typical approval difficulty" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

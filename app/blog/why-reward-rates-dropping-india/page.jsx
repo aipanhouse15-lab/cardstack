@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/why-reward-rates-dropping-india
 // Template: investigative-article
-// Color: #ea580c | Updated: June 4, 2026
+// Color: #ea580c | Updated: September 26, 2026
 
 const COLOR = "#ea580c";
-const UPDATED = "June 4, 2026";
+const UPDATED = "September 26, 2026";
 
 const SvgMdrEconomics = () => (
   <svg viewBox="0 0 720 246" role="img" aria-label="How MDR revenue is split between banks, card networks, and merchants in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>

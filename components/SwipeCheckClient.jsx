@@ -90,7 +90,7 @@ export default function SwipeCheckClient() {
             })}
             {verifiedTips.length === 0 && (
               <div role="status" className="rounded-xl p-5 text-sm" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)", color: "var(--orange)" }}>
-                No source-checked recommendation is available for this merchant yet. Check back after the next data review.
+                No source-linked recommendation is available for this merchant yet. Check back after the next data review.
               </div>
             )}
           </div>
