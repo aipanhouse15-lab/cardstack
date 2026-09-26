@@ -1,7 +1,6 @@
 import { CARDS, CATEGORIES, isSourceReviewed } from "@/data/cards";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import BankLogo from "@/components/BankLogo";
 
 /* ── Static generation ── */
 export async function generateStaticParams() {
@@ -190,7 +189,7 @@ export default function CardPage({ params }) {
           <div style={{ display: "flex", justifyContent: "center" }}>
             <div className="bigcard" style={{ background: `linear-gradient(140deg, ${card.color}cc 0%, ${card.color} 50%, ${card.color}99 115%)` }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-                <BankLogo bank={card.bank} cardId={card.id} size={48} rounded={10} fontSize={14} />
+                <span className="mono" style={{ fontSize: 11, opacity: 0.7, letterSpacing: ".12em" }}>{card.bank}</span>
                 <span className="mono" style={{ fontSize: 10, opacity: 0.6, letterSpacing: ".12em" }}>{card.network}</span>
               </div>
               <div style={{ position: "absolute", bottom: 26, left: 26 }}>
@@ -496,15 +495,26 @@ export default function CardPage({ params }) {
 
             {/* ── AFFILIATE SLOT ── */}
             <div className="aff">
-              <span className="aff-tag">PARTNER LINK</span>
+              <span className="aff-tag">CARD INFORMATION</span>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16 }}>
                 <div>
-                  <div style={{ fontWeight: 600, fontSize: 15, marginBottom: 4 }}>{card.availabilityStatus ? `Check with HDFC about ${card.name}` : `Apply for ${card.name}`}</div>
-                  <div className="aff-disc">{card.availabilityStatus ? "ISSUER AVAILABILITY MAY BE CLOSED OR LIMITED" : "WE MAY EARN A COMMISSION · AT NO COST TO YOU"}</div>
+                  <div style={{ fontWeight: 600, fontSize: 15, marginBottom: 4 }}>Find current details for {card.name}</div>
+                  <div className="aff-disc">OPENS THE CARD INFORMATION PAGE · APPROVAL AND AVAILABILITY ARE SET BY THE PROVIDER</div>
                 </div>
-                {!card.availabilityStatus && <button className="btn btn-solid" style={{ fontSize: 13, padding: "11px 24px", whiteSpace: "nowrap" }}>
-                  Check eligibility →
-                </button>}
+                {card.sourceUrl ? (
+                  <a
+                    className="btn btn-solid"
+                    href={card.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Open card information for ${card.name}`}
+                    style={{ fontSize: 13, padding: "11px 24px", whiteSpace: "nowrap", textDecoration: "none" }}
+                  >
+                    Open card page →
+                  </a>
+                ) : (
+                  <span className="aff-disc" style={{ textAlign: "right" }}>Card link unavailable</span>
+                )}
               </div>
             </div>
 
@@ -587,7 +597,11 @@ export default function CardPage({ params }) {
             {card.fee === 0 ? "FREE" : `₹${card.fee.toLocaleString()}/yr`} · {maxRate}% best
           </div>
         </div>
-        <button className="btn btn-solid" style={{ fontSize: 13, padding: "10px 20px" }}>Apply →</button>
+        {card.sourceUrl && (
+          <a className="btn btn-solid" href={card.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, padding: "10px 20px", textDecoration: "none" }}>
+            Card page →
+          </a>
+        )}
       </div>
     </>
   );
