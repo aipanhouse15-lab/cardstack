@@ -181,7 +181,7 @@ export default function CardPage({ params }) {
               {ed?.verdict?.headline || `${card.bank} ${card.type.toLowerCase()} card with up to ${maxRate}% rewards on ${bestCategory}.`}
             </p>
             <p className="mono" style={{ fontSize: 12, color: "var(--dim)", letterSpacing: ".06em" }}>
-              By <span style={{ color: "var(--mut)" }}>Ashutosh</span> · {sourceReviewed ? `Issuer source linked ${card.reviewedAt}` : "Issuer-source review pending"}
+              By <span style={{ color: "var(--mut)" }}>Ash</span> · {sourceReviewed ? `Issuer source linked ${card.reviewedAt}` : "Issuer-source review pending"}
             </p>
           </div>
 
@@ -523,7 +523,7 @@ export default function CardPage({ params }) {
               <div className="ava">A</div>
               <div>
                 <h5>Ashutosh</h5>
-                <p>Founder of Assure Fintech. Obsessed with the gap between advertised and actual financial returns. {sourceReviewed ? `An issuer source and review date were recorded in ${card.reviewedAt}; this does not establish every current benefit. Reconfirm terms before applying.` : "This record is awaiting a fresh issuer-source review and may contain outdated terms."}</p>
+                <p>Founder of Assure Fintech. I focus on the gap between advertised rewards and what cardholders can actually earn. This review explains the card’s fees, reward rules, caps and exclusions so you can compare its value against your own spending.</p>
               </div>
             </div>
 
