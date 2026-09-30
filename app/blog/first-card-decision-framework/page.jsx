@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import { permanentRedirect } from "next/navigation";
 
 export const metadata = {
   title: "Your First Credit Card in India — Answer 5 Questions and Get the Right Answer",
@@ -242,6 +243,8 @@ const SvgFiveQuestions = () => (
 );
 
 export default function BlogFirstCardDecisionFramework() {
+  permanentRedirect("/best/best-credit-card-for-beginners-india");
+
   const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -343,9 +346,9 @@ export default function BlogFirstCardDecisionFramework() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "First Card Decision Framework", item: "https://assurefintech.com/blog/first-card-decision-framework" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "First Card Decision Framework", item: "https://www.assurefintech.com/blog/first-card-decision-framework" },
     ]
   };
 

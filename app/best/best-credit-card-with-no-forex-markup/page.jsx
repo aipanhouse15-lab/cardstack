@@ -161,9 +161,9 @@ export default function BestCreditCardWithNoForexMarkup() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
-      { "@type": "ListItem", position: 3, name: "Best Credit Card with No Forex Markup", item: "https://assurefintech.com/best/credit-card-with-no-forex-markup" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
+      { "@type": "ListItem", position: 3, name: "Best Credit Card with No Forex Markup", item: "https://www.assurefintech.com/best/credit-card-with-no-forex-markup" }
     ]
   };
 

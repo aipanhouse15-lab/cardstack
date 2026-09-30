@@ -249,9 +249,9 @@ export default function BlogAiChangingCreditCardPicks() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "How AI Is Changing the Way Indians Pick Credit Cards", item: "https://assurefintech.com/blog/ai-changing-credit-card-picks" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "How AI Is Changing the Way Indians Pick Credit Cards", item: "https://www.assurefintech.com/blog/ai-changing-credit-card-picks" },
     ],
   };
 
@@ -330,7 +330,7 @@ export default function BlogAiChangingCreditCardPicks() {
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How to Use AI Tools Correctly for Card Selection</h2>
         <SvgInputGuide />
         <p>The right workflow in June 2026 uses general AI tools for education and shortlisting, then hands off to spend-specific tools for the final decision. Use ChatGPT or Perplexity to understand what card categories exist and what the general trade-offs are between cashback, travel miles, and lifestyle rewards. Then go to <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> with your actual spend numbers for the ranked output.</p>
-        <p>Input precision matters. "I spend on food and travel" is not enough information. "₹8,000/month on Swiggy and Zomato, ₹25,000/month on direct airline bookings via airline apps, ₹12,000/month on supermarkets" gives a tool something real to work with. Also read our <Link href="/blog/first-card-decision-framework" style={{ color: COLOR }}>first card decision framework</Link> if you are just starting out, and understand the <Link href="/blog/reward-points-vs-cashback" style={{ color: COLOR }}>points vs cashback trade-off</Link> before you commit to an ecosystem.</p>
+        <p>Input precision matters. "I spend on food and travel" is not enough information. "₹8,000/month on Swiggy and Zomato, ₹25,000/month on direct airline bookings via airline apps, ₹12,000/month on supermarkets" gives a tool something real to work with. Also read our <Link href="/best/best-credit-card-for-beginners-india" style={{ color: COLOR }}>first card decision framework</Link> if you are just starting out, and understand the <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>points vs cashback trade-off</Link> before you commit to an ecosystem.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What to Do Right Now</h2>
@@ -350,8 +350,8 @@ export default function BlogAiChangingCreditCardPicks() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 16 }}>
         Related:{" "}
         <Link href="/blog/cashback-rate-is-a-lie" style={{ color: COLOR }}>Why the cashback rate is almost always a lie</Link> ·{" "}
-        <Link href="/blog/reward-points-vs-cashback" style={{ color: COLOR }}>Reward points vs cashback</Link> ·{" "}
-        <Link href="/blog/first-card-decision-framework" style={{ color: COLOR }}>First card decision framework</Link> ·{" "}
+        <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>Reward points vs cashback</Link> ·{" "}
+        <Link href="/best/best-credit-card-for-beginners-india" style={{ color: COLOR }}>First card decision framework</Link> ·{" "}
         <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link>
       </p>
 

@@ -53,9 +53,9 @@ export default function ComparePpfasVsAxisBluechip() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://assurefintech.com/compare/" },
-      { "@type": "ListItem", position: 3, name: "Parag Parikh Flexi Cap vs Axis Bluechip", item: "https://assurefintech.com/compare/parag-parikh-flexi-cap-vs-axis-bluechip" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.assurefintech.com/compare/" },
+      { "@type": "ListItem", position: 3, name: "Parag Parikh Flexi Cap vs Axis Bluechip", item: "https://www.assurefintech.com/compare/parag-parikh-flexi-cap-vs-axis-bluechip" }
     ]
   };
 

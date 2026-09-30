@@ -164,9 +164,9 @@ export default function BestCreditCardForMovieEntertainment() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
-      { "@type": "ListItem", position: 3, name: "Best Credit Card for Movie Entertainment", item: "https://assurefintech.com/best/credit-card-for-movie-entertainment" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
+      { "@type": "ListItem", position: 3, name: "Best Credit Card for Movie Entertainment", item: "https://www.assurefintech.com/best/credit-card-for-movie-entertainment" }
     ]
   };
 

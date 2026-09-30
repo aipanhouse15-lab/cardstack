@@ -2,7 +2,7 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "RBI Credit Card Guidelines: Key Rights and What to Check | Assure Fintech",
+  title: "RBI Credit Card Guidelines: Key Rights and What to Check",
   description: "A source-linked guide to RBI credit-card rules on billing, EMI disclosures, card closure and complaints.",
   alternates: { canonical: "/blog/rbi-latest-guidelines-credit-cards" },
   openGraph: {
@@ -248,9 +248,9 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "RBI Latest Guidelines Credit Cards", item: "https://assurefintech.com/blog/rbi-latest-guidelines-credit-cards" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "RBI Latest Guidelines Credit Cards", item: "https://www.assurefintech.com/blog/rbi-latest-guidelines-credit-cards" },
     ],
   };
 
@@ -300,7 +300,7 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rule 2: Card Closure Within 7 Working Days</h2>
         <SvgCardClosureRule />
         <p>This is one of the most practically useful rules and one of the most frequently violated by banks. RBI's updated guidelines state that once a cardholder requests closure, the bank must process it within 7 working days, provided all outstanding dues are cleared. The request can be made through the app, by phone, or in writing.</p>
-        <p>Banks routinely try to delay by making retention offers, asking you to "think about it," or routing you through multiple departments. You do not need to engage with any of this. A firm written request via email (so you have a timestamp) starts the 7-day clock. Also see our script for <Link href="/blog/get-annual-fee-waived-scripts" style={{ color: COLOR }}>getting annual fees waived or cards closed</Link> without the runaround.</p>
+        <p>Keep a dated record of your closure request and follow up if it is not processed within the applicable timeline. For annual-fee decisions, see our <Link href="/blog/annual-fee-when-worth-paying" style={{ color: COLOR }}>guide to comparing a card's fee with value you actually use</Link>.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rule 3: Card-on-File Tokenisation</h2>
@@ -312,7 +312,7 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How reward eligibility depends on payment terms</h2>
         <SvgMDRUpi />
         <p>Payment-method economics can influence product pricing, but they do not establish a universal rewards rule. Reward eligibility depends on the issuer or provider, account type, transaction category, exclusions, caps and current program terms.</p>
-        <p>Before choosing a payment method for rewards, check the current terms for that specific transaction. A payment may earn no reward, a reduced reward or a different benefit depending on the program. See our <Link href="/blog/future-credit-card-rewards-india" style={{ color: COLOR }}>future of rewards piece</Link> for broader context.</p>
+        <p>Before choosing a payment method for rewards, check the current terms for that specific transaction. A payment may earn no reward, a reduced reward or a different benefit depending on the program. See our <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>future of rewards piece</Link> for broader context.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Rule 5: No Auto-Activation of Credit Cards</h2>
@@ -350,9 +350,9 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 16 }}>
         Related:{" "}
         <Link href="/blog/minimum-transaction-traps" style={{ color: COLOR }}>Minimum transaction traps banks use on new cards</Link> ·{" "}
-        <Link href="/blog/get-annual-fee-waived-scripts" style={{ color: COLOR }}>Scripts to get annual fees waived or cards closed</Link> ·{" "}
+        <Link href="/blog/annual-fee-when-worth-paying" style={{ color: COLOR }}>How to assess whether a card's annual fee is worth paying</Link> ·{" "}
         <Link href="/learn/loans" style={{ color: COLOR }}>Credit and loan fundamentals</Link> ·{" "}
-        <Link href="/blog/future-credit-card-rewards-india" style={{ color: COLOR }}>Future of credit card rewards in India</Link>
+        <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>Future of credit card rewards in India</Link>
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>

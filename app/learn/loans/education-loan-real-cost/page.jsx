@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Education Loan Costs: Moratorium, Interest & Repayment | Assure Fintech",
+  title: "Education Loan Costs: Moratorium, Interest & Repayment",
   description: "Understand education-loan disbursement, interest during study or moratorium, repayment schedules, fees and tax eligibility before borrowing.",
   alternates: { canonical: "/learn/loans/education-loan-real-cost" },
   openGraph: { title: "Education Loan Costs: Moratorium, Interest & Repayment", description: "A practical checklist for evaluating education-loan repayment and total cost.", type: "article", siteName: "Assure Fintech" },
@@ -41,15 +41,14 @@ const faq = {
 };
 
 export default function PageEducationLoanRealCost() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Education Loan Costs: Moratorium, Interest and Repayment", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Education Loan Costs: Moratorium, Interest and Repayment", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Loans", item: "https://assurefintech.com/learn/loans/" },
-      { "@type": "ListItem", position: 4, name: "Education Loan Costs", item: "https://assurefintech.com/learn/loans/education-loan-real-cost" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Loans", item: "https://www.assurefintech.com/learn/loans/" },
+      { "@type": "ListItem", position: 3, name: "Education Loan Costs", item: "https://www.assurefintech.com/learn/loans/education-loan-real-cost" },
     ],
   };
 
@@ -66,7 +65,7 @@ export default function PageEducationLoanRealCost() {
         </div>
       </header>
       <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 72px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
-        <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Education Loan Costs</nav>
+        <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Education Loan Costs</nav>
 
         <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 26px" }}>The sanctioned amount alone does not show how much you may owe at repayment start. Build your estimate from the expected disbursement dates, applicable rates, payments made during study, capitalization terms and the schedule in the lender's documents.</p>
 
@@ -79,6 +78,12 @@ export default function PageEducationLoanRealCost() {
           <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 12px" }}>Understand interest during study and any moratorium</h2>
           <p style={{ margin: "0 0 12px" }}>A moratorium can defer scheduled repayments, but it does not automatically mean interest stops accruing. Check the applicable rate, calculation method, reset terms and whether payments during study are required, optional or subject to concessions. Ask for written examples for your course duration and expected disbursements.</p>
           <p style={{ margin: 0 }}>If interest is unpaid and the agreement adds it to the balance, subsequent interest may apply to a larger principal. Request a schedule showing both the balance at repayment start and total payments over the full term. Do not rely on a single growth estimate without the lender's assumptions.</p>
+        </section>
+
+        <section aria-labelledby="education-loan-example" style={{ marginBottom: 26, padding: 20, borderRadius: 14, background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
+          <h2 id="education-loan-example" style={{ fontSize: 22, fontWeight: 700, margin: "0 0 10px" }}>Worked example: ask how study-period interest is handled</h2>
+          <p style={{ margin: "0 0 12px" }}>Assume ₹20 lakh is disbursed at the start of a four-year course and the annual rate stays at a hypothetical 9%. If interest is paid as it accrues, it is ₹1.8 lakh per year, or ₹7.2 lakh over four years, while the original ₹20 lakh principal remains outstanding.</p>
+          <p style={{ margin: 0 }}>If instead interest is added to the balance once each year and then compounds, the balance after four years would be about ₹28.23 lakh. That is roughly ₹1.03 lakh more than the simple-interest total. Real education loans may disburse in stages, use different calculation intervals, offer concessions or subsidies, and specify different capitalization rules; use the lender's schedule, not this assumption.</p>
         </section>
 
         <section style={{ marginBottom: 26 }}>

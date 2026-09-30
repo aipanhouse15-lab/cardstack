@@ -71,11 +71,11 @@ export default function CompareMillenniaVsAce() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "HDFC Millennia vs Axis Ace 2026 — Which Cashback Card Actually Pays More",
     description: "Detailed head-to-head comparison of HDFC Millennia and Axis Ace credit cards for 2026, with cap-adjusted effective rate across four spend profiles, year-by-year fee economics, and the specific decision framework for each profile.",
-    author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
+    author: { "@type": "Person", name: "Ash K", url: "https://www.assurefintech.com/author/ash-k" },
     reviewedBy: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-06", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
-    mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/compare/hdfc-millennia-vs-axis-ace" }
+    mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.assurefintech.com/compare/hdfc-millennia-vs-axis-ace" }
   };
 
   const faq = {
@@ -93,9 +93,9 @@ export default function CompareMillenniaVsAce() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://assurefintech.com/compare/" },
-      { "@type": "ListItem", position: 3, name: "HDFC Millennia vs Axis Ace", item: "https://assurefintech.com/compare/hdfc-millennia-vs-axis-ace" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.assurefintech.com/compare/" },
+      { "@type": "ListItem", position: 3, name: "HDFC Millennia vs Axis Ace", item: "https://www.assurefintech.com/compare/hdfc-millennia-vs-axis-ace" }
     ]
   };
 

@@ -58,9 +58,9 @@ export default function CompareStarVsCareSupreme() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://assurefintech.com/compare/" },
-      { "@type": "ListItem", position: 3, name: "Star Comprehensive vs Care Supreme", item: "https://assurefintech.com/compare/star-comprehensive-vs-care-supreme" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.assurefintech.com/compare/" },
+      { "@type": "ListItem", position: 3, name: "Star Comprehensive vs Care Supreme", item: "https://www.assurefintech.com/compare/star-comprehensive-vs-care-supreme" }
     ]
   };
 

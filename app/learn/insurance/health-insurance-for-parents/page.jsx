@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Health Insurance for Parents: How to Compare Plans | Assure Fintech",
+  title: "Health Insurance for Parents: How to Compare Plans",
   description: "A practical guide to comparing health insurance for parents, including medical disclosures, waiting periods, co-pay, room limits and renewal terms.",
   alternates: { canonical: "/learn/insurance/health-insurance-for-parents" },
 };
@@ -24,10 +24,10 @@ export default function HealthInsuranceForParentsPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://assurefintech.com/learn/insurance/" },
-      { "@type": "ListItem", position: 4, name: "Health Insurance for Parents", item: "https://assurefintech.com/learn/insurance/health-insurance-for-parents" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Learn", item: "https://www.assurefintech.com/learn/" },
+      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://www.assurefintech.com/learn/insurance/" },
+      { "@type": "ListItem", position: 4, name: "Health Insurance for Parents", item: "https://www.assurefintech.com/learn/insurance/health-insurance-for-parents" },
     ],
   };
 

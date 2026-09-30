@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import { permanentRedirect } from "next/navigation";
 
 export const metadata = {
   title: "Amazon Pay ICICI Card: The Complete Power User Guide",
@@ -175,6 +176,8 @@ const SvgGiftCardTrap = () => (
 );
 
 export default function BlogAmazonHack() {
+  permanentRedirect("/best/credit-card-for-amazon");
+
   const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -236,9 +239,9 @@ export default function BlogAmazonHack() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "Amazon Pay ICICI Card Power Guide", item: "https://assurefintech.com/blog/amazon-pay-icici-card-power-guide" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "Amazon Pay ICICI Card Power Guide", item: "https://www.assurefintech.com/blog/amazon-pay-icici-card-power-guide" },
     ],
   };
 
@@ -335,7 +338,7 @@ export default function BlogAmazonHack() {
 
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 16 }}>
         Related:{" "}
-        <Link href="/blog/reward-points-vs-cashback" style={{ color: COLOR }}>Reward points vs cashback: which is actually better</Link>{" "}
+        <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>Reward points vs cashback: which is actually better</Link>{" "}
         ·{" "}
         <Link href="/blog/cashback-rate-is-a-lie" style={{ color: COLOR }}>Why cashback rates are a lie</Link>{" "}
         ·{" "}

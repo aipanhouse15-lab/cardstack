@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import { permanentRedirect } from "next/navigation";
 
 export const metadata = {
   title: "Best Credit Card for Beginners in India 2026 — Persona-Based Picks",
@@ -106,15 +107,16 @@ const SvgSpendCheck = () => (
 );
 
 export default function BestCardBeginners2026() {
+  permanentRedirect("/best/best-credit-card-for-beginners-india");
   const article = {
     "@context": "https://schema.org", "@type": "Article",
     headline: "Best Credit Card for Beginners in India 2026 — A Persona-Based Picker",
     description: "Five real personas mapped to first-card recommendations across income, CIBIL, and spend pattern. Detailed first-year math and CIBIL-building behaviour guide for first-time Indian cardholders.",
-    author: { "@type": "Person", name: "Ash K", url: "https://assurefintech.com/author/ash-k" },
+    author: { "@type": "Person", name: "Ash K", url: "https://www.assurefintech.com/author/ash-k" },
     reviewedBy: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-04-20", dateModified: "2026-09-26",
-    publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://assurefintech.com/logo.png" } },
-    mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/best-card-beginners-2026" }
+    publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://www.assurefintech.com/logo.png" } },
+    mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.assurefintech.com/blog/best-card-beginners-2026" }
   };
 
   const faq = {
@@ -132,9 +134,9 @@ export default function BestCardBeginners2026() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "Best Card for Beginners 2026", item: "https://assurefintech.com/blog/best-card-beginners-2026" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "Best Card for Beginners 2026", item: "https://www.assurefintech.com/blog/best-card-beginners-2026" }
     ]
   };
 
@@ -379,11 +381,11 @@ export default function BestCardBeginners2026() {
       <section style={{ marginBottom: 28, padding: "20px 22px", border: "1px solid var(--border)", borderRadius: 14, background: "var(--bg-soft)" }}>
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "0 0 12px", color: COLOR }}>RELATED ON ASSURE FINTECH</h3>
         <ul style={{ fontSize: 15, paddingLeft: 22, margin: 0 }}>
-          <li style={{ marginBottom: 8 }}><Link href="/blog/how-to-choose-first-credit-card-2026" style={{ color: COLOR }}>How to choose your first credit card in 2026</Link>. Five filters that matter.</li>
-          <li style={{ marginBottom: 8 }}><Link href="/learn/credit-cards/cibil-score-explained" style={{ color: COLOR }}>CIBIL score explained</Link>. How it's calculated and how to improve it.</li>
-          <li style={{ marginBottom: 8 }}><Link href="/best/credit-card-students" style={{ color: COLOR }}>Best credit cards for students</Link>. FD-secured route deep dive.</li>
-          <li style={{ marginBottom: 8 }}><Link href="/best/credit-card-first-salary" style={{ color: COLOR }}>Best credit cards for first salary</Link>. Five filters in priority order.</li>
-          <li><Link href="/learn/credit-cards" style={{ color: COLOR }}>Credit cards knowledge hub</Link>. All our card guides in one place.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/best/best-credit-card-for-beginners-india" style={{ color: COLOR }}>How to choose your first credit card</Link>. A current, source-reviewed comparison framework.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL score explained</Link>. Reports, enquiries and responsible credit use.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/best/best-credit-card-for-students-india" style={{ color: COLOR }}>Student credit-card options</Link>. Secured, supplementary and issuer-assessed routes.</li>
+          <li style={{ marginBottom: 8 }}><Link href="/cards" style={{ color: COLOR }}>Browse the card catalogue</Link>. Compare current source-reviewed records.</li>
+          <li><Link href="/cards" style={{ color: COLOR }}>Credit card reviews</Link>. Product details and source links.</li>
         </ul>
       </section>
       <section style={{ marginBottom: 28, fontSize: 13, color: "var(--text-muted)" }}>

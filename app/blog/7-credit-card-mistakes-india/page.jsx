@@ -19,7 +19,7 @@ export const metadata = {
 // Color: #dc2626 | Updated: September 26, 2026
 
 const COLOR = "#dc2626";
-const UPDATED = "September 26, 2026";
+const UPDATED = "September 28, 2026";
 
 const SvgMinimumDueTrap = () => (
   <svg viewBox="0 0 720 264" role="img" aria-label="Compound interest trap: paying minimum due on ₹50,000 balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -167,21 +167,21 @@ export default function BlogCreditCardMistakesIndia() {
   const faq = {
     "@context": "https://schema.org", "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", "name": "Is paying the minimum due on a credit card really that bad?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Most Indian banks charge 3-3.75% per month on the outstanding balance after the due date. On a ₹50,000 balance, that is ₹1,750 in interest in the first month alone. If you keep paying only the minimum, you will end up paying more than the original amount in interest within a year. Always pay the full statement balance if you can." } },
-      { "@type": "Question", "name": "Does closing an old credit card hurt my CIBIL score?", "acceptedAnswer": { "@type": "Answer", "text": "Usually yes, especially if it is one of your oldest cards. Credit age makes up 15% of your CIBIL score. Closing a 7-year-old card can drop your score by 30-50 points depending on how many other cards you have. If the card has no annual fee, keep it open and use it occasionally." } },
-      { "@type": "Question", "name": "What is the safe credit utilization ratio for a good CIBIL score?", "acceptedAnswer": { "@type": "Answer", "text": "Keep it under 30% overall and under 30% per individual card. Ideally aim for 10-20% for the best CIBIL impact. On a ₹1 lakh total credit limit, keep your total outstanding below ₹30,000 at any point in the billing cycle." } },
-      { "@type": "Question", "name": "Do reward points expire on Indian credit cards?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, most do. HDFC points expire in 2-3 years, SBI in 2 years, Axis in 3 years. Amex Membership Rewards points do not expire as long as your card is active. Set a calendar reminder every 6 months to check your point balance and redeem before they lapse." } },
-      { "@type": "Question", "name": "Can I use my credit card to withdraw cash at an ATM?", "acceptedAnswer": { "@type": "Answer", "text": "You can, but it is almost always a bad idea. Banks charge a cash advance fee of 2.5-3.5% of the amount (minimum ₹300-500), plus interest starts accruing from day one at 3-3.75% per month. There is no grace period. On ₹10,000 withdrawn and repaid in 30 days, your effective cost is ₹600-920." } },
-      { "@type": "Question", "name": "Which Indian credit cards have zero forex markup fees?", "acceptedAnswer": { "@type": "Answer", "text": "Niyo Global, IDFC FIRST WOW, and Axis Forex Online cards offer zero markup. Several premium cards like HDFC Infinia also offer lower markup (1-2%). For frequent international travelers, using a zero-markup card on all foreign currency transactions can save ₹2,500-3,000 per $1,000 spent compared to a standard card." } },
-      { "@type": "Question", "name": "What happens if I miss a credit card payment completely?", "acceptedAnswer": { "@type": "Answer", "text": "Missing even one payment gets reported to CIBIL and can drop your score by 50-100 points. Late payments stay on your CIBIL report for up to 3 years. Banks also charge a late payment fee of ₹500-1,300 depending on the outstanding amount. Pay at least the minimum due on time, always." } },
-      { "@type": "Question", "name": "Are category spend caps mentioned upfront by banks?", "acceptedAnswer": { "@type": "Answer", "text": "Often not clearly. Banks typically bury caps in the Most Important Terms and Conditions document or the product page footnotes. Always check the card T&C before assuming you will earn accelerated rewards on unlimited spend. Many cards cap the bonus earn at ₹5,000-10,000 spend per month." } },
+      { "@type": "Question", "name": "Why can paying only the minimum due become expensive?", "acceptedAnswer": { "@type": "Answer", "text": "The unpaid statement balance remains outstanding and can attract interest and charges under the card's MITC. RBI requires issuers to warn that minimum-only payments can stretch repayment over months or years with consequential interest. Pay the total due on time where possible; if you cannot, contact the issuer and review the APR and repayment options." } },
+      { "@type": "Question", "name": "Does closing an old credit card hurt my CIBIL score?", "acceptedAnswer": { "@type": "Answer", "text": "There is no universal point change. Closing a card can change your available credit and the information lenders see; the effect depends on your overall report and scoring model. Compare the fee and account value, and ask the issuer about downgrade or closure terms rather than keeping an unsuitable product solely to protect a predicted score." } },
+      { "@type": "Question", "name": "What is a safe credit utilisation ratio?", "acceptedAnswer": { "@type": "Answer", "text": "There is no single ratio that guarantees a score or approval. Lower balances relative to available limits can be viewed more favourably by lenders, but scoring models and underwriting differ. Pay on time, borrow only what you can repay and review your report for accuracy." } },
+      { "@type": "Question", "name": "Do reward points expire on Indian credit cards?", "acceptedAnswer": { "@type": "Answer", "text": "Expiry varies by issuer, card and rewards programme. Check the current programme terms or account portal for expiry dates, redemption options, caps and transfer conditions; do not assume a point has a fixed cash value." } },
+      { "@type": "Question", "name": "Can I use my credit card to withdraw cash at an ATM?", "acceptedAnswer": { "@type": "Answer", "text": "Usually cash advances carry a fee and interest from the transaction date, without the purchase interest-free period. The amount depends on the card's current MITC. Check the fee and rate before withdrawing, and compare alternatives." } },
+      { "@type": "Question", "name": "How do I compare foreign-currency card costs?", "acceptedAnswer": { "@type": "Answer", "text": "Check the card's foreign-currency markup, network conversion, issuer fees, ATM or cash-advance charges and dynamic currency conversion at checkout. The combined cost—not just a zero-markup headline—determines the amount charged." } },
+      { "@type": "Question", "name": "What happens if I miss a credit card payment?", "acceptedAnswer": { "@type": "Answer", "text": "Interest, charges and credit reporting follow the applicable RBI directions and your issuer's MITC. RBI directions say an account is reported as past due, or penal charges levied, only when it remains past due for more than three days; charges are based on the outstanding after the due date. Contact the issuer promptly if a payment is missed." } },
+      { "@type": "Question", "name": "Are accelerated reward caps the same on every card?", "acceptedAnswer": { "@type": "Answer", "text": "No. Caps can differ by benefit, merchant, card variant and statement or calendar period. Read the current issuer terms and track eligible spend before estimating rewards." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "7 Credit Card Mistakes Indians Make (And How to Fix Each One)", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-26", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "7 Credit Card Mistakes Indians Make (And How to Fix Each One)", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-    { "@type": "ListItem", position: 3, name: "7 Credit Card Mistakes Indians Make", item: "https://assurefintech.com/blog/7-credit-card-mistakes-india" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+    { "@type": "ListItem", position: 3, name: "7 Credit Card Mistakes Indians Make", item: "https://www.assurefintech.com/blog/7-credit-card-mistakes-india" },
   ]};
 
   return (
@@ -209,63 +209,52 @@ export default function BlogCreditCardMistakesIndia() {
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / 7 Credit Card Mistakes Indians Make</nav>
 <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #1: Paying Only the Minimum Due</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Banks love this one. The minimum due looks reasonable at around 5% of outstanding, so you pay it and feel like you have done the right thing.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>What actually happens: the remaining 95% balance starts attracting interest at 3-3.75% per month from the day after your due date. On a ₹50,000 balance, that is roughly ₹1,750 in month one alone, and it compounds.</p>
-        <SvgMinimumDueTrap />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>By month 12, if you have only ever paid the minimum, you have paid over ₹21,000 in interest while still owing close to the original amount. The math is brutal.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>The fix is simple but requires discipline: pay the full statement balance every single month. If you cannot, treat it as a personal loan at 42% annual interest and prioritize clearing it before anything else.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>The minimum due is not a recommended repayment plan. The remaining statement balance can attract interest and fees under your card's current MITC, and interest-free purchase treatment may be suspended while a prior balance remains unpaid.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>RBI requires card issuers to explain that minimum-only payments can prolong repayment over months or years and increase interest. Use the APR, balance and repayment schedule in your own statement to understand the cost; rates and minimum-due formulas differ by issuer.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Where possible, pay the total amount due by the due date. If cash flow makes that impossible, contact the issuer and avoid new borrowing until you understand the cost and repayment plan.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #2: Closing Your Oldest Credit Card</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>You upgraded to a premium card, so you close the old basic one. Feels logical. CIBIL disagrees.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Credit age makes up 15% of your CIBIL score. When you close a card you have had for 7 years, that history does not disappear immediately but will eventually drop off your report. Your average credit age shrinks, and so does your score.</p>
-        <SvgCibilAgeImpact />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If the old card has no annual fee, the better move is to keep it open. Use it once every 2-3 months for a small Swiggy order or a utility bill to keep it active and avoid the bank closing it due to inactivity.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Closing an account can change your available credit and the account information lenders consider, but there is no reliable universal score drop or rule that every old card should stay open.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Compare the card's annual fee, benefits, security and your ability to manage it. Ask the issuer whether a fee-free downgrade is available, check any closure process and keep records of the final statement and closure confirmation.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Read more on how this affects your score in our <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL Score 101 guide</Link>.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #3: Piling All Spend on One Card</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you have two cards and charge everything to one, you are hurting your utilization ratio even if you clear it in full every month.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>CIBIL looks at your balance relative to your credit limit at the time your bank reports it, which is usually your statement date, not your payment date. A ₹40,000 charge on a ₹50,000 limit card is 80% utilization, which can drop your score by 40-60 points.</p>
-        <SvgUtilizationSpread />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Spread your spend across cards to keep each card utilization below 30%. Our <Link href="/blog/credit-utilization-ratio-guide" style={{ color: COLOR }}>credit utilization guide</Link> covers the exact math and how to fix this fast.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Balances reported by lenders and your available limits can matter to a lender's assessment. The reporting date and scoring effect are not identical for every account or scoring model.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Do not spend more or juggle balances just to hit a universal percentage target. Pay on time, stay within a repayment amount you can afford, and review your credit report if the balance shown appears wrong. Our <Link href="/blog/credit-utilization-ratio-guide" style={{ color: COLOR }}>credit utilization guide</Link> explains the concepts and limits of simple ratios.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #4: Letting Reward Points Expire</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Reward points feel like free money until they silently expire. Most Indian banks do not send a clear warning before points lapse.</p>
-        <SvgRewardExpiry />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>1 lakh HDFC points equals roughly ₹25,000 in value. If you forget to redeem, that is real money gone. Log into your card portal every 6 months, check your points balance, and either redeem or transfer to a partner program.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Expiry rules and redemption values vary by card and rewards programme. A point balance is not cash: check the issuer's current terms for expiry, redemption fees, transfer ratios, caps and eligible options.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Review your account before a planned redemption and compare the value you can actually use. Our <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>guide on reward points</Link> explains why a single rupee value cannot be applied across cards.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Our <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>guide on reward points</Link> breaks down expiry rules and the smartest redemption options across major Indian banks.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #5: Ignoring Forex Markup on International Spends</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Using your regular HDFC or ICICI card internationally? You are paying an invisible tax called forex markup, usually 3-3.5% on every transaction, on top of the exchange rate.</p>
-        <SvgForexMarkup />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>On a ₹83,500 ($1,000) purchase, that is up to ₹2,922 in extra fees for nothing. Zero-markup cards like Niyo Global or IDFC FIRST WOW cost you nothing extra on the same transaction.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you travel internationally even once a year, a zero-markup card pays for itself on day one.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Foreign-currency transactions can include issuer markup, network conversion and taxes; the total depends on the card and transaction route. Dynamic currency conversion at a merchant or ATM can add a separate conversion cost.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Check the current fee schedule for your exact card and compare the final currency conversion before travelling. A zero-markup claim does not automatically remove every other foreign-transaction or cash fee.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #6: Using Your Credit Card at an ATM</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Cash advance from a credit card is one of the most expensive financial products available to retail customers in India. It combines a flat fee with immediate interest at the highest possible rate.</p>
-        <SvgCashAdvanceCost />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>There is no 30-day grace period. Interest starts from the moment you pull the cash out. On ₹10,000 repaid within 30 days, your total cost is ₹600-920. Annualized, that is over 72% per year.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>A card cash advance usually has a separate fee and interest treatment; the purchase grace period generally does not apply. The exact fee, rate and minimum amount are in the card's MITC.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Check the fee schedule before withdrawing and repay as soon as possible if you have already taken an advance. Do not rely on a generic rupee example in place of your issuer's charges.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Use a debit card for ATM withdrawals or explore a small personal loan via <Link href="/learn/loans" style={{ color: COLOR }}>our loans section</Link> if you are short on cash.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #7: Assuming Accelerated Rewards Have No Cap</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>That 5% cashback on Swiggy, the 4x points on fuel, the 10x on grocery apps — they almost always come with a monthly spend cap buried in the fine print.</p>
-        <SvgSpendCap />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Once you hit the cap, the card quietly reverts to its base earn rate, often 1%. You might assume you are earning 5% on ₹30,000 of online spend but actually earn 5% on the first ₹10,000 and 1% on the rest.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Bonus rewards may have caps, exclusions, minimum transaction values or merchant-category requirements. After a cap is reached, the earn rate can change—or a purchase may no longer qualify at all—depending on the terms.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Before estimating value, read the current card and offer rules for the exact category and period. Use our <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link> as an illustration, then compare with your issuer's terms.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Before choosing a card for a specific spend category, check the T&C for monthly caps. Use our <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe tool</Link> to find which card gives you the best rate for your real spend pattern.</p>
       </section>
       <section style={{ background: "var(--raise)", border: `1px solid ${COLOR}`, borderRadius: 10, padding: "20px 24px", marginBottom: 24 }}>
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
         <ol style={{ fontSize: 15, paddingLeft: 20, margin: 0, lineHeight: 2 }}>
-          <li>Log into your card portal and check if you have any points expiring in the next 6 months.</li>
-          <li>Pull up your last statement and check your utilization ratio per card: balance divided by credit limit.</li>
-          <li>If you have an old basic card with no annual fee, do not close it. Use it once this month for anything small.</li>
-          <li>Check if you have auto-pay set to minimum due. Switch it to full amount immediately.</li>
-          <li>If you travel abroad, apply for one zero-forex-markup card before your next trip.</li>
+          <li>Check your card's statement for the total due, payment date, APR and any outstanding balance.</li>
+          <li>Review the current rewards terms before redeeming or counting a benefit.</li>
+          <li>Compare annual fees and benefits before keeping, downgrading or closing a card.</li>
+          <li>Set a payment reminder or suitable autopay instruction and verify that payments post correctly.</li>
+          <li>Before travel, compare foreign-currency and cash transaction charges on the cards you already hold.</li>
         </ol>
       </section>
       <section style={{ marginBottom: 24 }}>
@@ -282,7 +271,7 @@ export default function BlogCreditCardMistakesIndia() {
         Related: <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL Score 101</Link> · <Link href="/blog/credit-utilization-ratio-guide" style={{ color: COLOR }}>Credit Utilization Ratio Guide</Link> · <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>How Reward Points Work</Link> · <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe Card Finder</Link>
       </p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Editorial note: Assure Fintech does not accept payment for favorable coverage. Interest rates, fees, and reward rates cited are sourced from bank websites and MITC documents as of June 2026 and may change. Verify current terms with your card issuer before making financial decisions. This article is for informational purposes only and does not constitute financial advice.
+        <strong>Sources and review:</strong> RBI <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12300" target="_blank" rel="noopener noreferrer">Credit Card and Debit Card Directions</a> and <a href="https://www.cibil.com/blog/all-you-need-to-know-about-cibil-score" target="_blank" rel="noopener noreferrer">CIBIL's credit-score guide</a>. Product fees and rewards depend on the exact card and current issuer terms. Reviewed September 28, 2026. This educational article is not financial advice.
       </footer>
     </main>
     </>

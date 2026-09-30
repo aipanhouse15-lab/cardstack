@@ -2,12 +2,12 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for EMI Purchases in India (June 2026)",
-  description: "No-cost EMI sounds free. It isn't. Here's the real cost on every top option, and which card minimises what you actually pay.",
+  title: "Credit Card EMI in India: Fees, Discounts and Total Cost",
+  description: "Compare credit-card EMI offers by total payable, disclosed interest, upfront discounts, fees, reward exclusions and repayment terms.",
   alternates: { canonical: "/best/best-credit-card-for-emi-purchases" },
   openGraph: {
-    title: "Best Credit Card for EMI Purchases in India (June 2026)",
-    description: "No-cost EMI sounds free. It isn't. Here's the real cost on every top option, and which card minimises what you actually pay.",
+    title: "Credit Card EMI in India: Fees, Discounts and Total Cost",
+    description: "Compare credit-card EMI offers by total payable, disclosed interest, upfront discounts, fees, reward exclusions and repayment terms.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -55,12 +55,6 @@ const IconRupee = () => (
   </svg>
 );
 
-const IconStar = () => (
-  <svg width="20" height="20" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Top pick star">
-    <polygon points="10,2 12.5,7.5 18.5,8 14,12.5 15.5,18.5 10,15.5 4.5,18.5 6,12.5 1.5,8 7.5,7.5" fill={COLOR} opacity="0.85"/>
-  </svg>
-);
-
 const IconCheck = () => (
   <svg width="18" height="18" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Benefit included">
     <circle cx="9" cy="9" r="8" fill={COLOR} opacity="0.15"/>
@@ -94,7 +88,7 @@ export default function BestCreditCardForEMIPurchases() {
         name: "Is no-cost EMI truly free on credit cards in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. No-cost EMI is typically structured in one of two ways: the brand or merchant inflates the product price to cover the interest (called price subvention), or the bank charges a processing fee of 1-2% upfront. There is no such thing as genuinely free financing — the cost is just shifted or hidden."
+          text: "It depends on the offer. Compare the cash price, EMI total, any upfront discount, processing fee, taxes, lost instant discounts and reward treatment. RBI requires card issuers to disclose principal, interest and any upfront discount before EMI conversion; check the actual checkout and statement figures rather than relying on the label."
         }
       },
       {
@@ -102,15 +96,15 @@ export default function BestCreditCardForEMIPurchases() {
         name: "Do I earn reward points on EMI transactions?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "It depends on the type of EMI. For cost EMI (where you pay interest), most banks including HDFC and Axis do allow reward points on the full purchase amount. For no-cost EMI, many banks have started withholding reward points — specifically for transactions where the EMI is subvented by the brand. Always check your bank's current T&C before assuming points will accrue."
+          text: "Reward treatment depends on the issuer, card variant, transaction and offer terms. Check the current MITC or offer terms for the exact product and transaction, then verify the posted rewards. Do not assume that the full purchase amount earns points—or that an EMI transaction is excluded."
         }
       },
       {
         "@type": "Question",
-        name: "Which HDFC credit card is best for EMI purchases in 2026?",
+        name: "Which HDFC credit card is best for EMI purchases?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HDFC Regalia and HDFC Infinia are the strongest EMI cards in 2026. Both have wide acceptance across Amazon, Flipkart, Apple, and Samsung stores. Infinia earns 3.33% back via SmartBuy, making it the highest-value EMI card for high-ticket purchases like laptops and appliances if you can access it."
+          text: "There is no universally best card. Merchant participation, eligible card variants, tenure, fees, upfront discount and rewards can differ by offer. Compare the exact checkout terms and issuer terms for your purchase; do not treat a shopping-portal reward rate as a guaranteed EMI reward."
         }
       },
       {
@@ -118,7 +112,7 @@ export default function BestCreditCardForEMIPurchases() {
         name: "What is the EMI processing fee on SBI credit cards?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "SBI credit cards typically charge a processing fee of 1% to 2% on EMI conversions, with a minimum of ₹199 per transaction. On a ₹50,000 purchase at 1%, that is ₹500 out of pocket. This is separate from any interest charged on cost EMI plans."
+          text: "SBI Card fees depend on the card, conversion route and current offer. Check the fee displayed before confirming and the current issuer schedule; determine whether it is additional to interest, taxes or other charges."
         }
       },
       {
@@ -126,7 +120,7 @@ export default function BestCreditCardForEMIPurchases() {
         name: "Can I convert any credit card transaction to EMI?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Post-purchase EMI conversion (converting a regular transaction into EMI after billing) is available on most premium cards from HDFC, SBI, Axis, and ICICI. This is different from no-cost EMI offered at the point of sale. Post-purchase conversion usually carries interest at 13-15% annualised."
+          text: "Not every transaction, card or account is eligible. Issuers set minimum amounts, conversion windows, tenures, rates and fees. Check the offer in your issuer's app and review the repayment schedule and total payable before accepting."
         }
       },
       {
@@ -134,7 +128,7 @@ export default function BestCreditCardForEMIPurchases() {
         name: "Is it better to pay full amount or take EMI on a credit card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "If you can pay the full amount within the credit-free period, always do that. EMI converts a non-interest transaction into an interest-bearing one. The only exception is genuine no-cost EMI where the price is not inflated AND you get reward points — which is increasingly rare in 2026."
+          text: "Compare the total cost and your cash-flow needs. Paying in full may avoid EMI charges, but keep enough funds for essential expenses and emergencies. An EMI may be suitable if its disclosed total cost and instalments fit your budget; no-cost labels alone are not enough to decide."
         }
       },
       {
@@ -142,7 +136,7 @@ export default function BestCreditCardForEMIPurchases() {
         name: "Does Axis ACE credit card give reward points on EMI?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Axis ACE earns 2% cashback on most spends. For EMI transactions, cashback accrual depends on whether the EMI is bank-initiated or merchant-subvented. Bank-initiated cost EMI typically earns cashback; brand-subvented no-cost EMI may not. Check Axis's current MITC before large purchases."
+          text: "Do not assume cashback on an EMI transaction. Check the current Axis ACE MITC and the exact merchant offer for the transaction type, then verify the statement. Rates and exclusions can change."
         }
       },
       {
@@ -150,7 +144,7 @@ export default function BestCreditCardForEMIPurchases() {
         name: "What happens to my credit limit during an EMI?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The full purchase amount is blocked from your credit limit upfront. As you pay each EMI, only that month's instalment amount is freed up — not the full amount. If you buy a ₹60,000 laptop on EMI with a ₹1 lakh limit, you have only ₹40,000 available for the rest of the billing cycle."
+          text: "The issuer's treatment of available credit and its release as repayments post is product-specific. Check your available limit in the app and ask the issuer how it handles the outstanding principal; do not assume an instalment immediately restores the same amount of credit."
         }
       }
     ]
@@ -159,10 +153,10 @@ export default function BestCreditCardForEMIPurchases() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for EMI Purchases in India (June 2026)",
+    headline: "Credit Card EMI in India: Fees, Discounts and Total Cost",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -170,53 +164,17 @@ export default function BestCreditCardForEMIPurchases() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
-      { "@type": "ListItem", position: 3, name: "Best Credit Card for EMI Purchases", item: "https://assurefintech.com/best/credit-card-for-emi-purchases" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
+      { "@type": "ListItem", position: 3, name: "Credit Card EMI: Fees and Total Cost", item: "https://www.assurefintech.com/best/best-credit-card-for-emi-purchases" }
     ]
   };
 
-  const cards = [
-    {
-      rank: 1,
-      name: "HDFC Infinia",
-      fee: "₹12,500/yr",
-      emiHighlight: "3.33% back via SmartBuy on full purchase before EMI split",
-      processingFee: "Nil on most partner EMIs",
-      network: "Amazon, Flipkart, Apple, Samsung, 5,000+ offline stores",
-      verdict: "Best for high-value EMI: ₹1L laptop = ₹3,330 back",
-      access: "Invite-only, ₹30L+ income"
-    },
-    {
-      rank: 2,
-      name: "HDFC Regalia Gold",
-      fee: "₹2,500/yr",
-      emiHighlight: "4X reward points on electronics (up to 1.6% return)",
-      processingFee: "Nil to 1% depending on partner",
-      network: "Amazon, Flipkart, Croma, Reliance Digital",
-      verdict: "Best mid-range EMI card for salaried professionals",
-      access: "Open market, ₹12L+ income"
-    },
-    {
-      rank: 3,
-      name: "Axis ACE",
-      fee: "₹499/yr (waived at ₹2L spend)",
-      emiHighlight: "2% cashback on EMI transactions (cost EMI only)",
-      processingFee: "1-2% (approx. ₹499 minimum)",
-      network: "Flipkart, Amazon, Bajaj Finance merchants",
-      verdict: "Best low-fee EMI card for sub-₹1L purchases",
-      access: "Open market, ₹3L+ income"
-    },
-    {
-      rank: 4,
-      name: "SBI Card ELITE",
-      fee: "₹4,999/yr",
-      emiHighlight: "5X points on dining/groceries; standard points on EMI",
-      processingFee: "1% (min ₹199)",
-      network: "Wide retail network, SBI SimplySAVE EMI stores",
-      verdict: "Best for offline EMI at retail stores across India",
-      access: "Open market, ₹6L+ income"
-    }
+  const emiOptions = [
+    { name: "Merchant or brand offer", cue: "Check cash price, eligible models, instant discounts, subvention and any fee.", compare: "Cash total versus all instalments and upfront charges.", caution: "Participating merchant and product rules vary." },
+    { name: "Issuer no-cost EMI", cue: "Read the disclosed principal, interest and upfront discount before confirming.", compare: "Total payable, lost discounts, taxes and reward treatment.", caution: "Terms may depend on issuer, card variant, merchant and tenure." },
+    { name: "Post-purchase EMI conversion", cue: "Ask the issuer for the applicable rate, fee, tenure and repayment schedule.", compare: "Total of instalments plus conversion fee and taxes.", caution: "Availability and charges are account-specific." },
+    { name: "Pay in full", cue: "Compare the cash price and preserve enough money for essential expenses.", compare: "Full payment may avoid EMI interest and conversion charges.", caution: "Choose based on your cash flow, not reward points alone." },
   ];
 
   return (
@@ -229,7 +187,7 @@ export default function BestCreditCardForEMIPurchases() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for EMI Purchases in India (June 2026)
+            Credit Card EMI in India: Fees, Discounts and Total Cost
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
@@ -244,7 +202,7 @@ export default function BestCreditCardForEMIPurchases() {
         {" / "}
         <Link href="/best/">Best Cards</Link>
         {" / "}
-        <span>Best Credit Card for EMI Purchases</span>
+        <span>Credit Card EMI: Fees and Total Cost</span>
       </nav>
 
       <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
@@ -253,7 +211,7 @@ export default function BestCreditCardForEMIPurchases() {
       </div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted,#475569)", marginBottom: 10, fontWeight: 500 }}>
-        No-cost EMI sounds free. It isn't. Here's the real cost on every top option, and which card minimises what you actually pay.
+        Learn how to compare the actual price, interest, discounts, fees and repayment terms in a credit-card EMI offer.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
@@ -267,81 +225,79 @@ export default function BestCreditCardForEMIPurchases() {
         <div style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
           <IconWarning />
           <div>
-            <strong style={{ color: COLOR, fontSize: 14 }}>The Honest Number on No-Cost EMI</strong>
+            <strong style={{ color: COLOR, fontSize: 14 }}>A simple fee illustration—not a typical issuer charge</strong>
             <p style={{ margin: "6px 0 0", fontSize: 14, color: "var(--text-muted,#475569)" }}>
-              On a ₹50,000 purchase with 1% processing fee, you pay ₹500 upfront. The brand-subvented "free" EMI usually means the product price is ₹1,200 to ₹3,000 higher than its cash price. Run the <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe calculator</Link> to see your real cost before you tap.
+              If an offer charged a 1% processing fee on ₹50,000, the fee would be ₹500 before applicable taxes. This is arithmetic only, not a claim about a particular card or offer. Compare the checkout's complete total with the cash price and any discounts you would otherwise receive.
             </p>
           </div>
         </div>
       </div>
 
       {/* How no-cost EMI actually works */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: "var(--text)" }}>How No-Cost EMI Actually Works in 2026</h2>
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: "var(--text)" }}>What a “no-cost EMI” offer means</h2>
 
       <p style={{ marginBottom: 12 }}>
-        When you see "0% EMI for 6 months" on Amazon or Flipkart, one of two things is happening. Either the bank is subsidising the interest (called bank-subvented EMI), or the brand has quietly raised the product's MRP to cover the financing cost (brand-subvented EMI).
+        An offer may involve interest offset by an upfront merchant or issuer discount, or another promotion structure. Do not assume the listed cash price, discount eligibility, fees or reward treatment are identical across payment methods. Compare the exact product, seller, card, tenure and checkout total.
       </p>
 
       <p style={{ marginBottom: 12 }}>
-        In the first case, your card often earns no reward points because the bank classifies it as a financing transaction. In the second case, you pay full price and the brand covers the interest — but you may have been able to buy the product cheaper with an instant bank discount or during a sale.
+        Check whether the promotion can be combined with a sale or instant card discount, whether a processing fee or tax is added, and what reward rules apply. The offer terms and transaction record—not the “0%” headline—determine the amount you pay.
       </p>
 
       <div style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 10, padding: "16px 20px", marginBottom: 20 }}>
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 8 }}>
           <IconInfo />
-          <strong style={{ fontSize: 14 }}>RBI Directive (2024, still in force June 2026)</strong>
+          <strong style={{ fontSize: 14 }}>RBI requirements for transparent no-cost EMI disclosures</strong>
         </div>
         <p style={{ fontSize: 14, margin: 0, color: "var(--text-muted,#475569)" }}>
-          RBI's 2024 circular requires banks to disclose the effective interest rate on all EMI schemes, including "no-cost" ones. If your bank app isn't showing you an effective APR, that's a red flag. The regulator calls hidden interest "unfair trade practice" — yet enforcement at the merchant level remains patchy.
+          RBI's credit-card directions require issuers, before EMI conversion, to show the principal, interest and upfront discount provided by the merchant or issuer to make an offer no-cost; these must also be separately shown in the card statement. Read the disclosure and ask the issuer to explain any amount you cannot reconcile. <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12300" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>RBI Master Direction</a>.
         </p>
       </div>
 
       <p style={{ marginBottom: 12 }}>
-        A processing fee of 1-2% on a 6-month no-cost EMI is equivalent to roughly 3.5-7% annual interest. That's not meaningfully cheaper than a standard credit card cost EMI at 12-15% annualised for short tenures.
+        A one-time fee is not directly comparable to an annual interest rate without considering when the fee is charged, the repayment schedule, taxes and any discount. Add all amounts you will pay and compare the final total for the same product and period.
       </p>
 
       <p style={{ marginBottom: 24 }}>
-        The only genuinely good use case for no-cost EMI is when you lack the lump sum but the price hasn't been inflated, and your card earns points on the full transaction amount upfront. That combination exists, but you need to verify it card by card.
+        An EMI may suit a budget when the instalments are affordable and its complete cost is acceptable to you. Do not borrow solely to earn rewards, and do not use an EMI if it would put essential expenses or repayment at risk.
       </p>
 
       {/* Reward points on EMI */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Reward Points Question: Do You Earn on EMI?</h2>
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Check rewards separately from the EMI cost</h2>
 
       <p style={{ marginBottom: 12 }}>
-        This is the most misunderstood aspect of credit card EMIs. The rule is not universal — it differs by bank, by EMI type, and sometimes by the specific merchant.
+        Rewards can be excluded, reduced or calculated differently for an EMI transaction. The rule depends on the exact card, conversion type, merchant and offer. Verify the current written terms and do not include rewards in your cost estimate until eligibility is clear.
       </p>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 20 }}>
         <div style={{ background: "var(--green-dim)", border: "1px solid #86efac", borderRadius: 8, padding: "14px 16px" }}>
-          <strong style={{ fontSize: 13, color: "#16a34a", display: "block", marginBottom: 6 }}>Cost EMI (you pay interest)</strong>
+          <strong style={{ fontSize: 13, color: "#16a34a", display: "block", marginBottom: 6 }}>For an interest-bearing EMI</strong>
           <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.6 }}>
-            <li>HDFC: Points earned on full amount</li>
-            <li>Axis: 2% cashback still accrues</li>
-            <li>SBI: Points earned, lower rate</li>
-            <li>ICICI: Points on principal amount</li>
+            <li>Check if the card earns rewards on the conversion</li>
+            <li>Check whether rewards accrue on principal or instalments</li>
+            <li>Check category and merchant exclusions</li>
+            <li>Compare the reward's redemption value with all EMI costs</li>
           </ul>
         </div>
         <div style={{ background: "rgba(212,168,83,.06)", border: "1px solid #fdba74", borderRadius: 8, padding: "14px 16px" }}>
-          <strong style={{ fontSize: 13, color: "#ea580c", display: "block", marginBottom: 6 }}>No-Cost EMI (subvented)</strong>
+          <strong style={{ fontSize: 13, color: "#ea580c", display: "block", marginBottom: 6 }}>For a no-cost or discounted EMI</strong>
           <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.6 }}>
-            <li>HDFC: Points withheld on select brand EMIs</li>
-            <li>Axis: Cashback may not apply</li>
-            <li>SBI: Points NOT earned (per MITC 2026)</li>
-            <li>Amazon Pay ICICI: Points earned (exception)</li>
+            <li>Check the specific offer's reward terms</li>
+            <li>Confirm whether a discount replaces interest or affects rewards</li>
+            <li>Check that the card variant is eligible</li>
+            <li>Verify the posted reward after the transaction</li>
           </ul>
         </div>
       </div>
 
       <p style={{ marginBottom: 24 }}>
-        Amazon Pay ICICI is an interesting exception: their no-cost EMI on Amazon often still earns the standard 5% back for Prime members because Amazon is both the merchant and the EMI partner. Verify this at checkout before assuming.
+        Do not assume a regular purchase reward applies to an EMI transaction, even when the merchant and issuer are partners. Ask the issuer or check the offer terms for the exact card and transaction.
       </p>
 
       {/* Processing fee math */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Processing Fee Math: What You Actually Pay</h2>
 
-      <p style={{ marginBottom: 16 }}>
-        A 1% processing fee sounds trivial until you apply it to real purchase sizes. Here's what that looks like across common big-ticket purchases.
-      </p>
+      <p style={{ marginBottom: 16 }}>Illustration only: if a particular offer charged a fee at these rates, the arithmetic would be as shown. Actual rates and taxes vary; do not assume a fee applies to your offer.</p>
 
       <div style={{ overflowX: "auto", marginBottom: 24 }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
@@ -349,8 +305,8 @@ export default function BestCreditCardForEMIPurchases() {
             <tr style={{ background: `${COLOR}12` }}>
               <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Purchase</th>
               <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Amount</th>
-              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>1% Fee</th>
-              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>2% Fee</th>
+              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Illustrative 1%</th>
+              <th style={{ padding: "10px 14px", textAlign: "right", fontWeight: 700, borderBottom: "2px solid var(--border,var(--hair))" }}>Illustrative 2%</th>
             </tr>
           </thead>
           <tbody>
@@ -372,28 +328,22 @@ export default function BestCreditCardForEMIPurchases() {
         </table>
       </div>
 
-      {/* Card picks */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>Top 4 Cards for EMI Purchases in India (June 2026)</h2>
-      <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>Ranked by total EMI cost (processing fee + reward offset) on a ₹50,000 purchase over 6 months.</p>
+      {/* Compare payment structures */}
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>Compare the offer structure—not a card ranking</h2>
+      <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>There is no reliable universal ranking without the product, merchant, card variant, tenure and checkout terms. Use this checklist for the offer in front of you.</p>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
-        {cards.map((card) => (
-          <div key={card.rank} style={{ border: `2px solid ${card.rank === 1 ? COLOR : "var(--hair)"}`, borderRadius: 14, padding: "20px 22px", background: card.rank === 1 ? `${COLOR}06` : "transparent" }}>
+        {emiOptions.map((option) => (
+          <div key={option.name} style={{ border: "1.5px solid var(--border,var(--hair))", borderRadius: 14, padding: "20px 22px", background: "var(--raise)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap", gap: 8 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                {card.rank === 1 && <IconStar />}
-                <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>#{card.rank} {card.name}</h3>
-              </div>
-              <span style={{ background: `${COLOR}15`, color: COLOR, borderRadius: 20, padding: "3px 12px", fontSize: 12, fontWeight: 600 }}>{card.fee}</span>
+              <h3 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>{option.name}</h3>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, fontSize: 13, color: "var(--text-muted,#475569)", marginBottom: 12 }}>
-              <div><span style={{ fontWeight: 600 }}>EMI Benefit:</span> {card.emiHighlight}</div>
-              <div><span style={{ fontWeight: 600 }}>Processing Fee:</span> {card.processingFee}</div>
-              <div><span style={{ fontWeight: 600 }}>EMI Network:</span> {card.network}</div>
-              <div><span style={{ fontWeight: 600 }}>Access:</span> {card.access}</div>
+              <div><span style={{ fontWeight: 600 }}>What to inspect:</span> {option.cue}</div>
+              <div><span style={{ fontWeight: 600 }}>Compare:</span> {option.compare}</div>
             </div>
             <div style={{ background: `${COLOR}10`, borderRadius: 8, padding: "8px 12px", fontSize: 13, fontWeight: 600, color: COLOR }}>
-              Verdict: {card.verdict}
+              {option.caution}
             </div>
           </div>
         ))}
@@ -403,16 +353,16 @@ export default function BestCreditCardForEMIPurchases() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>EMI vs Full Payment: A Simple Decision Tree</h2>
 
       <p style={{ marginBottom: 12 }}>
-        Before you click "Convert to EMI" at checkout, run through this logic. It takes 30 seconds and could save you ₹500 to ₹2,000 on a single purchase.
+        Before accepting, read the exact checkout disclosure and compare the total amount payable with other payment options.
       </p>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 24 }}>
         {[
-          { q: "Can you pay the full amount before the next billing cycle without stress?", ans: "Yes", action: "Pay in full. You get reward points, zero interest, zero processing fee." },
-          { q: "Is the no-cost EMI price identical to the cash/full-payment price?", ans: "No (price is higher)", action: "Declining the EMI and paying full price may be cheaper if you have funds." },
-          { q: "Does your card earn reward points on this EMI transaction?", ans: "No", action: "A 2% cashback card losing points on a ₹60,000 purchase = ₹1,200 lost reward. Factor this in." },
-          { q: "Is the processing fee visible at checkout?", ans: "Not shown", action: "Call your bank before purchasing. Hidden fees are common on offline store EMIs." }
-        ].map(({ q, ans, action }, i) => (
+          { q: "What is the final total for the EMI offer?", action: "Add all instalments, upfront charges, taxes and any amount due outside the EMI." },
+          { q: "What discounts would I receive with another payment method?", action: "Check whether sale pricing or instant discounts can be combined with the EMI offer." },
+          { q: "How does this exact transaction earn rewards?", action: "Check the issuer's terms for the card, merchant, EMI type and transaction amount; do not assume rewards." },
+          { q: "What happens if I repay early or miss an instalment?", action: "Read foreclosure, late-payment and interest terms, and confirm any fees before converting." }
+        ].map(({ q, action }, i) => (
           <div key={i} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "12px 16px", background: "var(--raise)", borderRadius: 8, border: "1px solid var(--border,var(--hair))" }}>
             <div style={{ background: COLOR, color: "#fff", borderRadius: "50%", width: 22, height: 22, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 12, fontWeight: 700, flexShrink: 0, marginTop: 2 }}>{i + 1}</div>
             <div style={{ flex: 1 }}>
@@ -423,43 +373,34 @@ export default function BestCreditCardForEMIPurchases() {
         ))}
       </div>
 
-      {/* Flexi Pay HDFC */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>HDFC Flexi Pay: The Post-Purchase EMI Option</h2>
+      {/* Post-purchase EMI */}
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>If you are considering post-purchase conversion</h2>
 
       <p style={{ marginBottom: 12 }}>
-        HDFC's Flexi Pay lets you convert any billing cycle transaction over ₹5,000 into EMI within 90 days of purchase. The annualised interest is 13-18% depending on tenure, which is expensive — but it's a useful escape valve if you miscalculated your cash flow.
+        Issuers may offer to convert eligible purchases after the transaction, but thresholds, time windows, rates, fees and eligible accounts vary. Request the full repayment schedule and total payable before accepting; a conversion is not a waiver of the purchase amount.
       </p>
 
       <p style={{ marginBottom: 24 }}>
-        The key rule: if you convert to Flexi Pay, you still pay the EMI principal (the bank doesn't waive the purchase). What you avoid is the 3.75% monthly finance charge on the outstanding balance if you'd missed full payment. Use <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> to model both scenarios before committing.
+        If you are already having difficulty paying a card bill, contact the issuer promptly and compare any conversion option with the written cost of the existing balance. Avoid taking new borrowing without understanding the full cost and repayment obligations.
       </p>
 
-      {/* Internal link section */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Build the Right EMI Stack</h2>
+      {/* Related tool */}
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Estimate an instalment</h2>
 
       <p style={{ marginBottom: 16 }}>
-        If you regularly make high-value purchases on EMI, consider a two-card approach. Use one card for its broad EMI acceptance network (SBI or HDFC), and a second card that earns strong rewards on all other spends.
+        The loan calculator can estimate a payment schedule from an amount, rate and tenure. It does not replace the issuer's offer disclosure or include every fee unless you enter it.
       </p>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 28 }}>
-        <Link href="/stack-builder" style={{ display: "block", padding: "16px", background: `${COLOR}10`, borderRadius: 10, border: `1px solid ${COLOR}30`, textDecoration: "none", color: "var(--text)" }}>
-          <div style={{ fontWeight: 700, fontSize: 14, color: COLOR, marginBottom: 4 }}>Stack Builder</div>
-          <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)" }}>Build your optimal 2-card combo for EMI + everyday spends</div>
-        </Link>
-        <Link href="/blog/emi-reward-points-india" style={{ display: "block", padding: "16px", background: "var(--raise)", borderRadius: 10, border: "1px solid var(--border,var(--hair))", textDecoration: "none", color: "var(--text)" }}>
-          <div style={{ fontWeight: 700, fontSize: 14, color: COLOR, marginBottom: 4 }}>EMI Reward Points Deep Dive</div>
-          <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)" }}>Bank-by-bank breakdown of when you earn and when you don't</div>
-        </Link>
-      </div>
+      <Link href="/loan-calculator" style={{ display: "inline-block", padding: "12px 16px", marginBottom: 28, background: `${COLOR}10`, borderRadius: 10, border: `1px solid ${COLOR}30`, textDecoration: "none", color: COLOR, fontWeight: 600 }}>Open the loan calculator →</Link>
 
       {/* Actionable ending */}
       <div style={{ background: `${COLOR}08`, border: `2px solid ${COLOR}`, borderRadius: 16, padding: "24px 26px", marginBottom: 44 }}>
         <h3 style={{ margin: "0 0 12px", fontSize: 18, fontWeight: 700, color: COLOR }}>Before Your Next EMI Purchase: 3 Things to Do</h3>
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {[
-            "Check if the no-cost EMI price matches the regular price on the product page. If it's higher, you're paying interest through inflation.",
-            "Log in to your bank's app and confirm whether reward points accrue on EMI transactions. Screenshot it — banks update T&Cs silently.",
-            "Calculate the processing fee as a percentage of reward earned. If your card earns 1.33% and the fee is 1%, your net gain is only 0.33%."
+            "Compare the full payable amount and available discounts for EMI and non-EMI checkout options.",
+            "Read the issuer's disclosure for principal, interest, upfront discount, fees, taxes and repayment schedule before confirming.",
+            "Check the current card and offer terms for reward eligibility, early closure and missed-payment consequences."
           ].map((tip, i) => (
             <div key={i} style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
               <IconCheck />
@@ -487,10 +428,10 @@ export default function BestCreditCardForEMIPurchases() {
 
       <footer style={{ borderTop: "1px solid var(--border,var(--hair))", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.6 }}>
         <p style={{ margin: "0 0 6px" }}>
-          <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. We are not affiliated with any bank or card issuer. Card features, fees, and reward rates change frequently — verify all details with the issuing bank before applying. This page does not constitute financial advice.
+          <strong>Sources and disclosure:</strong> RBI credit-card directions require transparent disclosure of principal, interest and any upfront discount for EMI conversion. See the linked RBI Master Direction above. Issuer fees, rates, availability and reward eligibility vary; review the exact issuer and checkout terms before accepting. This page is educational and not financial advice. Assure Fintech may earn referral fees from some card links; compensation does not determine editorial coverage.
         </p>
         <p style={{ margin: 0 }}>
-          Data sourced from official bank websites, MITC documents, and RBI circulars as of {UPDATED}. Internal links to <Link href="/smart-swipe" style={{ color: COLOR }}>/smart-swipe</Link> and <Link href="/stack-builder" style={{ color: COLOR }}>/stack-builder</Link> are Assure Fintech tools.
+          Reviewed {UPDATED}. Internal links to <Link href="/smart-swipe" style={{ color: COLOR }}>/smart-swipe</Link> and <Link href="/stack-builder" style={{ color: COLOR }}>/stack-builder</Link> are Assure Fintech tools.
         </p>
       </footer>
     </main>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Tax-Saving FD vs ELSS vs PPF: Compare Lock-in, Risk & Tax | Assure Fintech",
+  title: "Tax-Saving FD vs ELSS vs PPF: Compare Lock-in, Risk & Tax",
   description: "Compare tax-saving fixed deposits, ELSS mutual funds and PPF by lock-in, market risk, liquidity, tax regime and current eligibility rules.",
   alternates: { canonical: "/learn/savings/tax-saving-fd-vs-elss-vs-ppf" },
   openGraph: { title: "Tax-Saving FD vs ELSS vs PPF: Compare the Trade-offs", description: "A tax-regime-aware framework for comparing three different long-term products.", type: "article", siteName: "Assure Fintech" },
@@ -25,10 +25,10 @@ export default function TaxSavingFDvsELSSvsPPF() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Savings", item: "https://assurefintech.com/learn/savings/" },
-      { "@type": "ListItem", position: 4, name: "Tax-Saving FD, ELSS and PPF", item: "https://assurefintech.com/learn/savings/tax-saving-fd-vs-elss-vs-ppf" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Learn", item: "https://www.assurefintech.com/learn/" },
+      { "@type": "ListItem", position: 3, name: "Savings", item: "https://www.assurefintech.com/learn/savings/" },
+      { "@type": "ListItem", position: 4, name: "Tax-Saving FD, ELSS and PPF", item: "https://www.assurefintech.com/learn/savings/tax-saving-fd-vs-elss-vs-ppf" },
     ],
   };
 

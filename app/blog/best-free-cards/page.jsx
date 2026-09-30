@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import { permanentRedirect } from "next/navigation";
 
 export const metadata = {
   title: "Best Free Credit Cards in India 2026: Ranked With Honest Pros and Cons",
@@ -161,6 +162,8 @@ const SvgSpendWaiverBreakeven = () => (
 );
 
 export default function BlogBestFreeCards() {
+  permanentRedirect("/best/best-cashback-credit-card-no-annual-fee");
+
   const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -222,9 +225,9 @@ export default function BlogBestFreeCards() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "Best Free Credit Cards India 2026", item: "https://assurefintech.com/blog/best-free-credit-cards-india-2026" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "Best Free Credit Cards India 2026", item: "https://www.assurefintech.com/blog/best-free-credit-cards-india-2026" },
     ],
   };
 
@@ -317,7 +320,7 @@ export default function BlogBestFreeCards() {
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>Before you apply</h2>
         <p style={{ margin: "0 0 8px" }}>Run your actual monthly spend numbers through <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> to find which free card matches your real usage pattern.</p>
         <p style={{ margin: "0 0 8px" }}>If you spend heavily on Amazon, stop overthinking and get Amazon Pay ICICI first. Add IDFC FIRST Classic as your second card for everything else. That combination costs you nothing and covers most spending categories.</p>
-        <p style={{ margin: 0 }}>If you are a complete beginner with no credit history, read our <Link href="/blog/best-card-low-spenders-2026" style={{ color: COLOR }}>guide for low-spender first cards</Link> before applying for any card.</p>
+        <p style={{ margin: 0 }}>If you are comparing low-fee options, start with our <Link href="/best/best-cashback-credit-card-no-annual-fee" style={{ color: COLOR }}>no-annual-fee card comparison</Link> and check each issuer's eligibility criteria.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
@@ -333,7 +336,7 @@ export default function BlogBestFreeCards() {
         Related:{" "}
         <Link href="/blog/annual-fee-when-worth-paying" style={{ color: COLOR }}>When is a credit card annual fee worth paying?</Link>{" "}
         ·{" "}
-        <Link href="/blog/best-card-low-spenders-2026" style={{ color: COLOR }}>Best cards for low spenders 2026</Link>{" "}
+        <Link href="/best/best-cashback-credit-card-no-annual-fee" style={{ color: COLOR }}>No-annual-fee card comparison</Link>{" "}
         ·{" "}
         <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link>
       </p>

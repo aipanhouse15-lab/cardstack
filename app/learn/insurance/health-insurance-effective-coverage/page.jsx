@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Health Insurance Coverage: Limits, Co-pay & Exclusions | Assure Fintech",
+  title: "Health Insurance Coverage: Limits, Co-pay & Exclusions",
   description: "Understand how admissibility, room limits, co-pay, deductibles, sub-limits and exclusions affect a health-insurance claim.",
   alternates: { canonical: "/learn/insurance/health-insurance-effective-coverage" },
 };
@@ -24,10 +24,10 @@ export default function HealthInsuranceEffectiveCoveragePage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://assurefintech.com/learn/insurance/" },
-      { "@type": "ListItem", position: 4, name: "Health-Insurance Coverage", item: "https://assurefintech.com/learn/insurance/health-insurance-effective-coverage" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Learn", item: "https://www.assurefintech.com/learn/" },
+      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://www.assurefintech.com/learn/insurance/" },
+      { "@type": "ListItem", position: 4, name: "Health-Insurance Coverage", item: "https://www.assurefintech.com/learn/insurance/health-insurance-effective-coverage" },
     ],
   };
 

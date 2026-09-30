@@ -5,7 +5,7 @@ const RBI_MASTER_DIRECTION = "https://www.rbi.org.in/Scripts/BS_ViewMasDirection
 const RBI_2024_AMENDMENT = "https://rbi.org.in/scripts/FS_Notification.aspx?Id=12620";
 
 export const metadata = {
-  title: "RBI Credit Card Rules: What Cardholders Should Check | Assure Fintech",
+  title: "RBI Credit Card Rules: What Cardholders Should Check",
   description: "A source-linked guide to RBI credit-card rules on disclosure, EMI conversion, unsolicited cards, closure requests and complaints.",
   alternates: { canonical: "/blog/rbi-credit-card-rules-2026" },
   openGraph: {
@@ -28,15 +28,15 @@ export default function RbiCreditCardRules2026() {
     datePublished: "2026-04-20",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
-    mainEntityOfPage: { "@type": "WebPage", "@id": "https://assurefintech.com/blog/rbi-credit-card-rules-2026" },
+    mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.assurefintech.com/blog/rbi-credit-card-rules-2026" },
   };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "RBI Credit Card Rules", item: "https://assurefintech.com/blog/rbi-credit-card-rules-2026" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "RBI Credit Card Rules", item: "https://www.assurefintech.com/blog/rbi-credit-card-rules-2026" },
     ],
   };
 

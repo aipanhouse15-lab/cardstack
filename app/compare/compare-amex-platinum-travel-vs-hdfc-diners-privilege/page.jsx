@@ -54,9 +54,9 @@ export default function CompareAmexPlatinumVsDinersPrivilege() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://assurefintech.com/compare/" },
-      { "@type": "ListItem", position: 3, name: "Amex Platinum Travel vs HDFC Diners Privilege", item: "https://assurefintech.com/compare/amex-platinum-travel-vs-hdfc-diners-privilege" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.assurefintech.com/compare/" },
+      { "@type": "ListItem", position: 3, name: "Amex Platinum Travel vs HDFC Diners Privilege", item: "https://www.assurefintech.com/compare/amex-platinum-travel-vs-hdfc-diners-privilege" }
     ]
   };
 

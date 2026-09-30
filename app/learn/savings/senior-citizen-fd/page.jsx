@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Senior Citizen Fixed Deposits: How to Compare | Assure Fintech",
+  title: "Senior Citizen Fixed Deposits: How to Compare",
   description: "Compare senior-citizen FD offers using current rates, payout terms, premature-withdrawal rules, DICGC cover, liquidity and tax treatment.",
   alternates: { canonical: "/learn/savings/senior-citizen-fd" },
   openGraph: { title: "Senior Citizen Fixed Deposits: How to Compare", description: "A checklist for comparing senior-citizen deposit products without relying on stale rate rankings.", type: "article", siteName: "Assure Fintech" },
@@ -25,10 +25,10 @@ export default function SeniorCitizenFDPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Savings", item: "https://assurefintech.com/learn/savings/" },
-      { "@type": "ListItem", position: 4, name: "Senior Citizen Fixed Deposits", item: "https://assurefintech.com/learn/savings/senior-citizen-fd" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Learn", item: "https://www.assurefintech.com/learn/" },
+      { "@type": "ListItem", position: 3, name: "Savings", item: "https://www.assurefintech.com/learn/savings/" },
+      { "@type": "ListItem", position: 4, name: "Senior Citizen Fixed Deposits", item: "https://www.assurefintech.com/learn/savings/senior-citizen-fd" },
     ],
   };
 

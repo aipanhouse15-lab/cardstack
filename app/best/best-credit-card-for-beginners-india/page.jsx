@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Script from "next/script";
+import { CARDS } from "../../../data/cards.js";
 
 export const metadata = {
-  title: "Best Credit Card for Beginners in India (September 2026)",
-  description: "Your first credit card shapes your CIBIL score for the next decade. Don't pick wrong.",
+  title: "First Credit Card Options in India: Fees, Eligibility and Credit Basics",
+  description: "Compare first-card options by fees, eligibility, repayment terms and eligible rewards—without approval or score promises.",
   alternates: { canonical: "/best/best-credit-card-for-beginners-india" },
   openGraph: {
-    title: "Best Credit Card for Beginners in India (September 2026)",
-    description: "Your first credit card shapes your CIBIL score for the next decade. Don't pick wrong.",
+    title: "First Credit Card Options in India: Fees, Eligibility and Credit Basics",
+    description: "Compare first-card options by fees, eligibility, repayment terms and eligible rewards—without approval or score promises.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -31,7 +32,7 @@ function ShieldIcon() {
 
 function CibilMeterIcon() {
   return (
-    <svg width="80" height="44" viewBox="0 0 80 67" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CIBIL score meter from poor to excellent">
+    <svg width="80" height="44" viewBox="0 0 80 67" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of the CIBIL score range">
       <path d="M4 40 A36 36 0 0 1 76 40" stroke="var(--border)" strokeWidth="8" strokeLinecap="round" fill="none"/>
       <path d="M4 40 A36 36 0 0 1 40 4" stroke="#ef4444" strokeWidth="8" strokeLinecap="round" fill="none"/>
       <path d="M40 4 A36 36 0 0 1 63 13" stroke="#f59e0b" strokeWidth="8" strokeLinecap="round" fill="none"/>
@@ -95,74 +96,24 @@ function UpgradeArrowIcon() {
 
 function CalendarIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 63" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendar showing 12 to 18 month CIBIL building period">
+    <svg width="44" height="44" viewBox="0 0 44 63" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Calendar for periodic credit report review">
       <rect x="4" y="8" width="36" height="32" rx="3" fill="var(--raise)" stroke="var(--border)" strokeWidth="1.5"/>
       <line x1="4" y1="17" x2="40" y2="17" stroke="var(--border)" strokeWidth="1.5"/>
       <rect x="13" y="4" width="4" height="8" rx="2" fill={COLOR}/>
       <rect x="27" y="4" width="4" height="8" rx="2" fill={COLOR}/>
-      <text x="22" y="34" textAnchor="middle" fontSize="11" fill={COLOR} fontWeight="700">12–18</text>
-      <text x="22" y="43" textAnchor="middle" fontSize="9" fill="var(--text-muted)">months</text>
+      <circle cx="14" cy="26" r="2" fill={COLOR}/><circle cx="22" cy="26" r="2" fill={COLOR}/><circle cx="30" cy="26" r="2" fill={COLOR}/>
     </svg>
   );
 }
 
 const cardData = [
-  {
-    name: "HDFC MoneyBack+",
-    issuer: "HDFC Bank",
-    fee: "₹500/yr",
-    feeWaiver: "Waived on ₹50,000 spend",
-    reward: "20 CashPoints/₹150 at five named merchants (monthly cap applies); 2 CashPoints/₹150 on other eligible spends",
-    eligibility: "Eligibility and income criteria depend on HDFC's current application assessment",
-    slug: "hdfc-moneyback-plus",
-    bestFor: "First salaried professional card",
-    highlight: true,
-  },
-  {
-    name: "SBI SimplySAVE",
-    issuer: "SBI Cards",
-    fee: "₹499/yr",
-    feeWaiver: "Waived on ₹1L spend",
-    reward: "10 Reward Points/₹150 on dining, movies, departmental stores and grocery; 1 point/₹150 other eligible spends (catalogue value varies)",
-    eligibility: "Subject to SBI Card's current eligibility assessment",
-    slug: "sbi-simplysave",
-    bestFor: "Low income threshold entry",
-    highlight: false,
-  },
-  {
-    name: "IDFC FIRST Millennia",
-    issuer: "IDFC FIRST Bank",
-    fee: "Lifetime free",
-    feeWaiver: "No joining or annual fee listed",
-    reward: "3X points on online purchases up to ₹20,000/month and 10X on incremental online spend above that threshold; redemption value and exclusions apply",
-    eligibility: "Check issuer's current eligibility and offer terms",
-    slug: "idfc-first-millennia",
-    bestFor: "Flat cashback, zero complexity",
-    highlight: false,
-  },
-  {
-    name: "Amazon Pay ICICI",
-    issuer: "ICICI Bank",
-    fee: "Lifetime free",
-    feeWaiver: "N/A",
-    reward: "5% on eligible Amazon.in purchases for Prime members, 3% for non-Prime; 2% at eligible Amazon Pay partners and 1% on other eligible spends",
-    eligibility: "Subject to ICICI Bank's current application assessment",
-    slug: "amazon-pay-icici",
-    bestFor: "Amazon-heavy spenders, first card",
-    highlight: false,
-  },
-  {
-    name: "Axis Neo",
-    issuer: "Axis Bank",
-    fee: "₹250/yr; lifetime-free via selected channels",
-    feeWaiver: "Lifetime-free offer depends on application channel; no ₹2,500/month waiver listed",
-    reward: "0.5% base points; partner discounts may apply with their own caps and conditions",
-    eligibility: "Check current Axis Bank application criteria and channel-specific offer",
-    slug: "axis-neo",
-    bestFor: "Lowest fee entry card",
-    highlight: false,
-  },
-];
+  { id: "idfc-wow", use: "Secured option when an FD-backed product fits" },
+  { id: "amazon-icici", use: "Potential fit for eligible Amazon purchases" },
+  { id: "hdfc-moneyback-plus", use: "Compare named-merchant rewards and current caps" },
+  { id: "sbi-simplysave", use: "Compare category points and redemption value" },
+  { id: "axis-neo", use: "Compare channel-specific fee and partner offers" },
+].map(({ id, use }) => ({ card: CARDS.find((item) => item.id === id), use }))
+  .filter(({ card }) => card?.verified && card.sourceUrl);
 
 export default function BestCreditCardForBeginnersIndia() {
   const faq = {
@@ -239,7 +190,7 @@ export default function BestCreditCardForBeginnersIndia() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for Beginners in India (September 2026)",
+    headline: "First Credit Card Options in India: Fees, Eligibility and Credit Basics",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
@@ -250,13 +201,13 @@ export default function BestCreditCardForBeginnersIndia() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
       {
         "@type": "ListItem",
         position: 3,
-        name: "Best Credit Card for Beginners India",
-        item: "https://assurefintech.com/best/credit-card-for-beginners-india",
+        name: "First Credit Card Options in India",
+        item: "https://www.assurefintech.com/best/best-credit-card-for-beginners-india",
       },
     ],
   };
@@ -271,7 +222,7 @@ export default function BestCreditCardForBeginnersIndia() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for Beginners in India (September 2026)
+            First Credit Card Options in India
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
@@ -295,7 +246,7 @@ export default function BestCreditCardForBeginnersIndia() {
         {" / "}
         <Link href="/best/">Best Cards</Link>
         {" / "}
-        Best Credit Card for Beginners India
+        First Credit Card Options in India
       </nav>
 
       <div
@@ -320,7 +271,7 @@ export default function BestCreditCardForBeginnersIndia() {
 
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 12px" }}>
-        Your first credit card shapes your CIBIL score for the next decade. Don't pick wrong.
+        A practical guide to comparing fees, eligibility and repayment terms for your first card.
       </p>
 
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
@@ -338,7 +289,7 @@ export default function BestCreditCardForBeginnersIndia() {
           marginBottom: 28,
         }}
       >
-        <strong style={{ color: COLOR }}>The honest number on this page:</strong> Most beginners apply for the card with the best ad they've seen. The right move is to apply for the card with the lowest barrier to approval and a fee structure you can waive. Rewards come second, always.
+        <strong style={{ color: COLOR }}>There is no universal “best first card” or guaranteed approval path.</strong> Compare a product's total cost, eligibility, repayment terms and rewards against your own needs. Applying for a card creates a real repayment obligation.
       </div>
 
       {/* Section: What to look for */}
@@ -346,18 +297,18 @@ export default function BestCreditCardForBeginnersIndia() {
         <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>What actually matters in your first card</h2>
 
         <p>
-          The credit card industry spends millions on marketing reward rates. For a beginner, the reward rate is almost the last thing to optimise for.
+          A headline reward rate can hide caps, exclusions, point values and fees. First decide whether borrowing access is appropriate and whether you can manage repayment reliably.
         </p>
         <p>
-          Here is the priority order: easy approval first, zero or low annual fee second, simple reward structure third, and good customer service fourth.
+          Compare issuer eligibility, joining and annual costs, statement and interest terms, dispute support, and only then the value of rewards you can actually earn and redeem.
         </p>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 16, marginTop: 24 }}>
           {[
             { icon: <CheckCircleIcon />, title: "Check eligibility", desc: "Income and approval criteria vary by issuer, card and application channel; verify current requirements before applying." },
-            { icon: <CheckCircleIcon />, title: "Waivable annual fee", desc: "Cards with annual fees that get waived on ₹50,000 to ₹1L yearly spend are almost free." },
-            { icon: <CheckCircleIcon />, title: "Flat, simple rewards", desc: "Cashback is better than points for beginners. You'll never misread your balance." },
-            { icon: <CheckCircleIcon />, title: "Full autopay option", desc: "Banks that let you auto-debit the full balance monthly protect you from interest charges." },
+            { icon: <CheckCircleIcon />, title: "Total cost", desc: "Check joining and renewal fees, spend-based waivers, taxes and any transaction charges." },
+            { icon: <CheckCircleIcon />, title: "Understand rewards", desc: "Cashback and points have different rules; compare caps, exclusions and redemption value." },
+            { icon: <CheckCircleIcon />, title: "Repayment controls", desc: "Check statement dates and payment options. Autopay helps only if the account is funded and the instruction is correct." },
           ].map((item) => (
             <div
               key={item.title}
@@ -380,57 +331,38 @@ export default function BestCreditCardForBeginnersIndia() {
       <section style={{ marginBottom: 44 }}>
         <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8 }}>First-card options to compare</h2>
         <p style={{ color: "var(--text-muted)", marginBottom: 24 }}>
-          These cards are ranked by a beginner-specific score: approval ease, total cost of ownership, and reward simplicity.
+          These are examples from the site's dated issuer-source card records, not a ranking or an approval recommendation. Terms can change; open each record and its issuer source before deciding.
         </p>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
-          {cardData.map((card, i) => (
+          {cardData.map(({ card, use }) => (
             <div
-              key={card.slug}
+              key={card.id}
               style={{
-                border: card.highlight ? `2px solid ${COLOR}` : "1.5px solid var(--border)",
+                border: "1.5px solid var(--border)",
                 borderRadius: 10,
                 padding: "20px 22px",
-                background: card.highlight ? `${COLOR}07` : "var(--raise)",
+                background: "var(--raise)",
                 position: "relative",
               }}
             >
-              {card.highlight && (
-                <div
-                  style={{
-                    position: "absolute",
-                    top: -12,
-                    left: 20,
-                    background: COLOR,
-                    color: "var(--raise)",
-                    fontSize: 11,
-                    fontWeight: 700,
-                    padding: "3px 10px",
-                    borderRadius: 20,
-                    textTransform: "uppercase",
-                    letterSpacing: "0.06em",
-                  }}
-                >
-                  Editor's Pick
-                </div>
-              )}
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: 8 }}>
                 <div>
                   <div style={{ fontWeight: 700, fontSize: 17 }}>{card.name}</div>
-                  <div style={{ color: "var(--text-muted)", fontSize: 13 }}>{card.issuer}</div>
+                  <div style={{ color: "var(--text-muted)", fontSize: 13 }}>{card.bank}</div>
                 </div>
                 <div style={{ textAlign: "right" }}>
-                  <div style={{ fontWeight: 700, color: COLOR }}>{card.fee}</div>
-                  <div style={{ fontSize: 12, color: "var(--text-muted)" }}>{card.feeWaiver}</div>
+                  <div style={{ fontWeight: 700, color: COLOR }}>{card.fee === 0 ? "No annual fee listed" : `₹${card.fee.toLocaleString("en-IN")} annual fee`}</div>
+                  <div style={{ fontSize: 12, color: "var(--text-muted)" }}>{card.feeWaiver || "Check current issuer terms"}</div>
                 </div>
               </div>
               <div style={{ margin: "12px 0", fontSize: 14, display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6px 16px" }}>
-                <div><span style={{ color: "var(--text-muted)" }}>Rewards: </span>{card.reward}</div>
-                <div><span style={{ color: "var(--text-muted)" }}>Eligibility: </span>{card.eligibility}</div>
-                <div style={{ gridColumn: "1 / -1" }}><span style={{ color: "var(--text-muted)" }}>Best for: </span><strong>{card.bestFor}</strong></div>
+                <div><span style={{ color: "var(--text-muted)" }}>Why compare it: </span>{use}</div>
+                <div><span style={{ color: "var(--text-muted)" }}>Source review: </span>{card.reviewedAt}; check current issuer criteria and product availability.</div>
+                <div style={{ gridColumn: "1 / -1" }}><span style={{ color: "var(--text-muted)" }}>Issuer-published reward summary: </span>{card.pointsInfo || "See current issuer terms"}</div>
               </div>
               <Link
-                href={`/cards/${card.slug}`}
+                href={`/cards/${card.id}`}
                 style={{
                   display: "inline-block",
                   marginTop: 4,
@@ -441,8 +373,9 @@ export default function BestCreditCardForBeginnersIndia() {
                   borderBottom: `1px solid ${COLOR}40`,
                 }}
               >
-                Full review + apply link
+                Assure Fintech card record
               </Link>
+              <span> · </span><a href={card.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: COLOR }}>Issuer source</a>
             </div>
           ))}
         </div>
@@ -450,7 +383,7 @@ export default function BestCreditCardForBeginnersIndia() {
 
       {/* Section: CIBIL strategy */}
       <section style={{ marginBottom: 44 }}>
-        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8 }}>The CIBIL-building strategy that actually works</h2>
+        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8 }}>Credit-history habits—without a score promise</h2>
 
         <div style={{ display: "flex", gap: 20, alignItems: "center", marginBottom: 20, flexWrap: "wrap" }}>
           <CibilMeterIcon />
@@ -465,13 +398,13 @@ export default function BestCreditCardForBeginnersIndia() {
         </div>
 
         <div style={{ background: "var(--raise)", border: "1px solid var(--border)", borderRadius: 8, padding: "20px 22px", marginTop: 16 }}>
-          <div style={{ fontWeight: 700, marginBottom: 12 }}>The one-card strategy (12 to 18 months)</div>
+          <div style={{ fontWeight: 700, marginBottom: 12 }}>A responsible account routine</div>
           {[
-            "Use the card for all your regular monthly expenses — groceries, fuel, subscriptions, phone bill.",
-            "Set up autopay for the full outstanding balance (not just minimum due).",
-            "Keep balances manageable relative to your limit; lower reported utilisation is generally preferable, but no single threshold guarantees a score.",
-            "Never take a cash advance from the card. The fee is 2.5% and interest starts immediately.",
-            "After 12 months of this, check your CIBIL score via the official CIBIL website or Paytm.",
+            "Use credit only for planned purchases you can afford; carrying a balance can incur interest and fees.",
+            "Read each statement and pay the amount due on time; full statement payment helps avoid purchase interest where the issuer's interest-free terms apply.",
+            "Keep balances manageable. CIBIL identifies high utilisation as a factor, but publishes no universal percentage that guarantees a score or approval.",
+            "Check the card's current MITC before using cash advances or other transactions that may have separate fees and interest treatment.",
+            "Review your credit report through the bureau's official channel when available and dispute inaccurate account information.",
           ].map((step, idx) => (
             <div key={idx} style={{ display: "flex", gap: 12, marginBottom: 8, fontSize: 14 }}>
               <div
@@ -498,23 +431,23 @@ export default function BestCreditCardForBeginnersIndia() {
 
       {/* Section: Income bracket matching */}
       <section style={{ marginBottom: 44 }}>
-        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>Matching your income bracket to the right card</h2>
+        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>Choose a route based on your situation</h2>
 
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
             <thead>
               <tr style={{ background: `${COLOR}15`, borderBottom: `2px solid ${COLOR}40` }}>
-                {["Starting profile", "Card to compare", "Annual Fee", "Why"].map((h) => (
+                {["Situation", "Route to compare", "Costs and criteria", "What to check"].map((h) => (
                   <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700 }}>{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {[
-                ["New/thin credit file; can place an FD", "IDFC FIRST WOW", "Lifetime free; FD-backed", "Secured option; zero forex markup; rewards and redemption terms apply"],
-                ["Amazon-heavy spending", "Amazon Pay ICICI", "Lifetime free", "Category-based Amazon/Amazon Pay cashback; check eligibility"],
-                ["Dining, movies and grocery spend", "SBI SimplySAVE", "₹499; waiver at ₹1L annual spend", "Accelerated points on listed categories; point value is redemption-dependent"],
-                ["Selected online merchants", "HDFC MoneyBack+", "₹500; ₹50K waiver", "Accelerated CashPoints at named merchants; current May 2026 changes apply"],
+                ["Can provide eligible collateral", "Secured primary card", "Deposit, lien and card fees vary", "Confirm bureau reporting and release rules"],
+                ["Need a family-linked payment card", "Issuer-approved add-on card", "Primary-holder liability and limits apply", "Ask how reporting and controls work"],
+                ["Have income / an existing banking relationship", "Unsecured issuer card", "Eligibility and fees vary by product", "Verify current documents and criteria"],
+                ["Have a clear spending pattern", "Compare source-reviewed products above", "Use current fee and reward terms", "Check caps, exclusions and redemption value"],
               ].map(([income, card, fee, why], i) => (
                 <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px" }}>{income}</td>
@@ -535,15 +468,15 @@ export default function BestCreditCardForBeginnersIndia() {
         <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 20, flexWrap: "wrap" }}>
           <UpgradeArrowIcon />
           <p style={{ margin: 0 }}>
-            Your first card is a stepping stone, not a destination. Most people who plan the upgrade path end up with a premium card 3 to 4 years faster than those who don't.
+            There is no standard card ladder or timetable. Change products only when your needs, costs and eligibility justify it; approval, limit increases and upgrades remain with the issuer.
           </p>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
           {[
-            { year: "When eligible", card: "Entry card (Axis Neo / IDFC Millennia)", score: "No fixed target", note: "Build history and pay the full amount due on time" },
-            { year: "When your needs change", card: "Mid-tier (SBI SimplySAVE / Flipkart Axis)", score: "Issuer criteria vary", note: "Compare fees, benefits and approval criteria" },
-            { year: "If benefits justify the cost", card: "Premium (HDFC Regalia / Axis Magnus)", score: "Issuer criteria vary", note: "Compare annual cost with benefits you will use" },
+            { year: "Now", card: "Keep only accounts you can manage", score: "No target score", note: "Pay on time and review the report for accuracy" },
+            { year: "When your needs change", card: "Compare available products", score: "Issuer criteria vary", note: "Check total fees and benefits you will actually use" },
+            { year: "Before applying", card: "Review a new application or upgrade", score: "No approval promise", note: "Ask whether it creates a new account or enquiry" },
           ].map((tier, i) => (
             <div key={i} style={{ display: "flex", gap: 0 }}>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginRight: 16 }}>
@@ -631,8 +564,8 @@ export default function BestCreditCardForBeginnersIndia() {
           <div style={{ flex: 1 }}>
             <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 12px" }}>Your action plan for this month</h2>
             <ol style={{ margin: 0, paddingLeft: 20, lineHeight: 2 }}>
-              <li>Pick one card from the table above based on your monthly income.</li>
-              <li>Apply via the bank's official website or app, not third-party aggregator links.</li>
+              <li>Shortlist a card that fits your actual spending, fee tolerance and issuer eligibility—not an assumed income bracket.</li>
+              <li>Read the current card terms and apply through the issuer's official channel.</li>
               <li>
                 Once approved, set up full-balance autopay immediately. See our{" "}
                 <Link href="/blog/autopay-credit-card-setup-india" style={{ color: COLOR }}>
@@ -640,13 +573,13 @@ export default function BestCreditCardForBeginnersIndia() {
                 </Link>
                 .
               </li>
-              <li>Shift your grocery, fuel, and subscription spends to the new card.</li>
+              <li>Use credit only for planned purchases you can afford, and check each statement and payment due date.</li>
               <li>
-                After 12 months, use our{" "}
+                When your needs change, use our{" "}
                 <Link href="/stack-builder" style={{ color: COLOR }}>
                   Stack Builder tool
                 </Link>{" "}
-                to see if a second card makes sense.
+                to compare options; eligibility, fees and approval remain issuer-specific.
               </li>
             </ol>
           </div>
@@ -714,7 +647,7 @@ export default function BestCreditCardForBeginnersIndia() {
           lineHeight: 1.8,
         }}
       >
-        <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Card details, fees, and reward rates are accurate as of {UPDATED} and subject to change by the respective issuers. This is not financial advice. Always verify current terms on the issuing bank's official website before applying. Assure Fintech may earn referral fees from some card issuers, which does not affect our editorial rankings.
+        <strong>Sources and disclosure:</strong> Card records above include dated issuer-source reviews; terms, availability and eligibility can change. Open each card record and linked official issuer source to review them. CIBIL describes the score range and factors in its <a href="https://www.cibil.com/blog/all-you-need-to-know-about-cibil-score" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>official guide</a>. A score does not guarantee approval. This is educational content, not financial advice. Assure Fintech may earn referral fees from some card issuers; compensation does not determine editorial coverage.
       </footer>
     </main>
     </>

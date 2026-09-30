@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to Compare Fixed Deposit Rates and Offers | Assure Fintech",
+  title: "How to Compare Fixed Deposit Rates and Offers",
   description: "A practical checklist for comparing current fixed-deposit offers, payout options, premature withdrawal terms, tax and deposit insurance.",
   alternates: { canonical: "/learn/savings/best-fd-rates-2026" },
   openGraph: {
@@ -51,10 +51,10 @@ export default function BestFdRates2026() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Savings", item: "https://assurefintech.com/learn/savings/" },
-      { "@type": "ListItem", position: 4, name: "Compare FD Offers", item: "https://assurefintech.com/learn/savings/best-fd-rates-2026" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Learn", item: "https://www.assurefintech.com/learn/" },
+      { "@type": "ListItem", position: 3, name: "Savings", item: "https://www.assurefintech.com/learn/savings/" },
+      { "@type": "ListItem", position: 4, name: "Compare FD Offers", item: "https://www.assurefintech.com/learn/savings/best-fd-rates-2026" },
     ],
   };
 

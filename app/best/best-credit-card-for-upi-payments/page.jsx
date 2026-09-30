@@ -93,11 +93,12 @@ const rupayUpiCards = [
   {
     name: "IDFC FIRST EA₹N",
     issuer: "IDFC FIRST Bank",
-    fee: "₹499 joining and annual fee; FD-backed",
-    feeWaiver: "Confirm any current waiver or welcome offer with the issuer",
+    fee: "₹0 joining fee offer; ₹499 + GST annual fee from year 2",
+    feeWaiver: "Annual fee waived at ₹1 lakh eligible annual spend; offer terms apply",
     upiReward: "1% via IDFC FIRST Bank app; 0.5% via other UPI apps; ₹500 cashback cap per statement cycle",
     nonUpiReward: "0.5% on eligible online, utility, insurance and wallet spends; exclusions apply",
     slug: "idfc-first-earn",
+    sourceUrl: "https://www.idfcfirst.bank.in/credit-card/secured-rupay-credit-card",
     note: "Secured card against a fixed deposit. No cashback on EMI or cash withdrawals; current terms govern eligibility.",
     best: true,
   },
@@ -203,13 +204,13 @@ export default function BestCreditCardForUpiPayments() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
       {
         "@type": "ListItem",
         position: 3,
         name: "Best Credit Card for UPI Payments",
-        item: "https://assurefintech.com/best/credit-card-for-upi-payments",
+        item: "https://www.assurefintech.com/best/credit-card-for-upi-payments",
       },
     ],
   };
@@ -426,12 +427,15 @@ export default function BestCreditCardForUpiPayments() {
                 </div>
               </div>
               <div style={{ fontSize: 13, color: "var(--text-muted)", fontStyle: "italic", marginBottom: 10 }}>{card.note}</div>
-              <Link
-                href={`/cards/${card.slug}`}
-                style={{ color: COLOR, fontSize: 13, fontWeight: 600, textDecoration: "none", borderBottom: `1px solid ${COLOR}40` }}
-              >
-                Full review
-              </Link>
+              {card.sourceUrl ? (
+                <a href={card.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ color: COLOR, fontSize: 13, fontWeight: 600, textDecoration: "none", borderBottom: `1px solid ${COLOR}40` }}>
+                  Issuer details ↗
+                </a>
+              ) : (
+                <Link href={`/cards/${card.slug}`} style={{ color: COLOR, fontSize: 13, fontWeight: 600, textDecoration: "none", borderBottom: `1px solid ${COLOR}40` }}>
+                  Full review
+                </Link>
+              )}
             </div>
           ))}
         </div>

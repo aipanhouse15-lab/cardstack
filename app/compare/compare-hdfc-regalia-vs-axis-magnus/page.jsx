@@ -54,9 +54,9 @@ export default function CompareRegaliaVsMagnus() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://assurefintech.com/compare/" },
-      { "@type": "ListItem", position: 3, name: "HDFC Regalia vs Axis Magnus", item: "https://assurefintech.com/compare/hdfc-regalia-vs-axis-magnus" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.assurefintech.com/compare/" },
+      { "@type": "ListItem", position: 3, name: "HDFC Regalia vs Axis Magnus", item: "https://www.assurefintech.com/compare/hdfc-regalia-vs-axis-magnus" }
     ]
   };
 

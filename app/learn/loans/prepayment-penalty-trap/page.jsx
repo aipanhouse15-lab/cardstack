@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Loan Prepayment Charges: RBI Rules & What to Check | Assure Fintech",
+  title: "Loan Prepayment Charges: RBI Rules & What to Check",
   description: "Understand RBI's pre-payment charge directions, effective dates and loan-specific conditions. Check your sanction letter, Key Facts Statement and agreement.",
   alternates: { canonical: "/learn/loans/prepayment-penalty-trap" },
 };
@@ -46,10 +46,9 @@ export default function PrepaymentPenaltyTrapPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Loans", item: "https://assurefintech.com/learn/loans/" },
-      { "@type": "ListItem", position: 4, name: "Loan Prepayment Charges", item: "https://assurefintech.com/learn/loans/prepayment-penalty-trap" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Loans", item: "https://www.assurefintech.com/learn/loans/" },
+      { "@type": "ListItem", position: 3, name: "Loan Prepayment Charges", item: "https://www.assurefintech.com/learn/loans/prepayment-penalty-trap" },
     ],
   };
 
@@ -66,7 +65,7 @@ export default function PrepaymentPenaltyTrapPage() {
         </div>
       </header>
       <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 72px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
-        <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Prepayment Charges</nav>
+        <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Prepayment Charges</nav>
 
         <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 24px" }}>Prepayment can reduce the outstanding balance or close a loan, but do not assume a fee is either always allowed or always prohibited. Start with the RBI direction and the documents for your particular facility. A loan's date of sanction or renewal can determine which directions apply.</p>
 

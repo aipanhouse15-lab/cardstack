@@ -27,21 +27,19 @@ const CALCS = [
 ];
 
 const CATS = [
-  { name: "Credit Cards", desc: "Cap-adjusted reward math", honest: "5% advertised → 2.8% actual", href: "/cards", color: "var(--c-card)", count: `${CARDS.length} cards` },
-  { name: "Loans", desc: "Hidden fee + real APR math", honest: "8.5% rate → 9.4% actual cost", href: "/learn/loans", color: "var(--c-loan)", count: "5 guides" },
-  { name: "Insurance", desc: "Co-pay, sub-limit, claim truth", honest: "₹10L policy → ₹4.2L payout", href: "/learn/insurance", color: "var(--c-ins)", count: "5 guides" },
-  { name: "Savings & FDs", desc: "Post-tax, post-inflation reality", honest: "7.5% FD → 0.15% real return", href: "/learn/savings", color: "var(--c-fd)", count: "4 guides" },
-  { name: "Tax Planning", desc: "Beyond the obvious 80C list", honest: "Old vs new regime math", href: "/learn/tax", color: "var(--c-tax)", count: "3 guides" },
-  { name: "Mutual Funds", desc: "CAGR vs actual investor return", honest: "18% CAGR → 11% XIRR", href: "/learn/mutual-funds", color: "var(--c-mf)", count: "3 guides" },
+  { name: "Credit Cards", desc: "Cap-adjusted reward math", honest: "Caps, exclusions & redemption value", href: "/cards", color: "var(--c-card)", count: `${CARDS.length} cards` },
+  { name: "Loans", desc: "Hidden fee + real APR math", honest: "Fees and payment timing affect APR", href: "/learn/loans", color: "var(--c-loan)", count: "6 guides" },
+  { name: "Insurance", desc: "Co-pay, sub-limit, claim truth", honest: "Limits and exclusions shape a payout", href: "/learn/insurance", color: "var(--c-ins)", count: "6 guides" },
+  { name: "Savings & FDs", desc: "Post-tax, post-inflation reality", honest: "Compare post-tax returns and risk", href: "/learn/savings", color: "var(--c-fd)", count: "5 guides" },
+  { name: "Tax Planning", desc: "Beyond the obvious 80C list", honest: "Old vs new regime math", href: "/learn/tax", color: "var(--c-tax)", count: "4 guides" },
+  { name: "Mutual Funds", desc: "CAGR vs actual investor return", honest: "Your timing changes your return", href: "/learn/mutual-funds", color: "var(--c-mf)", count: "3 guides" },
 ];
 
 // Gap Ledger — flagship data: advertised vs actual
 const GAP_DATA = [
-  { card: "SBI Cashback", adv: "5%", actual: "3.1%", note: "₹4K/mo cap on ₹80K spend", id: "sbi-cashback" },
-  { card: "HDFC Millennia", adv: "5%", actual: "2.3%", note: "₹1K/mo cap across all categories", id: "hdfc-millennia" },
-  { card: "Axis ACE", adv: "5%", actual: "3.8%", note: "₹500/mo cap on bill payments", id: "axis-ace" },
-  { card: "HDFC Regalia", adv: "1.33%", actual: "1.33%", note: "Cap at ₹18.75L/mo — effectively uncapped", id: "hdfc-regalia" },
-  { card: "Amazon Pay ICICI", adv: "5%", actual: "5%", note: "No cap — one of the few honest rates", id: "amazon-icici" },
+  { card: "SBI Cashback", adv: "5% online", actual: "2.5%", note: "₹80,000 eligible online spend in a statement cycle; cashback capped at ₹2,000", id: "sbi-cashback" },
+  { card: "HDFC Regalia", adv: "4 points / ₹200", actual: "0.3%", note: "Base earn valued as statement cashback at ₹0.15 per point; travel redemption can differ", id: "hdfc-regalia" },
+  { card: "Amazon Pay ICICI", adv: "Up to 5%", actual: "Up to 5%", note: "Prime-member Amazon India purchases; rate varies by purchase and eligibility", id: "amazon-icici" },
 ];
 
 const HOW_STEPS = [
@@ -104,7 +102,7 @@ export default function HomeClient() {
           <div className="sec-head">
             <div>
               <div className="k accent">THE GAP</div>
-              <div className="sec-title">What they <em>advertise</em> vs what you <em style={{ color: "var(--green)", fontStyle: "italic" }}>actually earn</em></div>
+              <div className="sec-title">Advertised rewards vs <em style={{ color: "var(--green)", fontStyle: "italic" }}>worked examples</em></div>
             </div>
             <Link href="/cards" className="sec-link">See all {CARDS.length} cards →</Link>
           </div>
@@ -127,6 +125,9 @@ export default function HomeClient() {
               </Link>
             ))}
           </div>
+          <p className="mono" style={{ fontSize: 11, color: "var(--dim)", marginTop: 12, lineHeight: 1.7 }}>
+            Examples use the stated spend and redemption assumptions; actual rewards depend on eligible transactions and issuer terms. Sources: <a href="https://www.sbicard.com/cashback-revised" target="_blank" rel="noopener noreferrer" style={{ color: "var(--green)" }}>SBI Card</a>, <a href="https://www.hdfc.bank.in/credit-cards/regalia-credit-card" target="_blank" rel="noopener noreferrer" style={{ color: "var(--green)" }}>HDFC Bank</a>, <a href="https://www.icicibank.com/personal-banking/cards/credit-card/amazon-pay-credit-card/amazon-pay-faq" target="_blank" rel="noopener noreferrer" style={{ color: "var(--green)" }}>ICICI Bank</a> (checked 28 Sep 2026).
+          </p>
         </div>
       </section>
 

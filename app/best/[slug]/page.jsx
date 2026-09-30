@@ -40,7 +40,7 @@ export default function BestForPage({ params }) {
     if (!card) return { ...pick, card: null, reward: null };
     const reward = calcReward(card, cat.categoryId, cat.testSpend);
     return { ...pick, card, reward, note: interpolate(pick.note, card) };
-  }).filter(p => p.card);
+  }).filter(p => p.card?.verified && p.reward);
 
   // JSON-LD: FAQ schema
   const faqSchema = cat.faq ? {
@@ -72,8 +72,7 @@ export default function BestForPage({ params }) {
     description: cat.description,
     author: { "@type": "Organization", name: "Assure Fintech" },
     publisher: { "@type": "Organization", name: "Assure Fintech" },
-    dateModified: new Date().toISOString(),
-    mainEntityOfPage: `https://assurefintech.com/best/${cat.slug}`,
+    mainEntityOfPage: `https://www.assurefintech.com/best/${cat.slug}`,
   };
 
   return (
@@ -118,7 +117,7 @@ export default function BestForPage({ params }) {
         <div>
           <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "var(--blue)" }}>How we calculated</div>
           <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-            All cashback figures below are calculated at <strong style={{ color: "var(--text)" }}>₹{cat.testSpend.toLocaleString()}/month</strong> spend in this category, using our cap-aware calculator that accounts for monthly limits and fallback rates.
+            All figures below are estimates at <strong style={{ color: "var(--text)" }}>₹{cat.testSpend.toLocaleString()}/month</strong> spend in this category, using our cap-aware calculator. We only show cards with a linked, dated issuer review; eligibility and exclusions still depend on issuer terms.
           </p>
         </div>
       </div>
@@ -126,7 +125,7 @@ export default function BestForPage({ params }) {
       {/* Card Picks */}
       <div className="mb-10">
         <h2 className="text-xs font-semibold uppercase tracking-wider mb-5" style={{ color: "var(--text-muted)" }}>Our Picks</h2>
-        <div className="flex flex-col gap-4">
+        {picksWithMath.length === 0 ? <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>We do not yet have enough source-reviewed card records to make a responsible recommendation for this category. Check back after our next issuer review.</p> : <div className="flex flex-col gap-4">
           {picksWithMath.map((pick, i) => (
             <div key={i} className="rounded-xl overflow-hidden" style={{ border: i === 0 ? "2px solid var(--green-border)" : "1px solid var(--border)" }}>
               {/* Card Header */}
@@ -186,7 +185,7 @@ export default function BestForPage({ params }) {
               </div>
             </div>
           ))}
-        </div>
+        </div>}
       </div>
 
       {/* Verdict */}

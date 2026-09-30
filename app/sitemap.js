@@ -13,16 +13,23 @@ const LEARN_ARTICLES = {
 
 // New static blog pages (June 2026 content batch)
 const STATIC_BLOG_SLUGS = [
-  "7-credit-card-mistakes-india", "ai-changing-credit-card-picks", "amazon-hack", "annual-fee-when-worth-paying",
-  "beginners-guide", "best-card-high-spenders-2026", "best-card-insurance-premiums-2026", "best-card-low-spenders-2026",
-  "best-card-students-2026", "best-free-cards", "bnpl-vs-credit-cards-india", "build-3-card-stack-guide",
+  "7-credit-card-mistakes-india", "ai-changing-credit-card-picks", "annual-fee-when-worth-paying",
+  "beginners-guide", "best-card-high-spenders-2026",
+  "best-card-students-2026", "bnpl-vs-credit-cards-india", "build-3-card-stack-guide",
   "cashback-rate-is-a-lie", "cibil-score-101-india", "credit-card-vs-debit-card", "credit-utilization-ratio-guide",
-  "digital-wallets-vs-credit-cards", "first-card-decision-framework", "fuel-trick", "future-credit-card-rewards-india",
-  "get-annual-fee-waived-scripts", "how-reward-points-work-india", "maximize-dining", "metal-credit-cards-india",
+  "digital-wallets-vs-credit-cards",
+  "how-reward-points-work-india", "metal-credit-cards-india",
   "minimum-transaction-traps", "rbi-latest-guidelines-credit-cards", "read-credit-card-statement", "regalia-vs-infinia",
-  "reward-points-vs-cashback", "right-way-pay-credit-card-bill", "should-you-close-old-credit-card",
-  "upi-vs-credit-cards-india", "why-reward-rates-dropping-india",
+  "right-way-pay-credit-card-bill", "should-you-close-old-credit-card",
+  "upi-vs-credit-cards-india",
 ];
+
+const REDIRECTED_BLOG_SLUGS = new Set([
+  "amazon-hack", "best-card-beginners-2026", "best-card-insurance-premiums-2026",
+  "best-card-low-spenders-2026", "best-free-cards", "first-card-decision-framework",
+  "fuel-trick", "future-credit-card-rewards-india", "get-annual-fee-waived-scripts",
+  "maximize-dining", "reward-points-vs-cashback", "why-reward-rates-dropping-india",
+]);
 
 // New static best-for pages
 const STATIC_BESTFOR_SLUGS = [
@@ -52,68 +59,70 @@ export default function sitemap() {
   const base = "https://www.assurefintech.com";
 
   const staticPages = [
-    { url: base, lastModified: new Date(), changeFrequency: "weekly", priority: 1.0 },
-    { url: `${base}/cards`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: base, changeFrequency: "weekly", priority: 1.0 },
+    { url: `${base}/cards`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/best`, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${base}/learn`, changeFrequency: "weekly", priority: 0.85 },
 
     // Tools (5 original + 5 calculators)
-    { url: `${base}/smart-swipe`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/stack-builder`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/gap-finder`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/swipe-check`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/compare`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${base}/loan-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/fd-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/tax-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/insurance-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${base}/sip-calculator`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/smart-swipe`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/stack-builder`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/gap-finder`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/swipe-check`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/compare`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/loan-calculator`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/fd-calculator`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/tax-calculator`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/insurance-calculator`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/sip-calculator`, changeFrequency: "monthly", priority: 0.9 },
 
     // Learn category landing pages
-    { url: `${base}/learn/loans`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/learn/insurance`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/learn/savings`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/learn/tax`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-    { url: `${base}/learn/mutual-funds`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.85 },
+    { url: `${base}/learn/loans`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/learn/insurance`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/learn/savings`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/learn/tax`, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${base}/learn/mutual-funds`, changeFrequency: "weekly", priority: 0.85 },
 
-    { url: `${base}/whats-changed`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.85 },
-    { url: `${base}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
-    { url: `${base}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.5 },
-    { url: `${base}/how-we-earn`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.4 },
-    { url: `${base}/editorial-policy`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.4 },
-    { url: `${base}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.4 },
-    { url: `${base}/privacy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
-    { url: `${base}/terms`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/whats-changed`, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${base}/blog`, changeFrequency: "weekly", priority: 0.7 },
+    { url: `${base}/about`, changeFrequency: "monthly", priority: 0.5 },
+    { url: `${base}/how-we-earn`, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${base}/editorial-policy`, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${base}/contact`, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${base}/privacy`, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${base}/terms`, changeFrequency: "yearly", priority: 0.3 },
   ];
 
   // Card pages (dynamic from data)
   const cardPages = CARDS.map(card => ({
-    url: `${base}/cards/${card.id}`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8,
+    url: `${base}/cards/${card.id}`, changeFrequency: "weekly", priority: 0.8,
   }));
 
   // Best-for pages — dynamic from data + new static pages (deduped)
   const dynamicBestFor = new Set(BEST_FOR_CATEGORIES.map(c => c.slug));
   const allBestForSlugs = [...new Set([...dynamicBestFor, ...STATIC_BESTFOR_SLUGS])];
   const bestForPages = allBestForSlugs.map(slug => ({
-    url: `${base}/best/${slug}`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.85,
+    url: `${base}/best/${slug}`, changeFrequency: "weekly", priority: 0.85,
   }));
 
   // Comparison pages — dynamic + new static (deduped)
   const dynamicCompare = new Set(COMPARISONS.map(c => c.slug));
   const allCompareSlugs = [...new Set([...dynamicCompare, ...STATIC_COMPARE_SLUGS])];
   const comparisonPages = allCompareSlugs.map(slug => ({
-    url: `${base}/compare/${slug}`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8,
+    url: `${base}/compare/${slug}`, changeFrequency: "weekly", priority: 0.8,
   }));
 
   // Blog pages — dynamic from data + new static (deduped)
-  const dynamicBlog = new Set(BLOG_POSTS.map(p => p.id));
+  const dynamicBlog = new Set(BLOG_POSTS.map(p => p.id).filter(slug => !REDIRECTED_BLOG_SLUGS.has(slug)));
   const allBlogSlugs = [...new Set([...dynamicBlog, ...STATIC_BLOG_SLUGS])];
   const blogPages = allBlogSlugs.map(slug => ({
-    url: `${base}/blog/${slug}`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6,
+    url: `${base}/blog/${slug}`, changeFrequency: "monthly", priority: 0.6,
   }));
 
   // Learn article pages
   const learnArticlePages = Object.entries(LEARN_ARTICLES).flatMap(([category, articles]) =>
     articles.map(slug => ({
-      url: `${base}/learn/${category}/${slug}`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.75,
+      url: `${base}/learn/${category}/${slug}`, changeFrequency: "monthly", priority: 0.75,
     }))
   );
 

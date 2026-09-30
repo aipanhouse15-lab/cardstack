@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Home Loan Costs: EMI, Fees & Other Charges | Assure Fintech",
+  title: "Home Loan Costs: EMI, Fees & Other Charges",
   description: "Understand the components of home-loan cost, including interest, lender fees, property-related charges, disbursement and optional add-ons.",
   alternates: { canonical: "/learn/loans/home-loan-true-cost" },
 };
@@ -46,17 +46,16 @@ export default function HomeLoanTrueCostPage() {
     headline: "Home Loan Costs: EMI, Fees and Other Charges",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-03",
-    dateModified: "2026-09-25",
+    dateModified: "2026-09-28",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Loans", item: "https://assurefintech.com/learn/loans/" },
-      { "@type": "ListItem", position: 4, name: "Home Loan Costs", item: "https://assurefintech.com/learn/loans/home-loan-true-cost" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Loans", item: "https://www.assurefintech.com/learn/loans/" },
+      { "@type": "ListItem", position: 3, name: "Home Loan Costs", item: "https://www.assurefintech.com/learn/loans/home-loan-true-cost" },
     ],
   };
 
@@ -74,7 +73,7 @@ export default function HomeLoanTrueCostPage() {
       </header>
       <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 72px", fontSize: 16, lineHeight: 1.65, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
         <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }} aria-label="Breadcrumb">
-          <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Home Loan Costs
+          <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Home Loan Costs
         </nav>
 
         <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 26px" }}>The cost of borrowing depends on the rate and how it changes, the repayment period, charges and how funds are disbursed. Property-purchase costs are separate from lender charges, and many depend on location. Build your comparison from the actual documents rather than a generic “true cost” percentage.</p>
@@ -83,6 +82,16 @@ export default function HomeLoanTrueCostPage() {
           <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 12px" }}>1. Interest and repayment schedule</h2>
           <p style={{ margin: "0 0 12px" }}>Ask each lender for a repayment schedule based on the offered amount, rate, tenure, benchmark or reset terms, and disbursement plan. Compare total scheduled payments as well as the initial EMI. For a floating-rate loan, request examples of how a rate change may affect the EMI or tenure. These are scenarios—not forecasts.</p>
           <p style={{ margin: 0 }}>Use the <Link href="/loan-calculator" style={{ color: COLOR }}>loan calculator</Link> for an independent EMI illustration. Its assumptions are simplified and do not replace the lender's schedule or disclosure.</p>
+        </section>
+
+        <section aria-labelledby="home-loan-example" style={{ marginBottom: 26, padding: 20, borderRadius: 14, background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
+          <h2 id="home-loan-example" style={{ fontSize: 22, fontWeight: 700, margin: "0 0 10px" }}>Worked example: why a small rate gap matters</h2>
+          <p style={{ margin: "0 0 12px" }}>For a hypothetical ₹50 lakh loan over 20 years, assuming a constant monthly reducing-balance rate for the entire term and no fees:</p>
+          <ul style={{ paddingLeft: 22, margin: "0 0 12px" }}>
+            <li>At 8.50%: EMI is about ₹43,391; scheduled interest is about ₹54.14 lakh.</li>
+            <li>At 8.75%: EMI is about ₹44,186; scheduled interest is about ₹56.05 lakh.</li>
+          </ul>
+          <p style={{ margin: 0 }}>That is roughly ₹795 more per month and ₹1.91 lakh more scheduled interest in this simplified model. It is not a quote from SBI, HDFC Bank or ICICI Bank: floating rates can reset, and actual fees, disbursement timing and repayments change the result.</p>
         </section>
 
         <section style={{ marginBottom: 26 }}>

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Compare SBI, HDFC Bank & ICICI Home Loans | Assure Fintech",
+  title: "Compare SBI, HDFC Bank & ICICI Home Loans",
   description: "A practical checklist for comparing home-loan offers from SBI, HDFC Bank and ICICI Bank using current written rates, fees, repayment terms and eligibility.",
   alternates: { canonical: "/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" },
   openGraph: {
@@ -47,17 +47,16 @@ export default function PageSBIvsHDFCvsICICI() {
     headline: "Compare SBI, HDFC Bank and ICICI Bank Home-Loan Offers",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-25",
+    dateModified: "2026-09-28",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Loans", item: "https://assurefintech.com/learn/loans/" },
-      { "@type": "ListItem", position: 4, name: "Compare Home-Loan Offers", item: "https://assurefintech.com/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Loans", item: "https://www.assurefintech.com/learn/loans/" },
+      { "@type": "ListItem", position: 3, name: "Compare Home-Loan Offers", item: "https://www.assurefintech.com/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" },
     ],
   };
 
@@ -75,7 +74,7 @@ export default function PageSBIvsHDFCvsICICI() {
       </header>
       <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 72px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
         <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
-          <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Compare Home Loans
+          <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Compare Home Loans
         </nav>
 
         <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 26px" }}>A published starting rate is not a personalized approval or quote. The relevant comparison is between offers issued for your profile and property, using the same loan amount, tenure and repayment assumptions.</p>
@@ -107,6 +106,17 @@ export default function PageSBIvsHDFCvsICICI() {
             </table>
           </div>
           <p style={{ color: "var(--text-muted)", fontSize: 13, margin: "10px 0 0" }}>The worksheet intentionally contains no bank rates or fees: enter the amounts and terms in the offers you receive.</p>
+        </section>
+
+        <section style={{ marginBottom: 26, padding: 20, borderRadius: 14, background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
+          <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 10px" }}>Go straight to each lender’s rate information</h2>
+          <p style={{ margin: "0 0 12px" }}>Use these official pages to check what each lender currently publishes, then request a written offer for your profile. A starting or advertised rate is not a personalized quote; eligibility and final pricing depend on the borrower, loan and property.</p>
+          <ul style={{ paddingLeft: 22, margin: 0 }}>
+            <li><a href="https://sbi.co.in/web/interest-rates/interest-rates/loan-schemes-interest-rates/home-loans-interest-rates-current" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>SBI — current home-loan interest rates</a></li>
+            <li><a href="https://www.hdfc.bank.in/interest-rates" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>HDFC Bank — interest-rate information</a></li>
+            <li><a href="https://www.icici.bank.in/personal-banking/loans/home-loan/interest-rates" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>ICICI Bank — home-loan interest rates and charges</a></li>
+          </ul>
+          <p style={{ color: "var(--text-muted)", fontSize: 12, margin: "12px 0 0" }}>Issuer pages checked 28 September 2026; they may change after this review.</p>
         </section>
 
         <section style={{ marginBottom: 26 }}>

@@ -277,9 +277,9 @@ export default function BestCreditCardForOnlineShopping() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
-      { "@type": "ListItem", position: 3, name: "Best Credit Card for Online Shopping", item: "https://assurefintech.com/best/credit-card-for-online-shopping" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
+      { "@type": "ListItem", position: 3, name: "Best Credit Card for Online Shopping", item: "https://www.assurefintech.com/best/credit-card-for-online-shopping" },
     ]
   };
 
@@ -437,7 +437,7 @@ export default function BestCreditCardForOnlineShopping() {
           <li>Check SBI's revised exclusion list; do not infer eligibility from the online checkout alone.</li>
           <li>For Amazon Pay ICICI, consider whether Amazon Pay balance and the Prime/non-Prime rate fit your use.</li>
           <li>Compare current fees and exclusions before applying for any card.</li>
-          <li>Read the <Link href="/blog/reward-points-vs-cashback">reward points vs cashback explainer</Link> before valuing non-cash rewards.</li>
+          <li>Read the <Link href="/blog/how-reward-points-work-india">reward points vs cashback explainer</Link> before valuing non-cash rewards.</li>
         </ol>
       </section>
       <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>

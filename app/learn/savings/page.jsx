@@ -1,7 +1,7 @@
 import SavingsClient from "./SavingsClient";
 
 export const metadata = {
-  title: "Savings & Fixed Deposits: Compare Returns, Tax and Risk | Assure Fintech",
+  title: "Savings & Fixed Deposits: Compare Returns, Tax and Risk",
   description: "Compare fixed deposits, PPF and debt funds using clearly labelled assumptions for returns, tax, inflation, liquidity and risk.",
   alternates: { canonical: "/learn/savings" },
 };

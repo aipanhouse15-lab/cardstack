@@ -3,11 +3,11 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Best Credit Cards for Students in India 2026: Your First Card, Done Right",
-  description: "Best Credit Cards for Students in India 2026: Your First Card, Done Right",
+  description: "Compare student-friendly credit cards, secured-card routes, fees and reward limits. Approval and credit-score outcomes depend on each applicant and issuer.",
   alternates: { canonical: "/blog/best-card-students-2026" },
   openGraph: {
     title: "Best Credit Cards for Students in India 2026: Your First Card, Done Right",
-    description: "Best Credit Cards for Students in India 2026: Your First Card, Done Right",
+    description: "Compare student-friendly credit cards, secured-card routes, fees and reward limits. Approval and credit-score outcomes depend on each applicant and issuer.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -22,18 +22,18 @@ const COLOR = "#7c3aed";
 const UPDATED = "September 26, 2026";
 
 const SvgStudentCards = () => (
-  <svg viewBox="0 0 720 282" role="img" aria-label="Best credit cards for students and young adults in India 2026 showing HDFC Millennia SBI Student Plus ICICI Coral and Amazon Pay ICICI with their key features and typical approval difficulty" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">BEST FIRST CREDIT CARDS FOR STUDENTS · JUNE 2026</text>
+  <svg viewBox="0 0 720 282" role="img" aria-label="Student credit card options in India, comparing fees, reward categories and issuer eligibility" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+    <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">STUDENT CARD OPTIONS · REVIEWED SEPTEMBER 2026</text>
     {[{ h: "Card" }, { h: "Annual Fee" }, { h: "Best Feature" }, { h: "Approval" }, { h: "Key Benefit" }].map(({ h }, i) => {
       const xs = [20, 180, 290, 480, 560];
       return <rect key={h} x={xs[i]} y="30" width={[150, 100, 180, 70, 160][i]} height="22" fill={COLOR}><text x={xs[i] + [150, 100, 180, 70, 160][i] / 2} y="45" textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill="#fff">{h}</text></rect>;
     })}
     {[
       ["HDFC Millennia", "₹1,000/yr", "5% on 10 partner brands", "Moderate", "Fee waived at ₹1L spend"],
-      ["Amazon Pay ICICI", "FREE", "5% on Amazon", "Easy", "No annual fee, no cap on Amazon"],
-      ["Axis ACE", "₹499/yr", "5% on UPI apps", "Moderate", "Fee waived at ₹2L spend"],
+      ["Amazon Pay ICICI", "FREE", "Up to 5% on Amazon", "Issuer decides", "Prime rate; eligible purchases"],
+      ["Axis ACE", "₹499/yr", "5% on eligible GPay bills", "Issuer decides", "Not a general UPI rate"],
       ["SBI SimplyCLICK", "₹499/yr", "10X on 6 partners", "Easy", "Fee waived at ₹1L/yr spend"],
-      ["ICICI Coral (FD-backed)", "₹500/yr", "Any approval", "Very Easy", "Builds CIBIL from day 1"],
+      ["Secured card (check issuer)", "Varies", "Credit limit linked to FD", "Issuer decides", "Compare lien and FD terms"],
     ].map((row, ri) => (
       <g key={row[0]}>
         <rect x="20" y={52 + ri * 32} width={700} height="28" fill={ri % 2 === 0 ? "var(--raise)" : "transparent"} />
@@ -45,30 +45,28 @@ const SvgStudentCards = () => (
         })}
       </g>
     ))}
-        <text x="20" y="235" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Amazon Pay ICICI is the single best first card for students: free forever, 5% on Amazon (where students spend heavily),</text>
-    <text x="20" y="249" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">and easy approval even with thin credit files.</text>
+        <text x="20" y="235" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">There is no universal best first card. Check issuer eligibility, annual fees, reward exclusions, and whether rewards</text>
+    <text x="20" y="249" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">fit your spending. A card application is not guaranteed to be approved.</text>
   </svg>
 );
 
 const SvgCIBILBuilding = () => (
-  <svg viewBox="0 0 720 209" role="img" aria-label="How using a credit card responsibly builds CIBIL score over 12 months showing the gradual score improvement from using and paying credit card bills on time" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
-    <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">HOW A FIRST CREDIT CARD BUILDS YOUR CIBIL SCORE · TYPICAL TRAJECTORY</text>
-    <line x1="60" y1="140" x2="700" y2="140" stroke="var(--border)" />
-    {[{ mo: "Start", score: 0, x: 60 }, { mo: "Mo 3", score: 650, x: 160 }, { mo: "Mo 6", score: 680, x: 280 }, { mo: "Mo 9", score: 710, x: 400 }, { mo: "Mo 12", score: 730, x: 520 }, { mo: "Yr 2", score: 760, x: 640 }].map(({ mo, score, x }) => (
-      <g key={mo}>
-        <circle cx={x} cy={score === 0 ? 138 : 140 - (score - 600) * 0.8} r="6" fill={score >= 730 ? "#16a34a" : score >= 700 ? COLOR : "#f59e0b"} />
-        <text x={x} y={score === 0 ? 128 : 130 - (score - 600) * 0.8} textAnchor="middle" fontFamily="system-ui" fontSize="10" fontWeight="700" fill={score === 0 ? "var(--text-muted)" : COLOR}>{score === 0 ? "No score" : score}</text>
-        <text x={x} y="155" textAnchor="middle" fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{mo}</text>
+  <svg viewBox="0 0 720 209" role="img" aria-label="Responsible credit use supports a positive credit history, but credit-score results and timelines are not guaranteed" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+    <text x="20" y="28" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">BUILD A POSITIVE CREDIT HISTORY · NO GUARANTEED SCORE OR TIMELINE</text>
+    <line x1="70" y1="94" x2="650" y2="94" stroke="var(--border)" strokeWidth="3" />
+    {[{ x: 100, title: "Pay on time", sub: "Every statement" }, { x: 285, title: "Pay in full", sub: "Avoid revolving interest" }, { x: 470, title: "Use modestly", sub: "Keep balances manageable" }, { x: 640, title: "Check reports", sub: "Correct errors promptly" }].map(({ x, title, sub }) => (
+      <g key={title}>
+        <circle cx={x} cy="94" r="10" fill={COLOR} />
+        <text x={x} y="126" textAnchor="middle" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text)">{title}</text>
+        <text x={x} y="145" textAnchor="middle" fontFamily="system-ui" fontSize="9" fill="var(--text-muted)">{sub}</text>
       </g>
     ))}
-    <path d="M 60 138 L 160 92 L 280 64 L 400 48 L 520 36 L 640 20" fill="none" stroke={COLOR} strokeWidth="2" strokeDasharray="4,2" />
-        <text x="20" y="175" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Conditions for this trajectory: (1) Use card every month, (2) Pay FULL statement balance by due date, (3) Keep</text>
-    <text x="20" y="189" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">utilisation under 30% of limit. Miss any condition and the score building stalls or reverses.</text>
+    <text x="20" y="184" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Credit bureaus and lenders use their own data and criteria. Your score may take time to appear and cannot be predicted from a fixed schedule.</text>
   </svg>
 );
 
 const SvgStudentSpendSplit = () => (
-  <svg viewBox="0 0 720 235" role="img" aria-label="Typical college student monthly spending breakdown showing high spend on food delivery and online shopping categories that match Amazon Pay ICICI card benefits" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 235" role="img" aria-label="Illustrative monthly college-student spending categories; actual spending varies" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">TYPICAL STUDENT MONTHLY SPEND SPLIT · ₹8,000/MONTH BUDGET</text>
     {[
       { cat: "Food (Swiggy/Zomato/mess)", amt: 2500, pct: "31%", col: "#f97316" },
@@ -89,29 +87,25 @@ const SvgStudentSpendSplit = () => (
 );
 
 const SvgFDBackedCard = () => (
-  <svg viewBox="0 0 720 184" role="img" aria-label="Fixed deposit backed credit card explanation showing how students with no income can get a credit card by placing a fixed deposit as security at ICICI Axis or SBI" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 184" role="img" aria-label="How an FD-secured credit card uses a fixed deposit as collateral, with product terms varying by issuer" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">FD-BACKED CREDIT CARD: THE GUARANTEED APPROVAL PATH</text>
     <rect x="20" y="35" width="680" height="105" fill="var(--surface, #f0fdf4)" stroke="#16a34a" strokeWidth="1" rx="8" />
-    <text x="30" y="56" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#16a34a">How it works: Place ₹10,000–₹50,000 FD at the bank. Get a credit card with 80-90% of FD value as limit.</text>
-        <text x="30" y="76" fontSize="9" fontFamily="system-ui" fill="var(--text)">The FD earns 6-7% interest. The card earns cashback/rewards. You're building credit history with zero risk to the bank —</text>
-    <text x="30" y="90" fontSize="9" fontFamily="system-ui" fill="var(--text)">hence guaranteed approval.</text>
-        <text x="30" y="96" fontSize="9" fontFamily="system-ui" fill="var(--text)">Available at: ICICI Bank (iMobile), SBI (branch), Axis Bank (online). Process: open FD online, apply for card against it,</text>
-    <text x="30" y="110" fontSize="9" fontFamily="system-ui" fill="var(--text)">card issued within 7-10 days.</text>
-        <text x="30" y="116" fontSize="9" fontFamily="system-ui" fontWeight="600" fill="#16a34a">After 12-18 months of good behaviour: upgrade to a regular credit card with the same bank. FD released, limit potentially</text>
-    <text x="30" y="130" fontSize="9" fontFamily="system-ui" fontWeight="600" fill="#16a34a">increased.</text>
-        <text x="20" y="150" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Best for: Students with no income proof, self-employed with no ITR, NRIs building India credit history. The 6-7% FD</text>
-    <text x="20" y="164" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">interest partially offsets any nominal card fee.</text>
+    <text x="30" y="56" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="#16a34a">An FD-secured card uses a fixed deposit as collateral; limits and minimum deposits vary by issuer and card.</text>
+    <text x="30" y="76" fontSize="9" fontFamily="system-ui" fill="var(--text)">The deposit remains subject to the bank's lien and terms. Compare interest, fees, closure rules and how much credit</text>
+    <text x="30" y="90" fontSize="9" fontFamily="system-ui" fill="var(--text)">limit is offered before applying; approval, processing time and future upgrades are not guaranteed.</text>
+    <text x="30" y="110" fontSize="9" fontFamily="system-ui" fill="var(--text)">For example, Axis currently describes limits of up to 80–90% of the FD for its FD-backed card offering.</text>
+    <text x="20" y="164" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">This is one route for applicants without conventional income documents—not a risk-free or universally available product.</text>
   </svg>
 );
 
 const SvgFirstCardMistakes = () => (
-  <svg viewBox="0 0 720 238" role="img" aria-label="Common first credit card mistakes made by students in India including paying minimum due only and exceeding 50 percent credit utilization" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 238" role="img" aria-label="Five first-credit-card risks: minimum payments, high utilisation, late payments, unneeded applications and cash advances" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <text x="20" y="20" fontFamily="system-ui" fontSize="11" fontWeight="700" fill="var(--text-muted)">5 MISTAKES STUDENTS MAKE WITH THEIR FIRST CREDIT CARD</text>
     {[
       { mistake: "Paying minimum due only", impact: "36-42% annual interest on revolving balance — destroys all cashback earned", col: "#dc2626" },
-      { mistake: "Credit utilisation above 50%", impact: "CIBIL score tanks. Keep below 30% of limit for score building.", col: "#f97316" },
-      { mistake: "Missing payment due date", impact: "Late fee (₹500-1,200) + interest charge + negative CIBIL mark", col: "#dc2626" },
-      { mistake: "Applying for multiple cards simultaneously", impact: "Multiple hard enquiries lower CIBIL score 10-30 points", col: "#f59e0b" },
+      { mistake: "Using a large share of available limit", impact: "High utilisation may affect lender or bureau assessment; no universal threshold guarantees a score.", col: "#f97316" },
+      { mistake: "Missing payment due date", impact: "May lead to charges, interest and adverse repayment history; fees depend on issuer terms.", col: "#dc2626" },
+      { mistake: "Applying without comparing eligibility", impact: "Recent enquiries may be considered by lenders; the effect varies by profile and bureau model.", col: "#f59e0b" },
       { mistake: "Using card for cash withdrawal", impact: "2.5% cash advance fee + interest from withdrawal date — no grace period", col: "#dc2626" },
     ].map(({ mistake, impact, col }, i) => (
       <g key={mistake}>
@@ -120,8 +114,8 @@ const SvgFirstCardMistakes = () => (
         <text x="220" y={50 + i * 28} fontFamily="system-ui" fontSize="10" fill="var(--text-muted)">{impact}</text>
       </g>
     ))}
-        <text x="20" y="175" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">The single most important rule: set up auto-pay for FULL statement balance (not minimum due, not fixed amount). FULL.</text>
-    <text x="20" y="189" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">This one habit prevents all of the above mistakes automatically.</text>
+        <text x="20" y="175" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Pay the full statement balance by the due date when possible; set a reminder or auto-pay if useful.</text>
+    <text x="20" y="189" fontSize="9" fontFamily="system-ui" fill="var(--text-muted)">Auto-pay does not replace checking your statement, fees, or transactions.</text>
   </svg>
 );
 
@@ -129,18 +123,18 @@ export default function BlogBestCardStudents() {
   const faq = {
     "@context": "https://schema.org", "@type": "FAQPage",
     mainEntity: [
-      { "@type": "Question", "name": "Can students get a credit card in India without income proof?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, through two routes: (1) FD-backed credit card — place ₹10,000-50,000 in a fixed deposit, get a card with 80-90% of FD value as limit. Available at ICICI, SBI, Axis Bank with guaranteed approval. (2) Add-on card under a parent's account — the parent's primary card gets an add-on with the student as secondary holder. Both build CIBIL history in the student's name. Amazon Pay ICICI is also available to students with student ID + college enrollment proof even without a salary slip." } },
-      { "@type": "Question", "name": "What is the best credit card for college students?", "acceptedAnswer": { "@type": "Answer", "text": "Amazon Pay ICICI is the best first credit card for students: zero annual fee (free forever), 5% cashback on Amazon with no cap, 1% on other spends, and relatively easy approval. For students who spend heavily on food delivery: pair it with Axis Ace (5% on Swiggy/Zomato/Ola/Uber, ₹499 fee waived at ₹2L annual spend). These two cards cover the two biggest student spending categories at maximum cashback rates." } },
-      { "@type": "Question", "name": "Does having a credit card improve CIBIL score for students?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, significantly. Using a credit card responsibly is one of the fastest ways to build a CIBIL score from scratch. With no credit history, you start with no score (or ~300). After 6-12 months of on-time full-balance payments and utilisation under 30%, expect a score of 700-730. This score then qualifies you for better cards, personal loans at lower rates, and eventually home loans. The key is paying the FULL statement balance every month — not minimum due." } },
-      { "@type": "Question", "name": "What credit limit will a student get on their first card?", "acceptedAnswer": { "@type": "Answer", "text": "FD-backed cards: 80-90% of FD amount (deposit ₹20K, get ₹16,000-18,000 limit). Regular cards for students with income/scholarship: typically ₹15,000-50,000 starting limit. Amazon Pay ICICI for students typically starts at ₹20,000-40,000. The limit doesn't matter much for CIBIL purposes — what matters is keeping utilisation below 30% of whatever limit you're given." } },
-      { "@type": "Question", "name": "Should students apply for multiple credit cards?", "acceptedAnswer": { "@type": "Answer", "text": "No. Start with one card. Each application triggers a hard enquiry that reduces your CIBIL score by 5-15 points. Multiple applications in a short period look like credit-hungry behaviour and further reduce your score. Master one card, use it consistently, pay in full every month for 12-18 months, then consider a second card once your CIBIL is above 720. Good credit is a marathon, not a sprint." } },
+      { "@type": "Question", "name": "Can students get a credit card in India without income proof?", "acceptedAnswer": { "@type": "Answer", "text": "Some issuers offer FD-secured cards that may not require conventional income documents, and add-on cards may be another route. Eligibility, minimum deposit, credit limit and approval rules vary by issuer. Check the bank's current product terms; no general approval or processing-time guarantee applies." } },
+      { "@type": "Question", "name": "What is the best credit card for college students?", "acceptedAnswer": { "@type": "Answer", "text": "There is no universal best card. Compare issuer eligibility, annual fees, reward exclusions, merchant rates and reward form against your own spending. Amazon Pay ICICI lists 5% for Prime members and 3% for non-Prime members on eligible Amazon India purchases, credited as Amazon Pay balance. Axis ACE's 5% tier is for eligible Google Pay utility bills and recharges, not general UPI spending." } },
+      { "@type": "Question", "name": "Does having a credit card improve CIBIL score for students?", "acceptedAnswer": { "@type": "Answer", "text": "A reported account with on-time repayments and responsible use can contribute to credit history, but no score or timeline is guaranteed. Credit bureaus and lenders evaluate multiple factors, and a score may take time to appear. Pay the full statement balance by the due date and review your credit report for accuracy." } },
+      { "@type": "Question", "name": "What credit limit will a student get on their first card?", "acceptedAnswer": { "@type": "Answer", "text": "There is no standard student limit. The issuer sets it based on its product terms, application and credit assessment. For FD-secured cards, check the deposit, lien and credit-limit terms for the exact product." } },
+      { "@type": "Question", "name": "Should students apply for multiple credit cards?", "acceptedAnswer": { "@type": "Answer", "text": "Apply only when a card meets a genuine need and you understand its fees and terms. Lenders may review credit enquiries and recent applications as part of their assessment; the effect varies, so there is no universal point deduction or ideal waiting period. Avoid applications you do not intend to use." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Best Credit Cards for Students in India 2026: Your First Card Guide", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-06-04", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Best Credit Cards for Students in India 2026: Your First Card Guide", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-    { "@type": "ListItem", position: 3, name: "Best Card Students 2026", item: "https://assurefintech.com/blog/best-card-students-2026" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+    { "@type": "ListItem", position: 3, name: "Best Card Students 2026", item: "https://www.assurefintech.com/blog/best-card-students-2026" },
   ]};
 
   return (
@@ -156,7 +150,7 @@ export default function BlogBestCardStudents() {
             Best Credit Cards for Students in India 2026: Your First Card, Done Right
           </h1>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
-            Your first credit card isn't just about cashback — it's building 10+ years of credit history. Get this right and you'll qualify for home loans at the lowest rates. Get it wrong and you're paying 36% interest on revolving debt.
+            Start with affordability, issuer eligibility and clear repayment habits. A credit card can help establish a reported credit history, but no card, score or future loan approval is guaranteed.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
@@ -169,29 +163,29 @@ export default function BlogBestCardStudents() {
 <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Best Cards for Students Right Now</h2>
         <SvgStudentCards />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Amazon Pay ICICI is the default recommendation for most students. It's free, has no income threshold barrier, gives 5% on Amazon (where most students buy textbooks, gadgets, and daily items), and has the simplest approval process. Start here unless you have a specific reason not to.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you're a Swiggy/Zomato heavy user: add Axis Ace as a second card after 6-12 months. The 5% on food delivery and ride-hailing apps is genuinely valuable for the typical college lifestyle, and the ₹499 fee is waived if you spend ₹2L annually (₹16,700/month — achievable for working students).</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>There is no default card for every student. Look first at whether the issuer accepts your application, whether the card has an annual fee, and whether its rewards apply to purchases you actually make. Amazon Pay ICICI may suit someone who shops on Amazon and is comfortable with Amazon Pay balance. ICICI lists 5% for Prime members and 3% for non-Prime members on eligible Amazon India purchases; exclusions apply.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you regularly use Swiggy, Zomato or Ola, Axis ACE may be worth comparing: Axis lists a 4% tier on those merchants, sharing a ₹500 billing-cycle cap with the 5% eligible Google Pay utility/recharge tier. The fee is ₹499; the renewal waiver threshold and eligible annual spend are issuer-defined. It is not a 5% rate on UPI or all food-delivery transactions.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Why Your Spend Profile Matters</h2>
         <SvgStudentSpendSplit />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Matching your card to your actual spending matters more than the headline rate. A student who orders Swiggy 15 times a month and never uses Amazon should prioritise Axis Ace over Amazon Pay ICICI. The card that earns the most on your specific spending pattern is the right card for you — not the one with the highest advertised rate on a category you don't use.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Matching a card to your actual spending matters more than a headline rate. A student who shops on Amazon may value Amazon Pay balance differently from someone who rarely uses it. If you use Swiggy, Zomato or Ola, Axis ACE's listed 4% merchant tier may be relevant, but it shares a ₹500 billing-cycle cap with the eligible 5% Google Pay utility/recharge tier. Check your eligible transactions and current fees.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Can't Get a Card? Use an FD-Backed Card</h2>
         <SvgFDBackedCard />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you're rejected for a regular card (common for students with no income proof), an FD-backed card is the solution. Place ₹20,000-30,000 in an FD at ICICI or Axis, get a credit card with ₹16,000-24,000 limit, and start building your CIBIL score. After 12-18 months of good behaviour, the bank will typically offer to upgrade you to a regular card and release the FD.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you do not qualify for a regular card, ask issuers whether they offer an FD-secured option. The deposit is collateral and remains subject to the bank's lien and product terms. Minimum deposit, limit, fee, processing and any upgrade or FD-release path vary; check the current terms for the exact product.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Building Your CIBIL Score: The Real Goal</h2>
         <SvgCIBILBuilding />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>The cashback is nice. The CIBIL score you build is far more valuable. A 760+ CIBIL score built by 25-26 gets you: home loans at the lowest rates (saving ₹10-20L over a 20-year loan), personal loans without rejections, premium cards without income hassle, and zero-cost balance transfers. Every month you pay your full balance on time is an investment in that future.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>On-time repayments and manageable credit use can support a positive credit history, but there is no guaranteed score or timetable—and a high score does not guarantee loan or card approval. Pay the full statement balance by its due date, avoid borrowing you cannot repay, and review your credit report for errors. Lenders set their own eligibility and pricing.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The 5 Mistakes That Destroy Your Credit Start</h2>
+        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Five First-Card Risks to Understand</h2>
         <SvgFirstCardMistakes />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Set up auto-pay for FULL statement balance — not minimum due, not a fixed amount. FULL. This single action prevents 4 of the 5 mistakes above automatically. The fifth (cash withdrawal) you simply have to know to avoid — never use a credit card at an ATM.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>See our <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL score guide</Link>, our <Link href="/blog/beginners-guide" style={{ color: COLOR }}>complete beginner's guide to credit cards</Link>, and our <Link href="/blog/first-card-decision-framework" style={{ color: COLOR }}>first card decision framework</Link> for more detail.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Pay the full statement balance on time when possible; paying only the minimum can leave a costly revolving balance. Cash advances, annual fees, late charges and interest vary by issuer, so read the card's current fee schedule. A reminder or auto-pay can help, but review each statement.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>See our <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL score guide</Link>, our <Link href="/blog/beginners-guide" style={{ color: COLOR }}>complete beginner's guide to credit cards</Link>, and our <Link href="/best/best-credit-card-for-beginners-india" style={{ color: COLOR }}>first card decision framework</Link> for more detail.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
@@ -202,8 +196,8 @@ export default function BlogBestCardStudents() {
           </details>
         ))}
       </section>
-      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 16 }}>Related: <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL score 101</Link> · <Link href="/blog/first-card-decision-framework" style={{ color: COLOR }}>first card framework</Link> · <Link href="/blog/beginners-guide" style={{ color: COLOR }}>beginners guide</Link></p>
-      <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>Card terms verified against HDFC, Amazon/ICICI, Axis Bank, SBI Card disclosures as of {UPDATED}. Not financial advice.</footer>
+      <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 16 }}>Related: <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL score 101</Link> · <Link href="/best/best-credit-card-for-beginners-india" style={{ color: COLOR }}>first card framework</Link> · <Link href="/blog/beginners-guide" style={{ color: COLOR }}>beginners guide</Link></p>
+      <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>Issuer terms and eligibility can change. See <a href="https://www.icici.bank.in/personal-banking/cards/credit-card/amazon-pay-credit-card/amazon-pay-faq" target="_blank" rel="noreferrer">ICICI Amazon Pay FAQ</a>, <a href="https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card" target="_blank" rel="noreferrer">Axis ACE</a>, <a href="https://www.axis.bank.in/cards/credit-card/credit-card-against-fixed-deposit" target="_blank" rel="noreferrer">Axis FD-secured card information</a> and <a href="https://www.cibil.com/contact-us-faq" target="_blank" rel="noreferrer">CIBIL FAQs</a>. Not financial advice.</footer>
     </main>
     </>
   );

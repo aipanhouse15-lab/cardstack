@@ -3,7 +3,7 @@ import Script from "next/script";
 
 export const metadata = {
   title: "How to Read Your Credit Card Statement: A Plain-English Walkthrough",
-  description: "How to Read Your Credit Card Statement: A Plain-English Walkthrough",
+  description: "Understand the key parts of an Indian credit-card statement: billed balance, due date, minimum due, transactions, EMI and issuer-specific rewards.",
   alternates: { canonical: "/blog/read-credit-card-statement" },
   openGraph: {
     title: "How to Read Your Credit Card Statement: A Plain-English Walkthrough",
@@ -27,7 +27,7 @@ const SvgStatementAnatomy = () => (
     <text x="360" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Your Credit Card Statement: What Each Section Actually Means</text>
     <rect x="20" y="38" width="680" height="52" rx="6" fill={COLOR} opacity="0.25" stroke={COLOR} strokeWidth="1.5" />
     <text x="36" y="58" fontSize="12" fontWeight="700" fill={COLOR}>STATEMENT SUMMARY</text>
-    <text x="36" y="76" fontSize="11" fill="var(--text-muted)">Statement Date: 15 May 2026  |  Payment Due Date: 5 Jun 2026  |  Credit Limit: ₹1,50,000</text>
+    <text x="36" y="76" fontSize="11" fill="var(--text-muted)">Example statement summary | Billing and due dates are set by your issuer</text>
     <rect x="20" y="100" width="220" height="70" rx="6" fill="var(--raise)" stroke="#ca8a04" strokeWidth="1" />
     <text x="30" y="120" fontSize="11" fontWeight="700" fill="#854d0e">Total Amount Due</text>
     <text x="30" y="138" fontSize="18" fontWeight="800" fill="#854d0e">₹42,380</text>
@@ -35,14 +35,14 @@ const SvgStatementAnatomy = () => (
     <rect x="260" y="100" width="220" height="70" rx="6" fill="var(--raise)" stroke="#dc2626" strokeWidth="1" />
     <text x="270" y="120" fontSize="11" fontWeight="700" fill="#991b1b">Minimum Amount Due</text>
     <text x="270" y="138" fontSize="18" fontWeight="800" fill="#991b1b">₹2,119</text>
-    <text x="270" y="156" fontSize="10" fill="#991b1b">TRAP: costs you thousands more</text>
+    <text x="270" y="156" fontSize="10" fill="#991b1b">Not the same as paying the full balance</text>
     <rect x="500" y="100" width="200" height="70" rx="6" fill="#dcfce7" stroke={COLOR} strokeWidth="1" />
     <text x="510" y="120" fontSize="11" fontWeight="700" fill="#14532d">Available Credit</text>
     <text x="510" y="138" fontSize="18" fontWeight="800" fill="#14532d">₹1,07,620</text>
     <text x="510" y="156" fontSize="10" fill="#14532d">Limit minus balance</text>
     <rect x="20" y="184" width="680" height="44" rx="6" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-    <text x="36" y="203" fontSize="11" fontWeight="700" fill="var(--text)">Reward Points Balance: 8,420 pts  (expires Dec 2026)</text>
-    <text x="36" y="220" fontSize="10" fill="var(--text-muted)">Redemption value approx ₹842 at 10p per point. Don't let these expire!</text>
+    <text x="36" y="203" fontSize="11" fontWeight="700" fill="var(--text)">Rewards summary (if shown)</text>
+    <text x="36" y="220" fontSize="10" fill="var(--text-muted)">Check this card's current rules for eligible points, value and expiry.</text>
     <rect x="20" y="240" width="680" height="44" rx="6" fill="var(--raise)" stroke="#7c3aed" strokeWidth="1" />
     <text x="36" y="259" fontSize="11" fontWeight="700" fill="#7c3aed">Unbilled Transactions: ₹6,200</text>
     <text x="36" y="276" fontSize="10" fill="var(--text-muted)">Purchases made after statement date. Will appear on next month's statement. Not included in ₹42,380.</text>
@@ -194,32 +194,32 @@ export default function BlogReadCreditCardStatement() {
       {
         "@type": "Question",
         name: "What is the difference between statement date and payment due date?",
-        acceptedAnswer: { "@type": "Answer", text: "The statement date is when your bank closes the billing cycle and calculates your total dues. The payment due date is the deadline to pay that bill, typically 15 to 20 days after the statement date. Missing the due date triggers interest on your entire balance, not just the overdue amount." }
+        acceptedAnswer: { "@type": "Answer", text: "The statement date closes a billing cycle and the due date is the payment deadline shown by the issuer. The gap and the effect of a missed or partial payment depend on the card terms and applicable rules. Check your statement and issuer's MITC." }
       },
       {
         "@type": "Question",
         name: "What happens if I pay only the minimum amount due?",
-        acceptedAnswer: { "@type": "Answer", text: "You avoid a late payment penalty, but interest at 3 to 3.5 percent per month kicks in on your entire outstanding balance from the statement date. On a ₹50,000 balance, paying only the minimum each month means you could end up paying back over ₹90,000 in total by the time the debt is cleared." }
+        acceptedAnswer: { "@type": "Answer", text: "Paying only the minimum can stretch repayment over months or years and lead to substantial interest. If the total amount due is not cleared, the interest-free period may be lost and interest may be levied on the outstanding amount from transaction dates, as set out in the card terms and RBI directions. Paying the full amount due by the deadline generally avoids revolving interest on eligible purchases." }
       },
       {
         "@type": "Question",
         name: "What are unbilled transactions on a credit card?",
-        acceptedAnswer: { "@type": "Answer", text: "Unbilled transactions are purchases you made after the statement date. They reduce your available credit immediately but won't appear as a payable amount until your next statement. This is why your available credit can look lower than expected even right after paying your bill." }
+        acceptedAnswer: { "@type": "Answer", text: "Unbilled transactions generally refer to transactions not yet included in a generated statement. Check your issuer's app or statement for how pending, reversed and unbilled amounts affect available credit and the next bill." }
       },
       {
         "@type": "Question",
         name: "When do credit card reward points expire in India?",
-        acceptedAnswer: { "@type": "Answer", text: "It varies by card. HDFC Regalia points expire in 3 years. SBI credit card points expire in 2 years. Axis Magnus Edge Miles have a 3-year validity. HDFC Infinia points never expire. Always check your statement's reward balance section and set a calendar reminder 3 months before expiry." }
+        acceptedAnswer: { "@type": "Answer", text: "Expiry depends on the exact card and rewards program. Check the issuer's current reward terms and account portal for your balance and any expiry dates. See our general guide to valuing and checking reward points." }
       },
       {
         "@type": "Question",
         name: "How is the interest-free period calculated?",
-        acceptedAnswer: { "@type": "Answer", text: "The interest-free period runs from your transaction date to the payment due date of the billing cycle in which that transaction falls. If your billing cycle runs from the 1st to the 30th and your due date is the 20th of next month, a purchase on the 1st gets 50 days free, while a purchase on the 29th gets only 21 days free." }
+        acceptedAnswer: { "@type": "Answer", text: "The statement and due dates determine the potential interest-free period for eligible transactions, so the exact period varies with purchase date and billing cycle. It may not apply when a prior balance remains unpaid. Check your issuer's terms and statement illustration." }
       },
       {
         "@type": "Question",
         name: "Does converting a purchase to EMI affect my credit limit?",
-        acceptedAnswer: { "@type": "Answer", text: "Yes. When you convert a purchase to an EMI, the full amount is typically blocked from your credit limit immediately. Each monthly EMI repayment releases that portion of the limit. So a ₹30,000 EMI conversion reduces your available credit by ₹30,000 from day one, not by ₹5,000 per month." }
+        acceptedAnswer: { "@type": "Answer", text: "An EMI conversion can affect available credit, but the treatment and release of the outstanding amount depend on the issuer and product terms. Check the conversion confirmation and statement for the principal, interest, fees and limit impact." }
       },
       {
         "@type": "Question",
@@ -240,7 +240,7 @@ export default function BlogReadCreditCardStatement() {
     headline: "How to Read Your Credit Card Statement: A Plain-English Walkthrough",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-09-28",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -248,9 +248,9 @@ export default function BlogReadCreditCardStatement() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "How to Read Your Credit Card Statement", item: "https://assurefintech.com/blog/read-credit-card-statement" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "How to Read Your Credit Card Statement", item: "https://www.assurefintech.com/blog/read-credit-card-statement" },
     ],
   };
 
@@ -267,7 +267,7 @@ export default function BlogReadCreditCardStatement() {
             How to Read Your Credit Card Statement: A Plain-English Walkthrough
           </h1>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
-            Your monthly statement is full of traps disguised as numbers. Here's how to decode every line before it costs you money.
+            Your statement shows what was billed, when payment is due, and how transactions and charges are recorded. Here is a practical guide to the sections worth checking.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>
@@ -289,15 +289,12 @@ export default function BlogReadCreditCardStatement() {
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 2: Crack the Date Trinity</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>There are three dates on every statement and they confuse even experienced card users. The statement date is when your billing cycle ended. The payment due date is your deadline to pay. And somewhere in between is the interest-free cutoff.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>A transaction made the day before your statement date gets only 20 days free (until the due date). A transaction made the day after your statement date gets up to 50 days free (full next cycle plus due date window). Knowing this lets you time large purchases to maximise your float.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>The available period depends on the purchase date, billing cycle and due date shown by your issuer. The interest-free period may not apply if you carry an unpaid balance. Do not use a generic day count in place of the issuer's statement or card terms.</p>
         <SvgDatesExplained />
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 3: Never Pay Just the Minimum Amount Due</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>The minimum amount due is usually 5 percent of your outstanding balance or ₹200, whichever is higher. Paying it keeps you safe from late fees (typically ₹500 to ₹1,300 depending on your balance bracket) but triggers interest on your full balance at 3 to 3.5 percent per month.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Here's the real math. You have ₹50,000 outstanding on your HDFC card at 3.5 percent monthly. You pay ₹2,500 minimum each month. By the time you clear the debt, you will have paid over ₹92,000 for something that originally cost ₹50,000. That's the minimum due trap.</p>
-        <SvgMinDueTrap />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>The rule is simple: always pay the total amount due, not the minimum. If you genuinely can't, pay as much as possible above the minimum to reduce the interest burden.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>The minimum due is calculated under your issuer's terms; it is not a payoff plan. Paying only this amount can keep the remaining balance outstanding and lead to significant interest. RBI requires statements to warn cardholders that minimum-only repayment can stretch over months or years with compounded interest. If possible, pay the full amount due by the displayed deadline. If you cannot, pay as much as you can and contact your issuer to understand the cost and options.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 4: Calculate Your Real Interest-Free Window</h2>
@@ -307,9 +304,8 @@ export default function BlogReadCreditCardStatement() {
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 5: Decode Your Reward Points Balance</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Every statement shows your reward points balance and (usually) an expiry date. Most Indians let their points expire unused. That's free money walking out the door.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>The value of a point varies dramatically by card. HDFC Regalia points are worth 40 paise each when redeemed on SmartBuy. SBI points are worth 25 paise. Axis Edge Miles can be worth over ₹1 when transferred to airline programs. Know your card's rate before assuming your balance is worth a lot or a little.</p>
-        <SvgRewardPointsDecoder />
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Some statements or apps show a reward balance or expiry details; the layout varies by issuer. Reward value and expiry are specific to the card and redemption route. Check current program terms and your account balance rather than applying a generic point value.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Before a product change or closure, check whether points can be redeemed or transferred, and whether any deadline applies. Our <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>reward-points guide</Link> explains a simple way to compare redemption value.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 6: Understand Unbilled Transactions</h2>
@@ -319,7 +315,7 @@ export default function BlogReadCreditCardStatement() {
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Step 7: Read Your EMI Breakdowns Carefully</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you've converted any purchases to EMI, the statement will show a separate EMI section. The monthly installment is already included in your total amount due, so you don't pay it separately. What you need to watch is the outstanding EMI principal, because it blocks your credit limit.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you have converted a purchase to EMI, check the statement and conversion confirmation for the installment, outstanding principal, interest, fees and any effect on available credit. Presentation and limit treatment can differ by issuer.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Also check whether your EMI is genuinely no-cost or simply deferred interest. Some merchants advertise "no-cost EMI" but add a subvention fee or processing charge of 1 to 2 percent upfront. That fee appears as a debit on your statement in month 1.</p>
         <SvgEmiBreakdown />
       </section>
@@ -336,8 +332,8 @@ export default function BlogReadCreditCardStatement() {
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Open your bank's app, go to the credit card section, and set up auto-debit for the full statement balance. This single action eliminates every interest risk and every late payment penalty permanently.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Then check your reward points balance. If you have points expiring in the next 6 months, redeem them today against your statement or for a flight. Banks don't remind you. Your statement does, but only if you read it.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you enable auto-debit, check that it is set for the full amount due, the linked account has sufficient funds, and the debit succeeds by the due date. Continue to review statements and payment confirmations; auto-debit is not a substitute for checking the account.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Check whether your reward balance has an expiry date under your card's current program terms and choose a redemption only after comparing its actual value and costs.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
@@ -359,7 +355,7 @@ export default function BlogReadCreditCardStatement() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Assure Fintech is an independent comparison platform. Interest rates and reward point values change without notice. Always verify current rates in your card's most-recent Most Important Terms and Conditions (MITC) document. Reviewed September 26, 2026.
+        Assure Fintech is an independent comparison platform. Statement labels and card terms vary by issuer. This guide was reviewed September 28, 2026 against the RBI's <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12300" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>credit-card directions</a>; check your issuer's latest MITC and statement for account-specific details.
       </footer>
     </main>
     </>

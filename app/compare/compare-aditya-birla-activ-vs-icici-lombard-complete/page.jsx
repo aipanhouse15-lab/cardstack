@@ -57,9 +57,9 @@ export default function CompareAbhVsIciciLombard() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://assurefintech.com/compare/" },
-      { "@type": "ListItem", position: 3, name: "ABH Activ vs ICICI Lombard Complete", item: "https://assurefintech.com/compare/aditya-birla-activ-vs-icici-lombard-complete" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.assurefintech.com/compare/" },
+      { "@type": "ListItem", position: 3, name: "ABH Activ vs ICICI Lombard Complete", item: "https://www.assurefintech.com/compare/aditya-birla-activ-vs-icici-lombard-complete" }
     ]
   };
 

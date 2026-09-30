@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Personal Loan Cost: Rates, Fees & APR | Assure Fintech",
+  title: "Personal Loan Cost: Rates, Fees & APR",
   description: "Learn how to compare personal-loan rates, repayment schedules, net disbursal, fees and prepayment terms using your written offer.",
   alternates: { canonical: "/learn/loans/personal-loan-actual-apr" },
   openGraph: { title: "Personal Loan Cost: Rates, Fees & APR", description: "A checklist for comparing personal-loan offers and understanding their full cost.", type: "article", siteName: "Assure Fintech" },
@@ -41,15 +41,14 @@ const faq = {
 };
 
 export default function PagePersonalLoanAPR() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Personal Loan Cost: How to Compare Rates, Fees and Disbursal", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Personal Loan Cost: How to Compare Rates, Fees and Disbursal", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Loans", item: "https://assurefintech.com/learn/loans/" },
-      { "@type": "ListItem", position: 4, name: "Personal Loan Costs", item: "https://assurefintech.com/learn/loans/personal-loan-actual-apr" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Loans", item: "https://www.assurefintech.com/learn/loans/" },
+      { "@type": "ListItem", position: 3, name: "Personal Loan Costs", item: "https://www.assurefintech.com/learn/loans/personal-loan-actual-apr" },
     ],
   };
 
@@ -66,7 +65,7 @@ export default function PagePersonalLoanAPR() {
         </div>
       </header>
       <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 72px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
-        <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Personal Loan Costs</nav>
+        <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Personal Loan Costs</nav>
 
         <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 26px" }}>A loan's cost is determined by its actual terms: how interest is calculated, the schedule of payments, fees, taxes, any deductions from disbursal and early-repayment conditions. Offers differ by applicant and can change, so use current written documents.</p>
 
@@ -79,6 +78,13 @@ export default function PagePersonalLoanAPR() {
           <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 12px" }}>Check how interest is calculated</h2>
           <p style={{ margin: "0 0 12px" }}>A flat-rate percentage and a reducing-balance percentage are not directly comparable. Ask which method applies, the periodic rate used, whether the quoted rate is annual or monthly, how payments are allocated, and for the full repayment schedule. Do not infer an APR solely by multiplying a monthly rate by twelve; compounding and payment timing matter.</p>
           <p style={{ margin: 0 }}>Where a Key Facts Statement or other standardized cost disclosure applies, compare the disclosed annual percentage rate and covered charges as defined there. This site's <Link href="/loan-calculator" style={{ color: COLOR }}>loan calculator</Link> illustrates EMI and hypothetical upfront-fee effects; it does not calculate or replace a lender's standardized APR disclosure.</p>
+        </section>
+
+        <section aria-labelledby="personal-loan-example" style={{ marginBottom: 26, padding: 20, borderRadius: 14, background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
+          <h2 id="personal-loan-example" style={{ fontSize: 22, fontWeight: 700, margin: "0 0 10px" }}>Worked example: compare cash received with repayments</h2>
+          <p style={{ margin: "0 0 12px" }}>Suppose a lender sanctions ₹5,00,000 for 36 months at a hypothetical 12% nominal annual rate on a monthly reducing balance. The EMI is about ₹16,607 and the 36 instalments total about ₹5,97,858. If a 2% processing fee plus 18% GST on that fee (₹11,800 total) is deducted upfront, the borrower receives ₹4,88,200.</p>
+          <p style={{ margin: 0 }}>Using those assumptions and equal month-end payments, the cash-flow yield is about 14.6% effective annualized—not 12%. This is an illustration, not a lender APR or offer: payment dates, fee treatment, other charges and the regulator-prescribed KFS method can change the disclosed result. Compare the lender's KFS, APR computation and repayment schedule for the actual loan.</p>
+          <p style={{ fontSize: 13, color: "var(--text-muted)", margin: "12px 0 0" }}>See the <a href="https://website.rbi.org.in/documents/d/rbi/handbookg27022025d0f3f53f5d3c4310a6bb2f8ac2175d3a" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>RBI handbook’s Key Facts Statement guidance</a> for the standardized loan-cost disclosure framework.</p>
         </section>
 
         <section style={{ marginBottom: 26 }}>

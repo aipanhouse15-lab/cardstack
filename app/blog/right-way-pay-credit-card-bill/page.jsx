@@ -274,9 +274,9 @@ export default function BlogRightWayPayCreditCardBill() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "Right Way to Pay Credit Card Bill", item: "https://assurefintech.com/blog/right-way-pay-credit-card-bill" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "Right Way to Pay Credit Card Bill", item: "https://www.assurefintech.com/blog/right-way-pay-credit-card-bill" },
     ]
   };
 

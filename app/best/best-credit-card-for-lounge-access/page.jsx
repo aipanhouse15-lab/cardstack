@@ -2,11 +2,11 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Airport Lounge Access in India (June 2026)",
+  title: "Best Credit Card for Airport Lounge Access in India (September 2026)",
   description: "Compare credit cards for airport lounge access in India. Check visit caps, spend requirements, eligible lounges, guest charges and card-variant terms before travelling.",
   alternates: { canonical: "/best/best-credit-card-for-lounge-access" },
   openGraph: {
-    title: "Best Credit Card for Airport Lounge Access in India (June 2026)",
+    title: "Best Credit Card for Airport Lounge Access in India (September 2026)",
     description: "Compare credit cards for airport lounge access in India. Check visit caps, spend requirements, eligible lounges, guest charges and card-variant terms before travelling.",
     type: "article",
     siteName: "Assure Fintech",
@@ -178,9 +178,9 @@ export default function BestCreditCardForLoungeAccess() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
-      { "@type": "ListItem", position: 3, name: "Best Credit Card for Lounge Access", item: "https://assurefintech.com/best/credit-card-for-lounge-access" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
+      { "@type": "ListItem", position: 3, name: "Best Credit Card for Lounge Access", item: "https://www.assurefintech.com/best/credit-card-for-lounge-access" }
     ]
   };
 

@@ -2,11 +2,11 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Cashback Credit Card with No Annual Fee in India (September 2026)",
+  title: "No-Annual-Fee Credit Cards in India: Compare Current Features",
   description: "Compare lifetime-free credit cards by eligible rewards, fees, caps, exclusions and the spending categories you actually use.",
   alternates: { canonical: "/best/best-cashback-credit-card-no-annual-fee" },
   openGraph: {
-    title: "Best Cashback Credit Card with No Annual Fee in India (September 2026)",
+    title: "No-Annual-Fee Credit Cards in India: Compare Current Features",
     description: "Compare lifetime-free credit cards by eligible rewards, fees, caps, exclusions and the spending categories you actually use.",
     type: "article",
     siteName: "Assure Fintech",
@@ -18,7 +18,7 @@ export const metadata = {
 // Updated: September 26, 2026
 
 const COLOR = "#16a34a";
-const UPDATED = "September 26, 2026";
+const UPDATED = "September 28, 2026";
 
 // --- SVG Components ---
 
@@ -205,7 +205,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
         name: "What is AU LIT credit card and why is it recommended?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "AU LIT is a unique free credit card from AU Small Finance Bank that lets you choose 2 reward categories from a list of options including online shopping, dining, travel, and entertainment. You earn accelerated rewards on your chosen 2 categories and a base rate on everything else. The ability to customize your reward categories makes it genuinely useful for profiles that Amazon Pay ICICI does not cover well.",
+          text: "AU LIT has a lifetime-free base card, while optional reward and cashback features have their own fees, minimum spends, caps and 90-day terms; the bank says features may auto-renew. Check the current in-app terms and renewal setting before activating a feature. Do not treat the base card as a free accelerated-reward product.",
         },
       },
       {
@@ -229,7 +229,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
         name: "What are the best free credit cards for students in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Students can apply for IDFC FIRST WOW (secured against FD, no income requirement) or Axis Neo (₹250/year, effectively near-free). Amazon Pay ICICI requires income proof but has a low minimum income threshold. AU LIT is also accessible for students with part-time income. Avoid premium cards with high annual fees during student years.",
+          text: "A student's approval depends on the issuer's current eligibility checks and the applicant's circumstances. An FD-backed product may be one route to ask about, but it requires setting aside a deposit and still has fees, interest and repayment terms. Compare the issuer's current offer and do not assume approval based on age, student status or a generic income threshold.",
         },
       },
       {
@@ -254,10 +254,10 @@ export default function BestCashbackCreditCardNoAnnualFee() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Cashback Credit Card with No Annual Fee in India (September 2026): Amazon Pay ICICI and Beyond",
+    headline: "No-Annual-Fee Credit Cards in India: Compare Current Features",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-09-28",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -265,13 +265,13 @@ export default function BestCashbackCreditCardNoAnnualFee() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
       {
         "@type": "ListItem",
         position: 3,
         name: "Best Cashback Credit Card No Annual Fee",
-        item: "https://assurefintech.com/best/best-cashback-credit-card-no-annual-fee",
+        item: "https://www.assurefintech.com/best/best-cashback-credit-card-no-annual-fee",
       },
     ],
   };
@@ -286,7 +286,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Cashback Credit Card with No Annual Fee in India (September 2026)
+            No-Annual-Fee Credit Cards in India: Compare Current Features
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
@@ -348,8 +348,6 @@ export default function BestCashbackCreditCardNoAnnualFee() {
         <strong style={{ color: COLOR }}>Compare net value:</strong> Calculate using your eligible purchases, Prime status, reward form, exclusions, caps and fee; a headline rate is not a guaranteed annual return.
       </div>
 
-      <FreeCardMythBuster />
-
       {/* Section 1: The myth */}
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 14, color: "var(--text)" }}>
@@ -368,47 +366,48 @@ export default function BestCashbackCreditCardNoAnnualFee() {
 
       {/* Top picks */}
       <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 18, color: "var(--text)" }}>No-Annual-Fee Picks and a Paid Alternative</h2>
+        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 18, color: "var(--text)" }}>Products to compare — not an ordered ranking</h2>
+        <p>These examples serve different needs and are not ranked against one another. Fees and rewards below are starting points from the current product terms; eligibility, caps, exclusions and redemption rules can change what you receive.</p>
 
         {[
           {
-            rank: "1",
+            rank: "Compare",
             name: "Amazon Pay ICICI",
             tag: "Amazon-focused lifetime-free option",
             fee: "Free (lifetime)",
             reward: "5% Amazon Prime / 3% non-Prime / 2% Amazon Pay / 1% base",
             best: "Regular Amazon shoppers, Prime members",
-            slug: "amazon-pay-icici",
+            slug: "amazon-icici",
           },
           {
-            rank: "2",
+            rank: "Compare",
             name: "IDFC FIRST WOW",
             tag: "Best for International + Points that Don't Expire",
             fee: "Free (secured against FD)",
-            reward: "Zero forex; 4 points/₹200 eligible spend; points expire after 24 months",
+            reward: "FD-backed (minimum FD ₹20,000); 0% forex markup; points and fees apply",
             best: "International travelers, new-to-credit applicants",
-            slug: "idfc-first-wow",
+            slug: "idfc-wow",
           },
           {
-            rank: "3",
+            rank: "Compare",
             name: "Scapia Federal Card",
             tag: "Best Free Travel Card",
             fee: "Free",
             reward: "4% effective on eligible Scapia app bookings; 2% eligible Visa spends; airport privileges after ₹20K preceding-cycle spend",
             best: "Domestic flyers who want lounge access",
-            slug: "scapia-federal",
+            slug: "scapia",
           },
           {
-            rank: "4",
+            rank: "Compare",
             name: "AU LIT",
-            tag: "Best Customizable Free Card",
+            tag: "Lifetime-free base card; optional features cost extra",
             fee: "Free",
-            reward: "Choose 2 accelerated reward categories",
-            best: "Those whose spending does not fit standard card categories",
+            reward: "Optional reward/cashback features have separate fees, terms and caps",
+            best: "People who want to choose a specific paid feature after checking its terms",
             slug: "au-lit",
           },
           {
-            rank: "5",
+            rank: "Paid option",
             name: "AU Xcite ACE",
             tag: "Fee-based alternative — not a no-annual-fee card",
             fee: "₹749/year; ₹2L retail-spend waiver from year 2",
@@ -418,7 +417,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
           },
         ].map((card) => (
           <div
-            key={card.rank}
+            key={card.slug}
             style={{
               border: "1px solid var(--border)",
               borderRadius: 10,
@@ -445,7 +444,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
                 flexShrink: 0,
               }}
             >
-              {card.rank}
+                {card.rank === "Paid option" ? "₹" : "↔"}
             </div>
             <div style={{ flex: 1 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 4 }}>
@@ -468,12 +467,11 @@ export default function BestCashbackCreditCardNoAnnualFee() {
         ))}
       </section>
 
-      <AmazonPayICICIBreakdown />
 
       {/* Section 2: Amazon Pay ICICI deep dive */}
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 14, color: "var(--text)" }}>
-          Amazon Pay ICICI: Eight Years Without a Fee, Still India's Best
+          Amazon Pay ICICI: fee structure and eligible reward categories
         </h2>
         <p>
           Amazon Pay ICICI is listed as lifetime-free. Cashback rates and eligible categories can change, so confirm the issuer's current Prime/non-Prime rates, caps and exclusions before treating historical rates as guaranteed.
@@ -489,7 +487,6 @@ export default function BestCashbackCreditCardNoAnnualFee() {
         </p>
       </section>
 
-      <ScapiaWOWComparison />
 
       {/* Section 3: The stack */}
       <section style={{ marginBottom: 40 }}>
@@ -502,7 +499,6 @@ export default function BestCashbackCreditCardNoAnnualFee() {
         <p>
           A possible no-annual-fee stack is Amazon Pay ICICI for eligible Amazon/Amazon Pay transactions, IDFC FIRST WOW for FD-backed access and zero-forex-markup transactions, and Scapia for eligible app bookings and airport privileges when its preceding-billing-cycle spend condition is met. AU LIT may cover selected categories, but review any paid add-on choices. The best combination depends on your actual spend and each card's exclusions.
         </p>
-        <FreeCardStackDiagram />
         <p>
           Managing several credit cards adds dates and statements to track. If you use autopay, choose the full statement balance where available and keep enough funds in the linked account; paying only the minimum can leave interest-bearing balances. Review statements and rewards regularly.
         </p>
@@ -511,7 +507,6 @@ export default function BestCashbackCreditCardNoAnnualFee() {
         </p>
       </section>
 
-      <WhenToUpgradeChart />
 
       {/* Section 4: When to upgrade */}
       <section style={{ marginBottom: 40 }}>
@@ -542,19 +537,19 @@ export default function BestCashbackCreditCardNoAnnualFee() {
         <h2 style={{ fontSize: 20, fontWeight: 700, marginBottom: 14, color: "var(--text)" }}>Your Free Card Action Plan</h2>
         <ol style={{ margin: 0, paddingLeft: 20, lineHeight: 2, fontSize: 15 }}>
           <li>
-            <strong>Apply for Amazon Pay ICICI first.</strong> It is the most broadly useful free card and the application is fast via the Amazon app or ICICI website.
+            <strong>Start with your actual spending.</strong> Check whether you regularly use the eligible categories and redemption options of a no-fee card before applying; no card is the default best choice for everyone.
           </li>
           <li>
-            <strong>If you travel internationally even once a year,</strong> add IDFC FIRST WOW. Zero forex saves money from your first transaction abroad.
+            <strong>If you make foreign-currency purchases,</strong> compare the issuer's forex markup, network conversion and any other transaction charges. A 0% issuer markup does not mean every conversion route is cost-free.
           </li>
           <li>
             <strong>If you travel through airports,</strong> consider Scapia's airport privileges only if you can meet the ₹20,000 spend condition in the preceding billing cycle and the current in-app offer rules.
           </li>
           <li>
-            <strong>Check if your top spending category</strong> (dining, fuel, grocery) is covered at 2%+ by your free stack. If not, consider AU LIT with custom categories.
+            <strong>Check each reward's conditions:</strong> eligible merchant/category, cap, exclusions, redemption, any required deposit, and whether an optional add-on has its own fee or auto-renewal.
           </li>
           <li>
-            <strong>Space applications 3-4 months apart</strong> to minimize CIBIL score impact from hard inquiries.
+            <strong>Avoid unnecessary or clustered applications.</strong> Each lender decides eligibility; there is no universal waiting period that guarantees approval or prevents a score change.
           </li>
           <li>
             <strong>Consider autopay for the full statement balance</strong> where available, and keep funds in the linked account. A minimum-only payment may leave an interest-bearing balance.
@@ -584,16 +579,16 @@ export default function BestCashbackCreditCardNoAnnualFee() {
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, marginBottom: 14, color: "var(--text)" }}>Related Reading</h2>
         <ul style={{ paddingLeft: 20, lineHeight: 2.2, fontSize: 14 }}>
-          <li><Link href="/cards/amazon-pay-icici">Amazon Pay ICICI Card Full Review 2026</Link></li>
+          <li><Link href="/cards/amazon-icici">Amazon Pay ICICI Card Full Review</Link></li>
           <li><Link href="/best/best-credit-card-under-500-annual-fee">Best Credit Cards Under ₹500 Annual Fee</Link></li>
-          <li><Link href="/best/credit-card-for-international-spending">Best Card for International Spending (Zero Forex)</Link></li>
-          <li><Link href="/blog/free-credit-card-stack-india-2026">How to Build a Zero-Fee Card Stack in India</Link></li>
+          <li><Link href="/best/credit-card-for-international-spending">Compare Cards for International Spending</Link></li>
+          <li><Link href="/blog/build-3-card-stack-guide">How to build a card stack</Link></li>
           <li><Link href="/stack-builder">Stack Builder: Calculate Your Free Stack Return</Link></li>
         </ul>
       </section>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
-        <strong>Disclaimer:</strong> Assure Fintech is an independent editorial platform with no banking license. Cashback rates and card terms change and are subject to revision by issuing banks. Always verify current terms on the bank's official website before applying. Some links may earn a referral commission that does not influence our editorial rankings.
+        <strong>Editorial note:</strong> Assure Fintech is an independent editorial platform. Cashback rates and card terms can change; use each issuer's current terms before applying. Some links may earn a referral commission, which does not determine our product selection.
       </footer>
     </main>
     </>

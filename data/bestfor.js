@@ -10,24 +10,24 @@ export const BEST_FOR_CATEGORIES = [
     shortTitle: "Online Shopping",
     description: "Compare the best credit cards for online shopping in India. Cap-aware cashback calculations on Amazon, Flipkart, Myntra, and more.",
     icon: "🛒",
-    heroLine: "The best cards for online shopping — with the cap math most sites won't show you.",
+    heroLine: "Compare eligible online rewards, merchant restrictions and real caps before choosing.",
     categoryId: "online",
     testSpend: 15000,
-    intro: `Every card claims high online rewards, but the fine print tells a different story. Monthly caps, partner-only rates, and falling fallback rates mean the "5% cashback" card might actually earn you less than a simple 1.5% flat-rate card — depending on how much you spend.
+    intro: `Online rewards are not interchangeable: some cards cover a defined merchant list, some have category exclusions, and cashback may be capped per calendar month, billing cycle or statement cycle.
 
 We ran the numbers at ₹15,000/month online spend across every card in our database. Here's what actually happens after the caps kick in.`,
     picks: [
-      { cardId: "hdfc-millennia", badge: "Best for multi-platform shoppers", note: "5% on Amazon, Flipkart, Myntra, and 10+ other partners. But the ₹1,000/month cap means your max beneficial partner spend is ₹20,000. Under that? Unbeatable at this fee." },
-      { cardId: "amazon-icici", badge: "Best for Amazon-only", note: "5% on Amazon (Prime members) with no monthly cap. If Amazon is 80%+ of your online shopping, this free card beats everything else." },
-      { cardId: "sbi-cashback", badge: "Best for all-site coverage", note: "5% on ALL online purchases — no partner restrictions. Amazon, niche stores, SaaS subscriptions — everything. ₹5,000/cycle cap (dropping to ₹2,000 in April 2026)." },
-      { cardId: "axis-flipkart", badge: "Best for Flipkart ecosystem", note: "5% on Flipkart, Myntra, Cleartrip with no cap. If Flipkart is your primary platform, this edges out Millennia (which has a shared cap)." },
-      { cardId: "axis-ace", badge: "Best uncapped all-rounder", note: "1.5% on everything with no cap. Doesn't peak as high as 5% cards, but never drops below 1.5% either. The reliable backup for spending above other cards' caps." },
+      { cardId: "hdfc-millennia", badge: "For listed online merchants", note: "HDFC lists 5% CashPoints on ten named merchants, with a ₹1,000 calendar-month cap for that bucket. Eligible other spends have a separate 1% bucket and cap; exclusions apply." },
+      { cardId: "amazon-icici", badge: "For eligible Amazon purchases", note: "ICICI lists 5% for Prime members and 3% for non-Prime members on eligible Amazon India purchases. Rewards are Amazon Pay balance, not statement cashback; eligibility and exclusions apply." },
+      { cardId: "sbi-cashback", badge: "For eligible online spend", note: "SBI lists 5% on eligible online transactions, capped at ₹2,000 per statement cycle. A separate ₹2,000 offline cap applies; combined cashback is capped at ₹4,000 per cycle. Exclusions apply." },
+      { cardId: "axis-flipkart", badge: "For Flipkart and Myntra shoppers", note: "Axis lists 5% on Flipkart and 7.5% on Myntra, each with a ₹4,000 cap per statement quarter. Cleartrip is also listed at 5% with its own cap; check current terms." },
+      { cardId: "axis-ace", badge: "A general-spend comparison", note: "Axis lists 1.5% on other eligible purchases and accelerated rates for selected categories. Exclusions apply; after the combined accelerated-category cap, check the issuer's current treatment." },
     ],
-    verdict: "For most people, **HDFC Millennia + Amazon Pay ICICI** (₹1,000/year total) covers online shopping optimally. Millennia for Swiggy/Flipkart/Myntra at 5%, Amazon card for Amazon at 5% (no cap). If you shop on niche sites, add SBI Cashback for its unrestricted 5% online rate.",
+    verdict: "There is no universal winner. HDFC Millennia may suit spend across its named partners; Amazon Pay ICICI is specifically useful for eligible Amazon purchases; SBI Cashback covers eligible online transactions subject to exclusions and a ₹2,000 online cap per statement cycle. Compare reward form, fee and your actual merchant mix.",
     faq: [
-      { q: "Which card gives the highest online cashback?", a: "HDFC Millennia and Amazon Pay ICICI both give 5%, but Millennia has a ₹1,000/month cap while Amazon card has no cap. For pure rate, they tie. For uncapped earning, Amazon ICICI wins on Amazon specifically." },
+      { q: "Which card gives the highest online cashback?", a: "It depends on the merchant and eligibility. HDFC Millennia's 5% applies to ten listed merchants, Amazon Pay ICICI's 5% applies to eligible Amazon purchases for Prime members, and SBI Cashback's 5% applies to eligible online transactions with a ₹2,000 statement-cycle online cap. Rewards and exclusions differ." },
       { q: "Does cashback work on EMI purchases?", a: "Generally no. Most cards exclude EMI transactions from cashback calculations. Full-payment transactions earn the advertised rate." },
-      { q: "Is 5% cashback really 5%?", a: "Check the caps. HDFC Millennia's 5% is capped at ₹1,000/month (₹20K beneficial spend). SBI Cashback's 5% is capped at ₹5,000/cycle (dropping to ₹2,000 online sub-cap from Apr 2026). Amazon ICICI's 5% has no cap. The effective rate depends on your spending volume." },
+      { q: "Is 5% cashback really 5%?", a: "Only when the transaction qualifies. HDFC Millennia has a ₹1,000 calendar-month cap on its 5% merchant bucket; SBI Cashback has a ₹2,000 online cap per statement cycle. Amazon Pay ICICI credits eligible rewards as Amazon Pay balance, and Prime status affects the Amazon rate." },
     ],
   },
 
@@ -62,25 +62,25 @@ We calculated effective cashback at ₹8,000/month food delivery spend — the a
     slug: "credit-card-for-amazon",
     title: "Best Credit Card for Amazon India (2026)",
     shortTitle: "Amazon",
-    description: "Best credit cards for Amazon shopping in India. Compare 5% cashback options with and without caps.",
+    description: "Compare credit-card rewards for eligible Amazon India purchases, including Prime rates, reward form and issuer caps.",
     icon: "📦",
-    heroLine: "Three cards give 5% on Amazon — here's which one actually earns you more.",
+    heroLine: "Prime status, qualifying purchases and caps change the value of Amazon rewards.",
     categoryId: "online",
     testSpend: 12000,
-    intro: `Amazon is the most common online shopping destination in India, and several cards offer 5% cashback. But they're not equal — one has no cap, one has a ₹1,000/month shared cap, and one is changing its caps in April 2026.
+    intro: `Amazon-linked card rewards can differ by Prime membership, eligible product or transaction type, reward form and caps. A headline percentage is not enough to compare them.
 
 At ₹12,000/month Amazon spend, the difference between these cards is real money.`,
     picks: [
-      { cardId: "amazon-icici", badge: "Best overall — 5%, no cap, free", note: "5% on Amazon (Prime members), no monthly cap, lifetime free. The math is simple: ₹12K/month = ₹600/month = ₹7,200/year. From a free card. No other option matches this." },
-      { cardId: "hdfc-millennia", badge: "Best if you also shop elsewhere", note: "5% on Amazon plus Flipkart, Myntra, Swiggy, and more. But the ₹1,000/month shared cap limits total earning. Best if your Amazon spend is under ₹10K/month and you want broader coverage." },
-      { cardId: "sbi-cashback", badge: "Best for Amazon + other sites", note: "5% on ALL online (including Amazon) with no partner restrictions. The ₹5,000/cycle cap gives more room than Millennia's ₹1K cap. But changes coming April 2026 reduce this to ₹2K." },
-      { cardId: "axis-ace", badge: "Reliable floor", note: "1.5% on Amazon (uncapped). Not exciting, but never drops below 1.5% regardless of spend level. Good for Amazon purchases after your primary card's cap is hit." },
+      { cardId: "amazon-icici", badge: "Amazon-linked rewards", note: "ICICI lists 5% for Prime members and 3% for non-Prime members on eligible Amazon India purchases, credited as Amazon Pay balance. The issuer says there is no earnings limit; transaction and product exclusions still apply." },
+      { cardId: "hdfc-millennia", badge: "Multi-merchant alternative", note: "Amazon is one of HDFC's ten named 5% merchants. This bucket has a ₹1,000 calendar-month cap shared across listed merchants, and eligible other spends have a separate cap." },
+      { cardId: "sbi-cashback", badge: "Eligible online-spend alternative", note: "SBI lists 5% on eligible online transactions, subject to exclusions and a ₹2,000 online cashback cap per statement cycle." },
+      { cardId: "axis-ace", badge: "General-spend alternative", note: "Axis lists 1.5% on other eligible purchases, subject to its exclusions. It is not an Amazon-specific reward card." },
     ],
-    verdict: "**Amazon Pay ICICI is the obvious winner.** Free card, 5%, no cap. If you spend ₹5K+/month on Amazon, get this card. Pair it with HDFC Millennia for non-Amazon online shopping.",
+    verdict: "Amazon Pay ICICI is worth comparing if you are eligible for it, shop on Amazon and are comfortable with Amazon Pay balance rather than statement cashback. Check Prime status, eligible purchases and exclusions. Compare HDFC Millennia if you also use its listed merchants, and SBI Cashback for other eligible online spend.",
     faq: [
-      { q: "Do I need Amazon Prime for 5%?", a: "Yes for 5%. Without Prime, you get 3%. At ₹5K+/month Amazon spend, the extra 2% earns back the Prime fee (₹1,499/year) within 6 months." },
+      { q: "Do I need Amazon Prime for 5%?", a: "ICICI lists 5% on eligible Amazon India purchases for Prime members and 3% for non-Prime members. Whether the difference offsets a Prime membership fee depends on your eligible spending and membership cost; this card comparison does not assume you should buy Prime for rewards." },
       { q: "Is the cashback real money?", a: "It's Amazon Pay balance — usable on Amazon and Amazon Pay partner merchants. You can't transfer it to a bank account, but you'll likely spend it on Amazon anyway." },
-      { q: "Amazon Pay ICICI vs HDFC Millennia for Amazon?", a: "Amazon ICICI wins decisively: 5% with no cap vs Millennia's 5% with a ₹1,000/month shared cap. Millennia is better for Flipkart/Swiggy; Amazon ICICI is better for Amazon." },
+      { q: "Amazon Pay ICICI vs HDFC Millennia for Amazon?", a: "Compare reward form and qualifying terms. Amazon Pay ICICI credits eligible Amazon rewards as Amazon Pay balance at a Prime/non-Prime rate; HDFC Millennia lists Amazon in its 5% merchant bucket, shared with nine other named merchants and capped at ₹1,000 per calendar month." },
     ],
   },
 

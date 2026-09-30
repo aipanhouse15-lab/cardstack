@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Fixed vs Floating Home Loan Rates: How to Compare | Assure Fintech",
+  title: "Fixed vs Floating Home Loan Rates: How to Compare",
   description: "Understand fixed and floating home-loan rate structures, compare lender offers and model repayment changes without relying on rate forecasts.",
   alternates: { canonical: "/learn/loans/fixed-vs-floating-rate" },
   openGraph: {
@@ -48,17 +48,16 @@ export default function PageFixedVsFloating() {
     headline: "Fixed vs Floating Home Loan Rates: How to Compare",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-25",
+    dateModified: "2026-09-28",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Loans", item: "https://assurefintech.com/learn/loans/" },
-      { "@type": "ListItem", position: 4, name: "Fixed vs Floating Rate", item: "https://assurefintech.com/learn/loans/fixed-vs-floating-rate" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Loans", item: "https://www.assurefintech.com/learn/loans/" },
+      { "@type": "ListItem", position: 3, name: "Fixed vs Floating Rate", item: "https://www.assurefintech.com/learn/loans/fixed-vs-floating-rate" },
     ],
   };
 
@@ -76,7 +75,7 @@ export default function PageFixedVsFloating() {
       </header>
       <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
         <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
-          <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn" style={{ color: "inherit" }}>Learn</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Fixed vs Floating Rate
+          <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn/loans" style={{ color: "inherit" }}>Loans</Link> / Fixed vs Floating Rate
         </nav>
 
         <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 24px" }}>A fixed rate can provide payment certainty for the period specified in the offer. A floating rate can change under its benchmark and reset terms. The better fit depends on the actual contract and your capacity to absorb payment changes; no rate path or savings outcome is guaranteed.</p>
@@ -102,6 +101,12 @@ export default function PageFixedVsFloating() {
           <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 12px" }}>Stress-test your budget</h2>
           <p style={{ margin: "0 0 12px" }}>For a floating offer, model several hypothetical rates above and below the quoted rate. Treat these as scenarios, not predictions. Check that the higher-payment scenario remains manageable alongside essential expenses, emergency savings and other debt.</p>
           <p style={{ margin: 0 }}>For a fixed or partly fixed offer, consider the price of payment certainty and what happens after any fixed period ends. Compare the total payments across the actual product terms, including any later reset—not a single rate applied across the entire tenure unless the lender confirms that in writing.</p>
+        </section>
+
+        <section aria-labelledby="rate-reset-example" style={{ marginBottom: 26, padding: 20, borderRadius: 14, background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
+          <h2 id="rate-reset-example" style={{ fontSize: 22, fontWeight: 700, margin: "0 0 10px" }}>Worked stress-test: model a reset, not a forecast</h2>
+          <p style={{ margin: "0 0 12px" }}>For a hypothetical ₹50 lakh, 20-year reducing-balance loan, an 8.50% rate gives an initial EMI of about ₹43,391. If it stayed at 8.50% throughout, total scheduled interest would be about ₹54.14 lakh.</p>
+          <p style={{ margin: 0 }}>If the rate instead stayed at 8.50% for five years and then reset to 9.50% for the remaining 15 years, with the lender recalculating EMI and no other changes, the EMI after reset would be about ₹46,012. Total scheduled interest would be about ₹58.86 lakh—roughly ₹4.72 lakh more in this simplified scenario. Actual lender reset mechanics may change EMI, tenure or both; ask for the schedule that applies to your contract.</p>
         </section>
 
         <section style={{ marginBottom: 26 }}>

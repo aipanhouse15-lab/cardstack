@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to Read Insurer Claim-Settlement Data | Assure Fintech",
+  title: "How to Read Insurer Claim-Settlement Data",
   description: "Understand the limits of claim-settlement ratios and compare insurer data with complaints, incurred claims, policy terms and your own coverage needs.",
   alternates: { canonical: "/learn/insurance/claim-settlement-ratios-2026" },
 };
@@ -24,10 +24,10 @@ export default function ClaimSettlementRatiosPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://assurefintech.com/learn/insurance/" },
-      { "@type": "ListItem", position: 4, name: "Claim-Settlement Data", item: "https://assurefintech.com/learn/insurance/claim-settlement-ratios-2026" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Learn", item: "https://www.assurefintech.com/learn/" },
+      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://www.assurefintech.com/learn/insurance/" },
+      { "@type": "ListItem", position: 4, name: "Claim-Settlement Data", item: "https://www.assurefintech.com/learn/insurance/claim-settlement-ratios-2026" },
     ],
   };
 

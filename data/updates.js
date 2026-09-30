@@ -7,7 +7,8 @@ export const MONTHLY_UPDATES = [
     month: "September 2026",
     current: true,
     entries: [
-      { type: "update", icon: "📝", card: "Editorial content refresh", text: "September review of selected savings, loan, insurance, mutual-fund and tax guides. Removed unsupported live-rate rankings, stale product examples and blanket tax or claim outcomes; replaced them with current-source and policy-document checks. Product terms and tax rules still require confirmation for the relevant issuer and period.", date: "Sep 2026" },
+      { type: "update", icon: "🧮", card: "Homepage examples and technical SEO", text: "Replaced unsupported homepage reward-rate claims with issuer-linked examples and explicit spend/redemption assumptions. Removed the stale June ticker items, duplicate brand suffixes in page titles, and blanket sitemap modified dates that overstated content freshness.", date: "Sep 2026" },
+      { type: "update", icon: "📝", card: "Loan & tax guides", text: "Added worked loan examples for fee-adjusted personal-loan cash flows, home-loan rate changes and education-loan moratorium interest. Added HRA and tax-saving deduction examples, and clarified the AY 2026–27 / Tax Year 2026–27 transition, including section 123 of the Income-tax Act, 2025. Examples state their assumptions and link to official guidance where applicable.", date: "Sep 2026" },
       { type: "update", icon: "🔎", card: "Coverage & freshness", text: "This is a data-status notice, not a claim that an issuer changed its terms. The catalogue currently marks 58 of 76 records as source-linked with a review date; 18 remain pending. Three SBI records were returned to pending because their links did not establish the current card-specific terms. A review marker does not guarantee every benefit or later issuer change. Confirm terms with the issuer before acting.", date: "Sep 2026" },
     ],
   },

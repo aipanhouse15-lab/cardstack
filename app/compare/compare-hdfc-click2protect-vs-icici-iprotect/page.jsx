@@ -54,9 +54,9 @@ export default function CompareHdfcVsIciciTerm() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://assurefintech.com/compare/" },
-      { "@type": "ListItem", position: 3, name: "HDFC Click 2 Protect vs ICICI iProtect Smart", item: "https://assurefintech.com/compare/hdfc-click2protect-vs-icici-iprotect" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.assurefintech.com/compare/" },
+      { "@type": "ListItem", position: 3, name: "HDFC Click 2 Protect vs ICICI iProtect Smart", item: "https://www.assurefintech.com/compare/hdfc-click2protect-vs-icici-iprotect" }
     ]
   };
 

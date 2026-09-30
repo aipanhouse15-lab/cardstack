@@ -2,12 +2,12 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "HDFC Regalia vs Infinia: The Definitive 2026 Comparison",
-  description: "HDFC Regalia vs Infinia: The Definitive 2026 Comparison",
+  title: "HDFC Regalia vs Infinia: Current Terms for Existing Cardholders",
+  description: "HDFC no longer sources Regalia and offers Infinia by invitation. Compare the current issuer terms and your own redemption value as an existing cardholder.",
   alternates: { canonical: "/blog/regalia-vs-infinia" },
   openGraph: {
-    title: "HDFC Regalia vs Infinia: The Definitive 2026 Comparison",
-    description: "HDFC Regalia vs Infinia: The Definitive 2026 Comparison",
+    title: "HDFC Regalia vs Infinia: Current Terms for Existing Cardholders",
+    description: "HDFC no longer sources Regalia and offers Infinia by invitation. Compare the current issuer terms and your own redemption value as an existing cardholder.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -19,7 +19,7 @@ export const metadata = {
 // Color: #7c3aed | Updated: September 26, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "September 26, 2026";
+const UPDATED = "September 28, 2026";
 
 const SvgFeeVsValue = () => (
   <svg viewBox="0 0 720 236" role="img" aria-label="HDFC Regalia vs Infinia: annual fee compared to potential reward value at different spend levels" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -200,42 +200,42 @@ export default function BlogRegaliaVsInfinia() {
       {
         "@type": "Question",
         name: "Is HDFC Infinia invite-only or can anyone apply?",
-        acceptedAnswer: { "@type": "Answer", text: "Infinia is technically invite-only, but HDFC does issue it to existing customers with a strong banking relationship, high credit score (750+), and annual income above ₹10 lakh. You can request an upgrade from Regalia once you've spent ₹10 lakh or more in a year on that card. Some applicants also get it by calling the premium banking helpline." }
+        acceptedAnswer: { "@type": "Answer", text: "HDFC describes Infinia Metal Edition as available by invitation only and says the bank assesses each customer's eligibility. It does not publish a universal score, income threshold or guaranteed upgrade path. Ask HDFC about your own account; an invitation or upgrade is not assured." }
       },
       {
         "@type": "Question",
         name: "What is the annual fee for HDFC Regalia and Infinia?",
-        acceptedAnswer: { "@type": "Answer", text: "HDFC Regalia costs ₹2,500 plus GST, which works out to ₹2,950 per year. HDFC Infinia costs ₹12,500 plus GST, totalling ₹14,750 per year. Regalia's fee is waived if you spend ₹3 lakh or more annually. Infinia's fee is waived only at ₹10 lakh or more in annual spend." }
+        acceptedAnswer: { "@type": "Answer", text: "HDFC currently lists Regalia's joining/renewal fee as ₹2,500 plus applicable taxes and Infinia's as ₹12,500 plus applicable taxes. HDFC lists renewal-fee waiver conditions tied to ₹3 lakh anniversary-year spend for Regalia and ₹10 lakh in the preceding 12 months for Infinia. Check the current issuer terms and your own offer; Regalia sourcing is discontinued." }
       },
       {
         "@type": "Question",
         name: "What is the reward rate on HDFC Regalia vs Infinia?",
-        acceptedAnswer: { "@type": "Answer", text: "Regalia earns 4 reward points per ₹150 spent. Each point is worth approximately ₹0.40 on HDFC SmartBuy, giving an effective rate of about 1.06 percent. Infinia earns 5 points per ₹150, worth ₹0.50 each, giving 1.65 percent base rate. On HDFC SmartBuy with 10X points, Infinia can deliver up to 16.5 percent on select travel bookings." }
+        acceptedAnswer: { "@type": "Answer", text: "HDFC lists 4 Reward Points per ₹200 for Regalia and 5 per ₹150 for Infinia. A point's value depends on redemption route, caps and current terms; SmartBuy multipliers are conditional and should not be presented as a general cashback rate. Compare the redemption you would actually use." }
       },
       {
         "@type": "Question",
         name: "Does HDFC Regalia have unlimited airport lounge access?",
-        acceptedAnswer: { "@type": "Answer", text: "No. Regalia gives 12 complimentary domestic lounge visits per year via Dreamfolks and 6 complimentary international lounge visits via Priority Pass per year. Infinia gives unlimited lounge access domestically and internationally via Priority Pass, which is one of the biggest practical differences between the two cards." }
+        acceptedAnswer: { "@type": "Answer", text: "HDFC currently describes Regalia domestic lounge vouchers as subject to quarterly spend conditions and lists up to six complimentary international visits through Priority Pass. HDFC advertises unlimited complimentary global lounge access on Infinia. Check eligible lounges, visit rules, add-on treatment and the latest issuer terms before travel." }
       },
       {
         "@type": "Question",
         name: "Which card should I get at ₹5 lakh annual spend?",
-        acceptedAnswer: { "@type": "Answer", text: "Regalia is clearly better at ₹5 lakh annual spend. Your net reward value after the Regalia fee is approximately ₹2,780 positive. With Infinia at the same spend, you're ₹4,295 in the negative even after rewards because the ₹14,750 fee is too high to justify at that spend level." }
+        acceptedAnswer: { "@type": "Answer", text: "There is no universal winner at a given spend level. Account for the actual fee charged, fee-waiver eligibility, reward exclusions and the redemption value you personally realise. Regalia is not available for new sourcing, and Infinia requires an invitation." }
       },
       {
         "@type": "Question",
         name: "Can I upgrade from Regalia to Infinia?",
-        acceptedAnswer: { "@type": "Answer", text: "Yes. The typical path is to spend heavily on Regalia (₹8 to 10 lakh per year), maintain a good repayment record, and then request an upgrade by calling HDFC's premium helpline (1800 202 6161). You can also walk into an HDFC bank branch and speak to a relationship manager if you have a salary account there." }
+        acceptedAnswer: { "@type": "Answer", text: "You can ask HDFC about an upgrade offer, but the bank does not guarantee eligibility based on a universal spend or waiting period. HDFC assesses the customer and controls invitations and product changes." }
       },
       {
         "@type": "Question",
         name: "Is the forex markup the same on both cards?",
-        acceptedAnswer: { "@type": "Answer", text: "Yes, both Regalia and Infinia charge 2 percent plus GST on foreign currency transactions, working out to approximately 2.36 percent total. If you travel internationally frequently, consider adding a zero-forex card like IDFC FIRST Wealth or Niyo Global for overseas purchases to avoid this markup." }
+        acceptedAnswer: { "@type": "Answer", text: "Foreign-transaction costs can include issuer markup, network conversion and taxes. Check the current fee schedule for your card and consider dynamic currency conversion separately; do not assume the two cards or every transaction route have identical total costs." }
       },
       {
         "@type": "Question",
         name: "How does the HDFC SmartBuy 10X program work?",
-        acceptedAnswer: { "@type": "Answer", text: "HDFC SmartBuy is HDFC's in-house travel and shopping portal. When you book flights, hotels, or select products through SmartBuy using your Infinia or Regalia card, you earn 10X reward points instead of the base rate. For Infinia users, this can translate to over 16 percent effective cashback on travel bookings, though there are monthly point caps and category restrictions." }
+        acceptedAnswer: { "@type": "Answer", text: "HDFC advertises up to 10X Reward Points on eligible Infinia SmartBuy spends, subject to current portal, category and redemption terms. Regalia has its own eligible SmartBuy rates and caps. Verify the current offer and calculate point value using the redemption you intend to make." }
       },
     ],
   };
@@ -243,10 +243,10 @@ export default function BlogRegaliaVsInfinia() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "HDFC Regalia vs Infinia: The Definitive 2026 Comparison",
+    headline: "HDFC Regalia vs Infinia: Current Terms for Existing Cardholders",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-28",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -254,9 +254,9 @@ export default function BlogRegaliaVsInfinia() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "HDFC Regalia vs Infinia", item: "https://assurefintech.com/blog/regalia-vs-infinia" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "HDFC Regalia vs Infinia", item: "https://www.assurefintech.com/blog/regalia-vs-infinia" },
     ],
   };
 
@@ -270,10 +270,10 @@ export default function BlogRegaliaVsInfinia() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Credit Cards · Premium Comparison
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            HDFC Regalia vs Infinia: The Definitive 2026 Comparison
+            HDFC Regalia vs Infinia: Current Terms for Existing Cardholders
           </h1>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
-            One is the country's most popular premium card. The other is its richer, harder-to-get sibling. Here's the honest numbers-first breakdown of which one actually makes sense for you.
+            HDFC says Regalia sourcing has been discontinued and Infinia Metal Edition is offered by invitation. This comparison is for existing cardholders reviewing current terms—not a promise of availability, approval or an upgrade.
           </p>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
         </div>
@@ -287,56 +287,48 @@ export default function BlogRegaliaVsInfinia() {
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / HDFC Regalia vs Infinia
       </nav>
 <section style={{ marginBottom: 28 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Setup: Two Different Markets</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>HDFC Regalia and Infinia are not actually competing for the same customer. Regalia targets professionals spending ₹3 to 8 lakh a year who want a premium card without a premium headache. Infinia targets high-networth individuals spending ₹10 lakh or more who fly internationally and value unlimited lounge access above all else.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>The problem is that everyone in between, the ₹8 to 12 lakh spender, gets misled by the brand aspirationality of Infinia without doing the actual math. Let's fix that.</p>
+        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>First, check whether the comparison applies to you</h2>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>HDFC's Regalia page says new sourcing has been discontinued. HDFC's Infinia page labels the card invite-only and says the bank assesses each customer. Neither this article nor a spend threshold can establish that a reader can apply or upgrade.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>For current holders, a useful comparison is still possible: compare the annual fee actually charged, the rewards you can redeem, the benefits you use and the conditions attached to those benefits.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Eligibility: Can You Even Get Infinia?</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Regalia is open to any salaried or self-employed individual with a declared annual income of ₹6 lakh or more and a CIBIL score above 700. You can apply directly on HDFC's website.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Infinia is invite-only in practice, though "invite-only" has loosened since 2024. HDFC now issues it to existing relationship customers with a strong banking profile. If you've had Regalia for 2 or more years with clean repayment and high spend, request an upgrade. Don't assume you're locked out.</p>
-        <SvgEligibilityGate />
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>HDFC's current public Regalia page states that sourcing is discontinued. Its Infinia page says membership is by invitation only and that the bank will assess eligibility. HDFC does not publish a public approval threshold on that page.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you already hold either card, ask HDFC directly about product or upgrade options. Do not apply based on an unofficial salary, score or spending formula.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Annual Fee: The Number That Changes Everything</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Regalia's fee is ₹2,950 including GST, waived at ₹3 lakh annual spend. Most Regalia users hit the waiver threshold by their third or fourth month. The card is effectively free for almost everyone who holds it.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Infinia's fee is ₹14,750 including GST, waived only at ₹10 lakh annual spend. That's a substantial commitment. If you spend ₹8 lakh on the card, you're paying the full fee. That fee alone is what makes Infinia a losing proposition for anyone spending under ₹12 to 15 lakh per year.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>HDFC currently lists a ₹2,500 plus tax joining/renewal fee for Regalia and ₹12,500 plus applicable taxes for Infinia. HDFC lists a ₹3 lakh anniversary-year waiver condition for Regalia and a ₹10 lakh preceding-12-month spend condition for Infinia renewal. The account's actual fee and offer terms should be checked before calculating value.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Compare the fee actually charged with benefits you would otherwise pay for. Do not count a waiver or welcome benefit unless you meet the issuer's exact conditions.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Reward Rates: Infinia Wins, But By Less Than You Think</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Regalia earns 4 points per ₹150 (effective 1.06 percent). Infinia earns 5 points per ₹150 (effective 1.65 percent on SmartBuy). The difference is 0.59 percentage points on base spend.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>On ₹10 lakh spend, that difference is roughly ₹5,900 in extra rewards for Infinia. But subtract the fee difference (₹14,750 minus ₹2,950 = ₹11,800), and Regalia is still ahead by about ₹5,900. The 10X SmartBuy multiplier is where Infinia can finally pull ahead, but only if you actively use it for travel bookings.</p>
-        <SvgRewardMechanism />
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>HDFC lists 4 Reward Points per ₹200 for Regalia and 5 points per ₹150 for Infinia. These are points, not cash-back percentages. HDFC's published redemption values differ by route; caps, exclusions and offer conditions affect what a cardholder actually realises.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>For your own comparison, use eligible spend by category, the redemption route you actually use, any caps and expiry, and the fee after any waiver. SmartBuy advertises accelerated points on eligible transactions, not a universal rate on all travel spending.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Break-Even Analysis: Spend Level by Spend Level</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>We ran the numbers across six spend levels, accounting for reward value, milestone benefits, and total fees. The results are clear.</p>
-        <SvgFeeVsValue />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>The crossover point is around ₹15 lakh annual spend, and even then only if you're actively using SmartBuy for travel and hitting quarterly milestones. Below ₹12 lakh, Regalia wins on net value in almost every scenario.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>There is no reliable break-even spend without assumptions about your purchase categories, eligibility, point-redemption route, lounge use, taxes and fee waiver. A spend threshold alone cannot tell you which card is better for you.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Estimate net value as usable rewards plus benefits you would otherwise pay for, minus the fee and transaction costs. Show each assumption separately and set any benefit you will not use to zero.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Airport Lounge Access: Infinia's Killer Feature</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>This is the single biggest practical differentiator. Regalia gives you 12 domestic and 6 international lounge visits per year. If you fly more than that (which frequent business travellers absolutely do), you pay out of pocket for every additional visit.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Infinia gives you unlimited Priority Pass access globally. For someone flying internationally once a month, that's roughly 24 lounge visits worth around ₹600 to ₹1,500 each, adding ₹14,400 to ₹36,000 in annual value from lounges alone. That changes the math significantly for frequent flyers.</p>
-        <SvgLoungeAccess />
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>HDFC lists Regalia domestic lounge vouchers subject to quarterly spend and up to six complimentary international visits through Priority Pass. HDFC advertises unlimited complimentary global lounge access on Infinia. Airport, network and programme conditions apply.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Do not value a lounge visit at its menu price unless you would otherwise pay that amount. Check eligible lounges, visit rules, guest charges and current spend conditions before travel.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Milestone Benefits and Other Perks</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Both cards have milestone benefits tied to quarterly and annual spend. Infinia's milestones are roughly double the value of Regalia's at comparable spend thresholds.</p>
-        <SvgMilestoneComparison />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>Golf, concierge, and insurance coverage all scale up with Infinia, but are these actually worth ₹12,000 extra in fees? For most users, no. For someone who golfs regularly and travels internationally on business, perhaps.</p>
-        <SvgGolfAndConcierge />
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>HDFC's live product pages list different welcome, renewal, milestone and lifestyle benefits. Their eligibility and real value depend on the cardholder's account, spend and ability to use the specific offer. Confirm current benefit terms directly with HDFC before assigning them a rupee value.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Verdict: Use This Decision Tree</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>There is no universal winner here. The right card depends entirely on your spend level and lifestyle.</p>
-        <SvgSpendDecisionTree />
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>One more honest note: if you're not yet hitting ₹3 lakh annual card spend, neither card is the right starting point. Start with a lifetime-free card, build the habit, then graduate to Regalia. Most people who jump to Infinia too early simply pay a premium fee for benefits they never use.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>For current cardholders: first confirm the annual fee and waiver status shown on your account; next calculate rewards at your real redemption value; then count only lounge, travel and lifestyle benefits you expect to use. If considering a different card, compare products currently open to applications—not a discontinued sourcing route.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What to Do Right Now</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you're on Regalia: calculate your last 12 months of card spend. If you're consistently above ₹12 lakh and fly internationally more than 6 times a year, request an Infinia upgrade from your relationship manager. Otherwise, stay on Regalia and optimise your SmartBuy usage.</p>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you're considering Infinia without a Regalia history: start with Regalia, spend actively, and request an upgrade in 12 to 18 months. HDFC responds well to demonstrated spend history. Trying to jump straight to Infinia without that track record usually results in rejection.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If you hold Regalia, use the issuer's current fee, reward and lounge terms to decide whether it still suits you. Regalia sourcing has been discontinued, so this article is not an application recommendation.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>If interested in Infinia, HDFC says membership is invitation-only. Contact the bank for your own options; no public spend threshold or timeline guarantees an invitation or upgrade.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
@@ -353,12 +345,12 @@ export default function BlogRegaliaVsInfinia() {
         <Link href="/blog/annual-fee-when-worth-paying" style={{ color: COLOR }}>When Is an Annual Fee Worth Paying?</Link> ·{" "}
         <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe Optimiser</Link> ·{" "}
         <Link href="/stack-builder" style={{ color: COLOR }}>Card Stack Builder</Link> ·{" "}
-        <Link href="/blog/reward-points-vs-cashback" style={{ color: COLOR }}>Reward Points vs Cashback</Link> ·{" "}
+        <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>Reward Points vs Cashback</Link> ·{" "}
         <Link href="/learn/tax" style={{ color: COLOR }}>Tax Guide</Link>
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Assure Fintech is an independent comparison platform. Reward rates, fees, and benefit structures change periodically. The analysis above uses HDFC's published terms as of June 2026. Verify current terms on HDFC's website before applying. We may earn a referral fee on approved applications.
+        <strong>Sources:</strong> HDFC Bank's <a href="https://www.hdfc.bank.in/credit-cards/regalia-credit-card" target="_blank" rel="noopener noreferrer">Regalia page</a> states sourcing is discontinued and lists current cardholder terms; its <a href="https://www.hdfc.bank.in/credit-cards/infinia-credit-card" target="_blank" rel="noopener noreferrer">Infinia page</a> states membership is by invitation and lists its terms. Reviewed September 28, 2026. This comparison is for existing cardholders; fees, availability and benefits can change. No approval or upgrade is promised.
       </footer>
     </main>
     </>

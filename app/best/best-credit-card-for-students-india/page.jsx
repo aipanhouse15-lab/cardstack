@@ -2,12 +2,12 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Students in India (June 2026)",
-  description: "Credit cards for students in India are either FD-backed or add-ons. Here's the honest guide to which route actually works.",
+  title: "Student Credit Cards in India: Secured, Add-On and Unsecured Routes (September 2026)",
+  description: "Compare secured, supplementary and unsecured card routes for students in India, with issuer-specific eligibility, costs and reporting caveats.",
   alternates: { canonical: "/best/best-credit-card-for-students-india" },
   openGraph: {
-    title: "Best Credit Card for Students in India (June 2026)",
-    description: "Credit cards for students in India are either FD-backed or add-ons. Here's the honest guide to which route actually works.",
+    title: "Student Credit Cards in India: Secured, Add-On and Unsecured Routes (September 2026)",
+    description: "Compare secured, supplementary and unsecured card routes for students in India, with issuer-specific eligibility, costs and reporting caveats.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -96,47 +96,36 @@ function CampusIcon() {
 
 const studentCardData = [
   {
-    name: "SBI Student Plus Advantage",
-    issuer: "SBI Cards",
+    name: "IDFC FIRST WOW (example secured card)",
+    issuer: "Compare current secured-card products from issuers",
     type: "FD-Secured",
-    fdRequired: "₹10,000 minimum FD",
-    fee: "₹499/yr",
-    limit: "80-85% of FD amount",
-    slug: "sbi-student-plus",
-    note: "Most accessible. SBI branches in every tier-2/3 city.",
-    best: true,
-  },
-  {
-    name: "ICICI Platinum Chip Card",
-    issuer: "ICICI Bank",
-    type: "Income-based (often waived for students with guarantor)",
-    fdRequired: "N/A",
-    fee: "₹299/yr (often waived)",
-    limit: "Based on income/guarantor",
-    slug: "icici-platinum-chip",
-    note: "Good if your parents bank with ICICI. Easier internal approval.",
+    fdRequired: "Issuer minimum and lien terms vary",
+    fee: "Check current MITC",
+    limit: "Issuer sets the limit against the deposit",
+    slug: "idfc-wow",
+    note: "May suit someone who can set aside a deposit and wants a card in their own name; this is a route to compare, not a guaranteed approval.",
     best: false,
   },
   {
-    name: "Axis Neo",
-    issuer: "Axis Bank",
-    type: "Income-based",
-    fdRequired: "N/A",
-    fee: "₹250/yr",
-    limit: "₹25,000 to ₹60,000 for first-time",
-    slug: "axis-neo",
-    note: "Good for students with part-time income or stipend above ₹12,000/month.",
+    name: "An add-on card from a parent or guardian",
+    issuer: "Ask the primary cardholder's issuer about its add-on rules",
+    type: "Supplementary card",
+    fdRequired: "No separate FD in many products; issuer terms apply",
+    fee: "Check current MITC",
+    limit: "Issuer / primary cardholder controls limits",
+    slug: null,
+    note: "Convenient for shared or supervised spending. Do not assume its activity creates a separate credit history for the add-on holder.",
     best: false,
   },
   {
-    name: "Federal Bank Visa Classic (FD-Backed)",
-    issuer: "Federal Bank",
-    type: "FD-Secured",
-    fdRequired: "₹5,000 minimum FD",
-    fee: "₹200/yr",
-    limit: "90% of FD amount",
-    slug: "federal-bank-fd-credit-card",
-    note: "Lowest FD requirement. Good for students in Kerala/South India where Federal Bank has strong presence.",
+    name: "An unsecured card in your own name",
+    issuer: "Apply only if an issuer's published criteria fit your circumstances",
+    type: "Issuer-assessed",
+    fdRequired: "Not applicable",
+    fee: "Compare joining and annual fees",
+    limit: "Set by the issuer after its assessment",
+    slug: null,
+    note: "Income, existing relationship and credit history may be considered; no stipend, score or relationship guarantees approval.",
     best: false,
   },
 ];
@@ -151,7 +140,7 @@ export default function BestCreditCardForStudentsIndia() {
         name: "Can a student under 18 get a credit card in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. RBI regulations require all credit card applicants to be at least 18 years old. Students under 18 can be listed as authorised users on a parent's card in some banks, but cannot hold an independent card.",
+          text: "A primary credit-card applicant must meet the issuer's minimum-age requirement and applicable rules. Some issuers allow a minor to use a supplementary card with an eligible primary cardholder; ask the issuer about age, consent, liability and limits.",
         },
       },
       {
@@ -159,7 +148,7 @@ export default function BestCreditCardForStudentsIndia() {
         name: "What is an FD-backed credit card and how does it work?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "An FD-backed (secured) credit card is issued against a Fixed Deposit you place with the bank as collateral. Your credit limit is typically 80 to 90% of the FD value. The FD earns interest normally. If you default, the bank uses the FD to recover dues.",
+          text: "A secured card is supported by collateral such as a fixed deposit, subject to the issuer's product terms. The deposit may be lien-marked and may not be freely withdrawable while it secures the card. Deposit minimums, credit limits, interest and recovery rights vary by issuer; read the agreement before applying.",
         },
       },
       {
@@ -167,7 +156,7 @@ export default function BestCreditCardForStudentsIndia() {
         name: "What is the minimum FD amount needed for a student credit card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Federal Bank requires as little as ₹5,000. SBI requires ₹10,000. HDFC and Axis typically start at ₹20,000 for their secured card variants. The card limit is proportional to your FD, so a ₹10,000 FD gets you roughly an ₹8,000 to ₹9,000 credit limit.",
+          text: "There is no universal minimum. Each issuer sets the eligible deposit, lock or lien conditions, card limit and fees for its current product. Check the issuer's official product page and terms before placing a deposit.",
         },
       },
       {
@@ -175,7 +164,7 @@ export default function BestCreditCardForStudentsIndia() {
         name: "Is an add-on card from parents better than a student's own card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "It depends on what you want. An add-on card gives you access to the parent's credit limit but the credit history goes to the primary cardholder, not you. For building your own CIBIL score, an FD-backed card in your own name is better.",
+          text: "An add-on card is linked to the primary card account and has issuer-specific liability and limit rules. Do not assume it will create a separate credit file for the supplementary holder. If building an individual file matters, ask the issuer and bureau how that product is reported; a secured primary account may be another route to compare.",
         },
       },
       {
@@ -183,7 +172,7 @@ export default function BestCreditCardForStudentsIndia() {
         name: "Does an FD-backed card build CIBIL score the same way as a regular card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. Repayment behaviour on FD-backed cards is reported to CIBIL exactly like any other credit card. Pay on time, keep utilisation low, and you'll build the same positive credit history.",
+          text: "A secured card may be reported to a credit bureau, but reporting depends on the issuer and account. Confirm that the issuer reports the product and check your report for accuracy. On-time repayment and manageable balances are sensible habits, not a promise of a score or approval.",
         },
       },
       {
@@ -191,7 +180,7 @@ export default function BestCreditCardForStudentsIndia() {
         name: "What income proof is needed for a student credit card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "For FD-secured cards, income proof is usually not required. For income-based student cards, banks accept ITR, Form 16, or salary slip showing ₹15,000 to ₹25,000 monthly. Students with internship stipends above ₹15,000/month may qualify.",
+          text: "Requirements depend on the product and issuer. A secured product may assess the deposit and account documents; an unsecured application may ask for income or employment documents. A stipend amount or document type does not guarantee eligibility or approval.",
         },
       },
       {
@@ -199,7 +188,7 @@ export default function BestCreditCardForStudentsIndia() {
         name: "Should a student get a credit card or just use UPI?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Both serve different purposes. UPI is great for daily payments. A credit card in your name starts building your credit history, which you'll need for a car loan, home loan, or even a rental agreement within the next 5 to 10 years. Starting early is a genuine advantage.",
+          text: "They serve different payment needs. A credit card is optional and creates repayment obligations; it does not guarantee future loan eligibility or a better score. Choose one only if its costs and account controls fit your needs and you can repay it safely.",
         },
       },
       {
@@ -216,10 +205,10 @@ export default function BestCreditCardForStudentsIndia() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for Students in India (June 2026)",
+    headline: "Student Credit Cards in India: Secured, Add-On and Unsecured Routes",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -227,13 +216,13 @@ export default function BestCreditCardForStudentsIndia() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
       {
         "@type": "ListItem",
         position: 3,
         name: "Best Credit Card for Students India",
-        item: "https://assurefintech.com/best/credit-card-for-students-india",
+        item: "https://www.assurefintech.com/best/best-credit-card-for-students-india",
       },
     ],
   };
@@ -248,7 +237,7 @@ export default function BestCreditCardForStudentsIndia() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for Students in India (June 2026)
+            Student Credit Cards in India: Secured, Add-On and Unsecured Routes
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
         </div>
@@ -315,21 +304,21 @@ export default function BestCreditCardForStudentsIndia() {
           marginBottom: 40,
         }}
       >
-        <strong style={{ color: COLOR }}>The honest number on this page:</strong> Most Indian students cannot get an income-based credit card. Banks require ₹1.5 to ₹3 lakh annual income, and student stipends rarely qualify. Your real options are an FD-backed card or an add-on from your parents. Both work. But only one builds your own CIBIL score.
+        <strong style={{ color: COLOR }}>Start with the route, not an approval promise:</strong> Students may compare a secured primary card, an issuer-approved supplementary card, or an unsecured product if they meet its criteria. Eligibility and bureau reporting vary by issuer; neither route guarantees a score or future loan approval.
       </div>
 
       {/* Why banks won't give cards to most students */}
       <section style={{ marginBottom: 44 }}>
-        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>Why most students get rejected for credit cards</h2>
+        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>What issuers may consider</h2>
 
         <div style={{ display: "flex", gap: 20, alignItems: "flex-start", flexWrap: "wrap" }}>
           <BankIcon />
           <div style={{ flex: 1 }}>
             <p>
-              Banks assess credit card applications on three things: income, credit history, and repayment capacity. Most undergraduate students in India fail all three.
+              Issuers set their own checks for identity, age, income, repayment capacity and credit history. The requirements differ by product; a student without an independent income may have fewer unsecured options, but an individual issuer makes the decision.
             </p>
             <p>
-              Without a payslip or ITR, income verification is nearly impossible for a bank's automated system, even if you receive a decent internship stipend in your bank account.
+              Before applying, ask the issuer which documents it accepts. Do not infer eligibility from a stipend amount, campus, family relationship or another applicant's experience.
             </p>
           </div>
         </div>
@@ -343,10 +332,10 @@ export default function BestCreditCardForStudentsIndia() {
           }}
         >
           {[
-            { label: "Minimum income required (most banks)", value: "₹1.5L to ₹3L/year" },
-            { label: "Students typically earning (stipend)", value: "₹0 to ₹15,000/month" },
-            { label: "Credit history needed", value: "None required if FD-backed" },
-            { label: "Age minimum (RBI mandate)", value: "18 years" },
+            { label: "Unsecured-card criteria", value: "Set by each issuer" },
+            { label: "Income-document rules", value: "Ask the issuer" },
+            { label: "Secured-card requirements", value: "Deposit and lien terms vary" },
+            { label: "Supplementary-card rules", value: "Age and consent vary" },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -368,15 +357,11 @@ export default function BestCreditCardForStudentsIndia() {
       <section style={{ marginBottom: 44 }}>
         <div style={{ display: "flex", gap: 16, alignItems: "center", marginBottom: 16 }}>
           <FDLockIcon />
-          <h2 style={{ fontSize: 24, fontWeight: 700, margin: 0 }}>Route 1: The FD-secured card (builds your own CIBIL)</h2>
+          <h2 style={{ fontSize: 24, fontWeight: 700, margin: 0 }}>Route 1: A secured card in your own name</h2>
         </div>
 
-        <p>
-          An FD-backed card is the cleanest way for a student to get a credit card in their own name. You place a Fixed Deposit with the bank, typically ₹10,000 to ₹25,000, and the bank issues a card with a limit of 80 to 90% of that amount.
-        </p>
-        <p>
-          The FD continues earning interest (typically 6.5 to 7% per year at most banks in 2026), so your collateral is not idle money. You're essentially paying a very small opportunity cost for the credit building benefit.
-        </p>
+        <p>A secured card may let an eligible applicant open a primary card against a fixed deposit. The issuer sets the minimum deposit, lien, credit limit, fees and release conditions; these are not uniform across banks, and the money may not be available while pledged.</p>
+        <p>Do not treat FD interest as a guaranteed offset to card costs: deposit rates, tax, card fees and the opportunity cost of locked funds all matter. Compare the current deposit receipt and card terms before committing money.</p>
 
         <div
           style={{
@@ -389,12 +374,12 @@ export default function BestCreditCardForStudentsIndia() {
         >
           <div style={{ fontWeight: 700, marginBottom: 12 }}>How to open an FD-backed card step by step</div>
           {[
-            "Open a savings account at the bank you want the card from (SBI, ICICI, Federal Bank).",
-            "Deposit the minimum FD amount (₹5,000 to ₹20,000 depending on bank) for a minimum 1-year term.",
-            "Apply for the secured credit card product, linking your FD as collateral.",
-            "Bank typically approves within 3 to 7 working days. Card dispatched in 7 to 14 days.",
-            "Activate card and immediately set up full-balance autopay from your savings account.",
-            "Use it for small, regular purchases. Pay zero interest by clearing the full balance.",
+            "Compare issuer product terms, including deposit minimum, lien, fees and early-closure conditions.",
+            "Confirm whether the issuer requires an existing savings account and which identity documents it accepts.",
+            "Understand how the limit is determined and whether the account is reported to credit bureaus.",
+            "Apply through the issuer's official channel; processing and delivery times vary.",
+            "Read the card agreement and statement, then set a payment reminder or suitable payment instruction.",
+            "Spend only what you can repay and contact the issuer promptly about errors or repayment difficulty.",
           ].map((step, i) => (
             <div key={i} style={{ display: "flex", gap: 12, marginBottom: 8, fontSize: 14, alignItems: "flex-start" }}>
               <div
@@ -424,14 +409,14 @@ export default function BestCreditCardForStudentsIndia() {
       <section style={{ marginBottom: 44 }}>
         <div style={{ display: "flex", gap: 16, alignItems: "center", marginBottom: 16 }}>
           <FamilyCardIcon />
-          <h2 style={{ fontSize: 24, fontWeight: 700, margin: 0 }}>Route 2: Add-on card from parents (convenient but no CIBIL benefit)</h2>
+          <h2 style={{ fontSize: 24, fontWeight: 700, margin: 0 }}>Route 2: An add-on card from a parent or guardian</h2>
         </div>
 
         <p>
-          An add-on (or supplementary) card is issued under the primary cardholder's account, typically a parent's card. You get a physical or virtual card with a sub-limit, and transactions are billed to the parent's account.
+          An add-on (or supplementary) card is linked to a primary cardholder's account. Who is liable, what limit applies and how transactions appear depend on the issuer's terms; agree spending controls with the primary holder first.
         </p>
         <p>
-          It's useful for managing campus expenses, but here's the critical difference: all credit activity is reported under the primary cardholder's CIBIL, not yours.
+          It can help manage shared expenses, but ask the issuer and bureau how this account is reported for the supplementary holder. Do not assume it creates a separate credit history.
         </p>
 
         <div
@@ -456,7 +441,7 @@ export default function BestCreditCardForStudentsIndia() {
           <div style={{ background: "var(--red-dim)", border: "1px solid #fca5a5", borderRadius: 8, padding: "14px 16px" }}>
             <div style={{ fontWeight: 700, color: "#991b1b", marginBottom: 8 }}>Cons of add-on card</div>
             {[
-              "No CIBIL history built for you",
+              "Separate bureau reporting is not assured",
               "Shared limit can cause conflicts",
               "Parent sees all your transactions",
               "Any primary default affects you indirectly",
@@ -469,9 +454,9 @@ export default function BestCreditCardForStudentsIndia() {
 
       {/* Card picks */}
       <section style={{ marginBottom: 44 }}>
-        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8 }}>Best student credit cards in India (June 2026)</h2>
+        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8 }}>Student card routes to compare</h2>
         <p style={{ color: "var(--text-muted)", marginBottom: 20 }}>
-          Ranked by accessibility, FD requirement, and how well they serve a student's actual spending patterns.
+          These are routes, not a ranking or approval promise. Check a product's current eligibility, costs, bureau reporting and terms directly with its issuer.
         </p>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -502,7 +487,7 @@ export default function BestCreditCardForStudentsIndia() {
                     letterSpacing: "0.06em",
                   }}
                 >
-                  Top Pick
+                {card.slug ? "Example product" : "Example route"}
                 </div>
               )}
               <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 8, marginBottom: 10 }}>
@@ -530,12 +515,7 @@ export default function BestCreditCardForStudentsIndia() {
                 <div style={{ gridColumn: "1 / -1" }}><span style={{ color: "var(--text-muted)" }}>Credit limit: </span>{card.limit}</div>
               </div>
               <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 10, fontStyle: "italic" }}>{card.note}</div>
-              <Link
-                href={`/cards/${card.slug}`}
-                style={{ color: COLOR, fontSize: 13, fontWeight: 600, textDecoration: "none", borderBottom: `1px solid ${COLOR}40` }}
-              >
-                Full review and eligibility details
-              </Link>
+              {card.slug && <Link href={`/cards/${card.slug}`} style={{ color: COLOR, fontSize: 13, fontWeight: 600, textDecoration: "none", borderBottom: `1px solid ${COLOR}40` }}>See the IDFC FIRST WOW card record and issuer source</Link>}
             </div>
           ))}
         </div>
@@ -549,17 +529,17 @@ export default function BestCreditCardForStudentsIndia() {
           {[
             {
               trigger: "You get your first full-time job offer letter",
-              action: "Apply immediately, even before you join. Banks accept offer letters as income proof. Your card often arrives before your first salary.",
+              action: "Ask the issuer whether it accepts an offer letter or requires salary and other documents. Approval and delivery timing are issuer-specific.",
               icon: <TimelineArrow />,
             },
             {
-              trigger: "Your internship stipend crosses ₹15,000/month",
-              action: "Axis Neo and IDFC FIRST Millennia both accept ₹15,000/month income. Apply with your stipend credit bank statements showing 3 consistent months.",
+              trigger: "Your income or employment situation changes",
+              action: "Review the issuer's current eligibility and document requirements; no single stipend amount guarantees acceptance.",
               icon: <TimelineArrow />,
             },
             {
-              trigger: "You've had your FD card for 12+ months with clean history",
-              action: "Contact your bank to upgrade to a regular (non-secured) card. Most banks allow this if CIBIL is 700+. Your FD gets released.",
+              trigger: "You want to close or replace a secured card",
+              action: "Ask the issuer about outstanding balances, lien release, closure steps and any effect on your credit file. A fixed tenure or score does not guarantee an upgrade.",
               icon: <TimelineArrow />,
             },
           ].map((item, i) => (
@@ -599,18 +579,18 @@ export default function BestCreditCardForStudentsIndia() {
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
             <thead>
               <tr style={{ background: `${COLOR}15`, borderBottom: `2px solid ${COLOR}40` }}>
-                {["Spending Category", "Monthly Amount", "Best Card for This", "Reward Rate"].map((h) => (
+                {["Spending Category", "Your spend", "What to check", "Reward treatment"].map((h) => (
                   <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700 }}>{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody>
               {[
-                ["Subscriptions (OTT, music)", "₹300 to ₹800", "Amazon Pay ICICI", "1% cashback"],
-                ["Online food (Swiggy, Zomato)", "₹1,000 to ₹3,000", "Axis Neo", "Partner discounts"],
-                ["Amazon/Flipkart (books, electronics)", "₹2,000 to ₹8,000", "Amazon Pay ICICI", "5% (Prime)"],
-                ["Recharges and internet", "₹400 to ₹800", "Any card", "1%"],
-                ["Travel (trains, buses)", "₹500 to ₹2,000", "IRCTC SBI card", "Points on railway"],
+                ["Subscriptions", "Your actual bill", "Merchant and payment route", "Check eligible-spend rules"],
+                ["Food and groceries", "Your actual spend", "App, channel and category cap", "May be excluded or capped"],
+                ["Books and shopping", "Your actual spend", "Merchant-specific rate and caps", "Check current card terms"],
+                ["Recharges and utilities", "Your actual bill", "Payment platform and biller", "Eligibility varies"],
+                ["Travel", "Your actual trips", "Booking channel and redemption", "Points may not equal cash"],
               ].map(([cat, amt, card, reward], i) => (
                 <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
                   <td style={{ padding: "10px 14px" }}>{cat}</td>
@@ -628,7 +608,7 @@ export default function BestCreditCardForStudentsIndia() {
       <section style={{ marginBottom: 44 }}>
         <div style={{ display: "flex", gap: 16, alignItems: "center", marginBottom: 16 }}>
           <CostIcon />
-          <h2 style={{ fontSize: 22, fontWeight: 700, margin: 0 }}>The real cost of an FD-backed card (worked example)</h2>
+          <h2 style={{ fontSize: 22, fontWeight: 700, margin: 0 }}>Costs to include for a secured card</h2>
         </div>
 
         <div
@@ -639,12 +619,12 @@ export default function BestCreditCardForStudentsIndia() {
             padding: "18px 20px",
           }}
         >
-          <p style={{ margin: "0 0 12px", fontWeight: 600 }}>Scenario: SBI Student Plus, ₹15,000 FD, 1 year</p>
+          <p style={{ margin: "0 0 12px", fontWeight: 600 }}>Compare the full cost for the exact card and deposit product you are considering.</p>
           {[
-            ["FD interest earned (7% p.a.)", "+₹1,050"],
-            ["Annual card fee", "-₹499"],
-            ["Net cost of credit access", "₹551 for the year"],
-            ["CIBIL score benefit value", "Priceless for future loans"],
+            ["Deposit return", "Use the current deposit receipt rate; tax may apply"],
+            ["Card fees and taxes", "Check the current MITC"],
+            ["Funds tied up", "Review lien and early-release rules"],
+            ["Credit reporting", "Confirm with issuer; no score outcome is promised"],
           ].map(([label, value]) => (
             <div
               key={label}
@@ -663,7 +643,7 @@ export default function BestCreditCardForStudentsIndia() {
             </div>
           ))}
           <p style={{ margin: "12px 0 0", fontSize: 13, color: "var(--text-muted)" }}>
-            For ₹551 in net cost, you get 12 months of credit history, a working credit card for online purchases, and a CIBIL profile that will help you get a loan or better card within 18 months.
+            Treat the deposit as collateral, not free credit. Compare the card's fees with the deposit's after-tax return and the cost of keeping those funds unavailable.
           </p>
         </div>
       </section>
@@ -681,12 +661,11 @@ export default function BestCreditCardForStudentsIndia() {
         <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 16px" }}>Your student credit card action plan</h2>
         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {[
-            "If you have ₹10,000 to spare: open an SBI or Federal Bank FD today and apply for their secured card.",
-            "If your parents have a credit card: ask to be added as an add-on cardholder for immediate access while you prepare for your own card.",
-            "If you have an internship paying ₹15,000+/month: apply for Axis Neo or IDFC FIRST Millennia with 3 months of bank statements.",
-            "Once your card arrives: use it for subscriptions and online purchases only. Pay the full balance before due date.",
-            "In 12 months: check your CIBIL and consider upgrading. See our " +
-              "Stack Builder tool for the next card that fits your then-current income.",
+            "If considering a secured card, compare the deposit minimum, lien, fees, limit and release terms before placing funds.",
+            "For an add-on card, agree a spending limit with the primary holder and understand who is liable for repayment.",
+            "For an unsecured card, review the issuer's current eligibility and documentation requirements; do not rely on a stipend threshold or another person's approval.",
+            "Once you hold a card, read statements, check transactions and pay according to the issuer's terms without spending beyond your means.",
+            "Periodically check your bureau report for accurate account information. A card does not guarantee a score, upgrade or future loan.",
           ].map((step, i) => (
             <div key={i} style={{ display: "flex", gap: 12, fontSize: 14 }}>
               <div
@@ -706,17 +685,7 @@ export default function BestCreditCardForStudentsIndia() {
                 {i + 1}
               </div>
               <div>
-                {i === 4 ? (
-                  <>
-                    In 12 months: check your CIBIL and consider upgrading. See our{" "}
-                    <Link href="/stack-builder" style={{ color: COLOR }}>
-                      Stack Builder tool
-                    </Link>{" "}
-                    for the next card that fits your income.
-                  </>
-                ) : (
-                  step
-                )}
+                {step}{i === 4 && <> Explore options with our{" "}<Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder</Link>; verify each product's current eligibility and terms.</>}
               </div>
             </div>
           ))}
@@ -778,7 +747,7 @@ export default function BestCreditCardForStudentsIndia() {
           lineHeight: 1.8,
         }}
       >
-        <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Card details, FD requirements, and reward structures are accurate as of {UPDATED} and subject to change by the issuing bank. This is not financial advice. Always check the latest terms on the bank's official website. Assure Fintech may earn referral fees from some card issuers. This does not affect editorial rankings.
+        <strong>Sources and disclosure:</strong> Assure Fintech is an independent comparison platform. This guide compares general student card routes; only the specifically linked product has a product record on this page. Issuer eligibility, FD terms, fees and rewards can change. Check current official terms before applying. For credit-score factors and NA/NH files, see <a href="https://www.cibil.com/blog/all-you-need-to-know-about-cibil-score" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>CIBIL's official guide</a>. This is educational content, not financial advice. Assure Fintech may earn referral fees from some card issuers; compensation does not determine editorial coverage.
       </footer>
     </main>
     </>

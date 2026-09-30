@@ -168,9 +168,9 @@ export default function BestCreditCardForHealthInsurancePayment() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
-      { "@type": "ListItem", position: 3, name: "Best Credit Card for Health Insurance Payment", item: "https://assurefintech.com/best/credit-card-for-health-insurance-payment" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
+      { "@type": "ListItem", position: 3, name: "Best Credit Card for Health Insurance Payment", item: "https://www.assurefintech.com/best/credit-card-for-health-insurance-payment" }
     ]
   };
 

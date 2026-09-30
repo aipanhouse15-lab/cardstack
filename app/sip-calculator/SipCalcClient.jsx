@@ -173,9 +173,9 @@ export default function SipCalcClient() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Calculators", item: "https://assurefintech.com/calculators/" },
-      { "@type": "ListItem", position: 3, name: "SIP Calculator", item: "https://assurefintech.com/calculators/sip-calculator" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Calculators", item: "https://www.assurefintech.com/calculators/" },
+      { "@type": "ListItem", position: 3, name: "SIP Calculator", item: "https://www.assurefintech.com/calculators/sip-calculator" },
     ],
   };
 

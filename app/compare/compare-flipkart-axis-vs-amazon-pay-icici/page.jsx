@@ -58,9 +58,9 @@ export default function CompareFlipkartAxisVsAmazonIcici() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://assurefintech.com/compare/" },
-      { "@type": "ListItem", position: 3, name: "Flipkart Axis vs Amazon Pay ICICI", item: "https://assurefintech.com/compare/flipkart-axis-vs-amazon-pay-icici" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.assurefintech.com/compare/" },
+      { "@type": "ListItem", position: 3, name: "Flipkart Axis vs Amazon Pay ICICI", item: "https://www.assurefintech.com/compare/flipkart-axis-vs-amazon-pay-icici" }
     ]
   };
 

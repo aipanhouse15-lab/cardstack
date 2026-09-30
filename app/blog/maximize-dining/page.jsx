@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import { permanentRedirect } from "next/navigation";
 
 export const metadata = {
   title: "How to Actually Maximize Dining Rewards in India (With Real Math)",
@@ -219,6 +220,8 @@ const SvgStackingTimeline = () => (
 );
 
 export default function BlogMaximizeDining() {
+  permanentRedirect("/best/best-credit-card-for-dining-restaurants");
+
   const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -280,9 +283,9 @@ export default function BlogMaximizeDining() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "Maximize Dining Rewards India", item: "https://assurefintech.com/blog/maximize-dining-rewards-india" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "Maximize Dining Rewards India", item: "https://www.assurefintech.com/blog/maximize-dining-rewards-india" },
     ],
   };
 

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "How Much Term Life Insurance Cover Do You Need? | Assure Fintech",
+  title: "How Much Term Life Insurance Cover Do You Need?",
   description: "Estimate term-life cover using dependants, liabilities, future goals, existing assets and inflation scenarios, then compare policy terms.",
   alternates: { canonical: "/learn/insurance/term-insurance-real-value" },
 };
@@ -24,10 +24,10 @@ export default function TermInsuranceRealValuePage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://assurefintech.com/learn/insurance/" },
-      { "@type": "ListItem", position: 4, name: "Term-Life Cover", item: "https://assurefintech.com/learn/insurance/term-insurance-real-value" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Learn", item: "https://www.assurefintech.com/learn/" },
+      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://www.assurefintech.com/learn/insurance/" },
+      { "@type": "ListItem", position: 4, name: "Term-Life Cover", item: "https://www.assurefintech.com/learn/insurance/term-insurance-real-value" },
     ],
   };
 

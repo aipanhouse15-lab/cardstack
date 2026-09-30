@@ -18,7 +18,7 @@ export const DID_YOU_KNOW = [
 ];
 
 export const BLOG_POSTS = [
-  { id: "maximize-dining", title: "How to Maximize Dining Rewards in India (2026)", excerpt: "You could be earning 5% back on every meal. Here's which cards to use.", category: "Strategy", color: "#6366f1", date: "Mar 5, 2026", readTime: "6 min", featured: true,
+  { id: "maximize-dining", title: "How to Compare Dining and Food-Delivery Card Rewards", excerpt: "Restaurant, food-delivery and wallet transactions can earn different rates. Compare current issuer terms, eligible merchants, caps and fees.", category: "Strategy", color: "#6366f1", date: "Mar 5, 2026", readTime: "6 min", featured: true,
     content: [
       { type: "p", text: "If you eat out even twice a week or order on Swiggy/Zomato regularly, you're probably spending ₹5,000-10,000 a month on food. At the wrong card's 1% rate, you're earning ₹50-100. At the right card's 5%, that's ₹250-500. Over a year, that's ₹3,000-6,000 difference — just from swiping the right card." },
       { type: "h2", text: "The 5% Dining Cards" },
@@ -31,7 +31,7 @@ export const BLOG_POSTS = [
       { type: "p", text: "The real power move is stacking. HDFC Diners Black gives you a free Zomato Gold membership (₹600/year value). Use the card on Zomato = 5% rewards + Gold benefits (free delivery, extra discounts). That's double savings on every order." },
     ]
   },
-  { id: "best-free-cards", title: "5 Best Lifetime Free Credit Cards in India", excerpt: "Zero-fee cards offering 2-5% cashback. Never pay a paisa.", category: "Reviews", color: "#16a34a", date: "Mar 1, 2026", readTime: "8 min", featured: true,
+  { id: "best-free-cards", title: "No-Annual-Fee Credit Cards: Compare Current Features", excerpt: "Compare lifetime-free cards by current fees, eligible rewards, caps, exclusions and the categories you actually use.", category: "Guides", color: "#16a34a", date: "Mar 1, 2026", readTime: "8 min", featured: true,
     content: [
       { type: "p", text: "Annual fees eat into your rewards. A card charging ₹2,500/year needs to earn you at least ₹2,500 in rewards just to break even. That's why free cards are often the smartest choice — every rupee in rewards is pure profit." },
       { type: "h2", text: "1. Axis ACE — Best Overall Free Card" },
@@ -46,7 +46,7 @@ export const BLOG_POSTS = [
       { type: "p", text: "3% on travel with zero forex markup — that's incredibly rare on a free card. If you travel internationally even once a year, the forex savings alone (1-3.5% on most other cards) make this worth having." },
     ]
   },
-  { id: "fuel-trick", title: "The Fuel Credit Card Trick Most Indians Miss", excerpt: "One card gives 5% on fuel — completely free.", category: "Tips", color: "#ea580c", date: "Feb 25, 2026", readTime: "4 min", featured: false,
+  { id: "fuel-trick", title: "Fuel Credit Cards: Compare Surcharges, Rewards and Fees", excerpt: "Fuel rewards and surcharge waivers depend on the card, station, transaction and current terms. Check the net saving before choosing a card.", category: "Tips", color: "#ea580c", date: "Feb 25, 2026", readTime: "4 min", featured: false,
     content: [
       { type: "p", text: "Most Indians think the best they can get on fuel is a 1% surcharge waiver. That saves you about ₹10-50 per fill-up. But OneCard can give you 5% back on fuel — that's ₹50-250 per fill-up. Here's how." },
       { type: "h2", text: "How OneCard's 5x Works" },
@@ -57,7 +57,7 @@ export const BLOG_POSTS = [
       { type: "p", text: "OneCard only gives 5x on your TOP category. If you spend more on groceries than fuel in a given month, groceries gets the 5x instead. Solution: use a different card for your other big categories, and keep OneCard dedicated to fuel." },
     ]
   },
-  { id: "regalia-vs-infinia", title: "HDFC Regalia vs Infinia: Worth the 5x Price?", excerpt: "We ran numbers across 8 categories.", category: "Compare", color: "#2563eb", date: "Feb 20, 2026", readTime: "7 min", featured: false,
+  { id: "regalia-vs-infinia", title: "HDFC Regalia vs Infinia: Current Terms for Existing Cardholders", excerpt: "Regalia sourcing is discontinued and Infinia is invitation-only. Compare current issuer terms and your actual redemption value.", category: "Compare", color: "#2563eb", date: "Feb 20, 2026", readTime: "7 min", featured: false,
     content: [
       { type: "p", text: "HDFC Regalia costs ₹2,500/year. HDFC Infinia costs ₹12,500/year — exactly 5 times more. Is Infinia actually worth it? We ran the numbers across all 8 spending categories to find out." },
       { type: "h2", text: "The Core Difference" },
@@ -70,7 +70,7 @@ export const BLOG_POSTS = [
       { type: "p", text: "For most people spending ₹50K-1L/month total: stick with Regalia and pair it with a card like Axis ACE or Amazon ICICI for everyday categories. Infinia only makes sense for very high spenders, heavy SmartBuy users, or if you value unlimited lounge access. Plus, Infinia is invite-only — you can't just apply." },
     ]
   },
-  { id: "amazon-hack", title: "Stack 2 Cards for Maximum Online Savings", excerpt: "Amazon Pay ICICI + one more covers everything.", category: "Strategy", color: "#6366f1", date: "Feb 15, 2026", readTime: "5 min", featured: false,
+  { id: "amazon-hack", title: "Compare Credit Cards for Amazon and Other Online Spending", excerpt: "A two-card strategy only helps when current eligible rewards exceed fees, caps and the effort of managing another account.", category: "Strategy", color: "#6366f1", date: "Feb 15, 2026", readTime: "5 min", featured: false,
     content: [
       { type: "p", text: "Amazon Pay ICICI gives 5% on Amazon — but what about Flipkart, Myntra, Nykaa, and everything else? Here's a two-card combo that covers all your online shopping at maximum rewards." },
       { type: "h2", text: "The Combo: Amazon ICICI + SBI SimplyCLICK" },
@@ -81,7 +81,7 @@ export const BLOG_POSTS = [
       { type: "p", text: "If Flipkart is your primary platform (not Amazon), swap Amazon ICICI for Axis Flipkart (₹500/year, 5% on Flipkart/Myntra). The principle stays the same: one card for your primary platform, SBI SimplyCLICK for everything else." },
     ]
   },
-  { id: "beginners-guide", title: "Credit Cards for Beginners: A No-BS Guide", excerpt: "First card? Don't panic. Here's what to do.", category: "Guides", color: "#7c3aed", date: "Feb 10, 2026", readTime: "10 min", featured: false,
+  { id: "beginners-guide", title: "Credit Cards for Beginners: A Practical Guide", excerpt: "Understand repayment, fees, eligibility and credit reporting before choosing a first card.", category: "Guides", color: "#7c3aed", date: "Feb 10, 2026", readTime: "10 min", featured: false,
     content: [
       { type: "p", text: "Getting your first credit card can feel overwhelming. Banks make it complicated on purpose. Here's what you actually need to know — no jargon, no hidden traps." },
       { type: "h2", text: "Which Card to Get First" },
@@ -151,7 +151,7 @@ export const BLOG_POSTS = [
 {
   id: "best-card-students-2026",
   title: "Best Credit Card for Students in India (2026)",
-  excerpt: "No income proof? No credit history? You can still get a solid card. Here's how.",
+  excerpt: "Card approval depends on the issuer and your circumstances. Compare secured and unsecured options without assuming eligibility.",
   category: "Guides",
   color: "#7c3aed",
   date: "Mar 19, 2026",
@@ -180,7 +180,7 @@ export const BLOG_POSTS = [
 {
   id: "best-card-beginners-2026",
   title: "Best Credit Card for Beginners in India (2026)",
-  excerpt: "First card? Don't overthink it. Here are the 3 safest options and exactly how to use them.",
+  excerpt: "A source-reviewed comparison framework for choosing a first card based on fees, repayment and current issuer eligibility.",
   category: "Guides",
   color: "#7c3aed",
   date: "Mar 18, 2026",
@@ -206,8 +206,8 @@ export const BLOG_POSTS = [
 // ─── POST 3 of 30: Best Credit Card for Freelancers ───
 {
   id: "best-card-freelancers-2026",
-  title: "Best Credit Card for Freelancers in India (2026)",
-  excerpt: "Irregular income. No salary slip. Here's how to get — and maximize — credit cards as a freelancer.",
+  title: "Credit Cards for Freelancers: Compare Costs and Terms",
+  excerpt: "Compare eligibility, annual fees, reward exclusions, bookkeeping and repayment terms without assuming approval or tax benefits.",
   category: "Guides",
   color: "#7c3aed",
   date: "Mar 16, 2026",
@@ -261,8 +261,8 @@ export const BLOG_POSTS = [
 // ─── POST 5 of 30: Best Card for Low Spenders ───
 {
   id: "best-card-low-spenders-2026",
-  title: "Best Credit Card for Low Spenders in India (Under ₹15,000/Month)",
-  excerpt: "Your spend is modest. That doesn't mean your rewards should be. Here's the low-spend playbook.",
+  title: "Low-Spend Credit Card Strategy: Compare Fees and Eligible Rewards",
+  excerpt: "For modest spending, compare fees, caps and eligible rewards against the value you will actually use; no card is best for everyone.",
   category: "Guides",
   color: "#7c3aed",
   date: "Mar 10, 2026",
@@ -287,8 +287,8 @@ export const BLOG_POSTS = [
 // ─── POST 6 of 30: Best Card for Insurance Premium Payments ───
 {
   id: "best-card-insurance-premiums-2026",
-  title: "Best Credit Card for Insurance Premium Payments in India (2026)",
-  excerpt: "You're paying ₹20,000-1,00,000+ in insurance premiums annually. Here's how to earn rewards on it.",
+  title: "Credit Cards for Insurance Premiums: Current Rewards and Exclusions",
+  excerpt: "Check card-specific insurance exclusions, payment charges and caps before estimating any premium-payment reward.",
   category: "Guides",
   color: "#7c3aed",
   date: "Mar 9, 2026",
@@ -340,8 +340,8 @@ export const BLOG_POSTS = [
 // ─── POST 8 of 30: How Credit Card Reward Points Actually Work ───
 {
   id: "how-reward-points-work-india",
-  title: "How Credit Card Reward Points Actually Work in India",
-  excerpt: "1 point ≠ ₹1. The real value depends on where and how you redeem. Here's the decoder ring.",
+  title: "Credit Card Reward Points: Value, Expiry and Redemption",
+  excerpt: "Learn to value points using the redemption you will actually use, and check your own card's earning, expiry and closure rules.",
   category: "Strategy",
   color: "#6366f1",
   date: "Mar 22, 2026",
@@ -423,7 +423,7 @@ export const BLOG_POSTS = [
 {
   id: "cibil-score-101-india",
   title: "CIBIL Score 101 — What Indian Banks Actually Look At",
-  excerpt: "750 is the magic number. Here's what builds it, what destroys it, and what doesn't matter at all.",
+  excerpt: "Credit scores have no universal approval threshold. Learn what credit reports show and how to check them for accuracy.",
   category: "Tips",
   color: "#ea580c",
   date: "Mar 19, 2026",
@@ -450,7 +450,7 @@ export const BLOG_POSTS = [
 {
   id: "minimum-transaction-traps",
   title: "Minimum Transaction Traps You're Probably Falling For",
-  excerpt: "That ₹100 Swiggy order? It might earn zero rewards. Here's the fine print that steals your cashback.",
+  excerpt: "Minimum-spend thresholds and transaction exclusions vary by card. Check the issuer's terms before assuming a small purchase earns rewards.",
   category: "Tips",
   color: "#ea580c",
   date: "Mar 18, 2026",
@@ -472,8 +472,8 @@ export const BLOG_POSTS = [
 // ─── POST 13 of 30: How to Get Annual Fee Waived ───
 {
   id: "get-annual-fee-waived-scripts",
-  title: "How to Get Your Credit Card Annual Fee Waived (Scripts Included)",
-  excerpt: "Banks waive fees more often than you think. Here's exactly what to say — word for word.",
+  title: "How to Assess Whether a Credit Card Annual Fee Is Worth Paying",
+  excerpt: "Compare the fee after taxes with rewards and benefits you will genuinely use, accounting for caps, exclusions and realistic alternatives.",
   category: "Tips",
   color: "#ea580c",
   date: "Mar 17, 2026",
@@ -499,7 +499,7 @@ export const BLOG_POSTS = [
 {
   id: "credit-card-vs-debit-card",
   title: "Credit Card vs Debit Card — You're Losing Money Without Knowing",
-  excerpt: "If you're swiping debit for everything, you're giving up 2-5% in free rewards. Here's why.",
+  excerpt: "Compare debit and credit by payment timing, fees, protections and rewards you can actually redeem—not a fixed cashback promise.",
   category: "Strategy",
   color: "#6366f1",
   date: "Mar 16, 2026",
@@ -524,7 +524,7 @@ export const BLOG_POSTS = [
 {
   id: "right-way-pay-credit-card-bill",
   title: "The Right Way to Pay Your Credit Card Bill (Most People Get This Wrong)",
-  excerpt: "Paying on time is obvious. Paying the right WAY saves your credit score and earns you a grace period.",
+  excerpt: "Understand statement balances, due dates, minimum payments and autopay so you can avoid carrying an unintended balance.",
   category: "Tips",
   color: "#ea580c",
   date: "Mar 15, 2026",
@@ -574,8 +574,8 @@ export const BLOG_POSTS = [
 // ─── POST 17 of 30: Reward Points vs Cashback ───
 {
   id: "reward-points-vs-cashback",
-  title: "Reward Points vs Cashback — Which Is Actually Better?",
-  excerpt: "Points can be worth more. Cashback is always simple. Here's how to decide for your situation.",
+  title: "Points or Cashback? Compare the Value You Will Actually Use",
+  excerpt: "Compare reward points and cashback using eligible spend, real redemption value, caps, fees and the habits you actually have.",
   category: "Strategy",
   color: "#6366f1",
   date: "Mar 13, 2026",
@@ -600,7 +600,7 @@ export const BLOG_POSTS = [
 {
   id: "credit-utilization-ratio-guide",
   title: "Credit Utilization Ratio — The Number That Controls Your CIBIL Score",
-  excerpt: "Using 90% of your limit? Your score is tanking. Here's the number to stay under and how to get there.",
+  excerpt: "Balances relative to available limits can matter, but no single utilisation ratio guarantees a score. Learn what to monitor.",
   category: "Tips",
   color: "#ea580c",
   date: "Mar 12, 2026",
@@ -626,7 +626,7 @@ export const BLOG_POSTS = [
 {
   id: "should-you-close-old-credit-card",
   title: "Should You Close That Old Credit Card? Probably Not.",
-  excerpt: "That card collecting dust in your drawer is quietly helping your CIBIL score. Here's why.",
+  excerpt: "Closing a card can affect available credit and account history. Consider fees, usage and issuer terms before deciding.",
   category: "Tips",
   color: "#ea580c",
   date: "Mar 11, 2026",
@@ -651,7 +651,7 @@ export const BLOG_POSTS = [
 {
   id: "first-card-decision-framework",
   title: "How to Pick Your First Credit Card in India (Decision Framework)",
-  excerpt: "Don't start with the 'best' card. Start with the right card. Here's a 4-question framework.",
+  excerpt: "This retired first-card article now points readers to the current source-reviewed beginner comparison.",
   category: "Strategy",
   color: "#6366f1",
   date: "Mar 10, 2026",
@@ -676,7 +676,7 @@ export const BLOG_POSTS = [
 {
   id: "7-credit-card-mistakes-india",
   title: "7 Credit Card Mistakes That Cost Indians Money Every Month",
-  excerpt: "You're probably making at least two of these. The good news: they're all fixable today.",
+  excerpt: "A practical checklist for payment timing, card fees, reward caps and safe account management.",
   category: "Tips",
   color: "#ea580c",
   date: "Mar 9, 2026",
@@ -731,7 +731,7 @@ export const BLOG_POSTS = [
 {
   id: "rbi-credit-card-rules-2026",
   title: "7 RBI Credit Card Rules Banks Hope You Never Read (2026 Update)",
-  excerpt: "These 7 RBI rules protect you from hidden fees, forced upgrades, and unfair charges — but most Indians don't know they exist. Updated June 2026.",
+  excerpt: "A guide to reading current RBI directions and issuer disclosures; scope and effective dates vary by product and transaction.",
   category: "Strategy",
   color: "#6366f1",
   date: "Mar 22, 2026",
@@ -760,7 +760,7 @@ export const BLOG_POSTS = [
 {
   id: "bnpl-vs-credit-cards-india",
   title: "BNPL vs Credit Cards — The Real Cost of Buy Now Pay Later",
-  excerpt: "BNPL feels free. Credit cards seem complicated. Here's why one is actually cheaper for you.",
+  excerpt: "Compare the lender, APR, total payable, fees, repayment schedule and credit reporting for the specific BNPL or card offer.",
   category: "Strategy",
   color: "#6366f1",
   date: "Mar 21, 2026",
@@ -787,8 +787,8 @@ export const BLOG_POSTS = [
 // ─── POST 25 of 30: Why Reward Rates Keep Dropping ───
 {
   id: "why-reward-rates-dropping-india",
-  title: "Why Credit Card Reward Rates Keep Dropping in India",
-  excerpt: "Your 5% card might be 3% next year. Here's what's driving the change and how to stay ahead.",
+  title: "Credit Card Reward Points: Value, Expiry and Redemption",
+  excerpt: "For a current, practical guide to reward value and expiry, compare the exact terms for your card and redemption route.",
   category: "Strategy",
   color: "#6366f1",
   date: "Mar 20, 2026",
@@ -812,7 +812,7 @@ export const BLOG_POSTS = [
 {
   id: "ai-changing-credit-card-picks",
   title: "How AI Is Changing the Way You Should Pick Credit Cards",
-  excerpt: "Spreadsheets can't optimize across caps, categories, and calendar cycles. AI can. Here's the shift.",
+  excerpt: "Explore how recommendation tools can model eligible categories and caps—and why their results still need current issuer data.",
   category: "Strategy",
   color: "#6366f1",
   date: "Mar 19, 2026",
@@ -886,7 +886,7 @@ export const BLOG_POSTS = [
 {
   id: "digital-wallets-vs-credit-cards",
   title: "Digital Wallets vs Credit Cards — Which Actually Gives More Rewards?",
-  excerpt: "Paytm, PhonePe, GPay all offer cashback. But are they beating your credit card? Let's compare.",
+  excerpt: "Compare a wallet balance, bank-account UPI, RuPay credit on UPI and direct card payment by fees, terms and protections.",
   category: "Strategy",
   color: "#6366f1",
   date: "Mar 16, 2026",
@@ -911,8 +911,8 @@ export const BLOG_POSTS = [
 // ─── POST 30 of 30: The Future of Credit Card Rewards in India ───
 {
   id: "future-credit-card-rewards-india",
-  title: "The Future of Credit Card Rewards in India",
-  excerpt: "Rewards are shrinking, UPI is growing, and AI is changing how we pick cards. Here's where this is all heading.",
+  title: "Credit Card Reward Points: Value, Expiry and Redemption",
+  excerpt: "For an evidence-based method to compare points and cashback, see our current guide to rewards and redemption terms.",
   category: "Strategy",
   color: "#6366f1",
   date: "Mar 14, 2026",

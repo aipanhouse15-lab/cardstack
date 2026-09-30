@@ -4,11 +4,19 @@ import Link from "next/link";
 import { BLOG_POSTS } from "@/data/content";
 import SectionHeader from "@/components/SectionHeader";
 
+const REDIRECTED_BLOG_IDS = new Set([
+  "amazon-hack", "best-card-beginners-2026", "best-card-insurance-premiums-2026",
+  "best-card-low-spenders-2026", "best-free-cards", "first-card-decision-framework",
+  "fuel-trick", "future-credit-card-rewards-india", "get-annual-fee-waived-scripts",
+  "maximize-dining", "reward-points-vs-cashback", "why-reward-rates-dropping-india",
+]);
+
 export default function BlogClient() {
   const [cat, setCat] = useState("All");
-  const cats = ["All", ...new Set(BLOG_POSTS.map(p => p.category))];
-  const list = cat === "All" ? BLOG_POSTS : BLOG_POSTS.filter(p => p.category === cat);
-  const featured = BLOG_POSTS.filter(p => p.featured);
+  const currentPosts = BLOG_POSTS.filter(p => !REDIRECTED_BLOG_IDS.has(p.id));
+  const cats = ["All", ...new Set(currentPosts.map(p => p.category))];
+  const list = cat === "All" ? currentPosts : currentPosts.filter(p => p.category === cat);
+  const featured = currentPosts.filter(p => p.featured);
 
   return (
     <section className="pt-24 pb-20 px-6 max-w-[1000px] mx-auto">

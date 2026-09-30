@@ -203,6 +203,20 @@ export default function CardPage({ params }) {
         </div>
       </div>
 
+      {card.sourceUrl && (
+        <div className="wrap" style={{ marginTop: 20, marginBottom: 28 }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, flexWrap: "wrap", padding: "20px 24px", border: "1px solid rgba(212,168,83,.38)", borderRadius: 16, background: "rgba(212,168,83,.06)" }}>
+            <div>
+              <div className="k accent" style={{ marginBottom: 6 }}>ISSUER INFORMATION</div>
+              <p style={{ color: "var(--mut)", margin: 0, fontSize: 14 }}>Check the issuer’s current card terms, availability and eligibility criteria.</p>
+            </div>
+            <a href={card.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, borderRadius: 999, padding: "13px 20px", background: "var(--green)", color: "#07120c", fontWeight: 700, textDecoration: "none" }}>
+              Check on issuer website <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      )}
+
       {/* ═══ QUICK FACTS ═══ */}
       <div className="qfacts">
         <div className="wrap">
@@ -522,7 +536,7 @@ export default function CardPage({ params }) {
             <div className="author-box" style={{ marginTop: 40 }}>
               <div className="ava">A</div>
               <div>
-                <h5>Ashutosh</h5>
+                <h5>Ash</h5>
                 <p>Founder of Assure Fintech. I focus on the gap between advertised rewards and what cardholders can actually earn. This review explains the card’s fees, reward rules, caps and exclusions so you can compare its value against your own spending.</p>
               </div>
             </div>

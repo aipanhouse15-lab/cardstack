@@ -3,11 +3,11 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Your First Credit Card in India: Everything You Actually Need to Know (2026)",
-  description: "Your first 3 months: what to do Month 1: Apply for one card appropriate for your income. Activate it. Make 2-3 small purchases (groceries, a Blinkit ...",
+  description: "A practical first-credit-card guide: billing dates, full-balance payments, fees, issuer eligibility and how to review your credit report—without approval or score promises.",
   alternates: { canonical: "/blog/beginners-guide" },
   openGraph: {
     title: "Your First Credit Card in India: Everything You Actually Need to Know (2026)",
-    description: "Your first 3 months: what to do Month 1: Apply for one card appropriate for your income. Activate it. Make 2-3 small purchases (groceries, a Blinkit ...",
+    description: "A practical first-credit-card guide: billing dates, full-balance payments, fees, issuer eligibility and how to review your credit report—without approval or score promises.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/first-credit-card-guide-india
 // Template: complete beginner onboarding guide
-// Color: #0891b2 | Updated: September 26, 2026
+// Color: #0891b2 | Updated: September 28, 2026
 
 const COLOR = "#0891b2";
-const UPDATED = "September 26, 2026";
+const UPDATED = "September 28, 2026";
 
 const SvgCreditCardLifecycle = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Timeline showing how a credit card billing cycle works from purchase to due date" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -28,11 +28,11 @@ const SvgCreditCardLifecycle = () => (
     {/* Timeline line */}
     <line x1="60" y1="100" x2="660" y2="100" stroke="var(--border)" strokeWidth="3" />
     {[
-      { x: 60, label: "Statement\nDate", sub: "Day 1", color: COLOR, note: "Your billing cycle starts" },
-      { x: 220, label: "You Buy\nSomething", sub: "Day 10", color: "#f59e0b", note: "₹5,000 purchase" },
-      { x: 380, label: "Next\nStatement", sub: "Day 31", color: COLOR, note: "Bill generated: ₹5,000" },
-      { x: 540, label: "Due Date", sub: "Day 51", color: "#16a34a", note: "Pay ₹5,000 by today" },
-      { x: 660, label: "Interest\nStarts", sub: "Day 52+", color: "#ef4444", note: "If not paid: 3.5%/month" },
+      { x: 60, label: "Statement\nDate", sub: "Cycle", color: COLOR, note: "Issuer sets the cycle" },
+      { x: 220, label: "You Buy\nSomething", sub: "Purchase", color: "#f59e0b", note: "Transaction posts" },
+      { x: 380, label: "Next\nStatement", sub: "Statement", color: COLOR, note: "Eligible transactions billed" },
+      { x: 540, label: "Due Date", sub: "Due", color: "#16a34a", note: "Pay the full amount due" },
+      { x: 660, label: "If Balance\nUnpaid", sub: "Terms", color: "#ef4444", note: "Interest/fees per issuer terms" },
     ].map(({ x, label, sub, color, note }) => (
       <g key={x}>
         <circle cx={x} cy="100" r="14" fill={color} />
@@ -43,12 +43,12 @@ const SvgCreditCardLifecycle = () => (
       </g>
     ))}
     <rect x="40" y="155" width="640" height="28" rx="6" fill={COLOR} opacity="0.25" />
-    <text x="360" y="174" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>Free credit window: up to 50 days (statement date to due date)</text>
+    <text x="360" y="174" textAnchor="middle" fontSize="12" fontWeight="700" fill={COLOR}>The interest-free period varies by purchase date, issuer cycle and payment history.</text>
   </svg>
 );
 
 const SvgInterestVsInvestment = () => (
-  <svg viewBox="0 0 720 260" role="img" aria-label="Comparison showing Rs 10000 credit card debt interest cost vs the same amount in a fixed deposit over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 260" role="img" aria-label="Illustrative comparison of hypothetical credit card interest and fixed-deposit returns over 12 months; actual rates vary" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="260" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">₹10,000 for 12 Months: Credit Card Debt vs Fixed Deposit</text>
     {/* Credit card */}
@@ -56,8 +56,8 @@ const SvgInterestVsInvestment = () => (
     <rect x="50" y="50" width="270" height="42" rx="10" fill="var(--raise)" />
     <rect x="50" y="76" width="270" height="16" fill="var(--raise)" />
     <text x="185" y="78" textAnchor="middle" fontSize="13" fontWeight="800" fill="white">₹10,000 Unpaid Balance</text>
-    <text x="185" y="115" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Interest rate: 3.5%/month</text>
-    <text x="185" y="135" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Annual rate: 42%</text>
+    <text x="185" y="115" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Example rate: 3.5%/month</text>
+    <text x="185" y="135" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Illustrative; issuer rates vary</text>
     <text x="185" y="165" textAnchor="middle" fontSize="28" fontWeight="800" fill="#ef4444">-₹5,100</text>
     <text x="185" y="188" textAnchor="middle" fontSize="12" fill="var(--text-muted)">interest paid in 12 months</text>
     <text x="185" y="210" textAnchor="middle" fontSize="11" fill="#ef4444" fontWeight="700">You still owe ₹10,000 + this</text>
@@ -68,35 +68,35 @@ const SvgInterestVsInvestment = () => (
     <rect x="400" y="50" width="270" height="42" rx="10" fill="#16a34a" />
     <rect x="400" y="76" width="270" height="16" fill="#16a34a" />
     <text x="535" y="78" textAnchor="middle" fontSize="13" fontWeight="800" fill="white">₹10,000 in Fixed Deposit</text>
-    <text x="535" y="115" textAnchor="middle" fontSize="11" fill="var(--text-muted)">FD rate: 7.0% per year</text>
-    <text x="535" y="135" textAnchor="middle" fontSize="11" fill="var(--text-muted)">(SBI 1-year FD, June 2026)</text>
+    <text x="535" y="115" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Hypothetical FD rate: 7%/year</text>
+    <text x="535" y="135" textAnchor="middle" fontSize="11" fill="var(--text-muted)">Before tax; actual rates vary</text>
     <text x="535" y="165" textAnchor="middle" fontSize="28" fontWeight="800" fill="#16a34a">+₹700</text>
-    <text x="535" y="188" textAnchor="middle" fontSize="12" fill="var(--text-muted)">interest earned in 12 months</text>
-    <text x="535" y="210" textAnchor="middle" fontSize="11" fill="#16a34a" fontWeight="700">Your ₹10,000 grows to ₹10,700</text>
+    <text x="535" y="188" textAnchor="middle" fontSize="12" fill="var(--text-muted)">simple illustrative interest in 12 months</text>
+    <text x="535" y="210" textAnchor="middle" fontSize="11" fill="#16a34a" fontWeight="700">Actual return depends on product and tax</text>
   </svg>
 );
 
 const SvgFirstCardByIncome = () => (
-  <svg viewBox="0 0 720 416" role="img" aria-label="Table recommending first credit cards for different income brackets in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 416" role="img" aria-label="Comparison checklist for choosing a first credit card; issuer approval is not guaranteed" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="280" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
-    <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Your First Card by Income Bracket (June 2026)</text>
+    <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Choose a card by eligibility, costs and how you use it</text>
     <rect x="20" y="40" width="680" height="34" fill={COLOR} rx="4" />
-    <text x="120" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Monthly Income</text>
-    <text x="280" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Recommended Card</text>
-    <text x="460" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Why</text>
-    <text x="630" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Annual Fee</text>
+    <text x="120" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Applicant</text>
+    <text x="280" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">What to compare</text>
+    <text x="460" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Check</text>
+    <text x="630" y="62" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Fees</text>
     {[
-      ["Under ₹25,000", "SBI SimplySAVE or IDFC FIRST Classic", "Easy approval, low income requirement, decent rewards", "₹0-₹499"],
-      ["₹25,000 - ₹50,000", "Amazon Pay ICICI Bank", "Truly free, 5% on Amazon, easy ICICI approval", "₹0 forever"],
-      ["₹50,000 - ₹1L", "HDFC Regalia or Axis Ace", "Higher limits, travel benefits, better reward rates", "₹2,500-₹499"],
-      ["Above ₹1L/month", "HDFC Diners Black or Amex Platinum", "Premium lounges, concierge, high reward rates", "₹10,000+"],
+      ["Regular income", "Compare issuer offers or criteria", "Eligibility varies by issuer and applicant", "Varies"],
+      ["Student / no income proof", "Ask about secured or add-on cards", "Check deposit, lien and cardholder terms", "Varies"],
+      ["New to credit", "Review fees or eligibility first", "No approval is guaranteed", "Varies"],
+      ["Higher spending", "Compare net rewards with fees", "Check caps, exclusions and redemption", "Varies"],
     ].map(([income, card, why, fee], i) => (
       <g key={i}>
         <rect x="20" y={76 + i * 48} width="680" height="48" fill={i % 2 === 0 ? "var(--raise2)" : "var(--raise)"} />
         <text x="120" y={96 + i * 48} textAnchor="middle" fontSize="11" fontWeight="700" fill={COLOR}>{income}</text>
         <text x="280" y={92 + i * 48} textAnchor="middle" fontSize="11" fontWeight="600" fill="var(--text)">{card.split(" or ")[0]}</text>
         <text x="280" y={108 + i * 48} textAnchor="middle" fontSize="10" fill="var(--text-muted)">or {card.split(" or ")[1]}</text>
-        <text x="460" y={100 + i * 48} textAnchor="middle" fontSize="10" fill="var(--text-muted)">{why.substring(0, 35)}</text>
+        <text x="460" y={100 + i * 48} textAnchor="middle" fontSize="10" fill="var(--text-muted)">{why.substring(0, 28)}</text>
         <text x="630" y={100 + i * 48} textAnchor="middle" fontSize="12" fontWeight="700" fill="var(--text)">{fee}</text>
       </g>
     ))}
@@ -109,8 +109,8 @@ const SvgGoldenRules = () => (
     <text x="360" y="28" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">The Four Golden Rules of Credit Cards (Non-Negotiable)</text>
     {[
       { x: 30, num: "1", rule: "Pay the full amount", detail: "Always pay the full statement balance, not just the minimum. The minimum due is a trap." },
-      { x: 210, num: "2", rule: "Pay before due date", detail: "Even one day late = ₹500-1,000 late fee + interest. Set an auto-pay on the due date." },
-      { x: 390, num: "3", rule: "Keep utilization under 30%", detail: "If your limit is ₹1 lakh, never charge more than ₹30,000. High utilization kills CIBIL." },
+      { x: 210, num: "2", rule: "Pay by due date", detail: "Charges depend on issuer terms. Reminders help; still review each statement." },
+      { x: 390, num: "3", rule: "Keep balances manageable", detail: "High utilisation may matter, but no single threshold guarantees a score." },
       { x: 570, num: "4", rule: "Never use for cash withdrawal", detail: "ATM cash from credit card = 2.5% fee + interest from day one. Use a debit card instead." },
     ].map(({ x, num, rule, detail }) => (
       <g key={x}>
@@ -128,29 +128,17 @@ const SvgGoldenRules = () => (
 );
 
 const SvgCibilImpact = () => (
-  <svg viewBox="0 0 720 192" role="img" aria-label="Chart showing how responsible credit card use improves CIBIL score over 12 months" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
+  <svg viewBox="0 0 720 192" role="img" aria-label="Responsible card use can support credit history, but no CIBIL score or timeline is guaranteed" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
     <rect width="720" height="180" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
-    <text x="360" y="26" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">CIBIL Score Growth: Responsible Card Use Over 12 Months</text>
-    {/* Score line */}
-    {[
-      [60, 140, "Start: No credit history\n(~0 or N/A)"],
-      [160, 125, "Month 3: ~650"],
-      [280, 108, "Month 6: ~700"],
-      [400, 90, "Month 9: ~730"],
-      [520, 72, "Month 12: ~750"],
-      [640, 55, "Month 18: ~780+"],
-    ].map(([x, y, label], i, arr) => {
-      const next = arr[i + 1];
-      return (
-        <g key={x}>
-          {next && <line x1={x} y1={y} x2={next[0]} y2={next[1]} stroke={COLOR} strokeWidth="3" />}
-          <circle cx={x} cy={y} r="7" fill={COLOR} />
-          <text x={x} y={y + 20} textAnchor="middle" fontSize="9" fill="var(--text-muted)">{label.split(":")[0]}:</text>
-          <text x={x} y={y + 30} textAnchor="middle" fontSize="10" fontWeight="700" fill="var(--text)">{label.split(": ")[1]}</text>
-        </g>
-      );
-    })}
-    <text x="360" y="168" textAnchor="middle" fontSize="10" fill="var(--text-muted)">*Assumes full payment each month, under 30% utilization, no missed payments</text>
+    <text x="360" y="32" textAnchor="middle" fontSize="14" fontWeight="700" fill="var(--text)">Build a responsible credit record, not a promised score</text>
+    {["Pay on time", "Keep balances manageable", "Apply thoughtfully", "Check your report"].map((label, i) => (
+      <g key={label}>
+        <circle cx={100 + i * 173} cy="92" r="18" fill={COLOR} />
+        <text x={100 + i * 173} y="97" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">{i + 1}</text>
+        <text x={100 + i * 173} y="128" textAnchor="middle" fontSize="10" fontWeight="700" fill="var(--text)">{label}</text>
+      </g>
+    ))}
+    <text x="360" y="160" textAnchor="middle" fontSize="10" fill="var(--text-muted)">Credit bureau outcomes and reporting times vary; no score increase is guaranteed.</text>
   </svg>
 );
 
@@ -163,10 +151,10 @@ const SvgMissedPaymentCost = () => (
     <text x="380" y="58" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">The actual cost</text>
     <text x="590" y="58" textAnchor="middle" fontSize="12" fontWeight="700" fill="white">Timing</text>
     {[
-      ["Late payment fee", "₹500 to ₹1,000 (varies by bank)", "Same statement"],
-      ["Interest on full balance", "3-3.5%/month (36-42%/year)", "From transaction date"],
-      ["Grace period loss", "No interest-free days next month", "Immediate"],
-      ["CIBIL score hit", "-50 to -100 points on 30-day delay", "Within 45 days"],
+      ["Late payment charge", "Check the card's current fee schedule", "Issuer terms"],
+      ["Interest", "Rate and calculation vary by card and balance", "Issuer terms"],
+      ["Interest-free period", "May be affected when a balance is unpaid", "Check MITC"],
+      ["Credit report", "Payment information may be reported", "Reporting varies"],
     ].map(([what, cost, timing], i) => (
       <g key={i}>
         <rect x="20" y={70 + i * 26} width="680" height="26" fill={i % 2 === 0 ? "var(--raise2)" : "var(--raise)"} />
@@ -186,47 +174,47 @@ export default function BlogBeginnersGuide() {
       {
         "@type": "Question",
         name: "What is the free credit period on a credit card?",
-        acceptedAnswer: { "@type": "Answer", text: "The free credit period is the time between when you make a purchase and when you must pay your bill, with zero interest charged. In India, this is typically 20 to 50 days depending on when in the billing cycle you make the purchase. A purchase made on statement date day 1 gets the full 50-day window. A purchase made on day 30 of the cycle gets only about 20 days. If you pay the full statement balance by the due date, you pay absolutely zero interest." }
+        acceptedAnswer: { "@type": "Answer", text: "The interest-free period depends on the issuer's billing cycle, the purchase date and your payment history. The maximum advertised period does not apply to every transaction. Check your card's MITC and statement, and pay the full amount due by the due date to avoid purchase interest where the interest-free benefit applies." }
       },
       {
         "@type": "Question",
         name: "Should I use a credit card if I do not need to borrow money?",
-        acceptedAnswer: { "@type": "Answer", text: "Yes, absolutely. A credit card is best used as a debit card replacement, not a borrowing tool. You spend on the card, earn rewards, and pay the full amount before the due date. You never pay interest and you gain reward points or cashback on every purchase. The additional benefits include CIBIL score building, purchase protection, and the 20-50 day float on your money." }
+        acceptedAnswer: { "@type": "Answer", text: "A card may be useful if you can manage it safely and its costs and features suit you. Rewards are subject to eligibility, exclusions and caps; credit history or purchase-dispute outcomes are not guaranteed. If a card could encourage spending or revolving debt, it may not be right for you." }
       },
       {
         "@type": "Question",
         name: "What credit limit should a beginner expect on their first card?",
-        acceptedAnswer: { "@type": "Answer", text: "First-time credit card holders in India typically get a limit between ₹20,000 and ₹75,000, depending on income and the issuing bank. Salaried individuals with documented income get higher starting limits than self-employed applicants. The limit increases automatically after 6-12 months of responsible use. Never request a high limit just to have it available, it encourages overspending." }
+        acceptedAnswer: { "@type": "Answer", text: "There is no standard first-card limit. The issuer decides based on its product and assessment. Limits do not automatically increase after a fixed period. Use only credit you can comfortably repay and check the issuer's terms." }
       },
       {
         "@type": "Question",
         name: "What does credit utilization ratio mean and why does it matter?",
-        acceptedAnswer: { "@type": "Answer", text: "Credit utilization is the percentage of your credit limit that you are currently using. If your limit is ₹1 lakh and you have ₹40,000 charged on the card, your utilization is 40%. CIBIL and other bureaus treat high utilization as a sign of credit stress. Keeping utilization under 30% (₹30,000 on a ₹1 lakh limit) is the recommended practice for maintaining a good CIBIL score." }
+        acceptedAnswer: { "@type": "Answer", text: "Utilisation compares reported revolving balances with available credit. CIBIL identifies high utilisation as a factor that may negatively affect a score, but does not publish one threshold that guarantees a particular score or approval. Keep balances manageable and avoid spending beyond your repayment capacity." }
       },
       {
         "@type": "Question",
         name: "What is the minimum amount due trap on credit cards?",
-        acceptedAnswer: { "@type": "Answer", text: "The minimum amount due is typically 5% of the outstanding balance. Banks require only this minimum to keep the account in good standing. But if you pay only the minimum, you still pay 3-3.5% monthly interest on the remaining 95% of the balance from the original transaction date. Paying only the minimum on a ₹50,000 bill for 6 months can result in over ₹8,000 in interest charges." }
+        acceptedAnswer: { "@type": "Answer", text: "The minimum due and treatment of unpaid balances depend on the issuer's terms. Paying only the minimum does not clear the full bill and can leave an interest-bearing balance; new purchases may also lose their interest-free period. Check your statement and MITC, and pay the full amount due when possible." }
       },
       {
         "@type": "Question",
         name: "How long does it take to build a good CIBIL score with a credit card?",
-        acceptedAnswer: { "@type": "Answer", text: "Starting from no credit history, responsible credit card use typically builds a CIBIL score of 700+ within 6-9 months. By 12-18 months of consistent full payments and under-30% utilization, you can expect a score of 750-780+. A score of 750 or higher qualifies you for most home loans and personal loans at competitive interest rates." }
+        acceptedAnswer: { "@type": "Answer", text: "There is no guaranteed score or timeline. A bureau file depends on lender reporting and the full credit profile, while lenders apply their own criteria. On-time repayment and manageable balances are sensible habits, but they do not guarantee a particular score or loan approval." }
       },
       {
         "@type": "Question",
         name: "What happens to my CIBIL score if I miss one payment?",
-        acceptedAnswer: { "@type": "Answer", text: "A single missed payment reported to the credit bureau (which happens after 30 days of non-payment) can drop your CIBIL score by 50 to 100 points. The effect persists on your credit report for 7 years, though its impact reduces over time as you build a positive payment history. One missed payment is serious, especially early in your credit history." }
+        acceptedAnswer: { "@type": "Answer", text: "A missed payment may lead to issuer charges, interest and negative repayment information. Reporting and score effects depend on the account, lender reporting and your profile; there is no reliable fixed point deduction or universal retention period. Contact the issuer promptly and check your report for accuracy." }
       },
       {
         "@type": "Question",
         name: "Is it okay to have multiple credit cards as a beginner?",
-        acceptedAnswer: { "@type": "Answer", text: "Start with one card for the first 6-12 months. Learn to track statements, due dates, and spending before adding complexity. Each new card application creates a hard inquiry on your credit report, temporarily lowering your CIBIL score. After 12 months of responsible single-card use, adding a second card for specific rewards optimization (like a fuel card or dining card) makes sense." }
+        acceptedAnswer: { "@type": "Answer", text: "Start with a product you can manage and apply for additional credit only when it meets a genuine need. Applications may create lender enquiries, but their effect varies and there is no required waiting period. Compare fees, eligibility and your own spending before applying." }
       },
       {
         "@type": "Question",
         name: "What is the interest rate on credit cards in India?",
-        acceptedAnswer: { "@type": "Answer", text: "Most Indian credit cards charge between 3% to 3.5% per month on revolving balances, which equals 36% to 42% annually. Some cards go as high as 3.75% per month (45% per year). This is the most expensive form of borrowing available to retail consumers in India, higher than personal loans, gold loans, and home loans. Never carry a credit card balance unless it is a genuine emergency." }
+        acceptedAnswer: { "@type": "Answer", text: "Interest rates and calculation methods vary by card. Review the card's current MITC and fee schedule for the monthly rate, effective annual rate, taxes and how unpaid balances are handled. Compare the written cost with other borrowing options before using revolving credit." }
       },
     ],
   };
@@ -237,7 +225,7 @@ export default function BlogBeginnersGuide() {
     headline: "Your First Credit Card in India: The Complete Beginner's Guide (2026)",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-09-28",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -245,9 +233,9 @@ export default function BlogBeginnersGuide() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "First Credit Card Guide India", item: "https://assurefintech.com/blog/first-credit-card-guide-india" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "First Credit Card Guide India", item: "https://www.assurefintech.com/blog/beginners-guide" },
     ],
   };
 
@@ -279,68 +267,68 @@ export default function BlogBeginnersGuide() {
       </nav>
 <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What a credit card actually is</h2>
-        <p>A credit card is a short-term loan facility from a bank. You spend on the card, the bank pays the merchant on your behalf, and you repay the bank by the due date. If you repay the full amount, you pay zero interest. If you carry any balance past the due date, you pay 3% to 3.5% monthly interest, which is 36% to 42% per year.</p>
-        <p>The reason to get a credit card is not to borrow money. It is to use the 20-50 day free credit window while earning rewards on spending you were going to do anyway. Think of it as a tool that pays you to buy groceries and Zomato orders, as long as you pay the full bill every month without fail.</p>
+        <p>A credit card is a revolving credit facility from a bank. You spend on the card and repay the issuer under the card's terms. If you pay the full statement balance by the due date, the interest-free benefit may apply to eligible purchases; cash advances, fees and other transactions can be treated differently. When interest applies, the rate and calculation are specific to the card and are shown in its current Most Important Terms and Conditions (MITC).</p>
+        <p>A card is safest when used for planned spending you can repay in full. The interest-free period varies with the billing cycle and purchase date, and rewards are subject to eligible categories, exclusions, caps and redemption rules. A card does not guarantee savings or a better credit outcome.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How the billing cycle works</h2>
-        <p>Every credit card has a statement date (when the billing cycle closes and your bill is generated) and a due date (when you must pay). The gap between the statement date and due date is typically 18-21 days. The full free credit period extends from the start of the billing cycle to the due date, which can be up to 50 days.</p>
-        <p>Here is the key insight: a purchase made right after your statement date gets almost 50 days interest-free. A purchase made the day before your statement date gets only about 18-20 days free. This does not change your behavior, just helps you understand why your statement date matters.</p>
+        <p>Your issuer sets a statement date, which closes a billing cycle, and a payment due date for that statement. The number of days between them and the interest-free treatment are governed by the issuer's terms. The maximum period sometimes advertised is not available on every purchase or in every account situation.</p>
+        <p>Check your statement and MITC to understand which transactions are included and when payment is due. Paying the full amount due on time is the key habit; if a previous balance is unpaid, interest-free treatment on new purchases may be affected under the card terms.</p>
       </section>
       <SvgCreditCardLifecycle />
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Why you should get a credit card (even if you do not need credit)</h2>
 
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "16px 0 8px", color: COLOR }}>CIBIL score building</h3>
-        <p>India's lending system runs on CIBIL scores. Home loans, car loans, personal loans, even renting premium apartments now involve a CIBIL check. With no credit history, you score zero or "N/A," and that makes lenders nervous. A credit card used responsibly for 12-18 months builds a CIBIL score of 750+ without any borrowing.</p>
+        <p>A credit report can be one input to a lender's assessment, but lenders set their own eligibility and underwriting criteria. A file marked NA/NH can mean there is too little or no recent credit history to generate a score; it is not itself a bad score, though an individual lender may have policies for applicants without a score. Responsible repayment can contribute to a credit history, but no card use promises a particular score or approval.</p>
 
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "16px 0 8px", color: COLOR }}>Rewards on spending you already do</h3>
-        <p>You pay for groceries, fuel, Swiggy orders, and Amazon purchases regardless. A credit card converts 1% to 5% of that spending into cashback or reward points. At ₹15,000/month spend, even a 2% average return is ₹3,600/year back in your pocket for zero extra effort.</p>
+        <p>Some cards reward eligible spending, but the effective value depends on the card, merchant, category, caps, exclusions, redemption rules and fees. As arithmetic only, ₹15,000 of qualifying monthly spend at a hypothetical 2% return would be ₹3,600 over a year before fees; actual card returns can be lower or zero for excluded transactions.</p>
 
         <h3 style={{ fontSize: 16, fontWeight: 700, margin: "16px 0 8px", color: COLOR }}>Purchase protection</h3>
-        <p>Most credit cards include a dispute resolution mechanism: if a merchant fails to deliver, you can raise a chargeback with the bank. This protection does not exist with UPI or debit card payments, where your money is gone the moment you approve the transaction.</p>
+        <p>For a disputed card transaction, contact the issuer promptly and follow its dispute process; any chargeback or resolution depends on the facts, scheme rules and issuer terms. UPI and bank-transfer complaints follow different processes. No payment method guarantees recovery, so keep receipts and report unauthorised or unresolved transactions quickly.</p>
       </section>
       <SvgGoldenRules />
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The one rule that overrides everything else</h2>
-        <p>Pay the full statement balance before the due date, every single month. Not the minimum due. Not "most of it." The full amount. This one habit means you pay zero interest and earn all the rewards. This is the entire point of the card.</p>
+        <p>Where the card's interest-free benefit applies, paying the full statement balance by the due date helps avoid purchase interest. Paying only the minimum leaves an unpaid balance and may lead to interest and fees under the MITC. Reward eligibility is separate: excluded transactions, caps and redemption terms still apply.</p>
         <p>Set up an auto-debit for the full statement amount on the due date. Check that your savings account will have enough funds two days before the due date. This removes human error from the equation entirely.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The real cost of carrying a balance</h2>
-        <p>Carrying ₹10,000 unpaid on a credit card for 12 months at 3.5%/month costs ₹5,100 in interest. The same ₹10,000 in a 1-year FD at SBI (7% per year) earns ₹700. The gap between the best saving and the worst borrowing, both using ₹10,000, is ₹5,800 in a single year.</p>
-        <p>Credit card debt is the most expensive legal form of borrowing available to individuals in India. It is more expensive than personal loans (11-18%), gold loans (7-10%), and home loans (8.5-9.5%). If you ever find yourself unable to pay the full amount, treat that as a financial emergency and address the root spending problem first.</p>
+        <p>The graphic below is a mathematical illustration, not a current rate comparison: it assumes ₹10,000 remains unpaid for 12 months and a hypothetical 3.5% monthly rate is applied to a growing balance, with no payments or other charges. That produces about ₹5,100 in illustrative interest before fees and taxes. Separately, ₹10,000 earning a hypothetical simple 7% gross annual return produces ₹700 before tax. Real card calculations, deposit rates, fees and tax treatment differ by product and customer. Check current written terms before comparing costs.</p>
+        <p>Revolving card debt can be costly. Compare the card's stated monthly and effective annual rates, fees and taxes with any alternative borrowing, and contact the issuer early if repayment becomes difficult. Avoid borrowing to chase rewards.</p>
       </section>
       <SvgInterestVsInvestment />
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What happens when you miss a payment</h2>
-        <p>Missing your due date triggers an immediate late payment fee of ₹500 to ₹1,000 depending on the bank. Interest starts accruing on the full outstanding amount from the date of each original purchase, not from the due date. Your grace period is also lost for the next billing cycle, meaning all new purchases start accruing interest from the transaction date.</p>
-        <p>If the payment delay crosses 30 days, the bank reports it to the credit bureau and your CIBIL score drops significantly. A single 30-day delinquency can knock 50-100 points off your score and stays on record for 7 years.</p>
+        <p>A late or partial payment may result in fees, interest and changes to interest-free treatment, depending on the account, transaction and issuer terms. The applicable charges and calculation should be stated in your card's current MITC and statement. If you cannot pay on time, contact the issuer promptly and ask about the available options rather than relying on a generic estimate.</p>
+        <p>Repayment information may be shared with credit bureaus under applicable requirements. The reporting, score effect and retention depend on the information and credit file; there is no reliable universal point deduction or timeline. Check your report and raise an accuracy dispute with the bureau and lender when needed.</p>
       </section>
       <SvgMissedPaymentCost />
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How to choose your first card</h2>
-        <p>Your first credit card choice should be based on: your monthly income (for approval), your primary spending category (for reward optimization), and your tolerance for annual fees. At the start, prioritize approval probability and zero or low fee over maximum rewards.</p>
-        <p>A good first card is one that gets approved, costs you nothing or very little in fees, and gives modest rewards. Once you have 12 months of credit history, you can upgrade to a card that is better optimized for your specific spending pattern.</p>
+        <p>Compare cards by eligibility criteria, annual and joining fees, spend patterns, reward caps and exclusions, repayment terms, and whether you can manage the account safely. Issuers make individual approval decisions; no checklist or income level guarantees approval.</p>
+        <p>If you are new to credit, ask the issuer what options and documentation it accepts, including whether a secured or add-on product is available and what obligations come with it. Reassess a card when your needs change, but do not assume a limit increase or upgrade after a fixed period.</p>
       </section>
       <SvgFirstCardByIncome />
       <section style={{ marginBottom: 24 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The CIBIL score building timeline</h2>
-        <p>Starting from zero credit history, using your first card responsibly produces measurable results within 3 months. Most bureaus require at least 6 months of credit history to generate a score. By month 12, responsible users consistently reach 720-750, which qualifies them for most consumer lending products.</p>
-        <p>The two factors that matter most in the early months: payment history (no missed payments) and credit utilization (never above 30%). The age of credit accounts matters too, which is why you should not cancel your first card even after upgrading to a better one later.</p>
+        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Building a credit history takes consistency</h2>
+        <p>There is no dependable score timetable or score that qualifies everyone for a product. Bureau files depend on reported account data and scoring models; lenders then apply their own criteria. CIBIL identifies payment history, credit utilisation, credit mix and enquiries among the factors relevant to its score. Keep accounts accurate and affordable, pay on time and apply thoughtfully.</p>
+        <p>Before closing a card, review its fees, benefits, outstanding balance and effect on your available credit. There is no universal rule that you must keep every first card open; make the decision based on its cost and your circumstances.</p>
       </section>
       <SvgCibilImpact />
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The credit utilization ratio explained simply</h2>
-        <p>If your card limit is ₹1,00,000 and you spend ₹70,000 this month, your utilization is 70%. That looks alarming to lenders even if you pay the full ₹70,000 on time. CIBIL records your utilization at the statement closing date, so what matters is what is on the card when the statement is generated, not just whether you pay it off.</p>
-        <p>Keep spend below 30% of your limit on each statement. If you regularly spend ₹30,000 and your limit is only ₹60,000 (50% utilization), call the bank and request a limit increase after 6-12 months of good history, rather than asking for a new card.</p>
+        <p>Utilisation compares reported revolving balances with available credit. CIBIL identifies high utilisation as a score factor, but reporting dates and lender decisions vary, and no single percentage guarantees a score or approval. For example, ₹70,000 against a ₹1,00,000 limit is 70% utilisation if that balance is what is reported.</p>
+        <p>Keep borrowing within what you can repay. If your limit no longer fits your needs, ask the issuer about its process and any consequences; an increase is not guaranteed and can affect your overall credit profile.</p>
       </section>
       <section style={{ marginBottom: 24, padding: "20px 24px", background: "#ecfeff", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 8px 8px 0" }}>
         <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 12px" }}>Your first 3 months: what to do</h2>
-        <p style={{ margin: "0 0 8px" }}>Month 1: Apply for one card appropriate for your income. Activate it. Make 2-3 small purchases (groceries, a Blinkit order). Pay the full statement amount on due date.</p>
-        <p style={{ margin: "0 0 8px" }}>Month 2: Set up auto-debit for the full statement amount. Check that your bank account is linked. Continue using the card for regular purchases only. Do not use it for anything you would not buy with cash.</p>
-        <p style={{ margin: "0 0 8px" }}>Month 3: Check your credit report for free at CIBIL.com (one free report per year per bureau). Confirm your card activity is being reported correctly. Keep utilization below 30%.</p>
-        <p style={{ margin: 0 }}>After 12 months: revisit your card. If your spending has grown or shifted (more Amazon, more dining, more travel), use <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> to find a more optimized second card to add.</p>
+        <p style={{ margin: "0 0 8px" }}>Before applying: compare issuer criteria, total fees and repayment terms. Borrow only for planned purchases you can afford to repay.</p>
+        <p style={{ margin: "0 0 8px" }}>Each billing cycle: read the statement, check transactions and due date, and arrange payment you can comfortably fund. Auto-debit can help, but confirm the amount and linked account.</p>
+        <p style={{ margin: "0 0 8px" }}>Periodically: review your credit report through the bureau's official channel, check that account data is accurate, and dispute errors with the lender and bureau.</p>
+        <p style={{ margin: 0 }}>When your needs change, compare options again. <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> can help explore reward fit; verify eligibility, costs and terms with the issuer.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>FAQ</h2>
@@ -364,7 +352,7 @@ export default function BlogBeginnersGuide() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Assure Fintech is an independent financial comparison site. This guide is for educational purposes only and does not constitute financial advice. CIBIL score impacts, interest rates, and card recommendations are based on publicly available data as of June 2026. Actual card terms, approval criteria, and interest rates vary by bank and applicant profile. Consult the issuing bank's MITC document before applying. Assure Fintech receives no payment from card issuers for editorial coverage.
+        Assure Fintech is an independent financial comparison site. This guide is educational: card terms, eligibility, rates and bureau outcomes vary by product and applicant. Reviewed September 28, 2026. For score factors and NA/NH files, see <a href="https://www.cibil.com/blog/all-you-need-to-know-about-cibil-score" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>CIBIL's score guide</a> and <a href="https://www.cibil.com/contact-us-faq" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>CIBIL's official FAQs</a>; for disputes, see <a href="https://www.cibil.com/faq/loan-rejections-disputes" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>CIBIL's dispute FAQ</a>. Review your issuer's current MITC and fee schedule before applying. Assure Fintech receives no payment from card issuers for editorial coverage.
       </footer>
     </main>
     </>

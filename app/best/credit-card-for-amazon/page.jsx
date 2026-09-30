@@ -231,9 +231,9 @@ export default function BestCreditCardForAmazon() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
-      { "@type": "ListItem", position: 3, name: "Best Credit Card for Amazon", item: "https://assurefintech.com/best/credit-card-for-amazon" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
+      { "@type": "ListItem", position: 3, name: "Best Credit Card for Amazon", item: "https://www.assurefintech.com/best/credit-card-for-amazon" },
     ]
   };
 
@@ -394,7 +394,7 @@ export default function BestCreditCardForAmazon() {
         <Link href="/cards/hdfc-millennia">HDFC Millennia Review</Link> ·{" "}
         <Link href="/best/credit-card-for-online-shopping">Best Cards for All Online Shopping</Link> ·{" "}
         <Link href="/best/credit-card-for-flipkart">Best Cards for Flipkart</Link> ·{" "}
-        <Link href="/blog/reward-points-vs-cashback">Reward Points vs Cashback</Link> ·{" "}
+        <Link href="/blog/how-reward-points-work-india">Reward Points vs Cashback</Link> ·{" "}
         <Link href="/smart-swipe">Smart Swipe Guide</Link>
       </p>
 

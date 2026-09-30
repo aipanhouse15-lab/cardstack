@@ -54,9 +54,9 @@ export default function CompareMiraeVsSbiElss() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://assurefintech.com/compare/" },
-      { "@type": "ListItem", position: 3, name: "Mirae Tax Saver vs SBI Long Term Equity", item: "https://assurefintech.com/compare/mirae-tax-saver-vs-sbi-long-term-equity" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.assurefintech.com/compare/" },
+      { "@type": "ListItem", position: 3, name: "Mirae Tax Saver vs SBI Long Term Equity", item: "https://www.assurefintech.com/compare/mirae-tax-saver-vs-sbi-long-term-equity" }
     ]
   };
 

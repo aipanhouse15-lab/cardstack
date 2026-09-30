@@ -54,9 +54,9 @@ export default function CompareUtiVsHdfcNifty50() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://assurefintech.com/compare/" },
-      { "@type": "ListItem", position: 3, name: "UTI Nifty 50 vs HDFC Nifty 50 Index", item: "https://assurefintech.com/compare/uti-nifty50-vs-hdfc-nifty50-index" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.assurefintech.com/compare/" },
+      { "@type": "ListItem", position: 3, name: "UTI Nifty 50 vs HDFC Nifty 50 Index", item: "https://www.assurefintech.com/compare/uti-nifty50-vs-hdfc-nifty50-index" }
     ]
   };
 

@@ -5,9 +5,6 @@ const legacyRedirects = [
   ['/cards/scapia-federal', '/cards/scapia'],
   ['/cards/sbi-card-elite', '/cards/sbi-elite'],
   ['/author/ash-k', '/about'],
-  ['/best', '/cards'],
-  ['/learn', '/blog'],
-  ['/learn/credit-cards', '/blog'],
   ['/tools/emi-calculator', '/loan-calculator'],
   ['/tools/income-tax-calculator', '/tax-calculator'],
   ['/tools/sip-calculator', '/sip-calculator'],
@@ -93,6 +90,8 @@ const legacyRedirects = [
   ['/cards/hdfc-regalia-gold', '/cards/hdfc-regalia'],
   ['/blog/women-credit-card-india-2026', '/best/best-credit-card-for-women-india'],
   ['/blog/invite-only-cards-india-guide', '/cards/hdfc-infinia'],
+  ['/blog/axis-ace-vs-amazon-pay-icici', '/compare'],
+  ['/blog/bbps-credit-card-rewards-india', '/best/best-credit-card-for-bill-payments'],
 ];
 
 const nextConfig = {

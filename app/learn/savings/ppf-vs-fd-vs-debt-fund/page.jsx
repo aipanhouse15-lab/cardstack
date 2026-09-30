@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "PPF vs Fixed Deposits vs Debt Funds: How to Compare | Assure Fintech",
+  title: "PPF vs Fixed Deposits vs Debt Funds: How to Compare",
   description: "Compare PPF, bank fixed deposits and debt mutual funds by liquidity, risk, tax, time horizon and current product rules—not a fixed return forecast.",
   alternates: { canonical: "/learn/savings/ppf-vs-fd-vs-debt-fund" },
   openGraph: { title: "PPF vs Fixed Deposits vs Debt Funds: How to Compare", description: "A decision framework for comparing three different savings and investment products.", type: "article", siteName: "Assure Fintech" },
@@ -25,10 +25,10 @@ export default function PPFvsFDvsDebtFundPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Savings", item: "https://assurefintech.com/learn/savings/" },
-      { "@type": "ListItem", position: 4, name: "PPF, FD and Debt Funds", item: "https://assurefintech.com/learn/savings/ppf-vs-fd-vs-debt-fund" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Learn", item: "https://www.assurefintech.com/learn/" },
+      { "@type": "ListItem", position: 3, name: "Savings", item: "https://www.assurefintech.com/learn/savings/" },
+      { "@type": "ListItem", position: 4, name: "PPF, FD and Debt Funds", item: "https://www.assurefintech.com/learn/savings/ppf-vs-fd-vs-debt-fund" },
     ],
   };
 

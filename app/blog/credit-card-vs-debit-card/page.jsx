@@ -245,9 +245,9 @@ export default function BlogCreditCardVsDebitCard() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "Credit Card vs Debit Card", item: "https://assurefintech.com/blog/credit-card-vs-debit-card" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "Credit Card vs Debit Card", item: "https://www.assurefintech.com/blog/credit-card-vs-debit-card" },
     ],
   };
 

@@ -3,11 +3,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const TICKER_ITEMS = [
-  { text: "SBI Cashback monthly cap cut to ₹4,000", tag: "NERF", tagClass: "t-red", date: "JUN 2026" },
-  { text: "Axis Airtel benefits downgraded", tag: "NERF", tagClass: "t-red" },
-  { text: "HDFC Swiggy ORNGE card launched", tag: "NEW", tagClass: "t-grn" },
-  { text: "SBI home loan revised to 7.25%", tag: "was 8.5%", tagClass: "t-grn" },
-  { text: 'FD "7.5%" → real return 0.15% after TDS + inflation', tag: "", tagClass: "t-red" },
+  { text: "Selected loan, tax, insurance, savings and mutual-fund guides refreshed", tag: "SEE WHAT CHANGED", tagClass: "t-grn", date: "SEP 2026" },
+  { text: "18 of 76 card records remain pending source review and are excluded from recommendations", tag: "DATA STATUS", tagClass: "t-gld", date: "SEP 2026" },
 ];
 
 const NAV_LINKS = [

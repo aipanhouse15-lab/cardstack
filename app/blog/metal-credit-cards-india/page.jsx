@@ -249,9 +249,9 @@ export default function BlogMetalCreditCardsIndia() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "Metal Credit Cards India", item: "https://assurefintech.com/blog/metal-credit-cards-india" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "Metal Credit Cards India", item: "https://www.assurefintech.com/blog/metal-credit-cards-india" },
     ],
   };
 

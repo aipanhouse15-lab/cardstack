@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Script from "next/script";
+import { permanentRedirect } from "next/navigation";
 
 export const metadata = {
   title: "The Fuel Card Trick: Stop Paying the 1% Surcharge and Earn 4-7% Back at the Pump",
@@ -185,6 +186,8 @@ const SvgStackingFlow = () => (
 );
 
 export default function BlogFuelTrick() {
+  permanentRedirect("/best/credit-card-for-fuel");
+
   const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -241,9 +244,9 @@ export default function BlogFuelTrick() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-      { "@type": "ListItem", position: 3, name: "Fuel Credit Card Trick India", item: "https://assurefintech.com/blog/fuel-credit-card-trick-india" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+      { "@type": "ListItem", position: 3, name: "Fuel Credit Card Trick India", item: "https://www.assurefintech.com/blog/fuel-credit-card-trick-india" },
     ],
   };
 

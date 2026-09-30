@@ -184,9 +184,9 @@ export default function BlogCreditUtilizationRatioGuide() {
   };
   const article = { "@context": "https://schema.org", "@type": "Article", headline: "Credit Utilization Ratio: What the 30% Rule Can and Cannot Tell You", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-26", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-    { "@type": "ListItem", position: 2, name: "Blog", item: "https://assurefintech.com/blog/" },
-    { "@type": "ListItem", position: 3, name: "Credit Utilization Ratio Guide", item: "https://assurefintech.com/blog/credit-utilization-ratio-guide" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+    { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
+    { "@type": "ListItem", position: 3, name: "Credit Utilization Ratio Guide", item: "https://www.assurefintech.com/blog/credit-utilization-ratio-guide" },
   ]};
 
   return (

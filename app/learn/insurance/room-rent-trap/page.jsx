@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Health Insurance Room-Rent Limits: What to Check | Assure Fintech",
+  title: "Health Insurance Room-Rent Limits: What to Check",
   description: "Understand room-rent and ICU limits, related sub-limits and policy wording before choosing a health insurance plan.",
   alternates: { canonical: "/learn/insurance/room-rent-trap" },
 };
@@ -24,10 +24,10 @@ export default function RoomRentTrapPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://assurefintech.com/learn/insurance/" },
-      { "@type": "ListItem", position: 4, name: "Room-Rent Limits", item: "https://assurefintech.com/learn/insurance/room-rent-trap" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Learn", item: "https://www.assurefintech.com/learn/" },
+      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://www.assurefintech.com/learn/insurance/" },
+      { "@type": "ListItem", position: 4, name: "Room-Rent Limits", item: "https://www.assurefintech.com/learn/insurance/room-rent-trap" },
     ],
   };
 

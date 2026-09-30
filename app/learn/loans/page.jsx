@@ -1,7 +1,7 @@
 import LoansClient from "./LoansClient";
 
 export const metadata = {
-  title: "Loan Guides & Calculators | Assure Fintech",
+  title: "Loan Guides & Calculators",
   description: "Guides and calculators to help compare loan interest, repayment schedules, fees and prepayment terms. Rates and charges vary by lender and borrower.",
   alternates: { canonical: "/learn/loans" },
 };

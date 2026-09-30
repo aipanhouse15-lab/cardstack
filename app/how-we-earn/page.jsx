@@ -25,9 +25,9 @@ export default function HowWeEarnPage() {
         </p>
 
         <div className="rounded-2xl p-6" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
-          <h2 className="text-lg font-extrabold mb-4" style={{ color: "var(--text)" }}>Current status: We earn ₹0</h2>
+          <h2 className="text-lg font-extrabold mb-4" style={{ color: "var(--text)" }}>Last disclosed status: March 2026</h2>
           <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-            As of March 2026, Assure Fintech has no revenue. We haven't activated any affiliate links yet. The site is bootstrapped and runs on a free Vercel hosting plan. This is intentional — we're focused on building trust and accurate data before monetizing.
+            At that time, Assure Fintech had no revenue and no active affiliate links. This is a historical disclosure, not a live revenue statement. Any current partner or application link is labeled on the relevant page; we do not claim that a click or approval earns us a commission unless that relationship is in place.
           </p>
         </div>
 

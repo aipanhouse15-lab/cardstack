@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Health Insurance Co-payment: How to Compare Plans | Assure Fintech",
+  title: "Health Insurance Co-payment: How to Compare Plans",
   description: "Understand health-insurance co-pay, deductibles and sub-limits, and compare the cost-sharing clauses in policy documents.",
   alternates: { canonical: "/learn/insurance/copay-vs-no-copay" },
 };
@@ -24,10 +24,10 @@ export default function CopayVsNoCopayPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Learn", item: "https://assurefintech.com/learn/" },
-      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://assurefintech.com/learn/insurance/" },
-      { "@type": "ListItem", position: 4, name: "Co-payment Terms", item: "https://assurefintech.com/learn/insurance/copay-vs-no-copay" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Learn", item: "https://www.assurefintech.com/learn/" },
+      { "@type": "ListItem", position: 3, name: "Insurance", item: "https://www.assurefintech.com/learn/insurance/" },
+      { "@type": "ListItem", position: 4, name: "Co-payment Terms", item: "https://www.assurefintech.com/learn/insurance/copay-vs-no-copay" },
     ],
   };
 

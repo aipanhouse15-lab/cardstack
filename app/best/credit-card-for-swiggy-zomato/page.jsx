@@ -287,9 +287,9 @@ export default function BestCreditCardForSwiggyZomato() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
-      { "@type": "ListItem", position: 3, name: "Best Credit Card for Swiggy and Zomato", item: "https://assurefintech.com/best/credit-card-for-swiggy-zomato" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
+      { "@type": "ListItem", position: 3, name: "Best Credit Card for Swiggy and Zomato", item: "https://www.assurefintech.com/best/credit-card-for-swiggy-zomato" },
     ]
   };
 
@@ -375,7 +375,7 @@ export default function BestCreditCardForSwiggyZomato() {
           },
           {
             name: "Airtel Axis Bank Credit Card",
-            slug: "airtel-axis",
+            slug: "axis-airtel",
             fee: "Check current issuer fee",
             rate: "10% value-back on Zomato, Blinkit and District Movies",
             cap: "₹200/month per partner; wallet credit",
@@ -421,7 +421,7 @@ export default function BestCreditCardForSwiggyZomato() {
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>How MCC Codes Affect Your Earning</h2>
         <p>Issuers use transaction information and their own eligibility rules to determine rewards. A merchant's app brand alone does not guarantee that every service, payment method or transaction type qualifies.</p>
         <MCCInfoDiagram />
-        <p style={{ marginTop: 12 }}>For a mismatch, check the transaction description, reward statement and issuer terms, then ask the bank to explain the classification. We do not infer the merchant category code from the app name. Read more about <Link href="/blog/reward-points-vs-cashback">reward points vs cashback</Link>.</p>
+        <p style={{ marginTop: 12 }}>For a mismatch, check the transaction description, reward statement and issuer terms, then ask the bank to explain the classification. We do not infer the merchant category code from the app name. Read more about <Link href="/blog/how-reward-points-work-india">reward points vs cashback</Link>.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Airtel Axis: April 2026 Food-App Benefit Change</h2>

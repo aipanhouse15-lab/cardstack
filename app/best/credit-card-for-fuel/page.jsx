@@ -2,11 +2,11 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Fuel in India (June 2026)",
+  title: "Best Credit Card for Fuel in India (September 2026)",
   description: "Compare fuel cards by pump-brand eligibility, reward caps, surcharge-waiver limits and annual fees.",
   alternates: { canonical: "/best/credit-card-for-fuel" },
   openGraph: {
-    title: "Best Credit Card for Fuel in India (June 2026)",
+    title: "Best Credit Card for Fuel in India (September 2026)",
     description: "Compare fuel cards by pump-brand eligibility, reward caps, surcharge-waiver limits and annual fees.",
     type: "article",
     siteName: "Assure Fintech",
@@ -275,7 +275,7 @@ export default function BestCreditCardForFuel() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for Fuel in India (June 2026)",
+    headline: "Best Credit Card for Fuel in India (September 2026)",
     author: { "@type": "Person", name: "Ash K" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
@@ -286,9 +286,9 @@ export default function BestCreditCardForFuel() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://assurefintech.com/best/" },
-      { "@type": "ListItem", position: 3, name: "Best Credit Card for Fuel", item: "https://assurefintech.com/best/credit-card-for-fuel" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Best Cards", item: "https://www.assurefintech.com/best/" },
+      { "@type": "ListItem", position: 3, name: "Best Credit Card for Fuel", item: "https://www.assurefintech.com/best/credit-card-for-fuel" },
     ]
   };
 
@@ -302,7 +302,7 @@ export default function BestCreditCardForFuel() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for Fuel in India (June 2026)
+            Best Credit Card for Fuel in India (September 2026)
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
         </div>

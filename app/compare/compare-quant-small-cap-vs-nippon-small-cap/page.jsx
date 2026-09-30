@@ -54,9 +54,9 @@ export default function CompareQuantVsNipponSmallCap() {
   const breadcrumb = {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://assurefintech.com/" },
-      { "@type": "ListItem", position: 2, name: "Compare", item: "https://assurefintech.com/compare/" },
-      { "@type": "ListItem", position: 3, name: "Quant Small Cap vs Nippon Small Cap", item: "https://assurefintech.com/compare/quant-small-cap-vs-nippon-small-cap" }
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
+      { "@type": "ListItem", position: 2, name: "Compare", item: "https://www.assurefintech.com/compare/" },
+      { "@type": "ListItem", position: 3, name: "Quant Small Cap vs Nippon Small Cap", item: "https://www.assurefintech.com/compare/quant-small-cap-vs-nippon-small-cap" }
     ]
   };
 
