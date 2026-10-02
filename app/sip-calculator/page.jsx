@@ -2,11 +2,11 @@ import SipCalcClient from "./SipCalcClient";
 
 export const metadata = {
   title: "SIP Calculator",
-  description: "The Numbers Your AMC Won't Show You Fund fact sheets advertise CAGR — but your real return is lower. A fund with 15% CAGR and 1.5% expense...",
+  description: "Model hypothetical SIP or lump-sum growth using effective annual returns and inflation-adjusted purchasing power. Before tax and exit loads.",
   alternates: { canonical: "/sip-calculator" },
   openGraph: {
     title: "SIP Calculator",
-    description: "The Numbers Your AMC Won't Show You Fund fact sheets advertise CAGR — but your real return is lower. A fund with 15% CAGR and 1.5% expense...",
+    description: "Explore hypothetical investment growth and purchasing power. Returns are assumptions, not forecasts.",
     type: "website",
     siteName: "Assure Fintech",
   },

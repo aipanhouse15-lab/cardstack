@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -148,7 +149,7 @@ export default function BestCreditCardForWomenIndia() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Credit Card for Women in India (September 2026)",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
@@ -211,9 +212,9 @@ export default function BestCreditCardForWomenIndia() {
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 24 }}>
         <Link href="/">Home</Link>{" / "}<Link href="/best/">Best Cards</Link>{" / "}
@@ -230,7 +231,7 @@ export default function BestCreditCardForWomenIndia() {
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
-        <span>Last updated {UPDATED}</span><span>By Ash K</span><span>9 min read</span>
+        <span>Last updated {UPDATED}</span><span>By Ash</span><span>9 min read</span>
       </div>
 
       {/* Honest opening */}
@@ -452,6 +453,7 @@ export default function BestCreditCardForWomenIndia() {
           Related: <Link href="/best/credit-card-for-health-insurance-payment" style={{ color: COLOR }}>Health Insurance Card Guide</Link> and <Link href="/best/credit-card-for-emi-purchases" style={{ color: COLOR }}>EMI Purchase Guide</Link>. Data as of {UPDATED}.
         </p>
       </footer>
+    <GuideCardRules slug="best-credit-card-for-women-india" />
     </main>
     </>
   );

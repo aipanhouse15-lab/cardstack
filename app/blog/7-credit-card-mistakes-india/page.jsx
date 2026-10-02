@@ -19,7 +19,7 @@ export const metadata = {
 // Color: #dc2626 | Updated: September 26, 2026
 
 const COLOR = "#dc2626";
-const UPDATED = "September 28, 2026";
+const UPDATED = "October 2, 2026";
 
 const SvgMinimumDueTrap = () => (
   <svg viewBox="0 0 720 264" role="img" aria-label="Compound interest trap: paying minimum due on ₹50,000 balance" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -177,7 +177,7 @@ export default function BlogCreditCardMistakesIndia() {
       { "@type": "Question", "name": "Are accelerated reward caps the same on every card?", "acceptedAnswer": { "@type": "Answer", "text": "No. Caps can differ by benefit, merchant, card variant and statement or calendar period. Read the current issuer terms and track eligible spend before estimating rewards." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "7 Credit Card Mistakes Indians Make (And How to Fix Each One)", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "7 Credit Card Mistakes Indians Make (And How to Fix Each One)", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-10-02", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
@@ -199,13 +199,13 @@ export default function BlogCreditCardMistakesIndia() {
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             You probably think you are using your credit card correctly. You are likely not. Here are the seven mistakes that quietly cost Indian cardholders thousands of rupees every year.
           </p>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / 7 Credit Card Mistakes Indians Make</nav>
 <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Mistake #1: Paying Only the Minimum Due</h2>
@@ -271,7 +271,7 @@ export default function BlogCreditCardMistakesIndia() {
         Related: <Link href="/blog/cibil-score-101-india" style={{ color: COLOR }}>CIBIL Score 101</Link> · <Link href="/blog/credit-utilization-ratio-guide" style={{ color: COLOR }}>Credit Utilization Ratio Guide</Link> · <Link href="/blog/how-reward-points-work-india" style={{ color: COLOR }}>How Reward Points Work</Link> · <Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe Card Finder</Link>
       </p>
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        <strong>Sources and review:</strong> RBI <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12300" target="_blank" rel="noopener noreferrer">Credit Card and Debit Card Directions</a> and <a href="https://www.cibil.com/blog/all-you-need-to-know-about-cibil-score" target="_blank" rel="noopener noreferrer">CIBIL's credit-score guide</a>. Product fees and rewards depend on the exact card and current issuer terms. Reviewed September 28, 2026. This educational article is not financial advice.
+        <strong>Sources and review:</strong> RBI <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12300" target="_blank" rel="noopener noreferrer">Credit Card and Debit Card Directions</a> and <a href="https://www.cibil.com/blog/what-is-cibil-score" target="_blank" rel="noopener noreferrer">CIBIL's current credit-score guidance</a>. Product fees and rewards depend on the exact card and current issuer terms. Reviewed October 2, 2026. This educational article is not financial advice.
       </footer>
     </main>
     </>

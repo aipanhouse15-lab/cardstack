@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -41,7 +42,7 @@ const faq = {
 };
 
 export default function PrepaymentPenaltyTrapPage() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Loan Prepayment Charges: RBI Rules and What Borrowers Should Check", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Loan Prepayment Charges: RBI Rules and What Borrowers Should Check", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -104,7 +105,7 @@ export default function PrepaymentPenaltyTrapPage() {
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/loans" style={{ color: COLOR }}>loans hub</Link> · <Link href="/learn/loans/fixed-vs-floating-rate" style={{ color: COLOR }}>fixed vs floating rates</Link> · <Link href="/learn/loans/home-loan-true-cost" style={{ color: COLOR }}>home-loan costs</Link> · <Link href="/loan-calculator" style={{ color: COLOR }}>loan calculator</Link></p>
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This is a general summary, not legal or financial advice. RBI directions and lender terms are detailed and fact-specific. Read the official direction and seek qualified help if a charge is disputed.</footer>
-      </main>
+      <GuidePractice topic="loans/prepayment-penalty-trap" /></main>
     </>
   );
 }

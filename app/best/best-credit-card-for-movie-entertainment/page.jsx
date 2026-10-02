@@ -1,12 +1,13 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Movies and Entertainment in India (September 2026)",
+  title: "Best Credit Card for Movies and Entertainment in India (October 2026)",
   description: "Compare current movie-ticket promotions, card fees and redemption conditions. Offers vary by card variant, platform and booking date.",
   alternates: { canonical: "/best/best-credit-card-for-movie-entertainment" },
   openGraph: {
-    title: "Best Credit Card for Movies and Entertainment in India (September 2026)",
+    title: "Best Credit Card for Movies and Entertainment in India (October 2026)",
     description: "Compare current movie-ticket promotions, card fees and redemption conditions. Offers vary by card variant, platform and booking date.",
     type: "article",
     siteName: "Assure Fintech",
@@ -18,7 +19,7 @@ export const metadata = {
 // Updated: September 26, 2026
 
 const COLOR = "#f59e0b";
-const UPDATED = "September 26, 2026";
+const UPDATED = "1 October 2026";
 
 const IconMovie = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Movie and entertainment credit card icon">
@@ -153,10 +154,10 @@ export default function BestCreditCardForMovieEntertainment() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for Movies and Entertainment in India (September 2026)",
-    author: { "@type": "Person", name: "Ash K" },
+    headline: "Best Credit Card for Movies and Entertainment in India (October 2026)",
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-01",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -174,15 +175,15 @@ export default function BestCreditCardForMovieEntertainment() {
     {
       card: "ICICI Coral",
       fee: "₹500 + GST joining; ₹500 + GST annual from year two; prior-year ₹1.5L waiver condition",
-      bmsOffer: "25% off up to ₹100; minimum 2 tickets; twice/month",
+      bmsOffer: "25% off up to ₹100; minimum 2 tickets; twice/month after ₹25K preceding spend-quarter qualification",
       monthlyValue: "Up to ₹200",
       annualValue: "Up to ₹2,400 gross",
       cap: "₹100/offer",
-      verdict: "Check offer availability and eligible ticket types at checkout"
+      verdict: "April 2026 onward: ₹25K preceding spend-quarter gate; checkout exclusions apply"
     },
     {
       card: "SBI Card ELITE",
-      fee: "Check current issuer fee schedule",
+      fee: "₹4,999 + tax; standard renewal waiver at ₹10L eligible preceding-year spend",
       bmsOffer: "Check live issuer/BookMyShow offer",
       monthlyValue: "Varies",
       annualValue: "Not estimated",
@@ -223,15 +224,15 @@ export default function BestCreditCardForMovieEntertainment() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for Movies and Entertainment in India (September 2026)
+            Best Credit Card for Movies and Entertainment in India (October 2026)
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 24 }}>
         <Link href="/">Home</Link>{" / "}<Link href="/best/">Best Cards</Link>{" / "}
@@ -248,7 +249,7 @@ export default function BestCreditCardForMovieEntertainment() {
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
-        <span>Last updated {UPDATED}</span><span>By Ash K</span><span>8 min read</span>
+        <span>Last updated {UPDATED}</span><span>By Ash</span><span>8 min read</span>
       </div>
 
       {/* Honest number */}
@@ -288,7 +289,7 @@ export default function BestCreditCardForMovieEntertainment() {
       </div>
 
       <p style={{ marginBottom: 24 }}>
-        Coral's issuer page says the promotion is available twice a month. Other card-specific counters, reset periods and limits may differ; use the current offer terms displayed during booking.
+        From 1 April 2026, Coral’s BookMyShow offer requires ₹25,000 in the preceding spend quarter. This differs from a calendar quarter: the issuer’s illustration uses 26 March–25 June spending for July–September offers. A two-ticket booking alone does not unlock the discount. The twice-monthly counter and checkout exclusions also apply; dual-network cards can have per-variant limits.
       </p>
 
       {/* Card comparison table */}
@@ -338,7 +339,7 @@ export default function BestCreditCardForMovieEntertainment() {
             fee: "₹500 + GST joining; ₹500 + GST annual from year two; prior-year ₹1.5L waiver condition",
             headline: "Published Coral ticket offer; compare your actual redemption",
             benefits: [
-              "25% off up to ₹100 on at least two BookMyShow or INOX tickets, twice monthly",
+              "BookMyShow: 25% off up to ₹100 on at least two tickets, twice monthly after ₹25K preceding spend-quarter qualification",
               "Check current lounge, reward and fuel terms separately; they are not valued here"
             ],
             math: "Maximum advertised discount is up to ₹200/month before fees, only if both eligible bookings qualify; actual savings can be lower.",
@@ -348,13 +349,13 @@ export default function BestCreditCardForMovieEntertainment() {
             rank: 2,
             name: "SBI Card ELITE",
             fee: "Check current issuer fee schedule",
-            headline: "Best premium entertainment card — movies are a side benefit",
+            headline: "Historical premium-card comparison — current terms not fully matched",
             benefits: [
               "Movie and entertainment offers are variant- and offer-specific; check current issuer terms",
               "Evaluate other benefits separately against the current fee"
             ],
             math: "No annual movie value estimated without a verified current offer for your card variant.",
-            link: "/cards/sbi-card-elite"
+            link: "/cards/sbi-elite"
           },
           {
             rank: 3,
@@ -501,6 +502,7 @@ export default function BestCreditCardForMovieEntertainment() {
           Data sourced from ICICI Bank, SBI Card, Axis Bank, and BookMyShow offer pages as of {UPDATED}. Related: <Link href="/best/credit-card-for-women-india" style={{ color: COLOR }}>Lifestyle Card Guide</Link> and <Link href="/best/credit-card-with-no-forex-markup" style={{ color: COLOR }}>Zero Forex for International Gaming</Link>.
         </p>
       </footer>
+    <GuideCardRules slug="best-credit-card-for-movie-entertainment" />
     </main>
     </>
   );

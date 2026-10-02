@@ -1,7 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { VERIFIED_CARDS, CATEGORIES, defaultSpending } from "@/data/cards";
+import { VERIFIED_CARDS, RECOMMENDABLE_CARDS, CATEGORIES, defaultSpending, calcReward } from "@/data/cards";
 import CardSelector from "@/components/CardSelector";
 import SpendingInput from "@/components/SpendingInput";
 import SectionHeader from "@/components/SectionHeader";
@@ -18,19 +18,20 @@ export default function GapFinderClient() {
     const g = [];
     CATEGORIES.forEach(cat => {
       let bOwned = 0;
-      sel.forEach(cid => { const c = VERIFIED_CARDS.find(x => x.id === cid); if (!c) return; const r = c.rewards[cat.id] ?? c.rewards.default ?? 0; if (r > bOwned) bOwned = r; });
+      sel.forEach(cid => { const c = VERIFIED_CARDS.find(x => x.id === cid); if (!c) return; const r = calcReward(c,cat.id,spend[cat.id]).effectiveRate; if (r > bOwned) bOwned = r; });
       let bCard = null, bR = 0;
-      VERIFIED_CARDS.forEach(card => { if (sel.includes(card.id)) return; const r = card.rewards[cat.id] ?? card.rewards.default ?? 0; if (r > bOwned && r > bR) { bCard = card; bR = r; } });
+      RECOMMENDABLE_CARDS.forEach(card => { if (sel.includes(card.id)) return; const r = calcReward(card,cat.id,spend[cat.id]).effectiveRate; if (r > bOwned && r > bR) { bCard = card; bR = r; } });
       if (bCard && bR - bOwned >= 0.5) { const extra = Math.round((spend[cat.id] || 0) * 12 * (bR - bOwned) / 100); g.push({ cat, cur: bOwned, card: bCard, rate: bR, imp: bR - bOwned, extra }); }
     });
     return g.sort((a, b) => b.extra - a.extra);
   }, [show, sel, spend]);
 
-  const total = gaps.reduce((s, g) => s + g.extra, 0);
+  const strongestScenario = gaps[0]?.extra || 0;
 
   return (
     <section className="pt-24 pb-20 px-6 max-w-[1000px] mx-auto">
       <SectionHeader badge="💡 Tool #2" badgeBg="var(--orange-bg)" badgeBorder="var(--orange-border)" badgeColor="var(--orange)" title="Card Gap Finder" subtitle="Find where you're leaving money behind and which cards could fix it." />
+      <p className="text-sm mb-6" style={{ color: "var(--text-muted)" }}>Each row is an isolated eligible-spend scenario with its modelled cap. Annual differences are gross illustrations before fees, tax and redemption charges; rows may share caps and must not be added as a real combined saving.</p>
 
       <div className="mb-8">
         <h3 className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>Cards you own</h3>
@@ -60,10 +61,10 @@ export default function GapFinderClient() {
             <div className="text-sm" style={{ color: "var(--text-muted)" }}>No significant reward gaps found.</div>
           </div>
         ) : <>
-          {total > 0 && <div className="rounded-xl p-5 mb-5 text-center" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
-            <div className="text-sm font-semibold mb-1" style={{ color: "var(--orange)" }}>You're leaving an estimated</div>
-            <div className="text-4xl font-extrabold" style={{ color: "var(--orange)" }}>₹{total.toLocaleString()}<span className="text-base" style={{ color: "var(--text-muted)" }}>/year</span></div>
-            <div className="text-sm" style={{ color: "var(--text-muted)" }}>on the table across {gaps.length} categories</div>
+          {strongestScenario > 0 && <div className="rounded-xl p-5 mb-5 text-center" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
+            <div className="text-sm font-semibold mb-1" style={{ color: "var(--orange)" }}>Largest isolated category difference</div>
+            <div className="text-4xl font-extrabold" style={{ color: "var(--orange)" }}>₹{strongestScenario.toLocaleString()}<span className="text-base" style={{ color: "var(--text-muted)" }}>/year before costs</span></div>
+            <div className="text-sm" style={{ color: "var(--text-muted)" }}>{gaps.length} separate scenarios below—not an additive stack-saving estimate</div>
           </div>}
 
           <div className="flex flex-col gap-3">
@@ -75,7 +76,7 @@ export default function GapFinderClient() {
                     <span className="text-base font-semibold" style={{ color: "var(--text)" }}>{g.cat.label}</span>
                   </div>
                   <div className="flex gap-2">
-                    <span className="rounded-md px-2.5 py-1 text-xs font-bold font-mono" style={{ background: "var(--orange-bg)", color: "var(--orange)" }}>+{g.imp}%</span>
+                    <span className="rounded-md px-2.5 py-1 text-xs font-bold font-mono" style={{ background: "var(--orange-bg)", color: "var(--orange)" }}>+{Number(g.imp.toFixed(2))} percentage points</span>
                     <span className="rounded-md px-2.5 py-1 text-xs font-bold font-mono" style={{ background: "var(--green-bg)", color: "var(--green)" }}>+₹{g.extra.toLocaleString()}/yr</span>
                   </div>
                 </div>
@@ -91,6 +92,7 @@ export default function GapFinderClient() {
                     <div className="flex-1">
                       <div className="text-sm font-semibold" style={{ color: "var(--text)" }}>{g.card.name}</div>
                       <div className="text-[11px]" style={{ color: "var(--text-faint)" }}>{g.card.fee === 0 ? "Free" : `₹${g.card.fee}/yr`} · Tap for details</div>
+                      {(g.card.rewardAssumptions?.[g.cat.id] || g.card.pointsInfo) && <p className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>{g.card.rewardAssumptions?.[g.cat.id] || g.card.pointsInfo}</p>}
                     </div>
                     <div className="text-xl font-bold font-mono" style={{ color: "var(--green)" }}>{g.rate}%</div>
                   </Link>

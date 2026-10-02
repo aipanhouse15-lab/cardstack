@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -85,16 +86,16 @@ function FreeCardStackDiagram() {
       viewBox="0 0 680 426"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Diagram showing a complete free-card stack covering all spending categories at zero annual fee"
+      aria-label="Sample no-annual-fee cards with merchant restrictions and separately priced optional features"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="270" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
       <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">A Sample Stack of No-Annual-Fee Cards</text>
       {[
-        { card: "Amazon Pay ICICI", categories: "Online Shopping, Amazon Pay billers", rate: "2-5%", color: "#f59e0b" },
+        { card: "Amazon Pay ICICI", categories: "Eligible Amazon and Amazon Pay routes; other retail has a separate tier", rate: "Route-specific", color: "#f59e0b" },
         { card: "IDFC FIRST WOW", categories: "International transactions, forex-free spending", rate: "0% forex", color: "#7c3aed" },
         { card: "Scapia Federal", categories: "Eligible app bookings; foreign-currency transactions earn no coins", rate: "0% forex", color: "#0891b2" },
-        { card: "AU LIT", categories: "2 custom categories of your choice", rate: "2-3%", color: COLOR },
+        { card: "AU LIT", categories: "No base membership fee; selected features have additional charges", rate: "Paid features", color: COLOR },
       ].map((item, i) => (
         <g key={i}>
           <rect x="20" y={42 + i * 54} width="640" height="46" rx="8" fill={item.color} opacity="0.07" stroke={item.color} strokeWidth="1.2" />
@@ -255,7 +256,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "No-Annual-Fee Credit Cards in India: Compare Current Features",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-28",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
@@ -288,7 +289,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             No-Annual-Fee Credit Cards in India: Compare Current Features
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
       </div>
     <main
@@ -301,9 +302,9 @@ export default function BestCashbackCreditCardNoAnnualFee() {
         lineHeight: 1.6,
       }}
     >
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>
         <Link href="/">Home</Link> / <Link href="/best/">Best Cards</Link> / Best Cashback Credit Card No Annual Fee
@@ -331,7 +332,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
-        Last updated {UPDATED} · By Ash K · 8 min read
+        Last updated {UPDATED} · By Ash · 8 min read
       </div>
 
       {/* Key callout */}
@@ -517,7 +518,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
           Whether a free card is enough depends on your spending and the benefits you value. Paid cards may be worth comparing for travel privileges, milestone rewards or stronger category returns, but calculate value after fees, caps and exclusions.
         </p>
         <p>
-          The honest upgrade signal: if a paid card's eligible rewards on your actual spending exceed the annual fee after caps and exclusions, it may be worth considering. HSBC Live+ advertises 10% accelerated cashback up to ₹1,000/month on eligible dining, food delivery and grocery spend; check current fee and waiver terms too.
+          The upgrade signal is incremental usable rewards compared with your existing card, less the fee and redemption costs. HSBC Live+ advertises 10% on eligible dining, food delivery and grocery transactions, sharing a ₹1,200 monthly cap; selected eligible shopping also shares that accelerated bucket. Compare the whole bucket and fee, not one uncapped category in isolation.
         </p>
         <p>
           Also see our <Link href="/best/best-credit-card-under-500-annual-fee">Best Credit Cards Under ₹500 Annual Fee</Link> guide — Axis ACE at ₹499 is the entry-point paid card worth considering before stepping up to ₹1,000+ fee cards.
@@ -590,6 +591,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
         <strong>Editorial note:</strong> Assure Fintech is an independent editorial platform. Cashback rates and card terms can change; use each issuer's current terms before applying. Some links may earn a referral commission, which does not determine our product selection.
       </footer>
+    <GuideCardRules slug="best-cashback-credit-card-no-annual-fee" />
     </main>
     </>
   );

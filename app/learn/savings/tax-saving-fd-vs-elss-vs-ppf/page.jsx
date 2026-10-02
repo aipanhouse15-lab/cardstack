@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -20,7 +21,7 @@ const faq = {
 };
 
 export default function TaxSavingFDvsELSSvsPPF() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Tax-Saving FD vs ELSS vs PPF: Compare Lock-in, Risk and Tax", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Tax-Saving FD vs ELSS vs PPF: Compare Lock-in, Risk and Tax", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -94,7 +95,7 @@ export default function TaxSavingFDvsELSSvsPPF() {
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/savings" style={{ color: COLOR }}>savings guides</Link> · <Link href="/learn/savings/ppf-vs-fd-vs-debt-fund" style={{ color: COLOR }}>PPF vs FD vs debt funds</Link> · <Link href="/learn/tax" style={{ color: COLOR }}>tax guides</Link></p>
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This general comparison is not investment or tax advice. Product rules and tax treatment change; confirm current official terms and your eligibility before investing.</footer>
-      </main>
+      <GuidePractice topic="savings/tax-saving-fd-vs-elss-vs-ppf" /></main>
     </>
   );
 }

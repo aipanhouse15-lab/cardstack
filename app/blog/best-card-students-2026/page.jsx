@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/best-card-students-2026
 // Template: Buying guide for first-timers
-// Color: #7c3aed | Updated: September 26, 2026
+// Color: #7c3aed | Updated: October 2, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 2, 2026";
 
 const SvgStudentCards = () => (
   <svg viewBox="0 0 720 282" role="img" aria-label="Student credit card options in India, comparing fees, reward categories and issuer eligibility" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -32,7 +32,7 @@ const SvgStudentCards = () => (
       ["HDFC Millennia", "₹1,000/yr", "5% on 10 partner brands", "Moderate", "Fee waived at ₹1L spend"],
       ["Amazon Pay ICICI", "FREE", "Up to 5% on Amazon", "Issuer decides", "Prime rate; eligible purchases"],
       ["Axis ACE", "₹499/yr", "5% on eligible GPay bills", "Issuer decides", "Not a general UPI rate"],
-      ["SBI SimplyCLICK", "₹499/yr", "10X on 6 partners", "Easy", "Fee waived at ₹1L/yr spend"],
+      ["SBI SimplyCLICK", "₹499/yr", "10X on listed partners", "Issuer decides", "Renewal fee waived at ₹1L eligible spend"],
       ["Secured card (check issuer)", "Varies", "Credit limit linked to FD", "Issuer decides", "Compare lien and FD terms"],
     ].map((row, ri) => (
       <g key={row[0]}>
@@ -130,7 +130,7 @@ export default function BlogBestCardStudents() {
       { "@type": "Question", "name": "Should students apply for multiple credit cards?", "acceptedAnswer": { "@type": "Answer", "text": "Apply only when a card meets a genuine need and you understand its fees and terms. Lenders may review credit enquiries and recent applications as part of their assessment; the effect varies, so there is no universal point deduction or ideal waiting period. Avoid applications you do not intend to use." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Best Credit Cards for Students in India 2026: Your First Card Guide", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Best Credit Cards for Students in India 2026: Your First Card Guide", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-10-02", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
@@ -152,13 +152,13 @@ export default function BlogBestCardStudents() {
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Start with affordability, issuer eligibility and clear repayment habits. A credit card can help establish a reported credit history, but no card, score or future loan approval is guaranteed.
           </p>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Best Card for Students 2026</nav>
 <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Best Cards for Students Right Now</h2>

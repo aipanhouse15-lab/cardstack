@@ -1,4 +1,4 @@
-import { CARDS } from "@/data/cards";
+import { CARDS, isSourceReviewed } from "@/data/cards";
 import { BLOG_POSTS } from "@/data/content";
 import { BEST_FOR_CATEGORIES } from "@/data/bestfor";
 import { COMPARISONS } from "@/data/comparisons";
@@ -94,7 +94,7 @@ export default function sitemap() {
   ];
 
   // Card pages (dynamic from data)
-  const cardPages = CARDS.map(card => ({
+  const cardPages = CARDS.filter(isSourceReviewed).map(card => ({
     url: `${base}/cards/${card.id}`, changeFrequency: "weekly", priority: 0.8,
   }));
 

@@ -24,7 +24,7 @@ export default function RbiCreditCardRules2026() {
     "@type": "Article",
     headline: "RBI Credit Card Rules: What Cardholders Should Check",
     description: "A practical, source-linked summary of selected RBI credit-card protections.",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-04-20",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
@@ -51,7 +51,7 @@ export default function RbiCreditCardRules2026() {
         <p style={{ color: "#7C3AED", fontWeight: 700, fontSize: 12, letterSpacing: 1 }}>REGULATORY EXPLAINER</p>
         <h1 style={{ fontSize: "clamp(30px, 4vw, 44px)", lineHeight: 1.12, margin: "0 0 16px" }}>RBI credit-card rules: what cardholders should check</h1>
         <p style={{ fontSize: 18, color: "var(--text-muted)" }}>The RBI’s Credit Card and Debit Card Directions set disclosure, consent, billing and complaint-handling requirements. This guide focuses on provisions in the RBI text—not unsourced claims about newer rules.</p>
-        <p style={{ fontSize: 13, color: "var(--text-muted)" }}>Published April 20, 2026 · Updated {UPDATED} · By Ash K</p>
+        <p style={{ fontSize: 13, color: "var(--text-muted)" }}>Published April 20, 2026 · Updated {UPDATED} · By Ash</p>
       </header>
 
       <aside style={{ padding: 16, border: "1px solid var(--border)", borderRadius: 12, background: "var(--bg-muted)", marginBottom: 30 }}>

@@ -11,9 +11,9 @@ export default function HighSpenderGuide() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Credit Cards for High Spenders in India 2026: Compare by Use",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-02",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -22,7 +22,7 @@ export default function HighSpenderGuide() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Link href="/blog" className="text-sm">← Blog</Link>
       <h1 className="text-3xl font-extrabold mt-6 mb-3">Credit cards for high spenders: compare by use</h1>
-      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published June 4, 2026 · Reviewed September 26, 2026</p>
+      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published June 4, 2026 · Reviewed October 2, 2026</p>
 
       <div className="space-y-7 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>Spending ₹1 lakh a month does not make one card the winner for everyone. Rewards depend on where the money goes, whether each transaction qualifies, the cap period and what you can redeem. A travel point valued at its best flight redemption should not be compared with cash at face value if you will use statement credit instead.</p>
@@ -31,6 +31,7 @@ export default function HighSpenderGuide() {
           <h2 className="text-xl font-bold mb-2" style={{ color: "var(--text)" }}>Travel and premium benefits</h2>
           <p><Link href="/cards/hdfc-infinia">HDFC Infinia</Link> is invitation-only. Its issuer lists 5 Reward Points per ₹150 on eligible retail spending. The cash equivalent differs by redemption: eligible travel redemptions can be worth more than statement cashback. Check the renewal-fee waiver, redemption ceilings and lounge rules for your version of the card.</p>
           <p className="mt-3"><Link href="/cards/axis-magnus">Axis Magnus</Link> has a different miles and partner structure. Partner transfer ratios, excluded categories and lounge limits have changed; calculate value using the partner you will actually redeem with. Avoid assuming a universal rupee value per point.</p>
+          <p className="mt-3"><Link href="/cards/sbi-elite">SBI Card ELITE</Link> is not assigned a flat return in our comparison: its current complete earning and redemption schedule has not been reconciled. SBI's current portfolio listing advertises a ₹5,000 welcome e-Gift Voucher, movie tickets worth ₹6,000 a year and up to 50,000 bonus Reward Points (advertised at ₹12,500); these benefits have separate eligibility terms. The current MITC lists a ₹4,999 + tax standard renewal fee, waived at ₹10 lakh eligible spend in the preceding year. An older ELITE reward booklet is not enough to verify today's full exclusions, lounge/network benefits and redemption choices. See the <a href="https://www.sbicard.com/en/personal/sbi-credit-card.page" target="_blank" rel="noreferrer">SBI Card listing</a>, <a href="https://www.sbicard.com/en/most-important-terms-and-conditions.page" target="_blank" rel="noreferrer">current MITC</a> and <a href="https://www.sbicard.com/en/cardholder-agreement.page" target="_blank" rel="noreferrer">cardholder agreement</a>.</p>
         </section>
 
         <section>

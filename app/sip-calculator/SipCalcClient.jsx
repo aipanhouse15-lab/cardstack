@@ -1,4 +1,5 @@
 "use client";
+import { calcSIP, calcLumpsum } from "@/data/noncard-math.mjs";
 import { useState, useCallback } from "react";
 import Link from "next/link";
 import Script from "next/script";
@@ -8,11 +9,11 @@ import Script from "next/script";
 // ============================================================
 // Tier F — SIP Calculator
 // URL: /calculators/sip-calculator
-// Author: Ash K · Updated: September 26, 2026
+// Author: Ash · Updated: October 1, 2026
 // ============================================================
 
 const COLOR = "#7c3aed";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 1, 2026";
 
 function formatINR(n) {
   if (n >= 10000000) return "₹" + (n / 10000000).toFixed(2) + " Cr";
@@ -20,19 +21,6 @@ function formatINR(n) {
   return "₹" + Math.round(n).toLocaleString("en-IN");
 }
 
-function calcSIP(monthly, rate, years) {
-  const n = years * 12;
-  const r = rate / 100 / 12;
-  if (r === 0) return { maturity: monthly * n, invested: monthly * n, gains: 0 };
-  const maturity = monthly * ((Math.pow(1 + r, n) - 1) / r) * (1 + r);
-  const invested = monthly * n;
-  return { maturity: Math.round(maturity), invested: Math.round(invested), gains: Math.round(maturity - invested) };
-}
-
-function calcLumpsum(principal, rate, years) {
-  const maturity = principal * Math.pow(1 + rate / 100, years);
-  return { maturity: Math.round(maturity), invested: principal, gains: Math.round(maturity - principal) };
-}
 
 // Bar chart SVG for year-by-year growth
 function GrowthChart({ monthly, rate, years }) {
@@ -111,9 +99,7 @@ export default function SipCalcClient() {
   const result = mode === "sip" ? sipResult : lumpsumResult;
 
   const realRate = ((1 + rate / 100) / (1 + inflation / 100) - 1) * 100;
-  const realResult = mode === "sip"
-    ? calcSIP(monthly, realRate, years)
-    : calcLumpsum(lumpsum, realRate, years);
+  const realResult = { maturity: result.maturity / Math.pow(1 + inflation / 100, years) };
 
   const faq = {
     "@context": "https://schema.org",
@@ -122,37 +108,37 @@ export default function SipCalcClient() {
       {
         "@type": "Question",
         name: "What is SIP and how does it work?",
-        acceptedAnswer: { "@type": "Answer", text: "SIP (Systematic Investment Plan) is a method of investing a fixed amount every month into a mutual fund. Each month, your money buys units at the prevailing NAV. Over time, you accumulate units — buying more when NAV is low, fewer when NAV is high. This averaging effect (called rupee cost averaging) reduces the impact of market volatility." }
+        acceptedAnswer: { "@type": "Answer", text: "A SIP invests an amount at regular intervals. Each contribution buys units at the prevailing NAV. A lower NAV buys more units, but this does not guarantee a profit or better results than a lump sum." }
       },
       {
         "@type": "Question",
         name: "What rate of return should I use for SIP calculations?",
-        acceptedAnswer: { "@type": "Answer", text: "Equity mutual funds have historically delivered 10-15% CAGR over 10+ year periods in India. For conservative planning, use 10-11%. For aggressive funds (small cap, mid cap), some use 14-15%. Debt funds typically return 6-8%. Always use post-expense-ratio returns — a fund with 15% gross return and 1.5% expense ratio gives you only 13.5%." }
+        acceptedAnswer: { "@type": "Answer", text: "Use several hypothetical scenarios, not one rate presented as expected performance. Enter a return after fund expenses; published NAV returns already include those expenses. No single rate suits every goal or fund." }
       },
       {
         "@type": "Question",
         name: "How is SIP return different from a lumpsum return?",
-        acceptedAnswer: { "@type": "Answer", text: "Lumpsum computes using simple compound interest since all the money is invested from day one. SIP calculates differently because each instalment earns returns only from its investment date. A ₹10,000/month SIP at 12% for 15 years gives ₹1 Cr corpus, while ₹18L lumpsum at 12% for 15 years gives ₹98L. Same invested amount, roughly similar outcome — but SIP spreads risk over time." }
+        acceptedAnswer: { "@type": "Answer", text: "A lump sum is invested at the start, while every SIP contribution has its own date. The model assumes start-of-month contributions and an effective annual return. Equal total contributions do not mean equal time in the market." }
       },
       {
         "@type": "Question",
         name: "What is the effect of inflation on SIP returns?",
-        acceptedAnswer: { "@type": "Answer", text: "If inflation is 6% and your fund returns 12%, your real return is only about 5.66%. A ₹1 Cr corpus in 15 years will have the purchasing power of roughly ₹40L in today's money. Use the 'Show inflation-adjusted' toggle above to see real returns. This is why targeting 12-14% returns matters — you need to stay well ahead of inflation." }
+        acceptedAnswer: { "@type": "Answer", text: "The ending corpus is divided by (1 + inflation rate) raised to the number of years to express today's purchasing power. Future nominal contributions are not revalued as though they were already invested today." }
       },
       {
         "@type": "Question",
         name: "Should I choose SIP or lumpsum?",
-        acceptedAnswer: { "@type": "Answer", text: "SIP is better for salaried investors who receive monthly income and want to invest regularly. Lumpsum is better when you have a large one-time amount (bonus, inheritance, maturity proceeds) and the market is near a multi-year low. In practice, most people combine both: a base SIP every month, with lumpsum additions when they get windfalls." }
+        acceptedAnswer: { "@type": "Answer", text: "Match contributions to available cash and your investment plan. A SIP spreads purchase dates but does not guarantee profit or remove market risk. This calculator does not identify market lows." }
       },
       {
         "@type": "Question",
         name: "Is the SIP return in this calculator before or after tax?",
-        acceptedAnswer: { "@type": "Answer", text: "Before tax. Equity mutual fund gains are taxed as LTCG at 12.5% (above ₹1.25L/year) if held over 12 months (post July 2024 budget). Debt fund gains are taxed at your income slab rate. For post-tax planning, subtract approximately 1-2% from your effective return depending on your income slab and holding period." }
+        acceptedAnswer: { "@type": "Answer", text: "Before tax and exit loads. Treatment depends on scheme, acquisition and disposal dates, holding period and tax year. Subtracting an arbitrary percentage from an annual return is not a tax calculation." }
       },
       {
         "@type": "Question",
         name: "How do I choose between direct and regular plan SIPs?",
-        acceptedAnswer: { "@type": "Answer", text: "Direct plans have lower expense ratios (typically 0.5-1% less than regular plans). On a ₹10,000/month SIP at 12% for 20 years: a 1% higher return (direct vs regular) adds approximately ₹12-15L to your final corpus. Use direct plans via SEBI-registered platforms like Zerodha Coin, Groww, or MFCentral if you don't need an advisor." }
+        acceptedAnswer: { "@type": "Answer", text: "Direct plans have lower expenses than regular plans of the same scheme because distributor commissions are excluded. Compare current disclosures and consider advice needs. NAV returns already reflect expenses." }
       },
     ],
   };
@@ -163,10 +149,10 @@ export default function SipCalcClient() {
     name: "SIP Calculator — Systematic Investment Plan Return Calculator India 2026",
     applicationCategory: "FinanceApplication",
     operatingSystem: "Web",
-    description: "Calculate SIP returns with inflation adjustment, year-by-year corpus growth, and lumpsum comparison. Free SIP calculator for India with accurate 2026 tax and return assumptions.",
-    author: { "@type": "Person", name: "Ash K" },
+    description: "Calculate SIP returns with inflation adjustment, year-by-year corpus growth, and lumpsum comparison. Hypothetical effective annual returns; no tax or exit-load calculation.",
+    author: { "@type": "Person", name: "Ash" },
     publisher: { "@type": "Organization", name: "Assure Fintech" },
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-01",
   };
 
   const breadcrumb = {
@@ -210,9 +196,9 @@ export default function SipCalcClient() {
 
   return (
     <main style={{ maxWidth: 860, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
-      <Script id="ld-app" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-app" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       {/* Breadcrumb */}
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
@@ -225,8 +211,8 @@ export default function SipCalcClient() {
       {/* Header */}
       <div style={{ fontSize: 11, letterSpacing: 2, fontWeight: 700, color: COLOR, marginBottom: 10 }}>MUTUAL FUNDS · CALCULATOR</div>
       <h1 style={{ fontSize: 30, lineHeight: 1.2, fontWeight: 800, margin: "0 0 10px" }}>SIP Calculator</h1>
-      <p style={{ fontSize: 16, color: "var(--text-muted)", margin: "0 0 6px" }}>See exactly what your monthly investment will become — with inflation-adjusted real returns.</p>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>Updated {UPDATED} · By Ash K</div>
+      <p style={{ fontSize: 16, color: "var(--text-muted)", margin: "0 0 6px" }}>Explore hypothetical investment growth and the ending corpus in today's purchasing power. Returns are assumptions, not predictions.</p>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>Updated {UPDATED} · By Ash</div>
 
       {/* Mode toggle */}
       <div style={{ display: "flex", gap: 10, marginBottom: 28 }}>
@@ -244,7 +230,7 @@ export default function SipCalcClient() {
       </div>
 
       {/* Calculator grid */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 32, alignItems: "start" }}>
+      <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 32, alignItems: "start" }}>
 
         {/* LEFT — Inputs */}
         <div style={{ background: "var(--raise)", borderRadius: 14, padding: "24px 22px", border: "1px solid var(--border)" }}>
@@ -255,7 +241,7 @@ export default function SipCalcClient() {
                 <span>Monthly Investment</span>
                 <span style={valueStyle}>{formatINR(monthly)}</span>
               </div>
-              <input type="range" min={500} max={200000} step={500} value={monthly}
+              <input aria-label="Monthly contribution" type="range" min={500} max={200000} step={500} value={monthly}
                 onChange={e => setMonthly(+e.target.value)} style={sliderStyle} />
               <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "var(--text-muted)", marginTop: 3 }}>
                 <span>₹500</span><span>₹2 L</span>
@@ -267,7 +253,7 @@ export default function SipCalcClient() {
                 <span>Lumpsum Amount</span>
                 <span style={valueStyle}>{formatINR(lumpsum)}</span>
               </div>
-              <input type="range" min={10000} max={10000000} step={10000} value={lumpsum}
+              <input aria-label="Lump-sum investment" type="range" min={10000} max={10000000} step={10000} value={lumpsum}
                 onChange={e => setLumpsum(+e.target.value)} style={sliderStyle} />
               <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "var(--text-muted)", marginTop: 3 }}>
                 <span>₹10K</span><span>₹1 Cr</span>
@@ -277,10 +263,10 @@ export default function SipCalcClient() {
 
           <div style={inputGroupStyle}>
             <div style={labelStyle}>
-              <span>Expected Return (p.a.)</span>
+              <span>Assumed effective annual return (after expenses, before tax)</span>
               <span style={valueStyle}>{rate}%</span>
             </div>
-            <input type="range" min={4} max={24} step={0.5} value={rate}
+            <input aria-label="Assumed effective annual return" type="range" min={4} max={24} step={0.5} value={rate}
               onChange={e => setRate(+e.target.value)} style={sliderStyle} />
             <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "var(--text-muted)", marginTop: 3 }}>
               <span>4%</span><span>24%</span>
@@ -292,7 +278,7 @@ export default function SipCalcClient() {
               <span>Investment Period</span>
               <span style={valueStyle}>{years} yr{years > 1 ? "s" : ""}</span>
             </div>
-            <input type="range" min={1} max={40} step={1} value={years}
+            <input aria-label="Investment horizon in years" type="range" min={1} max={40} step={1} value={years}
               onChange={e => setYears(+e.target.value)} style={sliderStyle} />
             <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "var(--text-muted)", marginTop: 3 }}>
               <span>1 yr</span><span>40 yrs</span>
@@ -301,15 +287,15 @@ export default function SipCalcClient() {
 
           {/* Inflation toggle */}
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 4, marginBottom: showInflation ? 16 : 0 }}>
-            <div onClick={() => setShowInflation(!showInflation)} style={{
+            <button type="button" aria-label="Show inflation-adjusted purchasing power" aria-pressed={showInflation} onClick={() => setShowInflation(!showInflation)} style={{
               width: 38, height: 20, borderRadius: 10, background: showInflation ? COLOR : "var(--border)",
-              position: "relative", cursor: "pointer", transition: "background 0.2s",
+              position: "relative", cursor: "pointer", transition: "background 0.2s", border: 0, padding: 0,
             }}>
               <div style={{
                 width: 16, height: 16, borderRadius: "50%", background: "var(--raise)",
                 position: "absolute", top: 2, left: showInflation ? 20 : 2, transition: "left 0.2s",
               }} />
-            </div>
+            </button>
             <span style={{ fontSize: 13, color: "var(--text-muted)", cursor: "pointer" }} onClick={() => setShowInflation(!showInflation)}>
               Show inflation-adjusted returns
             </span>
@@ -321,7 +307,7 @@ export default function SipCalcClient() {
                 <span>Inflation Rate</span>
                 <span style={valueStyle}>{inflation}%</span>
               </div>
-              <input type="range" min={2} max={12} step={0.5} value={inflation}
+              <input aria-label="Assumed annual inflation" type="range" min={2} max={12} step={0.5} value={inflation}
                 onChange={e => setInflation(+e.target.value)} style={sliderStyle} />
               <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "var(--text-muted)", marginTop: 3 }}>
                 <span>2%</span><span>12%</span>
@@ -356,7 +342,7 @@ export default function SipCalcClient() {
             <DonutChart invested={result.invested} gains={result.gains} />
             <div>
               <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 6 }}>
-                <span style={{ color: "var(--text)", fontWeight: 700 }}>{result.invested > 0 ? ((result.gains / result.invested) * 100).toFixed(0) : 0}x</span> returns on invested amount
+                <span style={{ color: "var(--text)", fontWeight: 700 }}>{result.invested > 0 ? ((result.gains / result.invested) * 100).toFixed(0) : 0}%</span> simple gain on contributions (not annualized)
               </div>
               <div style={{ fontSize: 13, color: "var(--text-muted)" }}>
                 Wealth ratio: <span style={{ color: COLOR, fontWeight: 700 }}>{result.invested > 0 ? (result.maturity / result.invested).toFixed(1) : "0"}x</span>
@@ -379,7 +365,7 @@ export default function SipCalcClient() {
       {mode === "sip" && (
         <section style={{ marginTop: 36, marginBottom: 24 }}>
           <h2 style={{ fontSize: 20, fontWeight: 700, margin: "0 0 8px" }}>Year-by-Year Corpus Growth</h2>
-          <p style={{ fontSize: 15, color: "var(--text-muted)", margin: "0 0 12px" }}>The purple bars show your returns. The grey bars show money you put in. Notice how gains overtake invested amount after about Year {Math.round(years * 0.6)}.</p>
+          <p style={{ fontSize: 15, color: "var(--text-muted)", margin: "0 0 12px" }}>The grey bars show contributions; the purple bars show projected gains. Their relationship depends on the return assumption and contribution dates, not a fixed crossover year.</p>
           <GrowthChart monthly={monthly} rate={rate} years={Math.min(years, 30)} />
         </section>
       )}
@@ -417,17 +403,17 @@ export default function SipCalcClient() {
             </tbody>
           </table>
         </div>
-        <p style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 10 }}>★ 12% p.a. is the long-run average for diversified equity mutual funds in India. Past returns do not guarantee future performance.</p>
+        <p style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 10 }}>All return rates are hypothetical scenarios, not verified market averages or forecasts.</p>
       </section>
 
       {/* Honest take section */}
       <section style={{ background: "var(--raise)", borderLeft: `4px solid ${COLOR}`, borderRadius: "0 10px 10px 0", padding: "20px 24px", marginBottom: 28 }}>
-        <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>The Numbers Your AMC Won't Show You</h2>
+        <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>Keep expenses, tax and inflation separate</h2>
         <p style={{ fontSize: 15, margin: "0 0 10px" }}>
-          Fund fact sheets advertise CAGR — but your real return is lower. A fund with 15% CAGR and 1.5% expense ratio delivers 13.5% to you. At ₹10,000/month for 20 years, that 1.5% difference costs you approximately ₹28 L in final corpus.
+          Published NAV returns already reflect fund expenses. Do not subtract the expense ratio again from a NAV-based CAGR. Enter a hypothetical return after expenses; this calculator does not forecast any fund's performance.
         </p>
         <p style={{ fontSize: 15, margin: "0 0 10px" }}>
-          Post-tax matters too. Equity LTCG above ₹1.25L/year is taxed at 12.5% (July 2024 budget). On a large corpus liquidation, your effective tax can be significant. Plan for it.
+          This projection is before tax and exit loads. Treatment depends on scheme, acquisition dates, holding periods, disposals and applicable year. Do not approximate it by subtracting a fixed percentage from annual returns.
         </p>
         <p style={{ fontSize: 15, margin: 0 }}>
           And inflation: at 6% inflation, ₹1 Cr in 20 years has the purchasing power of roughly ₹31L today. Use the inflation toggle above to see what your corpus is really worth.
@@ -441,21 +427,21 @@ export default function SipCalcClient() {
           SIP returns are calculated using the future value of an annuity formula. Each monthly instalment earns compound interest from its investment date until the end. The first instalment earns returns for all {years} years; the last instalment earns only 1 month.
         </p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>
-          This is why time is the most powerful lever. Starting a ₹5,000/month SIP at age 25 instead of 35 — same 10 years of extra investment — nearly triples the corpus at age 60. The early instalments have decades to compound.
+          Earlier contributions have more time to compound in a positive-return scenario. Starting earlier also means contributing more money; compare both the total contributions and ending corpus rather than attributing the entire difference to investment returns.
         </p>
         <p style={{ fontSize: 16, margin: 0 }}>
-          Rupee cost averaging means you buy more units when NAV is low and fewer when it is high. Over a market cycle, this reduces your average purchase price versus a lumpsum invested at a single point. It does not guarantee better returns — but it reduces the variance and the anxiety of market timing.
+          Fixed contributions buy more units when NAV is lower and fewer when it is higher. They do not guarantee a lower purchase price or a better return than a lump sum; actual market paths and contribution dates determine that comparison.
         </p>
       </section>
 
       {/* Direct vs Regular callout */}
       <section style={{ border: "1px solid var(--border)", borderRadius: 12, padding: "20px 24px", marginBottom: 28 }}>
-        <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>Direct Plan vs Regular Plan: The 1% That Costs ₹12L</h2>
+        <h2 style={{ fontSize: 18, fontWeight: 700, margin: "0 0 10px" }}>Direct and regular plans: compare actual expenses</h2>
         <p style={{ fontSize: 15, margin: "0 0 10px" }}>
-          Regular plans pay 0.5-1% annual commission to your distributor. This reduces your effective return by the same amount. On ₹10,000/month SIP at 12% for 20 years: the corpus is ₹99.9L. At 11% (regular plan, 1% commission): ₹85.5L. Difference: ₹14.4L — just from paying commission.
+          Direct plans exclude distributor commissions and have lower expenses than regular plans of the same scheme. The actual difference varies. Compare current disclosures for the same scheme and option; a fixed one-percentage-point difference is not universal.
         </p>
         <p style={{ fontSize: 15, margin: 0 }}>
-          Invest in direct plans via <Link href="/learn/mutual-funds" style={{ color: COLOR }}>platforms like Zerodha Coin, Groww, or MFCentral</Link>. It is the same fund, same fund manager, just without the distributor cut.
+          Read the <Link href="/learn/mutual-funds/direct-vs-regular" style={{ color: COLOR }}>direct-versus-regular guide</Link> and <a href="https://www.amfiindia.com/investor/knowledge-center-info?zoneName=DirectPlan" target="_blank" rel="noopener noreferrer">AMFI’s explanation</a>. Switching existing units can trigger tax or exit loads, unlike changing where new contributions go.
         </p>
       </section>
 

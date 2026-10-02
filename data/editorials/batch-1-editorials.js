@@ -81,7 +81,7 @@ export const CARD_EDITORIALS_BATCH_1 = {
       },
       {
         q: "Is lounge access really gone? Even with spend milestones?",
-        a: "Yes, lounge access was discontinued from April 2026 and is no longer available on this card even if you meet spend milestones. Axis Bank's official April 2026 communication confirmed this removal. If lounge access is important to you, consider the Axis Horizon (₹3,000/year, 16 visits) or Axis Privilege (₹1,500/year, 8 visits)."
+        a: "Yes, lounge access was discontinued from April 2026 and is no longer available on this card even if you meet spend milestones. Axis Bank's April 2026 communication confirmed this removal. Axis Horizon and Axis Privilege have different networks and eligibility conditions; for example, Privilege currently lists two select domestic visits per calendar quarter after ₹50,000 eligible spend in the preceding three months."
       },
       {
         q: "Can I get the annual fee waived on the Axis Airtel card?",
@@ -178,7 +178,7 @@ export const CARD_EDITORIALS_BATCH_1 = {
       },
       {
         q: "How does the 1.5% base rate compare to other popular cards at this fee bracket?",
-        a: "Most ₹500-1,500/year cards offer 1% base rate on non-partner spends. HDFC Millennia is 1% outside partners. SBI SimplyCLICK is 1% base. The Axis Cashback's 1.5% is genuinely above average. The only common cards matching or exceeding it at this fee level are the Axis Flipkart SuperCoin (also 1.5%) and a few category-specific cards."
+        a: "Most ₹500-1,500/year cards have different earn rates by merchant and channel, so a single base-rate comparison can mislead. HDFC Millennia uses an eligible-partner structure. SBI SimplyCLICK earns 1.25% illustrative voucher value on other eligible online spend and 2.5% on listed 10X partners at the selected ₹0.25/point catalogue value; its generic base is 0.25%, not a flat 1% cashback. Axis Cashback's eligible 1.5% tier is therefore not directly comparable without matching spend, caps and redemption routes."
       },
       {
         q: "Can I redeem cashback as direct credit to my statement or bank account?",
@@ -186,7 +186,7 @@ export const CARD_EDITORIALS_BATCH_1 = {
       },
       {
         q: "Does the Axis Cashback card have lounge access?",
-        a: "No, the Axis Cashback card has no lounge access. If airport lounge access is important to you, you would need to pair it with a card that includes lounge visits, such as the Axis Privilege (₹1,500/year, 8 visits) or Axis Horizon (₹3,000/year, 16 visits)."
+        a: "No, the Axis Cashback card has no lounge access. If airport lounge access is important to you, compare a card such as Axis Privilege or Axis Horizon, paying attention to the lounge network, visit limits and any preceding-spend requirement. Privilege currently lists two select domestic visits per calendar quarter after ₹50,000 eligible spend in the prior three months."
       },
       {
         q: "What is the fee waiver condition for the ₹1,000 annual fee?",
@@ -599,26 +599,26 @@ export const CARD_EDITORIALS_BATCH_1 = {
   },
 
   "axis-privilege": {
-    verdict: "Axis Privilege is a straightforward lounge-access card at a mid-tier fee. The 1% flat reward rate on all categories is below the market average for a ₹1,500/year card, but the 8 airport lounge visits per year is the primary value driver. If you need lounge access and do not want to jump to the ₹3,000 Axis Horizon, Privilege fills the gap.",
-    verdictDetail: "The math on lounge access alone: 8 visits at ₹800-1,000 per visit = ₹6,400-8,000 in lounge value against a ₹1,500 annual fee. The reward rate is straightforwardly not competitive: 1% flat means ₹30,000/month spend generates ₹3,600/year in rewards, which an Axis Cashback holder earns at 1.5% (₹5,400/year). The ₹1,800 difference in annual rewards at that spend level exceeds the ₹500 fee difference. Privilege makes sense primarily when lounge access is the specific goal and you cannot justify ₹3,000 for Horizon.",
-    idealFor: "Domestic travelers flying 4-6 times a year who want lounge access at a sub-₹2,000 annual fee and are willing to accept a below-average rewards rate on general spending.",
-    skipIf: "You travel rarely (fewer than 3 times a year), in which case lounge value does not cover the fee, or if you prioritize reward rates over lounge access.",
+    verdict: "Axis Privilege combines eligible-spend EDGE Reward Points with quarterly, spend-gated domestic lounge access and capped partner offers. It is not a flat-cashback card: utilities and several other payment types earn no points, and voucher values should not be confused with cash.",
+    verdictDetail: "The core earn rate is 10 EDGE Reward Points per ₹200 on eligible purchases. Axis's examples value selected voucher redemptions, but its fee table also says reward redemption fees apply. Lounge access is up to two visits per calendar quarter at select domestic lounges, after ₹50,000 eligible spend in the preceding three months. Its value depends on eligible spend, actual redemption choice and lounge use—not a notional lounge price.",
+    idealFor: "People who can meet the preceding-three-month spend condition when they want a lounge visit, use select domestic lounges, and value Axis's eligible voucher or partner offers.",
+    skipIf: "You need lounge access without a spend gate, want statement cashback, or expect points on utilities, fuel, insurance, rent or other excluded payments.",
     bestUsedFor: [
       {
         use: "Airport lounge access on domestic routes",
-        detail: "8 lounge visits at ₹1,500/year works out to ₹187.50 per lounge visit in fee allocation. Indian domestic business lounges typically charge ₹800-1,200 walk-in. If you use 4 of the 8 visits, you have already recovered the annual fee in lounge value alone. For someone flying once every 2 months, this card pays for itself on lounge access."
+        detail: "Axis lists two visits per calendar quarter at select domestic lounges, subject to ₹50,000 eligible spending in the preceding three months. Access is not an unconditional annual pool; check the eligible lounge list and spend window for your visit."
       },
       {
-        use: "Welcome milestone benefits",
-        detail: "Axis Privilege includes welcome benefits upon card activation and sometimes annual milestone vouchers. The welcome benefit typically includes gift vouchers or reward point bonuses. Verify the current welcome offer with Axis Bank as milestone structures are updated periodically."
+        use: "Anniversary-year milestone",
+        detail: "Axis lists 10,000 EDGE Reward Points, illustrated as ₹2,000 against vouchers, after ₹2.5 lakh eligible spend in a card-anniversary year. This is a voucher illustration, not cash; the separate ₹5 lakh eligible-spend threshold is for reversing the annual fee."
       },
       {
-        use: "Flat 1% on all categories without exclusions",
-        detail: "The 1% flat rate applies without the category exclusions that trip up higher-tier cards. Fuel, utilities, government payments, and insurance premiums generally earn 1% on Privilege without the zero-rate treatment some premium cards impose on these categories. For predictable earnings without surprises, the flat rate is simpler."
+        use: "Eligible everyday purchases",
+        detail: "Eligible domestic and international purchases earn 10 points per ₹200. Utilities, insurance, rent, fuel, education, government MCCs, wallets, jewellery, gift cards, bridge fees, road fees and tolls are excluded; EMI conversion reverses points."
       },
       {
-        use: "Complimentary card insurance benefits",
-        detail: "Most Axis Privilege cards include purchase protection and credit card liability cover, which are standard for Visa Signature tier cards. These are background benefits that reduce risk without adding cost."
+        use: "Capped District movie offer",
+        detail: "The issuer lists up to ₹250 off once a month on the District app with code AXISPRIVILEGE. Offer conditions apply; it is not an uncapped reward rate."
       }
     ],
     avoidFor: [
@@ -626,65 +626,40 @@ export const CARD_EDITORIALS_BATCH_1 = {
         category: "General online and everyday spending",
         alternative: "axis-cashback",
         alternativeName: "Axis Cashback Credit Card",
-        reason: "Axis Privilege earns 1% flat. Axis Cashback earns 1.5% flat plus 7% on accelerated categories for just ₹500 more per year. At ₹20,000/month spend, Axis Cashback earns ₹1,800 more annually than Privilege on the same spend, more than covering the fee difference."
+        reason: "Privilege earns issuer points only on eligible purchases and does not provide a universal cash rate. Compare current eligible merchants, exclusions, redemption routes and fees against your own spend; category-wide calculator figures are not directly interchangeable."
       },
       {
         category: "Heavy travel with lounge requirements",
         alternative: "axis-horizon",
         alternativeName: "Axis Horizon Credit Card",
-        reason: "If you travel more than 8 times per year and regularly use lounges, Privilege's 8-visit cap becomes a binding constraint. Axis Horizon at ₹3,000/year gives 16 visits (12 domestic + 4 international) plus 5% on travel bookings. The ₹1,500 higher fee is covered by the incremental travel rewards and lounge access beyond visit 8."
+        reason: "The cards have different lounge networks, eligibility conditions and EDGE reward currencies. Privilege's domestic lounge access requires ₹50,000 eligible spend in the prior three months; Horizon travel earning is route-specific. Compare terms for your network and travel pattern rather than assuming a fixed visit count or cash-equivalent return."
       },
       {
         category: "Food delivery and dining",
         alternative: "hdfc-swiggy-blck",
         alternativeName: "HDFC Swiggy BLCK Credit Card",
-        reason: "Axis Privilege earns 1% on food delivery and dining. HDFC Swiggy BLCK earns 10% on Swiggy and 5% on dining partners. The Privilege card has no special dining acceleration, making it the wrong primary card for food-heavy spenders."
+        reason: "Privilege's ordinary points rate is not a Swiggy-specific cashback offer. Compare the live merchant route, offer period, cap and redemption value for each card; do not treat partner discounts as a general dining return."
       },
       {
         category: "Fuel and petrol station purchases",
         alternative: "axis-iocl",
         alternativeName: "Axis IOCL Credit Card",
-        reason: "The 1% flat rate on fuel is worse than the 4% fuel rate plus surcharge waiver on Axis IOCL. At ₹5,000/month fuel spend, IOCL card saves ₹3,000/year more than Privilege earns on the same spend, while carrying a similar ₹1,000 fee."
+        reason: "Fuel earns no EDGE Reward Points on Privilege, though a separate fuel-surcharge refund may apply to eligible transaction sizes. Compare the other card's station, transaction-band, cap and surcharge conditions; do not count surcharge relief as points."
       }
     ],
-    combos: [
-      {
-        card: "axis-cashback",
-        cardName: "Axis Cashback Credit Card",
-        totalFee: "₹2,500/year",
-        reason: "Use Privilege exclusively for lounge access (swipe it before entering the lounge, then put all spending on Axis Cashback). This gets you 8 lounge visits and 1.5% cashback on all spend. Effective cost of lounge access is ₹1,500, offset by the fact that Privilege also earns 1% on any spend you do route through it."
-      },
-      {
-        card: "axis-iocl",
-        cardName: "Axis IOCL Credit Card",
-        totalFee: "₹2,500/year",
-        reason: "Axis Privilege covers lounge access and general 1% spend. Axis IOCL covers fuel at 4%. For a traveler who drives to the airport and uses lounges, this pairing covers both lounge access and fuel at elevated rates. Total fee of ₹2,500 for two functional cards with complementary niches."
-      }
-    ],
+    combos: [],
     faq: [
       {
-        q: "Does Axis Privilege lounge access use a physical card or an app-based system?",
-        a: "Axis Bank's lounge access on Privilege operates through partner networks like DreamFolks or directly through Visa network lounge programs. In most cases, you present the physical Axis Privilege credit card at the lounge reception along with a boarding pass. Some lounges may use the Axis Bank app or DreamFolks app for digital entry. Check the specific lounge's entry requirement before relying on one method."
+        q: "How many domestic lounge visits are included, and is there a spend condition?",
+        a: "Axis lists two visits per calendar quarter at select domestic lounges, after ₹50,000 of eligible spend in the preceding three months. The eligible lounge list and access rules are network-specific."
       },
       {
-        q: "Is the lounge access per-quarter or a total annual pool of 8 visits?",
-        a: "The 8 visits are typically structured as a quarterly allocation (2 per quarter) rather than a draw-down annual pool. This means unused visits in a quarter do not carry over to the next quarter. If you travel more in one quarter and less in another, you may lose some lounge access value due to the quarterly structure. Verify the current access structure with Axis Bank, as they have modified this policy in the past."
+        q: "What spend waives the annual fee?",
+        a: "Axis says the ₹1,500 annual fee is reversed after ₹5 lakh of eligible spend in the previous card-anniversary year. Utility/telecom, rent, wallet, government, insurance, gold/jewellery, fuel, education, gift-card and toll-related transactions are among the listed exclusions."
       },
       {
-        q: "What is the spend waiver condition for the ₹1,500 annual fee?",
-        a: "The ₹1,500 annual fee on Axis Privilege is waived if you spend ₹2.5-3 lakh on the card in the preceding 12 months (approximately ₹20,000-25,000/month). This is achievable for someone using Privilege as a primary card. If you use it only for lounge access and route other spending through better cards, you likely will not hit the waiver threshold and will pay the ₹1,500 fee."
-      },
-      {
-        q: "Does Axis Privilege earn EDGE Miles or reward points?",
-        a: "Axis Privilege earns Axis EDGE Reward Points (different from EDGE Miles earned by Magnus). EDGE Reward Points at 1% effective rate can be redeemed via the Axis Bank EDGE Rewards portal for statement credit, vouchers, and products. The redemption rate typically values 1 EDGE point at ₹0.20, meaning 5 EDGE Points = ₹1. Points do not transfer to airline programs."
-      },
-      {
-        q: "Is Axis Privilege or Axis Horizon the better choice for 4-6 domestic trips per year?",
-        a: "For 4-6 domestic trips per year using lounges once per trip (4-6 visits), Privilege's 8-visit cap is not binding and the ₹1,500 fee is justified purely on lounge value. However, Axis Horizon at ₹3,000/year also gives 5% on flights and hotels. At ₹1 lakh/year in travel spend, Horizon earns ₹5,000 in travel rewards vs ₹1,000 on Privilege, a ₹4,000 difference that exceeds the ₹1,500 fee gap. For anyone spending over ₹60,000/year on travel, Horizon is the better card."
-      },
-      {
-        q: "Can I hold both Axis Privilege and Axis Cashback simultaneously?",
-        a: "Yes. Axis Bank allows holding multiple credit cards within their portfolio simultaneously. The Privilege + Cashback combo is a sensible one: use Privilege's card swipe to access lounges (the card must be presented, not necessarily charged), and use Cashback for all actual purchases at 1.5% rate. Axis Bank's app manages both under one interface."
+        q: "Are EDGE Reward Points the same as cash?",
+        a: "No. Axis's product page lists EDGE Reward Points and a catalogue redemption route, and says a redemption fee applies. Its voucher-value examples are not a promise of statement credit or cash; the redemption route and fee affect the value you receive."
       }
     ]
   },
@@ -929,7 +904,7 @@ export const CARD_EDITORIALS_BATCH_1 = {
         category: "Airport lounge access",
         alternative: "axis-privilege",
         alternativeName: "Axis Privilege Credit Card",
-        reason: "HDFC Swiggy BLCK has no lounge access. Axis Privilege at ₹1,500/year includes 8 domestic lounge visits. For travelers who want lounge access without a premium card, Axis Privilege fills the gap. Holding Swiggy BLCK for food spend and Axis Privilege for lounge access is a sensible pairing."
+        reason: "HDFC Swiggy BLCK has no lounge access. Axis Privilege may suit a traveler who uses its select domestic lounge network and meets the ₹50,000 eligible-spend condition in the preceding three months. Check both cards' current fees and eligibility before pairing them; the lounge access is not unconditional."
       },
       {
         category: "IOCL fuel purchases",

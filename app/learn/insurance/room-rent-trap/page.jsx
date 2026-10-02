@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -19,7 +20,7 @@ const faq = {
 };
 
 export default function RoomRentTrapPage() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Health Insurance Room-Rent Limits: What to Check", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Health Insurance Room-Rent Limits: What to Check", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -82,7 +83,7 @@ export default function RoomRentTrapPage() {
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/insurance" style={{ color: COLOR }}>insurance guides</Link> · <Link href="/learn/insurance/copay-vs-no-copay" style={{ color: COLOR }}>co-pay terms</Link> · <Link href="/learn/insurance/health-insurance-effective-coverage" style={{ color: COLOR }}>effective coverage</Link></p>
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This general guide is not a coverage determination. Your policy schedule, wording and claim facts control. Verify the clause with the insurer before buying or making a claim.</footer>
-      </main>
+      <GuidePractice topic="insurance/room-rent-trap" /></main>
     </>
   );
 }

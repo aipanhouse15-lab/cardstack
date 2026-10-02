@@ -1,13 +1,14 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card Under ₹500 Annual Fee in India (September 2026)",
-  description: "The best credit card in India that charges a fee costs ₹499 per year. And that fee can be waived entirely at ₹2 lakh annual spend.",
+  title: "Best Credit Cards with Annual Fees up to ₹500 in India (2026)",
+  description: "Compare low-fee cards in India by eligible rewards, redemption value, caps and fee-waiver rules—including RBL ShopRite's current grocery terms.",
   alternates: { canonical: "/best/best-credit-card-under-500-annual-fee" },
   openGraph: {
-    title: "Best Credit Card Under ₹500 Annual Fee in India (September 2026)",
-    description: "The best credit card in India that charges a fee costs ₹499 per year. And that fee can be waived entirely at ₹2 lakh annual spend.",
+    title: "Best Credit Cards with Annual Fees up to ₹500 in India (2026)",
+    description: "Compare low-fee cards in India by eligible rewards, redemption value, caps and fee-waiver rules—including RBL ShopRite's current grocery terms.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -15,10 +16,10 @@ export const metadata = {
 
 
 // /best/best-credit-card-under-500-annual-fee
-// Updated: September 26, 2026
+// Updated: October 2, 2026
 
 const COLOR = "#ea580c";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 2, 2026";
 
 // --- SVG Components ---
 
@@ -105,7 +106,7 @@ function Under500CardsComparison() {
     { name: "Axis ACE", fee: "₹499*", topRate: "5% utility", categories: "Utility, food delivery", verdict: "Best paid card here" },
     { name: "SBI SimplySAVE", fee: "₹499*", topRate: "10 pts/₹150", categories: "Dining, grocery, movies", verdict: "Capped reward points" },
     { name: "ICICI HPCL Coral", fee: "₹199*", topRate: "2.5% fuel", categories: "HPCL fuel (₹100 cap/mo)", verdict: "HPCL fuel users" },
-    { name: "RBL ShopRite", fee: "Check current schedule", topRate: "Reward points", categories: "Eligible grocery spend", verdict: "Verify current issuer terms" },
+    { name: "RBL ShopRite", fee: "₹500 + GST*", topRate: "20 points/₹100", categories: "Eligible grocery MCCs", verdict: "1,000 accelerated points/cycle" },
     { name: "HDFC MoneyBack+", fee: "₹500*", topRate: "Up to 2.5%", categories: "Selected merchants", verdict: "Check current terms" },
   ];
   return (
@@ -170,32 +171,28 @@ function ACECategoriesBreakdown() {
 function RBLShopRiteGroceryMath() {
   return (
     <svg
-      viewBox="0 0 680 313"
+      viewBox="0 0 680 230"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Reminder to verify current RBL ShopRite issuer terms"
+      aria-label="RBL ShopRite example: eligible grocery spending of 5,000 rupees earns 1,000 accelerated points worth up to 250 rupees; further grocery spend earns one point per 100 rupees"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
-      <rect width="680" height="170" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">RBL ShopRite: verify current terms before estimating value</text>
+      <rect width="680" height="210" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
+      <text x="340" y="27" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">RBL ShopRite: grocery points are capped; fuel rewards are separate</text>
       {[
-        { spend: "Confirm current fee", cashback: "Confirm current earn rate", annual: "Check monthly cap", net: "Check redemption" },
-        { spend: "Check grocery MCCs", cashback: "Check eligible spend", annual: "Review exclusions", net: "Use your own spend" },
-        { spend: "Ask RBL Bank", cashback: "Read current terms", annual: "Avoid old figures", net: "Then compare" },
-      ].map((r, i) => (
+        ["Eligible grocery spend in one billing cycle", "Reward points", "Maximum stated value*"],
+        ["₹5,000", "1,000 points", "Up to ₹250"],
+        ["₹10,000", "1,050 points†", "Up to ₹262.50"],
+      ].map((row, i) => (
         <g key={i}>
-          <rect x="12" y={42 + i * 38} width="656" height="36" rx="4" fill={i % 2 === 0 ? COLOR : "transparent"} opacity={i % 2 === 0 ? "0.05" : "1"} />
-          <text x="22" y={65 + i * 38} fontSize="11" fontWeight="600" fill="var(--text)">{r.spend}</text>
-          <text x="200" y={65 + i * 38} fontSize="11" fill={COLOR} fontWeight="600">{r.cashback}</text>
-          <text x="340" y={65 + i * 38} fontSize="11" fill={COLOR} fontWeight="700">{r.annual}</text>
-          <text x="490" y={65 + i * 38} fontSize="11" fill="var(--text-muted)">{r.net}</text>
+          <rect x="16" y={42 + i * 36} width="648" height="34" rx="4" fill={i === 0 ? COLOR : i % 2 ? "var(--raise2)" : "transparent"} opacity={i === 0 ? "0.95" : "1"} />
+          <text x="34" y={64 + i * 36} fontSize="11" fontWeight={i === 0 ? "700" : "500"} fill={i === 0 ? "white" : "var(--text)"}>{row[0]}</text>
+          <text x="360" y={64 + i * 36} fontSize="11" fontWeight={i === 0 ? "700" : "600"} fill={i === 0 ? "white" : COLOR}>{row[1]}</text>
+          <text x="530" y={64 + i * 36} fontSize="11" fontWeight={i === 0 ? "700" : "600"} fill={i === 0 ? "white" : "var(--text)"}>{row[2]}</text>
         </g>
       ))}
-      <text x="22" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Fee</text>
-      <text x="200" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Earn rate</text>
-      <text x="340" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Cap</text>
-      <text x="490" y="42" fontSize="10.5" fontWeight="700" fill="var(--text)">Redemption</text>
-      <text x="340" y="160" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">Current ShopRite terms could not be verified from an authoritative issuer schedule; older estimates may be stale.</text>
+      <text x="340" y="174" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">After 1,000 accelerated grocery points per billing cycle, eligible grocery spend earns 1 point/₹100.</text>
+      <text x="340" y="191" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">*Up to ₹0.25/point; points are not cash. †Includes 50 base points after the accelerated cap.</text>
     </svg>
   );
 }
@@ -210,7 +207,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "Which is the best credit card under ₹500 annual fee in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Axis ACE is one option at ₹499 annual fee (waived when eligible annual spend exceeds ₹2 lakh). Its advertised rates are 5% on eligible utility bill payments and recharges through Google Pay, 4% on Swiggy, Zomato and Ola, and 1.5% on other eligible spends; the accelerated categories share a ₹500 billing-cycle cap. ShopRite is points-based; verify current RBL Bank terms before estimating its value.",
+          text: "Axis ACE is one option at ₹499 annual fee (waived when eligible annual spend exceeds ₹2 lakh). Its listed rates apply only to eligible Google Pay utility/recharge and named food/ride transactions, with a shared ₹500 billing-cycle accelerated cap. RBL ShopRite charges ₹500 + GST, waivable at ₹1.5 lakh eligible membership-year spend; grocery earns 20 points/₹100 up to 1,000 accelerated points per billing cycle, then 1 point/₹100. Points redeem for up to ₹0.25 each; fuel earns no points, though a separate surcharge waiver may apply.",
         },
       },
       {
@@ -242,7 +239,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "Is HDFC MoneyBack+ worth getting in 2026?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "It depends on your eligible spend and redemption choice. HDFC's current terms list 20 CashPoints per ₹150 at Amazon, BigBasket, Flipkart, Reliance Smart SuperStore and Swiggy, with a 2,500-point calendar-month cap; other eligible spends earn 2 points per ₹150. Exclusions and redemption values apply. Check HDFC's current fee and waiver terms before applying.",
+          text: "MoneyBack+ advertises 10X CashPoints (up to 2.5% value back) at Amazon, Flipkart, Swiggy, Reliance Smart SuperStore and BigBasket; other spending earns 2 CashPoints per ₹200. Up to ₹0.25/point applies to catalogue or eligible flight/hotel redemption; statement cashback is ₹0.20/point. HDFC's September 2026 MITC caps total earning at 15,000 points per statement cycle and cashback redemption at 3,000 points per calendar month. Its public page does not establish the old 2,500-point accelerated-earning cap, so that cap is not asserted here. Merchant exclusions and transaction rules apply.",
         },
       },
       {
@@ -258,7 +255,7 @@ export default function BestCreditCardUnder500AnnualFee() {
         name: "What is RBL ShopRite and is it good for grocery shopping?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "ShopRite is a points-based grocery card. I could not confirm a current, authoritative RBL Bank product schedule for its earn rate, fee, waiver and cap in this review, so do not rely on older comparison figures. Verify the latest product page and cardmember terms directly with RBL before applying or estimating its value.",
+          text: "ShopRite charges ₹500 + GST, with an annual-fee waiver at ₹1.5 lakh eligible purchases in a membership year. Eligible grocery transactions earn 20 points/₹100 up to 1,000 points per billing cycle, then 1 point/₹100. Each point is worth up to ₹0.25 at redemption, so the accelerated tier is worth at most ₹250 per cycle—not ₹250 cash. Fuel earns no points; its separate surcharge waiver covers eligible ₹500–₹4,000 purchases up to ₹100/calendar month. Merchant MCCs and exclusions apply.",
         },
       },
       {
@@ -284,9 +281,9 @@ export default function BestCreditCardUnder500AnnualFee() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Credit Cards with Annual Fees up to ₹500 in India",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-02",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -315,9 +312,9 @@ export default function BestCreditCardUnder500AnnualFee() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Cards with Annual Fees up to ₹500 in India (September 2026)
+            Best Credit Cards with Annual Fees up to ₹500 in India (2026)
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
       </div>
     <main
@@ -330,12 +327,12 @@ export default function BestCreditCardUnder500AnnualFee() {
         lineHeight: 1.6,
       }}
     >
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>
-        <Link href="/">Home</Link> / <Link href="/best/">Best Cards</Link> / Best Credit Card Under ₹500 Annual Fee
+        <Link href="/">Home</Link> / <Link href="/best/">Best Cards</Link> / Best Credit Cards with Annual Fees up to ₹500
       </nav>
 
       <div
@@ -356,11 +353,11 @@ export default function BestCreditCardUnder500AnnualFee() {
       </div>
 
       <p style={{ fontSize: 18, color: "var(--text-muted)", marginBottom: 10 }}>
-        Compare no-fee and low-fee cards by eligible rewards, caps, waiver rules and redemption value—not headline rates alone.
+        Compare no-fee and low-fee cards by eligible rewards, caps, waiver rules and redemption value—not headline rates alone. Fees are before GST where indicated; individual issuer source dates vary.
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
-        Issuer terms reviewed September 2026 · By Ash K · 8 min read
+        Updated {UPDATED} · Individual issuer source dates vary · By Ash · 8 min read
       </div>
 
       {/* Key stat */}
@@ -379,7 +376,7 @@ export default function BestCreditCardUnder500AnnualFee() {
 
       {/* Top Picks */}
       <section style={{ marginBottom: 48 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 18, color: "var(--text)" }}>Cards Ranked: Under ₹500 Annual Fee</h2>
+        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 18, color: "var(--text)" }}>Cards Ranked: Annual Fees up to ₹500 before applicable GST</h2>
 
         {[
           {
@@ -413,18 +410,18 @@ export default function BestCreditCardUnder500AnnualFee() {
             rank: "4",
             name: "RBL ShopRite",
             tag: "Best for Grocery Households",
-            fee: "Check current issuer schedule",
-            reward: "Points-based grocery rewards; verify rate, cap and redemption value with RBL",
-            best: "Compare only after confirming current issuer terms",
+            fee: "₹500 + GST; waiver at ₹1.5L eligible membership-year spend",
+            reward: "20 points/₹100 on eligible grocery MCCs; 1,000-point accelerated cap/cycle, then base earn",
+            best: "Eligible grocery spenders who value RBL points",
             slug: "rbl-shoprite",
           },
           {
             rank: "5",
             name: "ICICI HPCL Coral",
             tag: "Best for HPCL Fuel Users",
-            fee: "₹500/yr",
+            fee: "₹199 joining; ₹199 renewal before GST",
             reward: "2.5% HPCL cashback (₹100/month cap) + eligible surcharge waiver",
-            best: "High fuel spenders who fill exclusively at HPCL",
+            best: "HPCL purchases of ₹500+; surcharge waiver separately needs ₹400–₹4,000 on an ICICI Bank POS",
             slug: "icici-hpcl-coral",
           },
         ].map((card) => (
@@ -490,7 +487,7 @@ export default function BestCreditCardUnder500AnnualFee() {
           Axis ACE advertises 5% on eligible utility bills/recharges through Google Pay, 4% on Swiggy, Zomato and Ola, and 1.5% on other eligible spends. The accelerated categories share a ₹500 billing-cycle cap, so the headline rates do not apply without limit. Check current exclusions and transaction eligibility before estimating returns.
         </p>
         <p>
-          The 5% rate is limited to eligible utility bill payments and recharges via Google Pay. Do not assume every biller, BBPS route or transaction coding qualifies. A ₹5,000 monthly eligible transaction amount would nominally exceed the shared accelerated cap, so the maximum accelerated cashback remains subject to that ₹500 billing-cycle limit.
+          The 5% rate is limited to eligible utility bill payments and recharges via Google Pay. Do not assume every biller, BBPS route or transaction coding qualifies. ₹5,000 of eligible bills earns ₹250 before other use of the shared cap; ₹10,000 alone reaches ₹500. Listed food/ride transactions can consume the same billing-cycle bucket.
         </p>
         <p>
           The 4% advertised rate applies to listed merchants (Swiggy, Zomato and Ola) and shares the ₹500 billing-cycle cap with the 5% category. Realized returns depend on how quickly eligible accelerated transactions reach that cap and on the 1.5% base cashback for other eligible spends.
@@ -545,10 +542,15 @@ export default function BestCreditCardUnder500AnnualFee() {
           The Niche Specialists Worth Knowing About
         </h2>
         <p>
-          RBL ShopRite is a points-based grocery card, but its current fee, earn rate, cap and redemption rules should be confirmed from RBL Bank's latest product terms before calculating value.
+          RBL ShopRite charges ₹500 + GST and earns 20 points/₹100 on eligible grocery MCCs, capped at 1,000 accelerated points per billing cycle; grocery spend above that cap earns one point/₹100. At RBL's maximum stated redemption value of ₹0.25/point, the accelerated cap represents up to ₹250 in redemption value, not cash. RBL's terms exclude fuel from rewards; a distinct surcharge waiver may apply to eligible ₹500–₹4,000 fuel transactions.
         </p>
         <p>
-          We are not publishing a precise ShopRite return illustration until the current issuer schedule can be verified; older third-party pages may describe superseded benefits.
+          The example above is a gross point-value illustration before redemption choices and the annual fee. Online grocery apps only earn the accelerated rate when the transaction posts with an eligible grocery MCC; fees, waiver eligibility, and excluded categories are listed in RBL's current terms.
+        </p>
+        <p>
+          <a href="https://www.rbl.bank.in/personal-banking/cards/credit-cards/shoprite-credit-card" target="_blank" rel="noreferrer">RBL ShopRite product details</a>
+          {" · "}
+          <a href="https://webassets.rbl.bank.in/document/credit-cards/tnc-shoprite-credit-card.pdf" target="_blank" rel="noreferrer">RBL ShopRite terms and conditions</a>
         </p>
         <p>
           ICICI HPCL Coral is a narrow-use option: its ₹199 annual fee (waived at ₹50,000 annual spend) accompanies 2.5% HPCL cashback capped at ₹100/month and an eligible fuel-surcharge waiver. Compare the cap and transaction conditions against your actual fuel use.
@@ -577,7 +579,7 @@ export default function BestCreditCardUnder500AnnualFee() {
             <strong>Route only eligible transactions to Axis ACE:</strong> qualifying Google Pay utility/recharge payments, Swiggy, Zomato and Ola; confirm current exclusions and cap utilization.
           </li>
           <li>
-            <strong>If you spend heavily on groceries,</strong> verify ShopRite's latest fee, points cap and redemption terms with RBL before comparing it.
+            <strong>If you spend heavily on groceries,</strong> compare your eligible MCC-coded grocery spend against ShopRite's 1,000 accelerated-point billing-cycle cap and your preferred redemption value.
           </li>
           <li>
             <strong>Track eligible spend toward any fee waiver</strong> and avoid spending just to earn a waiver if it is uneconomic.
@@ -621,6 +623,7 @@ export default function BestCreditCardUnder500AnnualFee() {
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
         <strong>Disclaimer:</strong> Assure Fintech is an independent editorial platform and does not hold a banking license. Card terms, reward rates, annual fee waiver conditions, and category caps are subject to change by issuing banks. Always verify current terms on the bank's official website before applying. Referral links on this page may generate a commission that does not affect editorial rankings.
       </footer>
+    <GuideCardRules slug="best-credit-card-under-500-annual-fee" />
     </main>
     </>
   );

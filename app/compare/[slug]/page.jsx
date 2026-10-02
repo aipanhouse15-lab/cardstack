@@ -1,5 +1,5 @@
 import { COMPARISONS } from "@/data/comparisons";
-import { CARDS, CATEGORIES, calcTotalMonthlyReward, isSourceReviewed } from "@/data/cards";
+import { CARDS, CATEGORIES, calcTotalMonthlyReward, isSourceReviewed, isEstimateReady } from "@/data/cards";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import BankLogo from "@/components/BankLogo";
@@ -48,13 +48,13 @@ function generateVerdict(c1, c2, c1Total, c2Total, c1Details, c2Details, categor
   const ties = categories.filter(cat => (c1Details[cat.id]?.cashback || 0) === (c2Details[cat.id]?.cashback || 0));
 
   if (diff < 100) {
-    return `It's nearly a tie — just ₹${diff.toLocaleString("en-IN")} difference per month. ${c1.name} wins ${c1Wins.length} categories, ${c2.name} wins ${c2Wins.length}. Pick based on which categories matter most to you, or get both for full coverage.`;
+    return `The modelled gross rewards are close: ₹${diff.toLocaleString("en-IN")} difference per cycle before fees and redemption charges. ${c1.name} leads ${c1Wins.length} modelled categories and ${c2.name} leads ${c2Wins.length}. Compare merchant assumptions, reward currency and usable benefits before choosing.`;
   }
 
   const c1WinNames = c1Wins.map(c => c.label.toLowerCase()).join(", ");
   const c2WinNames = c2Wins.map(c => c.label.toLowerCase()).join(", ");
 
-  return `${winner.name} earns ₹${diff.toLocaleString("en-IN")} more per month on this spending pattern. ${c1.name} wins on ${c1WinNames || "no categories"}. ${c2.name} wins on ${c2WinNames || "no categories"}. ${ties.length > 0 ? `They tie on ${ties.length} ${ties.length === 1 ? "category" : "categories"}.` : ""} The best strategy? Use ${winner.name} as your primary card and ${loser.name} for its winning categories.`;
+  return `${winner.name} has ₹${diff.toLocaleString("en-IN")} higher modelled gross reward value per cycle in this scenario, before fees and redemption charges. ${c1.name} leads on ${c1WinNames || "no categories"}; ${c2.name} leads on ${c2WinNames || "no categories"}. This is not a universal winner: the qualifying merchants and redemption routes differ, and split spending needs its own shared-cap calculation.`;
 }
 
 // Auto-generate "who should pick which" based on data
@@ -74,18 +74,18 @@ function generatePickAdvice(c1, c2, c1Details, c2Details, categories) {
       label: `Pick ${c1.name} if`,
       reasons: [
         c1Strengths.length > 0 ? `You spend heavily on ${c1Strengths.slice(0, 3).join(", ")}` : null,
-        c1.lounge !== "None" && c2.lounge === "None" ? `You want lounge access (${c1.lounge})` : null,
+        !c1.loungeSourceConflict && c1.lounge !== "None" && c2.lounge === "None" ? `You want lounge access (${c1.lounge})` : null,
         c1.fee < c2.fee ? `You want a lower fee (${c1Fee} vs ${c2Fee})` : null,
-        c1.fee === 0 ? "You want a lifetime free card" : null,
+        c1.fee === 0 ? "You want no standard annual fee; check joining and other charges" : null,
       ].filter(Boolean),
     },
     pick2: {
       label: `Pick ${c2.name} if`,
       reasons: [
         c2Strengths.length > 0 ? `You spend heavily on ${c2Strengths.slice(0, 3).join(", ")}` : null,
-        c2.lounge !== "None" && c1.lounge === "None" ? `You want lounge access (${c2.lounge})` : null,
+        !c2.loungeSourceConflict && c2.lounge !== "None" && c1.lounge === "None" ? `You want lounge access (${c2.lounge})` : null,
         c2.fee < c1.fee ? `You want a lower fee (${c2Fee} vs ${c1Fee})` : null,
-        c2.fee === 0 ? "You want a lifetime free card" : null,
+        c2.fee === 0 ? "You want no standard annual fee; check joining and other charges" : null,
       ].filter(Boolean),
     },
     pickBoth: `Use ${c1.name} for ${c1Strengths.slice(0, 2).join(" and ") || "its strengths"}, and ${c2.name} for ${c2Strengths.slice(0, 2).join(" and ") || "its strengths"}. Combined fee: ${c1.fee === 0 && c2.fee === 0 ? "free" : `₹${(c1.fee + c2.fee).toLocaleString("en-IN")}/year`}.`,
@@ -99,6 +99,23 @@ export default function ComparisonPage({ params }) {
   const c1 = CARDS.find(c => c.id === comp.card1);
   const c2 = CARDS.find(c => c.id === comp.card2);
   if (!c1 || !c2) notFound();
+
+  if (!isEstimateReady(c1) || !isEstimateReady(c2)) return (
+    <main className="pt-24 pb-20 px-6 max-w-[900px] mx-auto">
+      <Link href="/compare">Compare cards</Link>
+      <h1 className="text-3xl font-bold my-6">{c1.name} vs {c2.name}</h1>
+      <p className="mb-6">Compare published earn rules, redemption choices and annual fees below. A cash-value winner is not calculated for this pair because the reward model does not yet cover both products.</p>
+      <div className="grid gap-6 sm:grid-cols-2">{[c1,c2].map(card => <section key={card.id} className="rounded-xl p-6" style={{background:"var(--bg-card)",border:"1px solid var(--border)"}}>
+        <h2 className="text-xl font-bold mb-4">{card.name}</h2>
+        <p>{isSourceReviewed(card) ? `Listed annual fee: ₹${card.fee.toLocaleString("en-IN")} before GST. ${card.feeWaiver}` : "Full current source review is incomplete; the note below separates facts checked from unresolved variant terms."}</p>
+        <p className="my-4">{isSourceReviewed(card) ? card.pointsInfo || card.redemptionNote : card.estimateUnavailableReason || "Historical record; do not use its legacy reward figures to choose a new card."}</p>
+        <h3 className="font-bold">Decision checklist</h3>
+        <ul className="list-disc pl-5 my-4"><li>Match the earn categories to your merchants, not just a headline multiplier.</li><li>Compare the redemption option you will actually use and its charges.</li><li>Count renewal fees unless your normal eligible spend meets the waiver.</li></ul>
+        <Link href={`/cards/${card.id}`}>Read the full card review and sources →</Link>
+      </section>)}</div>
+      <h2 className="text-xl font-bold mt-8 mb-4">How to choose</h2><p>Use the lower-fee option when the extra benefits would go unused. A higher-fee card needs enough additional redeemable rewards or usable benefits to cover its incremental cost. Do not treat points from different issuers as equal cash amounts.</p>
+    </main>
+  );
 
   // Calculate rewards for each category
   const { details: c1Details, total: c1Total } = calcTotalMonthlyReward(c1, comp.testSpends);
@@ -155,7 +172,7 @@ export default function ComparisonPage({ params }) {
         {c1.name} vs {c2.name}
       </h1>
       <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>
-        Cap-aware comparison at ₹{totalSpend.toLocaleString("en-IN")}/month total spend · {isSourceReviewed(c1) && isSourceReviewed(c2) ? "Source review dates are shown on each card page — reconfirm current issuer terms" : "Includes card data awaiting issuer-source review"}
+        Cap-aware comparison at ₹{totalSpend.toLocaleString("en-IN")}/month total spend · {isEstimateReady(c1) && isEstimateReady(c2) ? "Source review dates are shown on each card page — reconfirm current issuer terms" : "Includes card data awaiting issuer-source review"}
       </p>
 
       {/* Head-to-Head Summary */}
@@ -197,6 +214,11 @@ export default function ComparisonPage({ params }) {
       </div>
 
       {/* Category-by-Category Breakdown */}
+      <section className="mb-8 rounded-xl p-5" style={{background:"var(--bg-muted)",border:"1px solid var(--border)"}}>
+        <h2 className="font-bold mb-3">Scenario assumptions and availability</h2>
+        {[c1,c2].map(card => <div key={card.id} className="mb-4"><h3 className="font-semibold">{card.name}</h3><p>{card.availabilityNote}</p><p>{card.pointsInfo}</p><p>{card.redemptionNote}</p><ul className="list-disc pl-5">{Object.entries(card.rewardAssumptions || {}).filter(([id])=>id === 'default' || comp.testSpends[id]>0).map(([id,note])=><li key={id}>{id}: {note}</li>)}</ul></div>)}
+        <p>Amounts represent eligible spending within each issuer's earning period. Transaction rounding, credit-limit restrictions, promotional offers, redemption charges and annual milestones are not simulated. Travel/voucher/NeuCoin value is not cash paid to a bank account.</p>
+      </section>
       <div className="mb-8">
         <h2 className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>Category-by-Category Breakdown</h2>
         <div className="flex flex-col gap-2">

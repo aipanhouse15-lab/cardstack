@@ -12,7 +12,7 @@ export const metadata = {
 // Tier 2 Article 3 — Best Credit Card for Beginners 2026
 // URL: /blog/best-card-beginners-2026
 // Category: Credit Cards · Color: Violet #7C3AED
-// Author: Ash K · Reviewed: June 3, 2026
+// Author: Ash · Reviewed: June 3, 2026
 // Target: 2,500+ visible words · 4 info-SVGs · 6 FAQs
 // Template archetype: Persona Journey
 // ============================================================
@@ -112,8 +112,8 @@ export default function BestCardBeginners2026() {
     "@context": "https://schema.org", "@type": "Article",
     headline: "Best Credit Card for Beginners in India 2026 — A Persona-Based Picker",
     description: "Five real personas mapped to first-card recommendations across income, CIBIL, and spend pattern. Detailed first-year math and CIBIL-building behaviour guide for first-time Indian cardholders.",
-    author: { "@type": "Person", name: "Ash K", url: "https://www.assurefintech.com/author/ash-k" },
-    reviewedBy: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash", url: "https://www.assurefintech.com/author/ash-k" },
+    reviewedBy: { "@type": "Person", name: "Ash" },
     datePublished: "2026-04-20", dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech", logo: { "@type": "ImageObject", url: "https://www.assurefintech.com/logo.png" } },
     mainEntityOfPage: { "@type": "WebPage", "@id": "https://www.assurefintech.com/blog/best-card-beginners-2026" }
@@ -163,9 +163,9 @@ export default function BestCardBeginners2026() {
         </div>
       </div>
       <main style={{ maxWidth: 700, margin: "0 auto", padding: "40px 24px 100px", fontSize: "18px", lineHeight: 1.6, fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)" }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }} aria-label="Breadcrumb">
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Best Card for Beginners 2026
@@ -176,7 +176,7 @@ export default function BestCardBeginners2026() {
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span>
         <span>·</span>
-        <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash K</Link></span>
+        <span>By <Link href="/author/ash-k" style={{ color: COLOR }}>Ash</Link></span>
         <span>·</span>
         <span>Reviewed against RBI Master Direction + 2025 amendments</span>
         <span>·</span>

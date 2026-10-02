@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -105,12 +106,13 @@ const rupayUpiCards = [
   {
     name: "IDFC FIRST WOW! + Digital RuPay",
     issuer: "IDFC FIRST Bank",
-    fee: "WOW! lifetime-free; FD-backed",
-    feeWaiver: "Lifetime-free card against FD; check the linked-card setup",
+    fee: "WOW! has no annual fee; Digital RuPay has separate ₹199 joining/annual fees before tax",
+    feeWaiver: "Do not transfer WOW!'s free-card pricing to the linked Digital RuPay card",
     upiReward: "3X points above ₹2,000; 1X below ₹2,000",
     nonUpiReward: "Depends on underlying card",
     slug: "idfc-first-wow-rupay",
-    note: "UPI reward points and app/card availability are subject to current issuer terms. A fixed deposit is required for WOW!.",
+    sourceUrl: "https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/MITC-Document-Customer.pdf",
+    note: "Digital RuPay is a separate linked card with its own earning and fees. A fixed deposit is required for WOW!; the underlying WOW! points table is not its UPI reward table.",
     best: false,
   },
   {
@@ -194,7 +196,7 @@ export default function BestCreditCardForUpiPayments() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Credit Cards for UPI Payments: Network Eligibility and Issuer Rewards",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
@@ -227,7 +229,7 @@ export default function BestCreditCardForUpiPayments() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Card for UPI Payments in India
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 7 min read</div>
         </div>
       </div>
     <main
@@ -240,9 +242,9 @@ export default function BestCreditCardForUpiPayments() {
         lineHeight: 1.6,
       }}
     >
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         <Link href="/">Home</Link>
@@ -278,7 +280,7 @@ export default function BestCreditCardForUpiPayments() {
       </p>
 
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
-        Last updated {UPDATED} · By Ash K · 7 min read
+        Last updated {UPDATED} · By Ash · 7 min read
       </p>
 
       {/* The single most important fact */}
@@ -685,6 +687,7 @@ export default function BestCreditCardForUpiPayments() {
         <p>Issuer/network references: <a href={SOURCES.npci} target="_blank" rel="noreferrer">NPCI RuPay credit-card-on-UPI operating circular</a> · <a href={SOURCES.rewards} target="_blank" rel="noreferrer">NPCI rewards FAQ</a> · <a href={SOURCES.idfcWow} target="_blank" rel="noreferrer">IDFC FIRST WOW! guide</a> · <a href={SOURCES.idfcFees} target="_blank" rel="noreferrer">IDFC FIRST fee/card information</a> · <a href={SOURCES.sbiUpi} target="_blank" rel="noreferrer">SBI SimplySAVE UPI terms</a> · <a href={SOURCES.sbiFees} target="_blank" rel="noreferrer">SBI fee schedule</a> · <a href={SOURCES.axisAce} target="_blank" rel="noreferrer">Axis ACE terms</a>.</p>
         <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. UPI reward structures are based on NPCI and bank communications as of {UPDATED}. RuPay credit card UPI rewards are subject to change by NPCI and individual issuers. This is not financial advice. Verify current reward structures with the issuing bank before making decisions. Assure Fintech may earn referral fees from some card issuers, which does not influence editorial content.
       </footer>
+    <GuideCardRules slug="best-credit-card-for-upi-payments" />
     </main>
     </>
   );

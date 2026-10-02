@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -41,7 +42,7 @@ const faq = {
 };
 
 export default function PageEducationLoanRealCost() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Education Loan Costs: Moratorium, Interest and Repayment", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Education Loan Costs: Moratorium, Interest and Repayment", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -127,7 +128,7 @@ export default function PageEducationLoanRealCost() {
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/loans" style={{ color: COLOR }}>loans hub</Link> · <Link href="/loan-calculator" style={{ color: COLOR }}>loan calculator</Link> · <Link href="/learn/tax" style={{ color: COLOR }}>tax guides</Link></p>
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This general guide is not a loan offer, tax opinion or financial advice. Terms vary; verify all amounts and obligations with the lender and confirm tax treatment for your circumstances before acting.</footer>
-      </main>
+      <GuidePractice topic="loans/education-loan-real-cost" /></main>
     </>
   );
 }

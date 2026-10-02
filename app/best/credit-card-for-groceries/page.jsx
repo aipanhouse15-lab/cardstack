@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -251,7 +252,7 @@ export default function BestCreditCardForGroceries() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Credit Card for Groceries in India (September 2026)",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
@@ -279,13 +280,13 @@ export default function BestCreditCardForGroceries() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Card for Groceries in India (September 2026)
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         <Link href="/">Home</Link> / <Link href="/best/">Best Cards</Link> / Best Credit Card for Groceries
@@ -300,7 +301,7 @@ export default function BestCreditCardForGroceries() {
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
-        Last updated {UPDATED} · By Ash K · 8 min read
+        Last updated {UPDATED} · By Ash · 8 min read
       </div>
 
       <section style={{ marginBottom: 40 }}>
@@ -459,6 +460,7 @@ export default function BestCreditCardForGroceries() {
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
         <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Card terms including grocery category inclusions, caps, and partner lists were reviewed as of {UPDATED} and may change. Always verify current benefit terms with the issuing bank before applying. This is not financial advice.
       </footer>
+    <GuideCardRules slug="credit-card-for-groceries" />
     </main>
     </>
   );

@@ -11,9 +11,9 @@ export default function CashbackRateGuide() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Credit Card Cashback: Why the Headline Rate Is Not Your Return",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-02",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -22,14 +22,14 @@ export default function CashbackRateGuide() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Link href="/blog" className="text-sm">← Blog</Link>
       <h1 className="text-3xl font-extrabold mt-6 mb-3">A 5% card may earn much less on your actual spending</h1>
-      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published June 4, 2026 · Reviewed September 26, 2026</p>
+      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published June 4, 2026 · Reviewed October 2, 2026</p>
 
       <div className="space-y-7 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>The advertised percentage is usually a rate for a particular merchant, payment route or category. Your real return depends on eligible spending, excluded categories, reward caps, fees and the value of points when you redeem them.</p>
 
         <section>
           <h2 className="text-xl font-bold mb-2" style={{ color: "var(--text)" }}>The cap changes the answer</h2>
-          <p>For example, <a href="https://www.sbicard.com/cashback-revised" target="_blank" rel="noreferrer">SBI Card&apos;s April 2026 terms</a> cap its 5% eligible online cashback at ₹2,000 per statement cycle. ₹40,000 of qualifying online purchases reaches that cap. If the same cycle has ₹60,000 of qualifying online purchases, the online reward is still ₹2,000, or 3.33% of that spend before fees. Utilities, insurance, fuel, rent and several other categories are excluded altogether.</p>
+          <p>For example, <a href="https://www.sbicard.com/cashback-revised" target="_blank" rel="noreferrer">SBI Card&apos;s April 2026 terms</a> cap its 5% eligible online cashback at ₹2,000 per statement cycle and eligible offline POS cashback at a separate ₹2,000; combined cashback cannot exceed ₹4,000 per cycle. ₹40,000 of qualifying online purchases reaches the online cap. If the same cycle has ₹60,000 of qualifying online purchases, the online reward is still ₹2,000, or 3.33% of that spend before fees. Utilities, insurance, fuel, rent and several other categories are excluded altogether; cashback accrues by posting date, and returns can reverse it.</p>
         </section>
 
         <section>

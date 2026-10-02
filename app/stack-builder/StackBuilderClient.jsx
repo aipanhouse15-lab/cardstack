@@ -1,7 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { VERIFIED_CARDS, CATEGORIES, defaultSpending, calcReward, capSharedRewardBuckets } from "@/data/cards";
+import { RECOMMENDABLE_CARDS as VERIFIED_CARDS, CATEGORIES, defaultSpending, calcReward, capSharedRewardBuckets } from "@/data/cards";
 import SpendingInput from "@/components/SpendingInput";
 import SectionHeader from "@/components/SectionHeader";
 

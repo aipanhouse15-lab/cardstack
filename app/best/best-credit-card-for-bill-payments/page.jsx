@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -170,7 +171,7 @@ export default function BestCreditCardForBillPayments() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Credit Card for Bill Payments in India: Eligibility and Rewards Compared",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
@@ -203,7 +204,7 @@ export default function BestCreditCardForBillPayments() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Card for Bill Payments in India (September 2026)
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 7 min read</div>
         </div>
       </div>
     <main
@@ -216,9 +217,9 @@ export default function BestCreditCardForBillPayments() {
         lineHeight: 1.6,
       }}
     >
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         <Link href="/">Home</Link>
@@ -254,7 +255,7 @@ export default function BestCreditCardForBillPayments() {
       </p>
 
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
-        Last updated {UPDATED} · By Ash K · 7 min read
+        Last updated {UPDATED} · By Ash · 7 min read
       </p>
 
       {/* Honest opener */}
@@ -515,7 +516,7 @@ export default function BestCreditCardForBillPayments() {
         </div>
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginTop: 10 }}>
-          Under these assumptions, ACE gross cashback is ₹1,920/year; less its ₹499 joining fee, first-year cashback net of that fee would be ₹1,421 (before any transaction fee). HDFC arithmetic is ₹384/year before its fee. These are not product recommendations or guaranteed savings.
+          Under these assumptions, ACE gross cashback is ₹1,920/year. Its standard ₹499 joining fee plus 18% GST is ₹588.82, leaving ₹1,331.18 in the first year before transaction charges. This bill-only profile does not meet the ₹2 lakh annual renewal-waiver threshold; second-year costs need their own comparison. HDFC arithmetic is ₹384/year before its fee. Offers and fee waivers change costs, so use the fee actually charged to your account.
         </p>
       </section>
 
@@ -684,6 +685,7 @@ export default function BestCreditCardForBillPayments() {
         <p>Issuer references: <a href={SOURCES.ace} target="_blank" rel="noreferrer">Axis ACE product page</a> · <a href={SOURCES.aceTerms} target="_blank" rel="noreferrer">Axis ACE terms</a> · <a href={SOURCES.amazon} target="_blank" rel="noreferrer">Amazon Pay ICICI FAQ</a> · <a href={SOURCES.millennia} target="_blank" rel="noreferrer">HDFC Millennia terms</a> · <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI Cashback terms</a>.</p>
         <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Reward rates and exclusions are based on issuer terms as of {UPDATED}. BBPS routing and MCC classifications can vary. Always confirm the applicable reward rate on your specific bill payment with the card issuer before relying on this guide for financial planning. Assure Fintech may earn referral fees from some card issuers.
       </footer>
+    <GuideCardRules slug="best-credit-card-for-bill-payments" />
     </main>
     </>
   );

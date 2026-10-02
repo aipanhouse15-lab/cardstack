@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/ai-changing-credit-card-picks
 // Template: trend-piece
-// Color: #7c3aed | Updated: September 26, 2026
+// Color: #7c3aed | Updated: October 2, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 2, 2026";
 
 const SvgHeroFlow = () => (
   <svg viewBox="0 0 720 220" role="img" aria-label="Shift from influencer reviews to AI-driven card comparison" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -52,13 +52,13 @@ const SvgGenericVsReal = () => (
     <text x="36" y="68" fontSize="11" fontWeight="600" fill="var(--text-muted)">Generic answer</text>
     <text x="36" y="88" fontSize="10" fill="var(--text-muted)">Axis Ace: 2% on all spends</text>
     <text x="36" y="104" fontSize="10" fill="var(--text-muted)">HDFC Millennia: 5% on Amazon</text>
-    <text x="36" y="120" fontSize="10" fill="var(--text-muted)">SBI SimplyCLICK: 10x on partner apps</text>
+    <text x="36" y="120" fontSize="10" fill="var(--text-muted)">SBI SimplyCLICK: 10X on eligible listed partners</text>
     <text x="36" y="140" fontSize="10" fill="var(--text-muted)" opacity="0.7">Caps? What caps? Hidden.</text>
     <rect x="376" y="44" width="320" height="110" rx="6" fill={COLOR} opacity="0.22" />
     <text x="388" y="68" fontSize="11" fontWeight="600" fill={COLOR}>Smart Swipe output (your spend input)</text>
     <text x="388" y="88" fontSize="10" fill="var(--text)">Axis Ace: 2% uncapped on Swiggy</text>
     <text x="388" y="104" fontSize="10" fill="var(--text)">HDFC Millennia: ₹1,000/mo cap hit at ₹20k</text>
-    <text x="388" y="120" fontSize="10" fill="var(--text)">SBI SimplyCLICK: 10x capped at 2,000 pts</text>
+    <text x="388" y="120" fontSize="10" fill="var(--text)">SBI SimplyCLICK: separate 10,000-point caps</text>
     <text x="388" y="140" fontSize="10" fontWeight="700" fill={COLOR}>Net annual value: ₹4,200 vs ₹1,800 vs ₹900</text>
   </svg>
 );
@@ -239,9 +239,9 @@ export default function BlogAiChangingCreditCardPicks() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "How AI Is Changing the Way Indians Pick Credit Cards",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-02",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -270,19 +270,19 @@ export default function BlogAiChangingCreditCardPicks() {
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             ChatGPT, Perplexity, and specialised comparison tools are pulling card selection away from influencer affiliate links toward data-driven spend math. Banks are not happy about it.
           </p>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 9 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / AI Changing Credit Card Picks
       </nav>
 <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
-        Last updated {UPDATED} · By Ash K · 9 min read
+        Last updated {UPDATED} · By Ash · 9 min read
       </div>
 
       <SvgHeroFlow />
@@ -310,7 +310,7 @@ export default function BlogAiChangingCreditCardPicks() {
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>How Smart Swipe Closes the Gap</h2>
         <SvgSmartSwipeHow />
         <p><Link href="/smart-swipe" style={{ color: COLOR }}>Smart Swipe</Link> works differently from a general chatbot: it asks for your actual monthly spend by category and amount, then runs each card's real cap structure against your numbers. The output is not "here are the top 3 cards" but "here is the net annual rupee value of each card given exactly what you spend."</p>
-        <p>If you spend ₹25,000 on flights and ₹8,000 on dining each month, Smart Swipe knows to flag that the HDFC Regalia's dining reward cap will leave money on the table at your volume, while an Axis Atlas with its uncapped mile earning on direct airline bookings will serve you better. That is a different class of answer from anything a general AI can produce today.</p>
+        <p>If you spend ₹25,000 on flights and ₹8,000 on dining each month, a useful comparison must first distinguish direct-airline transactions from travel portals and agents. Axis Atlas's accelerated miles are limited to issuer-defined airline and hotel MCCs and its Travel EDGE portal, with a combined ₹2 lakh monthly eligible-spend cap; the broad travel input cannot identify those routes, so Smart Swipe does not produce an Atlas cash-value estimate. That limitation should be visible, not hidden behind a headline rate.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>What AI Still Cannot Do</h2>
@@ -356,7 +356,7 @@ export default function BlogAiChangingCreditCardPicks() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Assure Fintech is an independent comparison platform. We do not issue credit cards and are not affiliated with any bank. Reward rates, caps, and card terms change frequently. Verify all figures against the bank's most current terms before applying. This article is for informational purposes only and does not constitute financial advice. Reviewed September 26, 2026.
+        Assure Fintech is an independent comparison platform. We do not issue credit cards and are not affiliated with any bank. Reward rates, caps, and card terms change frequently. This article is for informational purposes only and does not constitute financial advice. Reviewed October 2, 2026.
       </footer>
     </main>
     </>

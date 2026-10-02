@@ -182,7 +182,7 @@ export default function BlogCreditUtilizationRatioGuide() {
       { "@type": "Question", "name": "How many CIBIL points does high utilization cost?", "acceptedAnswer": { "@type": "Answer", "text": "There is no reliable fixed point estimate. Credit scoring models are proprietary and consider the full report; the same utilization change can have different effects across profiles. Be cautious of charts promising a specific score gain or loss." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Credit Utilization Ratio: What the 30% Rule Can and Cannot Tell You", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-26", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Credit Utilization Ratio: What the 30% Rule Can and Cannot Tell You", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-26", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
@@ -204,13 +204,13 @@ export default function BlogCreditUtilizationRatioGuide() {
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Credit utilization compares reported card balances with available limits. The often-cited 30% threshold is a rule of thumb—not a promise about how a credit score will move.
           </p>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 7 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 7 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Credit Utilization Ratio Guide</nav>
 <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What Credit Utilization Is (and Is Not)</h2>

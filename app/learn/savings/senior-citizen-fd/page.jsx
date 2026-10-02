@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -20,7 +21,7 @@ const faq = {
 };
 
 export default function SeniorCitizenFDPage() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Senior Citizen Fixed Deposits: How to Compare", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Senior Citizen Fixed Deposits: How to Compare", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -88,7 +89,7 @@ export default function SeniorCitizenFDPage() {
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/savings" style={{ color: COLOR }}>savings guides</Link> · <Link href="/learn/savings/best-fd-rates-2026" style={{ color: COLOR }}>compare FD offers</Link> · <Link href="/fd-calculator" style={{ color: COLOR }}>FD calculator</Link></p>
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This general guide does not recommend a particular issuer or deposit. Verify current rates, product terms, insurance coverage and tax treatment before investing.</footer>
-      </main>
+      <GuidePractice topic="savings/senior-citizen-fd" /></main>
     </>
   );
 }

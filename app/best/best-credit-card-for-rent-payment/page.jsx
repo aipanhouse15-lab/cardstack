@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 
 export const metadata = {
@@ -33,6 +34,7 @@ export default function RentPaymentGuide() {
 
       <p><Link href="/editorial-policy">How we review card terms</Link> · <Link href="/cards">Browse cards</Link></p>
       <p style={{ fontSize: 13, color: "var(--muted)" }}>This page is general information, not financial advice. Charges and eligibility are account- and transaction-specific; confirm with the payment platform and card issuer.</p>
+    <GuideCardRules slug="best-credit-card-for-rent-payment" />
     </main>
   );
 }

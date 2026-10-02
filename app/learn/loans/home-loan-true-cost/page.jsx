@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -44,7 +45,7 @@ export default function HomeLoanTrueCostPage() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Home Loan Costs: EMI, Fees and Other Charges",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-03",
     dateModified: "2026-09-28",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
@@ -147,7 +148,7 @@ export default function HomeLoanTrueCostPage() {
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}>
           <strong>Editorial note.</strong> This guide provides a general comparison checklist, not a lender quotation, legal or tax opinion, or financial advice. Verify charges, current rules and contract terms for your own transaction before acting.
         </footer>
-      </main>
+      <GuidePractice topic="loans/home-loan-true-cost" /></main>
     </>
   );
 }

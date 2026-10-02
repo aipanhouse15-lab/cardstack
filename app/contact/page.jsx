@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CARDS, VERIFIED_CARDS } from "@/data/cards";
 
 export const metadata = {
   title: "Contact Assure Fintech — Report Issues, Suggest Cards, Say Hi",
@@ -45,7 +46,7 @@ export default function ContactPage() {
               <div className="w-10 h-10 rounded-lg flex items-center justify-center text-xl" style={{ background: "var(--green-bg)" }}>💳</div>
               <div>
                 <h3 className="text-base font-bold" style={{ color: "var(--text)" }}>Suggest a card to add</h3>
-                <p className="text-xs" style={{ color: "var(--text-faint)" }}>We currently track 76 cards (25 verified). Want us to add yours?</p>
+                <p className="text-xs" style={{ color: "var(--text-faint)" }}>We currently track {CARDS.length} cards ({VERIFIED_CARDS.length} ready for reward estimates). Want us to add yours?</p>
               </div>
             </div>
             <p className="text-sm" style={{ color: "var(--text-muted)" }}>

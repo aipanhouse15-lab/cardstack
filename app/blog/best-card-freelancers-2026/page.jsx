@@ -19,16 +19,16 @@ export const metadata = {
 
 export default function BestCardFreelancers() {
   const faq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-03", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-03", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
     { "@type": "ListItem", position: 3, name: "Credit Cards for Freelancers", item: "https://www.assurefintech.com/blog/best-card-freelancers-2026" },
   ] };
   return <main style={{ maxWidth: 820, margin: "72px auto 0", padding: "36px 22px 56px", color: "var(--text)", lineHeight: 1.75 }}>
-    <Script id="freelancer-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-    <Script id="freelancer-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <Script id="freelancer-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+    <script id="freelancer-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+    <script id="freelancer-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+    <script id="freelancer-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
     <nav aria-label="Breadcrumb" style={{ fontSize: 13, color: "var(--text-muted)" }}><Link href="/">Home</Link> / <Link href="/blog">Blog</Link> / Freelancers</nav>
     <p style={{ margin: "24px 0 8px", textTransform: "uppercase", letterSpacing: ".15em", fontSize: 12, color: "var(--text-muted)" }}>Credit cards · Reviewed {UPDATED}</p>
     <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", lineHeight: 1.12, margin: "0 0 16px" }}>Credit cards for freelancers: choose by real costs and terms</h1>

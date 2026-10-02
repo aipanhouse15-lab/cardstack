@@ -273,7 +273,7 @@ export default function BlogMaximizeDining() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "How to Actually Maximize Dining Rewards in India (With Real Math)",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-06-04",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
@@ -309,13 +309,13 @@ export default function BlogMaximizeDining() {
             <div><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>5</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>Cards compared</div></div>
             <div><div style={{ fontSize: 22, fontWeight: 800, color: "#F1F5F9" }}>₹10K</div><div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)" }}>Cap threshold</div></div>
           </div>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)", marginTop: 20 }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)", marginTop: 20 }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
       </div>
       <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / Maximize Dining Rewards

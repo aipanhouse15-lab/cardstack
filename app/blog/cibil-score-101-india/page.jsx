@@ -159,7 +159,7 @@ export default function BlogCibilScore101India() {
       { "@type": "Question", "name": "Does closing a loan improve my CIBIL score?", "acceptedAnswer": { "@type": "Answer", "text": "Closing a loan shows as Closed on your report, which is generally positive. However, your credit mix may become thinner if loans were your main non-card credit. The bigger impact is that consistent on-time payments before closure positively affect your payment history score. Getting a No Objection Certificate and ensuring the bank updates the status to Closed on CIBIL is essential." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "CIBIL Score Guide: Range, Report Checks and Disputes", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "CIBIL Score Guide: Range, Report Checks and Disputes", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
@@ -181,13 +181,13 @@ export default function BlogCibilScore101India() {
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             Learn what CIBIL publishes about its 300–900 score, how to review your report and what to do when information appears inaccurate. No score or approval promises.
           </p>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 10 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / CIBIL Score 101</nav>
 <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>What Is a CIBIL Score and Why Does It Matter?</h2>

@@ -19,7 +19,7 @@ export const metadata = {
 
 export default function AnnualFeeWhenWorthPaying() {
   const faq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" }, mainEntityOfPage: CANONICAL };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" }, mainEntityOfPage: CANONICAL };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
@@ -27,9 +27,9 @@ export default function AnnualFeeWhenWorthPaying() {
   ] };
 
   return <main style={{ maxWidth: 820, margin: "72px auto 0", padding: "32px 22px 56px", color: "var(--text)", lineHeight: 1.75 }}>
-    <Script id="annual-fee-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-    <Script id="annual-fee-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <Script id="annual-fee-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+    <script id="annual-fee-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+    <script id="annual-fee-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+    <script id="annual-fee-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
     <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}><Link href="/">Home</Link> / <Link href="/blog">Blog</Link> / Annual fee guide</nav>
     <p style={{ fontSize: 12, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--text-muted)" }}>Credit cards · Reviewed {UPDATED}</p>
     <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", lineHeight: 1.12, margin: "12px 0 18px" }}>Is a credit card annual fee worth paying?</h1>

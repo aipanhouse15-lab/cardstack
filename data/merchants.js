@@ -1,132 +1,290 @@
-export const MERCHANTS = {
-  food: {
-    label: "Food & Delivery", icon: "🍔",
-    items: [
-      { id: "swiggy", name: "Swiggy", icon: "🟠", cat: "dining", tips: [
-        { card: "hdfc-swiggy", rate: "5% cashback", note: "Best for Swiggy — dedicated card. Orders under ₹150 may not qualify." },
-        { card: "axis-ace", rate: "4% cashback", note: "Good alternative via Google Pay bill payment." },
-        { card: "icici-coral", rate: "5% (dining)", note: "Counts as dining category. Movie BOGO bonus." },
-      ], proTip: "Stack Swiggy Super (free delivery) + HDFC Swiggy Card for max savings. On orders ₹1,500+, HDFC Diners Black's points can beat flat 5%." },
-      { id: "zomato", name: "Zomato", icon: "🔴", cat: "dining", tips: [
-        { card: "hdfc-regalia", rate: "0.53% cashback (1.33% travel)", note: "Low for dining. Use Millennia or Swiggy card instead." },
-        { card: "axis-ace", rate: "4% cashback", note: "Zomato is a preferred partner." },
-        { card: "icici-coral", rate: "5% (dining)", note: "Dining category + Buy 1 Get 1 movies." },
-      ], proTip: "HDFC Diners Black gives free Zomato Gold membership — ₹600/year saved before any cashback." },
-      { id: "blinkit", name: "Blinkit", icon: "🟡", cat: "groceries", tips: [
-        { card: "rbl-shoprite", rate: "5% (grocery)", note: "Best grocery card (₹500/yr, waivable on ₹1.5L)." },
-        { card: "au-lit", rate: "3% (grocery)", note: "Solid free alternative." },
-        { card: "amazon-icici", rate: "2% (via Amazon Pay)", note: "Pay via Amazon Pay for 2% on groceries." },
-      ], proTip: "Blinkit often codes as 'grocery' — verify on your statement. Some cards classify it as 'online shopping'." },
-      { id: "bigbasket", name: "BigBasket", icon: "🟢", cat: "groceries", tips: [
-        { card: "rbl-shoprite", rate: "5% (grocery)", note: "Highest grocery rate (₹500/yr, waivable on ₹1.5L)." },
-        { card: "au-lit", rate: "3% (grocery)", note: "Free card with 3% on groceries." },
-        { card: "au-zenith", rate: "3.5% (flat)", note: "No category guessing needed." },
-      ], proTip: "BigBasket accepts TATA Neu payments — if your card gives bonuses on TATA Neu, that could stack." },
-      { id: "restaurant", name: "Restaurant Dining", icon: "🍽️", cat: "dining", tips: [
-        { card: "hdfc-regalia", rate: "0.53% cashback (1.33% travel)", note: "Not ideal for dining. Better options exist." },
-        { card: "hdfc-diners-black", rate: "5% (dining)", note: "Same rate + Zomato Gold + guest lounge." },
-        { card: "sbi-elite", rate: "2.5% (5X dining)", note: "Plus ₹5K welcome voucher and milestone rewards." },
-      ], proTip: "Check EazyDiner or Dineout for extra 20-30% off that stacks on top of card rewards." },
+import { CARDS, isSourceReviewed } from './cards';
+
+// Merchant lookups are route checklists, not rankings by a category proxy.
+// Keep product rules in the central records instead of duplicate percentages.
+const GROUPS = [
+  [
+    "dining",
+    "Food & Dining",
+    "🍽️",
+    [
+      [
+        "swiggy",
+        "Swiggy",
+        "🟠",
+        "dining",
+        [
+          "hdfc-swiggy-blck",
+          "hsbc-live-plus",
+          "hdfc-millennia"
+        ],
+        "Swiggy-specific earning has transaction minimums. Restaurant dining and Zomato do not inherit the Swiggy tier."
+      ],
+      [
+        "zomato",
+        "Zomato",
+        "🔴",
+        "dining",
+        [
+          "hsbc-live-plus",
+          "axis-ace",
+          "hdfc-millennia"
+        ],
+        "Use the named food-delivery tier and shared cap, not a generic restaurant rate."
+      ],
+      [
+        "blinkit",
+        "Blinkit",
+        "🟡",
+        "groceries",
+        [
+          "hsbc-live-plus",
+          "rbl-shoprite",
+          "axis-airtel"
+        ],
+        "The posted merchant category and named partner route determine eligibility. Do not assume every quick-commerce order uses the grocery MCC."
+      ],
+      [
+        "bigbasket",
+        "BigBasket",
+        "🟢",
+        "groceries",
+        [
+          "hdfc-tata-neu-infinity",
+          "sbi-tata-neu-infinity",
+          "hsbc-live-plus"
+        ],
+        "Card NeuCoins and additional NeuPass benefits are separate; category earning ceilings still apply."
+      ],
+      [
+        "restaurant",
+        "Restaurant Dining",
+        "🍽️",
+        "dining",
+        [
+          "hsbc-live-plus",
+          "sbi-simplysave",
+          "au-zenith"
+        ],
+        "Use restaurant MCC eligibility. Delivery-app tiers do not apply automatically to offline restaurants."
+      ]
     ]
-  },
-  travel: {
-    label: "Travel & Transport", icon: "✈️",
-    items: [
-      { id: "makemytrip", name: "MakeMyTrip", icon: "🔵", cat: "travel", tips: [
-        { card: "hdfc-regalia", rate: "Up to 13.33% via SmartBuy", note: "Book through SmartBuy portal for max value." },
-        { card: "axis-atlas", rate: "5% (travel)", note: "Points transfer to airlines." },
-        { card: "hdfc-diners-black", rate: "5% + free membership", note: "Free MMT Black membership worth ₹3,000/year." },
-      ], proTip: "HDFC Diners Black gives free MMT Black. Book via MMT using Diners Black = 5% + Black discounts. Double dip." },
-      { id: "cleartrip", name: "Cleartrip", icon: "🟣", cat: "travel", tips: [
-        { card: "sbi-simplyclick", rate: "10x points", note: "Best rate for Cleartrip — 10x reward points." },
-        { card: "axis-atlas", rate: "5% (travel)", note: "Solid travel rate across all platforms." },
-        { card: "hdfc-infinia", rate: "~10% via SmartBuy", note: "3X multiplier on travel bookings. Premium rate + lounge + concierge." },
-      ], proTip: "SBI SimplyCLICK gives 10x on Cleartrip — effectively 2.5% (1pt = ₹0.25). Best Cleartrip-specific deal among entry cards." },
-      { id: "uber", name: "Uber / Ola", icon: "🚕", cat: "travel", tips: [
-        { card: "axis-atlas", rate: "5% (travel)", note: "Cab rides count as travel." },
-        { card: "idfc-wow", rate: "3% (travel)", note: "Free card, decent rate." },
-        { card: "au-zenith", rate: "3.5% (flat)", note: "Flat rate, no guessing." },
-      ], proTip: "Uber/Ola sometimes code as 'transport' not 'travel.' Check your first statement to confirm." },
-      { id: "airlines", name: "Airlines", icon: "🛫", cat: "travel", tips: [
-        { card: "axis-atlas", rate: "5% + mile transfers", note: "Only Indian card that transfers to airline miles." },
-        { card: "hdfc-infinia", rate: "~10% via SmartBuy", note: "Book via SmartBuy for 3X multiplier." },
-        { card: "hdfc-regalia", rate: "Up to 13.33% via SmartBuy", note: "Use SmartBuy portal, not direct airline booking." },
-      ], proTip: "Axis Atlas points transfer to Air India/Singapore Airlines. If you fly 4+ times a year, this is the card." },
+  ],
+  [
+    "travel",
+    "Travel & Transport",
+    "✈️",
+    [
+      [
+        "makemytrip",
+        "MakeMyTrip",
+        "🔵",
+        "travel",
+        [
+          "icici-mmt",
+          "sbi-cashback"
+        ],
+        "MakeMyTrip hotels and flights have different myCash rates. Compare the cash checkout price and eligible redemption route."
+      ],
+      [
+        "cleartrip",
+        "Cleartrip",
+        "🟣",
+        "travel",
+        [
+          "axis-flipkart",
+          "sbi-simplyclick",
+          "sbi-cashback"
+        ],
+        "A travel aggregator is not a direct airline purchase. Atlas/Horizon direct-airline acceleration must not be assumed here."
+      ],
+      [
+        "uber",
+        "Uber / Ola",
+        "🚕",
+        "travel",
+        [
+          "sbi-cashback",
+          "sc-ultimate"
+        ],
+        "Ride-hailing does not automatically qualify for an airline/hotel accelerated tier. Check online flags, exclusions and any named merchant offer."
+      ],
+      [
+        "airlines",
+        "Airlines",
+        "🛫",
+        "travel",
+        [
+          "axis-atlas",
+          "axis-horizon",
+          "sc-ultimate"
+        ],
+        "Direct airline, travel-portal and aggregator bookings are distinct routes. The highest advertised tier does not apply to all three."
+      ]
     ]
-  },
-  shopping: {
-    label: "Online Shopping", icon: "🛒",
-    items: [
-      { id: "amazon", name: "Amazon", icon: "📦", cat: "online", tips: [
-        { card: "amazon-icici", rate: "5% (Prime)", note: "Unbeatable for Amazon. Free card." },
-        { card: "sbi-simplyclick", rate: "1.25% (5X online)", note: "Decent if you don't have Amazon ICICI." },
-        { card: "sbi-cashback", rate: "5% (all online)", note: "Auto-credited cashback. No merchant restrictions." },
-      ], proTip: "Amazon Pay ICICI + Prime = 5%. ₹50 back per ₹1,000. At ₹5K/month that's ₹3,000/year in rewards." },
-      { id: "flipkart", name: "Flipkart / Myntra", icon: "🛍️", cat: "online", tips: [
-        { card: "axis-flipkart", rate: "5% (Flipkart/Myntra)", note: "Dedicated card for Flipkart ecosystem." },
-        { card: "sbi-simplyclick", rate: "1.25% (5X online)", note: "Same 5X rate on Flipkart." },
-        { card: "hdfc-millennia", rate: "5% (partner merchant)", note: "Amazon is a listed partner. Cap ₹1000/mo across all partners." },
-      ], proTip: "During Big Billion Days, Axis Flipkart gives extra 5% on top of sale prices. Stack with exchange offers." },
-      { id: "nykaa", name: "Nykaa / Ajio", icon: "💄", cat: "online", tips: [
-        { card: "sbi-simplyclick", rate: "2.5% (10X partner)", note: "Myntra is a 10X partner brand." },
-        { card: "axis-ace", rate: "4% (online)", note: "Good online rate, free card." },
-        { card: "hdfc-millennia", rate: "5% (partner merchant)", note: "Flipkart is a listed partner. Cap ₹1000/mo across all partners." },
-      ], proTip: "Check payment page for bank-specific offers — HDFC/ICICI often have extra 10-15% off." },
-      { id: "electronics", name: "Electronics / Apple", icon: "🍎", cat: "shopping", tips: [
-        { card: "au-zenith", rate: "3.5% (flat)", note: "Big purchases = flat rate is king." },
-        { card: "hdfc-infinia", rate: "3.33% (travel redemption)", note: "Strong rate on all categories." },
-        { card: "axis-flipkart", rate: "4% (shopping)", note: "If buying via Flipkart stores." },
-      ], proTip: "For ₹50K+ purchases, check if your card gives points on EMI — many cards claw back points after first EMI." },
+  ],
+  [
+    "shopping",
+    "Online Shopping",
+    "🛒",
+    [
+      [
+        "amazon",
+        "Amazon",
+        "📦",
+        "online",
+        [
+          "amazon-icici",
+          "sbi-cashback",
+          "hdfc-millennia"
+        ],
+        "Prime status and eligible product exclusions affect Amazon earning. Utility bills, gift cards, travel and EMI need their own rules."
+      ],
+      [
+        "flipkart",
+        "Flipkart / Myntra",
+        "🛍️",
+        "online",
+        [
+          "axis-flipkart",
+          "hdfc-millennia",
+          "sbi-cashback"
+        ],
+        "Flipkart and Myntra have different co-brand tiers. Compare statement-quarter, calendar-month and statement-cycle caps separately."
+      ],
+      [
+        "nykaa",
+        "Nykaa / Ajio",
+        "💄",
+        "online",
+        [
+          "sbi-cashback",
+          "hdfc-millennia"
+        ],
+        "A named partner on one site does not establish acceleration on another. Listed online MCCs and merchant exclusions apply."
+      ],
+      [
+        "electronics",
+        "Electronics / Apple",
+        "🍎",
+        "shopping",
+        [
+          "sc-ultimate",
+          "sbi-cashback",
+          "hdfc-moneyback-plus"
+        ],
+        "Offline retail, online purchases and merchant EMI use different reward rules. Sale discounts do not necessarily stack with card rewards."
+      ]
     ]
-  },
-  entertainment: {
-    label: "Entertainment", icon: "🎬",
-    items: [
-      { id: "streaming", name: "Netflix / Hotstar / Spotify", icon: "📺", cat: "entertainment", tips: [
-        { card: "hdfc-infinia", rate: "3.33% (travel redemption)", note: "Premium flat rate on all entertainment." },
-        { card: "hdfc-diners-black", rate: "5% (entertainment)", note: "Same rate + free memberships." },
-        { card: "indusind-legend", rate: "3.5% (entertainment)", note: "Good entertainment-focused card." },
-      ], proTip: "OTT subscriptions are recurring — 2% extra on ₹500/month = ₹120/year per subscription. Multiply by 3-4 subs." },
-      { id: "movies", name: "BookMyShow / PVR", icon: "🎬", cat: "entertainment", tips: [
-        { card: "sbi-elite", rate: "Buy 1 Get 1", note: "BOGO on BookMyShow — saves ₹200-400 per movie." },
-        { card: "icici-coral", rate: "Buy 1 Get 1", note: "Same BOGO deal. Lower fee." },
-        { card: "au-lit", rate: "Movie BOGO", note: "Free card with movie benefit." },
-      ], proTip: "SBI ELITE + ICICI Coral both give BOGO. 2+ movies/month = ₹5,000+ annual savings covering both cards' fees." },
+  ],
+  [
+    "entertainment",
+    "Entertainment",
+    "🎬",
+    [
+      [
+        "streaming",
+        "Netflix / Hotstar / Spotify",
+        "📺",
+        "entertainment",
+        [
+          "sbi-cashback",
+          "sc-ultimate"
+        ],
+        "Subscriptions are not movie-ticket purchases. Online processing, foreign billing and merchant exclusions can affect costs and rewards."
+      ],
+      [
+        "movies",
+        "BookMyShow / PVR",
+        "🎬",
+        "entertainment",
+        [
+          "sbi-simplysave",
+          "axis-myzone",
+          "icici-coral"
+        ],
+        "Ticket discounts require offer-specific booking, minimum purchase and frequency conditions. A discount is not a reward percentage on every entertainment purchase."
+      ]
     ]
-  },
-  bills: {
-    label: "Bills & Utilities", icon: "💡",
-    items: [
-      { id: "electricity", name: "Electricity / Gas / Water", icon: "⚡", cat: "utilities", tips: [
-        { card: "axis-ace", rate: "5% via GPay/PhonePe", note: "Pay via Google Pay for maximum." },
-        { card: "au-lit", rate: "3% (utilities)", note: "Direct payment. Free card." },
-        { card: "au-zenith", rate: "3.5% (flat)", note: "Flat rate on everything." },
-      ], proTip: "Axis ACE gives 5% via Google Pay/PhonePe — don't pay directly on biller's site." },
-      { id: "mobile", name: "Mobile / Broadband / DTH", icon: "📱", cat: "utilities", tips: [
-        { card: "axis-ace", rate: "5% via bill pay apps", note: "Same trick — GPay/PhonePe." },
-        { card: "au-lit", rate: "3% (utilities)", note: "Solid free alternative." },
-        { card: "idfc-select", rate: "3% (online)", note: "If paying online." },
-      ], proTip: "Annual prepaid recharges (₹2-3K) give bigger cashback in one shot. Axis ACE at 5% = ₹150 back." },
-      { id: "insurance", name: "Insurance Premiums", icon: "🛡️", cat: "utilities", tips: [
-        { card: "au-zenith", rate: "3.5% (flat)", note: "₹50K premium = ₹1,750 reward." },
-        { card: "hdfc-infinia", rate: "3.33% (capped 10K pts/mo)", note: "Utilities & insurance capped at 10,000 points/month." },
-        { card: "idfc-select", rate: "3% (online)", note: "If paying online." },
-      ], proTip: "Insurance premiums are huge transactions. ₹50K at 3.5% = ₹1,750. Always use best default-rate card." },
+  ],
+  [
+    "utilities",
+    "Bills & Insurance",
+    "💡",
+    [
+      [
+        "electricity",
+        "Electricity / Gas / Water",
+        "⚡",
+        "utilities",
+        [
+          "axis-ace",
+          "axis-airtel",
+          "phonepe-sbi-select-black"
+        ],
+        "Bill-payment apps and direct card payments have different eligible routes. Utility earning may share a cap with telecom or other spending."
+      ],
+      [
+        "mobile",
+        "Mobile / Broadband / DTH",
+        "📱",
+        "utilities",
+        [
+          "axis-airtel",
+          "phonepe-sbi-select-black",
+          "axis-ace"
+        ],
+        "Airtel own-services, other telecom and ordinary utility payments must be distinguished. Named app and handset-platform conditions apply."
+      ],
+      [
+        "insurance",
+        "Insurance Premiums",
+        "🛡️",
+        "utilities",
+        [
+          "sc-ultimate",
+          "phonepe-sbi-select-black",
+          "hdfc-tata-neu-infinity"
+        ],
+        "Insurance is not the utilities calculator category. Use the exact insurance earning/ceiling and app route; no generic percentage is assigned by this tool."
+      ]
     ]
-  },
-  fuel: {
-    label: "Fuel & Auto", icon: "⛽",
-    items: [
-      { id: "petrol", name: "Petrol Pumps", icon: "⛽", cat: "fuel", tips: [
-        { card: "onecard", rate: "5% (auto-detected)", note: "If fuel is your top category." },
-        { card: "au-zenith", rate: "3.5% (flat)", note: "No surcharge waiver needed." },
-        { card: "au-lit", rate: "2% (fuel)", note: "Decent free option." },
-      ], proTip: "Most cards waive fuel surcharge (1%) on ₹400-5,000. But the real win is cashback on top. OneCard's 5% is best if fuel is your top category." },
-      { id: "fastag", name: "FASTag / Toll", icon: "🛣️", cat: "fuel", tips: [
-        { card: "au-zenith", rate: "3.5% (flat)", note: "FASTag = general category. Flat rate safest." },
-        { card: "hdfc-infinia", rate: "3.33% (fuel, min ₹400)", note: "One of few HDFC cards earning on fuel. Surcharge waiver up to ₹1K/cycle." },
-        { card: "axis-ace", rate: "2% (default)", note: "Decent free option." },
-      ], proTip: "FASTag recharges don't count as 'fuel' — they code as 'transport' or 'general.' Use your best default-rate card." },
+  ],
+  [
+    "fuel",
+    "Fuel & Tolls",
+    "⛽",
+    [
+      [
+        "petrol",
+        "Petrol Pumps",
+        "⛽",
+        "fuel",
+        [
+          "sbi-bpcl-octane",
+          "axis-iocl",
+          "icici-hpcl-super-saver"
+        ],
+        "Match the station brand, qualifying transaction band, reward ceiling and surcharge waiver separately. Do not add a waiver to every purchase."
+      ],
+      [
+        "fastag",
+        "FASTag / Toll",
+        "🛣️",
+        "fuel",
+        [
+          "idfc-wow",
+          "idfc-millennia"
+        ],
+        "FASTag and toll transactions are not petrol purchases. IDFC reduced 1X terms differ from its normal retail tier; other issuers may exclude these transactions."
+      ]
     ]
-  },
-};
+  ]
+];
+export const MERCHANTS = Object.fromEntries(GROUPS.map(([id,label,icon,items])=>[id,{
+  label,icon,items:items.map(([id,name,icon,cat,candidates,proTip])=>({
+    id,name,icon,cat,proTip,tips:candidates.map(cardId=>CARDS.find(c=>c.id===cardId))
+      .filter(c=>isSourceReviewed(c) && !['closed','discontinued','phasing-out'].includes(c.availability))
+      .map(card=>({card:card.id,rate:'Eligible-route review',note:[card.pointsInfo,card.redemptionNote,card.rewardAssumptions?.default].filter(Boolean).join(' ')}))
+  }))
+}]));

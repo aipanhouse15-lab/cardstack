@@ -1,4 +1,5 @@
 "use client";
+import { fdScenario } from "@/data/noncard-math.mjs";
 import { useState, useMemo } from "react";
 import Link from "next/link";
 
@@ -23,32 +24,7 @@ export default function FDCalculatorClient() {
   const [tenure, setTenure] = useState(1);
   const [isSenior, setIsSenior] = useState(false);
 
-  const result = useMemo(() => {
-    const grossInterest = amount * fdRate / 100 * tenure;
-    const seniorExemption = isSenior ? Math.min(grossInterest, 50000) : 0;
-    const taxableInterest = Math.max(0, grossInterest - seniorExemption);
-    const estimatedTax = taxableInterest * taxBracket / 100;
-    const postTaxInterest = grossInterest - estimatedTax;
-    const postTaxRate = (postTaxInterest / (amount * tenure)) * 100;
-    const inflationLoss = amount * inflation / 100 * tenure;
-    const realGain = postTaxInterest - inflationLoss;
-    const realReturn = (realGain / (amount * tenure)) * 100;
-    const maturityAmount = amount + postTaxInterest;
-    const purchasingPower = amount + realGain;
-
-    return {
-      grossInterest: Math.round(grossInterest),
-      estimatedTax: Math.round(estimatedTax),
-      postTaxInterest: Math.round(postTaxInterest),
-      postTaxRate: postTaxRate.toFixed(2),
-      inflationLoss: Math.round(inflationLoss),
-      realGain: Math.round(realGain),
-      realReturn: realReturn.toFixed(2),
-      maturityAmount: Math.round(maturityAmount),
-      purchasingPower: Math.round(purchasingPower),
-      seniorExemption: Math.round(seniorExemption),
-    };
-  }, [fdRate, taxBracket, inflation, amount, tenure, isSenior]);
+  const result = useMemo(() => fdScenario({amount, fdRate, taxBracket, inflation, tenure, isSenior}), [amount, fdRate, taxBracket, inflation, tenure, isSenior]);
 
   function formatINR(n) {
     if (Math.abs(n) >= 10000000) return `₹${(n / 10000000).toFixed(2)}Cr`;
@@ -80,7 +56,7 @@ export default function FDCalculatorClient() {
                 <label className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>Deposit amount</label>
                 <span className="text-xs font-bold" style={{ color: "var(--text)" }}>{formatINR(amount)}</span>
               </div>
-              <input type="range" min={50000} max={10000000} step={50000} value={amount} onChange={e => setAmount(Number(e.target.value))} className="w-full" style={{ accentColor: "#D97706" }} />
+              <input aria-label="Deposit amount" type="range" min={50000} max={10000000} step={50000} value={amount} onChange={e => setAmount(Number(e.target.value))} className="w-full" style={{ accentColor: "#D97706" }} />
             </div>
 
             <div className="mb-4">
@@ -88,7 +64,7 @@ export default function FDCalculatorClient() {
                 <label className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>FD interest rate (%)</label>
                 <span className="text-xs font-bold" style={{ color: "var(--text)" }}>{fdRate}%</span>
               </div>
-              <input type="range" min={4} max={10} step={0.1} value={fdRate} onChange={e => setFdRate(Number(e.target.value))} className="w-full" style={{ accentColor: "#D97706" }} />
+              <input aria-label="Assumed simple annual interest rate" type="range" min={4} max={10} step={0.1} value={fdRate} onChange={e => setFdRate(Number(e.target.value))} className="w-full" style={{ accentColor: "#D97706" }} />
             </div>
 
             <div className="mb-4">
@@ -96,7 +72,7 @@ export default function FDCalculatorClient() {
                 <label className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>Tenure (years)</label>
                 <span className="text-xs font-bold" style={{ color: "var(--text)" }}>{tenure} {tenure === 1 ? "year" : "years"}</span>
               </div>
-              <input type="range" min={1} max={10} step={1} value={tenure} onChange={e => setTenure(Number(e.target.value))} className="w-full" style={{ accentColor: "#D97706" }} />
+              <input aria-label="Tenure in years" type="range" min={1} max={10} step={1} value={tenure} onChange={e => setTenure(Number(e.target.value))} className="w-full" style={{ accentColor: "#D97706" }} />
             </div>
 
             <div className="mb-4">
@@ -117,12 +93,12 @@ export default function FDCalculatorClient() {
                 <label className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>Inflation rate (%)</label>
                 <span className="text-xs font-bold" style={{ color: "var(--text)" }}>{inflation}%</span>
               </div>
-              <input type="range" min={3} max={8} step={0.1} value={inflation} onChange={e => setInflation(Number(e.target.value))} className="w-full" style={{ accentColor: "#DC2626" }} />
+              <input aria-label="Assumed annual inflation" type="range" min={3} max={8} step={0.1} value={inflation} onChange={e => setInflation(Number(e.target.value))} className="w-full" style={{ accentColor: "#DC2626" }} />
             </div>
 
             <div className="flex items-center gap-2 mt-4 pt-4" style={{ borderTop: "1px solid var(--border)" }}>
               <input type="checkbox" checked={isSenior} onChange={e => setIsSenior(e.target.checked)} id="senior" />
-              <label htmlFor="senior" className="text-xs font-semibold cursor-pointer" style={{ color: "var(--text-muted)" }}>Assume up to ₹50K eligible interest deduction (only if permitted for your tax year and regime)</label>
+              <label htmlFor="senior" className="text-xs font-semibold cursor-pointer" style={{ color: "var(--text-muted)" }}>Assume up to ₹50K eligible interest deduction in each modelled year (only if available for your year, age and regime; other interest may use this limit)</label>
             </div>
 
             {/* Quick pick */}
@@ -161,7 +137,7 @@ export default function FDCalculatorClient() {
               <h3 className="text-sm font-extrabold mb-3" style={{ color: "var(--text)" }}>Breakdown</h3>
               {[
                 ["Gross interest earned", formatINR(result.grossInterest), false],
-                ...(isSenior ? [["80TTB exemption", `-${formatINR(result.seniorExemption)}`, false]] : []),
+                ...(isSenior ? [["Assumed eligible interest deduction", `-${formatINR(result.seniorExemption)}`, false]] : []),
                 [`Estimated tax (${taxBracket}% assumption)`, `-${formatINR(result.estimatedTax)}`, true],
                 ["Post-tax interest", formatINR(result.postTaxInterest), false],
                 ["Post-tax rate", `${result.postTaxRate}%`, false],

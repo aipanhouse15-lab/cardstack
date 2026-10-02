@@ -280,7 +280,7 @@ export default function OldVsNewClient() {
       {/* Meta */}
       <div className="flex items-center gap-3 mb-4 flex-wrap">
         <span className="text-xs font-semibold rounded-full px-3 py-1" style={{ background: "var(--green-bg)", border: "1px solid var(--green-border)", color: "var(--green)" }}>Tax Guide</span>
-        <span className="text-xs" style={{ color: "var(--text-faint)" }}>By <span className="font-semibold" style={{ color: "var(--text-muted)" }}>Ash K</span></span>
+        <span className="text-xs" style={{ color: "var(--text-faint)" }}>By <span className="font-semibold" style={{ color: "var(--text-muted)" }}>Ash</span></span>
         <span className="text-xs" style={{ color: "var(--text-faint)" }}>· 12 min read</span>
         <span className="text-xs" style={{ color: "var(--text-faint)" }}>· Reviewed September 2026</span>
       </div>

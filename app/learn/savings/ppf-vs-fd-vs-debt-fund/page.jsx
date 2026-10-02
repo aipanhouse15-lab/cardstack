@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -20,7 +21,7 @@ const faq = {
 };
 
 export default function PPFvsFDvsDebtFundPage() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "PPF vs Fixed Deposits vs Debt Funds: How to Compare", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "PPF vs Fixed Deposits vs Debt Funds: How to Compare", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -93,7 +94,7 @@ export default function PPFvsFDvsDebtFundPage() {
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/savings" style={{ color: COLOR }}>savings guides</Link> · <Link href="/learn/savings/fd-real-return" style={{ color: COLOR }}>FD real-return guide</Link> · <Link href="/learn/savings/best-fd-rates-2026" style={{ color: COLOR }}>compare FD offers</Link></p>
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This guide is general information, not personal investment or tax advice. Product rules and tax treatment can change. Verify current terms with official scheme sources, the issuer or a qualified adviser before investing.</footer>
-      </main>
+      <GuidePractice topic="savings/ppf-vs-fd-vs-debt-fund" /></main>
     </>
   );
 }

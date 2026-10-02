@@ -1,15 +1,16 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { CARDS, CATEGORIES, isSourceReviewed } from "@/data/cards";
+import { CARDS as ALL_CARDS, CATEGORIES, isSourceReviewed, isEstimateReady, calcReward } from "@/data/cards";
 import SectionHeader from "@/components/SectionHeader";
+const CARDS = ALL_CARDS.filter(isSourceReviewed);
 
 const POPULAR = [
   ["hdfc-regalia", "hdfc-infinia"],
   ["amazon-icici", "sbi-simplyclick"],
   ["axis-ace", "au-lit"],
   ["hdfc-diners-black", "icici-emeralde"],
-  ["onecard", "au-zenith"],
+  ["hdfc-millennia", "sbi-cashback"],
   ["idfc-wow", "axis-atlas"],
 ];
 
@@ -25,19 +26,19 @@ export default function CompareClient() {
   let s1 = 0, s2 = 0, ties = 0;
   if (c1 && c2) {
     CATEGORIES.forEach(cat => {
-      const r1 = c1.rewards[cat.id] ?? c1.rewards.default;
-      const r2 = c2.rewards[cat.id] ?? c2.rewards.default;
+      const r1 = calcReward(c1, cat.id, 10000).effectiveRate;
+      const r2 = calcReward(c2, cat.id, 10000).effectiveRate;
       if (r1 > r2) s1++; else if (r2 > r1) s2++; else ties++;
     });
   }
 
   const maxReward = c1 && c2 ? Math.max(
-    ...CATEGORIES.map(cat => Math.max(c1.rewards[cat.id] ?? c1.rewards.default, c2.rewards[cat.id] ?? c2.rewards.default))
+    ...CATEGORIES.map(cat => Math.max(calcReward(c1, cat.id, 10000).effectiveRate, calcReward(c2, cat.id, 10000).effectiveRate))
   ) : 5;
 
   return (
     <section className="pt-24 pb-20 px-6 max-w-[1000px] mx-auto">
-      <SectionHeader badge="⚖️ Compare" badgeBg="var(--blue-bg)" badgeBorder="var(--blue-border)" badgeColor="var(--blue)" title="Head-to-Head Comparison" subtitle="Compare any two cards across all categories, fees, and benefits." />
+      <SectionHeader badge="⚖️ Compare" badgeBg="var(--blue-bg)" badgeBorder="var(--blue-border)" badgeColor="var(--blue)" title="Head-to-Head Comparison" subtitle="Compare isolated ₹10,000 eligible-spend scenarios, fees and benefits. Shared-category caps and renewal costs need a full spending pattern in Smart Swipe." />
 
       {/* Card Selectors */}
       <div className="rounded-2xl p-6 mb-8" style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}>
@@ -48,7 +49,7 @@ export default function CompareClient() {
               className="w-full rounded-xl py-3 px-4 text-base font-medium"
               style={{ background: "var(--bg-input)", border: "1px solid var(--border)", color: "var(--text)", fontFamily: "inherit", cursor: "pointer" }}>
               <option value="">Select a card...</option>
-              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank}){isSourceReviewed(c) ? "" : " — review pending"}</option>)}
+              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank}){isEstimateReady(c) ? "" : " — estimate unavailable"}</option>)}
             </select>
           </div>
           <div className="hidden sm:flex items-center justify-center w-12 h-12 rounded-full text-xl font-bold" style={{ background: "var(--accent-light)", color: "var(--accent-text)" }}>VS</div>
@@ -59,15 +60,16 @@ export default function CompareClient() {
               className="w-full rounded-xl py-3 px-4 text-base font-medium"
               style={{ background: "var(--bg-input)", border: "1px solid var(--border)", color: "var(--text)", fontFamily: "inherit", cursor: "pointer" }}>
               <option value="">Select a card...</option>
-              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank}){isSourceReviewed(c) ? "" : " — review pending"}</option>)}
+              {CARDS.map(c => <option key={c.id} value={c.id}>{c.img} {c.name} ({c.bank}){isEstimateReady(c) ? "" : " — estimate unavailable"}</option>)}
             </select>
           </div>
         </div>
       </div>
 
-      {c1 && c2 && (!isSourceReviewed(c1) || !isSourceReviewed(c2)) && (
+      {c1 && c2 && (!isEstimateReady(c1) || !isEstimateReady(c2)) && (
         <div role="status" className="rounded-xl px-4 py-3 mb-6 text-sm" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)", color: "var(--orange)" }}>
-          Review pending: at least one selected card has not yet been rechecked against a current issuer source. Treat this comparison as provisional.
+          Estimate unavailable: at least one selected card does not yet have a complete reward-value model. Cash-value scoring is unavailable for this pair. Open the individual card reviews to compare fees, earn rules and redemption options.
+          <p className="mt-3"><Link href={`/cards/${c1.id}`}>{c1.name} review</Link> · <Link href={`/cards/${c2.id}`}>{c2.name} review</Link></p>
         </div>
       )}
 
@@ -101,7 +103,7 @@ export default function CompareClient() {
       )}
 
       {/* Comparison Results */}
-      {c1 && c2 && (
+      {c1 && c2 && isEstimateReady(c1) && isEstimateReady(c2) && (
         <div className="animate-fade-up">
           {/* Card Headers */}
           <div className="grid grid-cols-2 gap-4 mb-6">
@@ -140,11 +142,11 @@ export default function CompareClient() {
             </div>
 
             {CATEGORIES.map((cat, i) => {
-              const r1 = c1.rewards[cat.id] ?? c1.rewards.default;
-              const r2 = c2.rewards[cat.id] ?? c2.rewards.default;
+              const r1 = calcReward(c1, cat.id, 10000).effectiveRate;
+              const r2 = calcReward(c2, cat.id, 10000).effectiveRate;
               const w = r1 > r2 ? 1 : r2 > r1 ? 2 : 0;
-              const bar1 = (r1 / maxReward) * 100;
-              const bar2 = (r2 / maxReward) * 100;
+              const bar1 = (r1 / (maxReward || 1)) * 100;
+              const bar2 = (r2 / (maxReward || 1)) * 100;
 
               return (
                 <div key={cat.id} className="px-5 py-4" style={{ borderBottom: i < CATEGORIES.length - 1 ? "1px solid var(--border-light)" : "none" }}>
@@ -175,6 +177,7 @@ export default function CompareClient() {
                       <div className="h-full rounded-full transition-all duration-700" style={{ width: `${bar2}%`, background: w === 2 ? "var(--green)" : c2.color, opacity: w === 2 ? 1 : 0.5 }} />
                     </div>
                   </div>
+                  {[c1, c2].map(c => c.rewardAssumptions?.[cat.id] && <p key={c.id} className="text-xs mt-2" style={{ color: "var(--text-muted)" }}>{c.name}: {c.rewardAssumptions[cat.id]}</p>)}
                 </div>
               );
             })}
@@ -182,7 +185,7 @@ export default function CompareClient() {
 
           {/* Score + Verdict */}
           <div className="rounded-2xl p-6 mb-6" style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)" }}>
-            <h3 className="text-xs font-semibold uppercase tracking-wider mb-4 text-center" style={{ color: "var(--text-faint)" }}>Final Score</h3>
+            <h3 className="text-xs font-semibold uppercase tracking-wider mb-4 text-center" style={{ color: "var(--text-faint)" }}>Isolated category wins</h3>
             <div className="grid grid-cols-[1fr_auto_1fr] gap-4 items-center">
               <div className="text-center">
                 <div className="text-4xl font-extrabold font-mono" style={{ color: s1 >= s2 ? "var(--green)" : "var(--text-muted)" }}>{s1}</div>

@@ -1,4 +1,5 @@
 "use client";
+import { insuranceScenario } from "@/data/noncard-math.mjs";
 import { useState, useMemo } from "react";
 import Link from "next/link";
 
@@ -17,34 +18,7 @@ export default function InsuranceCalculatorClient() {
   const [diseaseSubLimit, setDiseaseSubLimit] = useState(50);
   const [proportionateClauseApplies, setProportionateClauseApplies] = useState(true);
 
-  const result = useMemo(() => {
-    const cappedClaim = Math.min(claimAmount, sumInsured);
-    // This is only an illustrative scenario: proportionate deductions depend on the exact contract and claim.
-    const roomRentRatio = proportionateClauseApplies && chosenRoomRent > roomRentCap ? roomRentCap / chosenRoomRent : 1;
-    const afterRoomRent = Math.round(cappedClaim * roomRentRatio);
-    const roomRentLoss = cappedClaim - afterRoomRent;
-    const maxForDisease = Math.round(sumInsured * diseaseSubLimit / 100);
-    const beforeSubLimit = afterRoomRent;
-    const afterSubLimit = Math.min(beforeSubLimit, maxForDisease);
-    const diseaseLoss = beforeSubLimit - afterSubLimit;
-    const copayAmount = Math.round(afterSubLimit * copay / 100);
-    const finalPayout = Math.max(0, afterSubLimit - copayAmount);
-    const outOfPocket = Math.max(0, claimAmount - finalPayout);
-    const effectiveCoverage = cappedClaim > 0 ? Math.round((finalPayout / cappedClaim) * sumInsured) : 0;
-    const lostPercent = cappedClaim > 0 ? Math.round((1 - finalPayout / cappedClaim) * 100) : 0;
-
-    return {
-      claimAmount: cappedClaim,
-      roomRentLoss,
-      diseaseLoss,
-      copayAmount,
-      finalPayout,
-      outOfPocket,
-      effectiveCoverage,
-      lostPercent,
-      coverageRatio: cappedClaim > 0 ? Math.round(finalPayout / cappedClaim * 100) : 0,
-    };
-  }, [sumInsured, claimAmount, copay, roomRentCap, chosenRoomRent, diseaseSubLimit, proportionateClauseApplies]);
+  const result = useMemo(() => insuranceScenario({sumInsured, claimAmount, copay, roomRentCap, chosenRoomRent, diseaseSubLimit, proportionateClauseApplies}), [sumInsured, claimAmount, copay, roomRentCap, chosenRoomRent, diseaseSubLimit, proportionateClauseApplies]);
 
   return (
     <>
@@ -117,6 +91,7 @@ export default function InsuranceCalculatorClient() {
               <h3 className="text-sm font-extrabold mb-3" style={{ color: "var(--text)" }}>Illustrative limits applied (order simplified)</h3>
               {[
                 ["Claim amount", formatINR(result.claimAmount), false, formatINR(result.claimAmount)],
+                ["Above entered sum insured", `-${formatINR(result.aboveSumInsured)}`, true, null],
                 ["Room-rent proportional adjustment", `-${formatINR(result.roomRentLoss)}`, true, null],
                 ["Disease sub-limit cap (if applicable)", `-${formatINR(result.diseaseLoss)}`, true, null],
                 [`Co-pay (${copay}%)`, `-${formatINR(result.copayAmount)}`, true, null],
@@ -137,9 +112,9 @@ export default function InsuranceCalculatorClient() {
             </div>
 
             <div className="rounded-xl p-4" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
-              <div className="text-xs font-bold mb-1" style={{ color: "var(--orange)" }}>Effective coverage of your {formatINR(sumInsured)} policy</div>
+              <div className="text-xs font-bold mb-1" style={{ color: "var(--orange)" }}>This claim illustration does not change your policy limit</div>
               <div className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                In this scenario only, the payout corresponds to about <strong style={{ color: "var(--text)" }}>{formatINR(result.effectiveCoverage)}</strong> of the entered sum insured. Waiting periods, exclusions, non-payable items, restoration benefits and claim-specific admissibility are not modelled. Check the policy wording and Customer Information Sheet; this result is not advice to buy or change a policy.
+                The illustrated payout is <strong style={{ color: "var(--text)" }}>{result.coverageRatio}% of the entered claim</strong>; the unpaid amount includes any excess over the sum insured. The model applies the entered limits in the displayed order and assumes all remaining expenses share the room-rent deduction. Actual policies can apply a different order or exempt particular items. Waiting periods, exclusions and restoration are not modelled.
               </div>
             </div>
           </div>

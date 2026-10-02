@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -19,7 +20,7 @@ const faq = {
 };
 
 export default function CopayVsNoCopayPage() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Health Insurance Co-payment: How to Compare Plans", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Health Insurance Co-payment: How to Compare Plans", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -79,7 +80,7 @@ export default function CopayVsNoCopayPage() {
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/insurance" style={{ color: COLOR }}>insurance guides</Link> · <Link href="/learn/insurance/room-rent-trap" style={{ color: COLOR }}>room-rent limits</Link> · <Link href="/learn/insurance/health-insurance-effective-coverage" style={{ color: COLOR }}>effective coverage</Link></p>
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This general guide does not determine whether a claim is payable. The policy terms and claim facts control; confirm interpretation with the insurer.</footer>
-      </main>
+      <GuidePractice topic="insurance/copay-vs-no-copay" /></main>
     </>
   );
 }

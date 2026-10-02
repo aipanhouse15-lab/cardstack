@@ -1,11 +1,11 @@
-import { CARDS, CATEGORIES, calcReward, capSharedRewardBuckets, isSourceReviewed } from "@/data/cards";
+import { CARDS, CATEGORIES, calcReward, capSharedRewardBuckets, isEstimateReady } from "@/data/cards";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import BankLogo from "@/components/BankLogo";
 
 export async function generateMetadata({ params }) {
   const cardIds = params.cards.split("-and-").map(id => id.trim()).filter(Boolean);
-  const cards = cardIds.map(id => CARDS.find(c => c.id === id)).filter(Boolean);
+  const cards = cardIds.map(id => CARDS.find(c => c.id === id)).filter(isEstimateReady);
   if (cards.length === 0) return { title: "Stack Not Found" };
   const names = cards.map(c => c.name).join(" + ");
   const canonicalIds = cards.map(card => card.id).sort().join("-and-");
@@ -49,7 +49,8 @@ function calcComboSavings(cards, spending) {
 
 export default function SharedStackPage({ params }) {
   const cardIds = params.cards.split("-and-").map(id => id.trim()).filter(Boolean);
-  const cards = cardIds.map(id => CARDS.find(c => c.id === id)).filter(Boolean);
+  const cards = cardIds.map(id => CARDS.find(c => c.id === id)).filter(isEstimateReady);
+  const excludedIds = [...new Set(cardIds)].filter(id => !cards.some(card => card.id === id));
   if (cards.length === 0) notFound();
 
   // Use default spending for the shared view
@@ -94,9 +95,15 @@ export default function SharedStackPage({ params }) {
           {names}
         </h1>
       <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-          Cap-aware cashback calculated at ₹{totalSpend.toLocaleString()}/month total spend · {cards.every(isSourceReviewed) ? "Source review dates are shown on each card page — reconfirm current issuer terms" : "Includes card data awaiting issuer-source review"}
+          Cap-aware cashback calculated at ₹{totalSpend.toLocaleString()}/month total spend · {cards.every(isEstimateReady) ? "Source review dates are shown on each card page — reconfirm current issuer terms" : "Includes card data awaiting issuer-source review"}
       </p>
       </div>
+
+      {excludedIds.length > 0 && (
+        <p role="status" className="rounded-xl px-4 py-3 mb-6 text-sm" style={{ background: "var(--orange-bg)", color: "var(--orange)" }}>
+          Not included in this estimate: {excludedIds.map(id => CARDS.find(card => card.id === id)?.name || id).join(", ")}. These selections are unknown or do not have a complete reward-value model. The figures below cover only the cards shown.
+        </p>
+      )}
 
       {/* Cards in stack */}
       <div className="flex flex-col sm:flex-row gap-2 mb-6">

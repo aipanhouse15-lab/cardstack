@@ -48,7 +48,7 @@ export default function WhatsChangedPage() {
           What Changed
         </h1>
         <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>
-          Historical notices are preserved below. September includes both an editorial-refresh note and a card-data review-status notice; neither implies that every issuer has been rechecked or that no newer issuer changes exist. Confirm current terms with the issuer before applying.
+          Historical notices are preserved below. October records calculation and editorial corrections, not a blanket issuer-term re-verification. Each entry distinguishes site changes from changes made by a bank or insurer.
         </p>
       </div>
 

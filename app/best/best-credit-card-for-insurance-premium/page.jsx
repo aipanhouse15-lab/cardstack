@@ -1,12 +1,14 @@
+import GuideCardRules from '@/components/GuideCardRules';
+import InsuranceRewardExamples from '@/components/InsuranceRewardExamples';
 import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Credit Cards for Insurance Premiums: Rewards, Exclusions and Fees (September 2026)",
+  title: "Credit Cards for Insurance Premiums: Rewards, Exclusions and Fees (2026)",
   description: "Compare current issuer exclusions, insurance reward caps, payment charges and card fees before paying an insurance premium by credit card.",
   alternates: { canonical: "/best/best-credit-card-for-insurance-premium" },
   openGraph: {
-    title: "Credit Cards for Insurance Premiums: Rewards, Exclusions and Fees (September 2026)",
+    title: "Credit Cards for Insurance Premiums: Rewards, Exclusions and Fees (2026)",
     description: "Compare current issuer exclusions, insurance reward caps, payment charges and card fees before paying an insurance premium by credit card.",
     type: "article",
     siteName: "Assure Fintech",
@@ -15,10 +17,10 @@ export const metadata = {
 
 
 // /best/credit-card-for-insurance-premium
-// Updated: September 26, 2026
+// Insurance-payment examples and visible assertions reviewed 1 October 2026.
 
 const COLOR = "#0891b2";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 1, 2026";
 
 function ShieldHeartIcon() {
   return (
@@ -76,10 +78,10 @@ function YearlyVsMonthlyIcon() {
 
 function AmexIcon() {
   return (
-    <svg width="44" height="44" viewBox="0 0 44 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="American Express card representing Amex MRCC insurance premium rewards">
+    <svg width="44" height="44" viewBox="0 0 44 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Insurance is excluded from Amex MRCC points earning">
       <rect x="2" y="10" width="40" height="24" rx="4" fill={COLOR} fillOpacity="0.15" stroke={COLOR} strokeWidth="1.5"/>
       <text x="22" y="28" textAnchor="middle" fontSize="10" fill={COLOR} fontWeight="800">Amex</text>
-      <text x="22" y="20" textAnchor="middle" fontSize="9" fill="var(--text-muted)">2% on insurance</text>
+      <text x="22" y="20" textAnchor="middle" fontSize="7" fill="var(--text-muted)">Insurance excluded</text>
     </svg>
   );
 }
@@ -150,9 +152,9 @@ const excludedCards = [
   },
   {
     name: "Axis ACE",
-    headline: "5% on Swiggy/Zomato/utility",
+    headline: "5% eligible Google Pay bills; 4% listed food/cab merchants",
     insurance: "No cashback on insurance",
-    clause: "Insurance is an excluded cashback category under Axis Cashback terms.",
+    clause: "Insurance is excluded under Axis ACE's cashback terms.",
   },
   {
     name: "Amazon Pay ICICI",
@@ -237,10 +239,10 @@ export default function BestCreditCardForInsurancePremium() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Credit Cards for Insurance Premiums: Rewards, Exclusions and Fees (September 2026)",
-    author: { "@type": "Person", name: "Ash K" },
+    headline: "Credit Cards for Insurance Premiums: Rewards, Exclusions and Fees (2026)",
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-01",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -269,9 +271,9 @@ export default function BestCreditCardForInsurancePremium() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Credit Cards for Insurance Premiums: Rewards, Exclusions and Fees (September 2026)
+            Credit Cards for Insurance Premiums: Rewards, Exclusions and Fees (2026)
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
       </div>
     <main
@@ -284,9 +286,9 @@ export default function BestCreditCardForInsurancePremium() {
         lineHeight: 1.6,
       }}
     >
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         <Link href="/">Home</Link>
@@ -322,7 +324,7 @@ export default function BestCreditCardForInsurancePremium() {
       </p>
 
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
-        Last updated {UPDATED} · By Ash K · 8 min read
+        Last updated {UPDATED} · By Ash · 8 min read
       </p>
 
       {/* Lead visual comparison */}
@@ -458,14 +460,14 @@ export default function BestCreditCardForInsurancePremium() {
                 </div>
               </div>
               <div style={{ display: "flex", gap: 8, marginBottom: 10, alignItems: "flex-start" }}>
-                <IncludedBadgeIcon />
+                {['amex-mrcc','axis-magnus'].includes(card.slug) ? <ExcludedBadgeIcon /> : <IncludedBadgeIcon />}
                 <div style={{ fontSize: 13, color: "var(--text-muted)" }}>{card.note}</div>
               </div>
               <Link
                 href={`/cards/${card.slug}`}
                 style={{ color: COLOR, fontSize: 13, fontWeight: 600, textDecoration: "none", borderBottom: `1px solid ${COLOR}40` }}
               >
-                Full review and apply
+                Read product rules and availability
               </Link>
             </div>
           ))}
@@ -520,57 +522,7 @@ export default function BestCreditCardForInsurancePremium() {
         </div>
       </section>
 
-      {/* Full premium portfolio */}
-      <section style={{ marginBottom: 44 }}>
-        <h2 style={{ fontSize: 24, fontWeight: 700, marginBottom: 16 }}>The ₹50,000 annual premium portfolio: card-by-card comparison</h2>
-
-        <p>
-        Reward outcomes depend on exact card terms and transaction route. The illustration below avoids treating points as cash or estimating value for excluded categories.
-        </p>
-
-        <div style={{ overflowX: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
-            <thead>
-              <tr style={{ background: `${COLOR}15`, borderBottom: `2px solid ${COLOR}40` }}>
-                {["Card", "Annual Fee", "Insurance Rate", "Reward on ₹50K", "Net (after fee)"].map((h) => (
-                  <th key={h} style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700 }}>{h}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {[
-                ["HDFC Regalia", "Check current schedule", "Points; monthly insurance cap", "Not estimated", "Verify exact variant"],
-                ["Amex MRCC", "Check current schedule", "No points on insurance", "₹0 points", "Insurance excluded"],
-                ["Axis Magnus", "Check current schedule", "No EDGE Rewards on insurance", "₹0 EDGE Rewards", "Insurance excluded"],
-                ["HDFC Millennia", "Check current schedule", "Points; monthly insurance cap", "Not estimated", "Verify exact variant"],
-                ["SBI Cashback", "Check current schedule", "No cashback on insurance", "₹0 cashback", "Insurance excluded"],
-                ["Amazon Pay ICICI", "Check current schedule", "Verify transaction eligibility", "Not estimated", "Check issuer terms"],
-              ].map(([card, fee, rate, reward, net], i) => (
-                <tr key={i} style={{ borderBottom: "1px solid var(--border)", background: i % 2 === 0 ? "transparent" : "var(--raise)" }}>
-                  <td style={{ padding: "10px 14px", fontWeight: 600 }}>{card}</td>
-                  <td style={{ padding: "10px 14px", color: "var(--text-muted)" }}>{fee}</td>
-                  <td style={{ padding: "10px 14px" }}>{rate}</td>
-                  <td style={{ padding: "10px 14px", color: "#16a34a", fontWeight: 600 }}>{reward}</td>
-                  <td
-                    style={{
-                      padding: "10px 14px",
-                      fontWeight: 600,
-                      color: net.startsWith("+") ? "#16a34a" : net.startsWith("-") ? "#dc2626" : "inherit",
-                      fontSize: 12,
-                    }}
-                  >
-                    {net}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <p style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 10 }}>
-          Note: Regalia's net negative from fee alone doesn't mean it's a bad card. Regalia earns across all your other spend too. The table shows insurance-only economics. Overall card value is much higher.
-        </p>
-      </section>
+      <InsuranceRewardExamples />
 
       {/* Insurance breakdown */}
       <section style={{ marginBottom: 44 }}>
@@ -649,7 +601,7 @@ export default function BestCreditCardForInsurancePremium() {
             <Link href="/stack-builder" style={{ color: COLOR }}>
               Stack Builder tool
             </Link>{" "}
-            to build a 2-card stack where one earns on insurance and one earns on your other top spend category.
+            for supported retail scenarios. It does not calculate insurance rewards: compare those separately using the insurance-specific terms and examples on this page.
           </li>
           <li>
             Check the final LIC portal amount and any current payment charge before confirming; don't rely on a historical surcharge estimate.
@@ -662,7 +614,7 @@ export default function BestCreditCardForInsurancePremium() {
         <h3 style={{ fontSize: 16, fontWeight: 700, marginBottom: 12 }}>Read next</h3>
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           <Link href="/cards/hdfc-regalia" style={{ color: COLOR, fontSize: 14 }}>
-            HDFC Regalia full review: the best all-round card for salaried professionals in 2026
+            HDFC Regalia: earning rules and conditions for existing cardholders
           </Link>
           <Link href="/cards/amex-mrcc" style={{ color: COLOR, fontSize: 14 }}>
             Amex MRCC review: is the Membership Rewards program worth it in India?
@@ -717,6 +669,7 @@ export default function BestCreditCardForInsurancePremium() {
       >
         <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Reward structures, exclusion lists, and insurance premium policies are based on issuer terms as of {UPDATED}. Reward values listed are estimates based on standard redemption rates and may vary. This is not insurance advice or financial advice. Verify current card T&amp;C with the issuing bank and insurance terms with your insurer. Assure Fintech may earn referral fees from some card issuers.
       </footer>
+    <GuideCardRules slug="best-credit-card-for-insurance-premium" />
     </main>
     </>
   );

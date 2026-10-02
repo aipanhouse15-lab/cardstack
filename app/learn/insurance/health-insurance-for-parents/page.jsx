@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -19,7 +20,7 @@ const faq = {
 };
 
 export default function HealthInsuranceForParentsPage() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Health Insurance for Parents: How to Compare Plans", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Health Insurance for Parents: How to Compare Plans", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -83,7 +84,7 @@ export default function HealthInsuranceForParentsPage() {
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/insurance" style={{ color: COLOR }}>insurance guides</Link> · <Link href="/learn/insurance/room-rent-trap" style={{ color: COLOR }}>room-rent limits</Link> · <Link href="/learn/insurance/copay-vs-no-copay" style={{ color: COLOR }}>co-pay terms</Link></p>
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This is general information, not a recommendation or coverage determination. Premiums and terms depend on underwriting and policy details. Verify current terms with the insurer before purchase.</footer>
-      </main>
+      <GuidePractice topic="insurance/health-insurance-for-parents" /></main>
     </>
   );
 }

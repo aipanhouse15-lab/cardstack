@@ -3,8 +3,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const TICKER_ITEMS = [
-  { text: "Selected loan, tax, insurance, savings and mutual-fund guides refreshed", tag: "SEE WHAT CHANGED", tagClass: "t-grn", date: "SEP 2026" },
-  { text: "18 of 76 card records remain pending source review and are excluded from recommendations", tag: "DATA STATUS", tagClass: "t-gld", date: "SEP 2026" },
+  { text: "Worked examples added to loan, tax, insurance, savings and mutual-fund guides", tag: "PRACTICAL GUIDES", tagClass: "t-grn", date: "OCT 2026" },
+  { text: "Cards without complete reward models are excluded from numerical rankings", tag: "DATA STATUS", tagClass: "t-gld", date: "OCT 2026" },
 ];
 
 const NAV_LINKS = [

@@ -11,7 +11,7 @@ export default function BuildThreeCardStackGuide() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Build a Credit Card Stack in India: A Three-Card Decision Guide",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },

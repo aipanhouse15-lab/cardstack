@@ -1,12 +1,19 @@
 import { BEST_FOR_CATEGORIES } from "@/data/bestfor";
-import { CARDS, calcReward } from "@/data/cards";
+import { CARDS, calcReward, isSourceReviewed } from "@/data/cards";
 import { interpolate } from "@/data/editorial-helper";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import BankLogo from "@/components/BankLogo";
+import fs from "node:fs";
+import path from "node:path";
 
 export async function generateStaticParams() {
-  return BEST_FOR_CATEGORIES.map(cat => ({ slug: cat.slug }));
+  // Never generate the same URL as a dedicated guide: the two prerender
+  // jobs can overwrite one another's HTML and metadata during a build.
+  const dedicated = new Set(fs.readdirSync(path.join(process.cwd(),"app","best"),{withFileTypes:true})
+    .filter(entry=>entry.isDirectory() && entry.name!=="[slug]")
+    .map(entry=>entry.name));
+  return BEST_FOR_CATEGORIES.filter(cat=>!dedicated.has(cat.slug)).map(cat=>({slug:cat.slug}));
 }
 
 export async function generateMetadata({ params }) {
@@ -39,8 +46,8 @@ export default function BestForPage({ params }) {
     const card = CARDS.find(c => c.id === pick.cardId);
     if (!card) return { ...pick, card: null, reward: null };
     const reward = calcReward(card, cat.categoryId, cat.testSpend);
-    return { ...pick, card, reward, note: interpolate(pick.note, card) };
-  }).filter(p => p.card?.verified && p.reward);
+    return { ...pick, card, reward, note: pick.note ? interpolate(pick.note, card) : card.pointsInfo };
+  }).filter(p => isSourceReviewed(p.card) && !["phasing-out", "discontinued", "closed"].includes(p.card.availability));
 
   // JSON-LD: FAQ schema
   const faqSchema = cat.faq ? {
@@ -117,7 +124,7 @@ export default function BestForPage({ params }) {
         <div>
           <div className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: "var(--blue)" }}>How we calculated</div>
           <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-            All figures below are estimates at <strong style={{ color: "var(--text)" }}>₹{cat.testSpend.toLocaleString()}/month</strong> spend in this category, using our cap-aware calculator. We only show cards with a linked, dated issuer review; eligibility and exclusions still depend on issuer terms.
+            These are product-rule comparisons, not a universal ranking. Rent, insurance, UPI, overseas and EMI spending cannot be estimated by substituting a generic utility or shopping category. See each product's earning and redemption rules below.
           </p>
         </div>
       </div>
@@ -140,14 +147,14 @@ export default function BestForPage({ params }) {
                     </div>
                   </div>
                 </div>
-                <div className="text-right">
+                {cat.modelScenario && !pick.reward.unavailable && <div className="text-right">
                   <div className="text-lg font-bold font-mono" style={{ color: "var(--green)" }}>
                     ₹{pick.reward.cashback.toLocaleString()}
                   </div>
                   <div className="text-[10px] uppercase tracking-wider" style={{ color: "var(--text-faint)" }}>
                     /month
                   </div>
-                </div>
+                </div>}
               </div>
 
               {/* Badge */}
@@ -167,8 +174,8 @@ export default function BestForPage({ params }) {
                   {pick.note}
                 </p>
                 <div className="flex items-center gap-4 text-xs" style={{ color: "var(--text-faint)" }}>
-                  <span>Rate: <strong className="font-mono" style={{ color: "var(--text)" }}>{pick.reward.effectiveRate}%</strong></span>
-                  {pick.reward.capped && (
+                  <span>Annual fee before tax: ₹{pick.card.fee.toLocaleString('en-IN')}</span>
+                  {cat.modelScenario && pick.reward.capped && (
                     <span className="rounded-md px-2 py-0.5" style={{ background: "var(--orange-bg)", color: "var(--orange)", border: "1px solid var(--orange-border)" }}>
                       ⚠️ Cap applies
                     </span>
@@ -177,7 +184,7 @@ export default function BestForPage({ params }) {
                     Full review →
                   </Link>
                 </div>
-                {pick.reward.capNote && (
+                {cat.modelScenario && pick.reward.capNote && (
                   <p className="text-xs mt-2 leading-relaxed" style={{ color: "var(--orange)" }}>
                     {pick.reward.capNote}
                   </p>

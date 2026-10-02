@@ -49,7 +49,8 @@ export default function LoanCalculatorClient() {
     const interestAdvertised = totalPayAdvertised - amount;
 
     // Illustrative annualized cost assumes all entered charges are deducted upfront.
-    const netDisbursed = Math.max(1, amount - totalHiddenCost);
+    const netDisbursed = amount - totalHiddenCost;
+    const invalidCharges = netDisbursed <= 0;
     const periods = tenure * 12;
     let low = 0;
     let high = 1;
@@ -68,7 +69,8 @@ export default function LoanCalculatorClient() {
       emiAdvertised: Math.round(emiAdvertised),
       totalPayAdvertised: Math.round(totalPayAdvertised),
       interestAdvertised: Math.round(interestAdvertised),
-      effectiveRate: annualizedCostRate.toFixed(2),
+      effectiveRate: invalidCharges ? null : annualizedCostRate.toFixed(2),
+      invalidCharges,
       extraCost: Math.round(extraCost),
       processingFee: Math.round(processingFee),
       totalHiddenCost: Math.round(totalHiddenCost),
@@ -115,7 +117,7 @@ export default function LoanCalculatorClient() {
                   <label className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>{f.label}</label>
                   <span className="text-xs font-bold" style={{ color: "var(--text)" }}>{f.label.includes("₹") ? formatINR(f.value) : f.value}</span>
                 </div>
-                <input type="range" min={f.min} max={f.max} step={f.step} value={f.value} onChange={e => f.set(Number(e.target.value))}
+                <input aria-label={f.label} type="range" min={f.min} max={f.max} step={f.step} value={f.value} onChange={e => f.set(Number(e.target.value))}
                   className="w-full" style={{ accentColor: "var(--accent)" }} />
               </div>
             ))}
@@ -131,7 +133,7 @@ export default function LoanCalculatorClient() {
                   <label className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>{f.label}</label>
                   <span className="text-xs font-bold" style={{ color: "var(--text)" }}>{f.label.includes("₹") ? formatINR(f.value) : f.value}</span>
                 </div>
-                <input type="range" min={f.min} max={f.max} step={f.step} value={f.value} onChange={e => f.set(Number(e.target.value))}
+                <input aria-label={f.label} type="range" min={f.min} max={f.max} step={f.step} value={f.value} onChange={e => f.set(Number(e.target.value))}
                   className="w-full" style={{ accentColor: "#DC2626" }} />
               </div>
             ))}
@@ -149,7 +151,8 @@ export default function LoanCalculatorClient() {
                 </div>
                 <div style={{ fontSize: 18, color: "var(--text-faint)" }}>→</div>
                 <div>
-                  <div className="text-4xl font-extrabold" style={{ color: "#DC2626" }}>{result.effectiveRate}%</div>
+                  <div className="text-4xl font-extrabold" style={{ color: "#DC2626" }}>{result.invalidCharges ? "Unavailable" : `${result.effectiveRate}%`}</div>
+                  {result.invalidCharges && <p role="alert">Upfront charges must be less than the loan amount. Reduce the charges or correct the loan amount.</p>}
                   <div className="text-[10px]" style={{ color: "#DC2626" }}>With assumed upfront charges</div>
                 </div>
               </div>

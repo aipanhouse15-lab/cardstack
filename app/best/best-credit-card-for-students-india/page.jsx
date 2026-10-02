@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -206,7 +207,7 @@ export default function BestCreditCardForStudentsIndia() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Student Credit Cards in India: Secured, Add-On and Unsecured Routes",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
@@ -239,7 +240,7 @@ export default function BestCreditCardForStudentsIndia() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Student Credit Cards in India: Secured, Add-On and Unsecured Routes
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
       </div>
     <main
@@ -252,9 +253,9 @@ export default function BestCreditCardForStudentsIndia() {
         lineHeight: 1.6,
       }}
     >
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         <Link href="/">Home</Link>
@@ -290,7 +291,7 @@ export default function BestCreditCardForStudentsIndia() {
       </p>
 
       <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
-        Last updated {UPDATED} · By Ash K · 8 min read
+        Last updated {UPDATED} · By Ash · 8 min read
       </p>
 
       {/* Hard truth callout */}
@@ -749,6 +750,7 @@ export default function BestCreditCardForStudentsIndia() {
       >
         <strong>Sources and disclosure:</strong> Assure Fintech is an independent comparison platform. This guide compares general student card routes; only the specifically linked product has a product record on this page. Issuer eligibility, FD terms, fees and rewards can change. Check current official terms before applying. For credit-score factors and NA/NH files, see <a href="https://www.cibil.com/blog/all-you-need-to-know-about-cibil-score" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>CIBIL's official guide</a>. This is educational content, not financial advice. Assure Fintech may earn referral fees from some card issuers; compensation does not determine editorial coverage.
       </footer>
+    <GuideCardRules slug="best-credit-card-for-students-india" />
     </main>
     </>
   );

@@ -19,7 +19,7 @@ export const metadata = {
 // Color: #7c3aed | Updated: September 26, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "September 28, 2026";
+const UPDATED = "October 2, 2026";
 
 const SvgFeeVsValue = () => (
   <svg viewBox="0 0 720 236" role="img" aria-label="HDFC Regalia vs Infinia: annual fee compared to potential reward value at different spend levels" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -244,9 +244,9 @@ export default function BlogRegaliaVsInfinia() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "HDFC Regalia vs Infinia: Current Terms for Existing Cardholders",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-28",
+    dateModified: "2026-10-02",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -275,13 +275,13 @@ export default function BlogRegaliaVsInfinia() {
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             HDFC says Regalia sourcing has been discontinued and Infinia Metal Edition is offered by invitation. This comparison is for existing cardholders reviewing current terms—not a promise of availability, approval or an upgrade.
           </p>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 10 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 10 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / HDFC Regalia vs Infinia
@@ -350,7 +350,7 @@ export default function BlogRegaliaVsInfinia() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        <strong>Sources:</strong> HDFC Bank's <a href="https://www.hdfc.bank.in/credit-cards/regalia-credit-card" target="_blank" rel="noopener noreferrer">Regalia page</a> states sourcing is discontinued and lists current cardholder terms; its <a href="https://www.hdfc.bank.in/credit-cards/infinia-credit-card" target="_blank" rel="noopener noreferrer">Infinia page</a> states membership is by invitation and lists its terms. Reviewed September 28, 2026. This comparison is for existing cardholders; fees, availability and benefits can change. No approval or upgrade is promised.
+        <strong>Sources:</strong> HDFC Bank's <a href="https://www.hdfc.bank.in/credit-cards/regalia-credit-card" target="_blank" rel="noopener noreferrer">Regalia page</a> states sourcing is discontinued and lists current cardholder terms; its <a href="https://www.hdfc.bank.in/credit-cards/infinia-credit-card" target="_blank" rel="noopener noreferrer">Infinia Metal page</a> states membership is by invitation and lists current terms. The <a href="https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf" target="_blank" rel="noopener noreferrer">September 2026 HDFC MITC</a> separates point-earning ceilings from redemption limits and sets current transaction earning blocks. Reviewed October 2, 2026. This comparison is for existing cardholders; no approval or upgrade is promised.
       </footer>
     </main>
     </>

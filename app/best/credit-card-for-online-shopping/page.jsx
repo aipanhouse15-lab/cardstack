@@ -1,3 +1,5 @@
+import GuideCardRules from '@/components/GuideCardRules';
+import { CARDS } from '@/data/cards';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -15,15 +17,16 @@ export const metadata = {
 
 
 // /best/credit-card-for-online-shopping
-// Reviewed against issuer sources: September 26, 2026
+// Editorial corrections: 1 October 2026; source dates are recorded separately.
 
 const COLOR = "#7c3aed";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 1, 2026";
+const annualFee = id => `₹${CARDS.find(card=>card.id===id).fee.toLocaleString('en-IN')}/year before GST`;
 const SOURCES = {
   sbi: "https://www.sbicard.com/en/faq/cashback-sbi-card-faq.page",
   sbiTerms: "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf",
   amazon: "https://www.icicibank.com/personal-banking/cards/credit-card/amazon-pay-credit-card/amazon-pay-faq",
-  millennia: "https://www.hdfcbank.com/content/api/contentstream-id/723fb80a-2dde-42a3-9793-7ae1be57c87f/5d94cc09-80b7-4073-8c9f-22fad88054f0",
+  millennia: "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf",
   axis: "https://www.axis.bank.in/cards/credit-card/cashback-credit-card",
 };
 
@@ -179,35 +182,28 @@ function FreeCardComboDiagram() {
 }
 
 function HighSpenderBreakeven() {
-  return (
-    <svg
-      viewBox="0 0 680 242"
-      xmlns="http://www.w3.org/2000/svg"
-      role="img"
-      aria-label="Breakeven analysis showing at what monthly online spend each card becomes worth its annual fee"
-      style={{ width: "100%", borderRadius: 10, background: "var(--raise)", border: "1px solid var(--border)", marginTop: 8 }}
-    >
-      <text x="340" y="22" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">Cap context (fees and eligibility must be checked separately)</text>
-      {[
-        { card: "SBI Cashback", fee: "Check issuer", rate: "5%", breakeven: "₹40,000 eligible online spend reaches ₹2,000 online cap", color: COLOR },
-        { card: "HDFC Millennia", fee: "Check issuer", rate: "5%", breakeven: "₹20,000 / partner tier per cycle hits cap", color: "#6366f1" },
-        { card: "Axis Cashback", fee: "Check issuer", rate: "2 / 5 / 7%", breakeven: "Tiered; ₹4,000 max accelerated per month", color: "#10b981" },
-        { card: "Amazon Pay ICICI", fee: "No annual fee", rate: "Prime Amazon 5%", breakeven: "No issuer earnings cap listed", color: "#ea580c" },
-        { card: "AU Xcite ACE", fee: "Check issuer", rate: "Verify", breakeven: "Verify current variant terms", color: "#0891b2" },
-      ].map((item, i) => (
-        <g key={item.card}>
-          <rect x="10" y={38 + i * 28} width="200" height="24" fill="var(--raise)" stroke="var(--border)" rx="3" />
-          <text x="110" y={54 + i * 28} textAnchor="middle" fill="var(--text)" fontSize="11" fontWeight="600">{item.card}</text>
-          <rect x="218" y={38 + i * 28} width="80" height="24" fill={item.color + "22"} rx="3" />
-          <text x="258" y={54 + i * 28} textAnchor="middle" fill={item.color} fontSize="9">{item.fee}</text>
-          <rect x="306" y={38 + i * 28} width="60" height="24" fill="var(--raise)" rx="3" />
-          <text x="336" y={54 + i * 28} textAnchor="middle" fill="var(--text)" fontSize="11">{item.rate}</text>
-          <rect x="374" y={38 + i * 28} width="296" height="24" fill={item.fee === 0 ? "var(--green-dim)" : "var(--raise)"} rx="3" />
-          <text x="522" y={54 + i * 28} textAnchor="middle" fill={item.fee === 0 ? "#16a34a" : "var(--text)"} fontSize="11">{item.breakeven}</text>
-        </g>
-      ))}
-    </svg>
-  );
+  const rows = [
+    ['sbi-cashback', '₹40,000 eligible online spending reaches ₹2,000 online cap per statement cycle. Offline has a separate bucket.'],
+    ['hdfc-millennia', '₹20,000 across the ten eligible online merchants reaches ₹1,000 per calendar month. Other eligible spend has a separate bucket.'],
+    ['axis-cashback', 'Online spending uses slabs and a ₹4,000 accelerated ceiling per statement month; it is not a flat 7% on all online purchases.'],
+    ['amazon-icici', 'Eligible Amazon purchases earn 5% for Prime or 3% otherwise. No issuer earnings cap listed; exclusions and Prime subscription costs still matter.'],
+    ['au-xcite-ace', 'Cashback depends on total retail-spend thresholds. Compare the applicable slab and cap rather than treating its highest advertised rate as the base.'],
+  ];
+  return <div style={{overflowX:'auto',marginTop:12}}>
+    <table style={{width:'100%',borderCollapse:'collapse',fontSize:14,lineHeight:1.65}}>
+      <caption style={{textAlign:'left',fontWeight:700,padding:'8px 0'}}>Earning limits and annual costs—not fee break-even thresholds</caption>
+      <thead><tr>{['Card','Annual fee before GST','What limits the return'].map(label=><th key={label} scope="col" style={{textAlign:'left',padding:12,borderBottom:'2px solid var(--border)'}}>{label}</th>)}</tr></thead>
+      <tbody>{rows.map(([id,context])=>{
+        const card=CARDS.find(c=>c.id===id);
+        return <tr key={id} style={{borderBottom:'1px solid var(--border)'}}>
+          <th scope="row" style={{textAlign:'left',padding:12}}><Link href={`/cards/${id}`}>{card.name}</Link></th>
+          <td style={{padding:12}}>₹{card.fee.toLocaleString('en-IN')}<br/><small>{card.feeWaiver}</small></td>
+          <td style={{padding:12}}>{context}</td>
+        </tr>;
+      })}</tbody>
+    </table>
+    <p style={{fontSize:13}}>For a new paid card, also include its joining fee and tax. For an upgrade, divide the additional annual cost by the additional usable reward rate over the card you already own; hitting a reward cap is not the same as recovering the fee.</p>
+  </div>;
 }
 
 export default function BestCreditCardForOnlineShopping() {
@@ -223,7 +219,7 @@ export default function BestCreditCardForOnlineShopping() {
       {
         "@type": "Question",
         name: "What is the difference between HDFC Millennia 5% and SBI Cashback 5%?",
-        acceptedAnswer: { "@type": "Answer", text: "Millennia's 5% applies to ten named online merchants, with a ₹1,000 cap per statement cycle across that tier; eligible other spends have a separate 1% tier and cap. SBI's 5% is for eligible online transactions, capped at ₹2,000 online per statement cycle under its revised terms. Neither headline rate guarantees every transaction qualifies." }
+        acceptedAnswer: { "@type": "Answer", text: "Millennia's 5% applies to ten named online merchants, with a ₹1,000 cap per calendar month across that tier; eligible other spends have a separate 1% tier and cap. SBI's 5% is for eligible online transactions, capped at ₹2,000 online per statement cycle under its revised terms. Neither headline rate guarantees every transaction qualifies." }
       },
       {
         "@type": "Question",
@@ -267,9 +263,9 @@ export default function BestCreditCardForOnlineShopping() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Credit Card for Online Shopping in India: Rates, Caps and Exclusions",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-01",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -295,13 +291,13 @@ export default function BestCreditCardForOnlineShopping() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Card for Online Shopping in India
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 9 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         <Link href="/">Home</Link> / <Link href="/best/">Best Cards</Link> / Best Credit Card for Online Shopping
@@ -316,7 +312,7 @@ export default function BestCreditCardForOnlineShopping() {
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
-        Last updated {UPDATED} · By Ash K · 9 min read
+        Last updated {UPDATED} · By Ash · 9 min read
       </div>
 
       <section style={{ marginBottom: 40 }}>
@@ -330,7 +326,7 @@ export default function BestCreditCardForOnlineShopping() {
           {
             name: "SBI Cashback Credit Card",
             slug: "sbi-cashback",
-            fee: "Check latest fee schedule",
+            fee: annualFee('sbi-cashback'),
             rate: "5% on eligible online spends",
             cap: "₹2,000 online / ₹2,000 offline per cycle",
             badge: "Broad online option (eligibility applies)",
@@ -340,7 +336,7 @@ export default function BestCreditCardForOnlineShopping() {
           {
             name: "Amazon Pay ICICI Credit Card",
             slug: "amazon-pay-icici",
-            fee: "Free (lifetime)",
+            fee: annualFee('amazon-icici'),
             rate: "5% Amazon for Prime / 3% non-Prime; 2% Amazon Pay partners",
             cap: "Issuer FAQ says no earnings limit",
             badge: "Best for Amazon",
@@ -350,17 +346,17 @@ export default function BestCreditCardForOnlineShopping() {
           {
             name: "HDFC Millennia Credit Card",
             slug: "hdfc-millennia",
-            fee: "Check latest fee schedule",
+            fee: annualFee('hdfc-millennia'),
             rate: "5% on 10 partner sites",
-            cap: "₹1,000 per cycle on 5% partner tier",
+            cap: "₹1,000 per calendar month on 5% partner tier",
             badge: "Best Multi-Partner",
             why: "The issuer's terms list ten named merchants, including Amazon, Flipkart, Myntra, Swiggy and Zomato, in its 5% CashPoints tier.",
-            caveat: "₹1,000 cap per statement cycle across that tier; 5% tier is for eligible non-EMI spends. Other eligible spends have a separate cap."
+            caveat: "₹1,000 cap per calendar month across that tier; 5% tier is for eligible non-EMI spends. Other eligible spends have a separate cap."
           },
           {
             name: "Axis Cashback Credit Card",
             slug: "axis-cashback",
-            fee: "Check latest fee schedule",
+            fee: annualFee('axis-cashback'),
             rate: "Tiered 2% / 5% / 7% on qualifying online net spend",
             cap: "₹4,000 accelerated per statement month",
             badge: "Highest Rate, Tight Cap",
@@ -370,12 +366,12 @@ export default function BestCreditCardForOnlineShopping() {
           {
             name: "AU Xcite ACE Credit Card",
             slug: "au-xcite-ace",
-            fee: "Check current issuer fee",
-            rate: "Confirm current rewards",
-            cap: "Confirm current terms",
-            badge: "Verify current product terms",
-            why: "Product terms and fee offers can vary; consult AU Small Finance Bank's current page for this exact variant before relying on a reward rate.",
-            caveat: "Older published comparisons describe it as free and flat-rate; those claims are not relied on here."
+            fee: annualFee('au-xcite-ace'),
+            rate: "Up to 3% monthly milestone cashback",
+            cap: "Depends on qualifying retail-spend milestones",
+            badge: "Milestone-based alternative",
+            why: "AU lists up to 3% cashback as monthly spending milestones are completed. Its ₹749 annual fee is waived from year 2 after ₹2L retail spend in the preceding anniversary year.",
+            caveat: "This is not a flat 3% online-shopping tier. Milestone eligibility and excluded spending need a separate calculation; the generic calculator does not estimate this product."
           },
         ].map(card => (
           <div key={card.slug} style={{ border: "1px solid var(--border)", borderRadius: 10, padding: "20px 22px", marginBottom: 16, background: "var(--raise)" }}>
@@ -384,7 +380,7 @@ export default function BestCreditCardForOnlineShopping() {
                 <span style={{ background: COLOR + "22", color: COLOR, fontSize: 11, fontWeight: 700, padding: "2px 8px", borderRadius: 4, marginRight: 8 }}>{card.badge}</span>
                 <Link href={`/cards/${card.slug}`} style={{ fontSize: 18, fontWeight: 700, color: "var(--text)", textDecoration: "none" }}>{card.name}</Link>
               </div>
-              <div style={{ fontSize: 13, color: "var(--text-muted)" }}>Fee: {card.fee}</div>
+              <div style={{ fontSize: 13, color: "var(--text-muted)" }}>Annual fee: {card.fee}</div>
             </div>
             <div style={{ display: "flex", gap: 24, margin: "10px 0", flexWrap: "wrap" }}>
               <div><span style={{ fontSize: 12, color: "var(--text-muted)" }}>Rate</span><br /><strong style={{ color: COLOR }}>{card.rate}</strong></div>
@@ -398,7 +394,7 @@ export default function BestCreditCardForOnlineShopping() {
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Partner-Only vs All-Online Distinction</h2>
         <p>HDFC Millennia's 5% is for ten named online merchants. SBI Cashback advertises 5% on eligible online transactions, but its revised terms exclude categories and transaction types. “Online” alone is not enough to determine eligibility.</p>
-        <p>Millennia's 5% partner tier is capped at ₹1,000 per statement cycle, with a separate cap for other eligible spends. SBI Cashback's revised terms set a ₹2,000 online cap and ₹2,000 offline cap per cycle; its total cashback maximum is ₹4,000.</p>
+        <p>Millennia's 5% partner tier is capped at ₹1,000 per calendar month, with a separate cap for other eligible spends. SBI Cashback uses separate ₹2,000 online and offline caps per statement cycle, with a ₹4,000 combined maximum. Compare the appropriate reward period, not a single universal month.</p>
         <PartnerVsAllOnlineMatrix />
         <p style={{ marginTop: 12 }}>The matrix is a prompt to check merchant eligibility, not a guarantee that a transaction earns cashback. Use the named HDFC partner list and SBI's current exclusions to check each purchase.</p>
         <p>Understand the <Link href="/blog/cashback-rate-is-a-lie">real effective rate after partner restrictions</Link> before choosing a card based on headline numbers alone.</p>
@@ -427,13 +423,13 @@ export default function BestCreditCardForOnlineShopping() {
         <p>SBI Cashback's revised terms cap eligible online cashback at ₹2,000 per statement cycle; at a 5% eligible rate that online cap is reached after ₹40,000 of eligible online spend. A separate ₹2,000 offline cap applies, and combined cashback cannot exceed ₹4,000 per cycle.</p>
         <HighSpenderBreakeven />
         <p style={{ marginTop: 12 }}>The online-only ceiling would be ₹24,000 if all twelve statement cycles reached the online cap. This is a ceiling illustration, not expected earnings; exclusions, reversals, fees and billing dates affect realized value.</p>
-        <p>If you are in this high-spend bracket, also consider holding both SBI Cashback and Amazon Pay ICICI: SBI Cashback for all non-Amazon online spend and ICICI for Amazon, since both have separate category tracking and the ICICI card is free. Use the <Link href="/smart-swipe">Smart Swipe guide</Link> to verify the stack math for your specific mix.</p>
+        <p>If you already use SBI Cashback, Amazon Pay ICICI can preserve SBI's online bucket for eligible non-Amazon purchases. ICICI's Amazon rate depends on Prime status and purchase eligibility; its rewards are Amazon Pay balance. Compare the incremental rewards with the extra account-management effort. Use the <Link href="/smart-swipe">Smart Swipe guide</Link> for modelled eligible spending scenarios, not a guarantee that every website qualifies.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>What to Do Right Now</h2>
         <ol style={{ paddingLeft: 20, lineHeight: 2.1 }}>
           <li>List your major online merchants and identify which are named Millennia partners.</li>
-          <li>Estimate eligible spend per statement cycle and account for shared caps.</li>
+          <li>Group eligible spending by each card's cap period: calendar month for Millennia, statement cycle for SBI Cashback.</li>
           <li>Check SBI's revised exclusion list; do not infer eligibility from the online checkout alone.</li>
           <li>For Amazon Pay ICICI, consider whether Amazon Pay balance and the Prime/non-Prime rate fit your use.</li>
           <li>Compare current fees and exclusions before applying for any card.</li>
@@ -470,6 +466,7 @@ export default function BestCreditCardForOnlineShopping() {
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
         <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Rates, fees and caps may change; verify issuer terms before applying. Sources: <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI Card FAQ</a> · <a href={SOURCES.sbiTerms} target="_blank" rel="noreferrer">SBI revised cashback terms</a> · <a href={SOURCES.amazon} target="_blank" rel="noreferrer">ICICI Amazon Pay FAQ</a> · <a href={SOURCES.millennia} target="_blank" rel="noreferrer">HDFC Millennia terms</a> · <a href={SOURCES.axis} target="_blank" rel="noreferrer">Axis Cashback product page</a>. This is not financial advice.
       </footer>
+    <GuideCardRules slug="credit-card-for-online-shopping" />
     </main>
     </>
   );

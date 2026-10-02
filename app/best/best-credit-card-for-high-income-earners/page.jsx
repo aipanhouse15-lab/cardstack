@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -155,7 +156,7 @@ export default function BestCreditCardForHighIncomeEarners() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Credit Card for High Income Earners in India (September 2026)",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
@@ -240,9 +241,9 @@ export default function BestCreditCardForHighIncomeEarners() {
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 24 }}>
         <Link href="/">Home</Link>{" / "}<Link href="/best/">Best Cards</Link>{" / "}
@@ -259,7 +260,7 @@ export default function BestCreditCardForHighIncomeEarners() {
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
-        <span>Last updated {UPDATED}</span><span>By Ash K</span><span>11 min read</span>
+        <span>Last updated {UPDATED}</span><span>By Ash</span><span>11 min read</span>
       </div>
 
       {/* Honest number box */}
@@ -502,6 +503,7 @@ export default function BestCreditCardForHighIncomeEarners() {
           Data sourced from official HDFC, Axis, ICICI, and Amex India websites as of {UPDATED}. See also: <Link href="/best/credit-card-for-lounge-access" style={{ color: GOLD }}>Lounge Access Guide</Link> and <Link href="/best/credit-card-with-no-forex-markup" style={{ color: GOLD }}>Zero Forex Cards</Link>.
         </p>
       </footer>
+    <GuideCardRules slug="best-credit-card-for-high-income-earners" />
     </main>
     </>
   );

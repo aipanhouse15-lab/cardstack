@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -19,7 +20,7 @@ const faq = {
 };
 
 export default function HealthInsuranceEffectiveCoveragePage() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Health Insurance Coverage: Limits, Co-pay and Exclusions", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-04-20", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Health Insurance Coverage: Limits, Co-pay and Exclusions", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-04-20", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -83,7 +84,7 @@ export default function HealthInsuranceEffectiveCoveragePage() {
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/insurance" style={{ color: COLOR }}>insurance guides</Link> · <Link href="/learn/insurance/room-rent-trap" style={{ color: COLOR }}>room-rent limits</Link> · <Link href="/learn/insurance/copay-vs-no-copay" style={{ color: COLOR }}>co-pay terms</Link></p>
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This is general information, not a claim prediction or coverage determination. Refer to your policy and insurer's written decision for your circumstances.</footer>
-      </main>
+      <GuidePractice topic="insurance/health-insurance-effective-coverage" /></main>
     </>
   );
 }

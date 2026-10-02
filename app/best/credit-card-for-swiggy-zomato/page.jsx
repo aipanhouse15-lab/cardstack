@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -18,13 +19,13 @@ export const metadata = {
 // Reviewed against issuer sources: September 26, 2026
 
 const COLOR = "#f97316";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 1, 2026";
 const SOURCES = {
-  swiggy: "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=%2FPersonal%2FPay%2FCards%2FCredit+Card%2FCredit+Card+Landing+Page%2FCredit+Cards%2FSwiggy+HDFC+Bank+Credit+Card%2FT-and-C-Swiggy-HDFC-Bank-Credit-Card.pdf",
+  swiggy: "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-hdfc-bank-credit-card/pdf/terms-and-conditions-swiggy-hdfc-bank-credit-card-18092026.pdf",
   millennia: "https://www.hdfcbank.com/content/api/contentstream-id/723fb80a-2dde-42a3-9793-7ae1be57c87f/5d94cc09-80b7-4073-8c9f-22fad88054f0",
   ace: "https://www.axisbank.com/docs/default-source/default-document-library/axis-bank-ace-credit-card-tncs.pdf",
   airtel: "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf?sfvrsn=3192829c_5",
-  hsbc: "https://www.hsbc.co.in/credit-cards/how-does-cashback-work/",
+  hsbc: "https://www.hsbc.bank.in/credit-cards/products/live-plus/",
 };
 
 function CapMathChart() {
@@ -86,12 +87,12 @@ function StackPlayDiagram() {
       <text x="340" y="28" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">The Two-Card Stack Play</text>
       <rect x="20" y="50" width="200" height="60" fill={COLOR} rx="8" />
       <text x="120" y="75" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700">Swiggy Order?</text>
-      <text x="120" y="93" textAnchor="middle" fill="#fff" fontSize="11">Use HDFC Swiggy Card</text>
+      <text x="120" y="93" textAnchor="middle" fill="#fff" fontSize="11">Original cardholders only</text>
       <text x="120" y="107" textAnchor="middle" fill="#fff" fontSize="10">10%, cap ₹1,500 per billing cycle</text>
       <rect x="240" y="50" width="200" height="60" fill="#6366f1" rx="8" />
       <text x="340" y="75" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700">Zomato Order?</text>
       <text x="340" y="93" textAnchor="middle" fill="#fff" fontSize="11">Use HDFC Millennia</text>
-      <text x="340" y="107" textAnchor="middle" fill="#fff" fontSize="10">5% partner tier, ₹1,000 per cycle</text>
+      <text x="340" y="107" textAnchor="middle" fill="#fff" fontSize="10">5% tier, ₹1,000/calendar month</text>
       <rect x="460" y="50" width="200" height="60" fill="#10b981" rx="8" />
       <text x="560" y="75" textAnchor="middle" fill="#fff" fontSize="13" fontWeight="700">Both apps, low fee?</text>
       <text x="560" y="93" textAnchor="middle" fill="#fff" fontSize="11">Use Axis ACE</text>
@@ -207,10 +208,10 @@ function SpendScenarioGrid() {
       {[
         ["Monthly Food Spend", "Best Card", "Annual Return", "Why"],
         ["Your billing cycle", "Compare", "Reward cap", "Remember"],
-        ["Swiggy-eligible", "Swiggy HDFC", "₹1,500", "10% on eligible Swiggy app"],
+        ["Original cardholders", "Swiggy HDFC", "₹1,500", "Eligible app transactions ≥₹249"],
         ["Both apps", "Millennia", "₹1,000", "5% named partner cap"],
         ["Zomato", "Airtel Axis", "₹200", "10% wallet value-back"],
-        ["Dining + grocery", "HSBC Live+", "₹1,000/month", "10%, shared category cap"],
+        ["Eligible accelerated spend", "HSBC Live+", "₹1,200/month", "10%, shared across five categories"],
       ].map((row, ri) => (
         <g key={ri}>
           {row.map((cell, ci) => (
@@ -233,12 +234,12 @@ export default function BestCreditCardForSwiggyZomato() {
       {
         "@type": "Question",
         name: "Which credit card gives the highest cashback on Swiggy?",
-        acceptedAnswer: { "@type": "Answer", text: "The Swiggy HDFC Bank Credit Card currently lists 10% cashback on eligible Swiggy app transactions, capped at ₹1,500 per billing cycle. Terms exclude some transaction types and may be updated; check the current issuer PDF before applying." }
+        acceptedAnswer: { "@type": "Answer", text: "Existing holders of the original Swiggy HDFC variant earn 10% on eligible app transactions of ₹249 or more, capped at ₹1,500 per billing cycle before migration. This variant is being phased out; ORNGE and BLCK have separate terms." }
       },
       {
         "@type": "Question",
         name: "Does any credit card give cashback on both Swiggy and Zomato?",
-        acceptedAnswer: { "@type": "Answer", text: "HDFC Millennia lists Swiggy and Zomato among its 5% CashPoints merchants, with a ₹1,000 cap per statement cycle across that merchant tier. Axis ACE lists 4% on Swiggy and Zomato; its 4% and 5% accelerated categories share a ₹500 statement-cycle cashback cap. ACE does not require paying via UPI apps for those listed merchants." }
+        acceptedAnswer: { "@type": "Answer", text: "Millennia's named-merchant 5% tier includes both apps, sharing a ₹1,000 calendar-month cap. Axis ACE's eligible food/ride and utility accelerated tiers share ₹500 per statement cycle. These reward periods differ." }
       },
       {
         "@type": "Question",
@@ -258,12 +259,12 @@ export default function BestCreditCardForSwiggyZomato() {
       {
         "@type": "Question",
         name: "Does the HDFC Millennia 5% cashback apply to Swiggy Instamart grocery orders?",
-        acceptedAnswer: { "@type": "Answer", text: "HDFC Millennia's published terms list Swiggy among ten 5% online merchants, capped at ₹1,000 CashPoints per cycle across that tier; the 5% offer is for non-EMI spends. Do not assume every Swiggy service is eligible—check merchant classification and current terms." }
+        acceptedAnswer: { "@type": "Answer", text: "Millennia lists Swiggy among ten named merchants earning 5% CashPoints on qualifying non-EMI transactions. That tier shares a 1,000 CashPoint cap per calendar month. Merchant classification determines eligibility." }
       },
       {
         "@type": "Question",
         name: "Is the HSBC Live+ card worth its annual fee for food delivery?",
-        acceptedAnswer: { "@type": "Answer", text: "HSBC describes 10% accelerated cashback up to ₹1,000 a month across dining, food delivery and grocery spends. Check current Live+ fee, exclusions and offer conditions on HSBC's official page; the cap is shared rather than a separate cap for each app." }
+        acceptedAnswer: { "@type": "Answer", text: "Live+ shares a ₹1,200 monthly accelerated cap across eligible dining, food delivery, groceries, specified shopping and utilities. Above-cap accelerated spending earns no cashback; 1.5% applies only to other eligible spending." }
       },
       {
         "@type": "Question",
@@ -277,9 +278,9 @@ export default function BestCreditCardForSwiggyZomato() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Credit Cards for Swiggy and Zomato in India: Rewards and Caps",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-01",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -305,13 +306,13 @@ export default function BestCreditCardForSwiggyZomato() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Cards for Swiggy and Zomato
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 9 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         <Link href="/">Home</Link> / <Link href="/best/">Best Cards</Link> / Best Credit Card for Swiggy and Zomato
@@ -324,13 +325,19 @@ export default function BestCreditCardForSwiggyZomato() {
       <p style={{ fontSize: 18, color: "var(--text-muted)", marginBottom: 16 }}>
         Compare food-delivery rewards by eligible transaction, shared cap and billing period. A high headline rate does not guarantee the best net value for your mix of Swiggy and Zomato orders.
       </p>
+      <aside style={{ padding: 18, marginBottom: 24, border: "1px solid var(--border)", borderRadius: 12 }}><strong>Original Swiggy card: existing holders only.</strong> HDFC is phasing out this variant. Your bank notice determines your replacement offer and migration date. Original-card examples below apply before migration. <Link href="/cards/hdfc-swiggy">Migration notice and original-card details</Link>.</aside>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
-        Last updated {UPDATED} · By Ash K · 9 min read
+        Last updated {UPDATED} · By Ash · 9 min read
       </div>
 
       <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20, color: "var(--text)" }}>Our Top Picks for Food Delivery</h2>
+        <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 20, color: "var(--text)" }}>Food-delivery options and existing-card benefits</h2>
+
+        <h3>New variants: BLCK versus ORNGE</h3>
+        <p><Link href="/cards/hdfc-swiggy-blck">Swiggy BLCK</Link> gives qualifying Swiggy app spending a 10% tier. Each such transaction must be at least ₹249. Its listed online-merchant 5% and other-spend 1% tiers require ₹100 per transaction. The three billing-cycle caps are ₹1,500, ₹1,500 and ₹1,000 respectively. For ₹10,000 of qualifying Swiggy purchases, the gross cashback is ₹1,000; ₹20,000 reaches the ₹1,500 cap. Orders below the transaction minimum do not qualify, regardless of the monthly total.</p>
+        <p><Link href="/cards/hdfc-swiggy-ornge">Swiggy ORNGE</Link> has 5% tiers requiring ₹249 per transaction, and a 1% other-spend tier requiring ₹100. The priced version has a ₹500 fee and ₹1.5 lakh renewal-waiver threshold; a Swiggy-channel lifetime-free offer is separately listed in the September terms. BLCK's listed fee is ₹1,000, with a ₹2 lakh renewal-waiver threshold. Your application or migration offer determines the fee, so a migrated lifetime-free card should not be compared using the paid-card cost.</p>
+        <p>ORNGE's cap table and worked example leave shared-versus-separate 5% bucket treatment unclear; we have not enabled its automated estimate. Neither variant gives its accelerated rate on every restaurant, online purchase or grocery transaction. Membership vouchers and limited-time discounts are separate benefits, not recurring cashback.</p>
 
         {[
           {
@@ -339,8 +346,8 @@ export default function BestCreditCardForSwiggyZomato() {
             fee: "Check current issuer fee",
             rate: "10% on Swiggy",
             cap: "₹1,500 per billing cycle",
-            badge: "Best for Swiggy",
-            why: "The card's issuer terms list 10% cashback on eligible Swiggy app spends, including food delivery, Instamart, Genie and Dineout, subject to exclusions and a billing-cycle cap.",
+            badge: "Existing holders before migration",
+            why: "The September terms cover eligible Food Delivery, Instamart and Dineout transactions; Genie is no longer in the listed 10% services. This original variant is being phased out.",
             caveat: "Swiggy Money Wallet, Liquor and Minis are excluded; check updated terms and eligible spend."
           },
           {
@@ -348,7 +355,7 @@ export default function BestCreditCardForSwiggyZomato() {
             slug: "hdfc-millennia",
             fee: "Check current issuer fee",
             rate: "5% on Swiggy + Zomato",
-            cap: "₹1,000 per cycle across 5% partner tier",
+            cap: "₹1,000 per calendar month across 5% partner tier",
             badge: "Best Both Apps",
             why: "Its terms list both Swiggy and Zomato in a ten-merchant 5% CashPoints tier. The cap is shared across those named online merchants.",
             caveat: "5% applies to non-EMI spends; separate 1% other-spend tier has its own cap."
@@ -367,10 +374,10 @@ export default function BestCreditCardForSwiggyZomato() {
             name: "HSBC Live+ Credit Card",
             slug: "hsbc-live-plus",
             fee: "Check current issuer fee",
-            rate: "10% on eligible dining, delivery and groceries",
-            cap: "₹1,000 per month shared",
+            rate: "10% on eligible dining, delivery, groceries, specified shopping and utilities",
+            cap: "₹1,200 per month shared",
             badge: "Best Dining Spender",
-            why: "HSBC describes 10% accelerated cashback across dining, food delivery and grocery spends, which can include more than app orders.",
+            why: "The five accelerated categories share one cap; spending above it earns no further accelerated cashback.",
             caveat: "The accelerated cap is shared across categories; verify current fee and exclusions with HSBC."
           },
           {
@@ -403,7 +410,7 @@ export default function BestCreditCardForSwiggyZomato() {
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Cap Math: What You Actually Earn</h2>
-        <p>The Swiggy HDFC card's published terms cap its 10% Swiggy-app cashback at ₹1,500 per billing cycle. Millennia's 5% named-partner tier is capped at ₹1,000 per cycle. Axis ACE's 4% Swiggy/Zomato tier shares a ₹500 cap with its eligible 5% utility tier. These are different caps and periods.</p>
+        <p>The original Swiggy card's eligible 10% tier is capped at ₹1,500 per billing cycle before migration. Millennia's named-partner tier shares ₹1,000 per calendar month. ACE's accelerated tiers share ₹500 per statement cycle.</p>
         <p>For illustration, ₹10,000 of eligible Swiggy-app spend in one billing cycle would imply ₹1,000 at the headline rate before exclusions; ₹20,000 would hit the ₹1,500 cap. Actual posting depends on eligible transactions and the issuer's billing cycle.</p>
         <CapMathChart />
         <p style={{ marginTop: 12 }}>The chart is arithmetic only. It assumes all listed spend qualifies, applies each card's stated cap to the relevant eligible spend, and does not compare fees or other shared-category spend. Higher spend can exhaust the cap, not automatically make another card better.</p>
@@ -447,7 +454,7 @@ export default function BestCreditCardForSwiggyZomato() {
       </section>
       <section style={{ marginBottom: 40, background: "var(--raise)", border: `1px solid ${COLOR}44`, borderRadius: 10, padding: "24px 24px" }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Honest Verdict</h2>
-        <p>For eligible Swiggy-app purchases, Swiggy HDFC offers a 10% tier up to ₹1,500 per billing cycle. Millennia lists Swiggy and Zomato at 5% within a ₹1,000 partner-tier cycle cap. Axis ACE may suit other eligible spend patterns; Airtel Axis now has wallet value-back on Zomato/Blinkit/District Movies, not Swiggy cashback.</p>
+        <p>Existing original Swiggy holders can use its eligible 10% tier before migration. New applicants should compare replacement variants separately. Millennia covers qualifying purchases on both apps within its calendar-month cap; ACE has a shared statement-cycle cap. Airtel's partner-wallet credits are not Swiggy cashback.</p>
         <p>Compare your own eligible purchases, cap availability, fees and rewards actually posted. Temporary offers and issuer rules may change. No one card is best for every food-delivery user.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
@@ -475,6 +482,7 @@ export default function BestCreditCardForSwiggyZomato() {
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
         <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Reward rates and caps can change; confirm current terms with the issuer before applying. This is not financial advice. Sources: <a href={SOURCES.swiggy} target="_blank" rel="noreferrer">Swiggy HDFC terms</a> · <a href={SOURCES.millennia} target="_blank" rel="noreferrer">HDFC Millennia terms</a> · <a href={SOURCES.ace} target="_blank" rel="noreferrer">Axis ACE terms</a> · <a href={SOURCES.airtel} target="_blank" rel="noreferrer">Airtel Axis revised April 2026 terms</a> · <a href={SOURCES.hsbc} target="_blank" rel="noreferrer">HSBC cashback information</a>.
       </footer>
+    <GuideCardRules slug="credit-card-for-swiggy-zomato" />
     </main>
     </>
   );

@@ -244,11 +244,11 @@ export const CARD_EDITORIALS_BATCH_3 = {
     verdict:
       "The PhonePe SBI Card Select Black is a co-branded card designed for PhonePe loyalists. The 1.25% base reward rate is slightly above average for a ₹1,999/year card, and 6 lounge visits give reasonable airport access. But there is nothing here that makes it a must-have outside the PhonePe ecosystem.",
     verdictDetail:
-      "If you use PhonePe for everything — UPI payments, food orders, travel bookings — the exclusive offers and accelerated PhonePe rewards can push effective returns higher than the stated base rate. For everyone else, SBI Card ELITE at ₹4,999/year delivers better travel and lifestyle rewards if you spend more, and SBI SimplySAVE at ₹499/year gives better ROI at lower spend levels without the PhonePe dependency.",
+      "If you use PhonePe for everything — UPI payments, food orders and travel bookings — check the transaction-level eligibility and active offers before estimating value. SBI Card ELITE has a ₹4,999 + tax standard renewal fee, but its current complete reward/redemption terms have not been reconciled here, so this review does not rank it against the PhonePe card. SBI SimplySAVE is a separately reviewed lower-fee option; compare its eligible categories and caps with your own spend.",
     idealFor:
       "Frequent PhonePe users who want a card that integrates with their primary payments app and includes lounge access without a premium card fee.",
     skipIf:
-      "You're not a PhonePe power user or you can justify a better SBI card like SBI Card ELITE or a non-co-branded alternative.",
+      "You do not use the PhonePe channels that qualify for the card's current benefits, or another reviewed card fits your spending and redemption choices better.",
     bestUsedFor: [
       {
         use: "PhonePe Ecosystem Purchases",
@@ -288,10 +288,10 @@ export const CARD_EDITORIALS_BATCH_3 = {
       },
       {
         category: "High Spenders Wanting Better Travel Benefits",
-        alternative: "sbi-card-elite",
-        alternativeName: "SBI Card ELITE",
+        alternative: "sbi-simplysave",
+        alternativeName: "SBI SimplySAVE",
         reason:
-          "SBI Card ELITE at ₹4,999/year offers 5x points on dining, movies, and grocery, plus 8 complimentary domestic lounge visits and a welcome benefit worth more than the fee. If your monthly spend exceeds ₹25,000, ELITE's higher reward rates will consistently outperform the Select Black.",
+          "SBI SimplySAVE is a reviewed alternative for eligible dining and grocery MCCs, subject to its shared monthly accelerated-point cap and selected point-redemption value. Compare actual qualifying spend and fees; this is not a universal high-spend winner.",
       },
       {
         category: "International Travel",
@@ -479,23 +479,23 @@ export const CARD_EDITORIALS_BATCH_3 = {
 
   "sbi-flipkart": {
     verdict:
-      "The SBI Flipkart Credit Card earns 5% cashback on Flipkart purchases with a ₹2,000/month cap. At a ₹999/year fee, it makes sense for regular Flipkart shoppers spending ₹3,000-₹15,000/month on the platform. Below ₹3,000/month, the fee becomes proportionally costly.",
+      "SBI Flipkart offers 5% cashback at eligible Flipkart merchant IDs (including Shopsy and Flipkart Travel), 7.5% at Myntra, 5% at Cleartrip and 4% at four select merchants. Each accelerated merchant bucket has its own ₹4,000 quarterly ceiling; other eligible spend earns 1%. Its personalized quarterly reset, eligible-transaction rules and ₹500 + tax annual/renewal fee matter more than a single headline rate.",
     verdictDetail:
-      "The honest comparison you need to know: Axis Flipkart Credit Card (₹500/year) offers the same 5% on Flipkart but with no cap, and also earns 1.5% on all other transactions (vs SBI Flipkart's 1% everywhere else). The Axis card is straightforwardly better on three of four key dimensions — lower fee, same Flipkart rate, higher cap, better base rate. If you're choosing between the two, the Axis Flipkart card wins.",
+      "Axis Flipkart also offers 5% on eligible Flipkart spend, with its own ₹4,000 statement-quarter merchant cap; it has separate Cleartrip and Myntra tiers and a different preferred-merchant list. SBI's separate ₹4,000 caps apply across Flipkart, Myntra, Cleartrip and four select merchants, with a personalized reset described in its card booklet. SBI lists ₹500 + tax joining and renewal fees, with renewal waived at ₹3.5 lakh preceding-year spend. Compare eligible merchant routes and cap reset dates; neither card is an automatic winner.",
     idealFor:
       "Existing SBI Card customers who shop frequently on Flipkart and prefer to consolidate their cards within the SBI ecosystem rather than opening a new bank relationship with Axis.",
     skipIf:
-      "You're deciding between SBI Flipkart and Axis Flipkart fresh — the Axis card is the better product at a lower price.",
+      "You need a general-purpose card, or your spending is spread across merchants that do not qualify for either issuer's accelerated tiers.",
     bestUsedFor: [
       {
         use: "Flipkart Online Shopping",
         detail:
-          "5% cashback on Flipkart is the core value proposition. At ₹10,000/month on Flipkart, you earn ₹500/month = ₹6,000/year, capped at ₹2,000/month maximum. The cap doesn't bind until you exceed ₹40,000/month on Flipkart — which most retail shoppers never reach.",
+          "Eligible Flipkart transactions earn 5%, subject to a separate ₹4,000 cashback ceiling for that merchant per personalized quarterly cycle. SBI's booklet illustrates a cycle beginning with the first transaction and resetting when the fourth bill is generated; it is not a ₹2,000 monthly cap. Merchant identifiers, minimum transaction and exclusion terms apply.",
       },
       {
         use: "Flipkart Big Billion Days and Sale Events",
         detail:
-          "During Flipkart's sale events in October (Big Billion Days) and January (Republic Day sale), the 5% cashback on top of sale discounts can produce very high effective savings. A ₹15,000 smartphone bought at 20% discount + 5% cashback results in an effective 25% saving — one of the best sale combinations available.",
+          "Sale discounts and the card's regular cashback are separate programs. A sale transaction may qualify for regular cashback only if it satisfies the issuer's merchant, payment and exclusion rules; promotional stacking is not guaranteed. Check live checkout and offer-specific terms rather than adding headline rates together.",
       },
       {
         use: "General Online Spending Outside Flipkart",
@@ -505,7 +505,7 @@ export const CARD_EDITORIALS_BATCH_3 = {
       {
         use: "Myntra and Flipkart Group Brands",
         detail:
-          "Myntra, which is part of the Flipkart group, may also qualify for the 5% cashback — verify in the card's current terms as the eligibility of Flipkart group brands has changed with platform restructuring. If Myntra purchases qualify, fashion shoppers get a strong additional category.",
+          "SBI lists a separate 7.5% Myntra tier, capped at ₹4,000 per personalized quarterly cycle. Myntra is not part of Flipkart's 5% bucket; eligible merchant identifiers, the minimum transaction and exclusions still apply.",
       },
     ],
     avoidFor: [
@@ -514,7 +514,7 @@ export const CARD_EDITORIALS_BATCH_3 = {
         alternative: "axis-flipkart",
         alternativeName: "Axis Flipkart Credit Card",
         reason:
-          "Axis Flipkart Card at ₹500/year gives the same 5% on Flipkart (uncapped), 4% on Swiggy and Uber, and 1.5% base on everything else. It's ₹499/year cheaper, has no Flipkart cap, and earns more on general spending. There's no scenario where the SBI Flipkart beats it.",
+          "Axis Flipkart's 5% Flipkart tier also has a ₹4,000 statement-quarter cap. The two cards have different partner lists and SBI's terms define a personalized quarterly reset. Axis lists ₹500 annual fee from year two; SBI lists ₹500 + tax joining and renewal, with a ₹3.5 lakh preceding-year renewal waiver. Compare eligible merchant routes, fees and reset dates before choosing.",
       },
       {
         category: "Amazon Shopping",
@@ -572,11 +572,11 @@ export const CARD_EDITORIALS_BATCH_3 = {
       },
       {
         q: "How is the cashback credited — as points or direct cashback?",
-        a: "The reward comes as SBI reward points, not direct cashback. SBI reward points on the Flipkart card are earned at a rate that translates to 5% effective cashback on Flipkart, redeemable through the SBI Card rewards portal. You can redeem them against your statement, Flipkart vouchers, or other catalogue options. The redemption rate is ₹0.25 per point.",
+        a: "The current SBI Card product summary and card-specific terms describe cashback credited to the SBI Card account, not Reward Points. The terms say returns and EMI conversion can reverse credited cashback.",
       },
       {
         q: "Why is the Axis Flipkart card considered better?",
-        a: "Axis Flipkart Credit Card at ₹500/year offers the same 5% on Flipkart but without a monthly cap, earns 4% on Swiggy and Uber, earns 1.5% base rate on everything else (vs SBI Flipkart's 1%), and costs ₹499 less per year. Unless you're already an SBI Card customer with strong ecosystem reasons to stay, the Axis Flipkart card is the superior product on every metric.",
+        a: "Both cards publish a 5% eligible Flipkart tier and a ₹4,000 quarterly cap, but their accelerated partner buckets, merchant identifiers and reset rules differ. SBI also lists 7.5% on Myntra and 5% on Cleartrip; Axis has different preferred merchants. Compare the ₹500 + tax fee schedules and your actual eligible transactions rather than assuming a universal winner.",
       },
       {
         q: "Does this card work for Flipkart Pay Later transactions?",
@@ -584,11 +584,11 @@ export const CARD_EDITORIALS_BATCH_3 = {
       },
       {
         q: "Is there a joining bonus on the SBI Flipkart card?",
-        a: "SBI Flipkart card has periodically offered a ₹500 Flipkart voucher or equivalent benefit as a joining bonus on first transaction within 30-60 days. The current offer may vary — confirm the joining benefit at the time of application on the SBI Card website or Flipkart's card page.",
+        a: "SBI Card currently advertises a ₹250 Flipkart gift card after fee realization. The card-specific terms say the e-gift voucher is delivered within 60 days and expires after one year; read the application offer terms for eligibility.",
       },
       {
         q: "What is the fuel surcharge waiver on this card?",
-        a: "The SBI Flipkart card offers a 1% fuel surcharge waiver on fuel transactions between ₹500 and ₹3,000 at petrol pumps. This is a standard SBI card benefit and not a headline feature of this product. The waiver is capped at ₹100/month across all fuel transactions.",
+        a: "SBI Card lists a separate 1% fuel-surcharge waiver with a maximum benefit of ₹400 per statement cycle. Fuel itself does not earn this card's cashback; transaction and surcharge terms apply.",
       },
     ],
   },
@@ -817,7 +817,7 @@ export const CARD_EDITORIALS_BATCH_3 = {
       },
       {
         q: "How does the SimplySAVE compare to the SBI SimplyCLICK card?",
-        a: "SBI SimplySAVE is optimised for offline spending (dining, groceries, departmental stores), while SBI SimplyCLICK (₹499/year) is optimised for online spending (5% on Amazon, Cleartrip, Lenskart, etc.). If you spend more offline, choose SimplySAVE; if you spend more online, choose SimplyCLICK. If your spending is mixed, SimplySAVE + Amazon Pay ICICI is a stronger combination than SimplyCLICK for most users.",
+          a: "SBI SimplySAVE is optimised for eligible offline dining, grocery and departmental-store spending, while SimplyCLICK has separate 5X other-online and 10X dated partner terms; the latter depend on online identifiers and merchant IDs. SimplyCLICK points are voucher rewards, not flat cashback, and the partner/other-online buckets have separate monthly caps. Compare your actual transactions, card fee and redemption route before choosing either card or a combination.",
       },
       {
         q: "What is the reward point redemption rate on SBI SimplySAVE?",

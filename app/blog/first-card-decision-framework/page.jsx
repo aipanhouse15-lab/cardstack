@@ -20,7 +20,7 @@ export const metadata = {
 // Color: #7c3aed | Updated: September 26, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 2, 2026";
 
 const SvgDecisionTree = () => (
   <svg viewBox="0 0 720 380" role="img" aria-label="Decision tree for choosing your first credit card in India" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -159,12 +159,12 @@ const SvgApplicationChecklist = () => (
     <rect width="720" height="230" fill="var(--raise2)" rx="10" stroke="var(--hair2)" strokeWidth="1" />
     <text x="36" y="34" fontSize="14" fontWeight="700" fill="var(--text)">Before You Apply — Maximise Your Approval Chances</text>
     {[
-      { ok: true, text: "Check CIBIL score for free via CIBIL.com or bank app — aim for 700+ before applying" },
-      { ok: true, text: "Keep at least 3 months of consistent salary credits in your bank account" },
-      { ok: false, text: "Do NOT apply for multiple cards in the same month — each is a hard inquiry" },
-      { ok: true, text: "Start with a card from the bank where you have your salary account — higher approval rate" },
-      { ok: false, text: "Do NOT apply if your existing credit utilisation is above 70% on any card" },
-      { ok: true, text: "Keep existing loan EMIs below 40% of take-home income before applying" },
+      { ok: true, text: "Review your credit report for errors, overdue balances and recent enquiries" },
+      { ok: true, text: "Check the issuer's current age, income and documentation criteria" },
+      { ok: false, text: "Avoid frequent applications you do not need; multiple enquiries may affect your score" },
+      { ok: true, text: "Apply only when the product fits your eligibility and repayment capacity" },
+      { ok: false, text: "Do not rely on a universal score, utilisation or income cutoff for approval" },
+      { ok: true, text: "Pay the full statement balance on time and borrow within your means" },
     ].map(({ ok, text }, i) => (
       <g key={i}>
         <rect x="36" y={50 + i * 28} width="18" height="18" rx="3" fill={ok ? "#16a34a" : "#dc2626"} opacity="0.8" />
@@ -172,8 +172,7 @@ const SvgApplicationChecklist = () => (
         <text x="66" y={64 + i * 28} fontSize="12" fill="var(--text)">{text}</text>
       </g>
     ))}
-        <text x="36" y="216" fontSize="9" fill="var(--text-muted)">Each hard inquiry stays on your CIBIL report for 24 months. Multiple applications in a short window signal desperation</text>
-    <text x="36" y="230" fontSize="9" fill="var(--text-muted)">and hurt approval chances.</text>
+        <text x="36" y="216" fontSize="9" fill="var(--text-muted)">Frequent hard enquiries may affect your score; impact and approval decisions vary by applicant.</text>
   </svg>
 );
 
@@ -207,7 +206,7 @@ const SvgFiveQuestions = () => (
     {[
       {
         q: "Q1: What is my monthly take-home income?",
-        a: "This determines which cards you are eligible for. Banks often require 3x the annual fee as monthly income.",
+        a: "Issuers publish product-specific income, age and documentation rules. Income alone does not guarantee approval.",
         color: "#7c3aed",
       },
       {
@@ -222,12 +221,12 @@ const SvgFiveQuestions = () => (
       },
       {
         q: "Q4: Do I want rewards points or simple cashback?",
-        a: "Points require active management and can be devalued. Cashback is simpler and always worth face value.",
+        a: "Compare redemption choices, expiry and restrictions. Statement cashback can be simpler; point value varies by redemption route.",
         color: "#ea580c",
       },
       {
         q: "Q5: Do I travel domestically or internationally every year?",
-        a: "Travel cards make economic sense only if you fly 4+ times a year. Otherwise, lounge access is marketing noise.",
+        a: "Value travel benefits only when you can use the eligible routes, visits and locations; no trip count is a universal break-even.",
         color: "#dc2626",
       },
     ].map(({ q, a, color }, i) => (
@@ -254,7 +253,7 @@ export default function BlogFirstCardDecisionFramework() {
         name: "What is the best first credit card for a 22-year-old in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "For someone with no credit history and a salary under ₹25,000, the SBI Student Plus card or an FD-backed secured card (from SBI, Axis, or HDFC) is the right starting point. With ₹25,000-50,000 income and no credit history, the Amazon Pay ICICI card or Axis Ace are strong choices — both have no annual fee and are easier to get than premium cards."
+          text: "Eligibility depends on the card, issuer, applicant and any current offer. If you are new to credit, compare current secured-card and entry-card criteria, fees and repayment terms rather than relying on a universal income band."
         }
       },
       {
@@ -262,7 +261,7 @@ export default function BlogFirstCardDecisionFramework() {
         name: "Can I get a credit card with no credit history in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes. FD-backed secured cards are designed for this — you deposit a fixed amount (typically ₹10,000-₹25,000) and get a card with a limit equal to 80-90% of that deposit. Use it for 6-12 months with full payments and you will build a CIBIL score of 680-720, making you eligible for regular unsecured cards."
+          text: "Some issuers offer FD-backed secured credit cards without relying on an established unsecured credit history. Deposit minimums, limits and approval rules vary. Responsible use can contribute to credit history, but no particular score or later unsecured approval is guaranteed."
         }
       },
       {
@@ -270,7 +269,7 @@ export default function BlogFirstCardDecisionFramework() {
         name: "What CIBIL score do I need to get a credit card in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "For basic cards like SBI SimplySAVE or ICICI Coral, 700+ is the informal threshold. For mid-tier cards like HDFC Millennia or Axis Ace, aim for 720+. Premium cards like Regalia or Magnus typically want 750+. If you have no history at all, FD-backed cards require no CIBIL score."
+          text: "There is no universal CIBIL score threshold across issuers or products. Banks set their own eligibility rules and assess applications using multiple factors. Check current criteria for the specific card; an eligibility checker is not an approval guarantee."
         }
       },
       {
@@ -278,7 +277,7 @@ export default function BlogFirstCardDecisionFramework() {
         name: "Should I choose cashback or reward points on my first card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Cashback is the better choice for a first card. Reward points require you to understand redemption catalogues, track expiry dates, and manage devaluation risk. Cashback always equals its face value and requires zero management. Once you understand how the ecosystem works, you can switch to a points card strategically."
+          text: "Compare redemption choices, expiry, restrictions and the actual value you expect to receive. Statement cashback can be simpler; points may have different values by redemption route."
         }
       },
       {
@@ -286,7 +285,7 @@ export default function BlogFirstCardDecisionFramework() {
         name: "How many credit cards should I start with?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "One card for the first 12-18 months. Using one card builds a clear payment habit and one credit history. Applying for multiple cards simultaneously leaves multiple hard inquiries on your CIBIL report, can reduce your score, and increases the risk of approval denials creating a cascade of rejections."
+          text: "There is no required number of cards or waiting period. Apply only when you need a product and can manage its payments. Frequent applications can create multiple hard enquiries, which CIBIL says may affect your score."
         }
       },
       {
@@ -294,7 +293,7 @@ export default function BlogFirstCardDecisionFramework() {
         name: "Can I get an HDFC Infinia or Axis Magnus as my first card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Almost certainly not. Premium cards like Infinia and Magnus require 2+ years of credit history, CIBIL scores of 750+, and typically an existing banking relationship or high income. Applying for them without meeting these criteria results in rejection — which leaves a hard inquiry on your CIBIL file and makes your next application harder."
+          text: "HDFC describes Infinia Metal as invitation-only; Axis publishes eligibility for specific Magnus variants. Neither has a universal approval rule for every applicant. Check each issuer's current criteria; applying does not guarantee approval."
         }
       },
       {
@@ -302,7 +301,7 @@ export default function BlogFirstCardDecisionFramework() {
         name: "Does applying for a credit card hurt my CIBIL score?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes, each credit card application triggers a hard inquiry on your CIBIL report, which can lower your score by 5-15 points and remains visible for 24 months. Multiple applications in a short window amplify this effect. Apply only when you have a reasonable confidence of being approved — use the bank's eligibility checker tool first."
+          text: "A lender may make a hard enquiry when you apply. CIBIL says multiple and frequent enquiries may affect your score, but it does not publish one fixed point loss for everyone. Checking your own CIBIL score is a soft enquiry and does not affect it."
         }
       },
       {
@@ -336,9 +335,9 @@ export default function BlogFirstCardDecisionFramework() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "First Credit Card Decision Framework for India — Answer 5 Questions, Get Your Answer",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-06-04",
+    dateModified: "2026-10-02",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -367,13 +366,13 @@ export default function BlogFirstCardDecisionFramework() {
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.45)", lineHeight: 1.6, maxWidth: 560, marginBottom: 20 }}>
             India has 85 million credit card holders and most of them got their first card wrong. Here is the decision framework that saves you from a bad start, a CIBIL hit, and five years of paying for a card that does not fit you.
           </p>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 9 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 12, color: "var(--text-muted)", marginBottom: 18 }}>
         <Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/blog" style={{ color: "inherit" }}>Blog</Link> / First Card Decision Framework
@@ -381,7 +380,7 @@ export default function BlogFirstCardDecisionFramework() {
 <div style={{ background: "rgba(157,140,255,.08)", border: "1px solid rgba(157,140,255,.25)", borderRadius: 8, padding: "16px 20px", marginBottom: 24 }}>
         <p style={{ fontSize: 14, fontWeight: 700, color: COLOR, margin: "0 0 6px" }}>The one rule that overrides everything else</p>
         <p style={{ fontSize: 13, color: "var(--text-muted)", margin: 0 }}>
-          If you cannot commit to paying your full credit card bill before the due date every single month, do not get a credit card yet. The rewards on any card are worth a maximum of 2-5% of your spend — credit card interest costs 42% annualised. The math is not close.
+          If you expect to carry a balance, rewards should not drive the decision: interest and charges can outweigh them. Credit-card interest depends on issuer and product; check the current MITC. Do not borrow to chase rewards.
         </p>
       </div>
 
@@ -391,7 +390,7 @@ export default function BlogFirstCardDecisionFramework() {
           Most people start by searching "best credit card India 2026" and end up choosing based on which advertisement they saw last. This guarantees a mismatch.
         </p>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
-          Instead, answer these 5 questions before looking at a single card. Your answers will filter out 90% of the market instantly.
+          Instead, answer these questions before comparing cards. They help focus the comparison on your needs, repayment habits and eligible spending.
         </p>
         <SvgFiveQuestions />
       </section>
@@ -403,17 +402,17 @@ export default function BlogFirstCardDecisionFramework() {
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           If the honest answer is "probably not every month," the correct card choice is no card — or a secured card treated exactly like a debit card. Everything else follows from there.
         </p>
-        <SvgDecisionTree />
+        <p style={{ fontSize: 14, color: "var(--text-muted)" }}>Approval depends on the issuer's current product rules and its assessment of your application. No decision tree or score threshold can predict approval.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 3: Filter by Income Band</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
-          Card eligibility in India is tightly tied to declared monthly income. Applying above your income band gets you rejected — which leaves a hard inquiry on your CIBIL file for two years.
+          Income is one eligibility factor, but issuer criteria differ. CIBIL says multiple and frequent hard enquiries may affect a score; the effect is not a fixed loss for every applicant.
         </p>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
-          The good news: no-fee cards like Amazon Pay ICICI and Axis Ace offer genuinely competitive cashback at the ₹25,000-50,000 income level. You do not need a premium card to get real value.
+          Compare each card's current eligibility rules, annual cost and eligible rewards. Do not assume a card is available at a particular income unless the issuer publishes that criterion.
         </p>
-        <SvgIncomeCardMatrix />
+        <p style={{ fontSize: 14, color: "var(--text-muted)" }}>There is no universal income band for entry, mid-tier or premium cards. Use the issuer's current criteria for the exact card and variant.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 4: Match Your Spending Pattern</h2>
@@ -428,7 +427,7 @@ export default function BlogFirstCardDecisionFramework() {
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Step 5: Apply Without Getting Rejected</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
-          Each rejected application leaves a hard inquiry on your CIBIL report and reduces your score by 5-15 points. Multiple rejections in a short window create a downward spiral — banks see a string of rejections and become more cautious.
+          A lender may record a hard enquiry when you apply. CIBIL says multiple and frequent enquiries may affect a score; it does not publish a fixed point loss for every applicant. Before applying, check the issuer's current criteria and your own repayment capacity.
         </p>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
           The right approach: use your primary bank first, check your CIBIL score before applying, and apply for exactly one card at a time.
@@ -438,12 +437,12 @@ export default function BlogFirstCardDecisionFramework() {
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>The Real Payoff: Your CIBIL Trajectory</h2>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
-          A first card applied at age 22 with ₹25,000 monthly income is not just a payment tool — it is a 5-year investment in your credit file. By age 27, with zero late payments and disciplined utilisation, you will have a 760+ CIBIL score.
+          A first card can help establish a credit history when used responsibly, but age, income and on-time payments do not guarantee a particular score or timeline. CIBIL evaluates the person's credit report; lenders also set their own product eligibility criteria.
         </p>
         <p style={{ fontSize: 15, margin: "0 0 12px" }}>
-          That score unlocks home loan rates that are 0.5-1% lower, premium credit cards without needing to negotiate, and pre-approved loan offers at will. The ₹2,000 in cashback you earn in year one is trivial compared to this.
+          Credit history is one input lenders may consider. Do not assume a card will secure a particular loan rate, premium-card offer or pre-approved loan; lenders make those decisions individually.
         </p>
-        <SvgCibilProjection />
+        <p style={{ fontSize: 14, color: "var(--text-muted)" }}>There is no reliable fixed score trajectory. CIBIL says frequent hard enquiries may affect a score; the impact depends on the person's credit file and cannot be expressed as a guaranteed point change or card-approval date.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Where You Will Be in 5 Years — The Upgrade Path</h2>
@@ -490,7 +489,7 @@ export default function BlogFirstCardDecisionFramework() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Assure Fintech is an independent comparison site. Card recommendations are based on publicly available product terms as of June 2026 and are illustrative, not personalised advice. Eligibility criteria are set by individual issuers and may change. Check official bank websites before applying. This article is not financial advice.
+        Assure Fintech is an independent comparison site. Eligibility criteria are set by individual issuers and may change. For credit enquiries, see <a href="https://www.cibil.com/blog/what-is-cibil-score" target="_blank" rel="noopener noreferrer">CIBIL's score guidance</a>; it says frequent hard enquiries may affect a score, while checking your own score does not. Check official issuer criteria before applying. Reviewed October 2, 2026.
       </footer>
     </main>
     </>

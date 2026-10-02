@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -43,7 +44,7 @@ function NoCap5PercentVisual() {
           </g>
         );
       })}
-      <text x="340" y="165" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Illustration excludes non-eligible transactions, Prime subscription cost and other card terms. Millennia cap is shared per cycle.</text>
+      <text x="340" y="165" textAnchor="middle" fill="var(--text-muted)" fontSize="10">Illustration excludes non-eligible transactions, Prime subscription cost and other card terms. Millennia cap is shared per calendar month.</text>
     </svg>
   );
 }
@@ -146,7 +147,7 @@ function WhenOtherCardsBeat() {
     >
       <text x="340" y="24" textAnchor="middle" fill="var(--text)" fontSize="13" fontWeight="700">When Another Card Beats Amazon Pay ICICI</text>
       {[
-        { label: "You use several named online merchants", card: "HDFC Millennia", reason: "5% on named merchants; ₹1,000/cycle cap" },
+        { label: "You use several named online merchants", card: "HDFC Millennia", reason: "5% on named merchants; ₹1,000/calendar-month cap" },
         { label: "You have eligible online purchases", card: "SBI Cashback", reason: "5% online; ₹2,000/cycle cap" },
         { label: "You want Amazon Pay balance rewards", card: "Amazon Pay ICICI", reason: "Amazon-linked balance; terms apply" },
       ].map((item, i) => (
@@ -172,7 +173,7 @@ export default function BestCreditCardForAmazon() {
       {
         "@type": "Question",
         name: "Which credit card gives maximum cashback on Amazon India?",
-        acceptedAnswer: { "@type": "Answer", text: "Amazon Pay ICICI currently lists 5% back for Prime members and 3% for non-Prime members on eligible Amazon India purchases, with no joining or annual fee and no limit on earnings. Exclusions apply, and Amazon earnings are credited as Amazon Pay balance. HDFC Millennia also lists 5% on Amazon within a shared cycle cap. Compare the variant, fees and purchase eligibility that fit your use." }
+        acceptedAnswer: { "@type": "Answer", text: "Amazon Pay ICICI currently lists 5% back for Prime members and 3% for non-Prime members on eligible Amazon India purchases, with no joining or annual fee and no limit on earnings. Exclusions apply, and Amazon earnings are credited as Amazon Pay balance. HDFC Millennia also lists 5% on Amazon within a shared calendar-month cap. Compare the variant, fees and purchase eligibility that fit your use." }
       },
       {
         "@type": "Question",
@@ -207,7 +208,7 @@ export default function BestCreditCardForAmazon() {
       {
         "@type": "Question",
         name: "Can I use HDFC Millennia instead of Amazon Pay ICICI for Amazon shopping?",
-        acceptedAnswer: { "@type": "Answer", text: "HDFC Millennia lists Amazon among its 10 online 5% merchants, with a maximum of ₹1,000 CashBack/CashPoints per cycle across the offer. Amazon Pay ICICI has no earnings cap according to ICICI, but its rate varies with Prime and item eligibility and pays as Amazon Pay balance. Compare combined category use and reward form." }
+        acceptedAnswer: { "@type": "Answer", text: "HDFC Millennia lists Amazon among its 10 online 5% merchants, with a maximum of ₹1,000 CashBack/CashPoints per calendar month across the offer. Amazon Pay ICICI has no earnings cap according to ICICI, but its rate varies with Prime and item eligibility and pays as Amazon Pay balance. Compare combined category use and reward form." }
       },
       {
         "@type": "Question",
@@ -221,7 +222,7 @@ export default function BestCreditCardForAmazon() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Credit Card for Amazon Shopping in India: Rewards, Fees and Exclusions",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
@@ -249,13 +250,13 @@ export default function BestCreditCardForAmazon() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Card for Amazon India
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         <Link href="/">Home</Link> / <Link href="/best/">Best Cards</Link> / Best Credit Card for Amazon
@@ -270,7 +271,7 @@ export default function BestCreditCardForAmazon() {
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
-        Last updated {UPDATED} · By Ash K · 8 min read
+        Last updated {UPDATED} · By Ash · 8 min read
       </div>
 
       <section style={{ marginBottom: 40 }}>
@@ -292,7 +293,7 @@ export default function BestCreditCardForAmazon() {
             slug: "hdfc-millennia",
             fee: "₹1,000 + taxes/yr",
             rate: "5% on Amazon and 9 other named online merchants",
-            cap: "₹1,000 CashPoints/cycle shared across categories",
+            cap: "₹1,000/calendar month across the 5% partner tier",
             badge: "Multi-merchant option",
             why: "Can suit people who use several of HDFC’s named 5% merchants. The current terms describe the accelerated reward as CashPoints, not direct statement cashback.",
             caveat: "Eligibility and cap are shared across listed merchants; non-EMI transactions only."
@@ -330,10 +331,10 @@ export default function BestCreditCardForAmazon() {
         <p>ICICI’s current FAQ lists no joining or annual fee and no limit on earnings. On eligible Amazon India purchases it lists 5% for Prime members and 3% for non-Prime members; digital products and gift cards earn 2% regardless of Prime status. Amazon EMI purchases and several other categories earn no rewards.</p>
         <p>Amazon Pay partner-site purchases earn 2% when you use the specific “Login and Pay with Amazon” route. Other eligible payments earn 1%. Rewards are credited to Amazon Pay balance, not a bank account. Check the issuer’s exclusions and eligible payment path before relying on a headline rate.</p>
         <TrifectaExplainer />
-        <p style={{ marginTop: 12 }}>At ₹15,000 of fully eligible Amazon purchases in a month, the headline reward would be ₹750 for a Prime Amazon Pay ICICI cardholder or ₹450 for a non-Prime cardholder. HDFC Millennia’s nominal 5% at that spend is constrained by its ₹1,000 CashPoints-per-cycle cap across ten merchants; fees and other category use matter too.</p>
+        <p style={{ marginTop: 12 }}>At ₹15,000 of fully eligible Amazon purchases in a month, the headline reward would be ₹750 for a Prime Amazon Pay ICICI cardholder or ₹450 for a non-Prime cardholder. HDFC Millennia’s nominal 5% at that spend is constrained by its ₹1,000 CashPoints-per-calendar-month cap across ten merchants; fees and other category use matter too.</p>
         <p>There is no single comparison that fits every user: Amazon Pay ICICI credits Amazon Pay balance, while Millennia rewards are CashPoints and SBI Cashback has separate online/offline caps and exclusions. See our <Link href="/blog/cashback-rate-is-a-lie">cap structure explainer</Link> before treating a headline rate as money saved.</p>
         <NoCap5PercentVisual />
-        <p style={{ marginTop: 12 }}>This is an illustration for eligible purchases at the Prime 5% Amazon Pay ICICI rate and HDFC Millennia’s 5% rate, capped at ₹1,000 per cycle across its named merchants. It excludes Prime subscription cost, fees, other category spend and reward exclusions.</p>
+        <p style={{ marginTop: 12 }}>This is an illustration for eligible purchases at the Prime 5% Amazon Pay ICICI rate and HDFC Millennia’s 5% rate, capped at ₹1,000 per calendar month across its named merchants. It excludes Prime subscription cost, fees, other category spend and reward exclusions.</p>
       </section>
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>The Amazon Sale Strategy</h2>
@@ -401,6 +402,7 @@ export default function BestCreditCardForAmazon() {
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
         <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. All card terms, rates, and caps are based on issuer terms as of {UPDATED}. Cashback rates, partner merchant lists, and monthly caps can change without notice. Amazon Pay cashback is credited as Amazon Pay balance, not bank account credit. Verify current terms with ICICI Bank and Amazon before applying. This is not financial advice.
       </footer>
+    <GuideCardRules slug="credit-card-for-amazon" />
     </main>
     </>
   );

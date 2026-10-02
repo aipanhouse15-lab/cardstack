@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -60,9 +61,9 @@ function DiningVsDeliveryExplainer() {
 
 function DiningRewardRateChart() {
   const cards = [
-    { name: "HSBC Live+", rate: 10, cap: "₹1,000/mo shared cap", type: "Restaurant" },
+    { name: "HSBC Live+", rate: 10, cap: "₹1,200/mo shared cap", type: "Restaurant" },
     { name: "Axis ACE", rate: 4, cap: "Swiggy/Zomato/Ola", type: "Delivery" },
-    { name: "BOB Eterna", rate: 3.75, cap: "Check points cap", type: "Restaurant" },
+    { name: "BOB Eterna", rate: 3.75, cap: "5,000 pts/cycle shared", type: "Restaurant" },
     { name: "SBI SimplySAVE", rate: 1.67, cap: "5,000 bonus-points cap/mo", type: "Restaurant" },
   ];
   return (
@@ -116,8 +117,8 @@ function HighSpendDinerMathTable() {
       ))}
       <line x1="12" y1="54" x2="668" y2="54" stroke="var(--border)" strokeWidth="1" />
       {[
-        { card: "HSBC Live+", rate: "10%", cap: "₹1,000/mo shared", monthly: "₹1,000 max", annual: "₹12,000 max", highlight: false },
-        { card: "BOB Eterna", rate: "3.75%*", cap: "Check current points cap", monthly: "₹750*", annual: "₹9,000*", highlight: true },
+        { card: "HSBC Live+", rate: "10%", cap: "₹1,200/mo shared", monthly: "₹1,200 max", annual: "₹14,400 max", highlight: false },
+        { card: "BOB Eterna", rate: "3.75%*", cap: "5,000 pts/cycle shared", monthly: "₹750*", annual: "₹9,000*", highlight: true },
         { card: "SBI SimplySAVE", rate: "Up to 1.67%*", cap: "5,000-point monthly cap", monthly: "Up to ₹333*", annual: "Up to ₹4,000*", highlight: false },
         { card: "Swiggy HDFC", rate: "10%**", cap: "₹1,500/cycle", monthly: "₹1,500 max", annual: "₹18,000 max", highlight: false },
       ].map((r, i) => (
@@ -181,7 +182,7 @@ function DiningCardDecisionMatrix() {
         <text key={h} x={[24, 160, 310, 450][i]} y="55" fontSize="11" fontWeight="700" fill="var(--text)">{h}</text>
       ))}
       {[
-        { spend: "Any spend", use: "Dining/delivery/grocery", card: "HSBC Live+", why: "10% eligible; ₹1,000 shared monthly cap" },
+        { spend: "Within shared cap", use: "Eligible dining/delivery/grocery/shopping/utilities", card: "HSBC Live+", why: "10% eligible; ₹1,200 shared monthly cap" },
         { spend: "Swiggy app user", use: "Delivery or Dineout via Swiggy", card: "Swiggy HDFC", why: "10% eligible app spend; ₹1,500/cycle cap" },
         { spend: "Eligible partner spend", use: "Swiggy/Zomato/Ola", card: "Axis ACE", why: "4%; ₹500 shared cap with utility tier" },
         { spend: "Points preferred", use: "Dining at eligible merchants", card: "BOB Eterna / SBI SimplySAVE", why: "Compare point value, caps, fee and eligibility" },
@@ -208,7 +209,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "Which credit card gives best rewards on restaurant dining in India?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HSBC Live+ advertises 10% accelerated cashback on eligible dining, food delivery and grocery, up to ₹1,000 a month, plus 1.5% on most other eligible spends. Its fee is ₹999 and the renewal fee is waived when annual spends exceed ₹2 lakh. Verify the current terms and your eligible spend mix.",
+          text: "HSBC Live+ offers 10% on eligible dining, food delivery, groceries, specified shopping and utilities, sharing a ₹1,200 monthly cap. Other eligible spending earns 1.5%; accelerated spending earns no further cashback after its cap. The fee is ₹999, waived on annual spend above ₹2 lakh.",
         },
       },
       {
@@ -232,7 +233,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "How does HSBC Live+ dining cashback actually work?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "HSBC says Live+ earns 10% accelerated cashback, up to ₹1,000 a month, on dining, food delivery and grocery, plus 1.5% unlimited cashback on most other eligible spends. The ₹999 annual fee is waived when annual spends exceed ₹2 lakh. Exclusions apply, so read the current terms.",
+          text: "Eligible dining shares Live+'s ₹1,200 monthly 10% cap with food delivery, groceries, specified shopping and utilities. No further cashback applies to accelerated spending after this cap; the 1.5% rate belongs to other eligible spending. The ₹999 fee is waived on annual spend above ₹2 lakh.",
         },
       },
       {
@@ -240,7 +241,7 @@ export default function BestCreditCardForDiningRestaurants() {
         name: "Is BOB Eterna good for dining?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "BOBCARD Eterna advertises accelerated dining rewards; its product information lists 15 reward points per ₹100 for dining and values each point at ₹0.25 (3.75% arithmetic before eligibility, caps and fees). The issuer lists ₹2,499 first-year and annual fees. Check current reward caps and fee terms before comparing net value.",
+          text: "BOBCARD Eterna advertises accelerated dining rewards; its product information lists 15 reward points per ₹100 for dining and values each point at ₹0.25 (3.75% arithmetic before eligibility, caps and fees). From September 2026 the issuer advertises ₹0 joining/first-year fee; standard renewal is ₹2,499, waived at ₹2.5 lakh qualifying annual spend. Its 5,000 accelerated points/cycle cap is shared across qualifying categories. Check current reward caps and fee terms before comparing net value.",
         },
       },
       {
@@ -282,7 +283,7 @@ export default function BestCreditCardForDiningRestaurants() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Dining Credit Cards: Compare Restaurant and Delivery Rewards",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
@@ -315,7 +316,7 @@ export default function BestCreditCardForDiningRestaurants() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Card for Dining and Restaurants in India (September 2026)
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
       </div>
     <main
@@ -328,9 +329,9 @@ export default function BestCreditCardForDiningRestaurants() {
         lineHeight: 1.6,
       }}
     >
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>
         <Link href="/">Home</Link> / <Link href="/best/">Best Cards</Link> / Best Credit Card for Dining and Restaurants
@@ -358,7 +359,7 @@ export default function BestCreditCardForDiningRestaurants() {
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
-        Last updated {UPDATED} · By Ash K · 8 min read
+        Last updated {UPDATED} · By Ash · 8 min read
       </div>
 
       <DiningVsDeliveryExplainer />
@@ -389,7 +390,7 @@ export default function BestCreditCardForDiningRestaurants() {
             name: "HSBC Live+",
             tag: "High rate; shared cap",
             fee: "₹999 joining/annual; renewal waiver above ₹2L spend",
-            reward: "10% dining/delivery/grocery; ₹1,000/month accelerated cap",
+            reward: "10% eligible dining; ₹1,200/month shared accelerated cap",
             best: "Eligible dining spend before the shared cap is used",
             slug: "hsbc-live-plus",
           },
@@ -397,7 +398,7 @@ export default function BestCreditCardForDiningRestaurants() {
             rank: "2",
             name: "BOB Eterna",
             tag: "Points-based dining rate",
-            fee: "₹2,499 joining and annual fee per issuer page",
+            fee: "₹0 joining/first-year offer; ₹2,499 renewal with ₹2.5L spend waiver",
             reward: "15 reward points/₹100 on dining; point value and caps apply",
             best: "Compare current points cap and redemption value first",
             slug: "bob-eterna",
@@ -415,10 +416,10 @@ export default function BestCreditCardForDiningRestaurants() {
             rank: "4",
             name: "SBI Card ELITE",
             tag: "Check current rewards terms",
-            fee: "₹4,999/yr",
-            reward: "Points-based; category and redemption rules apply",
-            best: "Compare eligible reward value against the annual fee",
-            slug: "sbi-card-elite",
+            fee: "₹4,999 + tax; standard renewal waiver at ₹10L eligible preceding-year spend",
+            reward: "No estimate: current complete earning and redemption terms remain under review",
+            best: "Not ranked until current full terms are reconciled",
+            slug: "sbi-elite",
           },
           {
             rank: "5",
@@ -489,13 +490,13 @@ export default function BestCreditCardForDiningRestaurants() {
           HSBC Live+: The 10% Card That Fills Up Fast
         </h2>
         <p>
-          HSBC currently describes 10% accelerated cashback on eligible dining, food delivery and grocery spends, up to ₹1,000 per month, plus 1.5% cashback on most other eligible spends. The issuer lists a ₹999 annual fee, waived when annual spends exceed ₹2 lakh. Check eligibility and exclusions in current terms.
+          HSBC offers 10% on eligible dining, food delivery, groceries, specified shopping and utilities, sharing a ₹1,200 monthly cap. The 1.5% rate applies to other eligible spending, not accelerated spending above the cap. The ₹999 annual fee is waived on annual spends above ₹2 lakh.
         </p>
         <p>
-          The ₹1,000 accelerated cap is shared across dining, food delivery and grocery. Shopping or utilities should not be counted toward that accelerated pool based on the current product information. Compare your eligible spend—not the headline percentage alone.
+          The ₹1,200 accelerated cap is shared across all five eligible categories. Shopping eligibility depends on HSBC's specified merchant-category codes. For example, ₹6,000 of grocery spend uses ₹600 of the cap, leaving ₹600 for dining and other accelerated spending that month.
         </p>
         <p>
-          For frequent diners, the cap can be shared with eligible food delivery and grocery spend, leaving less than ₹1,000 for restaurant dining. Compare alternatives only after accounting for their points redemption value, caps and annual fees.
+          ₹12,000 of eligible accelerated spending exhausts the ₹1,200 cap. Further spending in these categories earns no cashback that month. Compare alternatives using redemption value, caps and annual fees rather than assuming a 1.5% fallback.
         </p>
       </section>
 
@@ -507,7 +508,7 @@ export default function BestCreditCardForDiningRestaurants() {
           BOB Eterna: The Underrated All-Rounder
         </h2>
         <p>
-          BOBCARD Eterna's product material advertises 15 reward points per ₹100 on dining and states a value of ₹0.25 per point, or 3.75% arithmetic before eligibility, caps, fees and redemption conditions. The issuer page lists a ₹2,499 first-year and annual fee; confirm any current offer and reward cap before applying.
+          BOBCARD Eterna's product material advertises 15 reward points per ₹100 on dining and states a value of ₹0.25 per point, or 3.75% arithmetic before eligibility, caps, fees and redemption conditions. The current offer lists ₹0 joining/first-year fee from September 2026, then ₹2,499 renewal with a ₹2.5 lakh spend waiver. Accelerated earning shares a 5,000-point statement-cycle ceiling; excess eligible spending earns base points.
         </p>
         <p>
           At ₹20,000/month, 3.75% would be ₹750/month only if all transactions qualify and the reward cap is not reached. This gross illustration excludes fees and other restrictions; it is not a guaranteed net return.
@@ -535,7 +536,7 @@ export default function BestCreditCardForDiningRestaurants() {
           The practical workaround is to monitor your reward credits for the first 2-3 transactions at a new dining venue and confirm the category credited. Banks like HDFC and Axis show the category on the Rewards portal. If you see hotel or services rather than dining, the merchant has registered under a different MCC.
         </p>
         <p>
-          See our detailed explainer: <Link href="/blog/credit-card-mcc-dining-restaurants-india">MCC Codes for Restaurants in India: What Triggers Dining Rewards</Link>.
+          See our detailed explainer: <Link href="/blog/minimum-transaction-traps">Merchant categories and minimum-transaction rules</Link>.
         </p>
       </section>
 
@@ -555,7 +556,7 @@ export default function BestCreditCardForDiningRestaurants() {
             <strong>Estimate your actual monthly restaurant spend</strong> (excluding food delivery apps). This single number determines your best card.
           </li>
           <li>
-            <strong>For eligible dining under the HSBC cap:</strong> Live+ advertises 10% on dining, delivery and groceries, up to ₹1,000/month combined across those categories; grocery or delivery spend may use part of the cap.
+            <strong>For eligible dining under the HSBC cap:</strong> Live+ offers 10%, sharing a ₹1,200/month cap with food delivery, groceries, specified shopping and utilities. Subtract cashback used by those categories before estimating your remaining dining benefit.
           </li>
           <li>
             <strong>For higher restaurant spend:</strong> compare HSBC's remaining accelerated cap with a points card such as Eterna, after verifying its points cap, redemption value and annual fee.
@@ -597,7 +598,7 @@ export default function BestCreditCardForDiningRestaurants() {
           <li><Link href="/cards/hsbc-live-plus">HSBC Live+ Full Review and Benefits</Link></li>
           <li><Link href="/cards/bob-eterna">BOB Eterna Card Review 2026</Link></li>
           <li><Link href="/best/credit-card-for-utility-bills">Best Credit Card for Utility Bills (Axis ACE)</Link></li>
-          <li><Link href="/blog/swiggy-zomato-cashback-best-cards">Best Cards for Swiggy and Zomato in India 2026</Link></li>
+          <li><Link href="/best/credit-card-for-swiggy-zomato">Best Cards for Swiggy and Zomato in India 2026</Link></li>
           <li><Link href="/stack-builder">Build Your Card Stack</Link></li>
         </ul>
       </section>
@@ -606,6 +607,7 @@ export default function BestCreditCardForDiningRestaurants() {
         <p>Issuer references: <a href={SOURCES.hsbc} target="_blank" rel="noreferrer">HSBC Live+ cashback details</a> · <a href={SOURCES.bob} target="_blank" rel="noreferrer">Bank of Baroda Eterna details</a> · <a href={SOURCES.bobcard} target="_blank" rel="noreferrer">BOBCARD Eterna rewards/fees</a> · <a href={SOURCES.swiggy} target="_blank" rel="noreferrer">Swiggy HDFC terms</a> · <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI SimplySAVE UPI/rewards terms</a>.</p>
         <strong>Disclaimer:</strong> Assure Fintech is an independent editorial platform. We are not affiliated with any bank and do not hold a banking license. Reward rates and monthly caps on all cards mentioned are subject to change by the issuing bank without notice. Verify current terms before applying. Some links may generate referral commissions that do not affect our editorial independence.
       </footer>
+    <GuideCardRules slug="best-credit-card-for-dining-restaurants" />
     </main>
     </>
   );

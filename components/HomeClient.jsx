@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { CARDS, CATEGORIES } from "@/data/cards";
+import { CARDS, CATEGORIES, isRecommendable } from "@/data/cards";
 import BankLogo from "@/components/BankLogo";
 
 /* ════════════════════════════════════════════════════
@@ -49,7 +49,7 @@ const HOW_STEPS = [
 ];
 
 // Get some popular cards for display
-const POPULAR = CARDS.filter(c => ["sbi-cashback", "hdfc-regalia", "axis-ace", "amazon-icici", "hdfc-millennia", "onecard", "au-zenith", "icici-sapphiro"].includes(c.id)).slice(0, 8);
+const POPULAR = CARDS.filter(c => ["sbi-cashback", "hdfc-regalia", "axis-ace", "amazon-icici", "hdfc-millennia", "onecard", "au-zenith", "icici-sapphiro"].includes(c.id) && isRecommendable(c)).slice(0, 8);
 
 export default function HomeClient() {
   const [rvReady, setRvReady] = useState(false);
@@ -237,7 +237,7 @@ export default function HomeClient() {
                   </div>
                   <h5>{card.name}</h5>
                   <div className="meta">
-                    <span className="r">{maxR}%</span>
+                    <span className="r">{card.estimateReady ? `${maxR}%` : "Earn rules"}</span>
                     <span className="f">{card.fee === 0 ? "FREE" : `₹${card.fee.toLocaleString()}`}</span>
                   </div>
                 </Link>
@@ -258,9 +258,9 @@ export default function HomeClient() {
               We publish <em>the second one.</em>
             </h2>
             <p style={{ color: "var(--mut)", fontSize: 16, marginTop: 28, maxWidth: 640, lineHeight: 1.7 }}>
-              No account required. No login walls. No sponsored rankings. Every verified rate on this site is checked 
-              against the product&apos;s MITC, terms, and fine print. When we confirm a change, we update the
-              record and its verification status.
+              No account required. No login walls. No sponsored rankings. Our worked examples show the spending,
+              redemption and cap assumptions behind the result. Card reviews link to issuer sources;
+              products with incomplete reward models stay outside automated rankings.
             </p>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -264,7 +265,7 @@ export default function BestCreditCardForInternationalSpending() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Credit Card for International Spending in India (September 2026 Review)",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
@@ -297,7 +298,7 @@ export default function BestCreditCardForInternationalSpending() {
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
             Best Credit Card for International Spending in India (September 2026 Review)
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 8 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
       </div>
     <main
@@ -310,9 +311,9 @@ export default function BestCreditCardForInternationalSpending() {
         lineHeight: 1.6,
       }}
     >
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>
         <Link href="/">Home</Link> / <Link href="/best/">Best Cards</Link> / Best Credit Card for International Spending
@@ -340,7 +341,7 @@ export default function BestCreditCardForInternationalSpending() {
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
-        Last updated {UPDATED} · By Ash K · 8 min read
+        Last updated {UPDATED} · By Ash · 8 min read
       </div>
 
       <ForexMarkupExplainer />
@@ -625,6 +626,7 @@ export default function BestCreditCardForInternationalSpending() {
       >
         <strong>Disclaimer:</strong> Assure Fintech is an independent editorial platform and does not hold a banking license. Nothing on this page constitutes financial advice regulated under SEBI or RBI. Forex markup rates, reward structures, and card terms change frequently. Always verify current terms with the issuing bank before applying or traveling. Some links may earn us a referral commission that does not affect our editorial stance.
       </footer>
+    <GuideCardRules slug="credit-card-for-international-spending" />
     </main>
     </>
   );

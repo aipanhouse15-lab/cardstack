@@ -41,7 +41,8 @@ export default function BlogPostPage({ params }) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    author: { "@type": "Person", name: "Ash K" },
+    ...(post.updatedAt ? { dateModified: post.updatedAt } : {}),
+    author: { "@type": "Person", name: "Ash" },
     publisher: { "@type": "Organization", name: "Assure Fintech" },
     articleSection: post.category,
   };
@@ -69,8 +70,9 @@ export default function BlogPostPage({ params }) {
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-4 flex-wrap">
             <span className="text-xs font-semibold rounded-md px-2.5 py-1" style={{ color: post.color, background: `${post.color}12` }}>{post.category}</span>
-            <span className="text-sm" style={{ color: "var(--text-faint)" }}>By <span className="font-semibold" style={{ color: "var(--text-muted)" }}>Ash K</span></span>
+            <span className="text-sm" style={{ color: "var(--text-faint)" }}>By <span className="font-semibold" style={{ color: "var(--text-muted)" }}>Ash</span></span>
             <span className="text-sm" style={{ color: "var(--text-faint)" }}>{post.date}</span>
+            {post.updatedAt && <span className="text-sm" style={{ color: "var(--text-faint)" }}>· Updated {new Date(`${post.updatedAt}T00:00:00`).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric", timeZone: "Asia/Kolkata" })}</span>}
             <span className="text-sm" style={{ color: "var(--text-faint)" }}>· {post.readTime} read</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight mb-4" style={{ color: "var(--text)" }}>
@@ -90,6 +92,11 @@ export default function BlogPostPage({ params }) {
             }
             if (block.type === "h3") {
               return <h3 key={i} className="text-lg font-bold mt-6 mb-2" style={{ color: "var(--text)" }}>{block.text}</h3>;
+            }
+            if (block.type === "sources") {
+              return <ul key={i} className="list-disc pl-6 mb-4 space-y-1" style={{ color: "var(--text-secondary)" }} aria-label="Sources">
+                {block.sources.map(source => <li key={source.href}><a href={source.href} target="_blank" rel="noopener noreferrer" className="underline">{source.label} ↗</a></li>)}
+              </ul>;
             }
             return <p key={i} className="text-base leading-relaxed mb-4" style={{ color: "var(--text-secondary)" }}>{block.text}</p>;
           })}

@@ -1,12 +1,13 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Fuel in India (September 2026)",
+  title: "Best Credit Card for Fuel in India (October 2026)",
   description: "Compare fuel cards by pump-brand eligibility, reward caps, surcharge-waiver limits and annual fees.",
   alternates: { canonical: "/best/credit-card-for-fuel" },
   openGraph: {
-    title: "Best Credit Card for Fuel in India (September 2026)",
+    title: "Best Credit Card for Fuel in India (October 2026)",
     description: "Compare fuel cards by pump-brand eligibility, reward caps, surcharge-waiver limits and annual fees.",
     type: "article",
     siteName: "Assure Fintech",
@@ -15,13 +16,14 @@ export const metadata = {
 
 
 // /best/credit-card-for-fuel
-// Updated: September 26, 2026
+// Updated: October 2, 2026
 
 const COLOR = "#dc2626";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 2, 2026";
 const SOURCES = {
-  sbi: "https://www.sbicard.com/en/personal/credit-cards/travel/bpcl-sbi-card-octane.page",
+  sbi: "https://www.sbicard.com/en/personal/credit-cards/bpcl-sbi-card-octane.html",
   sbiFees: "https://www.sbicard.com/en/most-important-terms-and-conditions.page",
+  sbiLounge: "https://www.sbicard.com/en/personal/benefits/airport-lounge-access.page",
   axis: "https://www.axis.bank.in/cards/credit-card/indianoil-axis-bank-credit-card",
   icici: "https://www.icici.bank.in/personal-banking/cards/credit-card/hpcl-super-saver",
 };
@@ -275,10 +277,10 @@ export default function BestCreditCardForFuel() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for Fuel in India (September 2026)",
-    author: { "@type": "Person", name: "Ash K" },
+    headline: "Best Credit Card for Fuel in India (October 2026)",
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-02",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -302,15 +304,15 @@ export default function BestCreditCardForFuel() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for Fuel in India (September 2026)
+            Best Credit Card for Fuel in India (October 2026)
           </h1>
-          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash K · 9 min read</div>
+          <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 9 min read</div>
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
         <Link href="/">Home</Link> / <Link href="/best/">Best Cards</Link> / Best Credit Card for Fuel
@@ -325,7 +327,7 @@ export default function BestCreditCardForFuel() {
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}>
-        Last updated {UPDATED} · By Ash K · 9 min read
+        Last updated {UPDATED} · By Ash · 9 min read
       </div>
 
       <section style={{ marginBottom: 40 }}>
@@ -340,7 +342,7 @@ export default function BestCreditCardForFuel() {
             cap: "2,500 fuel points/billing cycle; 4 points = ₹1 fuel value",
             badge: "High headline earn (points)",
             why: "The fuel earn is reward points, not direct cashback: SBI's fuel redemption value is 4 points = ₹1. The 2,500-point billing-cycle cap is important when estimating value.",
-            caveat: "Confirm eligible BPCL transactions, the billing-cycle points cap, current surcharge-waiver limits and your preferred redemption value."
+            caveat: "Confirm eligible BPCL transactions, the billing-cycle points cap, current surcharge-waiver limits and your preferred redemption value. SBI lists Octane in its current Set A lounge programme, but its current public lounge page does not state the card's visit quota."
           },
           {
             name: "Axis Bank IOCL Credit Card",
@@ -457,8 +459,9 @@ export default function BestCreditCardForFuel() {
       </p>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
-        <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Card-specific surcharge terms, reward rates, point values, caps and eligible transaction ranges can change; check issuer terms and your statements before applying. Sources: <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI BPCL Octane</a> · <a href={SOURCES.sbiFees} target="_blank" rel="noreferrer">SBI fees and MITC</a> · <a href={SOURCES.axis} target="_blank" rel="noreferrer">Axis IndianOil card</a> · <a href={SOURCES.icici} target="_blank" rel="noreferrer">ICICI HPCL Super Saver</a>. BPCL, IOCL, and HPCL are public sector undertakings and brand partnerships are subject to change. This is not financial advice.
+        <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Card-specific surcharge terms, reward rates, point values, caps and eligible transaction ranges can change; check issuer terms and your statements before applying. Sources: <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI BPCL Octane</a> · <a href={SOURCES.sbiFees} target="_blank" rel="noreferrer">SBI fees and MITC</a> · <a href={SOURCES.sbiLounge} target="_blank" rel="noreferrer">SBI lounge programme</a> · <a href={SOURCES.axis} target="_blank" rel="noreferrer">Axis IndianOil card</a> · <a href={SOURCES.icici} target="_blank" rel="noreferrer">ICICI HPCL Super Saver</a>. BPCL, IOCL, and HPCL are public sector undertakings and brand partnerships are subject to change. This is not financial advice.
       </footer>
+    <GuideCardRules slug="credit-card-for-fuel" />
     </main>
     </>
   );

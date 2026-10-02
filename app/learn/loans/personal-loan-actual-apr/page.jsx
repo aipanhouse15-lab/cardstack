@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -41,7 +42,7 @@ const faq = {
 };
 
 export default function PagePersonalLoanAPR() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Personal Loan Cost: How to Compare Rates, Fees and Disbursal", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Personal Loan Cost: How to Compare Rates, Fees and Disbursal", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -115,7 +116,7 @@ export default function PagePersonalLoanAPR() {
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/loans" style={{ color: COLOR }}>loans hub</Link> · <Link href="/loan-calculator" style={{ color: COLOR }}>loan calculator</Link> · <Link href="/learn/loans/prepayment-penalty-trap" style={{ color: COLOR }}>prepayment guide</Link></p>
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This guide is general information, not a lender quote or financial advice. Confirm current charges, disclosures, eligibility and applicable rules directly with the lender before accepting an offer.</footer>
-      </main>
+      <GuidePractice topic="loans/personal-loan-actual-apr" /></main>
     </>
   );
 }

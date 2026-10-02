@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -46,7 +47,7 @@ const faq = {
 };
 
 export default function BestFdRates2026() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "How to Compare Fixed Deposit Rates and Offers", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-03", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "How to Compare Fixed Deposit Rates and Offers", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-03", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -114,7 +115,7 @@ export default function BestFdRates2026() {
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/savings" style={{ color: COLOR }}>savings guides</Link> · <Link href="/learn/savings/fd-real-return" style={{ color: COLOR }}>FD real-return guide</Link> · <Link href="/fd-calculator" style={{ color: COLOR }}>FD calculator</Link></p>
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This guide does not rank live FD offers or guarantee returns. Rates, eligibility, issuer terms, insurance rules and tax treatment can change. Confirm the product documents and current official guidance before depositing.</footer>
-      </main>
+      <GuidePractice topic="savings/best-fd-rates-2026" /></main>
     </>
   );
 }

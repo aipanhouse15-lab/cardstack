@@ -1,6 +1,8 @@
-import { CARDS, CATEGORIES, isSourceReviewed } from "@/data/cards";
+import { CARDS, CATEGORIES, isSourceReviewed, isEstimateReady } from "@/data/cards";
+import { reviewedEditorial } from "@/data/reviewed-editorial";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import PendingCardRecord from "@/components/PendingCardRecord";
 
 /* ── Static generation ── */
 export async function generateStaticParams() {
@@ -11,14 +13,18 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const card = CARDS.find(c => c.id === params.id);
   if (!card) return { title: "Card Not Found" };
-  const ed = card.editorial || null;
+  if (!isSourceReviewed(card)) return {
+    title: `${card.name} — Product Record`,
+    description: `Historical catalogue reference for ${card.name}; current variant and product terms are being reconciled.`,
+    alternates: { canonical: `/cards/${card.id}` },
+    robots: { index: false, follow: true },
+  };
+  const ed = reviewedEditorial(card) || card.editorial || null;
   const sorted = Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1]);
   const maxRate = sorted[0]?.[1] || 0;
   const bestCat = sorted[0]?.[0] || "";
-  const pageTitle = `${card.name} Review — Rewards, Fees, Caps & Best Combos (2026)`;
-  const pageDesc = ed?.verdict?.headline
-    ? `${card.name}: ${ed.verdict.headline} Full review with cap math, best uses, what to avoid, and ideal card pairings.`
-    : `${card.name} by ${card.bank}: ${card.fee === 0 ? "Lifetime free" : `₹${card.fee}/year`}. Best for ${bestCat} at ${maxRate}%. Full review with pros, cons, and reward breakdown.`;
+  const pageTitle = `${card.name} Review — Earn Rules, Redemption, Fees & Caps (2026)`;
+  const pageDesc = `Compare ${card.name} earn rules, redemption choices, renewal costs and exclusions. ${isEstimateReady(card) ? "Includes illustrative reward values and assumptions." : "Cash-value calculations are not available for this record."}`;
   return {
     title: pageTitle,
     description: pageDesc,
@@ -28,31 +34,12 @@ export async function generateMetadata({ params }) {
   };
 }
 
-/* ── Honest Score — derived from card data ── */
-function honestScore(card, maxRate) {
-  let s = 5.0;
-  s += Math.min(maxRate * 0.5, 2.5);                                       // reward quality (0–2.5)
-  s += card.fee === 0 ? 1.5 : card.feeWaiver && card.feeWaiver !== "None" ? 0.5 : card.fee > 2000 ? -0.5 : 0; // fee
-  s += card.lounge && card.lounge !== "None" && card.lounge !== "0" ? 0.5 : 0; // lounge
-  s += Math.min((card.pros.length - card.cons.length) * 0.3, 1.0);         // sentiment
-  if (card.caps?.monthlyCashback && card.caps.monthlyCashback <= 500) s -= 0.8; // harsh cap
-  return Math.min(9.5, Math.max(2.0, Math.round(s * 10) / 10));
-}
-
-/* ── Score color ── */
-function scoreColor(s) {
-  if (s >= 7.5) return "var(--green)";
-  if (s >= 5.5) return "var(--gold)";
-  return "var(--red)";
-}
-
 /* ── TOC sections ── */
 function tocSections(card) {
-  const ed = card.editorial || null;
-  const items = [
-    { id: "verdict", label: "Verdict" },
-    { id: "rewards", label: "Reward rates" },
-  ];
+  const ed = reviewedEditorial(card) || card.editorial || null;
+  const items = [];
+  if (ed?.verdict) items.push({ id: "verdict", label: "Verdict" });
+  items.push({ id: "rewards", label: "Reward rates" });
   if (ed?.capMath) items.push({ id: "caps", label: "Cap terms" });
   if (card.partnerRates?.length) items.push({ id: "partners", label: "Partner rates" });
   items.push({ id: "proscons", label: "Pros & cons" });
@@ -70,14 +57,14 @@ function tocSections(card) {
 export default function CardPage({ params }) {
   const card = CARDS.find(c => c.id === params.id);
   if (!card) notFound();
+  if (!isSourceReviewed(card)) return <PendingCardRecord card={card} />;
   const sourceReviewed = isSourceReviewed(card);
+  const estimateReady = isEstimateReady(card);
 
   const sorted = Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1]);
   const maxRate = sorted[0]?.[1] || 0;
   const bestCategory = sorted[0]?.[0] || "";
-  const ed = card.editorial || null;
-  const score = honestScore(card, maxRate);
-  const sColor = scoreColor(score);
+  const ed = reviewedEditorial(card) || card.editorial || null;
   const toc = tocSections(card);
 
   // Issuer caps use different categories and periods; a universal curve would
@@ -87,15 +74,14 @@ export default function CardPage({ params }) {
   /* ── JSON-LD ── */
   const cardSchema = {
     "@context": "https://schema.org", "@type": "FinancialProduct", name: card.name,
-    description: `${card.name} by ${card.bank}. ${card.type} credit card with up to ${maxRate}% rewards on ${bestCategory}. ${card.fee === 0 ? "Lifetime free." : `Annual fee: ₹${card.fee}.`} ${card.highlights.join(". ")}.`,
+    description: `${card.name} by ${card.bank}. ${card.pointsInfo || card.highlights.join(". ")}.`,
     brand: { "@type": "Organization", name: card.bank }, category: "Credit Card",
-    offers: { "@type": "Offer", price: card.fee, priceCurrency: "INR", description: card.fee === 0 ? "Lifetime free" : `Annual fee: ₹${card.fee}` },
+    offers: { "@type": "Offer", price: card.firstYearAnnualFee === 0 ? card.joiningFee : card.fee, priceCurrency: "INR", description: `${card.feeScheduleNote || `Annual fee: ₹${card.fee}; joining fee ${card.joiningFee === undefined ? "subject to issuer offer" : `₹${card.joiningFee} ${card.joiningFeeIncludesTax ? "including GST" : "before tax"}`}.`} ${card.feeWaiver}` },
     additionalProperty: [
       { "@type": "PropertyValue", name: "Card Type", value: card.type },
       { "@type": "PropertyValue", name: "Card Network", value: card.network },
       { "@type": "PropertyValue", name: "Lounge Access", value: card.lounge },
-      { "@type": "PropertyValue", name: "Best Reward Rate", value: `${maxRate}%` },
-      ...sorted.map(([catId, rate]) => ({ "@type": "PropertyValue", name: `${catId.charAt(0).toUpperCase() + catId.slice(1)} Reward Rate`, value: `${rate}%` })),
+      ...(estimateReady ? sorted.map(([catId, rate]) => ({ "@type": "PropertyValue", name: `${catId} Illustrative Reward Value`, value: `${rate}%` })) : []),
     ],
     feesAndCommissionsSpecification: card.fee === 0 ? "No annual fee" : `Annual fee of ₹${card.fee}`,
     areaServed: { "@type": "Country", name: "India" },
@@ -120,9 +106,6 @@ export default function CardPage({ params }) {
     "@context": "https://schema.org", "@type": "FAQPage",
     mainEntity: ed.faq.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
   } : null;
-
-  /* ── Circumference for score ring ── */
-  const R = 58, C = 2 * Math.PI * R, dash = (score / 10) * C;
 
   return (
     <>
@@ -178,7 +161,7 @@ export default function CardPage({ params }) {
               {!/credit card/i.test(card.name) && <span style={{ color: "var(--dim)" }}> Credit Card</span>}
             </h1>
             <p style={{ color: "var(--mut)", fontSize: 16, lineHeight: 1.6, maxWidth: 480, marginBottom: 20 }}>
-              {ed?.verdict?.headline || `${card.bank} ${card.type.toLowerCase()} card with up to ${maxRate}% rewards on ${bestCategory}.`}
+              {ed?.verdict?.headline || `${card.bank} ${card.type.toLowerCase()} card: compare earn rules, redemption choices and renewal costs.`}
             </p>
             <p className="mono" style={{ fontSize: 12, color: "var(--dim)", letterSpacing: ".06em" }}>
               By <span style={{ color: "var(--mut)" }}>Ash</span> · {sourceReviewed ? `Issuer source linked ${card.reviewedAt}` : "Issuer-source review pending"}
@@ -195,7 +178,7 @@ export default function CardPage({ params }) {
               <div style={{ position: "absolute", bottom: 26, left: 26 }}>
                 <div className="disp" style={{ fontSize: 18, fontWeight: 500, opacity: 0.9 }}>{card.name}</div>
                 <div className="mono" style={{ fontSize: 10, opacity: 0.5, marginTop: 4 }}>
-                  {card.fee === 0 ? "LIFETIME FREE" : `₹${card.fee.toLocaleString()}/YR`}
+                  {card.fee === 0 ? "NO ANNUAL FEE" : `₹${card.fee.toLocaleString()}/YR`}
                 </div>
               </div>
             </div>
@@ -210,9 +193,14 @@ export default function CardPage({ params }) {
               <div className="k accent" style={{ marginBottom: 6 }}>ISSUER INFORMATION</div>
               <p style={{ color: "var(--mut)", margin: 0, fontSize: 14 }}>Check the issuer’s current card terms, availability and eligibility criteria.</p>
             </div>
-            <a href={card.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, borderRadius: 999, padding: "13px 20px", background: "var(--green)", color: "#07120c", fontWeight: 700, textDecoration: "none" }}>
-              Check on issuer website <span aria-hidden="true">↗</span>
-            </a>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: 10, flexWrap: "wrap" }}>
+              <a href={card.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 8, borderRadius: 999, padding: "13px 20px", background: "var(--green)", color: "#07120c", fontWeight: 700, textDecoration: "none" }}>
+                Card information <span aria-hidden="true">↗</span>
+              </a>
+              {card.rewardSourceUrl && <a href={card.rewardSourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, borderRadius: 999, padding: "11px 15px", border: "1px solid var(--border)", color: "var(--text)", fontSize: 13, textDecoration: "none" }}>Reward terms ↗</a>}
+              {card.feeSourceUrl && <a href={card.feeSourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, borderRadius: 999, padding: "11px 15px", border: "1px solid var(--border)", color: "var(--text)", fontSize: 13, textDecoration: "none" }}>Fee schedule ↗</a>}
+              {card.loungeSourceUrl && <a href={card.loungeSourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, border: "1px solid var(--border)", borderRadius: 999, padding: "11px 15px", color: "var(--text)", fontSize: 13, textDecoration: "none" }}>Lounge programme ↗</a>}
+            </div>
           </div>
         </div>
       )}
@@ -234,8 +222,8 @@ export default function CardPage({ params }) {
             </div>
             <div className="qf">
               <div className="l">Best Rate</div>
-              <div className="v" style={{ color: "var(--green)" }}>{maxRate}%</div>
-              <div className="mono" style={{ fontSize: 10, color: "var(--dim)", marginTop: 2 }}>{bestCategory}</div>
+              <div className="v" style={{ color: "var(--green)" }}>{estimateReady ? `${maxRate}%` : "See earn rules"}</div>
+              <div className="mono" style={{ fontSize: 10, color: "var(--dim)", marginTop: 2 }}>{estimateReady ? bestCategory : "Merchant and redemption conditions apply"}</div>
             </div>
             <div className="qf">
               <div className="l">Lounge Access</div>
@@ -261,16 +249,12 @@ export default function CardPage({ params }) {
               <div id="verdict" className="verd" style={{ marginBottom: 56 }}>
                 <div className="score">
                   <svg viewBox="0 0 148 148">
-                    <circle cx="74" cy="74" r={R} fill="none" stroke="var(--hair)" strokeWidth="5" />
-                    <circle cx="74" cy="74" r={R} fill="none" stroke={sColor} strokeWidth="5"
-                      strokeDasharray={`${dash} ${C - dash}`} strokeLinecap="round"
-                      style={{ transition: "stroke-dasharray 1s ease" }} />
+                    <circle cx="74" cy="74" r="58" fill="none" stroke="var(--green)" strokeWidth="5" />
                   </svg>
-                  <span className="sn" style={{ color: sColor }}>{score}</span>
-                  <span className="so">/ 10</span>
+                  <span className="sn" style={{ color: "var(--green)", fontSize: 20 }}>Value<br />check</span>
                 </div>
                 <div>
-                  <div className="k accent" style={{ marginBottom: 12 }}>HONEST SCORE</div>
+                  <div className="k accent" style={{ marginBottom: 12 }}>VALUE FOR YOUR SPENDING</div>
                   <div className="disp" style={{ fontSize: "clamp(22px, 2.6vw, 30px)", lineHeight: 1.25, marginBottom: 16 }}>
                     {ed.verdict.headline}
                   </div>
@@ -292,9 +276,12 @@ export default function CardPage({ params }) {
             )}
 
             {/* ── REWARD RATES GRID ── */}
+            {card.availabilityNote && <aside style={{ marginBottom: 28, padding: 20, border: "1px solid var(--gold)", borderRadius: 13 }}><h2 style={{ fontSize: 18, marginBottom: 8 }}>Availability and migration</h2><p>{card.availabilityNote}</p><a href={card.availabilitySourceUrl || card.sourceUrl} target="_blank" rel="noopener noreferrer">Issuer availability source</a></aside>}
             <div id="rewards" style={{ marginBottom: 56 }}>
-              <div className="k accent" style={{ marginBottom: 20 }}>REWARD RATES BY CATEGORY</div>
-              <div className="rgrid">
+              <div className="k accent" style={{ marginBottom: 20 }}>{estimateReady ? "ILLUSTRATIVE REWARD VALUE BY CATEGORY" : "EARN AND REDEMPTION RULES"}</div>
+              {estimateReady && card.rewardAssumptions?.default && <p style={{marginBottom:16,color:'var(--mut)'}}>{card.rewardAssumptions.default}</p>}
+              {!estimateReady && card.estimateUnavailableReason && <p style={{ marginBottom: 16, color: "var(--mut)" }}>Why no automated estimate: {card.estimateUnavailableReason}</p>}
+              {estimateReady && <div className="rgrid">
                 {sorted.map(([catId, rate]) => {
                   const cat = CATEGORIES.find(c => c.id === catId);
                   return (
@@ -304,10 +291,12 @@ export default function CardPage({ params }) {
                         {rate}%
                       </div>
                       <div className="rc">{cat?.label || catId}</div>
+                      {card.rewardAssumptions?.[catId] && <p style={{ fontSize: 12, color: "var(--mut)", lineHeight: 1.5, marginTop: 8 }}>{card.rewardAssumptions[catId]}</p>}
                     </div>
                   );
                 })}
-              </div>
+              </div>}
+              {card.calculationSourceUrl && <p style={{ marginTop: 16, fontSize: 13 }}><a href={card.calculationSourceUrl} target="_blank" rel="noopener noreferrer">Issuer earning and redemption terms</a>. Category values assume eligible transactions; caps and redemption charges can reduce the final return.</p>}
 
               {/* Points info */}
               {card.pointsInfo && (
@@ -499,9 +488,14 @@ export default function CardPage({ params }) {
               <div className="k accent" style={{ marginBottom: 20 }}>FEES AND WAIVER</div>
               <div className="receipt">
                 <div className="rc-h">PUBLISHED FEE — {card.name.toUpperCase()}</div>
-                <div className="rc-r"><span>Annual fee</span> <b>{card.fee === 0 ? "₹0 (FREE)" : `₹${card.fee.toLocaleString()}`}</b></div>
+                <div className="rc-r"><span>{card.firstYearAnnualFee === 0 ? 'Renewal fee (year two onwards)' : 'Annual fee'}</span> <b>{card.fee === 0 ? "₹0" : `₹${card.fee.toLocaleString()}`}</b></div>
+                {card.joiningFee !== undefined && <div className="rc-r"><span>Joining fee ({card.joiningFeeIncludesTax ? 'including GST' : 'before GST'})</span><b>₹{card.joiningFee.toLocaleString()}</b></div>}
+                {card.firstYearAnnualFee !== undefined && <div className="rc-r"><span>Additional annual fee in year one</span><b>₹{card.firstYearAnnualFee.toLocaleString()}</b></div>}
+                {card.firstYearAnnualFee === 0 && <div className="rc-r"><span>Year-one membership cost including GST</span><b>₹{Math.round(card.joiningFee * (card.joiningFeeIncludesTax ? 1 : 1.18)).toLocaleString('en-IN')}</b></div>}
                 {card.fee > 0 && <div className="rc-r"><span>GST (18%)</span> <b className="minus">+₹{(feeWithGST - card.fee).toLocaleString()}</b></div>}
-                {card.fee > 0 && <div className="rc-r"><span>Total cost</span> <b className="minus">₹{feeWithGST.toLocaleString()}</b></div>}
+                {card.fee > 0 && <div className="rc-r"><span>Annual/renewal fee including GST</span> <b className="minus">₹{feeWithGST.toLocaleString()}</b></div>}
+                {card.feeScheduleNote && <p style={{padding:'16px 0',lineHeight:1.7}}>{card.feeScheduleNote} <a href={card.feeSourceUrl} target="_blank" rel="noopener noreferrer">Issuer fee schedule</a></p>}
+                {card.transactionFeeNote && <p style={{padding:'16px 0',lineHeight:1.7}}>{card.transactionFeeNote} <a href={card.transactionFeeSourceUrl} target="_blank" rel="noopener noreferrer">Issuer transaction charges</a></p>}
                 <div className="rc-r"><span>Fee waiver</span> <b>{card.feeWaiver || "None"}</b></div>
                 <div className="rc-r"><span>Reward value</span> <b>Depends on eligible spend, caps and redemption</b></div>
               </div>
@@ -570,7 +564,7 @@ export default function CardPage({ params }) {
               <div className="row"><span>Bank</span> <b>{card.bank}</b></div>
               <div className="row"><span>Type</span> <b>{card.type}</b></div>
               <div className="row"><span>Fee</span> <b>{card.fee === 0 ? "FREE" : `₹${card.fee.toLocaleString()}`}</b></div>
-              <div className="row"><span>Best rate</span> <b className="g">{maxRate}%</b></div>
+              <div className="row"><span>Modelled value</span> <b className="g">{estimateReady ? `${maxRate}%` : "See earn rules"}</b></div>
               <div className="row"><span>Network</span> <b>{card.network}</b></div>
               <div className="row"><span>Lounge</span> <b>{card.lounge || "None"}</b></div>
               <div className="row"><span>Status</span> <b className={sourceReviewed ? "g" : "r"}>{sourceReviewed ? `Reviewed ${card.reviewedAt}` : "Review pending"}</b></div>
@@ -608,7 +602,7 @@ export default function CardPage({ params }) {
         <div style={{ flex: 1 }}>
           <div style={{ fontWeight: 600, fontSize: 14 }}>{card.name}</div>
           <div className="mono" style={{ fontSize: 11, color: "var(--dim)" }}>
-            {card.fee === 0 ? "FREE" : `₹${card.fee.toLocaleString()}/yr`} · {maxRate}% best
+            {card.fee === 0 ? "FREE" : `₹${card.fee.toLocaleString()}/yr`} · {estimateReady ? `${maxRate}% modelled value` : "Points / benefits"}
           </div>
         </div>
         {card.sourceUrl && (

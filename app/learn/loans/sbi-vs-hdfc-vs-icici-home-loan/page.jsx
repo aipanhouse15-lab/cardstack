@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -45,7 +46,7 @@ export default function PageSBIvsHDFCvsICICI() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Compare SBI, HDFC Bank and ICICI Bank Home-Loan Offers",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-28",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
@@ -146,7 +147,7 @@ export default function PageSBIvsHDFCvsICICI() {
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}>
           <strong>Editorial note.</strong> This is a comparison framework, not a live rate comparison or lender endorsement. Verify current eligibility, rates, fees and terms directly with each lender before making a decision.
         </footer>
-      </main>
+      <GuidePractice topic="loans/sbi-vs-hdfc-vs-icici-home-loan" /></main>
     </>
   );
 }

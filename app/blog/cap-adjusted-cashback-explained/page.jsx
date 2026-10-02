@@ -16,9 +16,9 @@ export default function CapAdjustedCashbackExplained() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Cap-Adjusted Cashback: Calculate What Your Card Really Earns",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-04-20",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-02",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -27,7 +27,7 @@ export default function CapAdjustedCashbackExplained() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Link href="/blog" className="text-sm">← Blog</Link>
       <h1 className="text-3xl font-extrabold mt-6 mb-3">Cap-adjusted cashback: what your card really earns</h1>
-      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published April 20, 2026 · Reviewed September 26, 2026</p>
+      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published April 20, 2026 · Reviewed October 2, 2026</p>
 
       <div className="space-y-7 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>A headline reward rate applies only to eligible transactions. To estimate your actual return, classify each transaction by the issuer&apos;s rules, apply every cap for its stated period, then subtract fees. An online payment can still be excluded because it is a utility, insurance, fuel or other restricted purchase.</p>
@@ -39,7 +39,7 @@ export default function CapAdjustedCashbackExplained() {
 
         <section>
           <h2 className="text-xl font-bold mb-2" style={{ color: "var(--text)" }}>Example: SBI Cashback</h2>
-          <p><a href={sources.sbi} target="_blank" rel="noreferrer">SBI Card&apos;s April 2026 revision</a> limits eligible online cashback to ₹2,000 and eligible offline cashback to ₹2,000 per statement cycle, with a ₹4,000 combined ceiling. At 5%, ₹60,000 of eligible online spending would nominally earn ₹3,000, but the online bucket pays at most ₹2,000. That is 3.33% on the ₹60,000 before fees. Utilities, insurance, fuel, rent, education and other specified transactions are excluded, even if paid online.</p>
+          <p><a href={sources.sbi} target="_blank" rel="noreferrer">SBI Card&apos;s April 2026 revision</a> limits eligible online cashback to ₹2,000 and eligible offline cashback to ₹2,000 per statement cycle, with a ₹4,000 combined ceiling. At 5%, ₹60,000 of eligible online spending would nominally earn ₹3,000, but the online bucket pays at most ₹2,000. That is 3.33% on the ₹60,000 before fees. Utilities, insurance, fuel, rent, education and other specified transactions are excluded, even if paid online. Posting/settlement date determines the cycle, and purchase returns can reverse cashback.</p>
         </section>
 
         <section>

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { VERIFIED_CARDS } from "@/data/cards";
+import { CARDS, isSourceReviewed } from "@/data/cards";
 import { MERCHANTS } from "@/data/merchants";
 import SectionHeader from "@/components/SectionHeader";
 
@@ -13,12 +13,12 @@ export default function SwipeCheckClient() {
     ? Object.values(MERCHANTS).flatMap(c => c.items).find(m => m.id === selectedMerchant)
     : null;
   const verifiedTips = merchant
-    ? merchant.tips.filter(tip => VERIFIED_CARDS.some(card => card.id === tip.card))
+    ? merchant.tips.filter(tip => CARDS.some(card => card.id === tip.card && isSourceReviewed(card)))
     : [];
 
   return (
     <section className="pt-24 pb-20 px-6 max-w-[1000px] mx-auto">
-      <SectionHeader badge="🔍 Tool #3 — NEW" badgeBg="rgba(236,72,153,0.08)" badgeBorder="rgba(236,72,153,0.18)" badgeColor="#ec4899" title="Swipe Check" subtitle="Pick where you're spending. We'll tell you the exact best card with pro tips." />
+      <SectionHeader badge="🔍 Tool #3 — NEW" badgeBg="rgba(236,72,153,0.08)" badgeBorder="rgba(236,72,153,0.18)" badgeColor="#ec4899" title="Swipe Check" subtitle="Look up relevant product rules for a merchant or payment route. These candidates are not a ranked or guaranteed best-card result." />
 
       {/* Category Grid */}
       {!selectedCat && (
@@ -71,7 +71,7 @@ export default function SwipeCheckClient() {
               <span className="text-4xl">{merchant.icon}</span>
               <div>
                 <h3 className="text-2xl font-extrabold" style={{ color: "var(--text)" }}>{merchant.name}</h3>
-                <span className="text-sm" style={{ color: "var(--text-muted)" }}>Best cards for this merchant</span>
+                <span className="text-sm" style={{ color: "var(--text-muted)" }}>Products and routes to compare</span>
               </div>
             </div>
           </div>
@@ -79,13 +79,12 @@ export default function SwipeCheckClient() {
           {/* Card Recommendations */}
           <div className="flex flex-col gap-2.5 mb-6">
             {verifiedTips.map((tip, i) => {
-              const card = VERIFIED_CARDS.find(c => c.id === tip.card);
+              const card = CARDS.find(c => c.id === tip.card);
               if (!card) return null;
               return (
                 <div key={i} className="rounded-2xl p-4" style={{ background: "var(--bg-card)", border: "1px solid var(--border)", boxShadow: "var(--shadow)", animation: `fadeUp 0.3s ease-out ${i * 0.06}s both` }}>
                   <div className="flex items-center justify-between mb-2.5 flex-wrap gap-2">
                     <div className="flex items-center gap-2">
-                      {i === 0 && <span className="text-[11px] font-bold bg-gradient-to-r from-amber-500 to-red-500 text-white rounded-md px-2 py-0.5">BEST</span>}
                       <Link href={`/cards/${card.id}`} className="flex items-center gap-1.5 no-underline">
                         <span className="text-xl">{card.img}</span>
                         <span className="text-base font-bold" style={{ color: "var(--text)" }}>{card.name}</span>
@@ -101,7 +100,7 @@ export default function SwipeCheckClient() {
             })}
             {verifiedTips.length === 0 && (
               <div role="status" className="rounded-xl p-5 text-sm" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)", color: "var(--orange)" }}>
-                No source-linked recommendation is available for this merchant yet. Check back after the next data review.
+                No current product-rule candidate is listed for this route. Use the issuer-linked directory without substituting a generic category rate.
               </div>
             )}
           </div>

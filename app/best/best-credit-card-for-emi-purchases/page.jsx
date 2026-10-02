@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -154,7 +155,7 @@ export default function BestCreditCardForEMIPurchases() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Credit Card EMI in India: Fees, Discounts and Total Cost",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
@@ -193,9 +194,9 @@ export default function BestCreditCardForEMIPurchases() {
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 24 }}>
         <Link href="/">Home</Link>
@@ -216,7 +217,7 @@ export default function BestCreditCardForEMIPurchases() {
 
       <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
         <span>Last updated {UPDATED}</span>
-        <span>By Ash K</span>
+        <span>By Ash</span>
         <span>9 min read</span>
       </div>
 
@@ -434,6 +435,7 @@ export default function BestCreditCardForEMIPurchases() {
           Reviewed {UPDATED}. Internal links to <Link href="/smart-swipe" style={{ color: COLOR }}>/smart-swipe</Link> and <Link href="/stack-builder" style={{ color: COLOR }}>/stack-builder</Link> are Assure Fintech tools.
         </p>
       </footer>
+    <GuideCardRules slug="best-credit-card-for-emi-purchases" />
     </main>
     </>
   );

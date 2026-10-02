@@ -19,16 +19,16 @@ export const metadata = {
 
 export default function HowRewardPointsWorkIndia() {
   const faq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" }, mainEntityOfPage: URL };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" }, mainEntityOfPage: URL };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
     { "@type": "ListItem", position: 3, name: "How Reward Points Work", item: URL },
   ] };
   return <main style={{ maxWidth: 820, margin: "72px auto 0", padding: "32px 22px 56px", color: "var(--text)", lineHeight: 1.75 }}>
-    <Script id="points-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-    <Script id="points-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-    <Script id="points-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+    <script id="points-article" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+    <script id="points-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+    <script id="points-breadcrumb" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
     <nav style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 24 }}><Link href="/">Home</Link> / <Link href="/blog">Blog</Link> / Reward points</nav>
     <p style={{ fontSize: 12, letterSpacing: ".16em", textTransform: "uppercase", color: "var(--text-muted)" }}>Credit cards · Reviewed {UPDATED}</p>
     <h1 style={{ fontSize: "clamp(32px, 5vw, 48px)", lineHeight: 1.12, margin: "12px 0 18px" }}>Credit card reward points: how to value, redeem and compare them</h1>

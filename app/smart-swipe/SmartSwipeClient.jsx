@@ -71,7 +71,7 @@ export default function SmartSwipeClient() {
         badge="🎯 Tool #1"
         badgeBg="var(--green-bg)" badgeBorder="var(--green-border)" badgeColor="var(--green)"
         title="Smart Swipe Guide"
-        subtitle="Select your cards, enter your spending, and see which card to swipe for every purchase."
+        subtitle="Compare eligible category scenarios for your owned cards. Shared caps are applied after category assignment; this is not a transaction-by-transaction optimisation."
       />
 
       <div className="mb-8">
@@ -95,14 +95,14 @@ export default function SmartSwipeClient() {
         {showS && <SpendingInput spending={spend} setSpending={setSpend} />}
 
         <button onClick={() => setShow(true)} className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white border-none rounded-xl py-4 text-base font-semibold cursor-pointer mb-10 shadow-lg">
-          Show My Best Cards →
+          Compare My Eligible Routes →
         </button>
       </>}
 
       {show && results.length > 0 && (
         <div className="animate-fade-up">
           <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
-            <h3 className="text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>Your optimal card for each category</h3>
+            <h3 className="text-xs font-semibold uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>Illustrative category assignments</h3>
             {anyCapped && (
               <div className="text-[11px] font-semibold rounded-full px-3 py-1" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)", color: "var(--orange)" }}>
                 ⚠️ Some cards hit cashback caps at your spending

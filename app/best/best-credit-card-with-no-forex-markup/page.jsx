@@ -1,3 +1,4 @@
+import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
 
@@ -101,7 +102,7 @@ export default function BestCreditCardWithNoForexMarkup() {
         name: "Is IDFC FIRST Select a zero forex card?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. IDFC FIRST's published MITC lists zero markup for FIRST WOW and 1.99% for FIRST Select. Check the current MITC for your exact card and transaction type before applying."
+          text: "Yes. The current IDFC FIRST Select product page advertises zero forex markup. Earlier fee tables quoted 1.99%, but that is not the current product-page claim. Select remains a different product from the FD-backed WOW card; earning, eligibility and other charges differ."
         }
       },
       {
@@ -151,7 +152,7 @@ export default function BestCreditCardWithNoForexMarkup() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Best Credit Card with Zero Forex Markup in India (September 2026 Review)",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-26",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
@@ -214,9 +215,9 @@ export default function BestCreditCardWithNoForexMarkup() {
         </div>
       </div>
     <main style={{ maxWidth: 800, margin: "0 auto", padding: "32px 22px 48px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.6 }}>
-      <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-      <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
-      <Script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+      <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      <script id="ld-bc" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <nav style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 24 }}>
         <Link href="/">Home</Link>{" / "}<Link href="/best/">Best Cards</Link>{" / "}
@@ -233,7 +234,7 @@ export default function BestCreditCardWithNoForexMarkup() {
       </p>
 
       <div style={{ fontSize: 13, color: "var(--text-muted,#64748b)", marginBottom: 28, display: "flex", gap: 16, flexWrap: "wrap" }}>
-        <span>Last updated {UPDATED}</span><span>By Ash K</span><span>10 min read</span>
+        <span>Last updated {UPDATED}</span><span>By Ash</span><span>10 min read</span>
       </div>
 
       {/* Honest number box */}
@@ -357,7 +358,7 @@ export default function BestCreditCardWithNoForexMarkup() {
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>IDFC FIRST WOW vs IDFC FIRST Select: Not the Same Card</h2>
 
       <p style={{ marginBottom: 12 }}>
-        This is the most common zero-forex confusion among Indian credit card applicants in 2026. IDFC FIRST has multiple cards and only one of them — WOW — has zero forex markup.
+        WOW and Select are different IDFC FIRST products, and both current issuer pages advertise zero forex markup. WOW is fixed-deposit-backed; Select is a separate unsecured product with its own eligibility, earning and spend-conditioned lounge rules. Do not carry terms from one variant into the other.
       </p>
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 24 }}>
@@ -379,8 +380,8 @@ export default function BestCreditCardWithNoForexMarkup() {
         <div style={{ background: "rgba(212,168,83,.06)", border: "1px solid #fdba74", borderRadius: 10, padding: "16px" }}>
           <strong style={{ color: "#c2410c", display: "block", marginBottom: 8 }}>IDFC FIRST Select</strong>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
-            <IconCross />
-            <span style={{ fontSize: 13 }}>1.99% forex markup (published MITC)</span>
+            <IconCheck />
+            <span style={{ fontSize: 13 }}>Zero forex markup on the current issuer page</span>
           </div>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 6 }}>
             <IconCheck />
@@ -470,6 +471,7 @@ export default function BestCreditCardWithNoForexMarkup() {
           Data sourced from official IDFC FIRST, Federal Bank, ICICI Bank, and OneCard T&C pages as of {UPDATED}. Related: <Link href="/best/credit-card-for-lounge-access" style={{ color: COLOR }}>Lounge Access Cards</Link> and <Link href="/best/credit-card-for-high-income-earners" style={{ color: COLOR }}>High Income Premium Cards</Link>.
         </p>
       </footer>
+    <GuideCardRules slug="best-credit-card-with-no-forex-markup" />
     </main>
     </>
   );

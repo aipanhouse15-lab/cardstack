@@ -39,12 +39,22 @@ for (const pathname of paths) {
   const h1Count = (body.match(/<h1(?:\s|>)/gi) || []).length;
 
   if (!title) errors.push(`${pathname}: missing title`);
+  if (/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(body)) {
+    errors.push(`${pathname}: noindex page included in sitemap`);
+  }
   if (!description) errors.push(`${pathname}: missing meta description`);
   if (!canonical) errors.push(`${pathname}: missing canonical`);
   else if (new URL(canonical, baseUrl).pathname.replace(/\/$/, "") !== pathname.replace(/\/$/, "")) {
     errors.push(`${pathname}: canonical path mismatch (${canonical})`);
   }
   if (h1Count !== 1) errors.push(`${pathname}: expected 1 h1, found ${h1Count}`);
+  for (const match of body.matchAll(/<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+    try { JSON.parse(match[1]); } catch { errors.push(`${pathname}: malformed JSON-LD`); }
+  }
+  const ids = new Set([...body.matchAll(/\sid=["']([^"']+)["']/g)].map(m => m[1]));
+  for (const match of body.matchAll(/href=["']#([^"']+)["']/g)) {
+    if (!ids.has(match[1])) errors.push(`${pathname}: missing anchor #${match[1]}`);
+  }
 
   if (title) {
     const existing = titles.get(title) || [];
@@ -60,7 +70,7 @@ for (const pathname of paths) {
 }
 
 for (const pathname of linkedPaths) {
-  const response = await fetch(`${baseUrl}${pathname}`, { redirect: "manual" });
+  const response = await fetch(`${baseUrl}${pathname}`, { redirect: "follow" });
   if (response.status >= 400) errors.push(`${pathname}: linked route returned HTTP ${response.status}`);
 }
 

@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 
 export const metadata = {
@@ -46,7 +47,7 @@ export default function PageFixedVsFloating() {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "Fixed vs Floating Home Loan Rates: How to Compare",
-    author: { "@type": "Person", name: "Ash K" },
+    author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
     dateModified: "2026-09-28",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
@@ -136,7 +137,7 @@ export default function PageFixedVsFloating() {
         <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>
           This general guide is not a lender quotation, legal opinion or financial advice. Loan terms vary; verify your offer and applicable rules with the lender and relevant authorities before acting.
         </footer>
-      </main>
+      <GuidePractice topic="loans/fixed-vs-floating-rate" /></main>
     </>
   );
 }

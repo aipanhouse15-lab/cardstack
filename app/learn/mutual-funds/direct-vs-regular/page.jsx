@@ -1,3 +1,4 @@
+import GuidePractice from "@/components/GuidePractice";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -19,7 +20,7 @@ export default function DirectVsRegularPage() {
       { "@type": "Question", name: "Does switching from regular to direct trigger tax or exit charges?", acceptedAnswer: { "@type": "Answer", text: "A switch is generally treated as a redemption from one plan and a purchase in another. Capital-gains tax, exit load and other terms may apply based on the scheme, units and applicable law. Check current documents and obtain tax advice before switching." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Direct vs Regular Mutual Fund Plans: Costs and Trade-offs", author: { "@type": "Person", name: "Ash K" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Direct vs Regular Mutual Fund Plans: Costs and Trade-offs", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
 
   return (
     <>
@@ -31,8 +32,8 @@ export default function DirectVsRegularPage() {
         </div>
       </div>
       <main style={{ maxWidth: 820, margin: "0 auto", padding: "30px 22px 56px", color: "var(--text)", lineHeight: 1.7 }}>
-        <Script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
-        <Script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+        <script id="ld-art" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
+        <script id="ld-faq" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
         <nav aria-label="Breadcrumb" style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 22 }}><Link href="/" style={{ color: "inherit" }}>Home</Link> / <Link href="/learn/mutual-funds" style={{ color: "inherit" }}>Mutual Funds</Link> / Direct vs regular</nav>
 
         <section>
@@ -65,7 +66,7 @@ export default function DirectVsRegularPage() {
 
         <p style={{ marginTop: 24 }}><Link href="https://www.amfiindia.com/investor/knowledge-center-info?zoneName=DirectPlan" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>AMFI: Direct Plan and Regular Plan</Link> · <Link href="https://www.amfiindia.com/ter-of-mf-schemes" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>AMFI: current scheme TER listings</Link></p>
         <p style={{ borderTop: "1px solid var(--border)", paddingTop: 16, fontSize: 13, color: "var(--text-muted)" }}>This guide is general educational information, not investment, tax or legal advice. Check current scheme documents, disclosures and applicable rules before acting. Past performance does not guarantee future results.</p>
-      </main>
+      <GuidePractice topic="mutual-funds/direct-vs-regular" /></main>
     </>
   );
 }
