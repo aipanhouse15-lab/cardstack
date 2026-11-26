@@ -19,7 +19,7 @@ export const metadata = {
 // Updated: September 26, 2026
 
 const COLOR = "#f59e0b";
-const UPDATED = "1 October 2026";
+const UPDATED = "3 October 2026";
 
 const IconMovie = () => (
   <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Movie and entertainment credit card icon">
@@ -157,7 +157,7 @@ export default function BestCreditCardForMovieEntertainment() {
     headline: "Best Credit Card for Movies and Entertainment in India (October 2026)",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-10-01",
+    dateModified: "2026-10-03",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -180,15 +180,6 @@ export default function BestCreditCardForMovieEntertainment() {
       annualValue: "Up to ₹2,400 gross",
       cap: "₹100/offer",
       verdict: "April 2026 onward: ₹25K preceding spend-quarter gate; checkout exclusions apply"
-    },
-    {
-      card: "SBI Card ELITE",
-      fee: "₹4,999 + tax; standard renewal waiver at ₹10L eligible preceding-year spend",
-      bmsOffer: "Check live issuer/BookMyShow offer",
-      monthlyValue: "Varies",
-      annualValue: "Not estimated",
-      cap: "Variant/offer-specific",
-      verdict: "Do not value without current terms"
     },
     {
       card: "Axis MyZone",
@@ -294,7 +285,7 @@ export default function BestCreditCardForMovieEntertainment() {
 
       {/* Card comparison table */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6 }}>BookMyShow Credit Card Offers: Verify the Live Terms</h2>
-      <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 16 }}>Annual value calculated assuming consistent monthly use of full offer.</p>
+      <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 16 }}>Values are estimates only for a currently published offer with a stated cap; no value is assigned where the active variant or offer is not established.</p>
 
       <div style={{ overflowX: "auto", marginBottom: 28 }}>
         <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
@@ -328,8 +319,12 @@ export default function BestCreditCardForMovieEntertainment() {
         </table>
       </div>
 
+      <p style={{ margin: "-12px 0 28px", color: "var(--text-muted,#64748b)", fontSize: 14 }}>
+        SBI Card ELITE is not included in this offer comparison: its current domestic lounge/network and card-specific redemption terms are still being reconciled. SBI's current listing and account-specific offer terms should be checked before valuing its movie benefit. <a href="https://www.sbicard.com/en/personal/credit-cards/sbi-card-elite.html" target="_blank" rel="noreferrer">SBI Card ELITE issuer page</a>.
+      </p>
+
       {/* Card picks detailed */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Top 3 Entertainment Cards: Full Breakdown</h2>
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Reviewed entertainment picks</h2>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
         {[
@@ -347,18 +342,6 @@ export default function BestCreditCardForMovieEntertainment() {
           },
           {
             rank: 2,
-            name: "SBI Card ELITE",
-            fee: "Check current issuer fee schedule",
-            headline: "Historical premium-card comparison — current terms not fully matched",
-            benefits: [
-              "Movie and entertainment offers are variant- and offer-specific; check current issuer terms",
-              "Evaluate other benefits separately against the current fee"
-            ],
-            math: "No annual movie value estimated without a verified current offer for your card variant.",
-            link: "/cards/sbi-elite"
-          },
-          {
-            rank: 3,
             name: "Axis MyZone",
             fee: "Check current issuer fee schedule",
             headline: "Best entry card for students and early-career professionals",

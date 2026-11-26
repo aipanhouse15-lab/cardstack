@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {readFileSync,existsSync}from'node:fs';
+import {CARDS,isEstimateReady,isRecommendable,isSourceReviewed}from'../data/cards.js';
+import {CARD_COUNTS,REGALIA_EXAMPLE}from'../data/site-facts.js';
+import {TOOLS,CALCS,TOOL_COUNT}from'../data/site-tools.js';
+const card=id=>CARDS.find(c=>c.id===id);
+assert.equal(CARDS.length,76);assert.equal(CARD_COUNTS.sourceReviewed,69);assert.equal(CARD_COUNTS.historical,7);
+assert.equal(CARD_COUNTS.estimateReady,CARDS.filter(isEstimateReady).length);assert.equal(CARD_COUNTS.recommendable,CARDS.filter(isRecommendable).length);
+assert.equal(TOOL_COUNT,10);assert.equal(new Set([...TOOLS,...CALCS].map(t=>t.href)).size,10);
+assert.equal(REGALIA_EXAMPLE.points*REGALIA_EXAMPLE.pointValue/REGALIA_EXAMPLE.spend*100,.3);
+assert.equal(card('hdfc-millennia').minimumEligibleTransaction,100);assert.equal(card('hdfc-millennia').earningBlock,100);
+assert.equal(card('amex-mrcc').fee,4500);assert.equal(card('amex-mrcc').joiningFee,1000);assert.doesNotMatch(card('amex-mrcc').feeWaiver,/50%/);
+assert.match(card('idfc-select').pointsInfo,/threshold was removed/);assert.doesNotMatch(JSON.stringify(card('idfc-select')),/3X up to|10X on incremental/);
+assert.match(card('icici-mmt').pointsInfo,/zero forex markup/);assert.match(card('icici-mmt').pointsInfo,/earn no myCash/);assert.match(card('icici-mmt').redemptionNote,/two years/);
+assert.doesNotMatch(card('icici-mmt').highlights.join(' '),/does not expire/);
+for(const id of ['hdfc-tata-neu-infinity','hdfc-tata-neu-plus'])assert.match(card(id).redemptionNote,/must claim/);
+for(const id of ['axis-myzone','axis-neo','axis-privilege'])assert.match(card(id).movieEligibility,/preceding three calendar months/);
+for(const c of CARDS.filter(isSourceReviewed)){const png='public/cards/'+c.id+'.png';if(existsSync(png))assert.ok(existsSync(png.replace('.png','.webp')),c.id);}
+assert.equal(card('axis-magnus').caps.monthlyPoints,undefined);
+const free=readFileSync('app/best/best-cashback-credit-card-no-annual-fee/page.jsx','utf8');assert.ok(!free.includes("Points that Don't Expire"));
+console.log('Repair facts passed: counts, tool registry, Regalia rate, fees, reward-rule corrections, date-aware benefits and WebP coverage.');

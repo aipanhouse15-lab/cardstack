@@ -1,7 +1,8 @@
+import GuideDetails from "@/components/GuideDetails";
 import Link from "next/link";
 import Script from "next/script";
 
-const UPDATED = "September 28, 2026";
+const UPDATED = "17 October 2026";
 const CANONICAL = "https://www.assurefintech.com/blog/annual-fee-when-worth-paying";
 const faqItems = [
   { q: "How do I decide whether a card's annual fee is worth paying?", a: "Compare the fee including applicable taxes with the rewards and benefits you would genuinely use. Count only incremental value over a no-fee alternative, and subtract redemption costs, caps and exclusions." },
@@ -19,7 +20,7 @@ export const metadata = {
 
 export default function AnnualFeeWhenWorthPaying() {
   const faq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" }, mainEntityOfPage: CANONICAL };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-10-17", publisher: { "@type": "Organization", name: "Assure Fintech" }, mainEntityOfPage: CANONICAL };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
@@ -71,6 +72,7 @@ export default function AnnualFeeWhenWorthPaying() {
       <h2>FAQ</h2>
       {faqItems.map(({ q, a }) => <details key={q} style={{ padding: "14px 0", borderBottom: "1px solid var(--border)" }}><summary style={{ cursor: "pointer", fontWeight: 650 }}>{q}</summary><p style={{ color: "var(--text-muted)" }}>{a}</p></details>)}
     </section>
-    <footer style={{ marginTop: 32, paddingTop: 16, borderTop: "1px solid var(--border)", fontSize: 13, color: "var(--text-muted)" }}>Reviewed September 28, 2026. Card fees, benefits and waiver rules are issuer-specific and may change. This guide explains a comparison method; it does not promise a particular outcome.</footer>
+    <GuideDetails topic="blog/annual-fee-when-worth-paying" />
+    <footer style={{ marginTop: 32, paddingTop: 16, borderTop: "1px solid var(--border)", fontSize: 13, color: "var(--text-muted)" }}>Reviewed October 4, 2026. Card fees, benefits and waiver rules are issuer-specific and may change. This guide explains a comparison method; it does not promise a particular outcome.</footer>
   </main>;
 }

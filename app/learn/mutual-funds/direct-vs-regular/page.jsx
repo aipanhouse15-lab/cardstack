@@ -20,7 +20,7 @@ export default function DirectVsRegularPage() {
       { "@type": "Question", name: "Does switching from regular to direct trigger tax or exit charges?", acceptedAnswer: { "@type": "Answer", text: "A switch is generally treated as a redemption from one plan and a purchase in another. Capital-gains tax, exit load and other terms may apply based on the scheme, units and applicable law. Check current documents and obtain tax advice before switching." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Direct vs Regular Mutual Fund Plans: Costs and Trade-offs", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Direct vs Regular Mutual Fund Plans: Costs and Trade-offs", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-10-17", publisher: { "@type": "Organization", name: "Assure Fintech" } };
 
   return (
     <>

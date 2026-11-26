@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
 
 export default function BlogPostPage({ params }) {
   const post = BLOG_POSTS.find(p => p.id === params.id);
-  if (!post) notFound();
+  if (!post || post.standalone) notFound();
 
   const articleSchema = {
     "@context": "https://schema.org",

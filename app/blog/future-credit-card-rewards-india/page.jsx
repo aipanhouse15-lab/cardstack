@@ -1,5 +1,7 @@
-import { permanentRedirect } from "next/navigation";
+import RecoveredArticle, { recoveredMetadata } from '@/components/RecoveredArticle';
 
-export default function FutureRewardsArticleRedirect() {
-  permanentRedirect("/blog/how-reward-points-work-india");
+export const metadata = recoveredMetadata('future-credit-card-rewards-india');
+
+export default function Page() {
+  return <RecoveredArticle slug="future-credit-card-rewards-india" />;
 }

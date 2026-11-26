@@ -1,4 +1,5 @@
 "use client";
+import { TOOLS, CALCS, TOOL_COUNT } from "@/data/site-tools";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { CARDS, CATEGORIES, isRecommendable } from "@/data/cards";
@@ -10,21 +11,9 @@ import BankLogo from "@/components/BankLogo";
    ════════════════════════════════════════════════════ */
 
 // ── DATA ──
-const TOOLS = [
-  { name: "Smart Swipe", desc: "Which card to use for every purchase", href: "/smart-swipe", tag: "MOST USED" },
-  { name: "Gap Finder", desc: "Categories where you're losing rewards", href: "/gap-finder", tag: "REVENUE" },
-  { name: "Stack Builder", desc: "Build an optimized multi-card combo", href: "/stack-builder" },
-  { name: "Compare", desc: "Side-by-side with cap-adjusted rates", href: "/compare" },
-  { name: "Swipe Check", desc: "Quick: is this card good for this spend?", href: "/swipe-check" },
-];
 
-const CALCS = [
-  { name: "Loan Truth", desc: "Real cost after processing fees & GST", href: "/loan-calculator", color: "var(--c-loan)" },
-  { name: "FD Real Return", desc: "Post-tax, post-inflation actual yield", href: "/fd-calculator", color: "var(--c-fd)" },
-  { name: "Tax Regime", desc: "Old vs new — which saves more for you", href: "/tax-calculator", color: "var(--c-tax)" },
-  { name: "Insurance Coverage", desc: "What your policy actually pays out", href: "/insurance-calculator", color: "var(--c-ins)" },
-  { name: "SIP Calculator", desc: "Advertised vs actual SIP returns", href: "/sip-calculator", color: "var(--c-mf)" },
-];
+
+
 
 const CATS = [
   { name: "Credit Cards", desc: "Cap-adjusted reward math", honest: "Caps, exclusions & redemption value", href: "/cards", color: "var(--c-card)", count: `${CARDS.length} cards` },
@@ -83,7 +72,7 @@ export default function HomeClient() {
             {[
               { n: CARDS.length, sup: "+", l: "CARDS TRACKED" },
               { n: CATS.length, sup: "", l: "CATEGORIES" },
-              { n: TOOLS.length + CALCS.length, sup: "", l: "FREE TOOLS" },
+              { n: TOOL_COUNT, sup: "", l: "FREE TOOLS" },
               { n: "0", sup: "", l: "ACCOUNTS" },
               { n: "∞", sup: "", l: "FREE FOREVER" },
             ].map((s, i) => (
@@ -137,7 +126,7 @@ export default function HomeClient() {
           <div className="sec-head">
             <div>
               <div className="k accent">CREDIT CARD TOOLS</div>
-              <div className="sec-title">Five tools. <em>No account required.</em></div>
+              <div className="sec-title">{TOOLS.length} credit-card tools. <em>No account required.</em></div>
             </div>
           </div>
           <div className="acts">

@@ -1,5 +1,7 @@
-import { permanentRedirect } from "next/navigation";
+import RecoveredArticle, { recoveredMetadata } from '@/components/RecoveredArticle';
 
-export default function RewardPointsVsCashbackRedirect() {
-  permanentRedirect("/blog/how-reward-points-work-india");
+export const metadata = recoveredMetadata('reward-points-vs-cashback');
+
+export default function Page() {
+  return <RecoveredArticle slug="reward-points-vs-cashback" />;
 }

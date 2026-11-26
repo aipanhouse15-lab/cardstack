@@ -1,7 +1,8 @@
+import GuideDetails from "@/components/GuideDetails";
 import Link from "next/link";
 import Script from "next/script";
 
-const UPDATED = "September 28, 2026";
+const UPDATED = "17 October 2026";
 const faqItems = [
   ["Is there one best credit card for every freelancer?", "No. Issuers assess applications under their own eligibility rules. Compare the exact card's fee, eligible rewards, caps, exclusions and repayment terms with your actual spending."],
   ["Should I use a separate card for business spending?", "Separate payment methods or careful bookkeeping can make reconciliation easier, but what is suitable depends on your business and tax situation. A separate card does not by itself make an expense deductible or eligible for a tax credit."],
@@ -19,7 +20,7 @@ export const metadata = {
 
 export default function BestCardFreelancers() {
   const faq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-03", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-03", dateModified: "2026-10-17", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
@@ -40,6 +41,7 @@ export default function BestCardFreelancers() {
     <section style={{ marginTop: 26 }}><h2>4. Treat tax questions separately from card rewards</h2><p>Paying with a credit card does not by itself make an expense deductible or establish eligibility for an input tax credit. Tax results depend on the rules for the relevant tax period and the facts, documentation and status of the taxpayer. Reward treatment can also depend on the arrangement and applicable rules. Check the current <a href="https://www.incometax.gov.in/" target="_blank" rel="noopener noreferrer">Income Tax Department</a> and <a href="https://www.gst.gov.in/" target="_blank" rel="noopener noreferrer">GST portal</a> guidance, and consult a chartered accountant before claiming a benefit.</p></section>
     <section style={{ marginTop: 26 }}><h2>5. Apply only when it fits your cash flow</h2><p>Self-employed applicants may be asked for documents specified by the issuer. Check the current application checklist and submit accurate information; do not rely on an informal income band as a guarantee. Choose a limit and repayment plan that can handle slower months. Pay the full statement balance by the due date where possible; rewards do not compensate for interest on a revolving balance.</p><p>Browse the <Link href="/cards">card catalogue</Link> and our <Link href="/learn/credit-cards">credit-card guides</Link> to compare terms and billing basics.</p></section>
     <section style={{ marginTop: 32 }}><h2>FAQ</h2>{faqItems.map(([q, a]) => <details key={q} style={{ padding: "14px 0", borderBottom: "1px solid var(--border)" }}><summary style={{ cursor: "pointer", fontWeight: 650 }}>{q}</summary><p style={{ color: "var(--text-muted)" }}>{a}</p></details>)}</section>
+    <GuideDetails topic="blog/best-card-freelancers-2026" />
     <footer style={{ marginTop: 30, borderTop: "1px solid var(--border)", paddingTop: 16, fontSize: 13, color: "var(--text-muted)" }}>Reviewed {UPDATED}. Product eligibility and card terms vary by issuer and may change. Tax treatment depends on the relevant rules and individual facts; this guide is general information, not tax, legal or financial advice.</footer>
   </main>;
 }

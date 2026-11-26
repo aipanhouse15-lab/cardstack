@@ -589,7 +589,7 @@ export default function BestCreditCardUnder500AnnualFee() {
           </li>
         </ol>
         <p style={{ marginTop: 14, fontSize: 14, color: "var(--text-muted)" }}>
-          Model your exact return: <Link href="/smart-swipe">Smart Swipe</Link> compares Axis ACE against your spending pattern in under 90 seconds and shows you the annual cashback estimate.
+          Compare an illustrative scenario: <Link href="/smart-swipe">Smart Swipe</Link> estimates rewards for supported cards from broad category inputs. It cannot verify every eligible merchant, payment route or issuer condition, so treat the output as an estimate rather than an exact return.
         </p>
       </section>
 

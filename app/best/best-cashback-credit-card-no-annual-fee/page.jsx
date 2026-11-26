@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
@@ -159,13 +160,13 @@ function ScapiaWOWComparison() {
         { label: "Forex Markup", s: "0%", w: "0%" },
         { label: "Travel Reward", s: "Eligible app bookings only", w: "None specific" },
         { label: "Airport Privileges", s: "Spend-gated after ₹20K preceding billing cycle", w: "None listed" },
-        { label: "Reward Expiry", s: "Points expire in 2 yrs", w: "Never expire" },
+        { label: "Reward Expiry", s: "Points expire in 2 yrs", w: "Expire after 24 months" },
         { label: "Credit Check", s: "Income-based", w: "FD-based (easier)" },
       ].map((r, i) => (
         <g key={i}>
           <text x="176" y={76 + i * 18} textAnchor="middle" fontSize="10.5" fill={r.s === "0%" ? COLOR : "var(--text)"}>{r.s}</text>
           <text x="340" y={76 + i * 18} textAnchor="middle" fontSize="10" fill="var(--text-muted)">{r.label}</text>
-          <text x="504" y={76 + i * 18} textAnchor="middle" fontSize="10.5" fill={r.w === "0%" || r.w === "Never expire" ? "#7c3aed" : "var(--text)"}>{r.w}</text>
+          <text x="504" y={76 + i * 18} textAnchor="middle" fontSize="10.5" fill={r.w === "0%" || r.w === "Expire after 24 months" ? "#7c3aed" : "var(--text)"}>{r.w}</text>
         </g>
       ))}
     </svg>
@@ -383,7 +384,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
           {
             rank: "Compare",
             name: "IDFC FIRST WOW",
-            tag: "Best for International + Points that Don't Expire",
+            tag: "Best for International + 24-Month Reward Points",
             fee: "Free (secured against FD)",
             reward: "FD-backed (minimum FD ₹20,000); 0% forex markup; points and fees apply",
             best: "International travelers, new-to-credit applicants",
@@ -504,7 +505,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
           Managing several credit cards adds dates and statements to track. If you use autopay, choose the full statement balance where available and keep enough funds in the linked account; paying only the minimum can leave interest-bearing balances. Review statements and rewards regularly.
         </p>
         <p>
-          Use our <Link href="/stack-builder">Stack Builder</Link> to model this combination against your actual spending and see the exact annual return calculation.
+          Use our <Link href="/stack-builder">Stack Builder</Link> to compare illustrative, cap-aware estimates for supported cards. Broad category inputs cannot verify every merchant, channel or issuer condition, so actual returns may differ.
         </p>
       </section>
 
@@ -557,7 +558,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
           </li>
         </ol>
         <p style={{ marginTop: 14, fontSize: 14, color: "var(--text-muted)" }}>
-          Wondering how much your free stack could earn? <Link href="/smart-swipe">Smart Swipe</Link> calculates estimated annual cashback based on your spending inputs in under 90 seconds.
+          Wondering what a supported-card scenario might return? <Link href="/smart-swipe">Smart Swipe</Link> estimates category-level rewards from your inputs; it does not verify transaction-level eligibility or guarantee a return.
         </p>
       </section>
 
@@ -589,7 +590,7 @@ export default function BestCashbackCreditCardNoAnnualFee() {
       </section>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
-        <strong>Editorial note:</strong> Assure Fintech is an independent editorial platform. Cashback rates and card terms can change; use each issuer's current terms before applying. Some links may earn a referral commission, which does not determine our product selection.
+        <strong>Editorial note:</strong> Assure Fintech is an independent editorial platform. Cashback rates and card terms can change; use each issuer's current terms before applying. {LINK_DISCLOSURE}
       </footer>
     <GuideCardRules slug="best-cashback-credit-card-no-annual-fee" />
     </main>

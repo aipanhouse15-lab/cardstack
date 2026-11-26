@@ -48,7 +48,7 @@ export default function PageSBIvsHDFCvsICICI() {
     headline: "Compare SBI, HDFC Bank and ICICI Bank Home-Loan Offers",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-28",
+    dateModified: "2026-10-17",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
   const breadcrumb = {
@@ -144,10 +144,10 @@ export default function PageSBIvsHDFCvsICICI() {
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>
           Related: <Link href="/learn/loans" style={{ color: COLOR }}>loans hub</Link> · <Link href="/learn/loans/home-loan-true-cost" style={{ color: COLOR }}>home-loan costs</Link> · <Link href="/learn/loans/fixed-vs-floating-rate" style={{ color: COLOR }}>fixed vs floating rates</Link> · <Link href="/loan-calculator" style={{ color: COLOR }}>loan calculator</Link>
         </p>
+        <GuidePractice topic="loans/sbi-vs-hdfc-vs-icici-home-loan" />
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}>
           <strong>Editorial note.</strong> This is a comparison framework, not a live rate comparison or lender endorsement. Verify current eligibility, rates, fees and terms directly with each lender before making a decision.
-        </footer>
-      <GuidePractice topic="loans/sbi-vs-hdfc-vs-icici-home-loan" /></main>
+        </footer></main>
     </>
   );
 }

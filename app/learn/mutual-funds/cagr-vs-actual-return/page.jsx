@@ -18,7 +18,7 @@ export default function CagrVsActualReturnPage() {
       { "@type": "Question", name: "Can I compare one fund's CAGR with my SIP's XIRR?", acceptedAnswer: { "@type": "Answer", text: "Not as a like-for-like comparison unless the scheme, plan, option, period, valuation date, cash-flow assumptions and treatment of costs are aligned. Check the calculation basis before drawing conclusions." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "CAGR vs Your Actual Mutual Fund Return: Which Measure to Use", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "CAGR vs Your Actual Mutual Fund Return: Which Measure to Use", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-10-17", publisher: { "@type": "Organization", name: "Assure Fintech" } };
 
   return <>
     <div style={{ background: "linear-gradient(135deg, #082f49, #0e7490, #082f49)", padding: "48px 24px", marginTop: 64 }}><div style={{ maxWidth: 820, margin: "0 auto" }}><div style={{ color: "#a5f3fc", fontSize: 13, marginBottom: 12 }}>Mutual funds · Measuring returns</div><h1 style={{ color: "#F1F5F9", fontSize: "clamp(28px, 4vw, 40px)", lineHeight: 1.15, margin: "0 0 12px" }}>CAGR vs your actual return: choose the measure that fits</h1><p style={{ color: "#cffafe", margin: 0, lineHeight: 1.6 }}>A single annualised figure cannot explain every investment path. Start with the timing and pattern of your cash flows.</p></div></div>

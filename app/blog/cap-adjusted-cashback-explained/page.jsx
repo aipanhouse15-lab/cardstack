@@ -1,3 +1,4 @@
+import GuideDetails from "@/components/GuideDetails";
 import Link from "next/link";
 
 export const metadata = {
@@ -18,7 +19,7 @@ export default function CapAdjustedCashbackExplained() {
     headline: "Cap-Adjusted Cashback: Calculate What Your Card Really Earns",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-04-20",
-    dateModified: "2026-10-02",
+    dateModified: "2026-10-17",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -27,7 +28,7 @@ export default function CapAdjustedCashbackExplained() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Link href="/blog" className="text-sm">← Blog</Link>
       <h1 className="text-3xl font-extrabold mt-6 mb-3">Cap-adjusted cashback: what your card really earns</h1>
-      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published April 20, 2026 · Reviewed October 2, 2026</p>
+      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published April 20, 2026 · Reviewed October 4, 2026</p>
 
       <div className="space-y-7 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>A headline reward rate applies only to eligible transactions. To estimate your actual return, classify each transaction by the issuer&apos;s rules, apply every cap for its stated period, then subtract fees. An online payment can still be excluded because it is a utility, insurance, fuel or other restricted purchase.</p>
@@ -60,6 +61,6 @@ export default function CapAdjustedCashbackExplained() {
 
         <p>Card terms can change. Use the latest issuer schedule before you apply or route a large payment. See the <Link href="/cards">card catalogue</Link> for product pages and source links.</p>
       </div>
-    </main>
+    <GuideDetails topic="blog/cap-adjusted-cashback-explained" /></main>
   );
 }

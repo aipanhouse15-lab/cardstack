@@ -1,3 +1,4 @@
+import GuideDetails from "@/components/GuideDetails";
 import Link from "next/link";
 
 export const metadata = {
@@ -13,7 +14,7 @@ export default function UpiVsCreditCards() {
     headline: "UPI vs Credit Cards in India: How to Choose a Payment Method",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-17",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -22,7 +23,7 @@ export default function UpiVsCreditCards() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Link href="/blog" className="text-sm">← Blog</Link>
       <h1 className="text-3xl font-extrabold mt-6 mb-3">UPI vs credit cards: choose by transaction</h1>
-      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published June 4, 2026 · Reviewed September 26, 2026</p>
+      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published June 4, 2026 · Reviewed October 4, 2026</p>
 
       <div className="space-y-7 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>Bank-account UPI normally debits your account. A conventional credit-card purchase goes onto a card statement. A linked RuPay credit card can also be used for eligible merchant payments through UPI. These routes have different acceptance, charges, reward rules and dispute processes; none is automatically best for every payment.</p>
@@ -54,6 +55,6 @@ export default function UpiVsCreditCards() {
 
         <p>For current product terms, start with the <Link href="/cards">credit-card catalogue</Link> and confirm the issuer&apos;s latest schedule.</p>
       </div>
-    </main>
+    <GuideDetails topic="blog/upi-vs-credit-cards-india" /></main>
   );
 }

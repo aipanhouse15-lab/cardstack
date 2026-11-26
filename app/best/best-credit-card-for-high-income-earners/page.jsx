@@ -3,11 +3,11 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for High Income Earners in India (September 2026)",
+  title: "Premium Credit Cards in India: Compare Fees and Eligibility (October 2026)",
   description: "Compare premium credit cards by current eligibility, annual fees, eligible rewards, redemption terms and benefits you will actually use.",
   alternates: { canonical: "/best/best-credit-card-for-high-income-earners" },
   openGraph: {
-    title: "Best Credit Card for High Income Earners in India (September 2026)",
+    title: "Premium Credit Cards in India: Compare Fees and Eligibility (October 2026)",
     description: "Compare premium credit cards by current eligibility, annual fees, eligible rewards, redemption terms and benefits you will actually use.",
     type: "article",
     siteName: "Assure Fintech",
@@ -16,12 +16,12 @@ export const metadata = {
 
 
 // /best/credit-card-for-high-income-earners
-// Updated: September 26, 2026
+// Updated: October 3, 2026
 
 const COLOR = "#374151";
 const ACCENT = "var(--raise2)";
 const GOLD = "#b45309";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 3, 2026";
 
 const IconPremium = () => (
   <svg width="48" height="48" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Premium credit card for high income earners">
@@ -155,10 +155,10 @@ export default function BestCreditCardForHighIncomeEarners() {
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: "Best Credit Card for High Income Earners in India (September 2026)",
+    headline: "Premium Credit Cards in India: Compare Fees and Eligibility (October 2026)",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-03",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -181,7 +181,6 @@ export default function BestCreditCardForHighIncomeEarners() {
       rewardRate: "5 points/₹150 on eligible spends; SmartBuy multipliers and redemption rules apply",
       lounge: "HDFC advertises complimentary global access; visit and guest terms apply",
       standout: "Compare eligible spend, redemption route, fee waiver, caps and current lounge terms.",
-      roi10L: "Net value depends on eligible spend, redemption and fee waiver."
     },
     {
       rank: 2,
@@ -191,7 +190,6 @@ export default function BestCreditCardForHighIncomeEarners() {
       rewardRate: "EDGE Rewards; earn and transfer value depend on eligible spend and current partner terms",
       lounge: "Check current domestic/international visit, guest and spend conditions",
       standout: "Compare eligible reward routes, annual fee and current travel benefits against your own use.",
-      roi10L: "Net value depends on eligible spend, redemption and fee waiver."
     },
     {
       rank: 3,
@@ -201,7 +199,6 @@ export default function BestCreditCardForHighIncomeEarners() {
       rewardRate: "5 points/₹150 on eligible spends; redemption terms apply",
       lounge: "Check current access, guest and network conditions",
       standout: "Compare the Diners Club network, current benefits and fee against alternatives.",
-      roi10L: "Net value depends on eligible spend, redemption and fee waiver."
     },
     {
       rank: 4,
@@ -211,7 +208,6 @@ export default function BestCreditCardForHighIncomeEarners() {
       rewardRate: "Rewards and redemption depend on the Emeralde variant and eligible transaction",
       lounge: "Check current visit caps, spend conditions and guest terms",
       standout: "Compare the exact Emeralde variant's current forex, fee and lounge conditions.",
-      roi10L: "Net value depends on eligible spend, redemption and fee waiver."
     },
     {
       rank: 5,
@@ -221,7 +217,6 @@ export default function BestCreditCardForHighIncomeEarners() {
       rewardRate: "Membership Rewards + luxury benefits",
       lounge: "Global Lounge Collection access; lounge and guest terms apply",
       standout: "American Express currently says new applications in India are temporarily paused. Recheck availability and current terms.",
-      roi10L: "Net value depends on benefits you would otherwise pay for."
     }
   ];
 
@@ -235,7 +230,7 @@ export default function BestCreditCardForHighIncomeEarners() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for High Income Earners in India (September 2026)
+            Premium Credit Cards in India: Compare Fees and Eligibility (October 2026)
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED}</div>
         </div>
@@ -275,14 +270,14 @@ export default function BestCreditCardForHighIncomeEarners() {
       </div>
 
       {/* Why the math changes */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>Why the Math Changes at ₹15L+ Income</h2>
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>Income Alone Does Not Determine Card Value</h2>
 
       <p style={{ marginBottom: 24 }}>
         Higher income does not automatically qualify someone for a premium card or make its fee worthwhile. Eligibility, invitation rules, reward exclusions and benefits vary by issuer and product. Assess your real eligible spend and the fee you would actually pay rather than assuming a particular income unlocks a card.
       </p>
 
       {/* Invite thresholds */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>The Invite Threshold: How Banks Decide</h2>
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>Eligibility: What Issuers Disclose</h2>
 
       <div style={{ display: "flex", gap: 10, alignItems: "flex-start", padding: "16px 18px", background: `${GOLD}08`, border: `1px solid ${GOLD}30`, borderRadius: 10, marginBottom: 20 }}>
         <IconKey />
@@ -299,9 +294,9 @@ export default function BestCreditCardForHighIncomeEarners() {
           <thead>
             <tr style={{ background: `${COLOR}08` }}>
               <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>Card</th>
-              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>Income Threshold</th>
+              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>Published Criteria</th>
               <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>Access Mode</th>
-              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>Typical Pathway</th>
+              <th style={{ padding: "10px 14px", textAlign: "left", fontWeight: 700, borderBottom: `2px solid ${GOLD}40` }}>What to verify</th>
             </tr>
           </thead>
           <tbody>
@@ -325,7 +320,7 @@ export default function BestCreditCardForHighIncomeEarners() {
 
       {/* Card picks */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 6, color: ACCENT }}>Premium Cards to Compare</h2>
-      <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>These products are not ranked by a universal ROI. Compare the exact current variant and terms against your own needs.</p>
+      <p style={{ color: "var(--text-muted,#64748b)", fontSize: 14, marginBottom: 20 }}>These products are examples, not a ranking. Compare the exact current variant and terms against your own needs.</p>
 
       <div style={{ display: "flex", flexDirection: "column", gap: 16, marginBottom: 28 }}>
         {premiumCards.map((card) => (
@@ -342,7 +337,6 @@ export default function BestCreditCardForHighIncomeEarners() {
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, fontSize: 13, color: "var(--text-muted,#475569)", marginBottom: 12 }}>
               <div><span style={{ fontWeight: 600 }}>Reward Rate:</span> {card.rewardRate}</div>
               <div><span style={{ fontWeight: 600 }}>Lounge Access:</span> {card.lounge}</div>
-              <div style={{ gridColumn: "1/-1" }}><span style={{ fontWeight: 600 }}>On ₹10L spend:</span> <span style={{ color: GOLD, fontWeight: 700 }}>{card.roi10L}</span></div>
             </div>
             <div style={{ background: `${COLOR}08`, borderRadius: 8, padding: "8px 12px", fontSize: 13, fontWeight: 600, color: ACCENT }}>
               {card.standout}
@@ -422,7 +416,7 @@ export default function BestCreditCardForHighIncomeEarners() {
       </p>
 
       {/* Optimal premium stack */}
-      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>Building the Optimal Premium Stack</h2>
+      <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12, color: ACCENT }}>If You Are Considering a Two-Card Combination</h2>
 
       <p style={{ marginBottom: 16 }}>
         A two-card stack is a possible choice, not a universal recommendation. Check the current product terms and your own eligible spending before combining premium cards.
@@ -432,7 +426,7 @@ export default function BestCreditCardForHighIncomeEarners() {
         <div style={{ background: `${GOLD}08`, border: `1.5px solid ${GOLD}50`, borderRadius: 12, padding: "18px" }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
             <IconStar />
-            <strong style={{ color: GOLD, fontSize: 15 }}>Domestic Spends</strong>
+            <strong style={{ color: GOLD, fontSize: 15 }}>HDFC Infinia: terms to compare</strong>
           </div>
           <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 6 }}>HDFC Infinia</div>
           <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.8 }}>
@@ -445,11 +439,11 @@ export default function BestCreditCardForHighIncomeEarners() {
         <div style={{ background: "var(--raise)", border: "1px solid var(--border,var(--hair))", borderRadius: 12, padding: "18px" }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 10 }}>
             <IconConcierge />
-            <strong style={{ color: "var(--text-muted,#64748b)", fontSize: 15 }}>International Spends</strong>
+            <strong style={{ color: "var(--text-muted,#64748b)", fontSize: 15 }}>Axis Magnus: terms to compare</strong>
           </div>
           <div style={{ fontWeight: 700, fontSize: 16, marginBottom: 6 }}>Axis Magnus</div>
           <ul style={{ margin: 0, paddingLeft: 16, fontSize: 13, color: "var(--text-muted,#475569)", lineHeight: 1.8 }}>
-            <li>EDGE Miles on intl transactions</li>
+            <li>EDGE Reward Points; eligible earn, exclusions and transfer terms apply</li>
             <li>Check current lounge access, visit and guest terms</li>
             <li>EDGE Rewards transfer partners, ratios, caps and exclusions apply</li>
             <li>₹12,500 + taxes; eligible-spend waiver threshold and exclusions apply</li>
@@ -459,7 +453,7 @@ export default function BestCreditCardForHighIncomeEarners() {
 
       {/* Actionable CTA */}
       <div style={{ background: ACCENT, borderRadius: 16, padding: "24px 26px", marginBottom: 44, color: "var(--raise)" }}>
-        <h3 style={{ margin: "0 0 12px", fontSize: 18, fontWeight: 700, color: "var(--raise)" }}>Your Path to the Invite-Only Tier</h3>
+          <h3 style={{ margin: "0 0 12px", fontSize: 18, fontWeight: 700, color: "var(--raise)" }}>Checking an Invitation or Upgrade</h3>
         <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 16 }}>
           {[
             "Review the issuer's published eligibility criteria and contact the bank about any invitation or upgrade route; no account relationship guarantees an offer.",
@@ -497,10 +491,10 @@ export default function BestCreditCardForHighIncomeEarners() {
 
       <footer style={{ borderTop: "1px solid var(--border,var(--hair))", paddingTop: 20, fontSize: 12, color: "var(--text-muted,#94a3b8)", lineHeight: 1.6 }}>
         <p style={{ margin: "0 0 6px" }}>
-          <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Premium card invites are at the sole discretion of the issuing bank. Income thresholds are indicative based on publicly available information and may change. Reward calculations assume full SmartBuy redemption and may differ based on actual redemption method.
+          <strong>Editorial note:</strong> Assure Fintech is an independent comparison platform. Issuers make their own eligibility and invitation decisions; this guide does not claim universal income thresholds or calculate a fixed return. Reward value depends on eligible transactions, redemption and current issuer terms.
         </p>
         <p style={{ margin: 0 }}>
-          Data sourced from official HDFC, Axis, ICICI, and Amex India websites as of {UPDATED}. See also: <Link href="/best/credit-card-for-lounge-access" style={{ color: GOLD }}>Lounge Access Guide</Link> and <Link href="/best/credit-card-with-no-forex-markup" style={{ color: GOLD }}>Zero Forex Cards</Link>.
+          Issuer references: <a href="https://www.hdfc.bank.in/credit-cards/infinia-credit-card" target="_blank" rel="noopener noreferrer">HDFC Infinia</a>, <a href="https://www.hdfc.bank.in/credit-cards/diners-club-black-metal-edition-credit-card" target="_blank" rel="noopener noreferrer">HDFC Diners Club Black Metal</a>, <a href="https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card/more-benefits" target="_blank" rel="noopener noreferrer">Axis Magnus fees and benefits</a>, and <a href="https://www.americanexpress.com/in/charge-cards/platinum-card/" target="_blank" rel="noopener noreferrer">American Express Platinum Charge</a> (checked October 3, 2026). See also: <Link href="/best/credit-card-for-lounge-access" style={{ color: GOLD }}>Lounge Access Guide</Link> and <Link href="/best/credit-card-with-no-forex-markup" style={{ color: GOLD }}>Zero Forex Cards</Link>.
         </p>
       </footer>
     <GuideCardRules slug="best-credit-card-for-high-income-earners" />

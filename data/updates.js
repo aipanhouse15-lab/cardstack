@@ -3,10 +3,20 @@
 // Cards with `upcoming` field in cards.js auto-appear in the "Coming Soon" section
 
 export const MONTHLY_UPDATES = [
+  {month:"November 2026",current:true,entries:[
+   {type:"update",icon:"📚",card:"Combined content restoration",text:"Restored 11 redirected articles and the October worked examples and decision tables alongside the November factual, privacy and performance repairs. Refreshed the selected FD snapshot against November bank schedules. Existing articles and card reviews remain available.",date:"Nov 26, 2026"},
+   {type:"update",icon:"🧮",card:"Fact and fee corrections",text:"Corrected the Regalia cashback examples, IDFC Select reward threshold, WOW expiry wording and MRCC first-year versus renewal fees. Updated MakeMyTrip expiry/forex terms and the November movie/NeuCoins processes. Announced December ICICI benefit changes remain labelled with their future dates.",date:"Nov 25, 2026"},
+   {type:"update",icon:"🔎",card:"Site consistency and privacy",text:"Shared catalogue/tool counts, aligned comparison canonicals, restored missing sitemap entries and made homepage FAQ answers visible. Optional analytics now requires a choice and can be disabled in the footer.",date:"Nov 25, 2026"},
+   {type:"update",icon:"⚡",card:"Catalogue assets",text:"Added smaller WebP versions and lazy loading while preserving every original PNG and existing card review. The expanded machine-readable reference is generated from canonical page text.",date:"Nov 25, 2026"},
+  ]},
+
   {
     month: "October 2026",
-    current: true,
+    current: false,
     entries: [
+      {type:"update",icon:"📚",card:"Expanded practical guides",text:"Expanded loan, insurance, tax, savings, mutual-fund and card explainers with worked scenarios, comparison tables and decision steps. Eleven card articles are available again at their original URLs. Best Free Cards is included in blog navigation.",date:"Oct 17, 2026"},
+      {type:"update",icon:"🧮",card:"Merchant and payment-route check",text:"Smart Swipe and Swipe Check can illustrate one eligible purchase on Amazon Pay ICICI, HDFC Millennia, Axis ACE or SBI Cashback using an explicit merchant/payment route and prior cap usage. This does not guarantee merchant classification or rewards.",date:"Oct 17, 2026"},
+      {type:"update",icon:"📅",card:"Dated terms and rate examples",text:"Refreshed the selected SBI/HDFC/ICICI FD table and corrected Millennia earning-block wording against HDFC's October MITC. Product source dates, reward eligibility and example assumptions remain visible alongside the calculations.",date:"Oct 17, 2026"},
       {type:"update",icon:"💳",card:"Card and guide corrections",text:"Corrected reward caps, merchant/payment-route assumptions and several fee/points mismatches. Insurance guide now includes worked premium-payment examples and checkout-fee arithmetic. MakeMyTrip broad-category estimates are withheld pending its complete earning-table review; the product review remains available. These are editorial/model corrections, not a claim that every issuer changed terms in October.",date:"Oct 1, 2026"},
       {type:"update",icon:"📅",card:"Tax-year selector",text:"Added Tax Year 2026–27 salary estimates under the Income-tax Act, 2025, while retaining AY 2026–27 for earlier income. Period-specific deduction labels, official sources and regression tests accompany the selector. Scope remains ordinary salary for a resident individual below age 60, up to ₹50 lakh; special-rate income and filing adjustments are outside this model.",date:"Oct 1, 2026"},
       {type:"update",icon:"🧮",card:"Calculator corrections",text:"Corrected AY 2026–27 rebate/marginal-relief arithmetic, FD purchasing-power calculations, above-limit insurance claim display, and SIP effective annual-rate and inflation assumptions. Added regression tests.",date:"Oct 1, 2026"},

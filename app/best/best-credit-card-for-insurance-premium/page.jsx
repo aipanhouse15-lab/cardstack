@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import InsuranceRewardExamples from '@/components/InsuranceRewardExamples';
 import Link from "next/link";
@@ -667,7 +668,7 @@ export default function BestCreditCardForInsurancePremium() {
           lineHeight: 1.8,
         }}
       >
-        <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Reward structures, exclusion lists, and insurance premium policies are based on issuer terms as of {UPDATED}. Reward values listed are estimates based on standard redemption rates and may vary. This is not insurance advice or financial advice. Verify current card T&amp;C with the issuing bank and insurance terms with your insurer. Assure Fintech may earn referral fees from some card issuers.
+        <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Reward structures, exclusion lists, and insurance premium policies are based on issuer terms as of {UPDATED}. Reward values listed are estimates based on standard redemption rates and may vary. This is not insurance advice or financial advice. Verify current card T&amp;C with the issuing bank and insurance terms with your insurer. {LINK_DISCLOSURE}
       </footer>
     <GuideCardRules slug="best-credit-card-for-insurance-premium" />
     </main>

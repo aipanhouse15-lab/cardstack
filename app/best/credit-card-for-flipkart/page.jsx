@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
@@ -464,7 +465,7 @@ export default function BestCreditCardForFlipkart() {
       </p>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
-        <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Rewards and fees can change; this is not financial advice. Sources: <a href={SOURCES.axis} target="_blank" rel="noreferrer">Axis Bank card and fees</a> · <a href={SOURCES.axisCashback} target="_blank" rel="noreferrer">Axis cashback terms</a> · <a href={SOURCES.sbiCards} target="_blank" rel="noreferrer">SBI card listing</a> · <a href={SOURCES.sbiFlipkartTerms} target="_blank" rel="noreferrer">SBI Flipkart terms</a> · <a href={SOURCES.sbiKfs} target="_blank" rel="noreferrer">SBI August 2026 fee statement</a> · <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI Cashback FAQ</a> · <a href={SOURCES.sbiTerms} target="_blank" rel="noreferrer">SBI Cashback revised terms</a> · <a href={SOURCES.hdfc} target="_blank" rel="noreferrer">HDFC Millennia terms</a>.
+        <strong>Disclaimer:</strong> {LINK_DISCLOSURE} Rewards and fees can change; this is not financial advice. Sources: <a href={SOURCES.axis} target="_blank" rel="noreferrer">Axis Bank card and fees</a> · <a href={SOURCES.axisCashback} target="_blank" rel="noreferrer">Axis cashback terms</a> · <a href={SOURCES.sbiCards} target="_blank" rel="noreferrer">SBI card listing</a> · <a href={SOURCES.sbiFlipkartTerms} target="_blank" rel="noreferrer">SBI Flipkart terms</a> · <a href={SOURCES.sbiKfs} target="_blank" rel="noreferrer">SBI August 2026 fee statement</a> · <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI Cashback FAQ</a> · <a href={SOURCES.sbiTerms} target="_blank" rel="noreferrer">SBI Cashback revised terms</a> · <a href={SOURCES.hdfc} target="_blank" rel="noreferrer">HDFC Millennia terms</a>.
       </footer>
     <GuideCardRules slug="credit-card-for-flipkart" />
     </main>

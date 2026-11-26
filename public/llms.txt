@@ -2,7 +2,7 @@
 
 > Independent information about Indian credit cards and personal finance. Card terms change; confirm fees, rewards, caps, exclusions and availability with the issuer before applying or paying.
 
-Updated September 26, 2026. The catalogue contains 76 card records. A source link and review date do not guarantee that every product term remains current. Records awaiting review are labelled accordingly. Calculators provide category-level illustrations, not transaction-level reward guarantees: merchant codes, payment routes, statement cycles, redemption choices and account-specific offers can change the result.
+Updated 25 November 2026. The catalogue contains 76 card records. A source link and review date do not guarantee that every product term remains current. Records awaiting review are labelled accordingly. Calculators provide category-level illustrations, not transaction-level reward guarantees: merchant codes, payment routes, statement cycles, redemption choices and account-specific offers can change the result.
 
 ## Start here
 
@@ -20,3 +20,7 @@ Updated September 26, 2026. The catalogue contains 76 card records. A source lin
 - A points rate is not a cash rate; redemption value can vary.
 - Check the issuer's current product page and terms before relying on any card recommendation.
 - This website is not a bank or financial adviser and may receive referral compensation.
+
+## Expanded reference
+
+- [Full canonical-page text](https://www.assurefintech.com/llms-full.txt): expanded reference generated from the published canonical pages in this release, retaining source and scope notes.

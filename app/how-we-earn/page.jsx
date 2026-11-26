@@ -25,9 +25,9 @@ export default function HowWeEarnPage() {
         </p>
 
         <div className="rounded-2xl p-6" style={{ background: "var(--bg-muted)", border: "1px solid var(--border)" }}>
-          <h2 className="text-lg font-extrabold mb-4" style={{ color: "var(--text)" }}>Last disclosed status: March 2026</h2>
+          <h2 className="text-lg font-extrabold mb-4" style={{ color: "var(--text)" }}>Revenue and link disclosures</h2>
           <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-            At that time, Assure Fintech had no revenue and no active affiliate links. This is a historical disclosure, not a live revenue statement. Any current partner or application link is labeled on the relevant page; we do not claim that a click or approval earns us a commission unless that relationship is in place.
+            No affiliate or referral links are currently active on Assure Fintech. Issuer links are references, not paid recommendations. If paid links are introduced, they will be labelled next to the link; compensation will not determine our calculations. Affiliate status confirmed by the founder on 25 November 2026. This is a disclosure about affiliate links, not a statement of total business revenue.
           </p>
         </div>
 
@@ -37,8 +37,8 @@ export default function HowWeEarnPage() {
           {[
             {
               icon: "🔗", title: "Affiliate links (future)",
-              desc: "When you click \"Apply\" on a card page and get approved, the bank may pay us a commission. This costs you nothing extra. We will clearly label all affiliate links.",
-              status: "Not yet active",
+              desc: "An issuer reference alone does not establish compensation. If we add a paid application link, its relationship will be disclosed next to it.",
+              status: "Not active",
             },
             {
               icon: "⭐", title: "Premium subscription (future)",
@@ -69,7 +69,7 @@ export default function HowWeEarnPage() {
               "We will never rank cards by who pays us the most. Rankings are always by real value to you.",
               "Affiliate links will always be clearly labeled. No hidden links. No sneaky redirects.",
               "All current tools will remain free forever — regardless of whether we add premium features.",
-              "We will never collect, sell, or share your personal data. We don't even have user accounts.",
+              "We do not sell your personal data. Optional analytics and external forms are explained in our Privacy Policy; tools do not require a user account.",
               "If a card is bad for you, we'll say so — even if we earn commission from it.",
             ].map((p, i) => (
               <div key={i} className="flex gap-2">

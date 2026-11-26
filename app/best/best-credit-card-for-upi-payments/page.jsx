@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
@@ -685,7 +686,7 @@ export default function BestCreditCardForUpiPayments() {
         }}
       >
         <p>Issuer/network references: <a href={SOURCES.npci} target="_blank" rel="noreferrer">NPCI RuPay credit-card-on-UPI operating circular</a> · <a href={SOURCES.rewards} target="_blank" rel="noreferrer">NPCI rewards FAQ</a> · <a href={SOURCES.idfcWow} target="_blank" rel="noreferrer">IDFC FIRST WOW! guide</a> · <a href={SOURCES.idfcFees} target="_blank" rel="noreferrer">IDFC FIRST fee/card information</a> · <a href={SOURCES.sbiUpi} target="_blank" rel="noreferrer">SBI SimplySAVE UPI terms</a> · <a href={SOURCES.sbiFees} target="_blank" rel="noreferrer">SBI fee schedule</a> · <a href={SOURCES.axisAce} target="_blank" rel="noreferrer">Axis ACE terms</a>.</p>
-        <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. UPI reward structures are based on NPCI and bank communications as of {UPDATED}. RuPay credit card UPI rewards are subject to change by NPCI and individual issuers. This is not financial advice. Verify current reward structures with the issuing bank before making decisions. Assure Fintech may earn referral fees from some card issuers, which does not influence editorial content.
+        <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. UPI reward structures are based on NPCI and bank communications as of {UPDATED}. RuPay credit card UPI rewards are subject to change by NPCI and individual issuers. This is not financial advice. Verify current reward structures with the issuing bank before making decisions. {LINK_DISCLOSURE}
       </footer>
     <GuideCardRules slug="best-credit-card-for-upi-payments" />
     </main>

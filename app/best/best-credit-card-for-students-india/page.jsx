@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
@@ -748,7 +749,7 @@ export default function BestCreditCardForStudentsIndia() {
           lineHeight: 1.8,
         }}
       >
-        <strong>Sources and disclosure:</strong> Assure Fintech is an independent comparison platform. This guide compares general student card routes; only the specifically linked product has a product record on this page. Issuer eligibility, FD terms, fees and rewards can change. Check current official terms before applying. For credit-score factors and NA/NH files, see <a href="https://www.cibil.com/blog/all-you-need-to-know-about-cibil-score" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>CIBIL's official guide</a>. This is educational content, not financial advice. Assure Fintech may earn referral fees from some card issuers; compensation does not determine editorial coverage.
+        <strong>Sources and disclosure:</strong> Assure Fintech is an independent comparison platform. This guide compares general student card routes; only the specifically linked product has a product record on this page. Issuer eligibility, FD terms, fees and rewards can change. Check current official terms before applying. For credit-score factors and NA/NH files, see <a href="https://www.cibil.com/blog/all-you-need-to-know-about-cibil-score" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>CIBIL's official guide</a>. This is educational content, not financial advice. {LINK_DISCLOSURE}
       </footer>
     <GuideCardRules slug="best-credit-card-for-students-india" />
     </main>

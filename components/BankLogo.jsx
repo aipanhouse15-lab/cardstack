@@ -1,6 +1,6 @@
 "use client";
 // Bank logo component — shows card image if available, falls back to styled initials
-// Images should be in /public/cards/[card-id].png
+// Images should be in /public/cards/[card-id].webp (original PNGs are retained)
 
 import { useState } from "react";
 import { hasLocalCardImage } from "@/data/card-assets";
@@ -23,7 +23,7 @@ const BANK_STYLES = {
 export default function BankLogo({ bank, cardId, size = 40, rounded = 12, fontSize = 11 }) {
   const [imgError, setImgError] = useState(false);
   const style = BANK_STYLES[bank] || { initials: bank?.slice(0, 2) || "??", bg: "#6b7280", text: "#fff" };
-  const imgPath = hasLocalCardImage(cardId) ? `/cards/${cardId}.png` : null;
+  const imgPath = hasLocalCardImage(cardId) ? `/cards/${cardId}.webp` : null;
 
   // Try card image first, fall back to styled initials
   if (imgPath && !imgError) {
@@ -34,6 +34,11 @@ export default function BankLogo({ bank, cardId, size = 40, rounded = 12, fontSi
       }}>
         <img
           src={imgPath}
+          width={size}
+          height={size}
+          loading="lazy"
+          decoding="async"
+          width={size} height={size} loading="lazy" decoding="async"
           alt={bank}
           onError={() => setImgError(true)}
           style={{ width: "100%", height: "100%", objectFit: "contain" }}

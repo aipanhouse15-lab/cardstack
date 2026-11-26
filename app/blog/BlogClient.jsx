@@ -4,16 +4,14 @@ import Link from "next/link";
 import { BLOG_POSTS } from "@/data/content";
 import SectionHeader from "@/components/SectionHeader";
 
-const REDIRECTED_BLOG_IDS = new Set([
-  "amazon-hack", "best-card-beginners-2026", "best-card-insurance-premiums-2026",
-  "best-card-low-spenders-2026", "best-free-cards", "first-card-decision-framework",
-  "fuel-trick", "future-credit-card-rewards-india", "get-annual-fee-waived-scripts",
-  "maximize-dining", "reward-points-vs-cashback", "why-reward-rates-dropping-india",
-]);
+function displayDate(post) {
+  return post.updatedAt ? 'Updated ' + new Date(post.updatedAt + 'T00:00:00Z').toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric', timeZone:'UTC'}) : post.date;
+}
+
 
 export default function BlogClient() {
   const [cat, setCat] = useState("All");
-  const currentPosts = BLOG_POSTS.filter(p => !REDIRECTED_BLOG_IDS.has(p.id));
+  const currentPosts = BLOG_POSTS;
   const cats = ["All", ...new Set(currentPosts.map(p => p.category))];
   const list = cat === "All" ? currentPosts : currentPosts.filter(p => p.category === cat);
   const featured = currentPosts.filter(p => p.featured);
@@ -30,7 +28,7 @@ export default function BlogClient() {
             <div className="inline-block text-[11px] font-semibold rounded-md px-2.5 py-1 mb-3.5" style={{ color: p.color, background: `${p.color}12` }}>⭐ FEATURED · {p.category}</div>
             <h3 className="text-xl font-bold leading-snug mb-2.5" style={{ color: "var(--text)" }}>{p.title}</h3>
             <p className="text-sm leading-relaxed mb-4" style={{ color: "var(--text-muted)" }}>{p.excerpt}</p>
-            <div className="text-xs" style={{ color: "var(--text-faint)" }}>{p.date} · {p.readTime}</div>
+            <div className="text-xs" style={{ color: "var(--text-faint)" }}>{displayDate(p)} · {p.readTime}</div>
           </Link>
         ))}
       </div>
@@ -54,7 +52,7 @@ export default function BlogClient() {
             <div className="flex-1 min-w-[200px]">
               <div className="flex items-center gap-2 mb-1.5 flex-wrap">
                 <span className="text-[11px] font-semibold rounded px-2 py-0.5" style={{ color: p.color, background: `${p.color}10` }}>{p.category}</span>
-                <span className="text-xs" style={{ color: "var(--text-faint)" }}>{p.date} · {p.readTime}</span>
+                <span className="text-xs" style={{ color: "var(--text-faint)" }}>{displayDate(p)} · {p.readTime}</span>
               </div>
               <h3 className="text-base font-bold leading-snug mb-1" style={{ color: "var(--text)" }}>{p.title}</h3>
               <p className="text-sm leading-relaxed" style={{ color: "var(--text-muted)" }}>{p.excerpt}</p>

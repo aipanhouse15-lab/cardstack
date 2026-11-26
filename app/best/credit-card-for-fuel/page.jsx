@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
@@ -459,7 +460,7 @@ export default function BestCreditCardForFuel() {
       </p>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
-        <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Card-specific surcharge terms, reward rates, point values, caps and eligible transaction ranges can change; check issuer terms and your statements before applying. Sources: <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI BPCL Octane</a> · <a href={SOURCES.sbiFees} target="_blank" rel="noreferrer">SBI fees and MITC</a> · <a href={SOURCES.sbiLounge} target="_blank" rel="noreferrer">SBI lounge programme</a> · <a href={SOURCES.axis} target="_blank" rel="noreferrer">Axis IndianOil card</a> · <a href={SOURCES.icici} target="_blank" rel="noreferrer">ICICI HPCL Super Saver</a>. BPCL, IOCL, and HPCL are public sector undertakings and brand partnerships are subject to change. This is not financial advice.
+        <strong>Disclaimer:</strong> {LINK_DISCLOSURE} Card-specific surcharge terms, reward rates, point values, caps and eligible transaction ranges can change; check issuer terms and your statements before applying. Sources: <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI BPCL Octane</a> · <a href={SOURCES.sbiFees} target="_blank" rel="noreferrer">SBI fees and MITC</a> · <a href={SOURCES.sbiLounge} target="_blank" rel="noreferrer">SBI lounge programme</a> · <a href={SOURCES.axis} target="_blank" rel="noreferrer">Axis IndianOil card</a> · <a href={SOURCES.icici} target="_blank" rel="noreferrer">ICICI HPCL Super Saver</a>. BPCL, IOCL, and HPCL are public sector undertakings and brand partnerships are subject to change. This is not financial advice.
       </footer>
     <GuideCardRules slug="credit-card-for-fuel" />
     </main>

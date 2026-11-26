@@ -8,12 +8,14 @@ export default function TermsPage() {
   return (
     <div style={{ maxWidth: 720, margin: "0 auto", padding: "120px 24px 80px" }}>
       <h1 className="text-3xl font-extrabold tracking-tight mb-2" style={{ color: "var(--text)" }}>Terms of Service</h1>
-      <p className="text-sm mb-8" style={{ color: "var(--text-faint)" }}>Last updated: September 25, 2026</p>
+      <p className="text-sm mb-8" style={{ color: "var(--text-faint)" }}>Last updated: 25 November 2026</p>
 
       <div className="prose" style={{ color: "var(--text-secondary)", fontSize: 15, lineHeight: 1.8 }}>
         <h2 className="text-lg font-bold mt-8 mb-3" style={{ color: "var(--text)" }}>What Assure Fintech is</h2>
         <p>Assure Fintech provides financial comparison tools and educational content about credit cards, loans, insurance, savings, tax, and mutual funds. Some tools use public information and the assumptions or inputs you provide. Results may be estimates and may not include every fee, restriction, policy term or personal circumstance.</p>
 
+        <h2 className="text-lg font-bold mt-8 mb-3" style={{ color: "var(--text)" }}>Public data API</h2>
+        <p>The public card endpoints support the website and limited evaluation of the published data. Public accessibility is not a licence for bulk republication, resale, or a service-level commitment. Use reasonable request rates and respect errors and caching. For commercial redistribution, contractual access, support or licensing, contact us. These API terms distinguish ordinary public use from the prohibited bulk scraping or republication described below.</p>
         <h2 className="text-lg font-bold mt-8 mb-3" style={{ color: "var(--text)" }}>Not financial advice</h2>
         <p>Nothing on this site constitutes financial, investment, tax, or legal advice. Our tools calculate numbers based on publicly available data and the inputs you provide. We are not SEBI-registered advisors, tax consultants, or insurance brokers. Always consult a qualified professional before making financial decisions.</p>
 
@@ -24,7 +26,7 @@ export default function TermsPage() {
         <p>Some pages may contain affiliate or referral links through which Assure Fintech could receive compensation if you click or take an action. Any such relationship should be disclosed on or near the relevant link or page. Compensation, where applicable, does not change the terms offered by the issuer; review the issuer's own offer and eligibility conditions. See <a href="/how-we-earn" style={{ color: "var(--accent-text)" }}>How We Earn</a> for the site's stated monetization information.</p>
 
         <h2 className="text-lg font-bold mt-8 mb-3" style={{ color: "var(--text)" }}>Intellectual property</h2>
-        <p>All content, tools, calculations, and design on Assure Fintech are original work. You may share our content with attribution. You may not reproduce, scrape, or republish our content or data without written permission.</p>
+        <p>All content, tools, calculations, and design on Assure Fintech are original work. You may share our content with attribution. Bulk scraping, republication or resale requires written permission. Reasonable use of the documented public endpoints is governed by the Public data API section above.</p>
 
         <h2 className="text-lg font-bold mt-8 mb-3" style={{ color: "var(--text)" }}>Limitation of liability</h2>
         <p>Assure Fintech is provided "as is" without warranties. We are not liable for any financial loss, missed opportunities, or damages arising from your use of our tools, content, or recommendations. Use at your own discretion.</p>

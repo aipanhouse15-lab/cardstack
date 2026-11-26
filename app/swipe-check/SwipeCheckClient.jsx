@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import TransactionRewardCheck from "@/components/TransactionRewardCheck";
 import { CARDS, isSourceReviewed } from "@/data/cards";
 import { MERCHANTS } from "@/data/merchants";
 import SectionHeader from "@/components/SectionHeader";
@@ -19,6 +20,8 @@ export default function SwipeCheckClient() {
   return (
     <section className="pt-24 pb-20 px-6 max-w-[1000px] mx-auto">
       <SectionHeader badge="🔍 Tool #3 — NEW" badgeBg="rgba(236,72,153,0.08)" badgeBorder="rgba(236,72,153,0.18)" badgeColor="#ec4899" title="Swipe Check" subtitle="Look up relevant product rules for a merchant or payment route. These candidates are not a ranked or guaranteed best-card result." />
+
+      <TransactionRewardCheck />
 
       {/* Category Grid */}
       {!selectedCat && (

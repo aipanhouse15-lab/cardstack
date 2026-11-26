@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
@@ -648,7 +649,7 @@ export default function BestCreditCardForBeginnersIndia() {
           lineHeight: 1.8,
         }}
       >
-        <strong>Sources and disclosure:</strong> Card records above include dated issuer-source reviews; terms, availability and eligibility can change. Open each card record and linked official issuer source to review them. CIBIL describes the score range and factors in its <a href="https://www.cibil.com/blog/all-you-need-to-know-about-cibil-score" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>official guide</a>. A score does not guarantee approval. This is educational content, not financial advice. Assure Fintech may earn referral fees from some card issuers; compensation does not determine editorial coverage.
+        <strong>Sources and disclosure:</strong> Card records above include dated issuer-source reviews; terms, availability and eligibility can change. Open each card record and linked official issuer source to review them. CIBIL describes the score range and factors in its <a href="https://www.cibil.com/blog/all-you-need-to-know-about-cibil-score" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>official guide</a>. A score does not guarantee approval. This is educational content, not financial advice. {LINK_DISCLOSURE}
       </footer>
     <GuideCardRules slug="best-credit-card-for-beginners-india" />
     </main>

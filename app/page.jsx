@@ -1,3 +1,4 @@
+import { CARD_COUNTS } from "@/data/site-facts";
 import HomeClient from "@/components/HomeClient";
 
 export const metadata = {
@@ -24,9 +25,9 @@ export default function HomePage() {
     applicationCategory: "FinanceApplication",
     operatingSystem: "Web",
     offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
-    description: "Free credit card optimization tool for India. Compare 76+ cards, find the best card for every purchase, and discover how much you could save.",
-    featureList: "Smart Swipe Guide, Card Gap Finder, Swipe Check, Head-to-Head Comparison, 76+ Indian credit cards, Real savings calculator",
-    screenshot: "https://www.assurefintech.com/og-image.png",
+    description: `Free credit-card tools for India. ${CARD_COUNTS.total} catalogue records, ${CARD_COUNTS.sourceReviewed} source-linked and ${CARD_COUNTS.estimateReady} supported estimate models.`,
+    featureList: "Smart Swipe Guide, Card Gap Finder, Swipe Check, Head-to-Head Comparison and five financial calculators",
+    screenshot: "https://www.assurefintech.com/opengraph-image",
     author: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -35,6 +36,10 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }} />
       <HomeClient />
+      <section className="wrap" style={{paddingTop:40,paddingBottom:64}} aria-labelledby="home-faq">
+        <h2 id="home-faq" className="sec-title">Questions about card rewards</h2>
+        {faqSchema.mainEntity.map(q=><details key={q.name} style={{padding:'18px 0',borderBottom:'1px solid var(--border)'}}><summary style={{cursor:'pointer',fontWeight:600}}>{q.name}</summary><p style={{lineHeight:1.8,marginTop:12}}>{q.acceptedAnswer.text}</p></details>)}
+      </section>
     </>
   );
 }

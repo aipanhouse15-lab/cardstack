@@ -2,8 +2,8 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
+import AnalyticsConsent from "@/components/AnalyticsConsent";
+
 
 export const metadata = {
   metadataBase: new URL("https://www.assurefintech.com"),
@@ -35,24 +35,17 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap"
           rel="stylesheet"
         />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=G-PHSZXX204P`}
-          strategy="afterInteractive"
-        />
-        <Script id="ga4" strategy="afterInteractive">{`
-          window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-          gtag('js',new Date());gtag('config','G-PHSZXX204P');
-        `}</Script>
       </head>
       <body>
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <ThemeProvider>
+          <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@type":"Organization","@id":"https://www.assurefintech.com/#organization",name:"Assure Fintech",url:"https://www.assurefintech.com",founder:{"@type":"Person",name:"Ashutosh Khulbe"},email:"ccardproject@gmail.com",contactPoint:{"@type":"ContactPoint",contactType:"editorial enquiries",email:"ccardproject@gmail.com"}})}} />
           <Navbar />
           <main id="main-content" style={{ position: "relative", zIndex: 1 }}>
             {children}
           </main>
           <Footer />
-          <Analytics />
+          <AnalyticsConsent />
         </ThemeProvider>
       </body>
     </html>

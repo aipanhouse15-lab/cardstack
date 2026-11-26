@@ -16,10 +16,10 @@ export const metadata = {
 
 // /blog/regalia-vs-infinia
 // Template: Feature-by-feature premium card breakdown with verdict
-// Color: #7c3aed | Updated: September 26, 2026
+// Color: #7c3aed | Updated: October 3, 2026
 
 const COLOR = "#7c3aed";
-const UPDATED = "October 2, 2026";
+const UPDATED = "October 3, 2026";
 
 const SvgFeeVsValue = () => (
   <svg viewBox="0 0 720 236" role="img" aria-label="HDFC Regalia vs Infinia: annual fee compared to potential reward value at different spend levels" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -246,7 +246,7 @@ export default function BlogRegaliaVsInfinia() {
     headline: "HDFC Regalia vs Infinia: Current Terms for Existing Cardholders",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-10-02",
+    dateModified: "2026-10-03",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -302,17 +302,17 @@ export default function BlogRegaliaVsInfinia() {
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Compare the fee actually charged with benefits you would otherwise pay for. Do not count a waiver or welcome benefit unless you meet the issuer's exact conditions.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Reward Rates: Infinia Wins, But By Less Than You Think</h2>
+        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Reward Points: Compare the Redemption You Actually Use</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>HDFC lists 4 Reward Points per ₹200 for Regalia and 5 points per ₹150 for Infinia. These are points, not cash-back percentages. HDFC's published redemption values differ by route; caps, exclusions and offer conditions affect what a cardholder actually realises.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>For your own comparison, use eligible spend by category, the redemption route you actually use, any caps and expiry, and the fee after any waiver. SmartBuy advertises accelerated points on eligible transactions, not a universal rate on all travel spending.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Break-Even Analysis: Spend Level by Spend Level</h2>
+        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>How to Calculate Your Own Break-Even</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>There is no reliable break-even spend without assumptions about your purchase categories, eligibility, point-redemption route, lounge use, taxes and fee waiver. A spend threshold alone cannot tell you which card is better for you.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Estimate net value as usable rewards plus benefits you would otherwise pay for, minus the fee and transaction costs. Show each assumption separately and set any benefit you will not use to zero.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
-        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Airport Lounge Access: Infinia's Killer Feature</h2>
+        <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>Airport Lounge Access: Compare the Conditions</h2>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>HDFC lists Regalia domestic lounge vouchers subject to quarterly spend and up to six complimentary international visits through Priority Pass. HDFC advertises unlimited complimentary global lounge access on Infinia. Airport, network and programme conditions apply.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>Do not value a lounge visit at its menu price unless you would otherwise pay that amount. Check eligible lounges, visit rules, guest charges and current spend conditions before travel.</p>
       </section>
@@ -322,7 +322,7 @@ export default function BlogRegaliaVsInfinia() {
       </section>
       <section style={{ marginBottom: 28 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 12px" }}>The Verdict: Use This Decision Tree</h2>
-        <p style={{ fontSize: 16, margin: "0 0 12px" }}>There is no universal winner here. The right card depends entirely on your spend level and lifestyle.</p>
+        <p style={{ fontSize: 16, margin: "0 0 12px" }}>There is no universal winner here. The useful comparison depends on eligible spend, the actual fee, redemption route and benefits you will use.</p>
         <p style={{ fontSize: 16, margin: "0 0 12px" }}>For current cardholders: first confirm the annual fee and waiver status shown on your account; next calculate rewards at your real redemption value; then count only lounge, travel and lifestyle benefits you expect to use. If considering a different card, compare products currently open to applications—not a discontinued sourcing route.</p>
       </section>
       <section style={{ marginBottom: 28 }}>
@@ -350,7 +350,7 @@ export default function BlogRegaliaVsInfinia() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        <strong>Sources:</strong> HDFC Bank's <a href="https://www.hdfc.bank.in/credit-cards/regalia-credit-card" target="_blank" rel="noopener noreferrer">Regalia page</a> states sourcing is discontinued and lists current cardholder terms; its <a href="https://www.hdfc.bank.in/credit-cards/infinia-credit-card" target="_blank" rel="noopener noreferrer">Infinia Metal page</a> states membership is by invitation and lists current terms. The <a href="https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf" target="_blank" rel="noopener noreferrer">September 2026 HDFC MITC</a> separates point-earning ceilings from redemption limits and sets current transaction earning blocks. Reviewed October 2, 2026. This comparison is for existing cardholders; no approval or upgrade is promised.
+        <strong>Sources:</strong> HDFC Bank's <a href="https://www.hdfc.bank.in/credit-cards/regalia-credit-card" target="_blank" rel="noopener noreferrer">Regalia page</a> states sourcing is discontinued and lists current cardholder terms; its <a href="https://www.hdfc.bank.in/credit-cards/infinia-credit-card" target="_blank" rel="noopener noreferrer">Infinia Metal page</a> states membership is by invitation and lists current terms. The <a href="https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf" target="_blank" rel="noopener noreferrer">September 2026 HDFC MITC</a> separates point-earning ceilings from redemption limits and sets current transaction earning blocks. Reviewed October 3, 2026; this pass updates the page framing and removes obsolete, unused graphics, not every individual card benefit. This comparison is for existing cardholders; no approval or upgrade is promised.
       </footer>
     </main>
     </>

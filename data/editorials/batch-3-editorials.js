@@ -1,3 +1,4 @@
+// ARCHIVED SOURCE: not a current product review. Use reviewed-editorial.js via the index.
 // Tier D Card Editorials — Batch 3
 // Assure Fintech (assurefintech.com)
 // Generated: June 2026

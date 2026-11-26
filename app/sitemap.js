@@ -1,3 +1,4 @@
+import { canonicalCompare } from "@/data/canonical-routes";
 import { CARDS, isSourceReviewed } from "@/data/cards";
 import { BLOG_POSTS } from "@/data/content";
 import { BEST_FOR_CATEGORIES } from "@/data/bestfor";
@@ -24,12 +25,6 @@ const STATIC_BLOG_SLUGS = [
   "upi-vs-credit-cards-india",
 ];
 
-const REDIRECTED_BLOG_SLUGS = new Set([
-  "amazon-hack", "best-card-beginners-2026", "best-card-insurance-premiums-2026",
-  "best-card-low-spenders-2026", "best-free-cards", "first-card-decision-framework",
-  "fuel-trick", "future-credit-card-rewards-india", "get-annual-fee-waived-scripts",
-  "maximize-dining", "reward-points-vs-cashback", "why-reward-rates-dropping-india",
-]);
 
 // New static best-for pages
 const STATIC_BESTFOR_SLUGS = [
@@ -62,6 +57,8 @@ export default function sitemap() {
     { url: base, changeFrequency: "weekly", priority: 1.0 },
     { url: `${base}/cards`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${base}/best`, changeFrequency: "weekly", priority: 0.85 },
+    { url: `${base}/learn/credit-cards`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/blog/best-free-cards`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/learn`, changeFrequency: "weekly", priority: 0.85 },
 
     // Tools (5 original + 5 calculators)
@@ -106,14 +103,14 @@ export default function sitemap() {
   }));
 
   // Comparison pages — dynamic + new static (deduped)
-  const dynamicCompare = new Set(COMPARISONS.map(c => c.slug));
+  const dynamicCompare = new Set(COMPARISONS.map(c => canonicalCompare(c.slug)));
   const allCompareSlugs = [...new Set([...dynamicCompare, ...STATIC_COMPARE_SLUGS])];
   const comparisonPages = allCompareSlugs.map(slug => ({
     url: `${base}/compare/${slug}`, changeFrequency: "weekly", priority: 0.8,
   }));
 
   // Blog pages — dynamic from data + new static (deduped)
-  const dynamicBlog = new Set(BLOG_POSTS.map(p => p.id).filter(slug => !REDIRECTED_BLOG_SLUGS.has(slug)));
+  const dynamicBlog = new Set(BLOG_POSTS.map(p => p.id));
   const allBlogSlugs = [...new Set([...dynamicBlog, ...STATIC_BLOG_SLUGS])];
   const blogPages = allBlogSlugs.map(slug => ({
     url: `${base}/blog/${slug}`, changeFrequency: "monthly", priority: 0.6,
@@ -126,5 +123,5 @@ export default function sitemap() {
     }))
   );
 
-  return [...staticPages, ...cardPages, ...bestForPages, ...comparisonPages, ...blogPages, ...learnArticlePages];
+  return [...new Map([...staticPages, ...cardPages, ...bestForPages, ...comparisonPages, ...blogPages, ...learnArticlePages].map(p=>[p.url,p])).values()];
 }

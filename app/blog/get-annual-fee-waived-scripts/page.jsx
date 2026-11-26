@@ -1,5 +1,7 @@
-import { permanentRedirect } from "next/navigation";
+import RecoveredArticle, { recoveredMetadata } from '@/components/RecoveredArticle';
 
-export default function GetAnnualFeeWaivedScriptsRedirect() {
-  permanentRedirect("/blog/annual-fee-when-worth-paying");
+export const metadata = recoveredMetadata('get-annual-fee-waived-scripts');
+
+export default function Page() {
+  return <RecoveredArticle slug="get-annual-fee-waived-scripts" />;
 }

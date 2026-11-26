@@ -1,3 +1,4 @@
+// ARCHIVED SOURCE: not a current product review. Use reviewed-editorial.js via the index.
 // Tier D Card Editorials - Batch 5
 // Cards: yes-uni, slice, roarbank-unity, csb-edge-plus, rbl-world-safari,
 //        kotak-zen, indusind-pinnacle, sc-ultimate, sc-smart, amex-mrcc

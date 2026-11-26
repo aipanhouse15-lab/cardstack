@@ -1,3 +1,4 @@
+import RestoredCoverage from "@/components/RestoredCoverage";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -19,7 +20,7 @@ export const metadata = {
 // Color: #dc2626 | Reviewed: September 26, 2026
 
 const COLOR = "#dc2626";
-const UPDATED = "September 26, 2026";
+const UPDATED = "November 25, 2026";
 
 const SvgRegulatoryTimeline = () => (
   <svg viewBox="0 0 720 200" role="img" aria-label="Timeline of major RBI credit card regulatory changes 2021 to 2026" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -59,7 +60,7 @@ const SvgInterestFreePeriod = () => (
     <text x="549" y="78" textAnchor="middle" fontSize="10" fontWeight="700" fill="var(--text)">Pay full balance by the due date</text>
     <text x="549" y="96" textAnchor="middle" fontSize="10" fill="var(--text-muted)">to retain the interest-free period</text>
     <text x="549" y="112" textAnchor="middle" fontSize="10" fill="var(--text-muted)">subject to the card terms</text>
-    <text x="24" y="158" fontSize="10" fill="var(--text-muted)">RBI does not prescribe a universal minimum number of days from statement to due date.</text>
+    <text x="24" y="158" fontSize="10" fill="var(--text-muted)">RBI: at least a fortnight to pay before interest starts being charged.</text>
   </svg>
 );
 
@@ -194,7 +195,7 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
       {
         "@type": "Question",
         name: "How is the interest-free period on a credit card determined?",
-        acceptedAnswer: { "@type": "Answer", text: "RBI defines the interest-free credit period as the period from the transaction date to the payment due date, subject to paying the entire outstanding by that due date. The length therefore depends on the transaction and billing cycle; the Master Direction does not prescribe a universal minimum number of days from statement date to due date. Check your statement and issuer terms. If an earlier balance remains unpaid, the interest-free period may be suspended." }
+        acceptedAnswer: { "@type": "Answer", text: "RBI defines the interest-free credit period as the period from the transaction date to the payment due date, subject to paying the entire outstanding by that due date. The length therefore depends on the transaction and billing cycle; paragraph 10(a) separately requires at least a fortnight to make payment before interest starts being charged. Check your statement and issuer terms. If an earlier balance remains unpaid, the interest-free period may be suspended." }
       },
       {
         "@type": "Question",
@@ -240,7 +241,7 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
     headline: "RBI Credit Card Guidelines: Key Rights and What to Check",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-11-25",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -293,7 +294,7 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
       <section style={{ marginBottom: 24 }}>
         <h2 style={{ fontSize: 22, fontWeight: 700, margin: "0 0 14px" }}>Interest-free period: understand your statement and due date</h2>
         <SvgInterestFreePeriod />
-        <p>RBI defines the interest-free credit period as the time from a transaction to its payment due date, provided the cardholder pays the entire outstanding by that due date. The length of the period can vary with the transaction date and billing cycle. The current Master Direction does not establish a universal 14- or 15-day minimum between statement generation and the due date.</p>
+        <p>RBI defines the interest-free credit period as the time from a transaction to its payment due date, provided the cardholder pays the entire outstanding by that due date. The length of the period can vary with the transaction date and billing cycle. Paragraph 10(a) separately requires timely bills and at least a fortnight for payment before interest starts being charged. Do not confuse this billing safeguard with the maximum interest-free period advertised for purchases.</p>
         <p>Check the due date printed on your statement and the issuer's terms. If you carry an unpaid balance, the interest-free period may be suspended. Our <Link href="/learn/loans" style={{ color: COLOR }}>loan and credit explainer</Link> has more on how billing cycles work.</p>
       </section>
       <section style={{ marginBottom: 24 }}>
@@ -356,9 +357,9 @@ export default function BlogRbiLatestGuidelinesCreditCards() {
       </p>
 
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
-        Reviewed against RBI's Master Direction on Credit Card and Debit Card Issuance and Conduct (updated March 7, 2024) on September 26, 2026. Check RBI's current text and your issuer's terms before relying on a rule. This content is informational and is not legal or financial advice.
+        Billing-period explanation checked against paragraph 10(a) of RBI's Master Direction on October 4, 2026. Follow your statement's due date and payment instructions. Other protections remain subject to their stated conditions.
       </footer>
-    </main>
+    <RestoredCoverage route="/blog/rbi-latest-guidelines-credit-cards" /></main>
     </>
   );
 }

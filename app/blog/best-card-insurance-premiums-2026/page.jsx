@@ -1,5 +1,7 @@
-import { permanentRedirect } from "next/navigation";
+import RecoveredArticle, { recoveredMetadata } from '@/components/RecoveredArticle';
 
-export default function InsurancePremiumArticleRedirect() {
-  permanentRedirect("/best/best-credit-card-for-insurance-premium");
+export const metadata = recoveredMetadata('best-card-insurance-premiums-2026');
+
+export default function Page() {
+  return <RecoveredArticle slug="best-card-insurance-premiums-2026" />;
 }

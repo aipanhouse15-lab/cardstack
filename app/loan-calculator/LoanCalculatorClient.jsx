@@ -69,6 +69,7 @@ export default function LoanCalculatorClient() {
       emiAdvertised: Math.round(emiAdvertised),
       totalPayAdvertised: Math.round(totalPayAdvertised),
       interestAdvertised: Math.round(interestAdvertised),
+      baseEffectiveRate: ((Math.pow(1+rate/1200,12)-1)*100).toFixed(2),
       effectiveRate: invalidCharges ? null : annualizedCostRate.toFixed(2),
       invalidCharges,
       extraCost: Math.round(extraCost),
@@ -146,14 +147,14 @@ export default function LoanCalculatorClient() {
               <div className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "var(--text-faint)" }}>Illustrative annualized cost rate</div>
               <div className="flex items-center justify-center gap-4">
                 <div>
-                  <div className="text-2xl font-extrabold" style={{ color: "var(--text-faint)", textDecoration: "line-through" }}>{rate}%</div>
-                  <div className="text-[10px]" style={{ color: "var(--text-faint)" }}>Advertised</div>
+                  <div className="text-2xl font-extrabold" style={{ color: "var(--text-faint)", textDecoration: "none" }}>{result.baseEffectiveRate}%</div>
+                  <div className="text-[10px]" style={{ color: "var(--text-faint)" }}>Effective annual rate before charges</div>
                 </div>
                 <div style={{ fontSize: 18, color: "var(--text-faint)" }}>→</div>
                 <div>
                   <div className="text-4xl font-extrabold" style={{ color: "#DC2626" }}>{result.invalidCharges ? "Unavailable" : `${result.effectiveRate}%`}</div>
                   {result.invalidCharges && <p role="alert">Upfront charges must be less than the loan amount. Reduce the charges or correct the loan amount.</p>}
-                  <div className="text-[10px]" style={{ color: "#DC2626" }}>With assumed upfront charges</div>
+                  <div className="text-[10px]" style={{ color: "#DC2626" }}>Effective annual cost, including entered charges</div>
                 </div>
               </div>
             </div>
@@ -182,7 +183,7 @@ export default function LoanCalculatorClient() {
             <div className="rounded-xl p-4" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
               <div className="text-xs font-bold mb-1" style={{ color: "var(--orange)" }}>Illustration limits</div>
               <div className="text-xs leading-relaxed" style={{ color: "var(--text-muted)" }}>
-                This illustration assumes charges are deducted from the amount disbursed upfront. Actual timing, taxes, optional products and lender calculations can differ; verify your written offer.
+                The advertised rate is nominal. At {rate}% nominal with monthly payments, the effective annual rate before charges is {result.baseEffectiveRate}%. With zero charges, the effective result is unchanged; the nominal-to-effective difference is compounding, not a fee. This illustration assumes charges are deducted from the amount disbursed upfront. Actual timing, taxes, optional products and lender calculations can differ; verify your written offer.
               </div>
             </div>
           </div>

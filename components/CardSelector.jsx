@@ -45,7 +45,7 @@ export default function CardSelector({ selected, onToggle }) {
       </div>
 
       <p className="text-xs mb-4" style={{ color: "var(--text-faint)" }}>
-        Calculators include only source-linked cards. Review-pending products remain available in the catalogue.
+        This category comparison includes cards with supported category estimates. For Amazon Pay ICICI, Millennia and ACE, use the purchase check in Smart Swipe. Other source-linked cards remain available in the catalogue.
       </p>
 
       <div className="grid gap-2" style={{ gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))" }}>

@@ -3,12 +3,12 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Dining and Restaurants in India (September 2026)",
-  description: "There are two types of dining rewards in India: food delivery and actual restaurant dining. Most cards treat them very differently, and some popular cards gi...",
+  title: "Best Credit Cards for Dining and Food Delivery in India (2026)",
+  description: "Compare current dining and food-delivery card rewards in India. Check eligible merchants, payment routes, shared caps, redemption value and annual fees.",
   alternates: { canonical: "/best/best-credit-card-for-dining-restaurants" },
   openGraph: {
-    title: "Best Credit Card for Dining and Restaurants in India (September 2026)",
-    description: "There are two types of dining rewards in India: food delivery and actual restaurant dining. Most cards treat them very differently, and some popular cards gi...",
+    title: "Best Credit Cards for Dining and Food Delivery in India (2026)",
+    description: "Compare current dining and food-delivery card rewards in India. Check eligible merchants, payment routes, shared caps, redemption value and annual fees.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -16,14 +16,16 @@ export const metadata = {
 
 
 // /best/best-credit-card-for-dining-restaurants
-// Updated: September 26, 2026
+// Updated: October 3, 2026
 
 const COLOR = "#f59e0b";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 3, 2026";
 const SOURCES = {
   hsbc: "https://www.hsbc.co.in/credit-cards/how-does-cashback-work/",
   bob: "https://bankofbaroda.bank.in/digital-products/cards/credit-cards/eterna",
   bobcard: "https://www.bobcard.co.in/credit-card-types/eterna",
+  axisAce: "https://www.axis.bank.in/cards/credit-card/axis-bank-ace-credit-card",
+  diners: "https://www.hdfc.bank.in/credit-cards/diners-club-black-credit-card",
   swiggy: "https://www.hdfcbank.com/content/bbp/repositories/723fb80a-2dde-42a3-9793-7ae1be57c87f/?path=%2FPersonal%2FPay%2FCards%2FCredit+Card%2FCredit+Cards%2FSwiggy+HDFC+Bank+Credit+Card%2FT-and-C-Swiggy-HDFC-Bank-Credit-Card.pdf",
   sbi: "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/simplysave-upi-digi-tnc.pdf",
 };
@@ -107,11 +109,11 @@ function HighSpendDinerMathTable() {
       viewBox="0 0 680 329"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Table comparing annual cashback earned by high-spend restaurant diners across different credit cards"
+      aria-label="Illustrative monthly and annual rewards for eligible restaurant and food-app spend, subject to each card's terms and caps"
       style={{ width: "100%", height: "auto", margin: "28px 0" }}
     >
       <rect width="680" height="260" rx="10" fill="var(--raise)" stroke="var(--border)" strokeWidth="1" />
-      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">High-Spend Diner Math: ₹20,000/month at Restaurants</text>
+      <text x="340" y="26" textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--text)">Illustration: ₹20,000/month eligible dining or app spend</text>
       {["Card", "Rate", "Cap", "Actual Monthly Earn", "Annual Benefit"].map((h, i) => (
         <text key={h} x={[20, 170, 250, 360, 510][i]} y="48" fontSize="10.5" fontWeight="700" fill="var(--text)">{h}</text>
       ))}
@@ -120,7 +122,7 @@ function HighSpendDinerMathTable() {
         { card: "HSBC Live+", rate: "10%", cap: "₹1,200/mo shared", monthly: "₹1,200 max", annual: "₹14,400 max", highlight: false },
         { card: "BOB Eterna", rate: "3.75%*", cap: "5,000 pts/cycle shared", monthly: "₹750*", annual: "₹9,000*", highlight: true },
         { card: "SBI SimplySAVE", rate: "Up to 1.67%*", cap: "5,000-point monthly cap", monthly: "Up to ₹333*", annual: "Up to ₹4,000*", highlight: false },
-        { card: "Swiggy HDFC", rate: "10%**", cap: "₹1,500/cycle", monthly: "₹1,500 max", annual: "₹18,000 max", highlight: false },
+        { card: "Swiggy HDFC (app only)", rate: "10%**", cap: "₹1,500/cycle", monthly: "₹1,500 max", annual: "₹18,000 max", highlight: false },
       ].map((r, i) => (
         <g key={i}>
           <rect x="12" y={58 + i * 38} width="656" height="36" rx="3" fill={r.highlight ? COLOR : "transparent"} opacity={r.highlight ? "0.06" : "1"} />
@@ -131,7 +133,8 @@ function HighSpendDinerMathTable() {
           <text x="510" y={81 + i * 38} fontSize="10.5" fontWeight="700" fill={r.annual === "₹0" ? "#ef4444" : COLOR}>{r.annual}</text>
         </g>
       ))}
-      <text x="340" y="250" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">*Point values/caps and eligible dining classification apply. **Swiggy HDFC rate is limited to eligible Swiggy app transactions.</text>
+      <text x="340" y="250" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">Illustrations assume eligible spend and full cap availability; app spend is not direct restaurant spend.</text>
+      <text x="340" y="263" textAnchor="middle" fontSize="9.5" fill="var(--text-muted)">*Point values and merchant eligibility apply. **Swiggy HDFC: eligible Swiggy app transactions only.</text>
     </svg>
   );
 }
@@ -285,7 +288,7 @@ export default function BestCreditCardForDiningRestaurants() {
     headline: "Dining Credit Cards: Compare Restaurant and Delivery Rewards",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-03",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -314,7 +317,7 @@ export default function BestCreditCardForDiningRestaurants() {
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: COLOR }} /> Guide
           </div>
           <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-1px", color: "#F1F5F9", marginBottom: 14 }}>
-            Best Credit Card for Dining and Restaurants in India (September 2026)
+            Best Credit Card for Dining and Restaurants in India (October 2026)
           </h1>
           <div style={{ fontSize: 12, color: "rgba(255,255,255,0.25)" }}>Last updated {UPDATED} · By Ash · 8 min read</div>
         </div>
@@ -405,24 +408,6 @@ export default function BestCreditCardForDiningRestaurants() {
           },
           {
             rank: "3",
-            name: "HDFC Diners Black",
-            tag: "Premium; terms vary by variant",
-            fee: "₹10,000 joining; ₹5,000 renewal (waiver terms apply)",
-            reward: "Reward points; value varies by redemption, exclusions and caps",
-            best: "Review current card variant terms and fee waiver",
-            slug: "hdfc-diners-black",
-          },
-          {
-            rank: "4",
-            name: "SBI Card ELITE",
-            tag: "Check current rewards terms",
-            fee: "₹4,999 + tax; standard renewal waiver at ₹10L eligible preceding-year spend",
-            reward: "No estimate: current complete earning and redemption terms remain under review",
-            best: "Not ranked until current full terms are reconciled",
-            slug: "sbi-elite",
-          },
-          {
-            rank: "5",
             name: "SBI SimplySAVE",
             tag: "Eligible dining category",
             fee: "₹499/yr (waivable at ₹1L)",
@@ -481,6 +466,13 @@ export default function BestCreditCardForDiningRestaurants() {
           </div>
         ))}
       </section>
+
+      <p style={{ marginTop: -20, marginBottom: 24, fontSize: 13, color: "var(--text-muted)" }}>
+        SBI Card ELITE is not included in the ranked dining picks because its current full earning and redemption terms have not been reconciled. Its published fee and advertised benefits are not enough to establish a comparable dining return. See the <Link href="/cards/sbi-elite" style={{ color: COLOR }}>review-pending record</Link> for scope.
+      </p>
+      <p style={{ marginTop: -12, marginBottom: 24, fontSize: 13, color: "var(--text-muted)" }}>
+        HDFC Diners Black earns points on eligible retail purchases, but the current issuer terms reviewed here do not establish a Swiggy-specific 10X dining rate. It is not ranked as a dining specialist. See the <Link href="/cards/hdfc-diners-black" style={{ color: COLOR }}>current card review</Link> and <a href={SOURCES.diners} target="_blank" rel="noreferrer">HDFC's product terms</a> for the applicable earn and redemption rules.
+      </p>
 
       <DiningRewardRateChart />
 
@@ -604,7 +596,7 @@ export default function BestCreditCardForDiningRestaurants() {
       </section>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
-        <p>Issuer references: <a href={SOURCES.hsbc} target="_blank" rel="noreferrer">HSBC Live+ cashback details</a> · <a href={SOURCES.bob} target="_blank" rel="noreferrer">Bank of Baroda Eterna details</a> · <a href={SOURCES.bobcard} target="_blank" rel="noreferrer">BOBCARD Eterna rewards/fees</a> · <a href={SOURCES.swiggy} target="_blank" rel="noreferrer">Swiggy HDFC terms</a> · <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI SimplySAVE UPI/rewards terms</a>.</p>
+        <p>Issuer references: <a href={SOURCES.hsbc} target="_blank" rel="noreferrer">HSBC Live+ cashback details</a> · <a href={SOURCES.bob} target="_blank" rel="noreferrer">Bank of Baroda Eterna details</a> · <a href={SOURCES.bobcard} target="_blank" rel="noreferrer">BOBCARD Eterna rewards/fees</a> · <a href={SOURCES.swiggy} target="_blank" rel="noreferrer">Swiggy HDFC terms</a> · <a href={SOURCES.axisAce} target="_blank" rel="noreferrer">Axis ACE product terms</a> · <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI SimplySAVE UPI/rewards terms</a>.</p>
         <strong>Disclaimer:</strong> Assure Fintech is an independent editorial platform. We are not affiliated with any bank and do not hold a banking license. Reward rates and monthly caps on all cards mentioned are subject to change by the issuing bank without notice. Verify current terms before applying. Some links may generate referral commissions that do not affect our editorial independence.
       </footer>
     <GuideCardRules slug="best-credit-card-for-dining-restaurants" />

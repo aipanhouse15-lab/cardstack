@@ -28,7 +28,7 @@ export const CARDS = [
         headline: "Existing-cardholder reference: Regalia sourcing is discontinued and lounge access is conditional.",
         body: `HDFC's current Regalia page says sourcing has been discontinued. This page is therefore a reference for existing cardholders, not a recommendation to apply. The published base earn is 4 Reward Points per ₹200 eligible retail spend. At the issuer's ₹0.50 flight/hotel redemption value that is a 1% equivalent; statement cashback at ₹0.15 per point is 0.3%. Eligible SmartBuy multipliers are separate and subject to terms.
 
-The ₹2,500 renewal fee is waived at ₹3 lakh anniversary-year spend. Domestic lounge vouchers require ₹1 lakh spend in the calendar quarter; international Priority Pass access has separate transaction conditions. This card record has not yet had a complete dated review of all issuer terms, so confirm your own card's current terms with HDFC.`,
+The ₹2,500 renewal fee is waived at ₹3 lakh anniversary-year spend. Domestic lounge vouchers require ₹1 lakh spend in the calendar quarter; international Priority Pass access has separate transaction conditions. HDFC's published fee, base earn, redemption values and these key lounge conditions were checked in October 2026. Account-specific offers and later issuer changes are not implied by this standard-card summary.`,
         idealFor: "Existing Regalia cardholders checking the currently published fee, reward and lounge terms.",
         skipIf: "You are looking to apply for a new Regalia card, or need lounge access without quarterly spend conditions.",
       },
@@ -79,7 +79,7 @@ Domestic lounge vouchers require ₹1 lakh spend per calendar quarter. Internati
         headline: "The best credit card in India — if you can get it. Invite-only and worth every rupee.",
         body: `HDFC Infinia is invitation-only. It earns 5 Reward Points per ₹150 eligible retail spend. At ₹1 per point for eligible flights/hotels, that is a 3.33% base equivalent; statement cashback at ₹0.30 per point is a 1% equivalent. SmartBuy multipliers are conditional, not a guaranteed flat return.
 
-The ₹12,500 renewal fee is waived after ₹10 lakh spend in the preceding 12 months. Redemption caps apply, including 2 lakh points per statement cycle, 1.5 lakh points/month for travel and airmiles, and 50,000 points/month for statement cashback. This record still needs a complete dated review of all issuer terms; confirm eligibility and exclusions with HDFC.`,
+The ₹12,500 renewal fee is waived after ₹10 lakh eligible spend in the preceding 12 months. HDFC's published fee, base earn, redemption values and redemption limits were checked in October 2026. This standard-card summary does not imply a personalised invitation or account-specific offer.`,
         idealFor: "Eligible invited cardholders who understand the redemption options, caps and renewal-fee threshold.",
         skipIf: "You need a card that can be applied for publicly or cannot meet its annual fee after applicable waiver conditions.",
       },
@@ -98,9 +98,9 @@ The ₹12,500 renewal fee is waived after ₹10 lakh spend in the preceding 12 m
         { combo: "Infinia + Amazon Pay ICICI", fee: "₹12,500/year", reason: "Amazon card's 5% with no cap beats Infinia's 3.33% on Amazon specifically. Use Infinia for everything else.", cardId: "amazon-icici" },
       ],
       faq: [
-        { q: "How do I get an HDFC Infinia invite?", a: "Maintain a high HDFC savings balance (₹10L+ reported by most cardholders), have a strong HDFC relationship, or hold a Regalia/Diners Black and spend heavily. There's no public application — HDFC reaches out." },
+        { q: "How do I get an HDFC Infinia invite?", a: "HDFC says the card is offered to select customers by invitation and that the bank assesses eligibility. It does not publish a public approval formula or guarantee an invitation based on a particular balance, card or spend level." },
         { q: "Can the ₹12,500 renewal fee be waived?", a: "HDFC lists a renewal-fee waiver at ₹10 lakh spend in the preceding 12 months. Check the current issuer terms for eligible spend and timing." },
-        { q: "HDFC Infinia vs Diners Black — which is better?", a: "Compare eligibility, fee-waiver thresholds, network acceptance, redemption choices and current issuer benefits. This site has not completed a full side-by-side dated review of both cards." },
+        { q: "HDFC Infinia vs Diners Black — which is better?", a: "There is no universal winner. Compare eligibility, fee-waiver thresholds, network acceptance, redemption choices and benefits you will use. HDFC no longer accepts new Diners Club Black applications and offers Infinia by invitation; this comparison is for existing holders." },
         { q: "What are Infinia's redemption limits?", a: "HDFC lists a maximum 2 lakh points per statement cycle, with separate monthly limits of 1.5 lakh points for travel/airmiles and 50,000 points for statement cashback. These are redemption limits, not an earning cap." },
       ],
     },
@@ -116,7 +116,7 @@ The ₹12,500 renewal fee is waived after ₹10 lakh spend in the preceding 12 m
       { name: "Amazon, Flipkart, Myntra", rate: "5% cashback" },
       { name: "Tata CLiQ, Uber, BookMyShow, Sony LIV, Cult.fit", rate: "5% cashback" },
     ],
-    pointsInfo: "5% CashPoints on 10 listed online merchants (₹1,000 per calendar-month cap); 1% on other eligible spends (separate ₹1,000 per-month cap); statement redemption 1 CashPoint = ₹1. The current card-specific terms state no minimum transaction value; merchant IDs and settlement timing govern eligible posting.",
+    pointsInfo: "5% CashPoints on 10 listed online merchants (₹1,000 per calendar-month cap); 1% on other eligible spends (separate ₹1,000 per-month cap); statement redemption 1 CashPoint = ₹1. HDFC MITC v4.19 specifies earning in complete ₹100 transaction blocks: residual amounts and transactions below ₹100 do not earn CashPoints. Merchant IDs and settlement timing still govern eligible posting.",
     highlights: ["5% on 10 listed online merchants", "Separate ₹1,000 caps per calendar month", "₹1L quarterly milestone: choose ₹1,000 voucher or 1 lounge voucher", "1,000 welcome CashPoints if the joining membership fee is paid", "₹1L renewal-fee waiver spend"],
     pros: ["5% on 10 named online merchants", "₹1,000 renewal fee waived at ₹1L annual spend", "Quarterly milestone includes lounge-voucher choice"],
     cons: ["₹1,000 cap per calendar month on each cashback bucket", "Quarterly lounge access is an option, not automatic", "Fuel and some transaction types excluded"],
@@ -144,7 +144,7 @@ At ₹1 lakh eligible spend in a calendar quarter, choose either a ₹1,000 vouc
         { category: "Listed online merchants", reason: "Earn 5% CashPoints, subject to the issuer's ₹1,000-per-calendar-month bucket cap." },
       ],
       avoidFor: [
-        { category: "Groceries", reason: "Millennia gives 1% on groceries. SBI Card ELITE gives 2.5%. Even ICICI Coral's Culinary Treats gives better dining/grocery value.", altCard: "sbi-elite" },
+        { category: "Groceries", reason: "The generic grocery input does not identify eligible merchant coding or issuer-specific exclusions; compare the terms for your actual supermarket and payment route." },
         { category: "Fuel", reason: "Fuel is excluded from this card's rewards. Compare a dedicated fuel card and its surcharge-waiver terms rather than assuming a general-spend rate applies." },
         { category: "Utility bills", reason: "1% on Millennia vs 5% on Axis ACE via Google Pay. If your electricity bill is ₹3,000/month, that's ₹150 vs ₹30.", altCard: "axis-ace" },
         { category: "Spend after the cashback bucket cap", reason: "The issuer caps cashback in monthly buckets; compare another card for additional eligible spend.", altCard: "axis-ace" },
@@ -153,7 +153,6 @@ At ₹1 lakh eligible spend in a calendar quarter, choose either a ₹1,000 vouc
       pairWith: [
         { combo: "Millennia + Axis ACE", fee: "₹1,499/year, both waivable", reason: "A possible two-card setup: use each only for its eligible partner or payment route, and compare combined fees and shared-category caps against your own spending.", cardId: "axis-ace" },
         { combo: "Millennia + Amazon Pay ICICI", fee: "₹1,000/year", reason: "If you're a heavy Amazon shopper, the Amazon card's 5% for Prime members has no earnings cap. Use Millennia for its listed partner merchants and the Amazon card for eligible Amazon purchases.", cardId: "amazon-icici" },
-        { combo: "Millennia + SBI ELITE", fee: "₹5,999/year", reason: "Compare current SBI ELITE reward and movie-benefit terms before pairing it with Millennia; this pairing has not been fully revalidated.", cardId: "sbi-elite" },
       ],
       faq: [
         { q: "Does HDFC Millennia cashback work on small Swiggy orders?", a: "HDFC's public product summary lists Swiggy among the 5% merchants. Transaction eligibility and exclusions can depend on the posted transaction and current issuer terms; check those terms before relying on a minimum-spend assumption." },
@@ -187,7 +186,7 @@ At ₹1 lakh eligible spend in a calendar quarter, choose either a ₹1,000 vouc
     headline: "Existing-cardholder reference: applications are closed and full terms remain under review.",
     body: `HDFC currently says applications for Diners Club Black are not being accepted. This reference is therefore intended for existing cardholders, not as an invitation to apply. HDFC lists 5 Reward Points per ₹150 eligible retail spend, with 1 point worth ₹1 on eligible flights/hotels or up to ₹0.30 as cashback. Flight/hotel points can cover up to 70% of booking value.
 
-The renewal fee is ₹10,000 plus tax and is waived at ₹5 lakh annual spend. The issuer lists unlimited domestic and international lounge access for primary and add-on cardholders. The card earns up to 10x on eligible SmartBuy travel; it is not a 33% flat return. This record still needs a complete dated review, so verify current cardholder terms with HDFC.`,
+The renewal fee is ₹10,000 plus tax and is waived at ₹5 lakh annual spend. HDFC lists unlimited domestic and international lounge access for primary and add-on cardholders. Eligible SmartBuy multipliers are route-specific; they are not a 33% flat return. HDFC's published fee, base earn, redemption values and principal redemption limits were checked in October 2026. This is a legacy-card reference, not an application recommendation.`,
     idealFor: "Existing Diners Club Black cardholders checking currently listed issuer terms.",
     skipIf: "You are looking to apply now; HDFC says applications are not currently being accepted.",
   },
@@ -262,7 +261,7 @@ The 10% Swiggy tier requires a transaction of at least ₹249. The other cashbac
   ],
   avoidFor: [
     { category: "Zomato orders", reason: "The 10% rate is Swiggy-exclusive. Zomato falls under general dining at lower rates. If you use both platforms, HDFC Millennia's 5% on both is better.", altCard: "hdfc-millennia" },
-    { category: "Offline dining", reason: "Restaurant bills don't get 10% — only Swiggy orders do. For restaurant spending, look at SBI ELITE's 2.5% or BOB Eterna's 3.75%.", altCard: "sbi-elite" },
+    { category: "Offline dining", reason: "Restaurant bills do not qualify for this card's Swiggy-app tier. Compare current eligible restaurant MCCs, caps and redemption value on a source-reviewed dining card." },
     { category: "Groceries and utilities", reason: "1% on groceries and 0% on utilities. You need a separate card for these categories.", altCard: "axis-ace" },
   ],
   pairWith: [
@@ -284,6 +283,10 @@ The 10% Swiggy tier requires a transaction of at least ₹249. The other cashbac
       { name: "Other eligible online spends", rate: "5x reward points" },
     ],
     caps: { rewardPointsPerMonth: { otherOnline: 10000, exclusivePartners: 10000 }, capPeriod: "calendar month", capDescription: "5X other-eligible-online and 10X listed-partner rewards have separate 10,000-point calendar-month caps; after each accelerated cap, eligible spend earns 1 point/₹100." },
+    rewardAssumptions: {
+      default: "The estimate values eligible points at ₹0.25 each using the illustrated ₹500 Amazon voucher for 2,000 points; this is voucher value, not statement cashback. Transaction-level ₹100 rounding, exclusions and redemption choice can change realised value.",
+      online: "Conservatively models ordinary eligible 5X online spend, not the separate 10X named-partner tier. The 10,000-point calendar-month bucket then falls back to 1 point/₹100. Named-partner spend requires eligible merchant IDs and INR payment; Cleartrip/Yatra affiliate transactions and other listed exclusions do not qualify.",
+    },
     pointsInfo: "1 point/₹100 other eligible spend; 5 points/₹100 eligible online and 10 points/₹100 on listed exclusive partners. The card-specific terms list Apollo 24/7, BookMyShow, Cleartrip, Domino's, GyFTR, IGP, Myntra, Netmeds, Swiggy and Yatra; SBI's product video names a different set, so this page follows the dated card-specific terms. The 5X other-online and 10X listed-partner buckets each cap at 10,000 points per calendar month; eligible spend after either cap earns 1 point/₹100. 10X partner earn requires INR payment and an eligible merchant MID; Cleartrip/Yatra affiliate transactions are excluded. The issuer relies on correct online identifiers and merchant classification. Rent (MCC 6513), government (9399/9311), digital gaming (5816, 7993, 7994), cash advance, balance transfer, Encash, Flexipay and offline fuel do not earn points; wallet loading at partner MCCs 6540/6541 is excluded. SBI Card-platform utility bill payments do not earn 5X. GyFTR voucher purchases earn 10X only on its SimplyCLICK portal. Points redeem for partner e-vouchers, cannot pay card outstanding, and expire after 24 months. The ₹500 Amazon Pay welcome gift is conditional on paying the ₹499 first-year membership fee and maintaining an eligible account in good standing.",
     redemptionNote: "Voucher-equivalent value, not cash paid to your bank account. ₹500 Amazon voucher / 2,000 points = ₹0.25 per point. This is one illustrated catalogue choice, not a universal point value; Swiggy is listed at 10X in the card-specific reward terms, but actual eligibility depends on merchant identification and channel rules.",
     calculationSourceUrl: "https://www.sbicard.com/en/personal/rewards/amazon-e-voucher-rs-500-click",
@@ -323,7 +326,7 @@ The 10% Swiggy tier requires a transaction of at least ₹249. The other cashbac
   },
 
   { id: "sbi-cashback", name: "SBI Cashback Card", bank: "SBI", img: "💰", color: "#0369a1", fee: 999, joiningFee: 999, feeWaiver: "₹999 renewal fee reversed after ₹2L or more spend in the preceding year", type: "Cashback", verified: true, reviewedAt: "2 October 2026", sourceUrl: "https://www.sbicard.com/en/personal/credit-cards/cashback-sbi-card.html", rewardSourceUrl: "https://www.sbicard.com/en/faq/cashback-sbi-card-faq.page", offerSourceUrl: "https://www.sbicard.com/cashback-revised",
-    rewardAssumptions: { online: "5% only on eligible online purchases; insurance, utilities, gaming, government and other excluded MCCs earn nothing.", dining: "This row assumes eligible offline/POS spending; eligible online purchases use the separate 5% bucket.", travel: "This row assumes eligible offline/POS spending, excluding railways; online eligible bookings use the 5% bucket.", groceries: "This row assumes eligible offline/POS spending; eligible online purchases use the separate 5% bucket.", entertainment: "This row assumes eligible offline/POS spending; digital gaming is excluded.", shopping: "This row assumes eligible offline/POS spending; eligible online purchases use the separate 5% bucket." },
+    rewardAssumptions: { default: "The model treats category inputs as eligible purchases and applies the correct online or offline rate only when the payment route is represented. It enforces separate ₹2,000 online and ₹2,000 offline statement-cycle caps (₹4,000 combined); excluded MCCs, reversals and settlement timing can change the actual credit.", online: "5% only on eligible online purchases; insurance, utilities, gaming, government and other excluded MCCs earn nothing.", dining: "This row assumes eligible offline/POS spending; eligible online purchases use the separate 5% bucket.", travel: "This row assumes eligible offline/POS spending, excluding railways; online eligible bookings use the 5% bucket.", groceries: "This row assumes eligible offline/POS spending; eligible online purchases use the separate 5% bucket.", entertainment: "This row assumes eligible offline/POS spending; digital gaming is excluded.", shopping: "This row assumes eligible offline/POS spending; eligible online purchases use the separate 5% bucket." },
     rewards: { dining: 1, travel: 1, online: 5, groceries: 1, fuel: 0, utilities: 0, entertainment: 1, shopping: 1, default: 1 },
     caps: { cashbackPerStatementCycle: { online: 2000, offline: 2000, total: 4000 }, capPeriod: "statement cycle", capAppliesTo: ["online", "offline"] },
     // Issuer sets separate ₹2,000 statement-cycle caps on 5% online and 1% offline cashback.
@@ -384,16 +387,16 @@ If you spend ₹60K-₹1L online per cycle, you need a second card for the overf
 },
   },
 
-  { id: "sbi-elite", name: "SBI Card ELITE", bank: "SBI", img: "👑", color: "#4338ca", fee: 4999, feeWaiver: "₹10L eligible spend in preceding year", type: "Premium", verified: false, sourceUrl: "https://www.sbicard.com/en/personal/sbi-credit-card.page", feeSourceUrl: "https://www.sbicard.com/en/most-important-terms-and-conditions.page", rewardSourceUrl: "https://www.sbicard.com/en/cardholder-agreement.page",
+  { id: "sbi-elite", name: "SBI Card ELITE", bank: "SBI", img: "👑", color: "#4338ca", fee: 4999, feeWaiver: "₹10L eligible spend in preceding year", type: "Premium", verified: false, sourceUrl: "https://www.sbicard.com/en/personal/credit-cards/sbi-card-elite.html", feeSourceUrl: "https://www.sbicard.com/en/most-important-terms-and-conditions.page", rewardSourceUrl: "https://www.sbicard.com/en/cardholder-agreement.page", loungeSourceUrl: "https://www.sbicard.com/en/faq/complimentary-priority-pass-membership.page", redemptionSourceUrl: "https://www.sbicard.com/en/customer-notices.page",
     // This legacy card remains source-pending. Remove its former flat-cash
     // conversions, BMS quota, network and lounge claims from reusable fields.
     // Zeroes are schema placeholders only; verified:false prevents publication.
     rewards: { dining: 0, travel: 0, online: 0, groceries: 0, fuel: 0, utilities: 0, entertainment: 0, shopping: 0, default: 0 },
-    pointsInfo: "Issuer currently advertises a ₹5,000 welcome e-Gift Voucher, movie tickets worth ₹6,000/year and up to 50,000 bonus Reward Points/year (advertised value ₹12,500). Card-specific earning, offer eligibility, redemption value and lounge/network terms are not fully reconciled here.",
+    pointsInfo: "Current SBI Cardholder Agreement lists 2 Reward Points per ₹100 on eligible base spend and 10 total points per ₹100 on dining, departmental-store and grocery transactions, with the combined accelerated portion capped at 10,000 points per month; after the cap, those categories return to 2 points per ₹100. Fuel/service-station transactions and several other transaction types are excluded, and grocery/department-store merchant coding matters. SBI advertises a ₹5,000 welcome voucher, movie tickets advertised at ₹6,000/year and up to 50,000 milestone bonus points/year advertised at ₹12,500; eligibility and offer terms apply. A current, complete ELITE-specific redemption valuation and all network-specific benefits are not reconciled.",
     highlights: ["Issuer-advertised ₹5,000 welcome voucher; eligibility applies", "Issuer-advertised movie tickets worth ₹6,000/year; terms apply", "Up to 50,000 bonus Reward Points/year; issuer-advertised value ₹12,500"],
     pros: [],
-    cons: ["₹4,999 + applicable taxes; standard renewal waiver at ₹10L eligible preceding-year spend", "Full current card-specific reward, offer, redemption and network terms remain under review"],
-    redemptionNote: "No general rupee value is assigned to Reward Points: the issuer's advertised ₹12,500 annual value applies to a specific bonus-point claim, not every earned point or redemption route.",
+    cons: ["₹4,999 + applicable taxes; standard renewal waiver at ₹10L eligible preceding-year spend", "Current lounge access and network-specific privileges vary by program/network; confirm the exact issued variant before comparing benefits", "Current redemption routes, charges and the April 2026 statement-credit changes need reconciliation to the ELITE-specific reward terms"],
+    redemptionNote: "SBI's April 2026 notice now limits eligible statement-credit redemptions to 60,000 points/month and multiples of 4,000 points, with listed card exceptions. Older ELITE material describes other redemption terms and advertises ₹12,500 only for a specific annual milestone-bonus claim. No universal cash value or complete current ELITE redemption schedule is asserted here.",
 
     editorial: {
   verdict: {
@@ -802,18 +805,18 @@ Utilities, telecom, fuel and several other categories do not earn cashback. Fuel
 },
   },
 
-  { id: "au-zenith", name: "AU Zenith+", bank: "AU Bank", img: "⚜️", color: "#b45309", fee: 4999, feeWaiver: "₹8L net retail spend in previous card anniversary year", type: "Premium", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card",
+  { id: "au-zenith", name: "AU Zenith+", bank: "AU Bank", img: "⚜️", color: "#b45309", fee: 4999, feeWaiver: "₹8L net retail spend in previous card anniversary year", type: "Premium", verified: true, reviewedAt: "3 October 2026", sourceUrl: "https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card",
     rewards: { dining: 2, travel: 2, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
     partnerRates: [
-      { name: "Dining", rate: "5 pts/₹100 (1.25%)" },
-      { name: "Travel", rate: "5 pts/₹100 (1.25%)" },
-      { name: "International", rate: "10 pts/₹100 (2.5%)" },
+      { name: "Dining", rate: "Up to 2 Reward Points/₹100; eligible MCCs and statement-cycle limits apply" },
+      { name: "Travel", rate: "Up to 2 Reward Points/₹100; eligible transactions only" },
+      { name: "International", rate: "Up to 2 Reward Points/₹100; foreign-currency markup is charged separately" },
     ],
-    pointsInfo: "Up to 2 Reward Points/₹100 on dining, travel and international spends; AU lists 1 Reward Point = ₹1 for Zenith+. ₹4,999 annual fee; ₹8L net retail spend waiver from year 2.",
+    pointsInfo: "Up to 2 Reward Points/₹100 on dining, travel and international spends; AU lists 1 Reward Point = ₹1 for Zenith+. ₹4,999 annual fee; ₹8L net retail spend waiver from year 2. The current member agreement limits total earning to 25,000 points per statement cycle, caps specified categories, excludes rent, education/government and BBPS, and limits utility/telecom earning to 100 points per transaction and 1,000 per statement cycle. Redemption requires at least 1,000 points and costs ₹99 + GST; points expire two years after becoming redeemable.",
     highlights: ["16 domestic and 16 international lounge visits/year", "0.99% forex markup", "Up to 2 Reward Points/₹100 on dining, travel and international spends", "₹8L annual fee-waiver threshold"],
     pros: ["Substantial domestic and international lounge access", "Low 0.99% forex markup", "₹8L anniversary-year fee waiver"],
     cons: ["₹4,999 annual fee", "Reward value depends on AU redemption options", "Terms and milestone benefits can change"],
-    network: "Visa Infinite / RuPay", lounge: "16 domestic + 16 international annually; India Priority Pass visits are chargeable",
+    network: "Visa Infinite / RuPay", lounge: "16 domestic + 16 international visits/year (4 per quarter). Zenith+ is exempt from AU's ₹50,000 prior-quarter spend gate for domestic lounge access; Priority Pass use within India is chargeable.", loungeSourceUrl: "https://www.au.bank.in/ml/ml/pdf/zenith-plus-credit-card/au-small-finance-bank-cc-airport-lounge-terms-conditions.pdf",
 
     editorial: {
   verdict: {
@@ -823,7 +826,7 @@ Utilities, telecom, fuel and several other categories do not earn cashback. Fuel
     skipIf: "You won't use lounge access or travel benefits enough to offset the annual fee, and don't meet the eligible spend waiver threshold.",
   },
   bestFor: [
-    { category: "Airport lounges", reason: "AU lists 16 domestic and 16 international lounge visits annually; domestic Priority Pass usage is chargeable. Check current eligible lounges and terms." },
+    { category: "Airport lounges", reason: "AU lists 16 domestic and 16 international visits annually. Zenith+ is expressly exempt from AU's ₹50,000 prior-quarter spend gate for domestic access; Priority Pass use within India is chargeable. Check participating lounges and current terms." },
     { category: "International spending", reason: "The current foreign-currency markup is 0.99%; this is a fee, not a cashback or reward rate." },
     { category: "Dining and travel", reason: "AU advertises up to 2 Reward Points per ₹100 on dining and travel; redemption value depends on AU's current catalogue and terms." },
   ],
@@ -841,7 +844,7 @@ Utilities, telecom, fuel and several other categories do not earn cashback. Fuel
 },
   },
 
-  { id: "idfc-wow", name: "IDFC FIRST WOW", bank: "IDFC", img: "🌟", color: "#059669", fee: 0, feeWaiver: "Lifetime free; FD-backed (minimum FD ₹20,000)", type: "Travel", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.idfcfirst.bank.in/credit-card/wow",
+  { id: "idfc-wow", name: "IDFC FIRST WOW", bank: "IDFC", img: "🌟", color: "#059669", fee: 0, feeWaiver: "Lifetime free; FD-backed (minimum FD ₹20,000)", type: "Travel", verified: true, reviewedAt: "3 October 2026", sourceUrl: "https://www.idfcfirst.bank.in/credit-card/wow",
     rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0.125, entertainment: 0.5, shopping: 0.5, default: 0.5 },
     partnerRates: [
       { name: "Eligible online, offline and international spends", rate: "4 Reward Points/₹200" },
@@ -882,26 +885,26 @@ Utilities, telecom, fuel and several other categories do not earn cashback. Fuel
 },
   },
 
-  { id: "idfc-select", name: "IDFC FIRST Select", bank: "IDFC", img: "⭐", color: "#0d9488", fee: 0, feeWaiver: "Lifetime free", type: "Premium Entry", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.idfcfirst.bank.in/credit-card/select",
+  { id: "idfc-select", name: "IDFC FIRST Select", bank: "IDFC", img: "⭐", color: "#0d9488", fee: 0, feeWaiver: "Lifetime free", type: "Premium Entry", verified: true, reviewedAt: "25 November 2026", sourceUrl: "https://www.idfcfirst.bank.in/credit-card/select",
     rewards: { dining: 1.25, travel: 1.25, online: 0.375, groceries: 0.375, fuel: 0, utilities: 0.125, entertainment: 0.375, shopping: 0.375, default: 0.375 },
     partnerRates: [
       { name: "Dining, travel and international spends", rate: "Up to 10X Reward Points" },
-      { name: "Other eligible retail spends", rate: "3X up to ₹20,000 statement-cycle spend; 10X on incremental spend above ₹20,000 and on birthday spends" },
+      { name: "Other eligible retail spends", rate: "3X on other eligible retail; 10X on eligible dining, travel and international purchases from the first eligible transaction" },
       { name: "Utilities, insurance, FASTag and railway spends", rate: "1X Reward Points" },
     ],
-    pointsInfo: "3 Reward Points/₹200 on eligible spends up to ₹20,000 per statement cycle; 10X on incremental spends above ₹20,000 and on birthday spends. Dining/travel/international may earn up to 10X; select categories earn 1X. 1 point = ₹0.25; points valid for 24 months.",
+    pointsInfo: "10 Reward Points/₹200 on eligible dining, travel and international purchases from the first eligible transaction; 3/₹200 on other eligible retail; 1/₹200 on insurance, utilities, railways and FASTag. The former ₹20,000 reward threshold was removed effective 18 June 2026. Rewards accrue only on spends up to the credit limit per billing cycle, Repaying and reusing the limit does not increase that earning cap. One point is ₹0.25 before redemption charges; points expire after 24 months.",
     highlights: ["Lifetime free", "Zero forex markup", "1 domestic airport visit/quarter after ₹20K spend in the previous month", "4 railway lounge visits/quarter after spend condition"],
     pros: ["No joining or annual fee", "Zero forex markup", "Airport and railway lounge access subject to spend eligibility"],
     cons: ["₹20K spend condition for lounge access", "Fuel excluded from rewards", "₹99 + GST redemption fee; points expire after 24 months"],
 
-    redemptionNote: "Reward earning is tiered by monthly spend and category; 1 point is worth ₹0.25. A ₹99 + GST redemption fee applies. IDFC FIRST also advertises bonus points on eligible flight and hotel bookings through its app; check the live offer terms.",
+    redemptionNote: "Reward earning depends on the eligible category, not the former ₹20,000 accelerator threshold; 1 point is worth ₹0.25. A ₹99 + GST redemption fee applies. IDFC FIRST also advertises bonus points on eligible flight and hotel bookings through its app; check the live offer terms.",
     network: "Visa", lounge: "1 domestic airport + 4 railway visits/quarter, each subject to the current ₹20K monthly spend condition",
     recentChanges: { date: "January 2026", changes: ["Reward-point base revised to 1 point per ₹200", "Select railway/FASTag categories moved to 1X and excluded from milestone spend", "Airport lounge access requires ₹20K monthly spend"], impact: "Use the current point-per-₹200 basis and verify lounge eligibility each month" },
 
     editorial: {
   verdict: {
     headline: "A lifetime-free card with zero forex and spend-gated domestic lounge access.",
-    body: `FIRST Select has no joining or annual fee and now carries zero forex markup under IDFC FIRST Bank's current card terms. Rewards depend on category and statement-cycle spending tiers: the bank lists up to 10X on dining, travel and international purchases, 3X on other eligible spends up to ₹20,000, and 10X on incremental spend above that threshold and birthday purchases. One domestic airport visit per quarter and railway lounge access require meeting the monthly spend condition. Points expire after 24 months.`,
+    body: `FIRST Select has no joining or annual fee and now carries zero forex markup under IDFC FIRST Bank's current card terms. From 18 June 2026, eligible dining, travel and international purchases earn 10X from the first eligible transaction; other eligible retail earns 3X and specified categories earn 1X. Rewardable spending is limited to the credit limit per billing cycle. The former ₹20,000 reward threshold no longer applies. One domestic airport visit per quarter and railway lounge access require meeting the monthly spend condition. Points expire after 24 months.`,
     idealFor: "People seeking a lifetime-free card with zero forex and who can meet the monthly spend condition for lounge access.",
     skipIf: "You need unconditional lounge access or want straightforward cashback rather than tiered reward points.",
   },
@@ -909,10 +912,10 @@ Utilities, telecom, fuel and several other categories do not earn cashback. Fuel
     { category: "Birthday-month spending", reason: "Eligible birthday-month purchases earn 10X Reward Points under the current program terms." },
     { category: "International transactions", reason: "IDFC FIRST currently lists zero forex markup for its credit cards; check the applicable terms and DCC choices when paying abroad." },
     { category: "Airport and railway lounges", reason: "Access is limited by quarterly visit counts and the current monthly spend condition; confirm eligibility and lounge lists before travel." },
-    { category: "Higher monthly spend", reason: "Eligible incremental spend above ₹20,000 can earn 10X Reward Points; points are not equivalent to a fixed cashback percentage." },
+    { category: "Higher monthly spend", reason: "Eligible dining, travel and international purchases can earn 10X without crossing a ₹20,000 reward threshold; the credit-limit ceiling and exclusions still apply." },
   ],
   avoidFor: [
-    { category: "Regular everyday spending", reason: "Standard earning is 3 Reward Points per ₹200 before category and statement-cycle accelerators. Compare point value and redemption fees with a cashback card.", altCard: "axis-ace" },
+    { category: "Regular everyday spending", reason: "Standard earning is 3 Reward Points per ₹200 before eligible-category accelerators. Compare point value and redemption fees with a cashback card.", altCard: "axis-ace" },
     { category: "Unconditional lounge access", reason: "Airport lounge visits require meeting the bank's monthly spend condition; select visits are limited each quarter.", altCard: "hdfc-millennia" },
   ],
   pairWith: [
@@ -921,53 +924,25 @@ Utilities, telecom, fuel and several other categories do not earn cashback. Fuel
   ],
   faq: [
     { q: "How do birthday-month rewards work?", a: "Eligible birthday-month purchases earn 10X Reward Points under the current program terms. This is a points multiplier, not a 5% cashback promise; exclusions and caps apply." },
-    { q: "How does the ₹20,000 spend tier work?", a: "The current program offers 3X on eligible spends up to ₹20,000 per statement cycle and 10X on incremental eligible spends above that threshold. Some categories have separate earning rates or exclusions." },
+    { q: "Does Select still require ₹20,000 spend to unlock 10X rewards?", a: "No. Since 18 June 2026, eligible dining, travel and international purchases earn 10X from the first eligible transaction. Other eligible retail earns 3X, while specified categories earn 1X. The ₹20,000 spend condition for certain benefits is separate from reward earning." },
     { q: "Is zero forex the same as IDFC WOW?", a: "IDFC FIRST currently lists zero forex markup across its credit cards. Select also has domestic airport and railway lounge benefits, subject to visit limits and spend eligibility." },
   ],
 },
   },
 
-  { id: "onecard", name: "OneCard", bank: "OneCard", img: "⚡", color: "#18181b", fee: 0, feeWaiver: "Lifetime free", type: "Lifestyle", verified: true,
-    rewards: { dining: 0.2, travel: 0.2, online: 0.2, groceries: 0.2, fuel: 0.2, utilities: 0.2, entertainment: 0.2, shopping: 0.2, default: 0.2 },
-    partnerRates: [
-      { name: "Top 2 spending categories (auto-detected)", rate: "5x points (~1%)" },
-    ],
-    pointsInfo: "5x on top 2 categories (~1%), 1x others (~0.2%) · 1pt = ₹0.10 · Points never expire",
-    highlights: ["Metal card", "5x on top 2 categories", "Lifetime free", "Points never expire"],
-    pros: ["Metal card (premium feel)", "Low 1% forex markup", "Auto-optimizes for your spending", "Free forever"],
-    cons: ["Effective rate only ~1% even at 5x", "0.2% on non-top categories", "No lounge"],
-
-    redemptionNote: "Top 2 spending categories auto-detected monthly at 5x (~1%). Other categories 1x (~0.2%). Algorithm picks based on actual spend — not manually selectable.",
-    network: "Visa/MC", lounge: "None",
-
-    editorial: {
-  verdict: {
-    headline: "A metal card with smart auto-optimizing rewards — but the effective rates are disappointingly low.",
-    body: `OneCard markets itself as a smart, premium card with its metal build and algorithm that auto-detects your top 2 spending categories for 5x rewards. It sounds impressive, but the math tells a different story: 5x points at ₹0.10/point = 1% effective rate on your top categories. Everything else earns 0.2%.
-
-The metal card looks and feels premium, and the app is genuinely excellent. But as a rewards card, it underdelivers compared to competition. A free card that earns 1% at best is hard to justify when Axis ACE gives 1.5% on everything and HDFC Millennia gives 5% on partners — both for under ₹500/year.`,
-    idealFor: "People who want a premium-looking free card with a good app experience, and don't care about maximizing cashback. Also decent if your top 2 categories are consistent month over month.",
-    skipIf: "You care about actual reward value. 1% maximum (on 5x categories) and 0.2% on everything else is among the lowest effective rates of any card on our list.",
-  },
-  bestFor: [
-    { category: "Auto-optimized top 2 categories", reason: "The algorithm picks your highest-spending categories for 5x points. No manual selection needed — unlike AU LIT which requires active management." },
-    { category: "Premium feel on zero budget", reason: "Metal card, clean app, good UX. If aesthetics and app experience matter to you, OneCard delivers." },
-    { category: "Fuel (rare)", reason: "1% on fuel is unusual — most cards give 0%. If you spend heavily on fuel, OneCard's auto-detection might pick it up." },
-  ],
-  avoidFor: [
-    { category: "Maximizing rewards", reason: "1% at best is below Axis ACE's 1.5% floor. On ₹50K/month spending, you earn ₹500 on OneCard vs ₹750 on ACE.", altCard: "axis-ace" },
-    { category: "Online shopping", reason: "0.2% on online unless it's your top category. HDFC Millennia gives 25x more at 5%.", altCard: "hdfc-millennia" },
-    { category: "Lounge access", reason: "No lounge access. For a free card with lounges, IDFC FIRST Select offers 4 visits/year.", altCard: "idfc-select" },
-  ],
-  pairWith: [
-    { combo: "OneCard + Axis ACE", fee: "₹499/year", reason: "Keep OneCard as a metal backup card, use ACE for actual spending at 1.5-5%.", cardId: "axis-ace" },
-  ],
-  faq: [
-    { q: "Can I choose which categories get 5x?", a: "No. The algorithm auto-detects your top 2 spending categories based on actual usage. You can't manually select or override it." },
-    { q: "Is the metal card actually better?", a: "Functionally identical to a plastic card. The metal build is an aesthetic choice. It's heavier, looks premium, but doesn't improve contactless performance or durability meaningfully." },
-    { q: "Why is OneCard so popular despite low rewards?", a: "Marketing, app experience, and the metal card create a premium perception. Many users don't calculate their effective rate — they just see '5x' and assume it's good." },
-  ],
-},
+  { id: "onecard", name: "OneCard (issuer variant under review)", bank: "Multiple partner issuers", img: "⚡", color: "#18181b", fee: 0, feeWaiver: "Issuer variant and current terms not established", type: "Lifestyle", verified: false,
+    sourceUrl: "https://www.federal.bank.in/-/onecard-4",
+    feeSourceUrl: "https://www.federal.bank.in/documents/d/guest/federal-one-credit-card-mitc-may-2026",
+    rewardSourceUrl: "https://www.federal.bank.in/documents/d/guest/federal-onecard-t-c",
+    rewards: { dining: 0, travel: 0, online: 0, groceries: 0, fuel: 0, utilities: 0, entertainment: 0, shopping: 0, default: 0 },
+    availabilityStatus: "OneCard is issued by multiple partner banks. This legacy catalogue entry does not identify an applicant's issuer/network variant; do not use it as a current product recommendation.",
+    partnerRates: [],
+    pointsInfo: "The May 2026 Federal Bank MITC confirms terms for its Federal Bank One co-branded card, but refers detailed reward accrual to the app/programme. The linked detailed Federal reward terms are dated November 2025 and cannot establish current terms for every OneCard issuer variant. No universal reward rate or point value is published here.",
+    highlights: ["Multiple issuing-bank variants exist", "Current terms must be matched to the issuer and network", "No universal reward estimate is published"],
+    pros: [],
+    cons: ["This legacy entry does not identify a specific issuing bank or network variant"],
+    redemptionNote: "Issuer-specific reward accrual and redemption terms have not been reconciled to this catalogue identity.",
+    network: "Variant-dependent", lounge: "Not established",
   },
 
   { id: "bob-eterna", name: "BOB Eterna", bank: "BOB", img: "🏛️", color: "#1e40af", fee: 2499, feeWaiver: "₹2.5L annual spend (was LTF until Mar 2026)", type: "Premium", verified: true,
@@ -976,39 +951,34 @@ The metal card looks and feels premium, and the app is genuinely excellent. But 
       { name: "Dining/travel/online", rate: "15 pts/₹100 (3.75%)" },
     ],
     pointsInfo: "15 pts/₹100 dining/travel/online (3.75%), 3 pts other (0.75%) · 1pt = ₹0.25 · Fuel surcharge waiver",
-    highlights: ["3.75% on dining/travel/online", "Lounge: tier-based (4 intl at Silver, more at higher tiers)", "Golf access", "BookMyShow discount"],
-    pros: ["Excellent 3.75% on dining/travel/online", "18 lounge visits", "Golf access", "Low fee waiver ₹2.5L"],
-    cons: ["0.75% on general spends", "BOB app mediocre", "Point redemption limited"],
-    network: "Visa", lounge: "18/year",
+    highlights: ["15 Reward Points/₹100 on issuer-eligible accelerated categories", "₹0.25 cashback redemption value per point", "Shared 5,000-point accelerated statement-cycle cap", "Domestic lounge access requires ₹75,000 eligible spend in the preceding calendar quarter"],
+    pros: ["Published point value and accelerated category rates", "Issuer terms describe the shared cap and lounge eligibility threshold"],
+    cons: ["Eligible MCCs and the shared cap affect actual returns", "Fuel earns no points", "Lounge eligibility has a separate quarterly spend condition"],
+    network: "Confirm the issued variant", lounge: "Eligibility after ₹75,000 eligible spend in preceding calendar quarter; visit allowance not stated here",
 
     editorial: {
   verdict: {
-    headline: "A hidden gem — 3.75% on dining, travel, and online from a bank nobody expects.",
-    body: `BOB Eterna flies under the radar because Bank of Baroda isn't the first name in credit cards. But 3.75% on dining, travel, and online shopping is the highest non-HDFC rate in India at this price point. Add 18 lounge visits/year and golf access, and Eterna competes directly with HDFC Regalia.
+    headline: "Accelerated points on selected categories, with a shared cap and a spend-gated lounge benefit.",
+    body: `BOBCARD lists 15 Reward Points per ₹100 on eligible dining, travel, online and international spend, and 3 points per ₹100 on other eligible categories. Cashback redemption is listed at ₹0.25 per point, but the accelerated categories share a 5,000-point statement-cycle cap and issuer exclusions and merchant coding apply. Do not treat the headline rate as a return on all category spending.
 
-The fee waiver at ₹2.5L is more achievable than Regalia's ₹4L. The main downsides: 0.75% on general spends, BOB's mobile app is dated, and point redemption options are limited. But for the three categories where it shines, Eterna is genuinely excellent.`,
-    idealFor: "Frequent diners, travelers, and online shoppers looking for premium-level rewards without HDFC's ecosystem. If you spend ₹20K+/month across dining/travel/online, the 3.75% rate makes this one of the best value cards available.",
-    skipIf: "You want a great mobile app experience or need wide redemption options. BOB's digital experience lags behind HDFC and Axis. Also skip if most spending is groceries/fuel/utilities (0.75% is below average).",
+The current published fee schedule distinguishes a ₹0 joining/first-year offer effective 1 September 2026 from the ₹2,499 annual fee from year two; the renewal waiver uses ₹2.5 lakh of eligible spend in the preceding card-anniversary year. The issuer also applies a separate ₹75,000 eligible-spend condition to domestic lounge access in the preceding calendar quarter. Compare these rules with your actual eligible purchases and fee year.`,
+    idealFor: "Applicants whose eligible spending matches the issuer's accelerated categories and who can track the shared statement-cycle cap and separate lounge-spend condition.",
+    skipIf: "You need an uncapped cash estimate from broad categories, cannot use the issuer's cashback redemption route, or would rely on lounge access without meeting its quarterly spend condition.",
   },
   bestFor: [
-    { category: "Dining", reason: "3.75% on restaurants — among the highest dining rates available. On ₹10K/month restaurant spending, that's ₹375/month or ₹4,500/year." },
-    { category: "Travel", reason: "3.75% on travel bookings. Competitive with HDFC Regalia's SmartBuy rates without needing a specific booking portal." },
-    { category: "Online shopping", reason: "3.75% on online shopping is exceptional — only HDFC Millennia's 5% on partners beats it, and that has a ₹1K/month cap." },
-    { category: "Lounge access", reason: "18 visits/year matches HDFC Regalia, at a lower effective fee (easier waiver)." },
+    { category: "Eligible dining, travel and online spend", reason: "The issuer lists 15 points/₹100 on eligible transactions; merchant coding, exclusions and the shared 5,000-point statement-cycle cap apply." },
+    { category: "Other eligible categories", reason: "The issuer lists 3 points/₹100 outside accelerated categories. Cashback value depends on the ₹0.25-per-point route and eligible redemption." },
+    { category: "Domestic lounge access", reason: "A ₹75,000 eligible-spend condition applies in the preceding calendar quarter; confirm current visit and variant terms." },
   ],
   avoidFor: [
-    { category: "Groceries and utilities", reason: "0.75% on both. SBI ELITE gives 2.5% on groceries, Axis ACE gives 5% on utility bills.", altCard: "axis-ace" },
-    { category: "Fuel", reason: "0% rewards on fuel. Only fuel surcharge waiver applies.", altCard: "rbl-shoprite" },
-    { category: "General offline non-dining", reason: "0.75% on general spending. Axis ACE's 1.5% uncapped is double.", altCard: "axis-ace" },
+    { category: "Fuel", reason: "Fuel earns no Reward Points under the current issuer disclosure." },
+    { category: "Unverified merchant or lounge assumptions", reason: "Check the current issuer terms for eligible MCCs, caps, visit allowances and the card variant before assigning value." },
   ],
-  pairWith: [
-    { combo: "BOB Eterna + Axis ACE", fee: "₹2,998/year", reason: "Eterna for dining/travel/online (3.75%), ACE for utilities (5%), groceries (1.5%), and everything else.", cardId: "axis-ace" },
-    { combo: "BOB Eterna + Amazon Pay ICICI", fee: "₹2,499/year", reason: "Eterna for dining/travel/general online (3.75%), Amazon card for Amazon specifically (5%, no cap).", cardId: "amazon-icici" },
-  ],
+  pairWith: [],
   faq: [
-    { q: "Is BOB Eterna easy to get?", a: "BOB has lower approval thresholds than HDFC for premium cards. If you have an existing BOB relationship or salary account, approval is typically straightforward." },
-    { q: "How do I redeem BOB Eterna points?", a: "Points can be redeemed through the BOB rewards portal for gift vouchers, merchandise, or catalogue items. Direct statement credit may be available but check current options — redemption is more limited than HDFC." },
-    { q: "BOB Eterna vs HDFC Regalia?", a: "Compare current eligible earn, redemption values, fees and exclusions. HDFC says Regalia is no longer sourced for new applications; this site has not completed a current side-by-side review." },
+    { q: "What is one BOB Eterna Reward Point worth?", a: "BOBCARD lists ₹0.25 per point for cashback redemption. This value does not mean every transaction earns 3.75%; the accelerated rate is limited to eligible categories and shares a 5,000-point statement-cycle cap." },
+    { q: "How does the annual fee work?", a: "The issuer lists a ₹0 joining/first-year offer effective 1 September 2026 and a ₹2,499 annual fee from year two. Renewal waiver eligibility uses ₹2.5 lakh eligible spend in the preceding card-anniversary year." },
+    { q: "How does lounge eligibility work?", a: "Domestic lounge access has a ₹75,000 eligible-spend condition in the preceding calendar quarter. Check the current issuer page and the terms for your issued variant for visit allowances and other conditions." },
   ],
 },
   },
@@ -1051,57 +1021,30 @@ This card is a stepping stone, not a destination. Use it for 6-12 months to buil
 },
   },
 
-  { id: "indusind-legend", name: "IndusInd Legend", bank: "IndusInd", img: "🦁", color: "#7e22ce", fee: 0, feeWaiver: "Lifetime free", type: "Lifestyle", verified: true,
-    rewards: { dining: 0.25, travel: 0.25, online: 0.25, groceries: 0.25, fuel: 0, utilities: 0.25, entertainment: 0.5, shopping: 0.25, default: 0.25 },
-    partnerRates: [
-      { name: "Weekend spends", rate: "2 pts/₹100 (0.5%)" },
-      { name: "₹5L milestone", rate: "10,000 bonus points (₹2,500)" },
-    ],
-    pointsInfo: "1 pt/₹100 weekday (0.25%), 2 pts weekend (0.5%) · 1pt = ₹0.25 · ₹5L milestone bonus · Fuel surcharge waiver",
-    highlights: ["Lifetime free", "Weekend 2x points", "₹5L milestone bonus", "Fuel surcharge waiver"],
-    pros: ["Lifetime free", "Weekend double points", "Milestone bonus at ₹5L"],
-    cons: ["Very low base rate (0.25%)", "Lounge discontinued Mar 2025", "0.5% even on weekends"],
-    network: "Visa Signature", lounge: "Discontinued",
-
-    editorial: {
-  verdict: {
-    headline: "A free card that lost its main perk — lounge access was discontinued. Little reason to choose it now.",
-    body: `IndusInd Legend was once attractive for its free lounge access and weekend double points. But with lounge access discontinued in March 2025, the card's main differentiator is gone. What remains is a 0.25% base rate (0.5% on weekends) and a ₹5L milestone bonus — neither of which justify choosing this over better free alternatives.
-
-The milestone bonus of 10,000 points (₹2,500) at ₹5L annual spend is nice, but IDFC FIRST Select gives lounge access, zero forex, AND a birthday bonus — all for free. IndusInd Legend is now a card for existing holders, not new applicants.`,
-    idealFor: "Existing IndusInd customers who already have the card and benefit from the ₹5L milestone bonus. Not recommended for new applicants.",
-    skipIf: "You're applying for a new card. IDFC FIRST Select, Amazon Pay ICICI, or AU LIT are all better free options in 2026.",
-  },
-  bestFor: [
-    { category: "Weekend spending (if you already have it)", reason: "0.5% on weekends is double the weekday rate. If you time large purchases for weekends, the effective rate improves slightly." },
-    { category: "₹5L milestone chasers", reason: "If you naturally spend ₹5L/year, the 10,000 point bonus (₹2,500) is a nice annual reward on top of regular points." },
-  ],
-  avoidFor: [
-    { category: "Everything (for new applicants)", reason: "0.25% base with no lounge access. Almost every free card on the market is better in 2026.", altCard: "idfc-select" },
-    { category: "Online shopping", reason: "0.25% is negligible. HDFC Millennia gives 20x more at 5%.", altCard: "hdfc-millennia" },
-  ],
-  pairWith: [
-    { combo: "IndusInd Legend + Axis ACE", fee: "₹499/year", reason: "If you already have Legend, add ACE for actual rewards on your spending (1.5-5%). Use Legend only for milestone tracking.", cardId: "axis-ace" },
-  ],
-  faq: [
-    { q: "Will lounge access come back?", a: "No official announcement. IndusInd discontinued lounge access in March 2025 across several cards. Don't count on it returning." },
-    { q: "Is the ₹5L milestone bonus automatic?", a: "Points are credited after you cross ₹5L in annual spend. This is cumulative — all spending counts, not just specific categories." },
-    { q: "Should I close this card?", a: "If it's your oldest credit card, keep it open for credit history length. If you have older cards, there's little reason to keep Legend active." },
-  ],
-},
+  { id: "indusind-legend", name: "IndusInd Legend", bank: "IndusInd", img: "🦁", color: "#7e22ce", fee: 0, feeWaiver: "Lifetime free per the issuer's current card listing", type: "Lifestyle", verified: true, reviewedAt: "3 October 2026", sourceUrl: "https://www.indusind.bank.in/in/en/personal/cards/credit-card/legend-credit-card.html", feeSourceUrl: "https://www.indusind.bank.in/in/en/personal/schedule-of-charges.html", rewardSourceUrl: "https://www.indusind.bank.in/in/en/personal/credit-card-related/important-updates-reward-points-program.html", calculationSourceUrl: "https://www.indusind.bank.in/in/en/personal/credit-card-related/important-updates-reward-points-cash-redemption.html",
+    rewards: { dining: 0, travel: 0, online: 0, groceries: 0, fuel: 0, utilities: 0, entertainment: 0, shopping: 0, default: 0 },
+    partnerRates: [{ name: "Published base earn", rate: "1 point/₹100 on weekdays; 2 points/₹100 on weekends" }],
+    pointsInfo: "The issuer lists 1 reward point/₹100 on weekdays and 2/₹100 on weekends; transaction date sets the day. Its current redemption table values Legend points at ₹0.50 for cash credit and ₹0.75 for non-cash options excluding air miles. The issuer lists a 5,000-point monthly earning cap. A 3,000-point bonus is advertised after ₹5L eligible spend within one year of issue; listed low-MCC categories do not count. Fuel does not earn points; medical, automobile and telecom transactions earn 1 point/₹100 on both weekdays and weekends. Points remain valid while the account is active.",
+    redemptionNote: "Issuer cash-credit value is ₹0.50/point; its listed non-cash value is ₹0.75/point, excluding air miles. The cash-redemption terms cap cash conversion at 5,000 points/calendar month. Points are not the same as cashback posted on each purchase.",
+    feeScheduleNote: "IndusInd's current card listing identifies Legend as lifetime free. Welcome gifts apply only to select fee plans; a personalised gift offer is not assumed here.",
+    caps: { monthlyRewardPoints: 5000, cashRedemptionPoints: 5000, capPeriod: "calendar month" },
+    highlights: ["Lifetime free on the issuer's current listing", "1 point/₹100 weekdays; 2 points/₹100 weekends", "3,000-point first-year bonus after ₹5L eligible spend; conditions and low-MCC exclusions apply", "Airport lounge access discontinued effective 7 March 2025"],
+    pros: ["Issuer publishes distinct weekday/weekend earn rules", "Current issuer listing identifies the card as lifetime free"],
+    cons: ["Reward points are not transaction-level cashback; value depends on redemption", "5,000-point monthly cap and selected redemption limits apply", "No current airport lounge access; fuel earns no points"],
+    network: "Visa", lounge: "Discontinued effective 7 March 2025", estimateUnavailableReason: "The current issuer sources establish the published fee, weekday/weekend earn, point values and lounge discontinuation. The site's spending inputs cannot determine weekday versus weekend transactions or apply the 5,000-point monthly limit, so no generic rupee estimate is enabled.",
   },
 
-  { id: "yes-ace", name: "YES Private Ace", bank: "YES Bank", img: "🃏", color: "#ca8a04", fee: 10000, feeWaiver: "₹10L annual spend", type: "Super Premium", verified: true,
-    rewards: { dining: 0.5, travel: 0.5, online: 0.75, groceries: 0.5, fuel: 0, utilities: 0.5, entertainment: 0.5, shopping: 0.5, default: 0.5 },
-    caps: { monthlyPoints: 50000, pointValue: 0.25, spendPer: 200, pointsPer: 6 },
-    partnerRates: [
-      { name: "Online spends", rate: "6 pts/₹200 (0.75%)" },
-    ],
-    pointsInfo: "6 pts/₹200 online (0.75%), 4 pts/₹200 offline (0.5%) · 1pt = ₹0.25 · 50K pts cap/cycle · Fuel/rent excluded",
-    highlights: ["Unlimited lounge access", "0.75% online", "Fee waiver ₹10L"],
-    pros: ["Unlimited domestic + intl lounge", "Higher online rate"],
-    cons: ["₹10K + GST fee", "Low reward rates overall", "Fuel/rent excluded", "50K pts cap"],
-    network: "Visa Infinite", lounge: "Unlimited",
+  { id: "yes-ace", name: "YES Private / YES ACE (unmatched legacy record)", bank: "YES Bank", img: "🃏", color: "#ca8a04", fee: 0, feeWaiver: "Unresolved: the legacy record merges separate products", type: "Historical record", verified: false,
+    sourceUrl: "https://www.yesbank.in/personal-banking/yes-individual/cards/credit-cards",
+    feeSourceUrl: "https://www.yesbank.in/content/published/api/v1.1/assets/CONT5AA32E547C774006B79F54E05FE58F9E/native/ybl_soc.pdf",
+    rewards: { dining: 0, travel: 0, online: 0, groceries: 0, fuel: 0, utilities: 0, entertainment: 0, shopping: 0, default: 0 },
+    caps: {},
+    partnerRates: [],
+    pointsInfo: "This catalogue row combines YES Private and YES ACE. Their issuer catalogue and fee schedule list separate products, so no single reward schedule, fee, network or lounge entitlement is attributed to this merged record.",
+    highlights: ["Historical merged record; not a single verified card variant"],
+    pros: [],
+    cons: ["Do not use for card selection until the exact product variant is identified"],
+    network: null, lounge: null,
 
     editorial: {
   verdict: {
@@ -1226,20 +1169,19 @@ Other eligible purchases earn 1 point per ₹100. A separate BookMyShow offer gi
     redemptionNote: "The Horizon terms specify different redemption routes (Travel EDGE bookings, catalogue and partner-mile transfers); minimum redemption and current conversion/availability conditions apply. EDGE Miles should not be treated as cash or statement credit.",
     network: "Visa/Mastercard", lounge: "Visa: 8 domestic visits/calendar quarter; Mastercard: 6 domestic/calendar quarter; 2 international/calendar quarter. Primary card only; eligible lounges and network terms apply." },
 
-  { id: "axis-magnus", name: "Axis Magnus Credit Card", bank: "Axis", img: "👑", color: "#7e22ce", fee: 12500, feeWaiver: "₹25L annual spend", type: "Super Premium", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card",
+  { id: "axis-magnus", name: "Axis Magnus Credit Card", bank: "Axis", img: "👑", color: "#7e22ce", fee: 12500, feeWaiver: "₹25L eligible spend in the preceding card-anniversary year. Axis excludes rent, wallet, gift-card, Priority Pass and EMI transactions, government, utility/telecom, insurance, gold/jewellery and other listed categories.", type: "Super Premium", verified: true, reviewedAt: "3 October 2026", sourceUrl: "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card", feeSourceUrl: "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card/more-benefits", rewardSourceUrl: "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card/more-benefits", loungeSourceUrl: "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card/travel-stay",
     rewards: { dining: 1.2, travel: 5, online: 1.2, groceries: 1.2, fuel: 0, utilities: 1.2, entertainment: 1.2, shopping: 1.2, default: 1.2 },
-    caps: { monthlyPoints: 50000, pointValue: 0.20, spendPer: 200, pointsPer: 12 },
     partnerRates: [
-      { name: "Travel EDGE portal", rate: "5X EDGE Miles" },
-      { name: "20+ airline/hotel partners", rate: "5:2 transfer ratio" },
-      { name: "Oberoi/Trident Hotels", rate: "15% off + complimentary nights" },
+      { name: "Eligible Travel EDGE transactions", rate: "60 EDGE Reward Points/₹200 up to ₹2L portal spend/month; 35/₹200 above" },
+      { name: "Eligible non-portal incremental spend", rate: "35 EDGE Reward Points/₹200 above ₹1.5L/month, up to assigned credit limit + ₹1.5L; then 12/₹200" },
+      { name: "20 travel partners", rate: "5 EDGE Reward Points : 2 partner miles; annual partner-group transfer limits apply" },
     ],
-    pointsInfo: "12 EDGE Reward Points/₹200 on eligible spends up to ₹1.5L/calendar month; 35/₹200 on eligible incremental spend above ₹1.5L subject to issuer limits. Travel EDGE has separate accelerated rates. Verify exclusions and redemption value in current terms.",
-    highlights: ["12 points/₹200 up to ₹1.5L eligible monthly spend; 35/₹200 on eligible incremental spend", "Travel EDGE earns at a separate accelerated rate", "Current Axis page advertises unlimited domestic and international lounge access", "₹12,500 annual fee; issuer terms govern waiver and Burgundy eligibility"],
-    pros: ["Premium travel and transfer-partner benefits", "Current issuer page advertises unlimited lounge access", "Higher earn on eligible spend above ₹1.5L/month"],
-    cons: ["₹12,500 fee", "₹25L spend for waiver", "Many categories excluded from rewards", "Recent devaluations"],
-    redemptionNote: "Best value through airline/hotel transfer partners at 5:2 ratio. Catalog redemption at ₹0.20/point gives lower effective rate.",
-    network: "Visa", lounge: "Unlimited domestic and international access advertised; current issuer/network conditions apply" },
+    pointsInfo: "Standard Magnus: 12 EDGE Reward Points/₹200 on eligible cumulative monthly spend up to ₹1.5L; 35/₹200 on eligible incremental spend above ₹1.5L, up to spend equal to the assigned credit limit plus ₹1.5L/month, then 12/₹200. Travel EDGE has a separate 60/₹200 rate up to ₹2L monthly portal spend, then 35/₹200. Axis excludes utility/telecom, rent, wallet and gift-card purchases, government, bridge/road fees and tolls from rewards; fuel, insurance and gold/jewellery also do not earn. Gift-card purchases became a separate spend category from 28 August 2026. Fee-waiver exclusions are separately defined. EDGE points are not cash.",
+    highlights: ["12 EDGE Reward Points/₹200 on eligible spend up to ₹1.5L/month; tiered accelerated earn has a credit-limit-linked ceiling", "Travel EDGE earns 60/₹200 up to ₹2L portal spend/month, then 35/₹200", "Axis advertises unlimited select domestic and international lounge visits; domestic access has a ₹50K prior-three-month spend condition", "₹12,500 + taxes; ₹25L eligible preceding card-anniversary-year waiver threshold, exclusions apply", "₹12,500 welcome voucher requires paid joining fee and a transaction within 30 days"],
+    pros: ["Published tiered EDGE Reward earn and travel-partner transfer routes", "Unlimited lounge access is advertised, subject to spend, network and programme conditions", "Published joining-fee voucher for eligible paid cards"],
+    cons: ["₹12,500 + taxes annual fee unless the eligible waiver applies", "Reward and fee-waiver exclusions are extensive", "Reward tiers, Travel EDGE caps and partner transfer limits require route-specific tracking"],
+    redemptionNote: "Axis lists a 5:2 EDGE Reward Point-to-partner-mile conversion for standard Magnus and transfers to 20 partners, with annual group limits (1 lakh points to Group A and 4 lakh to Group B). Catalogue and partner redemptions have different values; do not treat points as cash.",
+    network: "Visa/RuPay variants; confirm the network issued", lounge: "Axis advertises unlimited visits at select domestic lounges and unlimited international Priority Pass visits, with 4 additional international guest visits/year. Domestic access requires ₹50,000 spend in the previous 3 calendar months; eligible lounges, network and card-member rules apply." },
 
   { id: "axis-myzone", name: "Axis MyZone Credit Card", bank: "Axis", img: "🎭", color: "#db2777", fee: 500, joiningFee: 500, feeWaiver: "₹500 annual fee; no standard waiver listed in Axis's 17 September 2026 Key Fact Sheet", type: "Lifestyle", verified: true, reviewedAt: "2 October 2026", sourceUrl: "https://www.axis.bank.in/cards/credit-card/axis-bank-my-zone-credit-card", rewardSourceUrl: "https://www.axis.bank.in/docs/default-source/default-document-library/terms-and-conditions-for-myzone-credit-card.pdf?sfvrsn=6b8ed8a4_17", offerSourceUrl: "https://www.axis.bank.in/docs/default-source/default-document-library/credit-card/sosc-credit-cards.pdf?sfvrsn=e31b3c52_8",
     rewards: { dining: 0.4, travel: 0.4, online: 0.4, groceries: 0.4, fuel: 0, utilities: 0, entertainment: 0, shopping: 0.4, default: 0.4 },
@@ -1530,7 +1472,7 @@ Other eligible purchases earn 1 point per ₹100. A separate BookMyShow offer gi
     cons: ["Very niche — only useful at Titan", "Very low non-Titan rate", "No lounge access"],
     network: "Visa", lounge: "None" },
 
-  { id: "sbi-simplysave", name: "SBI SimplySAVE Credit Card", bank: "SBI", img: "💾", color: "#2563eb", fee: 499, feeWaiver: "₹1L eligible spend in the preceding year reverses the renewal fee.", type: "Entry", verified: true, reviewedAt: "2 October 2026", sourceUrl: "https://www.sbicard.com/en/personal/credit-cards/shopping/simplysave-sbi-card.html", feeSourceUrl: "https://www.sbicard.com/en/most-important-terms-and-conditions.page", rewardSourceUrl: "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/SimplySAVE-TnC.pdf",
+  { id: "sbi-simplysave", name: "SBI SimplySAVE Credit Card", bank: "SBI", img: "💾", color: "#2563eb", fee: 499, feeWaiver: "₹1L eligible spend in the preceding year reverses the renewal fee.", type: "Entry", verified: true, reviewedAt: "2 October 2026", sourceUrl: "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/ekit-tncs/simplysave-upi-digi-tnc.pdf", feeSourceUrl: "https://www.sbicard.com/en/most-important-terms-and-conditions.page", rewardSourceUrl: "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/SimplySAVE-TnC.pdf",
     rewards: { dining: 1.67, travel: 0.17, online: 0.17, groceries: 0.17, fuel: 0, utilities: 0.17, entertainment: 0.17, shopping: 0.17, default: 0.17 },
     caps: { monthlyPoints: 5000, pointValue: 0.25, spendPer: 150, pointsPer: 10, capPeriod: "calendar month" },
     partnerRates: [],
@@ -1541,17 +1483,12 @@ Other eligible purchases earn 1 point per ₹100. A separate BookMyShow offer gi
     redemptionNote: "The ₹0.25/point value assumes SBI's stated 4-points-per-₹1 redemption route, not direct cashback. A minimum of 2,000 points is required and points expire after 24 months. Fuel earns no points; its separate 1% surcharge waiver applies only to ₹500–₹3,000 transactions, capped at ₹100/month.",
     network: "Visa/MC", lounge: "Check current issuer/network terms" },
 
-  { id: "sbi-iocl", name: "SBI IOCL Credit Card", bank: "SBI", img: "⛽", color: "#dc2626", fee: 499, feeWaiver: "₹1L annual spend", type: "Fuel", verified: false,
-    rewards: { dining: 0.25, travel: 0.25, online: 0.25, groceries: 0.25, fuel: 4, utilities: 0.25, entertainment: 0.25, shopping: 0.25, default: 0.25 },
-    caps: { monthlyCashback: 200, capRate: 4, fallbackRate: 0.25, capAppliesTo: ["fuel"] },
-    partnerRates: [
-      { name: "IOCL fuel stations", rate: "4% value back" },
-    ],
-    pointsInfo: "4% at IOCL (cap ₹200/mo), 0.25% on other · 500 welcome points",
-    highlights: ["4% at IOCL", "Low ₹499 fee", "Fuel surcharge waiver"],
-    pros: ["Good fuel rate at IOCL", "Very low fee", "Easy fee waiver"],
-    cons: ["Fuel cap at ₹200/month", "Very low non-fuel rate", "No lounge access"],
-    network: "Visa", lounge: "None" },
+  { id: "sbi-iocl", name: "SBI–IndianOil card (legacy record; current product not established)", bank: "SBI", img: "⛽", color: "#dc2626", fee: 0, feeWaiver: "Current product identity, fee and issuance status not established", type: "Historical record", verified: false,
+    sourceUrl: "https://www.sbicard.com/en/personal/sbi-credit-card.page", availabilitySourceUrl: "https://www.sbicard.com/en/personal/sbi-credit-card.page",
+    rewards: { dining: 0, travel: 0, online: 0, groceries: 0, fuel: 0, utilities: 0, entertainment: 0, shopping: 0, default: 0 },
+    availabilityStatus: "SBI's current public card catalogue does not establish a current SBI–IndianOil product matching this legacy record. It is retained only as a historical/search reference, not a current application recommendation or fee quote. Do not substitute IndianOil cards issued by other banks.",
+    partnerRates: [], pointsInfo: "No current SBI–IndianOil product-specific fee, reward or redemption terms were established for this legacy label.",
+    highlights: [], pros: [], cons: ["Current issuer/product identity and availability are not established"], network: null, lounge: null },
 
   // ═══ BOB ═══
 
@@ -1566,11 +1503,11 @@ Other eligible purchases earn 1 point per ₹100. A separate BookMyShow offer gi
 
   // ═══ IDFC FIRST ═══
 
-  { id: "idfc-millennia", name: "IDFC FIRST Millennia Credit Card", bank: "IDFC", img: "🌐", color: "#059669", fee: 0, feeWaiver: "Lifetime free", type: "Rewards", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.idfcfirst.bank.in/credit-card/millennia",
+  { id: "idfc-millennia", name: "IDFC FIRST Millennia Credit Card", bank: "IDFC", img: "🌐", color: "#059669", fee: 0, feeWaiver: "Lifetime free", type: "Rewards", verified: true, reviewedAt: "3 October 2026", sourceUrl: "https://www.idfcfirst.bank.in/credit-card/millennia",
     rewards: { dining: 1.25, travel: 1.25, online: 0.375, groceries: 0.375, fuel: 0, utilities: 0.125, entertainment: 0.375, shopping: 0.375, default: 0.375 },
     partnerRates: [],
-    pointsInfo: "10X on eligible dining and travel (1.25%), 3X on most eligible spends (0.375%), 1X on utilities/insurance/railways/FASTag (0.125%) · 1 point = ₹0.25",
-    highlights: ["Lifetime free", "10X on eligible dining and travel", "4 railway lounge visits/quarter", "25% off one movie ticket/month"],
+    pointsInfo: "10X on eligible dining, travel, international purchases and spends on your birthday (1.25% at ₹0.25/point); 3X on other eligible spends (0.375%); 1X on utilities, insurance, railways and FASTag (0.125%). Each 1X is 1 point/₹200; fuel, EMI, cash withdrawals and fees/charges do not earn. Points expire after 24 months; redemption costs ₹99 + GST. Rewards are earned only up to the credit limit per billing cycle.",
+    highlights: ["Lifetime free", "10X on eligible dining, travel, international and birthday spends", "4 railway lounge visits/quarter after previous-month spend condition", "25% off one movie ticket/month"],
     pros: ["No joining or annual fee", "Accelerated dining and travel rewards", "Railway lounge access", "Points redeem against online purchases"],
     cons: ["Low 0.375% regular earn rate", "₹99 + GST redemption fee", "No airport lounge access", "Railway lounge access requires previous-month spending"],
     network: "Visa", lounge: "4 railway visits/quarter after ₹20,000 previous-calendar-month spend" },
@@ -1654,12 +1591,12 @@ Other eligible purchases earn 1 point per ₹100. A separate BookMyShow offer gi
     cons: ["No airport lounge access stated by issuer", "Point value varies by redemption; cash-value calculator remains disabled", "Utilities (MCC 4900), fuel, insurance and other listed MCCs do not earn base points", "Fuel offer and surcharge waiver have separate transaction and period rules"],
     network: "Visa", lounge: "None" },
 
-  { id: "hsbc-cashback", name: "HSBC Cashback Credit Card (legacy listing)", bank: "HSBC", img: "💵", color: "#dc2626", fee: 0, feeWaiver: "Legacy product; current availability/terms not verified", type: "Cashback", verified: false,
+  { id: "hsbc-cashback", name: "HSBC Cashback Credit Card (legacy Visa; rebranded as Live+)", bank: "HSBC", img: "💵", color: "#dc2626", fee: 0, feeWaiver: "Legacy product fee is not published as a separate current offer; do not substitute Live+ or RuPay Cashback pricing", type: "Historical record", verified: false, sourceUrl: "https://www.hsbc.bank.in/credit-cards/products/visa-cashback/", feeSourceUrl: "https://www.hsbc.bank.in/credit-cards/products/visa-cashback/", rewardSourceUrl: "https://www.hsbc.bank.in/content/dam/hsbc/in/documents/credit-cards/visa-cashback/services-guide.pdf", availabilitySourceUrl: "https://www.about.hsbc.co.in/-/media/india/en/news-and-media/240719-hsbc-cashback-credit-card-rebanded.pdf",
     rewards: { dining: 0, travel: 0, online: 0, groceries: 0, fuel: 0, utilities: 0, entertainment: 0, shopping: 0, default: 0 },
-    availabilityStatus: "HSBC rebranded its Cashback Credit Card as Live+ in 2024. This legacy listing is retained for existing-cardholder/search reference only; do not treat it as a separate current product. See the HSBC Live+ listing for current published terms.",
+    availabilityStatus: "HSBC said it renamed the Cashback Credit Card to Live+ in July 2024. Its current site still hosts a legacy Visa Cashback page and services guide, but those sources do not establish that the former card is open to new applications or that every legacy term is current. A separately listed RuPay Cashback card has different features. Retain this row only for legacy/search reference; do not treat it as a separate currently available product or substitute either current product's terms.",
     partnerRates: [],
-    pointsInfo: "Legacy product listing: current separate Cashback card terms are not verified. HSBC rebranded this card as Live+; consult the Live+ record for current published product terms.",
-    highlights: ["Legacy listing; rebranded as HSBC Live+", "Current standalone terms not verified"],
+    pointsInfo: "The legacy Visa Cashback page/service guide currently hosted by HSBC lists 10% cashback on dining, food delivery and grocery up to ₹1,000 per billing cycle, and 1.5% on other eligible spend subject to exclusions. It lists ₹999 joining/annual fees, a ₹2L annual fee-reversal threshold and four domestic lounge visits/year. HSBC announced the Cashback-to-Live+ rename in July 2024; current new-application status and whether every legacy guide term still applies are not established. A separately issued HSBC RuPay Cashback card has distinct terms.",
+    highlights: ["Legacy HSBC Visa Cashback page and guide remain hosted", "HSBC announced the product was renamed Live+ in July 2024", "Not established as a separate current application product; RuPay Cashback is a different card"],
     pros: ["Kept only to preserve legacy references"],
     cons: ["Do not compare as a distinct currently available product", "Legacy cardholder terms may differ"],
     network: "Unverified", lounge: "Unverified" },
@@ -1769,14 +1706,15 @@ Other eligible purchases earn 1 point per ₹100. A separate BookMyShow offer gi
     estimateUnavailableReason: "Earn tiers and the shared 6,500-point cap are established; an explicit current redemption route/value is still required before rupee estimates are enabled.",
     network: "Visa Signature", lounge: "2 domestic/quarter after ₹75K prior-quarter spend; 3 international/year for primary cardholder, subject to issuer terms" },
 
-  { id: "indusind-pinnacle", name: "IndusInd Pinnacle Credit Card", bank: "IndusInd", img: "🏔️", color: "#7e22ce", fee: 9999, feeWaiver: "Fee terms depend on customer/card variant; confirm with IndusInd", type: "Super Premium", verified: false,
-    rewards: { dining: 1, travel: 0.375, online: 0.625, groceries: 0.625, fuel: 0, utilities: 0.25, entertainment: 0.625, shopping: 0.625, default: 0.25 },
+  { id: "indusind-pinnacle", name: "IndusInd Pinnacle Credit Card", bank: "IndusInd", img: "🏔️", color: "#7e22ce", fee: 0, feeWaiver: "No annual fee listed; actual charges and applicable joining plan are conveyed at application", type: "Super Premium", verified: false,
+    rewards: { dining: 0, travel: 0, online: 0, groceries: 0, fuel: 0, utilities: 0, entertainment: 0, shopping: 0, default: 0 },
     partnerRates: [],
-    pointsInfo: "IndusInd publishes 2.5 reward points/₹100 on e-commerce, 1.5/₹100 on e-commerce travel and airline spends, and 1/₹100 on POS/MOTO/IVR/standing-instruction spends. Redemption value varies by option. Lounge access is one international visit per calendar quarter; domestic access is one visit per quarter after ₹1.5L eligible spend in the preceding quarter (verify variant-specific fee terms).",
-    highlights: ["2.5 points/₹100 on e-commerce", "1 international lounge visit/quarter", "Domestic lounge: 1/quarter after ₹1.5L prior-quarter spend", "Redemption value and fee terms vary by card variant"],
-    pros: ["Published earn rates vary by transaction type", "International lounge access is listed quarterly"],
-    cons: ["Domestic lounge access has a high spend threshold", "Card fee may vary by variant and customer offer", "Point value depends on redemption option"],
-    network: "Confirm card variant", lounge: "1 international/quarter; 1 domestic/quarter after ₹1.5L prior-quarter spend" },
+    pointsInfo: "The issuer lists 2.5 reward points/₹100 on e-commerce, 1.5/₹100 on e-commerce travel and airline transactions, and 1/₹100 on POS, MOTO, IVR and standing instructions; fuel earns no points. A separate issuer revision lists 0.7 point/₹100 for specified utility, insurance, government, education and rent merchant categories. Third-party rent points are capped at 500 per statement cycle. Cash-credit redemption is ₹0.75/point, capped at 7,500 points per calendar month; the issuer's current MITC lists a ₹149 cash-redemption fee and ₹100 for other redemption categories. Eligibility, MCCs, posting and redemption charges apply.",
+    redemptionNote: "Cash credit is valued by the issuer at ₹0.75 per point and capped at 7,500 points per calendar month. The current MITC lists a ₹149 fee for cash redemption and ₹100 for other redemption categories. Points are not transaction-level cashback; this site does not convert them into a flat reward percentage.",
+    highlights: ["2.5 points/₹100 e-commerce; 1.5 travel/airline e-commerce; 1 on listed POS/MOTO/IVR/standing instructions", "1 domestic lounge visit/quarter after ₹1.5L eligible prior-quarter spend", "1 international lounge visit/quarter outside India", "₹15,000 standard joining fee; annual fee listed as nil"],
+    pros: ["Issuer publishes distinct transaction earn tiers", "Cash-credit point value and monthly conversion limit are published"],
+    cons: ["Points are not a flat cashback rate; cash redemption has a fee and cap", "Domestic lounge access requires ₹1.5L eligible prior-quarter spend", "A separate Grande/legacy joining-fee plan is listed"],
+    network: "Mastercard", lounge: "1 international visit/quarter outside India; 1 domestic visit/quarter after ₹1.5L eligible spend in preceding quarter" },
 
   { id: "sc-ultimate", name: "Standard Chartered Ultimate Credit Card", bank: "StanC", img: "💎", color: "#0369a1", fee: 5000, feeWaiver: "No standard annual-fee waiver listed", type: "Super Premium", verified: true, reviewedAt: "2 October 2026", sourceUrl: "https://www.sc.bank.in/credit-cards/ultimate-card/", rewardSourceUrl: "https://www.sc.bank.in/credit-cards/ultimate-card/",
     rewardAssumptions: { default: "Illustrative gross value assumes ₹1 per Reward Point through the issuer's stated redemption value, not cash. Most eligible MCCs earn 5 points/₹150; issuer-listed utility, supermarket, insurance, property-management, school and government MCCs earn 3/₹150. The aggregate model does not simulate transaction-level ₹150 block rounding. Fuel earns none; merchant coding and redemption rules apply.", groceries: "Maps this broad input to eligible supermarket MCC 5411 (3 points/₹150), not every grocery delivery/service merchant." },
@@ -1800,7 +1738,7 @@ Other eligible purchases earn 1 point per ₹100. A separate BookMyShow offer gi
     cons: ["Monthly cashback caps apply", "Fuel earns no cashback", "No lounge access listed by issuer"],
     network: "Visa", lounge: "None" },
 
-  { id: "amex-mrcc", name: "Amex Membership Rewards Credit Card", bank: "Amex", img: "💳", color: "#006fcf", fee: 1000, feeWaiver: "Renewal fee ₹4,500; 100% waiver at ₹1.5L preceding membership-year spend, 50% waiver at ₹90K–₹1,49,999", type: "Premium", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.americanexpress.com/in/credit-cards/membership-rewards-card/",
+  { id: "amex-mrcc", name: "Amex Membership Rewards Credit Card", bank: "Amex", img: "💳", color: "#006fcf", fee: 4500, joiningFee: 1000, firstYearFee: 1000, feeScheduleNote: "First year ₹1,000 plus tax; renewal ₹4,500 plus tax from year two. The published product page confirms a full renewal waiver at ₹1.5 lakh preceding membership-year spend; any other waiver must be confirmed in the issued terms.", feeWaiver: "Renewal fee ₹4,500 plus tax; 100% waiver at ₹1.5L preceding membership-year spend", type: "Premium", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.americanexpress.com/in/credit-cards/membership-rewards-card/",
     rewards: { dining: 0.5, travel: 0.5, online: 0.5, groceries: 0.5, fuel: 0, utilities: 0, entertainment: 0.5, shopping: 0.5, default: 0.5 },
     partnerRates: [
       { name: "Taj Hotels", rate: "Up to 20% discount" },
@@ -1827,12 +1765,23 @@ Object.assign(platinum,{name:'ICICI Platinum Chip Credit Card',verified:true,rev
 const dream = CARDS.find(c=>c.id === 'kotak-811');
 Object.assign(dream,{name:'Kotak811 Dream Different FD Credit Card',verified:true,reviewedAt:'1 October 2026',sourceUrl:'https://www.kotak811.bank.in/credit-cards/811-dream-different-credit-card-against-fd',rewardSourceUrl:'https://www.kotak811.bank.in/credit-cards/811-dream-different-credit-card-against-fd/terms-and-conditions',fee:0,joiningFee:500,joiningFeeIncludesTax:true,feeWaiver:'No annual fee. Standard joining fee ₹500 including GST from 1 September 2026; a limited-period no-joining-fee offer is separate.',pointsInfo:'For billing cycles commencing September 2026: 2% on eligible purchases after at least ₹15,000 eligible cycle spend. Overall cashback ₹500/cycle, UPI sub-cap ₹200 and ₹100 per individual transaction. UPI must use Kotak811 app. Fuel, wallets, rent, cash withdrawals, EMI, gaming, gold and listed MCCs are excluded. Account/payment-channel eligibility, claim and reversal conditions apply.',caps:{monthlyCashback:500,upiCashback:200,transactionCashback:100,minimumCycleSpend:15000,capPeriod:'billing cycle'},partnerRates:[],highlights:['FD-backed product; no standard annual fee','September programme requires ₹15K eligible cycle spend','₹500 total, ₹200 UPI and ₹100 transaction cashback limits'],pros:['Cashback instead of a selected point valuation','FD-backed eligibility route'],cons:['UPI rewards require Kotak811 app','Low or excluded cycle spending may earn no cashback','An FD lien limits access to the deposit'],network:'Visa/RuPay — confirm the issued variant',lounge:'None listed in current product benefits',estimateUnavailableReason:'The September cashback programme is identified, but aggregate spending inputs omit the ₹100 transaction ceiling, ₹15K eligibility threshold, app-only UPI, payment-channel eligibility and claim conditions. No generic model is enabled.'});
 const legend = CARDS.find(c=>c.id === 'indusind-legend');
-legend.sourceUrl = 'https://www.indusind.bank.in/in/en/personal/cards/credit-card/legend-credit-card.html';
-legend.lounge = 'Discontinued effective 7 March 2025';
-legend.estimateUnavailableReason = 'The product page establishes weekday/weekend points and says lounge access ended 7 March 2025. Joining-fee plans and redemption limits/value remain variant-dependent; the historical lifetime-free fee claim is not established.';
+Object.assign(legend,{reviewedAt:'3 October 2026',sourceUrl:'https://www.indusind.bank.in/in/en/personal/cards/credit-card/legend-credit-card.html',feeSourceUrl:'https://www.indusind.bank.in/in/en/personal/schedule-of-charges.html',rewardSourceUrl:'https://www.indusind.bank.in/in/en/personal/credit-card-related/important-updates-reward-points-program.html',calculationSourceUrl:'https://www.indusind.bank.in/in/en/personal/credit-card-related/important-updates-reward-points-cash-redemption.html',fee:0,feeWaiver:"Lifetime free per the issuer's current card listing",feeScheduleNote:"IndusInd's current card listing identifies Legend as lifetime free. Welcome gifts apply only to select fee plans; a personalised gift offer is not assumed here.",network:'Visa',pointsInfo:'The issuer lists 1 reward point/₹100 on weekdays and 2/₹100 on weekends; transaction date sets the day. Its current redemption table values Legend points at ₹0.50 for cash credit and ₹0.75 for non-cash options excluding air miles. The issuer lists a 5,000-point monthly earning cap. A 3,000-point bonus is advertised after ₹5L eligible spend within one year of issue; listed low-MCC categories do not count. Fuel does not earn points; medical, automobile and telecom transactions earn 1 point/₹100 on both weekdays and weekends. Points remain valid while the account is active.',redemptionNote:'Issuer cash-credit value is ₹0.50/point; its listed non-cash value is ₹0.75/point, excluding air miles. The cash-redemption terms cap cash conversion at 5,000 points/calendar month. Points are not transaction-level cashback posted on each purchase.',caps:{monthlyRewardPoints:5000,cashRedemptionPoints:5000,capPeriod:'calendar month'},lounge:'Discontinued effective 7 March 2025',estimateUnavailableReason:'Current issuer sources establish the published fee, weekday/weekend earn, point values and lounge discontinuation. The site inputs cannot determine weekday versus weekend transactions or apply the 5,000-point monthly limit, so no generic rupee estimate is enabled.',highlights:['Lifetime free per current issuer listing','1 point/₹100 weekdays; 2 points/₹100 weekends','3,000-point first-year bonus after ₹5L eligible spend; conditions and low-MCC exclusions apply','Airport lounge access discontinued effective 7 March 2025'],pros:['Issuer publishes distinct weekday/weekend earn rules','Current issuer listing identifies the card as lifetime free'],cons:['Points are not transaction-level cashback; value depends on redemption','5,000-point monthly cap and selected redemption limits apply','No current airport lounge access; fuel earns no points']});
 const pinnacle = CARDS.find(c=>c.id === 'indusind-pinnacle');
-pinnacle.sourceUrl = 'https://www.indusind.bank.in/in/en/personal/cards/credit-card/pinnacle-world-credit-card.html';
-pinnacle.estimateUnavailableReason = 'Current issuer earn tiers are 2.5 points/₹100 e-commerce, 1.5 on travel/airline e-commerce and 1 on other eligible spend; these are points, not cashback. Current lounge terms specify one domestic visit per quarter after ₹1.5L eligible settled spend in the preceding quarter. Fee-plan and reward-redemption value/limits remain unresolved, so no cashback estimate is enabled.';
+Object.assign(pinnacle,{
+  verified:true,
+  reviewedAt:'3 October 2026',
+  sourceUrl:'https://www.indusind.bank.in/in/en/personal/cards/credit-card/pinnacle-world-credit-card.html',
+  feeSourceUrl:'https://www.indusind.bank.in/content/dam/indusind-corporate/credit-cards/MITC_Premium.pdf',
+  rewardSourceUrl:'https://www.indusind.bank.in/in/en/personal/revision-indusInd-bank-credit-card-rewards-program.html',
+  loungeSourceUrl:'https://www.indusind.bank.in/content/dam/indusind-corporate/Other/Lounge-Terms-and-Conditions.pdf',
+  redemptionSourceUrl:'https://www.indusind.bank.in/in/en/personal/cash-credit-pinnacle-world-cc.html',
+  calculationSourceUrl:'https://www.indusind.bank.in/in/en/personal/credit-card-related/important-updates-reward-points-cash-redemption.html',
+  fee:0,
+  joiningFee:15000,
+  feeScheduleNote:'The 31 August 2026 MITC lists a ₹15,000 joining fee and nil annual fee for standard Pinnacle. It separately lists a ₹5,000 joining fee for Grande/legacy customers if ₹50,000 spend criteria are not met in the first 90 days. The MITC says actual fees are conveyed at application; no promotional or customer-specific plan is assumed.',
+  caps:{cashRedemptionPoints:7500,thirdPartyRentPoints:500,capPeriod:'calendar month / statement cycle'},
+  estimateUnavailableReason:'The issuer publishes points by transaction route, ₹0.75 cash-credit value, a 7,500-point monthly cash-redemption cap and redemption charges. The site’s broad category inputs cannot reproduce transaction routing, MCC-specific rates, point accrual and cash-redemption fees, so no rupee estimate or reward ranking is enabled.'
+});
 const phonePe = CARDS.find(c=>c.id === 'phonepe-sbi-select-black');
 Object.assign(phonePe,{verified:true,reviewedAt:'1 October 2026',sourceUrl:'https://www.phonepe.com/credit-cards/phonepe-sbi-card-select-black-credit-card/',rewardSourceUrl:'https://www.sbicard.com/sbi-card-en/assets/media/images/personal/credit-cards/rewards/phonepe/tnc/RP-tnc.pdf',joiningFee:1499,feeWaiver:'Renewal reversed after ₹3L annual retail spending in the previous year. A limited-time first-year-free offer is separate from standard pricing.',pointsInfo:'From 1 July 2026: eligible PhonePe recharge, utilities, bills and travel earn 10 points/₹100, capped at 1,500 points/calendar month; PhonePe insurance has a separate 500-point cap. Eligible online purchases earn 5 points/₹100 up to 1,000 points/month; other eligible spending earns 1 point/₹100 up to 2,000 points/month. Minimum transaction ₹100. UPI outside PhonePe, utilities/insurance outside the app, fuel, education, rent, wallets, jewellery, gifts, tolls and other listed transactions are excluded.',redemptionNote:'1 point = ₹1 for statement credit or eligible vouchers; issuer reward terms say no redemption fee. Posting date and app merchant identifiers determine accrual.',lounge:'4 domestic visits/year, 1/quarter; Priority Pass membership is not a promise of free international visits',caps:{phonePeNonInsurance:1500,phonePeInsurance:500,online:1000,other:2000,capPeriod:'calendar month'},highlights:['July 2026 revised app/online caps','₹1,499 standard joining and renewal fee; time-limited first-year offer separate','₹3L retail-spend renewal waiver'],pros:['Statement-credit redemption at ₹1/point','Separate app and online reward buckets'],cons:['App route and merchant identifiers matter','Outside-PhonePe UPI earns no points','Accelerated caps apply per calendar month'],estimateUnavailableReason:'Current July 2026 earning, caps and fees are identified, but the inputs cannot distinguish PhonePe in-app, online, insurance and UPI routes or individual ₹100 minimum transactions. No generic numerical model is enabled.'});
 const flipkartSbi = CARDS.find(c=>c.id === 'sbi-flipkart');
@@ -1915,18 +1864,18 @@ for (const [id, value] of [["hdfc-regalia",0.50],["hdfc-infinia",1],["hdfc-diner
   card.reviewedAt = '2 October 2026';
   card.pointsInfo += ` Eligible purchases earn in ₹${card.minimumEligibleTransaction} blocks. Grocery earning is capped at ${id === 'hdfc-moneyback-plus' ? '1,000' : '2,000'} points/month; utilities at 2,000 points/calendar month. The overall statement-cycle earning ceiling is ${(card.totalRewardValueCap/value).toLocaleString('en-IN')} points. These are earning caps, not redemption limits.`;
   const insurancePointCap = id === 'hdfc-infinia' ? 10000 : id === 'hdfc-diners-black' ? 5000 : 2000;
-  card.pointsInfo += ` September 2026 HDFC MITC separately caps insurance-earned points at ${insurancePointCap.toLocaleString('en-IN')} per month; insurance rewards are not included in this calculator.`;
+  card.pointsInfo += ` HDFC MITC v4.19 (November 2026) separately caps insurance-earned points at ${insurancePointCap.toLocaleString('en-IN')} per month; insurance rewards are not included in this calculator.`;
 }
 const regaliaRecord = CARDS.find(c=>c.id==='hdfc-regalia');
 regaliaRecord.rewardSourceUrl = 'https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/regalia-credit-card/pdfs/rp-regalia.pdf';
 const hdfcPersonalMITC = 'https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf';
 for (const card of CARDS.filter(c=>c.bank==='HDFC')) {
   card.transactionFeeSourceUrl = hdfcPersonalMITC;
-  card.transactionFeeNote = 'September 2026 consumer-card MITC: utilities above ₹50,000 in a calendar month attract a 1% fee on the full eligible monthly total (maximum ₹4,999 before GST), not just the excess. Fuel purchases above ₹15,000 attract 1% on the full transaction, capped at ₹4,999 before GST. INR payments at overseas/internationally registered merchants attract 1.75% DCC markup. These charges and applicable GST are not deducted from gross reward estimates; a fuel-surcharge waiver does not waive the separate high-value fuel charge.';
+  card.transactionFeeNote = 'HDFC consumer-card MITC: utilities above ₹50,000 in a calendar month attract a 1% fee on the full eligible monthly total (maximum ₹4,999 before GST), not just the excess. Fuel purchases above ₹15,000 attract 1% on the full transaction, capped at ₹4,999 before GST. INR payments at overseas/internationally registered merchants attract 1.75% DCC markup. These charges and applicable GST are not deducted from gross reward estimates; a fuel-surcharge waiver does not waive the separate high-value fuel charge.';
 }
 for (const id of ['hdfc-infinia','hdfc-diners-black']) {
   const card = CARDS.find(c=>c.id===id);
-  card.redemptionNote = `Travel redemption value assumes ₹1/point on the eligible bank portal, covering at most 70% of flight/hotel booking value; the remainder is paid with the card. Flight/hotel redemption is limited to ${id === 'hdfc-infinia' ? '150,000' : '75,000'} points/calendar month. Catalogue and cashback request processing fees are waived for this variant under September 2026 MITC. Points normally expire after three years; 365 days without card use can forfeit the balance.`;
+  card.redemptionNote = `Travel redemption value assumes ₹1/point on the eligible bank portal, covering at most 70% of flight/hotel booking value; the remainder is paid with the card. Flight/hotel redemption is limited to ${id === 'hdfc-infinia' ? '150,000' : '75,000'} points/calendar month. Catalogue and cashback request processing fees are waived for this variant under the linked HDFC MITC. Points normally expire after three years; 365 days without card use can forfeit the balance.`;
 }
 const hdfcMoneyback = CARDS.find(c=>c.id==='hdfc-moneyback-plus');
 hdfcMoneyback.redemptionNote = 'Displayed estimates use the ₹0.25/point eligible catalogue/travel route, not statement cashback, which is ₹0.20/point from November 2025. Catalogue requests cost ₹99 + GST; cashback requests cost ₹50 + GST and require a ₹500 minimum redemption value. SmartBuy flight/hotel points cover at most 50% of booking value. CashPoints normally expire after two years; inactivity can forfeit them.';
@@ -1936,8 +1885,8 @@ ultimo.lounge = 'Issuer documents conflict on the domestic lounge allowance; not
 ultimo.loungeSourceConflict = true;
 ultimo.highlights[3] = '₹999 standard fee; ₹2L prior-year fee-waiver threshold; lounge allowance under source reconciliation';
 ultimo.pros = ['PhonePe ecosystem earning buckets','₹1/point statement-credit route'];
-ultimo.cons = ['App/merchant route determines earning','September MITC and linked lounge terms publish different allowances','₹999 annual fee unless prior-year ₹2L waiver is met'];
-ultimo.redemptionNote = 'Statement-credit value is ₹1/point; catalogue and cashback processing fees are waived in the September MITC. Reward points normally expire after two years. The September MITC describes two domestic visits/quarter plus two extra after ₹75,000 preceding-quarter eligible spend (extra visits exclude the issuance quarter); the product page and linked April lounge terms instead describe two spend-qualified visits/quarter. Neither conflicting allowance is counted as a confirmed benefit in comparisons.';
+ultimo.cons = ['App/merchant route determines earning','Linked HDFC MITC and card-specific lounge terms publish different allowances','₹999 annual fee unless prior-year ₹2L waiver is met'];
+ultimo.redemptionNote = 'Statement-credit value is ₹1/point; catalogue and cashback processing fees are waived in the linked HDFC MITC. Reward points normally expire after two years. The linked HDFC MITC describes two domestic visits/quarter plus two extra after ₹75,000 preceding-quarter eligible spend (extra visits exclude the issuance quarter); the product page and linked April lounge terms instead describe two spend-qualified visits/quarter. Neither conflicting allowance is counted as a confirmed benefit in comparisons.';
 ultimo.rewardSourceUrl = hdfcPersonalMITC;
 CARDS.find(c=>c.id==='hdfc-infinia').name = 'HDFC Infinia Metal Edition';
 const hdfcNeu = CARDS.find(c=>c.id === 'hdfc-tata-neu-infinity');
@@ -1969,15 +1918,15 @@ hdfcMillennia.joiningFee = 1000;
 hdfcMillennia.feeWaiver = 'Spend over ₹1L in the year before renewal for annual-fee waiver';
 hdfcMillennia.rewardSourceUrl = 'https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf';
 hdfcMillennia.reviewedAt = '2 October 2026';
-hdfcMillennia.rewardAssumptions.default = 'Statement-credit value before the ₹50 redemption fee and applicable tax. Uses calendar-month settlement, not the statement cycle; the issuer identifies the ten merchant MIDs, and refunds/reversals adjust CashPoints. SmartBuy/PayZapp has separate 1% base rules. Fuel, rent, government, EMI, wallet loading, cash, fees and third-party education are excluded. No minimum transaction value is stated in the current card-specific reward terms; aggregate estimates do not model transaction-level rounding or settlement-date shifts.';
+hdfcMillennia.earningBlock=100;hdfcMillennia.minimumEligibleTransaction=100;
+hdfcMillennia.rewardAssumptions.default = 'Statement-credit value before the ₹50 redemption fee and applicable tax. Uses calendar-month settlement, not the statement cycle; the issuer identifies the ten merchant MIDs, and refunds/reversals adjust CashPoints. SmartBuy/PayZapp has separate 1% base rules. Fuel, rent, government, EMI, wallet loading, cash, fees and third-party education are excluded. HDFC MITC v4.19 specifies complete ₹100 transaction blocks; residual amounts and transactions below ₹100 do not earn CashPoints. Aggregate estimates do not model transaction rounding or settlement shifts.';
 hdfcMillennia.estimateUnavailableReason = 'The 5% rate applies only to ten listed merchant MIDs, while this calculator accepts broad categories such as online, dining and shopping. It cannot distinguish an eligible listed merchant from other spend, or model the separate monthly caps and redemption fee reliably; no generic estimate is shown.';
 const zenith = CARDS.find(c=>c.id === 'au-zenith');
 zenith.categoryRewardCaps = {utilities:1000};
 zenith.totalRewardValueCap = 25000;
-zenith.rewardAssumptions = {default:'₹1/point issuer redemption route; total earn limited to 25,000 points per statement cycle. No welcome/milestone benefits included.',utilities:'Assumes eligible non-BBPS utility/telecom transactions, each no more than ₹10,000. Earn is capped at 100 points per transaction and 1,000 per statement cycle; a single large payment can earn much less.'};
+zenith.rewardAssumptions = {default:'₹1/point is the issuer-listed value, but redemption requires at least 1,000 points and costs ₹99 + GST. The model excludes welcome/milestone benefits, transaction-level ₹100 rounding and per-redemption cost; it is gross illustrative value. Total earn is capped at 25,000 points per statement cycle, with separate caps for specified categories.',utilities:'Assumes eligible non-BBPS utility/telecom transactions, each no more than ₹10,000. Earn is capped at 100 points per transaction and 1,000 per statement cycle; a single large payment can earn much less.'};
 zenith.pointsInfo += ' Utility/telecom earn: 1 point/₹100, maximum 100 points per transaction and 1,000 per statement cycle; total earning ceiling 25,000 points/cycle. BBPS and other excluded transactions do not earn.';
 zenith.rewardSourceUrl = 'https://www.au.bank.in/content/dam/aubank/in/en/credit-cards/credit-card-member-agreement.pdf';
-zenith.rewardAssumptions.default += ' Per-redemption handling charges and per-₹100 transaction rounding are not subtracted; this is gross reward value, not net savings.';
 const sbiNeu = CARDS.find(c=>c.id === 'sbi-tata-neu-infinity');
 Object.assign(sbiNeu,{reviewedAt:'2 October 2026',sourceUrl:'https://www.sbicard.com/en/personal/sbi-credit-card.page',feeSourceUrl:'https://www.sbicard.com/sbi-card-en/assets/docs/pdf/kfs/key-fact-statement.pdf',rewardSourceUrl:'https://www.sbicard.com/sbi-card-en/assets/docs/pdf/Tata-neu-infinty-tnc.pdf',joiningFee:1499,fee:1499,feeWaiver:'₹1,499 renewal fee waived after ₹3L or more eligible spend in the preceding year.',feeScheduleNote:'SBI Card’s May 2026 Key Fact Statement lists ₹1,499 annual and renewal fees, plus applicable taxes; renewal is waived after ₹3 lakh eligible spend in the preceding year.',network:'Visa or RuPay variant',rewards:{dining:1.5,travel:1.5,online:1.5,groceries:1.5,fuel:0,utilities:1.5,entertainment:1.5,shopping:1.5,default:1.5},pointsInfo:'5% NeuCoins on eligible non-EMI purchases made on Tata Neu and at listed partner Tata brands; selected Tata Neu app categories may have a separate accelerated offer under the linked card terms. Other eligible purchases earn 1.5% NeuCoins. RuPay UPI has route-specific terms and a 500-NeuCoin monthly cap; partner-brand, grocery, utility, telecom and insurance limits/exclusions apply. NeuCoins are credited to Tata Neu for eligible ecosystem redemption, not bank-account cash. SBI lists a 1.99% foreign-currency markup for this card.',redemptionNote:'NeuCoins are credited to the Tata Neu account and redeem within eligible Tata Neu/partner-brand channels; they are not statement cash. The 5% earn requires an eligible Tata Neu/partner-brand route. A generic category estimate is not supported.',lounge:'SBI currently lists up to eight complimentary domestic lounge visits/year (two per quarter) after ₹75,000 eligible spend in the preceding quarter. This benefit is spend- and programme-conditional; do not treat it as unconditional access.',highlights:['5% NeuCoins on eligible Tata Neu and partner-brand non-EMI spend','1.5% on other eligible purchases; RuPay UPI has separate route/cap terms','₹1,499 + tax annual/renewal fee; waiver after ₹3L preceding-year eligible spend','Domestic lounge allowance is spend-qualified: ₹75K preceding quarter'],pros:['Accelerated NeuCoin earn on eligible Tata Neu/partner-brand purchases','Reduced foreign-currency markup listed by SBI'],cons:['Partner brand/MID and channel determine accelerated earn','NeuCoins are ecosystem redemption value, not statement cashback','Quarterly lounge access requires the issuer spend threshold']});
 sbiNeu.categoryRewardCaps = {groceries:2000,utilities:2000};
@@ -1985,9 +1934,9 @@ sbiNeu.estimateUnavailableReason='The 5% rate depends on eligible Tata Neu/partn
 sbiNeu.rewardAssumptions = {groceries:'Only eligible Tata-brand grocery transactions receive the partner rate; ordinary grocery purchases use the base rate and may be subject to a category ceiling.',shopping:'The 5% tier requires listed Tata partner brands/MIDs, not generic shopping.',utilities:'Eligible utility earning has its own monthly cap and exclusions; UPI uses a separate channel-specific cap.',default:'Generic inputs use the 1.5% base-tier rate only as descriptive context; the public estimate stays disabled. NeuCoins redeem within eligible Tata Neu channels, not as cash.'};
 for (const id of ['idfc-wow','idfc-millennia']) {
   const card = CARDS.find(c=>c.id===id);
-  card.reviewedAt = '1 October 2026';
+  card.reviewedAt = '3 October 2026';
   card.minimumEligibleTransaction = 200;
-  card.rewardAssumptions = {default:'Points valued at ₹0.25, before ₹99 + GST per redemption. Assumes eligible transactions meet the ₹200 earning block and total cycle spending stays within the credit limit; spend beyond that limit earns no points. Aggregate estimates do not simulate per-transaction block rounding. Fuel, EMI, cash withdrawals, fees and charges are excluded.',travel:id==='idfc-millennia' ? '10X applies only to eligible travel; railway/FASTag earn at 1X. Birthday and portal promotions are not added.' : '4X eligible travel except railway/FASTag at 1X; not the separate WOW Black variant.'};
+  card.rewardAssumptions = {default:'Points valued at ₹0.25, before ₹99 + GST per redemption. Assumes eligible transactions meet the ₹200 earning block and total cycle spending stays within the credit limit; spend beyond that limit earns no points. Aggregate estimates do not simulate per-transaction block rounding. Fuel, EMI, cash withdrawals, fees and charges are excluded. The broad-category estimate does not add international transaction or birthday multipliers; check the card-specific terms for those routes.',travel:id==='idfc-millennia' ? '10X applies to eligible travel; dining, international purchases and birthday spends also have a 10X tier. This category model does not separately identify international or birthday spend. Railway/FASTag earn at 1X.' : '4X applies to eligible online, offline and international purchases; this broad-category model does not separately identify international transactions. Utilities, insurance, FASTag and railway earn at 1X; this is not the separate WOW Black variant.'};
 }
 CARDS.find(c=>c.id==='idfc-millennia').pointsInfo += ' Current product page also lists 10X on international purchases; the previously displayed October 26 cessation is not supported by the current page. Optional personalised cards/add-ons and FIRST Digital have separate charges.';
 const uni = CARDS.find(c=>c.id==='yes-uni');
@@ -2020,8 +1969,8 @@ mmt.lounge = 'Two complimentary domestic airport lounge visits per quarter and o
 mmt.pointsInfo = 'Current MakeMyTrip ICICI card: 6 myCash/₹100 on eligible MMT hotel bookings, 3/₹100 on eligible MMT flight, bus and cab bookings, and 1/₹100 on other retail. myCash is ₹1 of MakeMyTrip wallet value per unit, usable for eligible MMT bookings/partner vouchers—not bank cash—and current-card myCash does not expire. The issuer also lists a 0.99% forex markup, MMTBLACK Gold membership, ₹1,000 joining voucher on fee payment and ₹1,000 hotel voucher on annual-fee payment. Legacy MMT Signature and Platinum cards have different benefits and expiry.';
 mmt.redemptionNote = 'Current-card myCash is credited to MakeMyTrip MyWallet at ₹1 per myCash and may be used for eligible MakeMyTrip bookings or partner vouchers. It cannot be withdrawn to a bank account; current-card myCash does not expire. Legacy Signature/Platinum cards follow different expiry and reward terms.';
 mmt.feeScheduleNote = 'Joining and annual fees are ₹999 + GST. The annual fee is waived for the next year after spending more than ₹3 lakh in one year. The issuer lists a ₹1,000 MakeMyTrip joining voucher after paying the joining fee and a ₹1,000 hotel voucher after annual-fee payment; these are conditional platform vouchers, not fee cashbacks.';
-mmt.highlights = ['6 myCash/₹100 on eligible MMT hotel bookings; 3/₹100 on eligible flights, buses and cabs; 1/₹100 on other retail','Current-card myCash does not expire, but is restricted to eligible MakeMyTrip wallet redemption','₹999 + GST joining/annual fee; next-year renewal waiver after more than ₹3L eligible annual spend','Two domestic lounge visits/quarter and one international/year listed; ICICI general ₹75K lounge gate excludes MMT cards'];
-mmt.pros = ['Travel earn is differentiated by eligible MakeMyTrip booking type','Current-card myCash is not subject to expiry and has a ₹1 wallet value','Reduced 0.99% foreign-currency markup'];
+mmt.highlights = ['6 myCash/₹100 on eligible MMT hotel bookings; 3/₹100 on eligible flights, buses and cabs; 1/₹100 on other retail','New myCash valid two years from credit; myCash earned till 10 November 2026 retains lifetime validity','₹999 + GST joining/annual fee; next-year renewal waiver after more than ₹3L eligible annual spend','Two domestic lounge visits/quarter and one international/year listed; ICICI general ₹75K lounge gate excludes MMT cards'];
+mmt.pros = ['Travel earn is differentiated by eligible MakeMyTrip booking type','myCash has ₹1 eligible wallet value; new credits valid two years','Zero foreign-currency markup from 10 November 2026'];
 mmt.cons = ['myCash is not cash and can only be used through eligible MakeMyTrip redemption routes','MMT booking rewards depend on merchant route and completion/credit terms','Joining, renewal, movie and lounge benefits have separate eligibility rules'];
 mmt.rewardAssumptions.default = 'Eligible myCash earning excludes rent, cash advances, fees, EMI, balance transfers and personal loans. myCash cannot be transferred to a bank account. Utility/insurance MCC earning is not established by this general retail model.';
 mmt.estimateUnavailableReason = 'Aggregate category inputs cannot separate eligible MakeMyTrip hotel, flight, bus and cab booking routes from other travel spend, and myCash is restricted wallet value rather than cash. No broad-category cash estimate is enabled.';
@@ -2079,6 +2028,43 @@ superSaver.pointsInfo = 'HPCL fuel: 4% cashback, maximum ₹200/month, plus a se
 superSaver.lounge = '1 domestic visit/quarter after ₹75K previous-calendar-quarter spend, primary only';
 superSaver.highlights = ['HPCL: 4% cashback capped ₹200/month; surcharge waiver is separate','HP Pay Happy Coins are a separate reward currency','Essentials share a 400-point monthly limit, not ₹400 cashback','Airport lounge and BookMyShow offers have different spend gates'];
 superSaver.partnerRates.push({name:'BookMyShow',rate:'25% off up to ₹100 on at least two tickets, twice/month; ₹25K preceding spend-quarter requirement'});
+// Material terms reviewed 25 November 2026; issuer effective dates are stated separately.
+const selectNov = CARDS.find(c=>c.id==='idfc-select');
+selectNov.rewardSourceUrl='https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/FIRST-Select-Credit-Card-Communication-May-26.pdf';
+selectNov.recentChanges={date:'18 June 2026',changes:['10X eligible dining, travel and international rewards from the first eligible transaction; former ₹20,000 threshold removed','Other eligible retail 3X; specified categories 1X; rewards limited to credit-limit spend each billing cycle','Reward points valid 24 months; benefit spend gates are separate'],impact:'Match the eligible merchant category, not a monthly accelerator threshold.'};
+selectNov.rewardAssumptions={default:'Merchant-category and payment-route eligibility apply. The June 2026 notice limits rewardable spends to the credit limit per cycle; redeemable value is after the ₹99 plus GST redemption fee.',dining:'10X on eligible dining MCCs from the first eligible transaction; exclusions and credit-limit ceiling apply.',travel:'10X on eligible travel MCCs and qualifying international purchases; other travel merchants may not qualify.'};
+const mmtNov=CARDS.find(c=>c.id==='icici-mmt');
+mmtNov.reviewedAt='25 November 2026';
+mmtNov.rewardSourceUrl='https://promos.makemytrip.com/mmt-icici-rupay-card-terms.html';
+mmtNov.forexMarkup=0;
+mmtNov.pointsInfo='6 myCash/₹100 on eligible MakeMyTrip hotel bookings, 3/₹100 on eligible MakeMyTrip flight, bus and cab bookings, and 1/₹100 on other eligible domestic retail. From 10 November 2026, foreign-currency transactions have zero forex markup and earn no myCash. myCash earned till 10 November 2026 retains lifetime validity; myCash earned after that date expires two years from credit. myCash is MakeMyTrip ecosystem value, not bank cash; eligible bookings, exclusions and active-card conditions apply.';
+mmtNov.redemptionNote='One myCash is ₹1 toward eligible MakeMyTrip redemption, not a bank withdrawal. Legacy MakeMyTrip Signature/Platinum cards have different terms. Current-card myCash earned till 10 November 2026 retains lifetime validity; later myCash is valid two years from credit. Merchant currency conversion and DCC charges must be checked separately from forex markup.';
+mmtNov.highlights=mmtNov.highlights.map(x=>x.replace('0.99% forex markup','Zero forex markup from 10 November 2026').replace(/myCash never expires/i,'New myCash valid two years; earlier balance retains lifetime validity'));
+mmtNov.pros=mmtNov.pros.map(x=>x.replace('0.99% forex markup','Zero forex markup').replace(/myCash never expires/i,'Eligible MakeMyTrip redemption'));
+mmtNov.rewardAssumptions={...mmtNov.rewardAssumptions,default:'Eligible domestic retail only; international currency spends earn no myCash from 10 November 2026. Excludes rent, cash advances, fees, EMI, balance transfers and personal loans. Check transaction eligibility before valuing myCash.'};
+const neuClaim='From 25 November 2026, primary cardholders must claim card-earned NeuCoins in the Tata Neu app (NeuCard > Claim NeuCoins); they no longer transfer automatically. At least 100 NeuCoins per claim and up to three successful claims per day. Claim within 12 months of the statement date or the unclaimed balance expires. After credit to the Neu membership account, the claimed coins have a separate 12-month validity under the program terms. Special promotions and welcome benefits follow their own terms.';
+for(const id of ['hdfc-tata-neu-infinity','hdfc-tata-neu-plus']){const c=CARDS.find(c=>c.id===id);c.redemptionNote+=' '+neuClaim;c.rewardProcessReviewedAt='25 November 2026';c.rewardProcessSourceUrl='https://www.hdfc.bank.in/credit-cards/tata-neu-infinity-hdfc-bank-credit-card';}
+for(const id of ['axis-myzone','axis-neo','axis-privilege']){const c=CARDS.find(c=>c.id===id);c.movieEligibility='From 1 November 2026, the movie offer requires ₹25,000 settled spend in the preceding three calendar months. New cards are exempt in the issue month and following three calendar months; upgrades do not count as new issuance. Eligible spend and offer limits follow the card-specific terms.';c.lifestyleNote=(c.lifestyleNote?c.lifestyleNote+' ':'')+c.movieEligibility;c.pointsInfo+=' '+c.movieEligibility;c.highlights.push('Movie offer: ₹25K preceding-three-calendar-month spend gate; new-card exception applies');}
+const mrccNov=CARDS.find(c=>c.id==='amex-mrcc');mrccNov.feeReviewedAt='25 November 2026';
+const saveNov=CARDS.find(c=>c.id==='sbi-simplysave');saveNov.sourceUrl='https://www.sbicard.com/en/personal/credit-cards/shopping/simplysave-sbi-card.page';
+
+const upcomingIciciSource='https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/credit-card-charges-updated-notice.pdf';
+for(const id of ['icici-rubyx','icici-coral','icici-hpcl-super-saver','icici-mmt']){const c=CARDS.find(c=>c.id===id);c.upcomingBenefitChange='ICICI has announced that this card’s complimentary INOX benefit ends on 15 December 2026. This is a future effective date; other movie offers have separate terms.';c.upcomingBenefitSourceUrl=upcomingIciciSource;}
+for(const id of ['icici-sapphiro','icici-rubyx','icici-emeralde']){const c=CARDS.find(c=>c.id===id);c.upcomingBenefitChange=(c.upcomingBenefitChange?c.upcomingBenefitChange+' ':'')+'ICICI has announced discontinuation of the complimentary air-accident and related insurance cover from 15 December 2026; verify the affected variant and policy.';c.upcomingBenefitSourceUrl=upcomingIciciSource;}
+const movieSources={'axis-myzone':'https://www.axis.bank.in/docs/default-source/default-document-library/terms-and-conditions-for-myzone-cc-bogo-free-district-offer.pdf?sfvrsn=682852de_1','axis-privilege':'https://www.axis.bank.in/docs/default-source/default-document-library/district-bogo-terms-and-conditions.pdf?sfvrsn=68cddd12_3','axis-neo':'https://www.axis.bank.in/docs/default-source/default-document-library/axis-bank-neo-power-of-10.pdf'};
+for(const [id,url]of Object.entries(movieSources))CARDS.find(c=>c.id===id).movieSourceUrl=url;
+CARDS.find(c=>c.id==='idfc-select').rewardSourceUrl='https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/FIRST-Select-Credit-Card-Communication-May-26.pdf';
+CARDS.find(c=>c.id==='idfc-select').reviewedAt='25 November 2026';
+CARDS.find(c=>c.id==='icici-mmt').rewardSourceUrl='https://promos.makemytrip.com/mmt-icici-rupay-card-terms.html';
+CARDS.find(c=>c.id==='icici-mmt').reviewedAt='25 November 2026';
+
+// A legacy flat-point cap is not established by the current Magnus product page.
+const magnusReview=CARDS.find(c=>c.id==='axis-magnus');
+magnusReview.caps={pointValue:0.2,spendPer:200,pointsPer:12,note:'The 35-point tier is limited to spends up to assigned credit-card limit plus ₹1.5 lakh per calendar month. This is an account-specific spending ceiling, not a confirmed flat 50,000-point cap.'};
+magnusReview.partnerRates=magnusReview.partnerRates.map(p=>p.name.includes('Oberoi')?{...p,rate:'Legacy partner offer; current discount and complimentary-night eligibility are not confirmed. Do not count a fixed benefit without issuer confirmation.'}:p.name.includes('20+')?{...p,rate:'The standard product page quotes 2 partner miles per 5 EDGE Reward points across 20 partners; verify partner-group ratios, transfer ceilings and the exact Magnus variant before transferring.'}:p);
+
+// Preserve ZIP15's unresolved status for issuer/variant terms not reconciled in this release.
+for(const id of ['indusind-legend','indusind-pinnacle']) {const c=CARDS.find(c=>c.id===id);c.verified=false;delete c.reviewedAt;}
 export const BANKS = [...new Set(CARDS.map(c => c.bank))].sort();
 // This marker requires a dated source link; it does not prove every term.
 // Review-pending cards remain searchable but do not drive recommendations.
@@ -2093,6 +2079,7 @@ for (const card of CARDS) card.verified = isSourceReviewed(card);
 // records need a redemption value, feature selection or cap/tier model before
 // their old percentages can be used to rank a user's spending.
 const ESTIMATE_PENDING_IDS = new Set([
+  "indusind-legend", "indusind-pinnacle",
   "icici-coral", "icici-sapphiro", "icici-emeralde", "icici-rubyx", "yes-uni", "hsbc-live-plus",
   "au-lit", "idfc-select", "axis-airtel", "axis-cashback", "hdfc-swiggy", "hdfc-swiggy-blck",
   "axis-flipkart-supercoin", "sbi-flipkart", "hdfc-swiggy-ornge", "hdfc-tata-neu-plus",
@@ -2145,26 +2132,26 @@ const MODEL_GAPS = {
   "icici-hpcl-coral": "HPCL transaction bands, cashback/surcharge caps and point redemption need a dedicated fuel model.",
   "hdfc-freedom": "Current points accrual and merchant acceleration cannot use the legacy flat cashback figures. A redemption-route and capped-merchant model is required.",
   "axis-neo": "Merchant offers are conditional discounts, not a generic reward rate; EDGE points need an explicit redemption route and exclusions.",
-  "axis-magnus": "Spend tiers and Travel EDGE caps must be distinguished from partner-mile transfers; no universal cashback value is assigned.",
+  "axis-magnus": "The model is disabled: generic categories cannot isolate Travel EDGE portal spend, apply the ₹1.5L tier and assigned-credit-limit-linked acceleration ceiling, or track card-specific exclusions. EDGE Reward Points also convert differently across catalogue and transfer routes; they are not cash. Do not use the removed flat-rate estimate.",
   "sbi-bpcl-octane": "Fuel, dining/grocery and surcharge-waiver buckets have separate eligible bands and caps; adding the headline benefits would overstate rewards.",
-  "sbi-elite": "SBI's current portfolio page advertises a ₹5,000 welcome voucher, movie tickets worth ₹6,000/year and up to 50,000 bonus points/year advertised at ₹12,500. Current MITC lists the ₹4,999 + tax standard renewal fee and ₹10L eligible preceding-year waiver. The issuer-hosted ELITE booklet is an older document; it describes 10 points/₹100 on dining, groceries and departmental stores with a shared 10,000-point calendar-month accelerated cap, but does not establish today's complete earning, exclusion, offer, network, lounge or redemption rules. Do not convert all points into cash or use the legacy flat-rate estimate until current card-specific terms are reconciled.",
-  "onecard": "OneCard has multiple partner issuers. Federal terms require ₹750 in each of at least three categories for 5X on the top two; this cannot establish the same terms for every issuer variant.",
+  "sbi-elite": "Current SBI sources establish the standard ₹4,999 + tax fee, ₹10L preceding-year waiver, 2 base points/₹100, 10 total points/₹100 on dining/departmental stores/grocery with a shared 10,000 accelerated-point monthly cap, and 1.99% foreign-currency fee. The April 2026 statement-credit notice applies a 60,000-point monthly cap and 4,000-point multiples to eligible cards, but older ELITE material and general reward terms describe different redemption routes; a current ELITE-specific full redemption schedule is not reconciled. Complimentary lounge allowances differ by domestic card-network program versus international Priority Pass (currently listed as 6 visits/year outside India, max 2/quarter), so do not publish one blended lounge count without matching the issued network and program. The generic calculator cannot model MCC eligibility, monthly accelerated cap or milestone rewards; keep the legacy flat-rate estimate disabled.",
+  "onecard": "OneCard is issued by multiple partner banks, so the generic legacy entry does not identify one product variant. Federal Bank's May 2026 MITC establishes its own fee schedule but defers detailed reward accrual to the app/programme; the detailed issuer-hosted reward terms linked for Federal are dated November 2025. Do not carry the old 5X/1%/₹0.10 valuation or its exclusions across issuers, networks or current terms. Keep this entry quarantined until a specific issuer variant and matching current reward/redemption terms are selected.",
   "bob-eterna": "BOBCARD’s current product page describes 15 points/₹100 on eligible dining, travel, online and international spend, 3 points/₹100 on other eligible spend, a shared 5,000-point accelerated ceiling per statement cycle and ₹0.25 per point for cashback. Generic category inputs cannot identify excluded MCCs or track the shared cycle cap, so no flat category estimate is enabled. Lounge access also requires ₹75,000 eligible spend in the preceding calendar quarter.",
   "kotak-811": "The legacy Dream label combines an FD-backed Dream Different variant with an unsecured 811 product whose published fee is ₹500. Do not combine their fees or reward tables.",
-  "indusind-legend": "Issuer terms distinguish weekday/weekend earn and reduced categories; cash redemption differs from other routes. Personalised joining-fee/LTF eligibility and current redemption limits need reconciliation.",
-  "yes-ace": "YES Private and YES ACE are separate issuer products. The legacy name 'YES Private Ace' combines them; its ₹10,000 fee and reward claims cannot identify a real current variant.",
+  "indusind-legend": "The current issuer sources establish the published fee, weekday/weekend earn, point values and lounge discontinuation. The site inputs cannot determine weekday versus weekend transactions or apply the 5,000-point monthly limit, so no generic rupee estimate is enabled.",
+  "yes-ace": "YES Private and YES ACE are separate issuer products; this legacy catalogue row merges them. Their old fee, reward, network and lounge claims have been removed. Keep the record quarantined until one exact product and current product-specific terms are selected.",
   "icici-platinum": "Platinum variant/offer and current fee table are not matched to a product-specific dated record; legacy generic percentages are withheld.",
   "phonepe-sbi-select-black": "SBI issued a rewards revision effective 1 July 2026. The older launch earning table is insufficient to establish the current PhonePe, online and utility buckets.",
   "sbi-flipkart": "Issuer terms use separate calendar-quarter merchant caps, not the legacy uncapped cashback claim. A current merchant/balance-aware model is required.",
   "sbi-titan": "The available generic SBI fee reference does not establish a current Titan variant's fees, earning or redemption rules.",
-  "sbi-iocl": "A product-specific current SBI/IndianOil card was not established for this legacy label. Do not substitute another bank's IndianOil product.",
+  "sbi-iocl": "SBI's current public card catalogue does not establish a current SBI–IndianOil product matching this legacy record. The stored ₹499 fee, ₹1L waiver, 4% fuel rate and ₹200 cap were unsupported and have been removed. Keep the row historical/noindex with no fee or reward estimate; do not substitute another bank's IndianOil product.",
   "bob-premier": "Current product variant, renewal fee and rewards caps are not established by a dated product-specific record.",
-  "hsbc-cashback": "This is a legacy name, not an independently verified current product. Use the Live+ record for that product's published terms.",
+  "hsbc-cashback": "HSBC announced in July 2024 that its Cashback Credit Card was renamed Live+. The old Visa Cashback page and guide remain hosted and describe ₹999 fees, ₹2L renewal reversal, cashback categories and four domestic lounge visits, but they do not establish that legacy Visa Cashback is open to new applications or that every old term remains current. HSBC lists a separate RuPay Cashback card with distinct terms. Keep this legacy row quarantined; do not treat it as a separate live product or substitute Live+/RuPay features.",
   "slice": "Current issuer, credit-card variant and legacy rewards programme have not been matched. Do not treat a historical credit/prepaid product as a current credit-card recommendation.",
   "roarbank-unity": "Current issuer product and variant-specific credit-card terms have not been established for this catalogue label.",
   "rbl-world-safari": "Point value, current earning limits and fee terms require a dated issuer product/terms record; zero forex does not imply universal cashback.",
   "kotak-zen": "Current Zen variant, joining/renewal terms and redemption value have not been reconciled with the historical record.",
-  "indusind-pinnacle": "Published earn categories are not a fixed cashback rate. Variant/offer fee and selected redemption value remain unresolved.",
+  "indusind-pinnacle": "Current transaction earn tiers, cash-credit value and caps are sourced, but broad spending inputs cannot model transaction routes, MCC-specific rates, accrual and redemption fees.",
 };
 for (const card of CARDS) {
   if (!card.estimateReady && !card.estimateUnavailableReason) card.estimateUnavailableReason = MODEL_GAPS[card.id];
@@ -2491,6 +2478,9 @@ export function validateCardData(cards = CARDS) {
       errors.push(`${label}: newly reviewed cards need an HTTPS sourceUrl`);
     }
     if (!Number.isFinite(card.fee) || card.fee < 0) errors.push(`${label}: fee must be a non-negative number`);
+    if (isEstimateReady(card) && !card.rewardAssumptions?.default) {
+      errors.push(`${label}: estimate-ready cards need a user-visible default model assumption`);
+    }
 
     rewardCategories.forEach(categoryId => {
       const rate = card.rewards?.[categoryId];

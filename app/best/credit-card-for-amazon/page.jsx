@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
@@ -400,7 +401,7 @@ export default function BestCreditCardForAmazon() {
       </p>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
-        <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. All card terms, rates, and caps are based on issuer terms as of {UPDATED}. Cashback rates, partner merchant lists, and monthly caps can change without notice. Amazon Pay cashback is credited as Amazon Pay balance, not bank account credit. Verify current terms with ICICI Bank and Amazon before applying. This is not financial advice.
+        <strong>Disclaimer:</strong> {LINK_DISCLOSURE} All card terms, rates, and caps are based on issuer terms as of {UPDATED}. Cashback rates, partner merchant lists, and monthly caps can change without notice. Amazon Pay cashback is credited as Amazon Pay balance, not bank account credit. Verify current terms with ICICI Bank and Amazon before applying. This is not financial advice.
       </footer>
     <GuideCardRules slug="credit-card-for-amazon" />
     </main>

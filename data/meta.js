@@ -1,15 +1,15 @@
 export const SITE = {
   name: "Assure Fintech",
   tagline: "India's Smartest Credit Card Tool",
-  description: "Stop leaving rewards on the table. Assure Fintech helps you find the best credit card for every purchase across 25+ Indian cards.",
+  description: "Stop leaving rewards on the table. Assure Fintech helps you find the best credit card for every purchase across source-linked Indian card records.",
   url: "https://www.assurefintech.com",
-  ogImage: "/og-image.png",
+  ogImage: "/opengraph-image",
 };
 
 export const PAGE_META = {
   home: {
     title: "Assure Fintech — India's Smartest Credit Card Optimization Tool",
-    description: "Find the best credit card for every purchase. Compare 25+ Indian cards, maximize rewards, and save ₹15,000+ per year with our free tools.",
+    description: "Find the best credit card for every purchase. Compare source-linked Indian card records, maximize rewards, and save ₹15,000+ per year with our free tools.",
   },
   "smart-swipe": {
     title: "Smart Swipe Guide — Best Card for Every Purchase | Assure Fintech",

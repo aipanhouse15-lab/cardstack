@@ -47,7 +47,7 @@ export default function HomeLoanTrueCostPage() {
     headline: "Home Loan Costs: EMI, Fees and Other Charges",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-03",
-    dateModified: "2026-09-28",
+    dateModified: "2026-10-17",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
   const breadcrumb = {
@@ -145,10 +145,10 @@ export default function HomeLoanTrueCostPage() {
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>
           Related: <Link href="/learn/loans" style={{ color: COLOR }}>loans hub</Link> · <Link href="/loan-calculator" style={{ color: COLOR }}>loan calculator</Link> · <Link href="/learn/loans/fixed-vs-floating-rate" style={{ color: COLOR }}>fixed vs floating rates</Link> · <Link href="/learn/loans/prepayment-penalty-trap" style={{ color: COLOR }}>prepayment guide</Link>
         </p>
+        <GuidePractice topic="loans/home-loan-true-cost" />
         <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}>
           <strong>Editorial note.</strong> This guide provides a general comparison checklist, not a lender quotation, legal or tax opinion, or financial advice. Verify charges, current rules and contract terms for your own transaction before acting.
-        </footer>
-      <GuidePractice topic="loans/home-loan-true-cost" /></main>
+        </footer></main>
     </>
   );
 }

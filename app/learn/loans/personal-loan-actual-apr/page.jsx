@@ -42,7 +42,7 @@ const faq = {
 };
 
 export default function PagePersonalLoanAPR() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Personal Loan Cost: How to Compare Rates, Fees and Disbursal", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "Personal Loan Cost: How to Compare Rates, Fees and Disbursal", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-10-17", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -85,7 +85,7 @@ export default function PagePersonalLoanAPR() {
           <h2 id="personal-loan-example" style={{ fontSize: 22, fontWeight: 700, margin: "0 0 10px" }}>Worked example: compare cash received with repayments</h2>
           <p style={{ margin: "0 0 12px" }}>Suppose a lender sanctions ₹5,00,000 for 36 months at a hypothetical 12% nominal annual rate on a monthly reducing balance. The EMI is about ₹16,607 and the 36 instalments total about ₹5,97,858. If a 2% processing fee plus 18% GST on that fee (₹11,800 total) is deducted upfront, the borrower receives ₹4,88,200.</p>
           <p style={{ margin: 0 }}>Using those assumptions and equal month-end payments, the cash-flow yield is about 14.6% effective annualized—not 12%. This is an illustration, not a lender APR or offer: payment dates, fee treatment, other charges and the regulator-prescribed KFS method can change the disclosed result. Compare the lender's KFS, APR computation and repayment schedule for the actual loan.</p>
-          <p style={{ fontSize: 13, color: "var(--text-muted)", margin: "12px 0 0" }}>See the <a href="https://website.rbi.org.in/documents/d/rbi/handbookg27022025d0f3f53f5d3c4310a6bb2f8ac2175d3a" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>RBI handbook’s Key Facts Statement guidance</a> for the standardized loan-cost disclosure framework.</p>
+          <p style={{ fontSize: 13, color: "var(--text-muted)", margin: "12px 0 0" }}>See the <a href="https://rbidocs.rbi.org.in/rdocs/notification/PDFs/CIRCULARKFS1504242AE2500BAF494C2A82442B0B642705C1.PDF" target="_blank" rel="noopener noreferrer" style={{ color: COLOR }}>RBI’s Key Facts Statement circular</a> for the standardized loan-cost disclosure framework.</p>
         </section>
 
         <section style={{ marginBottom: 26 }}>
@@ -115,8 +115,8 @@ export default function PagePersonalLoanAPR() {
         </section>
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/loans" style={{ color: COLOR }}>loans hub</Link> · <Link href="/loan-calculator" style={{ color: COLOR }}>loan calculator</Link> · <Link href="/learn/loans/prepayment-penalty-trap" style={{ color: COLOR }}>prepayment guide</Link></p>
-        <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This guide is general information, not a lender quote or financial advice. Confirm current charges, disclosures, eligibility and applicable rules directly with the lender before accepting an offer.</footer>
-      <GuidePractice topic="loans/personal-loan-actual-apr" /></main>
+        <GuidePractice topic="loans/personal-loan-actual-apr" />
+        <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This guide is general information, not a lender quote or financial advice. Confirm current charges, disclosures, eligibility and applicable rules directly with the lender before accepting an offer.</footer></main>
     </>
   );
 }

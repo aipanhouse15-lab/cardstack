@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
@@ -519,7 +520,7 @@ export default function BestCreditCardForInternationalSpending() {
           For example, Axis Atlas’s accelerated travel earn is limited to eligible Travel EDGE, direct airline and direct hotel transactions and has a monthly cap; an OTA booking receives the base earn under its terms. Scapia and IDFC FIRST WOW advertise zero markup, but check taxes, network conversion, rewards eligibility and merchant acceptance for each transaction.
         </p>
         <p>
-          Use our <Link href="/stack-builder">Stack Builder</Link> to model this combination against your actual travel budget and spending pattern. The tool calculates net annual return including fees paid and rewards earned.
+          Use our <Link href="/stack-builder">Stack Builder</Link> to compare illustrative estimates for supported cards against your broad spending inputs. It may not identify eligible foreign-currency transactions, merchant routes, network conversion costs or every issuer condition, so it does not calculate a guaranteed net annual return.
         </p>
         <p>
           Also read: <Link href="/blog/international-spending-card-strategy-india">Complete International Card Strategy for Indian Travelers</Link> and <Link href="/best/credit-card-for-travel">Best Travel Credit Cards India 2026</Link> for the miles card side of this equation.
@@ -624,7 +625,7 @@ export default function BestCreditCardForInternationalSpending() {
           lineHeight: 1.6,
         }}
       >
-        <strong>Disclaimer:</strong> Assure Fintech is an independent editorial platform and does not hold a banking license. Nothing on this page constitutes financial advice regulated under SEBI or RBI. Forex markup rates, reward structures, and card terms change frequently. Always verify current terms with the issuing bank before applying or traveling. Some links may earn us a referral commission that does not affect our editorial stance.
+        <strong>Disclaimer:</strong> Assure Fintech is an independent editorial platform and does not hold a banking license. Nothing on this page constitutes financial advice regulated under SEBI or RBI. Forex markup rates, reward structures, and card terms change frequently. Always verify current terms with the issuing bank before applying or traveling. {LINK_DISCLOSURE}
       </footer>
     <GuideCardRules slug="credit-card-for-international-spending" />
     </main>

@@ -1,0 +1,275 @@
+{
+  "method": "Visible text excluding head, scripts, styles, navigation and SVG labels; includes shared non-navigation layout copy. Approximate tokens, not prose quality.",
+  "baseline": "User deployed cardstack-main (12).zip",
+  "original": "User original cardstack-main (8).zip",
+  "pages": {
+    "/learn/credit-cards": {
+      "deployed12": 242,
+      "original8": null
+    },
+    "/learn/insurance/claim-settlement-ratios-2026": {
+      "deployed12": 659,
+      "original8": 1662
+    },
+    "/learn/insurance/copay-vs-no-copay": {
+      "deployed12": 714,
+      "original8": 1378
+    },
+    "/learn/insurance/health-insurance-effective-coverage": {
+      "deployed12": 724,
+      "original8": 3960
+    },
+    "/learn/insurance/health-insurance-for-parents": {
+      "deployed12": 705,
+      "original8": 1862
+    },
+    "/learn/insurance/room-rent-trap": {
+      "deployed12": 731,
+      "original8": 1628
+    },
+    "/learn/insurance/term-insurance-real-value": {
+      "deployed12": 655,
+      "original8": 1796
+    },
+    "/learn/insurance": {
+      "deployed12": 693,
+      "original8": 683
+    },
+    "/learn/loans/education-loan-real-cost": {
+      "deployed12": 1051,
+      "original8": 2355
+    },
+    "/learn/loans/fixed-vs-floating-rate": {
+      "deployed12": 918,
+      "original8": 2256
+    },
+    "/learn/loans/home-loan-true-cost": {
+      "deployed12": 1097,
+      "original8": 3875
+    },
+    "/learn/loans/personal-loan-actual-apr": {
+      "deployed12": 1011,
+      "original8": 2551
+    },
+    "/learn/loans/prepayment-penalty-trap": {
+      "deployed12": 1094,
+      "original8": 2335
+    },
+    "/learn/loans/sbi-vs-hdfc-vs-icici-home-loan": {
+      "deployed12": 868,
+      "original8": 2213
+    },
+    "/learn/loans": {
+      "deployed12": 623,
+      "original8": 712
+    },
+    "/learn/mutual-funds/cagr-vs-actual-return": {
+      "deployed12": 671,
+      "original8": 1532
+    },
+    "/learn/mutual-funds/direct-vs-regular": {
+      "deployed12": 756,
+      "original8": 1489
+    },
+    "/learn/mutual-funds/sip-advertised-vs-actual": {
+      "deployed12": 660,
+      "original8": 1446
+    },
+    "/learn/mutual-funds": {
+      "deployed12": 505,
+      "original8": 525
+    },
+    "/learn/savings/best-fd-rates-2026": {
+      "deployed12": 896,
+      "original8": 5350
+    },
+    "/learn/savings/fd-real-return": {
+      "deployed12": 616,
+      "original8": 1636
+    },
+    "/learn/savings/ppf-vs-fd-vs-debt-fund": {
+      "deployed12": 815,
+      "original8": 1515
+    },
+    "/learn/savings/senior-citizen-fd": {
+      "deployed12": 710,
+      "original8": 1345
+    },
+    "/learn/savings/tax-saving-fd-vs-elss-vs-ppf": {
+      "deployed12": 810,
+      "original8": 1435
+    },
+    "/learn/savings": {
+      "deployed12": 655,
+      "original8": 614
+    },
+    "/learn/tax/80c-beyond-the-obvious": {
+      "deployed12": 695,
+      "original8": 1532
+    },
+    "/learn/tax/hra-calculation": {
+      "deployed12": 656,
+      "original8": 1656
+    },
+    "/learn/tax/old-vs-new-regime": {
+      "deployed12": 819,
+      "original8": 5135
+    },
+    "/learn/tax/tax-on-credit-card-rewards": {
+      "deployed12": 711,
+      "original8": 1501
+    },
+    "/learn/tax": {
+      "deployed12": 574,
+      "original8": 568
+    },
+    "/blog/7-credit-card-mistakes-india": {
+      "deployed12": 1430,
+      "original8": 1674
+    },
+    "/blog/ai-changing-credit-card-picks": {
+      "deployed12": 2010,
+      "original8": 2025
+    },
+    "/blog/amazon-hack": {
+      "deployed12": 0,
+      "original8": 1873
+    },
+    "/blog/annual-fee-when-worth-paying": {
+      "deployed12": 903,
+      "original8": 1692
+    },
+    "/blog/beginners-guide": {
+      "deployed12": 2022,
+      "original8": 2222
+    },
+    "/blog/best-card-beginners-2026": {
+      "deployed12": 0,
+      "original8": 3764
+    },
+    "/blog/best-card-freelancers-2026": {
+      "deployed12": 858,
+      "original8": 3746
+    },
+    "/blog/best-card-high-spenders-2026": {
+      "deployed12": 502,
+      "original8": 1105
+    },
+    "/blog/best-card-insurance-premiums-2026": {
+      "deployed12": 0,
+      "original8": 1770
+    },
+    "/blog/best-card-low-spenders-2026": {
+      "deployed12": 0,
+      "original8": 1596
+    },
+    "/blog/best-card-students-2026": {
+      "deployed12": 972,
+      "original8": 1106
+    },
+    "/blog/best-free-cards": {
+      "deployed12": 0,
+      "original8": 1822
+    },
+    "/blog/bnpl-vs-credit-cards-india": {
+      "deployed12": 1293,
+      "original8": 1911
+    },
+    "/blog/build-3-card-stack-guide": {
+      "deployed12": 450,
+      "original8": 1077
+    },
+    "/blog/cap-adjusted-cashback-explained": {
+      "deployed12": 534,
+      "original8": 3795
+    },
+    "/blog/cashback-rate-is-a-lie": {
+      "deployed12": 402,
+      "original8": 1322
+    },
+    "/blog/cibil-score-101-india": {
+      "deployed12": 1716,
+      "original8": 1990
+    },
+    "/blog/credit-card-vs-debit-card": {
+      "deployed12": 1538,
+      "original8": 1554
+    },
+    "/blog/credit-utilization-ratio-guide": {
+      "deployed12": 1549,
+      "original8": 1640
+    },
+    "/blog/digital-wallets-vs-credit-cards": {
+      "deployed12": 1542,
+      "original8": 1587
+    },
+    "/blog/first-card-decision-framework": {
+      "deployed12": 0,
+      "original8": 1627
+    },
+    "/blog/fuel-trick": {
+      "deployed12": 0,
+      "original8": 1445
+    },
+    "/blog/future-credit-card-rewards-india": {
+      "deployed12": 0,
+      "original8": 2230
+    },
+    "/blog/get-annual-fee-waived-scripts": {
+      "deployed12": 0,
+      "original8": 1685
+    },
+    "/blog/how-reward-points-work-india": {
+      "deployed12": 869,
+      "original8": 1594
+    },
+    "/blog/maximize-dining": {
+      "deployed12": 0,
+      "original8": 1614
+    },
+    "/blog/metal-credit-cards-india": {
+      "deployed12": 2054,
+      "original8": 2069
+    },
+    "/blog/minimum-transaction-traps": {
+      "deployed12": 1745,
+      "original8": 1759
+    },
+    "/blog/rbi-credit-card-rules-2026": {
+      "deployed12": 841,
+      "original8": 5079
+    },
+    "/blog/rbi-latest-guidelines-credit-cards": {
+      "deployed12": 1877,
+      "original8": 2205
+    },
+    "/blog/read-credit-card-statement": {
+      "deployed12": 1479,
+      "original8": 1624
+    },
+    "/blog/regalia-vs-infinia": {
+      "deployed12": 1388,
+      "original8": 1576
+    },
+    "/blog/reward-points-vs-cashback": {
+      "deployed12": 0,
+      "original8": 1537
+    },
+    "/blog/right-way-pay-credit-card-bill": {
+      "deployed12": 1701,
+      "original8": 1715
+    },
+    "/blog/should-you-close-old-credit-card": {
+      "deployed12": 1488,
+      "original8": 1654
+    },
+    "/blog/upi-vs-credit-cards-india": {
+      "deployed12": 498,
+      "original8": 1636
+    },
+    "/blog/why-reward-rates-dropping-india": {
+      "deployed12": 0,
+      "original8": 1669
+    }
+  }
+}

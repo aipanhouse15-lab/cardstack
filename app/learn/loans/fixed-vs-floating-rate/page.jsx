@@ -49,7 +49,7 @@ export default function PageFixedVsFloating() {
     headline: "Fixed vs Floating Home Loan Rates: How to Compare",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-28",
+    dateModified: "2026-10-17",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
   const breadcrumb = {
@@ -134,10 +134,10 @@ export default function PageFixedVsFloating() {
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>
           Related: <Link href="/learn/loans" style={{ color: COLOR }}>loans hub</Link> · <Link href="/learn/loans/sbi-vs-hdfc-vs-icici-home-loan" style={{ color: COLOR }}>compare home-loan offers</Link> · <Link href="/learn/loans/prepayment-penalty-trap" style={{ color: COLOR }}>prepayment guide</Link> · <Link href="/loan-calculator" style={{ color: COLOR }}>loan calculator</Link>
         </p>
+        <GuidePractice topic="loans/fixed-vs-floating-rate" />
         <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 16 }}>
           This general guide is not a lender quotation, legal opinion or financial advice. Loan terms vary; verify your offer and applicable rules with the lender and relevant authorities before acting.
-        </footer>
-      <GuidePractice topic="loans/fixed-vs-floating-rate" /></main>
+        </footer></main>
     </>
   );
 }

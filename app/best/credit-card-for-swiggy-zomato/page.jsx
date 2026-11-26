@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
@@ -480,7 +481,7 @@ export default function BestCreditCardForSwiggyZomato() {
       </p>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
-        <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Reward rates and caps can change; confirm current terms with the issuer before applying. This is not financial advice. Sources: <a href={SOURCES.swiggy} target="_blank" rel="noreferrer">Swiggy HDFC terms</a> · <a href={SOURCES.millennia} target="_blank" rel="noreferrer">HDFC Millennia terms</a> · <a href={SOURCES.ace} target="_blank" rel="noreferrer">Axis ACE terms</a> · <a href={SOURCES.airtel} target="_blank" rel="noreferrer">Airtel Axis revised April 2026 terms</a> · <a href={SOURCES.hsbc} target="_blank" rel="noreferrer">HSBC cashback information</a>.
+        <strong>Disclaimer:</strong> {LINK_DISCLOSURE} Reward rates and caps can change; confirm current terms with the issuer before applying. This is not financial advice. Sources: <a href={SOURCES.swiggy} target="_blank" rel="noreferrer">Swiggy HDFC terms</a> · <a href={SOURCES.millennia} target="_blank" rel="noreferrer">HDFC Millennia terms</a> · <a href={SOURCES.ace} target="_blank" rel="noreferrer">Axis ACE terms</a> · <a href={SOURCES.airtel} target="_blank" rel="noreferrer">Airtel Axis revised April 2026 terms</a> · <a href={SOURCES.hsbc} target="_blank" rel="noreferrer">HSBC cashback information</a>.
       </footer>
     <GuideCardRules slug="credit-card-for-swiggy-zomato" />
     </main>

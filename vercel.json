@@ -2,9 +2,19 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "assurefintech.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "assurefintech.com"
+        }
+      ],
       "destination": "https://www.assurefintech.com/$1",
       "permanent": true
     }
-  ]
+  ],
+  "git": {
+    "deploymentEnabled": {
+      "codex/combined-content-repair-2026-11-26": false
+    }
+  }
 }

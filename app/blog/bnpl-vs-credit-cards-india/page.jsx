@@ -1,3 +1,4 @@
+import RestoredCoverage from "@/components/RestoredCoverage";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -19,7 +20,7 @@ export const metadata = {
 // Color: #dc2626 | Updated: September 26, 2026
 
 const COLOR = "#dc2626";
-const UPDATED = "September 28, 2026";
+const UPDATED = "17 October 2026";
 
 const SvgBnplLandscape = () => (
   <svg viewBox="0 0 720 235" role="img" aria-label="Overview of major BNPL providers in India with their rates and key terms" style={{ width: "100%", maxWidth: 760, margin: "20px 0" }}>
@@ -237,7 +238,7 @@ export default function BlogBnplVsCreditCardsIndia() {
     headline: "BNPL vs Credit Cards in India: Read This Before You Sign Up",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-28",
+    dateModified: "2026-10-17",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -335,7 +336,7 @@ export default function BlogBnplVsCreditCardsIndia() {
       <footer style={{ fontSize: 11, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 14 }}>
         <strong>Sources and review:</strong> RBI, <a href="https://www.rbi.org.in/Scripts/NotificationUser.aspx?Id=12848&Mode=0" target="_blank" rel="noopener noreferrer">Digital Lending Directions, 2025</a>, and <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12300" target="_blank" rel="noopener noreferrer">Credit Card and Debit Card Directions</a>. Product structures and terms differ; this guide explains how to compare them, not the current terms of any named provider. Reviewed September 28, 2026. Educational information, not financial advice.
       </footer>
-    </main>
+    <RestoredCoverage route="/blog/bnpl-vs-credit-cards-india" /></main>
     </>
   );
 }

@@ -18,7 +18,7 @@ export default function SipAdvertisedVsActualPage() {
       { "@type": "Question", name: "Does a SIP protect me from market losses?", acceptedAnswer: { "@type": "Answer", text: "No. A SIP is a way to invest periodically and does not remove market, credit, liquidity or scheme-specific risks. The value of units can fall, and returns are not assured." } },
     ],
   };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "SIP Returns: Why Your Result Differs from Published Returns", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "SIP Returns: Why Your Result Differs from Published Returns", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-10-17", publisher: { "@type": "Organization", name: "Assure Fintech" } };
 
   return <>
     <div style={{ background: "linear-gradient(135deg, #10071E, #164e63, #10071E)", padding: "48px 24px", marginTop: 64 }}><div style={{ maxWidth: 820, margin: "0 auto" }}><div style={{ color: "#a5f3fc", fontSize: 13, marginBottom: 12 }}>Mutual funds · SIPs</div><h1 style={{ color: "#F1F5F9", fontSize: "clamp(28px, 4vw, 40px)", lineHeight: 1.15, margin: "0 0 12px" }}>Why your SIP return may differ from a published number</h1><p style={{ color: "#cffafe", margin: 0, lineHeight: 1.6 }}>A SIP outcome depends on when each contribution was invested, what happened in the market afterwards and how returns are measured.</p></div></div>

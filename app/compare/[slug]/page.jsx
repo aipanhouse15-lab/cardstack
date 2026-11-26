@@ -1,3 +1,4 @@
+import { canonicalCompare } from "@/data/canonical-routes";
 import { COMPARISONS } from "@/data/comparisons";
 import { CARDS, CATEGORIES, calcTotalMonthlyReward, isSourceReviewed, isEstimateReady } from "@/data/cards";
 import { notFound } from "next/navigation";
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }) {
   return {
     title: pageTitle,
     description: pageDesc,
-    alternates: { canonical: `/compare/${params.slug}` },
+    alternates: { canonical: `/compare/${canonicalCompare(params.slug)}` },
     openGraph: {
       title: pageTitle,
       description: pageDesc,

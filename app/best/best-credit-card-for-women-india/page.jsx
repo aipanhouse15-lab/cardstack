@@ -405,7 +405,7 @@ export default function BestCreditCardForWomenIndia() {
       </div>
 
       <p style={{ marginBottom: 24, fontSize: 14, color: "var(--text-muted,#64748b)" }}>
-        Build and compare your custom stack at <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder</Link> — input your actual monthly spend by category and see which combination maximises your annual return.
+        Build and compare a scenario at <Link href="/stack-builder" style={{ color: COLOR }}>Stack Builder</Link> — enter monthly category spend to compare illustrative estimates for supported cards. Merchant eligibility and actual returns may differ.
       </p>
 
       {/* Actionable ending */}

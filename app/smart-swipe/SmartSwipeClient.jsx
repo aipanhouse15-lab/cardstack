@@ -1,6 +1,7 @@
 "use client";
 import { useState, useCallback, useMemo } from "react";
 import Link from "next/link";
+import TransactionRewardCheck from "@/components/TransactionRewardCheck";
 import { VERIFIED_CARDS, CATEGORIES, defaultSpending, calcReward, capSharedRewardBuckets } from "@/data/cards";
 import CardSelector from "@/components/CardSelector";
 import SpendingInput from "@/components/SpendingInput";
@@ -73,6 +74,8 @@ export default function SmartSwipeClient() {
         title="Smart Swipe Guide"
         subtitle="Compare eligible category scenarios for your owned cards. Shared caps are applied after category assignment; this is not a transaction-by-transaction optimisation."
       />
+
+      <TransactionRewardCheck />
 
       <div className="mb-8">
         <h3 className="text-xs font-semibold uppercase tracking-wider mb-4" style={{ color: "var(--text-muted)" }}>Step 1: Select your cards</h3>

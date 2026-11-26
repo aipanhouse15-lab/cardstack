@@ -522,7 +522,7 @@ export default function BestCreditCardForUtilityBills() {
         </p>
         <UtilityStackDiagram />
         <p>
-          Use our <Link href="/stack-builder">Stack Builder</Link> to model your specific household spend pattern and see the exact annual return from different card combinations. Also see: <Link href="/best/best-cashback-credit-card-no-annual-fee">Best No Annual Fee Cards</Link> for alternative card 2 options.
+          Use our <Link href="/stack-builder">Stack Builder</Link> to compare illustrative, cap-aware estimates for supported cards using broad spending categories. Merchant eligibility and actual returns may differ. Also see: <Link href="/best/best-cashback-credit-card-no-annual-fee">Best No Annual Fee Cards</Link> for alternative card options.
         </p>
       </section>
 
@@ -558,7 +558,7 @@ export default function BestCreditCardForUtilityBills() {
           </li>
         </ol>
         <p style={{ marginTop: 14, fontSize: 14, color: "var(--text-muted)" }}>
-          Run the numbers for your household: <Link href="/smart-swipe">Smart Swipe</Link> calculates your estimated annual return from ACE vs alternatives in under 90 seconds.
+          Run a scenario for your household: <Link href="/smart-swipe">Smart Swipe</Link> estimates eligible-category rewards for supported cards. It cannot verify each biller's merchant category or transaction route.
         </p>
       </section>
 

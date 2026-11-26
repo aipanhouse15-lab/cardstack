@@ -1,3 +1,4 @@
+import {PrivacySettingsButton} from "@/components/AnalyticsConsent";
 import Link from "next/link";
 
 const COLS = [
@@ -41,6 +42,7 @@ const COLS = [
     title: "Company",
     links: [
       { href: "/about", label: "About" },
+      { href: "/how-we-earn", label: "How we earn" },
       { href: "/editorial-policy", label: "Editorial policy" },
       { href: "/contact", label: "Contact" },
       { href: "/privacy", label: "Privacy" },
@@ -76,7 +78,8 @@ export default function Footer() {
 
         <div className="f-bot">
           <span>© 2026 ASSURE FINTECH · NOT FINANCIAL ADVICE</span>
-          <span>WE MAY EARN AFFILIATE COMMISSIONS — AT NO COST TO YOU, AND NEVER AFFECTING THE MATH</span>
+          <Link href="/how-we-earn">No active affiliate links · Disclosures</Link>
+          <PrivacySettingsButton/>
         </div>
       </div>
     </footer>

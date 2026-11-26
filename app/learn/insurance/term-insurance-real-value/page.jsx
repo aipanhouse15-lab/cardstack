@@ -20,7 +20,7 @@ const faq = {
 };
 
 export default function TermInsuranceRealValuePage() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "How Much Term Life Insurance Cover Do You Need?", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "How Much Term Life Insurance Cover Do You Need?", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-10-17", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -87,8 +87,8 @@ export default function TermInsuranceRealValuePage() {
         </section>
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/insurance" style={{ color: COLOR }}>insurance guides</Link> · <Link href="/learn/insurance/health-insurance-for-parents" style={{ color: COLOR }}>health cover for parents</Link></p>
-        <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This is general information, not financial advice or an insurance recommendation. Assess your own needs and verify policy terms with the insurer before applying.</footer>
-      <GuidePractice topic="insurance/term-insurance-real-value" /></main>
+        <GuidePractice topic="insurance/term-insurance-real-value" />
+        <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This is general information, not financial advice or an insurance recommendation. Assess your own needs and verify policy terms with the insurer before applying.</footer></main>
     </>
   );
 }

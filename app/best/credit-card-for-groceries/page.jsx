@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import Link from "next/link";
 import Script from "next/script";
@@ -458,7 +459,7 @@ export default function BestCreditCardForGroceries() {
       </p>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
-        <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Card terms including grocery category inclusions, caps, and partner lists were reviewed as of {UPDATED} and may change. Always verify current benefit terms with the issuing bank before applying. This is not financial advice.
+        <strong>Disclaimer:</strong> {LINK_DISCLOSURE} Card terms including grocery category inclusions, caps, and partner lists were reviewed as of {UPDATED} and may change. Always verify current benefit terms with the issuing bank before applying. This is not financial advice.
       </footer>
     <GuideCardRules slug="credit-card-for-groceries" />
     </main>

@@ -11,14 +11,14 @@ const questions = [
   {q:'Which free card is best for everyone?',a:'There is no universal winner. Merchant eligibility, payment route, spending pattern, redemption choice and credit approval determine fit. This guide compares use cases rather than assigning unsupported scores.'}
 ];
 export default function FreeCardsGuide() {
-  const schema = {"@context":"https://schema.org","@type":"Article",headline:title,description,dateModified:"2026-10-01",author:{"@type":"Person",name:"Ash"},publisher:{"@type":"Organization",name:"Assure Fintech"}};
+  const schema = {"@context":"https://schema.org","@type":"Article",headline:title,description,datePublished:"2026-03-01",dateModified:"2026-10-17",author:{"@type":"Person",name:"Ash"},publisher:{"@type":"Organization",name:"Assure Fintech"}};
   const faq = {"@context":"https://schema.org","@type":"FAQPage",mainEntity:questions.map(({q,a})=>({"@type":"Question",name:q,acceptedAnswer:{"@type":"Answer",text:a}}))};
   return <article className="prose pt-24 pb-20 px-6 max-w-[900px] mx-auto">
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faq)}}/>
     <p><Link href="/blog">Blog</Link> / Credit-card costs</p>
     <h1>{title}</h1>
-    <p>By Ash · Content corrected 1 October 2026</p>
+    <p>By Ash · Content reviewed 17 October 2026</p>
     <p>A no-annual-fee card can be a useful everyday payment option without a recurring membership bill. That does not make every transaction free or every reward equally valuable. Start with where you spend and what you can redeem, then compare the full cost. The cards below serve different uses; they are not a universal ranking.</p>
     <h2>Three different meanings of “free”</h2>
     <div className="overflow-x-auto"><table><thead><tr><th>Pricing arrangement</th><th>What to compare</th></tr></thead><tbody>

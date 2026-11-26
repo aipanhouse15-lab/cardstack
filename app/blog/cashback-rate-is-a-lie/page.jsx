@@ -1,3 +1,4 @@
+import GuideDetails from "@/components/GuideDetails";
 import Link from "next/link";
 
 export const metadata = {
@@ -13,7 +14,7 @@ export default function CashbackRateGuide() {
     headline: "Credit Card Cashback: Why the Headline Rate Is Not Your Return",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-10-02",
+    dateModified: "2026-10-17",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -22,7 +23,7 @@ export default function CashbackRateGuide() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Link href="/blog" className="text-sm">← Blog</Link>
       <h1 className="text-3xl font-extrabold mt-6 mb-3">A 5% card may earn much less on your actual spending</h1>
-      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published June 4, 2026 · Reviewed October 2, 2026</p>
+      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published June 4, 2026 · Reviewed October 4, 2026</p>
 
       <div className="space-y-7 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>The advertised percentage is usually a rate for a particular merchant, payment route or category. Your real return depends on eligible spending, excluded categories, reward caps, fees and the value of points when you redeem them.</p>
@@ -44,6 +45,6 @@ export default function CashbackRateGuide() {
 
         <p>See the <Link href="/blog/cap-adjusted-cashback-explained">worked cap calculation</Link> and the <Link href="/cards">card catalogue</Link>. Confirm terms with the issuer before making a large purchase.</p>
       </div>
-    </main>
+    <GuideDetails topic="blog/cashback-rate-is-a-lie" /></main>
   );
 }

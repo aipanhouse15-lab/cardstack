@@ -1,3 +1,4 @@
+import GuideDetails from "@/components/GuideDetails";
 import Link from "next/link";
 
 export const metadata = {
@@ -13,7 +14,7 @@ export default function BuildThreeCardStackGuide() {
     headline: "Build a Credit Card Stack in India: A Three-Card Decision Guide",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-26",
+    dateModified: "2026-10-17",
     publisher: { "@type": "Organization", name: "Assure Fintech" },
   };
 
@@ -22,7 +23,7 @@ export default function BuildThreeCardStackGuide() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(article) }} />
       <Link href="/blog" className="text-sm">← Blog</Link>
       <h1 className="text-3xl font-extrabold mt-6 mb-3">Build a credit-card stack around your real spending</h1>
-      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published June 4, 2026 · Reviewed September 26, 2026</p>
+      <p className="text-sm mb-8" style={{ color: "var(--text-muted)" }}>Published June 4, 2026 · Reviewed October 4, 2026</p>
 
       <div className="space-y-7 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>Three cards are useful only when each has a clear job and the extra reward exceeds its fees and management effort. Start with two if you cannot reliably pay every statement in full. A third card should solve a specific spending gap, not just add another headline rate.</p>
@@ -49,6 +50,6 @@ export default function BuildThreeCardStackGuide() {
 
         <p>Sources: <a href="https://www.sbicard.com/cashback-revised" target="_blank" rel="noreferrer">SBI Card revised cashback terms</a> and <a href="https://www.axis.bank.in/docs/default-source/default-document-library/axis-bank-ace-credit-card-tncs.pdf" target="_blank" rel="noreferrer">Axis ACE cashback terms</a>. Confirm the current issuer schedule before applying.</p>
       </div>
-    </main>
+    <GuideDetails topic="blog/build-3-card-stack-guide" /></main>
   );
 }

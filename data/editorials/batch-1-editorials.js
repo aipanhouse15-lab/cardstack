@@ -1,3 +1,4 @@
+// ARCHIVED SOURCE: not a current product review. Use reviewed-editorial.js via the index.
 // Tier D Card Editorials — Batch 1
 // Cards: axis-airtel, axis-cashback, axis-horizon, axis-magnus, axis-myzone, axis-neo, axis-privilege, axis-iocl, axis-flipkart-supercoin, hdfc-swiggy-blck
 // Data verified: June 2026

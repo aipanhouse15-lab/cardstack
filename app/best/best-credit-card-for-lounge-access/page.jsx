@@ -3,11 +3,11 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Best Credit Card for Airport Lounge Access in India (September 2026)",
+  title: "Best Credit Card for Airport Lounge Access in India (October 2026)",
   description: "Compare credit cards for airport lounge access in India. Check visit caps, spend requirements, eligible lounges, guest charges and card-variant terms before travelling.",
   alternates: { canonical: "/best/best-credit-card-for-lounge-access" },
   openGraph: {
-    title: "Best Credit Card for Airport Lounge Access in India (September 2026)",
+    title: "Best Credit Card for Airport Lounge Access in India (October 2026)",
     description: "Compare credit cards for airport lounge access in India. Check visit caps, spend requirements, eligible lounges, guest charges and card-variant terms before travelling.",
     type: "article",
     siteName: "Assure Fintech",
@@ -16,10 +16,10 @@ export const metadata = {
 
 
 // /best/credit-card-for-lounge-access
-// Updated: September 26, 2026
+// Updated: October 3, 2026 (targeted correction; other issuer rows not re-reviewed here)
 
 const COLOR = "#0891b2";
-const UPDATED = "September 26, 2026";
+const UPDATED = "October 3, 2026";
 
 const IconLounge = () => (
   <svg width="48" height="48" viewBox="0 0 48 52" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Airport lounge icon">
@@ -171,7 +171,7 @@ export default function BestCreditCardForLoungeAccess() {
     headline: "Best Credit Card for Airport Lounge Access in India",
     author: { "@type": "Person", name: "Ash" },
     datePublished: "2026-06-04",
-    dateModified: "2026-09-25",
+    dateModified: "2026-10-03",
     publisher: { "@type": "Organization", name: "Assure Fintech" }
   };
 
@@ -195,32 +195,23 @@ export default function BestCreditCardForLoungeAccess() {
       guestPass: "Check current HDFC/network terms",
       spendCondition: "No spend gate listed; issuer/network terms apply",
       verdict: "Premium pick: unlimited eligible access advertised; verify lounge and guest terms",
-      access: "Invite-only; issuer eligibility applies"
+      access: "Invite-only; issuer eligibility applies",
+      sourceUrl: "https://www.hdfc.bank.in/credit-cards/infinia-credit-card"
     },
     {
       rank: 2,
       name: "Axis Magnus",
       fee: "₹12,500/yr",
-      domestic: "Unlimited",
-      intl: "12 visits/year (Priority Pass)",
-      guestPass: "Check current Axis/network terms",
-      spendCondition: "Current issuer/network terms apply",
-      verdict: "Premium option; verify access and guest limits for your card variant",
-      access: "Eligibility and annual fee waiver terms apply"
+      domestic: "Unlimited at select lounges",
+      intl: "Unlimited via Priority Pass",
+      guestPass: "4 additional guest visits/year; confirm applicable charges",
+      spendCondition: "Domestic access requires ₹50,000 spend in the previous 3 months",
+      verdict: "Premium option; domestic lounge access has a spend gate",
+      access: "Eligibility and annual fee waiver terms apply",
+      sourceUrl: "https://www.axis.bank.in/cards/credit-card/axis-bank-magnus-credit-card/travel-stay"
     },
     {
       rank: 3,
-      name: "IndusInd Pinnacle",
-      fee: "Varies by fee plan; verify the offer",
-      domestic: "1 visit/quarter after ₹1.5L prior-quarter spend",
-      intl: "1 visit/calendar quarter",
-      guestPass: "Confirm variant/network terms",
-      spendCondition: "Domestic access requires ₹1.5L eligible prior-quarter spend",
-      verdict: "Published lounge allowance is limited; fee and variant terms need issuer confirmation",
-      access: "Confirm current availability and variant terms with issuer"
-    },
-    {
-      rank: 4,
       name: "HDFC Regalia (existing cardholders)",
       fee: "₹2,500/yr",
       domestic: "Up to 2 vouchers/quarter",
@@ -228,10 +219,11 @@ export default function BestCreditCardForLoungeAccess() {
       guestPass: "Check current HDFC/network terms",
       spendCondition: "₹1L quarterly spend; international access requires 4 card transactions",
       verdict: "Existing cardholders only; confirm eligibility and current voucher rules",
-      access: "Discontinued for new sourcing"
+      access: "Discontinued for new sourcing",
+      sourceUrl: "https://www.hdfc.bank.in/credit-cards/regalia-credit-card"
     },
     {
-      rank: 5,
+      rank: 4,
       name: "AU Ixigo Credit Card",
       fee: "Lifetime Free",
       domestic: "2 airport visits/quarter after ₹50K prior-quarter spend",
@@ -239,7 +231,8 @@ export default function BestCreditCardForLoungeAccess() {
       guestPass: "Not included",
       spendCondition: "₹50K eligible spend in preceding quarter for domestic airport visits",
       verdict: "Lifetime-free offer; includes separate railway access and limited international visits",
-      access: "Current offer and issuer eligibility apply"
+      access: "Current offer and issuer eligibility apply",
+      sourceUrl: "https://www.au.bank.in/personal-banking/credit-cards/ixigo-au-credit-card"
     }
   ];
 
@@ -391,9 +384,14 @@ export default function BestCreditCardForLoungeAccess() {
             <div style={{ background: `${COLOR}10`, borderRadius: 8, padding: "8px 12px", fontSize: 13, fontWeight: 600, color: COLOR }}>
               Verdict: {card.verdict}
             </div>
+            <p style={{ margin: "10px 0 0", fontSize: 12 }}><a href={card.sourceUrl} target="_blank" rel="noreferrer" style={{ color: COLOR }}>Issuer product and benefit terms ↗</a></p>
           </div>
         ))}
       </div>
+
+      <p style={{ marginBottom: 24, fontSize: 14, color: "var(--text-muted,#64748b)" }}>
+        IndusInd Pinnacle is not ranked in this comparison because its point rewards cannot be translated into a comparable flat cash return using our broad spend categories. The issuer lists one domestic lounge visit per quarter after ₹1.5L eligible spend in the preceding quarter, plus one international visit per quarter outside India. See the <Link href="/cards/indusind-pinnacle" style={{ color: COLOR }}>source-reviewed Pinnacle record</Link> and the issuer's <a href="https://www.indusind.bank.in/in/en/personal/cards/credit-card/pinnacle-world-credit-card.html" target="_blank" rel="noreferrer" style={{ color: COLOR }}>product terms</a>.
+      </p>
 
       {/* Compare actual visit value rather than assumed walk-in prices */}
       <h2 style={{ fontSize: 22, fontWeight: 700, marginBottom: 12 }}>Compare lounge benefits with your own travel</h2>
@@ -475,7 +473,7 @@ export default function BestCreditCardForLoungeAccess() {
         <p style={{ margin: "0 0 6px" }}>
           <strong>Disclaimer:</strong> Assure Fintech is an independent comparison platform. Lounge access benefits, visit caps, and spend conditions change frequently. Verify all details on the official bank website or call the card helpline before travelling.
         </p>
-        <p style={{ margin: 0 }}>Data sourced from Priority Pass, DreamFolks, and official bank MITC documents as of {UPDATED}. See also: <Link href="/best/credit-card-for-high-income-earners" style={{ color: COLOR }}>Best Cards for High Income Earners</Link>.</p>
+        <p style={{ margin: 0 }}>The listed Infinia, Magnus, Regalia and ixigo lounge terms were checked against their linked issuer product pages on {UPDATED}; IndusInd Pinnacle remains unranked because point redemption and transaction-route differences do not map cleanly to this comparison's cash-value ranking. This is not a review of every lounge programme or participating location. See also: <Link href="/best/credit-card-for-high-income-earners" style={{ color: COLOR }}>Best Cards for High Income Earners</Link>.</p>
       </footer>
     <GuideCardRules slug="best-credit-card-for-lounge-access" />
     </main>

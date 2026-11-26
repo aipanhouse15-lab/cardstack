@@ -1,3 +1,4 @@
+import { REGALIA_EXAMPLE, CARD_COUNTS } from "@/data/site-facts";
 import Link from "next/link";
 
 export const metadata = {
@@ -28,7 +29,7 @@ export default function EditorialPolicyPage() {
             Effective Cashback % = (Reward Points × Point Value) ÷ Spend Requirement × 100
           </div>
           <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-            Example: HDFC Regalia gives 4 points per ₹150. Point value = ₹0.20 (cashback). So: (4 × 0.20) ÷ 150 × 100 = <strong style={{ color: "var(--text)" }}>1.33%</strong> — not the "5x" that banks advertise.
+            Example: HDFC Regalia earns {REGALIA_EXAMPLE.points} points per ₹{REGALIA_EXAMPLE.spend} on eligible purchases. At up to ₹{REGALIA_EXAMPLE.pointValue.toFixed(2)} per point for cashback: (4 × 0.15) ÷ 200 × 100 = <strong style={{ color: "var(--text)" }}>{REGALIA_EXAMPLE.rate.toFixed(1)}%</strong>, before redemption charges. A points multiplier is not a cashback percentage.
           </p>
         </div>
 
@@ -38,9 +39,9 @@ export default function EditorialPolicyPage() {
           Most comparison sites ignore caps entirely. We don't. When a card has a monthly or yearly cashback cap, our tools calculate your <strong style={{ color: "var(--text)" }}>actual effective rate at your spending level</strong>.
         </p>
         <div className="rounded-xl p-5" style={{ background: "var(--orange-bg)", border: "1px solid var(--orange-border)" }}>
-          <div className="text-sm mb-2"><strong style={{ color: "var(--orange)" }}>Example: Axis ACE at ₹20,000/month utility spend</strong></div>
+          <div className="text-sm mb-2"><strong style={{ color: "var(--orange)" }}>Example: Axis ACE at ₹20,000 eligible Google Pay bill-payment spend in one statement cycle</strong></div>
           <div className="text-sm" style={{ color: "var(--text-secondary)" }}>
-            Advertised: 5%. Cap: ₹500/month on accelerated categories.
+            Advertised: 5%. Cap: ₹500 per statement cycle, shared across the eligible 5% and 4% routes.
             <br />First ₹10,000 at 5% = ₹500 (cap hit). Remaining ₹10,000 at 0% = ₹0.
             <br /><strong style={{ color: "var(--orange)" }}>Real effective rate: 2.5% — not 5%.</strong>
           </div>
@@ -49,7 +50,7 @@ export default function EditorialPolicyPage() {
         {/* Redemption values */}
         <h2 className="text-lg font-extrabold" style={{ color: "var(--text)" }}>Redemption value transparency</h2>
         <p>
-          Many cards have points worth different amounts depending on how you redeem them. HDFC Regalia points are worth ₹0.20 as cashback but ₹0.50 for travel via SmartBuy.
+          Many cards have points worth different amounts depending on how you redeem them. HDFC Regalia points are worth up to ₹0.15 for cashback, or ₹0.50 for eligible SmartBuy flight/hotel redemption. Those are different redemption routes, with their own costs and limits.
         </p>
         <p>
           We show the <strong style={{ color: "var(--text)" }}>cashback redemption value</strong> as the default rate (conservative estimate), and note the higher travel/SmartBuy value separately. Cards with variable redemption values have a "💡 Redemption matters" callout on their detail page.
@@ -107,7 +108,7 @@ export default function EditorialPolicyPage() {
         </div>
 
         <p className="text-sm" style={{ color: "var(--text-faint)" }}>
-          Last updated: March 2026. Questions? <Link href="/contact" className="font-semibold no-underline" style={{ color: "var(--accent-text)" }}>Contact us</Link>.
+          Last updated: 25 November 2026. Questions? <Link href="/contact" className="font-semibold no-underline" style={{ color: "var(--accent-text)" }}>Contact us</Link>.
         </p>
       </div>
     </section>

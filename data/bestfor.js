@@ -681,10 +681,6 @@ export const BEST_FOR_CATEGORIES = [
         "badge": "Compare published terms"
       },
       {
-        "cardId": "onecard",
-        "badge": "Compare published terms"
-      },
-      {
         "cardId": "sbi-cashback",
         "badge": "Compare published terms"
       }
@@ -940,10 +936,6 @@ export const BEST_FOR_CATEGORIES = [
       },
       {
         "cardId": "amazon-icici",
-        "badge": "Compare published terms"
-      },
-      {
-        "cardId": "onecard",
         "badge": "Compare published terms"
       },
       {

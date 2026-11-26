@@ -1,13 +1,14 @@
 import GuidePractice from "@/components/GuidePractice";
+import FdRateSnapshot from "@/components/FdRateSnapshot";
 import Link from "next/link";
 
 export const metadata = {
-  title: "How to Compare Fixed Deposit Rates and Offers",
-  description: "A practical checklist for comparing current fixed-deposit offers, payout options, premature withdrawal terms, tax and deposit insurance.",
+  title: "FD Rates 2026: SBI, HDFC Bank & ICICI Bank Compared",
+  description: "Compare published SBI, HDFC Bank and ICICI Bank retail FD rates checked on 17 October 2026, plus premature withdrawal, tax and deposit insurance.",
   alternates: { canonical: "/learn/savings/best-fd-rates-2026" },
   openGraph: {
-    title: "How to Compare Fixed Deposit Rates and Offers",
-    description: "Compare the terms behind an FD rate before placing a deposit.",
+    title: "FD Rates 2026: SBI, HDFC Bank & ICICI Bank Compared",
+    description: "A dated retail FD-rate comparison with issuer sources, closure terms and after-tax examples.",
     type: "article",
     siteName: "Assure Fintech",
   },
@@ -21,7 +22,7 @@ const faq = {
     {
       "@type": "Question",
       name: "Which bank has the best FD rate right now?",
-      acceptedAnswer: { "@type": "Answer", text: "Rates change frequently and may depend on tenure, deposit amount, customer eligibility and special conditions. There is no reliable all-purpose ranking here. Compare the current rate and terms directly in the issuer's official schedule before booking." },
+      acceptedAnswer: { "@type": "Answer", text: "The three-bank retail snapshot checked on 17 October 2026 shows a 6.25% one-year general-public rate at SBI, HDFC Bank and ICICI Bank. At three years and one day, HDFC Bank and ICICI Bank list 6.50% and SBI lists 6.30%. These are selected rates for eligible deposits below ₹3 crore, not an all-market ranking." },
     },
     {
       "@type": "Question",
@@ -47,7 +48,7 @@ const faq = {
 };
 
 export default function BestFdRates2026() {
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: "How to Compare Fixed Deposit Rates and Offers", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-03", dateModified: "2026-09-25", publisher: { "@type": "Organization", name: "Assure Fintech" } };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: "FD Rates 2026: SBI, HDFC Bank and ICICI Bank Compared", author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-03", dateModified: "2026-10-17", publisher: { "@type": "Organization", name: "Assure Fintech" } };
   const breadcrumb = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -67,8 +68,8 @@ export default function BestFdRates2026() {
       <header style={{ background: "linear-gradient(135deg, #451a03, #92400e, #451a03)", padding: "48px 24px", marginTop: 64 }}>
         <div style={{ maxWidth: 760, margin: "0 auto" }}>
           <div style={{ color: "#fde68a", fontSize: 12, fontWeight: 700, marginBottom: 12 }}>SAVINGS · FIXED DEPOSIT GUIDE</div>
-          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, color: "#fff7ed", margin: "0 0 12px" }}>How to compare fixed-deposit offers</h1>
-          <p style={{ color: "#fed7aa", lineHeight: 1.6, maxWidth: 620, margin: 0 }}>This is a comparison checklist, not a live rate leaderboard. Verify the current rate and product terms with the issuer before booking.</p>
+          <h1 style={{ fontSize: "clamp(28px, 3.5vw, 40px)", fontWeight: 800, lineHeight: 1.12, color: "#fff7ed", margin: "0 0 12px" }}>FD rates: SBI, HDFC Bank and ICICI Bank compared</h1>
+          <p style={{ color: "#fed7aa", lineHeight: 1.6, maxWidth: 620, margin: 0 }}>Published retail rates checked on 17 October 2026, with costs and access terms alongside the percentage.</p>
         </div>
       </header>
       <main style={{ maxWidth: 820, margin: "0 auto", padding: "32px 22px 72px", fontFamily: "system-ui, -apple-system, sans-serif", color: "var(--text)", lineHeight: 1.65 }}>
@@ -76,6 +77,7 @@ export default function BestFdRates2026() {
 
         <p style={{ fontSize: 18, color: "var(--text-muted)", margin: "0 0 26px" }}>A high headline rate is only one part of an FD decision. Compare the term, payout method, premature-withdrawal rules, issuer type, deposit protection, tax and whether the maturity date fits your needs.</p>
 
+        <FdRateSnapshot />
         <section style={{ marginBottom: 26 }}>
           <h2 style={{ fontSize: 24, fontWeight: 700, margin: "0 0 12px" }}>Compare the exact product and tenure</h2>
           <p style={{ margin: "0 0 12px" }}>Check the issuer's official rate sheet on the day you apply. Match the tenure and deposit amount, and verify whether the quote is for a general or senior-citizen depositor, a callable or non-callable deposit, or a limited-time/special scheme. Confirm the booking date, rate lock and eligibility in the product terms.</p>
@@ -114,8 +116,8 @@ export default function BestFdRates2026() {
         </section>
 
         <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 20 }}>Related: <Link href="/learn/savings" style={{ color: COLOR }}>savings guides</Link> · <Link href="/learn/savings/fd-real-return" style={{ color: COLOR }}>FD real-return guide</Link> · <Link href="/fd-calculator" style={{ color: COLOR }}>FD calculator</Link></p>
-        <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}><strong>Editorial note.</strong> This guide does not rank live FD offers or guarantee returns. Rates, eligibility, issuer terms, insurance rules and tax treatment can change. Confirm the product documents and current official guidance before depositing.</footer>
-      <GuidePractice topic="savings/best-fd-rates-2026" /></main>
+        <GuidePractice topic="savings/best-fd-rates-2026" />
+        <footer style={{ fontSize: 12, color: "var(--text-muted)", borderTop: "1px solid var(--border)", paddingTop: 18 }}>Rate-table sources checked 17 October 2026. The comparison covers the three named banks and selected eligible retail tenures; product category, amount, depositor status and booking date affect the rate.</footer></main>
     </>
   );
 }

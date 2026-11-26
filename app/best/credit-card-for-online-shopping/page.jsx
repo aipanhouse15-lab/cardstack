@@ -1,3 +1,4 @@
+import { LINK_DISCLOSURE } from "@/data/disclosure";
 import GuideCardRules from '@/components/GuideCardRules';
 import { CARDS } from '@/data/cards';
 import Link from "next/link";
@@ -464,7 +465,7 @@ export default function BestCreditCardForOnlineShopping() {
       </p>
 
       <footer style={{ borderTop: "1px solid var(--border)", paddingTop: 20, fontSize: 12, color: "var(--text-muted)", lineHeight: 1.6 }}>
-        <strong>Disclaimer:</strong> Assure Fintech earns referral fees from some card links. Rates, fees and caps may change; verify issuer terms before applying. Sources: <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI Card FAQ</a> · <a href={SOURCES.sbiTerms} target="_blank" rel="noreferrer">SBI revised cashback terms</a> · <a href={SOURCES.amazon} target="_blank" rel="noreferrer">ICICI Amazon Pay FAQ</a> · <a href={SOURCES.millennia} target="_blank" rel="noreferrer">HDFC Millennia terms</a> · <a href={SOURCES.axis} target="_blank" rel="noreferrer">Axis Cashback product page</a>. This is not financial advice.
+        <strong>Disclaimer:</strong> {LINK_DISCLOSURE} Rates, fees and caps may change; verify issuer terms before applying. Sources: <a href={SOURCES.sbi} target="_blank" rel="noreferrer">SBI Card FAQ</a> · <a href={SOURCES.sbiTerms} target="_blank" rel="noreferrer">SBI revised cashback terms</a> · <a href={SOURCES.amazon} target="_blank" rel="noreferrer">ICICI Amazon Pay FAQ</a> · <a href={SOURCES.millennia} target="_blank" rel="noreferrer">HDFC Millennia terms</a> · <a href={SOURCES.axis} target="_blank" rel="noreferrer">Axis Cashback product page</a>. This is not financial advice.
       </footer>
     <GuideCardRules slug="credit-card-for-online-shopping" />
     </main>

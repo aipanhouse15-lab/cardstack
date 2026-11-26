@@ -1,0 +1,1 @@
+export const LINK_DISCLOSURE = 'No affiliate or referral links are currently active on Assure Fintech. Issuer links are references, not paid recommendations. If paid links are introduced, they will be labelled next to the link; compensation will not determine our calculations.';

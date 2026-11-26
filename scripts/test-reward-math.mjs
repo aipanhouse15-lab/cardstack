@@ -10,9 +10,9 @@ for(const [id,block] of [['hdfc-infinia',150],['hdfc-diners-black',150],['hdfc-r
   assert.equal(card(id).minimumEligibleTransaction,block,id);
   assert.equal(calcReward(card(id),'online',block-1).cashback,0,id);
 }
-assert.equal(card('hdfc-millennia').minimumEligibleTransaction,undefined);
+assert.equal(card('hdfc-millennia').minimumEligibleTransaction,100,'MITC v4.19 specifies complete ₹100 transaction blocks');
 assert.equal(card('hdfc-millennia').reviewedAt,'2 October 2026');
-assert.match(card('hdfc-millennia').rewardAssumptions.default,/No minimum transaction value is stated/);
+assert.match(card('hdfc-millennia').rewardAssumptions.default,/complete ₹100 transaction blocks/);
 assert.ok(card('hdfc-millennia').highlights.some(item=>/1,000 welcome CashPoints if the joining membership fee is paid/.test(item)));
 assert.equal(isEstimateReady(card('hdfc-millennia')),false,'broad online categories cannot identify Millennia eligible merchant MIDs');
 assert.equal(calcReward(card('hdfc-millennia'),'online',50000).cashback,0);

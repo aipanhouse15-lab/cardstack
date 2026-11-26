@@ -1,6 +1,7 @@
 import { CARDS, CATEGORIES, BANKS, isSourceReviewed, isRecommendable, calcReward } from "@/data/cards";
 import Link from "next/link";
 import CardCatalogClient from "./CardCatalogClient";
+import { CARD_COUNTS } from "@/data/site-facts";
 const CURRENT_CARDS = CARDS.filter(isSourceReviewed);
 
 export const metadata = {
@@ -23,6 +24,14 @@ function getCategoryWinners() {
   };
 }
 
+// Only display fields cross the client boundary; complete records remain on detail pages/API.
+const catalogCard = (c, compact=false) => ({
+ ...Object.fromEntries(['id','name','bank','network','type','fee','joiningFee','feeWaiver','color','verified','estimateReady','rewards','lounge','pros','cons'].map(k=>[k,c[k]])),
+ summary:c.availabilityNote || c.rewardAssumptions?.default || c.redemptionNote || c.pointsInfo,
+ caps:Boolean(c.caps || c.categoryRewardCaps || c.totalRewardValueCap),
+ ...(compact?{pros:c.pros.slice(0,2),cons:undefined,feeWaiver:undefined}:{}),
+});
+
 export default function CardsPage() {
   const winners = getCategoryWinners();
   const catalogSchema = {
@@ -35,7 +44,7 @@ export default function CardsPage() {
   };
   return (<>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(catalogSchema) }} />
-    <CardCatalogClient winners={winners} allCards={CURRENT_CARDS} banks={BANKS} categories={CATEGORIES} />
+    <CardCatalogClient winners={Object.fromEntries(Object.entries(winners).map(([key,cards])=>[key,cards.map(c=>catalogCard(c))]))} allCards={CURRENT_CARDS.map(c=>catalogCard(c,true))} banks={BANKS} counts={CARD_COUNTS} />
     <section className="px-6 pb-16 max-w-[1100px] mx-auto"><h2 className="text-xl font-bold mb-4">Historical and unresolved product references</h2><p className="mb-4">These records remain accessible for existing-cardholder and variant lookups. They are not fee quotes or new-card reward recommendations.</p><div className="flex flex-wrap gap-4">{CARDS.filter(c=>!isSourceReviewed(c)).map(c=><Link key={c.id} href={`/cards/${c.id}`}>{c.name}</Link>)}</div></section>
   </>);
 }

@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const legacyRedirects = [
+  ['/og-image.png', '/opengraph-image'],
   ['/cards/amazon-pay-icici', '/cards/amazon-icici'],
   ['/cards/idfc-first-wow', '/cards/idfc-wow'],
   ['/cards/scapia-federal', '/cards/scapia'],
@@ -97,6 +98,16 @@ const legacyRedirects = [
 const nextConfig = {
   reactStrictMode: true,
   outputFileTracingRoot: __dirname,
+  async headers() {
+    const policy = ["default-src 'self'", "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://va.vercel-scripts.com", "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com", "font-src 'self' https://fonts.gstatic.com", "img-src 'self' data: https:", "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://vitals.vercel-insights.com", "frame-ancestors 'none'", "object-src 'none'", "base-uri 'self'", "form-action 'self'", "upgrade-insecure-requests"].join('; ');
+    return [{ source: '/:path*', headers: [
+      {key:'Content-Security-Policy',value:policy},
+      {key:'X-Frame-Options',value:'DENY'},
+      {key:'X-Content-Type-Options',value:'nosniff'},
+      {key:'Referrer-Policy',value:'strict-origin-when-cross-origin'},
+      {key:'Permissions-Policy',value:'camera=(), microphone=(), geolocation=()'},
+    ]}];
+  },
   async redirects() {
     return [
       ...legacyRedirects.map(([source, destination]) => ({

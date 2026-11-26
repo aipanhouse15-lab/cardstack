@@ -198,7 +198,7 @@ export default function CardPage({ params }) {
                 Card information <span aria-hidden="true">↗</span>
               </a>
               {card.rewardSourceUrl && <a href={card.rewardSourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, borderRadius: 999, padding: "11px 15px", border: "1px solid var(--border)", color: "var(--text)", fontSize: 13, textDecoration: "none" }}>Reward terms ↗</a>}
-              {card.feeSourceUrl && <a href={card.feeSourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, borderRadius: 999, padding: "11px 15px", border: "1px solid var(--border)", color: "var(--text)", fontSize: 13, textDecoration: "none" }}>Fee schedule ↗</a>}
+              {card.feeSourceUrl && <a href={card.feeSourceUrl || card.sourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, borderRadius: 999, padding: "11px 15px", border: "1px solid var(--border)", color: "var(--text)", fontSize: 13, textDecoration: "none" }}>Fee schedule ↗</a>}
               {card.loungeSourceUrl && <a href={card.loungeSourceUrl} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 6, border: "1px solid var(--border)", borderRadius: 999, padding: "11px 15px", color: "var(--text)", fontSize: 13, textDecoration: "none" }}>Lounge programme ↗</a>}
             </div>
           </div>
@@ -310,6 +310,11 @@ export default function CardPage({ params }) {
               )}
 
               {/* Redemption note */}
+              {card.movieEligibility && <p style={{padding:'16px 0',lineHeight:1.7}}>{card.movieEligibility} <a href={card.movieSourceUrl || card.sourceUrl} target="_blank" rel="noopener noreferrer">Issuer movie terms</a></p>}
+              {card.rewardProcessSourceUrl && <p><a href={card.rewardProcessSourceUrl} target="_blank" rel="noopener noreferrer">Issuer NeuCoins claim process (effective 25 November 2026)</a></p>}
+              {card.upcomingBenefitChange && <aside style={{padding:16,border:'1px solid var(--border)',borderRadius:12}}><h3>Announced benefit changes</h3><p>{card.upcomingBenefitChange}</p><a href={card.upcomingBenefitSourceUrl} target="_blank" rel="noopener noreferrer">Official ICICI notice and effective dates</a></aside>}
+              {card.rewardSourceUrl && <p><a href={card.rewardSourceUrl} target="_blank" rel="noopener noreferrer">Issuer reward terms</a></p>}
+              {card.rewardProcessSourceUrl && <p><a href={card.rewardProcessSourceUrl} target="_blank" rel="noopener noreferrer">Issuer NeuCoins claim and validity rules</a></p>}
               {card.redemptionNote && (
                 <div style={{ marginTop: 12, background: "rgba(94,177,255,.08)", border: "1px solid rgba(94,177,255,.2)", borderRadius: 13, padding: "14px 20px", display: "flex", gap: 12, alignItems: "flex-start" }}>
                   <span style={{ fontSize: 16, marginTop: 2 }}>💡</span>
@@ -494,7 +499,7 @@ export default function CardPage({ params }) {
                 {card.firstYearAnnualFee === 0 && <div className="rc-r"><span>Year-one membership cost including GST</span><b>₹{Math.round(card.joiningFee * (card.joiningFeeIncludesTax ? 1 : 1.18)).toLocaleString('en-IN')}</b></div>}
                 {card.fee > 0 && <div className="rc-r"><span>GST (18%)</span> <b className="minus">+₹{(feeWithGST - card.fee).toLocaleString()}</b></div>}
                 {card.fee > 0 && <div className="rc-r"><span>Annual/renewal fee including GST</span> <b className="minus">₹{feeWithGST.toLocaleString()}</b></div>}
-                {card.feeScheduleNote && <p style={{padding:'16px 0',lineHeight:1.7}}>{card.feeScheduleNote} <a href={card.feeSourceUrl} target="_blank" rel="noopener noreferrer">Issuer fee schedule</a></p>}
+                {card.feeScheduleNote && <p style={{padding:'16px 0',lineHeight:1.7}}>{card.feeScheduleNote} <a href={card.feeSourceUrl || card.sourceUrl} target="_blank" rel="noopener noreferrer">Issuer fee schedule</a></p>}
                 {card.transactionFeeNote && <p style={{padding:'16px 0',lineHeight:1.7}}>{card.transactionFeeNote} <a href={card.transactionFeeSourceUrl} target="_blank" rel="noopener noreferrer">Issuer transaction charges</a></p>}
                 <div className="rc-r"><span>Fee waiver</span> <b>{card.feeWaiver || "None"}</b></div>
                 <div className="rc-r"><span>Reward value</span> <b>Depends on eligible spend, caps and redemption</b></div>

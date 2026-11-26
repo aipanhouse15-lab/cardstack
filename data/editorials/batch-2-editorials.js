@@ -1,3 +1,4 @@
+// ARCHIVED SOURCE: not a current product review. Use reviewed-editorial.js via the index.
 // Tier D Card Editorials — Batch 2
 // Assure Fintech (assurefintech.com) — June 2026
 // Covers: hdfc-tata-neu-plus, hdfc-tata-neu-infinity, hdfc-moneyback-plus,

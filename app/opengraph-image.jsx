@@ -1,3 +1,5 @@
+import { CARD_COUNTS } from "@/data/site-facts";
+import { TOOL_COUNT } from "@/data/site-tools";
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
@@ -77,10 +79,10 @@ export default async function OGImage() {
         {/* Stats row */}
         <div style={{ display: "flex", gap: 60, marginTop: "auto" }}>
           {[
-            ["76+", "Cards tracked"],
-            ["9", "Live tools"],
+            [String(CARD_COUNTS.total), "Catalogue records"],
+            [String(TOOL_COUNT), "Free tools"],
             ["6", "Categories"],
-            ["₹0", "Always free"],
+            ["INR 0", "Cost to use"],
           ].map(([n, l], i) => (
             <div key={i} style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ fontSize: 48, fontWeight: 800, color: "#F1F5F9" }}>{n}</div>

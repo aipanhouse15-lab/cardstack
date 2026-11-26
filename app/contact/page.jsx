@@ -19,9 +19,10 @@ export default function ContactPage() {
 
       <div className="flex flex-col gap-6 text-base leading-relaxed" style={{ color: "var(--text-secondary)" }}>
         <p>
-          Assure Fintech is built by one person. Every message is read personally. Here's how to reach us.
+          Assure Fintech is founded and maintained by Ashutosh Khulbe. Use the feedback form for data corrections, source documents and general enquiries. Please do not send card numbers, banking credentials or other sensitive account details.
         </p>
 
+        <p><strong>Founder:</strong> Ashutosh Khulbe<br/><strong>Email:</strong> <a href="mailto:ccardproject@gmail.com">ccardproject@gmail.com</a></p>
         <div className="flex flex-col gap-4">
           {/* Report card data */}
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxSR9PYvavFrELzWEunMv5Y5MmWeKxwij0BnzFDuzO4_a2Ew/viewform" target="_blank" rel="noopener noreferrer" className="no-underline" style={{ color: "inherit" }}>
@@ -64,7 +65,7 @@ export default function ContactPage() {
               </div>
             </div>
             <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-              We love hearing from users. Whether it's a bug report, feature suggestion, or just kind words — it all helps us build a better product. Use the Google Form or reach out on social media.
+              We love hearing from users. Whether it's a bug report, feature suggestion, or just kind words — it all helps us build a better product. Use the Google Form or email <a href="mailto:ccardproject@gmail.com" style={{color:"var(--accent-text)"}}>ccardproject@gmail.com</a>.
             </p>
           </div>
 

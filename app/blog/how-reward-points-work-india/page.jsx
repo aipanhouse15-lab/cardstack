@@ -1,7 +1,8 @@
+import GuideDetails from "@/components/GuideDetails";
 import Link from "next/link";
 import Script from "next/script";
 
-const UPDATED = "September 28, 2026";
+const UPDATED = "17 October 2026";
 const URL = "https://www.assurefintech.com/blog/how-reward-points-work-india";
 const faqs = [
   ["How much is one credit card reward point worth?", "There is no universal rupee value. It depends on the card, redemption route, conversion ratio, catalogue price, fees, caps and the value you personally get from the item or booking."],
@@ -19,7 +20,7 @@ export const metadata = {
 
 export default function HowRewardPointsWorkIndia() {
   const faq = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) };
-  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-09-28", publisher: { "@type": "Organization", name: "Assure Fintech" }, mainEntityOfPage: URL };
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: metadata.title, author: { "@type": "Person", name: "Ash" }, datePublished: "2026-06-04", dateModified: "2026-10-17", publisher: { "@type": "Organization", name: "Assure Fintech" }, mainEntityOfPage: URL };
   const breadcrumb = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.assurefintech.com/" },
     { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.assurefintech.com/blog/" },
@@ -56,6 +57,7 @@ export default function HowRewardPointsWorkIndia() {
     </section>
 
     <section style={{ marginTop: 32 }}><h2>FAQ</h2>{faqs.map(([q, a]) => <details key={q} style={{ padding: "14px 0", borderBottom: "1px solid var(--border)" }}><summary style={{ cursor: "pointer", fontWeight: 650 }}>{q}</summary><p style={{ color: "var(--text-muted)" }}>{a}</p></details>)}</section>
-    <footer style={{ marginTop: 32, paddingTop: 16, borderTop: "1px solid var(--border)", fontSize: 13, color: "var(--text-muted)" }}>Reviewed September 28, 2026. Reward earning, value, expiry and redemption are determined by the current issuer and program terms for your card. This explainer describes a comparison method and does not promise a particular return.</footer>
+    <GuideDetails topic="blog/how-reward-points-work-india" />
+    <footer style={{ marginTop: 32, paddingTop: 16, borderTop: "1px solid var(--border)", fontSize: 13, color: "var(--text-muted)" }}>Reviewed October 4, 2026. Reward earning, value, expiry and redemption are determined by the current issuer and program terms for your card. This explainer describes a comparison method and does not promise a particular return.</footer>
   </main>;
 }
