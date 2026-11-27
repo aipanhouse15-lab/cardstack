@@ -630,7 +630,7 @@ main main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; 
   --mut: #211d24;
   --dim: #392f3d;
 }
-:root[data-theme="light"] .chero:has(.reviewed-card-art) h1 span {
+:root[data-theme="light"] .chero:has(.reviewed-card-art, .regalia-illustration, .flipkart-illustration) h1 span {
   color: var(--ivory) !important;
 }
 .chero:has(.reviewed-card-art) {
@@ -650,7 +650,7 @@ main main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; 
   object-fit: cover;
 }
 .card-illustration-wrap { flex-direction: column; align-items: center; gap: 18px; }
-.chero:has(.simplyclick-illustration) { padding-block: clamp(32px, 4.5vw, 55px); }
+.chero:has(.card-illustration-wrap) { padding-block: clamp(32px, 4.5vw, 55px); }
 .bigcard.simplyclick-illustration {
   background:
     radial-gradient(ellipse at 100% 8%, #e3a9ac57, transparent 55%),
@@ -667,6 +667,99 @@ main main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; 
   background: repeating-radial-gradient(ellipse at 100% 100%, transparent 0 19px, #f6b4b724 20px 21px, transparent 22px 32px);
   mask-image: linear-gradient(115deg, transparent 35%, #000 90%);
 }
+.bigcard.simplysave-illustration {
+  background: radial-gradient(ellipse at 8% 10%, #5283c4, transparent 57%),
+    linear-gradient(142deg, #2e62a9, #174787 65%, #123361);
+  color: #f2f8ff;
+  isolation: isolate;
+  overflow: hidden;
+}
+.simplysave-illustration .card-illustration-chip {
+  border-color: #e6f2f6c9;
+  background:
+    linear-gradient(90deg, transparent 31%, #253b544d 32% 35%, transparent 36% 66%, #253b544d 67% 70%, transparent 71%),
+    linear-gradient(145deg, #e8edf1, #909fb2);
+}
+.simplysave-tree {
+  position: absolute;
+  z-index: -1;
+  inset: 10% -4% -6% 48%;
+  border-radius: 45% 60% 28% 20%;
+  pointer-events: none;
+}
+.simplysave-tree::before {
+  content: "";
+  position: absolute;
+  inset: 30% -16% -25% 35%;
+  border-left: 5px double #102c57a0;
+  border-radius: 62% 0 0 0;
+  transform: rotate(-24deg);
+}
+.simplysave-tree span {
+  position: absolute;
+  width: 55%;
+  height: 16%;
+  border: 2px solid #102c5791;
+  border-radius: 90% 0 90% 0;
+  background: repeating-linear-gradient(118deg, #102c5740 0 2px, transparent 2px 5px);
+  box-shadow: inset 0 1px #85b5ec48, 0 1px #85b5ec35;
+}
+.simplysave-tree span:nth-child(1) { top: 17%; left: 35%; transform: rotate(-50deg); }
+.simplysave-tree span:nth-child(2) { top: 30%; left: 12%; transform: rotate(18deg); }
+.simplysave-tree span:nth-child(3) { top: 44%; left: 1%; transform: rotate(3deg); }
+.simplysave-tree span:nth-child(4) { top: 50%; left: 46%; transform: rotate(-41deg); }
+.simplysave-tree span:nth-child(5) { top: 65%; left: 15%; transform: rotate(-13deg); }
+.bigcard:is(.regalia-illustration, .flipkart-illustration) {
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid var(--card-edge);
+  box-shadow: inset 0 1px #ffffff18, 0 30px 54px #130e254f;
+}
+.bigcard.regalia-illustration {
+  --card-edge: #917047;
+  background: radial-gradient(ellipse at 87% 72%, #ac7d4160, transparent 58%),
+    linear-gradient(145deg, #332719, #18140f 48%, #2e2216);
+  color: #fff0d6;
+}
+.regalia-illustration::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 5% -30% -60% 22%;
+  background: repeating-radial-gradient(ellipse at 58% 63%, transparent 0 8px, #dfb16a65 9px, transparent 10px 13px);
+  mask-image: linear-gradient(115deg, transparent 10%, #000 65%);
+  transform: rotate(-24deg);
+}
+.bigcard.flipkart-illustration {
+  --card-edge: #465377;
+  background: radial-gradient(ellipse at 93% 12%, #283356, transparent 67%),
+    linear-gradient(140deg, #191e30, #0e1321 75%);
+  color: #f3f6ff;
+}
+.flipkart-illustration::before,
+.flipkart-illustration::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 90%;
+  height: 78%;
+  right: -24%;
+  border: 16px solid transparent;
+  border-radius: 45% 56% 53% 40%;
+  transform: rotate(-25deg);
+}
+.flipkart-illustration::before {
+  top: -15%;
+  border-left-color: #4293ee;
+  border-bottom-color: #6a66e8;
+  box-shadow: -5px 10px 35px #547de64d;
+}
+.flipkart-illustration::after {
+  top: -5%;
+  right: -36%;
+  border-left-color: #9b5ad4;
+  border-bottom-color: #d64d8e;
+}
 .card-illustration-chip {
   display: block;
   width: 32px;
@@ -680,7 +773,7 @@ main main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; 
 }
 .card-illustration-label { color: var(--mut); font: 11px var(--mono); }
 @media (max-width: 560px) {
-  .bigcard.simplyclick-illustration { width: min(300px, 90%); padding: 17px; border-radius: 14px; }
+  .bigcard:is(.simplyclick-illustration, .simplysave-illustration, .regalia-illustration, .flipkart-illustration) { width: min(300px, 90%); padding: 17px; border-radius: 14px; }
   .card-illustration-chip { margin-top: 14px; }
 }
 /* Axis supplies the Atlas image already angled, with transparent corners. */
@@ -691,6 +784,11 @@ main main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; 
   filter: drop-shadow(0 24px 26px #190f3455);
 }
 .featured-card-review { min-width: 0; }
+@media (max-width: 880px) {
+  .featured-card-review .rgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .featured-card-review .rcell { overflow-wrap: anywhere; }
+}
+
 .featured-card-review > * { margin-block: 0 24px !important; }
 .featured-card-review > [id] { scroll-margin-top: 110px; }
 .featured-card-review p { font-size: 16px !important; line-height: 1.65; }

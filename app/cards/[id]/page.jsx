@@ -7,6 +7,13 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import PendingCardRecord from "@/components/PendingCardRecord";
 
+const cardIllustrations = {
+  "sbi-simplyclick": "simplyclick-illustration",
+  "sbi-simplysave": "simplysave-illustration",
+  "hdfc-regalia": "regalia-illustration",
+  "axis-flipkart": "flipkart-illustration",
+};
+
 /* ── Static generation ── */
 export async function generateStaticParams() {
   return CARDS.map(card => ({ id: card.id }));
@@ -38,16 +45,15 @@ export async function generateMetadata({ params }) {
 }
 
 /* ── TOC sections ── */
-function tocSections(card) {
-  const ed = reviewedEditorial(card) || card.editorial || null;
+function tocSections(card, ed) {
   const items = [];
   if (cardReviewDetails.cards[card.id]) items.push({ id: "card-features", label: "All card features" });
   if (ed?.verdict) items.push({ id: "verdict", label: "Verdict" });
-  items.push({ id: "rewards", label: "Reward rates" });
   if (cardReviewDetails.cards[card.id]) items.push({
     id: "cashback-example",
-    label: ({ "sbi-simplyclick": "Voucher value example", "idfc-wow": "Travel and points example", "amex-mrcc": "Monthly points example", "axis-atlas": "Travel miles example" })[card.id] || "Cashback example",
+    label: ({ "sbi-simplyclick": "Voucher value example", "idfc-wow": "Travel and points example", "amex-mrcc": "Monthly points example", "axis-atlas": "Travel miles example", "icici-coral": "Movie and lounge example", "sbi-simplysave": "Reward points example", "hdfc-infinia": "Redemption value example", "axis-airtel": "Bill cashback example", "hdfc-regalia": "Redemption value example", "axis-flipkart": "Quarterly cap example" })[card.id] || "Cashback example",
   });
+  items.push({ id: "rewards", label: "Reward rates" });
   if (ed?.capMath) items.push({ id: "caps", label: "Cap terms" });
   if (card.partnerRates?.length) items.push({ id: "partners", label: "Partner rates" });
   items.push({ id: "proscons", label: "Pros & cons" });
@@ -73,10 +79,15 @@ export default function CardPage({ params }) {
   const sorted = Object.entries(card.rewards).filter(([k]) => k !== "default").sort((a, b) => b[1] - a[1]);
   const maxRate = sorted[0]?.[1] || 0;
   const bestCategory = sorted[0]?.[0] || "";
-  const ed = reviewedEditorial(card) || card.editorial || null;
-  const toc = tocSections(card);
   const details = cardReviewDetails.cards[card.id];
-  const illustratedCard = card.id === "sbi-simplyclick";
+  const editorial = reviewedEditorial(card) || card.editorial || null;
+  const ed = editorial && {
+    ...editorial,
+    capMath: details?.capMath ?? editorial.capMath,
+    pairWith: details?.pairWith ?? editorial.pairWith,
+  };
+  const toc = tocSections(card, ed);
+  const illustrationClass = details || card.id === "sbi-simplyclick" ? cardIllustrations[card.id] : undefined;
   const faqs = details ? [...(ed?.faq || []), ...details.faqs] : ed?.faq;
 
   // Issuer caps use different categories and periods; a universal curve would
@@ -181,15 +192,22 @@ export default function CardPage({ params }) {
           </div>
 
           {/* Right column — card visual */}
-          <div className={illustratedCard ? "card-illustration-wrap" : undefined} style={{ display: "flex", justifyContent: "center" }}>
-            {details && !illustratedCard ? <img className="reviewed-card-art" src={`/cards/${card.id}.webp`} alt={`${card.name} card artwork`} /> :
-            <div className={illustratedCard ? "bigcard simplyclick-illustration" : "bigcard"}
-              style={illustratedCard ? undefined : { background: `linear-gradient(140deg, ${card.color}cc 0%, ${card.color} 50%, ${card.color}99 115%)` }}>
+          <div className={illustrationClass || (details && card.id === "axis-airtel") ? "card-illustration-wrap" : undefined} style={{ display: "flex", justifyContent: "center" }}>
+            {details && !illustrationClass ? <img className="reviewed-card-art" src={`/cards/${card.id}.webp`} alt={`${card.name} card artwork`} /> :
+            <div className={illustrationClass ? `bigcard ${illustrationClass}` : "bigcard"}
+              style={illustrationClass ? undefined : { background: `linear-gradient(140deg, ${card.color}cc 0%, ${card.color} 50%, ${card.color}99 115%)` }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                 <span className="mono" style={{ fontSize: 11, opacity: 0.7, letterSpacing: ".12em" }}>{card.bank}</span>
-                <span className="mono" style={{ fontSize: 10, opacity: 0.6, letterSpacing: ".12em" }}>{card.network}</span>
+                {illustrationClass !== "flipkart-illustration" && (
+                  <span className="mono" style={{ fontSize: 10, opacity: 0.6, letterSpacing: ".12em" }}>{card.network}</span>
+                )}
               </div>
-              {illustratedCard && <span className="card-illustration-chip" aria-hidden="true" />}
+              {illustrationClass && <span className="card-illustration-chip" aria-hidden="true" />}
+              {illustrationClass === "simplysave-illustration" && (
+                <div className="simplysave-tree" aria-hidden="true">
+                  <span /><span /><span /><span /><span />
+                </div>
+              )}
               <div style={{ position: "absolute", bottom: 26, left: 26 }}>
                 <div className="disp" style={{ fontSize: 18, fontWeight: 500, opacity: 0.9 }}>{card.name}</div>
                 <div className="mono" style={{ fontSize: 10, opacity: 0.5, marginTop: 4 }}>
@@ -197,7 +215,7 @@ export default function CardPage({ params }) {
                 </div>
               </div>
             </div>}
-            {illustratedCard && <span className="card-illustration-label">Card illustration</span>}
+            {illustrationClass && <span className="card-illustration-label">Card illustration</span>}
           </div>
         </div>
       </div>

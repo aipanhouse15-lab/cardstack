@@ -251,7 +251,7 @@ export default function BestCreditCardForFlipkart() {
       {
         "@type": "Question",
         name: "What is the Axis Flipkart joining fee and welcome offer?",
-        acceptedAnswer: { "@type": "Answer", text: "Axis currently lists a NIL joining fee as a limited-period offer and a ₹500 annual fee from year two, waived above ₹3.5 lakh eligible annual spend (rent and wallet loads do not count). Its product page advertises ₹350 in activation benefits subject to conditions; the ₹250 Flipkart voucher is not available on first-year-free cards." }
+        acceptedAnswer: { "@type": "Answer", text: "Axis lists a standard ₹500 joining fee and a ₹500 annual fee from year two. First-year-free offers may waive the joining fee. Axis waives the renewal fee above ₹3.5 lakh eligible annual spend, excluding rent, wallet loads and gift cards. Its product page advertises ₹350 in activation benefits subject to conditions; the ₹250 Flipkart voucher is not available on first-year-free cards." }
       },
       {
         "@type": "Question",

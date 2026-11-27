@@ -2,6 +2,69 @@ import Link from "next/link";
 import details from "@/data/featured-card-details.json";
 
 export function CardCashbackExample({ cardId }) {
+  if (cardId === "hdfc-regalia") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">What 10,000 Regalia points buy</h2>
+        <p>₹5 lakh in eligible base spending in complete ₹200 blocks can earn 10,000 points before category caps and anniversary bonuses. At HDFC’s published redemption rates, that is worth <strong>₹5,000 toward eligible flights or hotels</strong>, or up to <strong>₹1,500 as statement cashback</strong> before any redemption fee.</p>
+        <p>For an eligible ₹8,000 booking, the 70% points payment limit allows up to ₹5,600 in points value. You could use all 10,000 points and pay ₹3,000 by card, assuming you have enough room under the monthly redemption cap.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "axis-flipkart") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">When one cashback cap fills before the others</h2>
+        <p>Say ₹90,000 of eligible Flipkart purchases fall in one statement quarter. At 5% that comes to ₹4,500 before the cap, so you receive <strong>₹4,000</strong>. Another ₹12,000 of eligible Myntra purchases earns <strong>₹900</strong> from Myntra’s separate limit.</p>
+        <p>That is <strong>₹4,900 on ₹1,02,000 of eligible spend</strong> before fees, assuming no refunds or EMI conversions. Check your statement dates before shifting a purchase to a new quarter.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "hdfc-infinia") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">What the same 5,000 Reward Points are worth</h2>
+        <p>₹1.5 lakh in eligible base spending earns 5,000 points in complete ₹150 earning blocks, before category caps. At the published rates, those points can cover <strong>₹5,000 of eligible travel</strong> or up to <strong>₹1,500 against the statement balance</strong>.</p>
+        <p>At a 70% points payment limit, an eligible ₹10,000 flight or hotel booking could use all 5,000 points, with ₹5,000 paid by card. The monthly redemption limit and any fees still apply. Compare the final booking price before using points.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "axis-airtel") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">How everyday spend sets your Airtel bill cashback limit</h2>
+        <p>Suppose ₹10,000 of other eligible purchases earn ₹100 in base cashback in one statement month. That sets a ₹200 Airtel bill cashback limit and a separate ₹100 utility cashback limit.</p>
+        <p>On ₹1,000 of qualifying Airtel bills and ₹1,500 of qualifying utility bills through Airtel Thanks, the headline amounts are ₹250 and ₹150. After the linked caps, the total is <strong>₹400 in statement cashback</strong>, including the ₹100 base amount. This example assumes all transactions qualify and ignores refunds.</p>
+        <p>Zomato, Blinkit and District Movies have separate partner-wallet offers. Their credits do not increase the statement cashback caps.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "icici-coral") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">Movie and airport lounge access have separate spend requirements</h2>
+        <p>Suppose you spent ₹30,000 in eligible purchases in the preceding spends quarter. That clears the ₹25,000 BookMyShow requirement. It falls below the separate ₹75,000 requirement for a domestic airport lounge visit.</p>
+        <p>If you meet the booking terms and the ticket to which the offer applies costs ₹400 or more, the 25% discount reaches its ₹100 cap. Two successful uses at the cap would save <strong>₹200 that month</strong>.</p>
+        <p>Check ICICI’s dates for the spends quarter and the benefit quarter. Railway lounges and the annual fee waiver have their own rules.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "sbi-simplysave") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">One points cap across four everyday categories</h2>
+        <p>Say you spend ₹45,000 on qualifying dining, movie, grocery and departmental store purchases in a calendar month, in complete ₹150 earning blocks and with no prior cap usage.</p>
+        <p>At 10 points per ₹150, that spend earns <strong>3,000 points, worth ₹750 gross</strong> at four points per rupee for statement credit. The same spend at the base rate earns 300 points, below the 2,000-point minimum for that redemption.</p>
+        <p>The 5,000-point cap is shared by all four accelerated categories. It corresponds to ₹75,000 of eligible spend in complete ₹150 blocks. Check merchant coding and any redemption fee before valuing the points.</p>
+      </section>
+    );
+  }
+
   if (cardId === "axis-atlas") {
     return (
       <section id="cashback-example" className="side-box">
