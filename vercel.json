@@ -1,4 +1,9 @@
 {
+  "git": {
+    "deploymentEnabled": {
+      "codex/two-card-review": false
+    }
+  },
   "redirects": [
     {
       "source": "/(.*)",
