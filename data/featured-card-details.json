@@ -241,6 +241,272 @@
           "https://www.sbicard.com/en/faq/cashback-sbi-card-faq.page"
         ]
       ]
+    },
+    "axis-ace": {
+      "values": [
+        "Cashback credit card",
+        "Visa for the variant reviewed",
+        "N/A on the standard published card",
+        "N/A for the Visa variant",
+        "Subject to issuer approval. A card-specific income threshold is unverified.",
+        "No joining or annual fee for add-on cards in the published fee schedule.",
+        "₹499 plus applicable taxes. Waived on ₹10,000 of spend within 45 days of card setup.",
+        "₹499 plus applicable taxes from year two",
+        "Spend over ₹2 lakh in eligible purchases. Rent, wallet loads and gift cards are excluded from the waiver threshold.",
+        "N/A on standard published pricing",
+        "3.5% of the foreign currency transaction value",
+        "3.5% on qualifying INR transactions, effective 28 August 2026",
+        "Finance charge 3.75% per month. Late fees depend on the outstanding balance. See the issuer’s fee schedule.",
+        "2.5% of the amount withdrawn, minimum ₹500",
+        "See Axis Bank’s cardholder terms for the applicable period and conditions.",
+        "Cashback in rupees",
+        "1.5% on other eligible purchases, uncapped",
+        "5% on listed bill payments and recharges via Google Pay on Android. 4% on eligible Swiggy, Zomato and Ola purchases.",
+        "One ₹500 cap per statement cycle shared by the 5% and 4% routes. Eligible base-rate purchases have no cap.",
+        "Includes utilities outside Google Pay, fuel, EMI, wallet loads, rent, jewellery, insurance, education, government transactions, gift cards and tolls. See issuer terms.",
+        "Automatic credit in the next billing cycle, three days before statement generation",
+        "N/A",
+        "N/A",
+        "N/A",
+        "N/A for automatic cashback",
+        "N/A for automatic cashback",
+        "Joining fee waiver on qualifying initial spend. See the joining fee row.",
+        "Annual fee waiver on qualifying spend. See the renewal fee waiver row.",
+        "N/A for a separate standard cashback milestone. See the fee and lounge rows for spend thresholds.",
+        "Four visits per year at participating domestic lounges, subject to ₹50,000 of eligible spend in the previous three calendar months. New cards have a temporary exemption.",
+        "N/A on the standard published benefits",
+        "N/A for complimentary guest access under the listed cardholder benefit",
+        "Not verified",
+        "Not verified",
+        "Not verified",
+        "N/A on the standard published benefits",
+        "Axis lists dining offers as well as 4% on eligible Swiggy and Zomato purchases. Each has its own terms.",
+        "Not verified for a standard ACE-specific movie offer",
+        "N/A for a required shopping portal",
+        "1% waiver on eligible fuel transactions of ₹400–₹4,000, up to ₹500 per statement. GST on the surcharge is not refunded.",
+        "N/A on the standard published benefits",
+        "N/A on the standard published benefits",
+        "Not verified",
+        "Not verified for the variant shown",
+        "Axis lists conversion for eligible purchases from ₹2,500. EMI purchases do not earn cashback.",
+        "Not verified",
+        "Not verified",
+        "See Axis Bank’s cardholder terms for lost-card reporting and liability.",
+        "Not verified",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Is the 1.5% base rate really uncapped?",
+          "a": "Axis lists no cap on 1.5% cashback for other eligible purchases. The issuer’s excluded categories still earn zero, and the ₹500 cap applies separately to the 5% and 4% routes combined."
+        },
+        {
+          "q": "Does 5% work on all bill payments via Google Pay?",
+          "a": "No. Use Axis ACE through Google Pay on Android for eligible electricity, water, gas, LPG, broadband, DTH or mobile recharges. Utility payments outside the specified route earn no cashback."
+        },
+        {
+          "q": "Axis ACE vs HDFC Millennia — which is better?",
+          "a": "Compare the same eligible spending. ACE offers statement cashback with an Android bill-payment route and a shared cap for its accelerated rates. Millennia earns CashPoints, with one cap for its ten named merchants and another for other eligible spend. Account for fees and redemption costs."
+        },
+        {
+          "q": "Does Axis ACE earn on fuel?",
+          "a": "Fuel earns no cashback. Axis lists a separate 1% surcharge waiver on eligible ₹400–₹4,000 fuel transactions, capped at ₹500 per statement. GST on the surcharge is not refunded."
+        },
+        {
+          "q": "What happens to accelerated cashback after ₹500 cap?",
+          "a": "Once the eligible 5% and 4% transactions together reach ₹500 in a statement cycle, those transactions earn no further cashback for the cycle. Other eligible purchases still earn their separate 1.5% rate."
+        }
+      ],
+      "sources": [
+        [
+          "Axis ACE product page and fee schedule",
+          "https://cug.axisbank.com/cards/credit-card/axis-bank-ace-credit-card"
+        ],
+        [
+          "Cashback terms, cap and credit timing",
+          "https://cug.axisbank.com/docs/default-source/default-document-library/axis-bank-ace-credit-card-tncs.pdf"
+        ],
+        [
+          "Domestic lounge eligibility and participating airports",
+          "https://cug.axisbank.com/docs/default-source/default-document-library/axis-bank-airport-lounge-access-program.pdf?sfvrsn=843429b3_12"
+        ],
+        [
+          "August 2026 changes to fees and exclusions",
+          "https://campaign.axis.bank.in/generic/terms-and-conditions-generic-all.pdf"
+        ]
+      ]
+    },
+    "amazon-icici": {
+      "values": [
+        "Amazon co-branded credit card",
+        "Visa",
+        "N/A on the standard published card",
+        "N/A for the Visa card",
+        "Invite-only programme. Approval is subject to ICICI Bank and Amazon.",
+        "Not verified. ICICI’s product page and separate FAQ give conflicting answers about add-on cards.",
+        "₹0",
+        "₹0",
+        "N/A. There is no standard renewal fee.",
+        "No joining or annual fee on standard pricing",
+        "1.99% on international transactions, plus applicable taxes",
+        "See ICICI Bank’s applicable schedule for overseas transactions billed in INR.",
+        "See ICICI Bank’s applicable fee schedule for finance charges and late-payment slabs.",
+        "See ICICI Bank’s applicable fee schedule.",
+        "See the applicable card terms and repayment conditions.",
+        "Amazon Pay balance in the linked Amazon account",
+        "1% on other eligible purchases",
+        "5% for Prime and 3% for non-Prime on eligible Amazon.in retail purchases. Specified Amazon Pay routes earn 2%.",
+        "No earnings cap stated by ICICI. Eligibility and transaction-level rounding still apply.",
+        "Includes fuel, rent, tax, education, international transactions, utilities outside Amazon, EMI and precious metals. See issuer terms.",
+        "N/A. Earnings go to the linked Amazon account within two working days of the billing cycle ending.",
+        "N/A for a points-to-travel redemption option",
+        "N/A for a points catalogue",
+        "N/A",
+        "N/A for the automatic Amazon Pay credit",
+        "ICICI lists no expiry on card earnings.",
+        "Not verified for a standard welcome bonus",
+        "Not verified for a standard renewal bonus",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A for an international-spend rewards scheme. International transactions earn no rewards.",
+        "Not verified",
+        "N/A on standard published benefits",
+        "Not verified for a standing card-specific dining offer",
+        "Not verified for a standing card-specific movie offer",
+        "2% on eligible Login and Pay with Amazon transactions at participating merchants and specified Amazon Pay categories",
+        "1% fuel surcharge waiver subject to issuer terms. Fuel purchases earn no rewards.",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "Amazon Prime is separate. Your membership determines the rate on eligible Amazon.in retail purchases.",
+        "Available",
+        "ICICI lists three-month no-cost EMI on eligible Amazon.in purchases. EMI purchases do not earn rewards.",
+        "Not verified",
+        "Manage the card through ICICI Bank’s iMobile or internet banking",
+        "See ICICI Bank’s terms for reporting and liability.",
+        "Not verified",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Do I need Amazon Prime to get 5%?",
+          "a": "Yes, on eligible Amazon.in retail purchases. Non-Prime members earn 3% on that tier. Specified Amazon Pay routes, such as eligible digitally fulfilled categories and gift cards, use a separate 2% rate."
+        },
+        {
+          "q": "Can I convert Amazon Pay balance to cash?",
+          "a": "The card’s earnings go to the Amazon account linked to the card. You can use the balance on eligible Amazon and Amazon Pay purchases. It cannot be withdrawn as cash or applied to your credit card statement."
+        },
+        {
+          "q": "Is there a cashback cap?",
+          "a": "ICICI publishes no cap on eligible earnings. Merchant and product exclusions still apply, and the balance is credited to your linked Amazon account."
+        },
+        {
+          "q": "Amazon Pay ICICI vs HDFC Millennia for Amazon?",
+          "a": "On eligible Amazon.in retail purchases, Amazon Pay ICICI pays 5% with Prime or 3% without Prime, with no stated cap. Millennia’s Amazon purchases share its 1,000-CashPoint calendar-month cap with the other named merchants. Check your Prime cost, expected rewards and how you would use each card’s credit."
+        }
+      ],
+      "sources": [
+        [
+          "ICICI Bank product page and fees",
+          "https://www.icici.bank.in/personal-banking/cards/credit-card/amazon-pay-credit-card"
+        ],
+        [
+          "ICICI Bank FAQ on eligibility, earnings and account credit",
+          "https://www.icici.bank.in/personal-banking/cards/credit-card/amazon-pay-credit-card/faqs"
+        ],
+        [
+          "ICICI Bank card terms and conditions",
+          "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/tc-for-amazon-pay-credit-card.pdf"
+        ],
+        [
+          "ICICI Bank announcement on forex and separate Amazon Pay travel benefits",
+          "https://www.icici.bank.in/about-us/news-room/2025/amazon-pay-and-icici-bank-renew-partnership-enhance-indias-most-adopted-co-branded-credit-card"
+        ]
+      ]
+    },
+    "hdfc-swiggy": {
+      "values": [
+        "Swiggy co-branded credit card, original variant",
+        "Mastercard World for the variant reviewed",
+        "N/A on the standard published card",
+        "N/A for the Mastercard variant",
+        "HDFC is phasing out the original variant. Existing cardholders should check their individual migration notice.",
+        "Not verified for the original variant",
+        "₹500 plus applicable taxes",
+        "₹500 plus applicable taxes",
+        "₹2 lakh or more in eligible spend in the year before renewal",
+        "N/A on the standard published pricing",
+        "See HDFC’s card-specific schedule for the applicable rate.",
+        "See HDFC’s applicable personal credit card terms.",
+        "See HDFC’s card-specific schedule and personal card terms.",
+        "See HDFC’s card-specific schedule.",
+        "See HDFC’s applicable card terms and repayment conditions.",
+        "Cashback in rupees",
+        "1% on other eligible purchases of ₹100 or more",
+        "10% on eligible Swiggy app transactions of ₹249 or more. 5% on eligible online categories for transactions of ₹100 or more.",
+        "Separate billing-cycle caps of ₹1,500 on Swiggy, ₹1,500 on eligible online categories and ₹500 on other eligible spends",
+        "Includes Swiggy Money Wallet, Liquor and Minis on the app tier. Other exclusions include fuel, rent, gift cards, EMI, wallets, jewellery and government spend.",
+        "Automatically adjusted against the subsequent statement balance",
+        "N/A for automatic cashback",
+        "N/A",
+        "N/A",
+        "N/A for automatic cashback",
+        "N/A for automatic cashback. Uncredited cashback can be forfeited under the issuer’s terms.",
+        "Three months of Swiggy One for eligible activated cards, subject to claim conditions",
+        "Fee waiver at the qualifying spend threshold. No separate standard renewal bonus verified.",
+        "N/A for a separate standard cashback milestone. See the renewal waiver row.",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "Not verified",
+        "Not verified",
+        "N/A on standard published benefits",
+        "Eligible Swiggy Dineout payments can earn 10%. The issuer lists an additional birthday offer with separate conditions.",
+        "Not verified for a standing free-ticket benefit",
+        "5% for specified eligible online merchant categories. Check the issuer’s category and merchant rules.",
+        "See HDFC’s card-specific fees and benefits. Fuel does not earn cashback.",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "Eligible new cardholders can claim the Swiggy One welcome membership under separate activation and claim rules.",
+        "Available",
+        "See HDFC’s terms for available conversions. EMI purchases do not earn cashback.",
+        "Not verified for the original variant",
+        "HDFC provides controls for transaction limits and payment channels.",
+        "See HDFC’s reporting and liability terms.",
+        "Not verified",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Does HDFC Swiggy card give 10% on Swiggy Instamart?",
+          "a": "Yes, eligible Instamart orders in the Swiggy app can earn 10% on the original card. Each transaction must be at least ₹249. Instamart shares the ₹1,500 billing-cycle cap with eligible Food Delivery and Dineout transactions."
+        },
+        {
+          "q": "Is the ₹100 minimum per order or per day?",
+          "a": "It is per transaction for the 5% and 1% tiers. The eligible Swiggy app tier has its own ₹249 minimum per transaction, so ₹100 does not qualify an order for 10%."
+        },
+        {
+          "q": "HDFC Swiggy vs HDFC Millennia for food delivery?",
+          "a": "Compare the specific order and remaining cap. The original Swiggy card can earn 10% on qualifying Swiggy app transactions of ₹249 or more, up to its ₹1,500 billing-cycle cap. Millennia can earn 5% in CashPoints on eligible Swiggy and Zomato orders, subject to its shared named-merchant calendar-month cap and redemption terms."
+        }
+      ],
+      "sources": [
+        [
+          "HDFC Swiggy product page, fee waiver and statement credit",
+          "https://www.hdfc.bank.in/credit-cards/swiggy-hdfc-bank-credit-card"
+        ],
+        [
+          "Original card terms, including the minimum spends and separate caps",
+          "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-hdfc-bank-credit-card/pdf/terms-and-conditions-swiggy-hdfc-bank-credit-card-26052026.pdf"
+        ],
+        [
+          "HDFC migration FAQ for original Swiggy cardholders",
+          "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-hdfc-bank-credit-card/pdf/faq-swiggy-migration-29-09-2026.pdf"
+        ]
+      ]
     }
   }
 }
