@@ -507,6 +507,374 @@
           "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-hdfc-bank-credit-card/pdf/faq-swiggy-migration-29-09-2026.pdf"
         ]
       ]
+    },
+    "sbi-simplyclick": {
+      "values": [
+        "Online rewards credit card",
+        "Visa / Mastercard in the catalogue. Check the network on your issued variant.",
+        "N/A on standard pricing",
+        "N/A for the Visa and Mastercard variants",
+        "Subject to SBI Card approval. A card-specific income threshold is unverified.",
+        "The card terms say supplementary-card points accrue to the primary cardholder.",
+        "₹499 plus applicable tax",
+        "₹499 plus applicable tax",
+        "₹1 lakh in eligible spend in the preceding 365 days",
+        "N/A on standard published pricing",
+        "See the current fee schedule for your variant.",
+        "See the current fee schedule for transactions billed in INR overseas.",
+        "See the applicable schedule for interest and late fees.",
+        "See the current fee schedule and restrictions for your variant.",
+        "See the applicable card terms and repayment conditions.",
+        "SBI Card Reward Points",
+        "1 point per ₹100 on other eligible purchases",
+        "10 points per ₹100 on eligible named partner transactions in INR. 5 points per ₹100 on other eligible online purchases.",
+        "The current booklet explicitly caps the 5X tier at 10,000 points per calendar month, then eligible spend earns 1 point per ₹100. An older booklet also lists a 10X cap. Confirm the 10X cap for your account before relying on it.",
+        "Includes rent, government transactions, digital gaming, eligible wallet-load codes, cash advances, balance transfers, Flexipay and offline fuel. SBI Card-platform bill payments do not earn 5X.",
+        "N/A. SimplyCLICK points cannot be used to pay the card outstanding.",
+        "N/A for direct points-to-travel booking. The separate milestone benefit can issue a travel voucher.",
+        "Partner e-gift vouchers. SBI Card lists a ₹500 Amazon voucher for 2,000 points.",
+        "Not verified",
+        "Check any charges for the selected redemption and channel.",
+        "24 months under the SBI Card rewards terms",
+        "₹500 Amazon e-gift voucher on payment of the first-year membership fee, subject to terms",
+        "Renewal fee waiver on qualifying spend. No separate standard renewal bonus verified.",
+        "₹2,000 Cleartrip or Yatra e-voucher at each ₹1 lakh and ₹2 lakh annual online-spend milestone. SBI Card selects the brand.",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "Not verified",
+        "Not verified",
+        "N/A on standard published benefits",
+        "Eligible named merchants can earn partner points. Check merchant identifiers and channel.",
+        "Eligible BookMyShow purchases can earn partner points. A separate free-ticket benefit is unverified.",
+        "Eligible GyFTR vouchers earn 10X only through the SimplyCLICK portal, subject to issuer terms.",
+        "Eligible fuel transactions of ₹500–₹3,000. Maximum waiver ₹100 per month under the card terms.",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "Not verified",
+        "Issuer describes contactless support. Check your issued card.",
+        "Subject to issuer terms. Flexipay and merchant EMI can reverse rewards.",
+        "Consult SBI Card for eligibility and terms. Balance transfers do not earn points.",
+        "See SBI Card’s website or app for available controls.",
+        "See SBI Card’s cardholder terms for reporting and liability.",
+        "Not verified",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Is SBI SimplyCLICK worth it in 2026?",
+          "a": "It can fit if you regularly make eligible online purchases and can use the vouchers. Compare actual voucher value with the ₹499 fee plus tax. Treat travel milestone vouchers separately and count them only if you can use them within the offer terms."
+        },
+        {
+          "q": "How do I redeem SimplyCLICK reward points?",
+          "a": "Choose an eligible partner e-gift voucher in the SBI Card rewards catalogue. For example, SBI Card lists an Amazon voucher worth ₹500 for 2,000 points. Voucher validity and conditions apply, and points cannot pay the card outstanding."
+        },
+        {
+          "q": "Can I upgrade from SimplyCLICK to SBI Cashback?",
+          "a": "SBI Card decides whether an upgrade or product switch is available for your account. Check the offer and what happens to your SimplyCLICK points before accepting any switch."
+        }
+      ],
+      "sources": [
+        [
+          "SBI SimplyCLICK product page and membership fee",
+          "https://www.sbicard.com/en/personal/credit-cards/simplyclick-sbi-card.html"
+        ],
+        [
+          "Current SimplyCLICK booklet and eligible reward rules",
+          "https://www.sbicard.com/lscs/v1/rsvnlt/nodeid/9941889473278586129"
+        ],
+        [
+          "Earlier SimplyCLICK booklet and accelerated cap wording",
+          "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/simply-click-tnc-MITC-booklet.pdf"
+        ],
+        [
+          "Amazon voucher at 2,000 points",
+          "https://www.sbicard.com/en/personal/rewards/amazon-e-voucher-rs-500-click"
+        ],
+        [
+          "Welcome voucher terms",
+          "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-welcome.pdf"
+        ]
+      ]
+    },
+    "idfc-wow": {
+      "values": [
+        "Fixed-deposit-backed credit card",
+        "Visa in the variant reviewed. Confirm the network when issued.",
+        "Yes. The bank places a lien over the linked deposit.",
+        "N/A for the primary Visa card. Separately issued FIRST Digital RuPay has its own terms.",
+        "The issuer lists a ₹20,000 minimum deposit for eligible residents and a ₹25,000 NRE deposit for eligible NRIs. Issuance is subject to bank approval.",
+        "N/A in the fee schedule for FIRST WOW. Check with the issuer for availability.",
+        "₹0",
+        "₹0",
+        "N/A. No standard renewal fee.",
+        "No joining or annual fee on standard pricing",
+        "0% issuer markup on eligible foreign-currency card purchases",
+        "A merchant or ATM can offer conversion into INR at its own rate. Check the quoted exchange rate and any separate charges.",
+        "See the applicable fee schedule for finance charges and late fees.",
+        "₹199 plus applicable tax per withdrawal, per the card FAQ. Local ATM charges may also apply.",
+        "Issuer advertises up to 45 days on cash withdrawals, subject to terms. Check your repayment conditions.",
+        "IDFC FIRST Reward Points",
+        "4 points per ₹200 on eligible online, offline and international purchases. 1 point per ₹200 on utilities, insurance, FASTag and railway spends.",
+        "N/A for a separate higher partner tier under the standard earn schedule",
+        "Check the card terms for fair-use and eligibility restrictions.",
+        "Includes fuel, EMI and cash withdrawals. Fees and charges also do not earn points.",
+        "See IDFC FIRST’s redemption channels and terms. Points do not credit automatically.",
+        "Not verified for a dedicated WOW points-to-travel rate",
+        "Check available rewards and the applicable redemption fee",
+        "Not verified",
+        "₹99 plus GST per redemption",
+        "24 months from credit. The June 2026 balance is valid through the June 2028 cycle under the issuer’s transition rule.",
+        "Not verified for a standing offer",
+        "N/A for a standard fee paid on renewal",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "Not verified",
+        "Zero forex markup on eligible foreign-currency purchases. The regular 4X rewards rules apply to eligible international purchases.",
+        "Not verified for standard travel insurance",
+        "N/A on standard published benefits",
+        "Not verified for a standing card-specific offer",
+        "Not verified for a standing card-specific offer",
+        "Not verified for a standing card-specific portal offer",
+        "1% fuel surcharge waiver up to ₹200 per month, subject to issuer terms",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "Not verified",
+        "Available on the illustrated contactless variant",
+        "Subject to issuer eligibility and charges. EMI purchases do not earn points.",
+        "Not verified",
+        "Available through IDFC FIRST Bank’s mobile banking channels.",
+        "See issuer terms for reporting and liability.",
+        "Not verified",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Is zero forex really zero?",
+          "a": "The bank lists 0% forex markup on eligible purchases charged in foreign currency. The network’s exchange rate still applies. If a terminal offers to bill you in INR, the merchant’s conversion can add a separate cost."
+        },
+        {
+          "q": "Does zero forex apply on ATM withdrawals abroad?",
+          "a": "Treat ATM cash separately from card purchases. The issuer lists a ₹199 cash advance fee plus applicable tax per withdrawal. A local ATM operator may charge separately, and cash withdrawals do not earn points."
+        },
+        {
+          "q": "Why is the gross retail reward rate 0.5%?",
+          "a": "The current earn rate is 4 points per ₹200 on eligible retail purchases, with a published value of ₹0.25 per point. That is ₹1 of gross value per ₹200. The ₹99 plus GST redemption fee reduces the amount you keep."
+        },
+        {
+          "q": "Do points expire?",
+          "a": "Yes. Points earned from the July 2026 statement cycle are valid for 24 months from credit. The issuer’s transition rule keeps the June 2026 balance valid through the June 2028 cycle."
+        }
+      ],
+      "sources": [
+        [
+          "FIRST WOW product page, eligibility and charges",
+          "https://www.idfcfirst.bank.in/credit-card/wow"
+        ],
+        [
+          "June 2026 FIRST WOW update and points expiry",
+          "https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/FIRST-WOW-Credit-Card-Communication-May-26.pdf"
+        ],
+        [
+          "Cardmember agreement and reward expiry transition",
+          "https://www.idfcfirst.bank.in/content/dam/IDFCFirstBank/PDF/Card-Member-Agreement.pdf"
+        ],
+        [
+          "Most Important Terms and Conditions",
+          "https://www.idfcfirst.bank.in/MITC.pdf"
+        ]
+      ]
+    },
+    "amex-mrcc": {
+      "values": [
+        "Membership Rewards credit card",
+        "American Express",
+        "N/A on standard pricing",
+        "N/A for the American Express card",
+        "Amex says new card applications in India are temporarily paused. Existing holders should check their account terms.",
+        "See the supplementary-card terms and applicable fees.",
+        "₹1,000 plus applicable taxes in year one",
+        "₹4,500 plus applicable taxes from year two",
+        "Full waiver at ₹1.5 lakh or more in the preceding membership year. Half waiver at ₹90,000–₹1,49,999 on the standard full-fee product.",
+        "N/A on standard pricing",
+        "3.5%, per the key fact statement. Check applicable taxes.",
+        "See current American Express charges for overseas transactions billed in INR.",
+        "See the MITC for the applicable interest rate and late-payment charges.",
+        "See the MITC for cash access eligibility and charges.",
+        "See the cardmember repayment terms.",
+        "Membership Rewards points",
+        "1 point per ₹50 on eligible spend",
+        "1,000 bonus points for four qualifying purchases of ₹1,500 or more in a calendar month. Another 1,000 for reaching ₹20,000 of qualifying monthly spend after enrolment.",
+        "Each of the two monthly bonuses is 1,000 points. Check offer terms for qualifying spend.",
+        "Fuel, insurance, utilities, cash transactions and merchant/POS EMI conversions are excluded from standard earning. Check separate bonus conditions.",
+        "Amex offers eligible card-charge redemption. Check the current rate for your account.",
+        "Available through eligible Amex Travel redemptions, subject to terms",
+        "Amex lists eligible 18K and 24K Gold Collection vouchers. Value varies by reward.",
+        "Check the current India transfer partners and rates in Membership Rewards.",
+        "Check the terms of the selected redemption route.",
+        "Check your Membership Rewards account and programme terms for conditions and forfeiture rules.",
+        "Amex lists 4,000 points subject to offer conditions. New applications are paused.",
+        "Amex lists 5,000 points on the first renewal when the applicable membership fee is paid, subject to offer terms.",
+        "Two separate calendar-month bonuses. The ₹20,000 bonus requires enrolment.",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "Not verified",
+        "Not verified for a dedicated international-spend programme",
+        "Not verified",
+        "Eligible Marriott Bonvoy points transfers are a redemption option. Automatic hotel status is unverified.",
+        "See the card benefits page for participating dining offers.",
+        "Not verified for a standing free-ticket benefit",
+        "Check current Amex offers and eligible merchant routes.",
+        "Fuel earns no points. See issuer terms for any surcharge relief.",
+        "Not verified",
+        "Not verified",
+        "Not verified for an included standard subscription.",
+        "Check the contactless symbol on your issued card.",
+        "Available on eligible purchases under Amex EMI terms. Merchant/POS EMI conversions are excluded from standard earning.",
+        "Not verified",
+        "Manage the card and enrol for eligible offers in the Amex app or online account.",
+        "See issuer terms for reporting and liability.",
+        "Not verified for the standard variant",
+        "Not verified for the standard variant"
+      ],
+      "faqs": [
+        {
+          "q": "What is 1 Amex MR point actually worth?",
+          "a": "It depends on the redemption. For example, Amex lists an ₹8,000 Amazon voucher for 24,000 points, about ₹0.33 per point at voucher face value. Other rewards have different rates."
+        },
+        {
+          "q": "How does the four-transaction milestone bonus work in practice?",
+          "a": "Make four qualifying transactions of at least ₹1,500 each in the same calendar month to earn 1,000 bonus points. Reaching ₹6,000 with fewer transactions does not meet that condition. The ₹20,000 milestone is separate and requires enrolment."
+        },
+        {
+          "q": "Where is Amex not accepted in India that I should know about?",
+          "a": "Acceptance varies by merchant and payment channel. Check the stores and sites you use regularly before relying on any monthly bonus."
+        },
+        {
+          "q": "Do Amex MR points expire?",
+          "a": "Check the current Membership Rewards terms for your account. Account closure and account standing can affect when you can redeem your balance."
+        },
+        {
+          "q": "Can I transfer Amex MR points to IndiGo or SpiceJet?",
+          "a": "Check the current transfer list in your India Membership Rewards account. Direct transfers to either airline are unverified here. Booking a flight with points is a separate redemption route."
+        },
+        {
+          "q": "Is the Amex MRCC worth having alongside a better rewards card?",
+          "a": "Compare the Amex bonuses you can earn on spending you already do, the redemptions you would use, and the renewal fee after any waiver. A second card can cover merchants that do not accept Amex."
+        },
+        {
+          "q": "Does Amex MRCC have any welcome bonus for new card holders?",
+          "a": "Amex displays a 4,000-point welcome offer subject to its terms. The issuer currently reports a pause in accepting new applications in India."
+        }
+      ],
+      "sources": [
+        [
+          "American Express product page and current application notice",
+          "https://www.americanexpress.com/in/credit-cards/membership-rewards-card/"
+        ],
+        [
+          "Membership Rewards card benefits and monthly milestones",
+          "https://www.americanexpress.com/in/benefits/membership-rewards-card/"
+        ],
+        [
+          "Most Important Terms and Conditions and membership fee waivers",
+          "https://www.americanexpress.com/content/dam/amex/in/legal/mitc/Lending_MITC_English.pdf"
+        ],
+        [
+          "Key facts and forex markup",
+          "https://www.americanexpress.com/content/dam/amex/in/legal/mitc/key_fact_Statement.pdf"
+        ]
+      ]
+    },
+    "axis-atlas": {
+      "values": [
+        "Travel rewards credit card",
+        "Visa. Axis’s product artwork shows Visa Signature. Check your issued card for the variant.",
+        "N/A on standard pricing",
+        "N/A for the Visa card",
+        "Subject to Axis Bank approval and its published eligibility criteria.",
+        "Check issuer terms for supplementary cards.",
+        "₹5,000 plus applicable tax",
+        "₹5,000 plus applicable tax from year two",
+        "No standard renewal fee waiver listed",
+        "N/A on standard pricing",
+        "3.5% of the foreign currency transaction value",
+        "3.5% on qualifying INR transactions under the issuer’s DCC terms",
+        "See Axis Bank’s applicable interest rate and late-payment schedule.",
+        "2.5% of the amount withdrawn, minimum ₹500",
+        "See issuer terms and repayment conditions.",
+        "EDGE Miles",
+        "2 EDGE Miles per ₹100 on other eligible spending and on eligible travel spending above the accelerated limit",
+        "5 EDGE Miles per ₹100 on eligible Travel EDGE, direct airline and eligible hotel transactions",
+        "₹2 lakh of combined eligible travel spend per month at 5 miles per ₹100. The 2-mile rate applies above that threshold.",
+        "Includes rent, wallet, government, insurance, fuel, utilities and telecom, and gold or jewellery under Axis’s stated rules. See issuer terms for earning and tier exclusions.",
+        "N/A. EDGE Miles cannot be encashed.",
+        "Axis lists ₹1 per EDGE Mile in its travel programme. Check the booking and applicable fee.",
+        "See the current Atlas redemption options from Axis.",
+        "Available through Travel EDGE. Partners, conversion rates and transfer limits vary.",
+        "₹99 per portal redemption or ₹199 per partner transfer, before applicable tax",
+        "Check the current programme terms and your miles balance for expiry.",
+        "2,500 EDGE Miles for eligible paid cards after a qualifying transaction within 37 days of issuance, for cards sourced from 20 April 2024.",
+        "After payment of the annual fee, Gold gets 2,500 EDGE Miles and Platinum gets 5,000. Silver has no annual miles benefit.",
+        "2,500 EDGE Miles at ₹3 lakh, another 2,500 at ₹7.5 lakh, and another 5,000 at ₹15 lakh of eligible anniversary-year spend.",
+        "Silver 8, Gold 12, Platinum 18 visits per year, subject to issuer access terms",
+        "Silver 4, Gold 6, Platinum 12 visits per year, subject to issuer access terms",
+        "See Axis’s tier and lounge access terms for guest eligibility.",
+        "Not verified",
+        "The standard Axis forex fee applies. Eligible international purchases can earn under the usual merchant and category rules.",
+        "Not verified for the standard Atlas card",
+        "Atlas tier benefits are separate from airline or hotel loyalty status. Status benefit unverified.",
+        "See Axis’s current dining offers and eligibility.",
+        "Not verified for a standard Atlas free-ticket benefit",
+        "Travel EDGE is an eligible travel booking route. General shopping portal benefits are unverified.",
+        "Check the issuer’s published fuel fee and waiver schedule. Fuel is excluded from EDGE Miles earning.",
+        "Not verified",
+        "Not verified",
+        "Not verified",
+        "Check the contactless symbol on your issued card.",
+        "See Axis Bank’s conversion eligibility and terms.",
+        "Not verified",
+        "Atlas tier and miles details are available in the Axis Bank app.",
+        "See the issuer’s terms for reporting and liability.",
+        "Not verified",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "How do EDGE Miles transfers work?",
+          "a": "Use Travel EDGE to transfer eligible EDGE Miles to a participating partner account. Check the partner conversion rate, availability, annual group limits and ₹199 transfer fee before confirming the transfer."
+        },
+        {
+          "q": "Is Atlas better than HDFC Regalia for travel?",
+          "a": "Atlas is designed around selected direct bookings, Travel EDGE and partner miles transfers. Regalia has a separate points programme. Compare the exact travel redemption, annual fee and lounge eligibility for your issued variant. The original Regalia is a legacy product rather than Regalia Gold."
+        },
+        {
+          "q": "Does Atlas have zero forex markup?",
+          "a": "No. Axis lists a 3.5% foreign currency transaction fee. International transactions billed in INR can also fall under a separate 3.5% dynamic currency conversion charge under the issuer’s terms."
+        }
+      ],
+      "sources": [
+        [
+          "Axis Atlas product page and charges",
+          "https://www.axis.bank.in/cards/credit-card/axis-bank-atlas-credit-card"
+        ],
+        [
+          "Atlas feature terms, spend threshold and welcome benefits",
+          "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-of-features-of-axis-bank-atlas-credit-card.pdf"
+        ],
+        [
+          "Axis Atlas tier and lounge benefits",
+          "https://www.axis.bank.in/cards/credit-card/axis-bank-atlas-credit-card/tiered-benefits"
+        ],
+        [
+          "Travel EDGE redemption and partner transfer terms",
+          "https://traveledge.axis.bank.in/travel/common/termsandcondition"
+        ]
+      ]
     }
   }
 }

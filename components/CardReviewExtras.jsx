@@ -2,6 +2,68 @@ import Link from "next/link";
 import details from "@/data/featured-card-details.json";
 
 export function CardCashbackExample({ cardId }) {
+  if (cardId === "axis-atlas") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">How the ₹2 lakh travel threshold changes your miles</h2>
+        <p>Suppose ₹2.5 lakh of qualifying travel spend posts in one month. Axis combines eligible Travel EDGE, direct airline and eligible hotel transactions when applying the accelerated limit.</p>
+        <dl className="side-sum">
+          <div className="row"><dt>First ₹2 lakh at 5 EDGE Miles per ₹100</dt><dd>10,000 EDGE Miles</dd></div>
+          <div className="row"><dt>Next ₹50,000 at 2 EDGE Miles per ₹100</dt><dd>1,000 EDGE Miles</dd></div>
+        </dl>
+        <p><strong>11,000 EDGE Miles in total.</strong> The rate drops above the threshold. A booking through a third-party travel agent may miss the accelerated tier altogether.</p>
+        <p>At the issuer’s listed ₹1 per mile for travel redemption, 11,000 miles would have ₹11,000 of gross value on a qualifying booking, before the portal fee. The annual fee, transfer fees and partner conversion rates are separate. Anniversary-year tiers and milestone rewards are separate from this monthly calculation.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "amex-mrcc") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">Two ways to earn the monthly bonus</h2>
+        <p>Assume all purchases qualify for standard rewards and are made in the same calendar month, in complete ₹50 earning blocks.</p>
+        <dl className="side-sum">
+          <div className="row"><dt>Four purchases of ₹1,500 each, ₹6,000 total</dt><dd>120 base + 1,000 bonus = 1,120 points</dd></div>
+          <div className="row"><dt>₹20,000 total, including those four purchases, with enrolment</dt><dd>400 base + 2,000 bonus = 2,400 points</dd></div>
+        </dl>
+        <p>One ₹20,000 purchase can meet the enrolled spend milestone, but it cannot meet the four-purchase milestone by itself. Amex lists an ₹8,000 Amazon voucher at 24,000 points. Check the redemption you would actually use before valuing the points.</p>
+        <p><strong>Compare the renewal cost separately.</strong> At 18% GST, ₹4,500 becomes ₹5,310 before any waiver. The renewal waiver uses the preceding membership year. Bonus eligibility uses calendar months.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "idfc-wow") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">What zero forex and 4X rewards mean on one trip</h2>
+        <p>Suppose eligible foreign-currency purchases convert to ₹40,000 in total and earn in complete ₹200 blocks. The bank adds no forex markup to those purchases. The network exchange rate still applies.</p>
+        <dl className="side-sum">
+          <div className="row"><dt>Points earned at 4 per ₹200</dt><dd>800 points</dd></div>
+          <div className="row"><dt>Gross value at ₹0.25 per point</dt><dd>₹200</dd></div>
+          <div className="row"><dt>One ₹99 redemption fee with 18% GST</dt><dd>₹116.82</dd></div>
+        </dl>
+        <p><strong>₹83.18 after one redemption fee</strong>, assuming the selected redemption accepts the full 800 points at the stated value. With a fixed fee per redemption, redeeming a larger balance can spread that fee over more points. Check the 24-month expiry before waiting.</p>
+        <p>The deposit stays pledged while the card is secured against it. Cash withdrawals and a terminal’s offer to convert the purchase into INR have separate costs, so check them before paying.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "sbi-simplyclick") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">What 2,100 Reward Points can buy</h2>
+        <p>Assume all purchases qualify, use complete ₹100 earning blocks and fall within the same calendar month with no prior cap use.</p>
+        <dl className="side-sum">
+          <div className="row"><dt>₹10,000 at eligible named partners</dt><dd>1,000 points</dd></div>
+          <div className="row"><dt>₹20,000 on other eligible online purchases</dt><dd>1,000 points</dd></div>
+          <div className="row"><dt>₹10,000 in other eligible purchases</dt><dd>100 points</dd></div>
+        </dl>
+        <p><strong>One ₹500 Amazon voucher, with 100 points left over</strong> at the catalogue’s 2,000-point price. The remaining points stay in your rewards account for a future redemption. This example excludes the membership fee and separate milestone vouchers.</p>
+        <p>SBI’s current booklet explicitly states the 10,000-point cap for the 5X tier. An earlier booklet also lists a separate cap for the 10X tier. Check your card’s 10X terms before using that rate in a high-spend estimate.</p>
+      </section>
+    );
+  }
+
   if (cardId === "hdfc-swiggy") {
     return (
       <section id="cashback-example" className="side-box">

@@ -649,6 +649,47 @@ main main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; 
   aspect-ratio: 613 / 387;
   object-fit: cover;
 }
+.card-illustration-wrap { flex-direction: column; align-items: center; gap: 18px; }
+.chero:has(.simplyclick-illustration) { padding-block: clamp(32px, 4.5vw, 55px); }
+.bigcard.simplyclick-illustration {
+  background:
+    radial-gradient(ellipse at 100% 8%, #e3a9ac57, transparent 55%),
+    linear-gradient(142deg, #a7626c, #894850 59%, #70373f);
+  color: #fff6f3;
+  isolation: isolate;
+  overflow: hidden;
+}
+.simplyclick-illustration::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: repeating-radial-gradient(ellipse at 100% 100%, transparent 0 19px, #f6b4b724 20px 21px, transparent 22px 32px);
+  mask-image: linear-gradient(115deg, transparent 35%, #000 90%);
+}
+.card-illustration-chip {
+  display: block;
+  width: 32px;
+  height: 24px;
+  margin-top: 30px;
+  border: 1px solid #fbdfbcba;
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, transparent 31%, #6d514340 32% 35%, transparent 36% 66%, #6d514340 67% 70%, transparent 71%),
+    linear-gradient(145deg, #edcda9, #be9777);
+}
+.card-illustration-label { color: var(--mut); font: 11px var(--mono); }
+@media (max-width: 560px) {
+  .bigcard.simplyclick-illustration { width: min(300px, 90%); padding: 17px; border-radius: 14px; }
+  .card-illustration-chip { margin-top: 14px; }
+}
+/* Axis supplies the Atlas image already angled, with transparent corners. */
+.reviewed-card-art[src="/cards/axis-atlas.webp"] {
+  transform: none;
+  box-shadow: none;
+  border-radius: 0;
+  filter: drop-shadow(0 24px 26px #190f3455);
+}
 .featured-card-review { min-width: 0; }
 .featured-card-review > * { margin-block: 0 24px !important; }
 .featured-card-review > [id] { scroll-margin-top: 110px; }

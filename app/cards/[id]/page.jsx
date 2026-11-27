@@ -44,7 +44,10 @@ function tocSections(card) {
   if (cardReviewDetails.cards[card.id]) items.push({ id: "card-features", label: "All card features" });
   if (ed?.verdict) items.push({ id: "verdict", label: "Verdict" });
   items.push({ id: "rewards", label: "Reward rates" });
-  if (cardReviewDetails.cards[card.id]) items.push({ id: "cashback-example", label: "Cashback example" });
+  if (cardReviewDetails.cards[card.id]) items.push({
+    id: "cashback-example",
+    label: ({ "sbi-simplyclick": "Voucher value example", "idfc-wow": "Travel and points example", "amex-mrcc": "Monthly points example", "axis-atlas": "Travel miles example" })[card.id] || "Cashback example",
+  });
   if (ed?.capMath) items.push({ id: "caps", label: "Cap terms" });
   if (card.partnerRates?.length) items.push({ id: "partners", label: "Partner rates" });
   items.push({ id: "proscons", label: "Pros & cons" });
@@ -73,6 +76,7 @@ export default function CardPage({ params }) {
   const ed = reviewedEditorial(card) || card.editorial || null;
   const toc = tocSections(card);
   const details = cardReviewDetails.cards[card.id];
+  const illustratedCard = card.id === "sbi-simplyclick";
   const faqs = details ? [...(ed?.faq || []), ...details.faqs] : ed?.faq;
 
   // Issuer caps use different categories and periods; a universal curve would
@@ -177,13 +181,15 @@ export default function CardPage({ params }) {
           </div>
 
           {/* Right column — card visual */}
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            {details ? <img className="reviewed-card-art" src={`/cards/${card.id}.webp`} alt={`${card.name} card artwork`} /> :
-            <div className="bigcard" style={{ background: `linear-gradient(140deg, ${card.color}cc 0%, ${card.color} 50%, ${card.color}99 115%)` }}>
+          <div className={illustratedCard ? "card-illustration-wrap" : undefined} style={{ display: "flex", justifyContent: "center" }}>
+            {details && !illustratedCard ? <img className="reviewed-card-art" src={`/cards/${card.id}.webp`} alt={`${card.name} card artwork`} /> :
+            <div className={illustratedCard ? "bigcard simplyclick-illustration" : "bigcard"}
+              style={illustratedCard ? undefined : { background: `linear-gradient(140deg, ${card.color}cc 0%, ${card.color} 50%, ${card.color}99 115%)` }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                 <span className="mono" style={{ fontSize: 11, opacity: 0.7, letterSpacing: ".12em" }}>{card.bank}</span>
                 <span className="mono" style={{ fontSize: 10, opacity: 0.6, letterSpacing: ".12em" }}>{card.network}</span>
               </div>
+              {illustratedCard && <span className="card-illustration-chip" aria-hidden="true" />}
               <div style={{ position: "absolute", bottom: 26, left: 26 }}>
                 <div className="disp" style={{ fontSize: 18, fontWeight: 500, opacity: 0.9 }}>{card.name}</div>
                 <div className="mono" style={{ fontSize: 10, opacity: 0.5, marginTop: 4 }}>
@@ -191,6 +197,7 @@ export default function CardPage({ params }) {
                 </div>
               </div>
             </div>}
+            {illustratedCard && <span className="card-illustration-label">Card illustration</span>}
           </div>
         </div>
       </div>
