@@ -1,3 +1,6 @@
+import CardFeatureTable from "@/components/CardFeatureTable";
+import { CardCashbackExample, CardReviewSources } from "@/components/CardReviewExtras";
+import cardReviewDetails from "@/data/featured-card-details.json";
 import { CARDS, CATEGORIES, isSourceReviewed, isEstimateReady } from "@/data/cards";
 import { reviewedEditorial } from "@/data/reviewed-editorial";
 import { notFound } from "next/navigation";
@@ -38,8 +41,10 @@ export async function generateMetadata({ params }) {
 function tocSections(card) {
   const ed = reviewedEditorial(card) || card.editorial || null;
   const items = [];
+  if (cardReviewDetails.cards[card.id]) items.push({ id: "card-features", label: "All card features" });
   if (ed?.verdict) items.push({ id: "verdict", label: "Verdict" });
   items.push({ id: "rewards", label: "Reward rates" });
+  if (cardReviewDetails.cards[card.id]) items.push({ id: "cashback-example", label: "Cashback example" });
   if (ed?.capMath) items.push({ id: "caps", label: "Cap terms" });
   if (card.partnerRates?.length) items.push({ id: "partners", label: "Partner rates" });
   items.push({ id: "proscons", label: "Pros & cons" });
@@ -48,6 +53,7 @@ function tocSections(card) {
   if (ed?.pairWith) items.push({ id: "combos", label: "Best combos" });
   if (ed?.faq) items.push({ id: "faq", label: "FAQ" });
   items.push({ id: "feemath", label: "Fees" });
+  if (cardReviewDetails.cards[card.id]) items.push({ id: "card-sources", label: "Issuer sources and tools" });
   return items;
 }
 
@@ -66,6 +72,8 @@ export default function CardPage({ params }) {
   const bestCategory = sorted[0]?.[0] || "";
   const ed = reviewedEditorial(card) || card.editorial || null;
   const toc = tocSections(card);
+  const details = cardReviewDetails.cards[card.id];
+  const faqs = details ? [...(ed?.faq || []), ...details.faqs] : ed?.faq;
 
   // Issuer caps use different categories and periods; a universal curve would
   // overstate rewards for cards whose accelerated rate needs a specific route.
@@ -102,9 +110,9 @@ export default function CardPage({ params }) {
       { "@type": "ListItem", position: 3, name: card.name, item: `https://www.assurefintech.com/cards/${card.id}` },
     ],
   };
-  const faqSchema = ed?.faq ? {
+  const faqSchema = faqs ? {
     "@context": "https://schema.org", "@type": "FAQPage",
-    mainEntity: ed.faq.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+    mainEntity: faqs.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
   } : null;
 
   return (
@@ -170,6 +178,7 @@ export default function CardPage({ params }) {
 
           {/* Right column — card visual */}
           <div style={{ display: "flex", justifyContent: "center" }}>
+            {details ? <img className="reviewed-card-art" src={`/cards/${card.id}.webp`} alt={`${card.name} card artwork`} /> :
             <div className="bigcard" style={{ background: `linear-gradient(140deg, ${card.color}cc 0%, ${card.color} 50%, ${card.color}99 115%)` }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                 <span className="mono" style={{ fontSize: 11, opacity: 0.7, letterSpacing: ".12em" }}>{card.bank}</span>
@@ -181,7 +190,7 @@ export default function CardPage({ params }) {
                   {card.fee === 0 ? "NO ANNUAL FEE" : `₹${card.fee.toLocaleString()}/YR`}
                 </div>
               </div>
-            </div>
+            </div>}
           </div>
         </div>
       </div>
@@ -242,7 +251,14 @@ export default function CardPage({ params }) {
         <div className="art-layout">
 
           {/* ──── MAIN COLUMN ──── */}
-          <div>
+          <div className={details ? "featured-card-review" : undefined}>
+            {details && <>
+              <details className="side-box card-mobile-index">
+                <summary>On this page</summary>
+                <div className="toc">{toc.map(({ id, label }) => <a key={id} href={`#${id}`}>{label}</a>)}</div>
+              </details>
+              <CardFeatureTable card={card} />
+            </>}
 
             {/* ── VERDICT ── */}
             {ed?.verdict && (
@@ -274,6 +290,8 @@ export default function CardPage({ params }) {
                 </div>
               </div>
             )}
+
+            {details && <CardCashbackExample cardId={card.id} />}
 
             {/* ── REWARD RATES GRID ── */}
             {card.availabilityNote && <aside style={{ marginBottom: 28, padding: 20, border: "1px solid var(--gold)", borderRadius: 13 }}><h2 style={{ fontSize: 18, marginBottom: 8 }}>Availability and migration</h2><p>{card.availabilityNote}</p><a href={card.availabilitySourceUrl || card.sourceUrl} target="_blank" rel="noopener noreferrer">Issuer availability source</a></aside>}
@@ -469,11 +487,11 @@ export default function CardPage({ params }) {
             )}
 
             {/* ── FAQ ── */}
-            {ed?.faq && (
+            {faqs && (
               <div id="faq" style={{ marginBottom: 56 }}>
                 <div className="k accent" style={{ marginBottom: 20 }}>FREQUENTLY ASKED</div>
                 <div className="faq">
-                  {ed.faq.map((item, i) => (
+                  {faqs.map((item, i) => (
                     <details key={i}>
                       <summary>{item.q}</summary>
                       <p>{item.a}</p>
@@ -554,6 +572,7 @@ export default function CardPage({ params }) {
               </a>
             </div>
 
+            {details && <CardReviewSources cardId={card.id} />}
           </div>
 
           {/* ──── SIDEBAR ──── */}

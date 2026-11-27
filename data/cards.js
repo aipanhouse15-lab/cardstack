@@ -116,7 +116,7 @@ The ₹12,500 renewal fee is waived after ₹10 lakh spend in the preceding 12 m
       { name: "Amazon, Flipkart, Myntra", rate: "5% cashback" },
       { name: "Tata CLiQ, Uber, BookMyShow, Sony LIV, Cult.fit", rate: "5% cashback" },
     ],
-    pointsInfo: "5% CashPoints on 10 listed online merchants (₹1,000 per calendar-month cap); 1% on other eligible spends (separate ₹1,000 per-month cap); statement redemption 1 CashPoint = ₹1. The current card-specific terms state no minimum transaction value; merchant IDs and settlement timing govern eligible posting.",
+    pointsInfo: "5% CashPoints on 10 listed online merchants (₹1,000 per calendar-month cap); 1% on other eligible spends (separate ₹1,000 per-month cap); statement redemption 1 CashPoint = ₹1. HDFC’s personal credit card terms calculate CashPoints in complete ₹100 transaction blocks. Merchant IDs and settlement timing govern eligible posting.",
     highlights: ["5% on 10 listed online merchants", "Separate ₹1,000 caps per calendar month", "₹1L quarterly milestone: choose ₹1,000 voucher or 1 lounge voucher", "1,000 welcome CashPoints if the joining membership fee is paid", "₹1L renewal-fee waiver spend"],
     pros: ["5% on 10 named online merchants", "₹1,000 renewal fee waived at ₹1L annual spend", "Quarterly milestone includes lounge-voucher choice"],
     cons: ["₹1,000 cap per calendar month on each cashback bucket", "Quarterly lounge access is an option, not automatic", "Fuel and some transaction types excluded"],

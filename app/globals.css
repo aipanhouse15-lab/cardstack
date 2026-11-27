@@ -551,3 +551,118 @@ main main h2 { margin: 0 0 12px; }
 main main h3 { margin: 14px 0 8px; }
 main main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; border-radius: 12px; margin: 14px 0; }
 .score svg, .bigcard svg, nav svg, header svg, footer svg { background: transparent !important; border: none !important; border-radius: 0 !important; margin: 0 !important; padding: 0 !important; }
+
+/* Two-card review pilot. The button only renders on the two reviewed routes. */
+
+:root:has(.card-review-theme[data-theme="light"]) {
+  color-scheme: light;
+  --bg: #f7f4ee;
+  --bg2: #f1ede4;
+  --raise: #fffaf3cc;
+  --raise2: #eee8f8;
+  --hair: #32264422;
+  --hair2: #32264444;
+  --ivory: #251f2c;
+  --mut: #574e59;
+  --dim: #665e69;
+  --red: #a2332d;
+  --red-dim: #bc3a2b12;
+  --green: #086b48;
+  --green-dim: #16875814;
+  --gold: #82580e;
+  --c-card: #6845a8;
+  --c-loan: #235f93;
+  --c-ins: #a7326d;
+  --c-fd: #80520c;
+  --c-tax: #096d58;
+  --c-mf: #176977;
+  --bg-soft: #f4efe8;
+  --bg-input: #fffcf7;
+  --shadow: 0 4px 20px #35244618;
+}
+:root:has(.card-review-theme[data-theme="light"]) nav { background: #fffaf3c9; }
+:root:has(.card-review-theme[data-theme="light"]) .ticker { background: #ede7df; }
+:root:has(.card-review-theme[data-theme="light"]) .nav-cta { background: #282133; color: #fffaf3; }
+:root:has(.card-review-theme[data-theme="light"]) .nav-cta:hover { background: #6845a8; }
+:root:has(.card-review-theme[data-theme="light"]) .mobile-nav a[aria-current="page"] { background: #282133; color: #fffaf3; }
+:root:has(.card-review-theme[data-theme="light"]) .prose { color: var(--mut); }
+:root:has(.card-review-theme[data-theme="light"]) .verd { background: linear-gradient(140deg, #eee7f9e8, #eff5e9dd); }
+:root:has(.card-review-theme[data-theme="light"]) .receipt { box-shadow: 0 24px 60px #39304b16; }
+
+
+:root:has(.card-review-theme[data-theme="light"]) .mob-apply { background: #fffaf3e8; }
+:root:has(.card-review-theme[data-theme="light"]) a[style*="color:#07120c"] { color: #fff !important; }
+:root:has(.card-review-theme[data-theme="light"]) .cv-head { background: #efe9f5; }
+:root:has(.card-review-theme[data-theme="light"]) .cv-bar { background: #32264416; }
+.card-review-theme {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--hair2);
+  border-radius: 50%;
+  background: var(--raise);
+  color: var(--ivory);
+  font-size: 18px;
+  line-height: 1;
+}
+.nav-in .card-review-theme { margin-inline-start: -24px; }
+@media (min-width: 881px) and (max-width: 1040px) {
+  .nav-in:has(.card-review-theme), .nav-in:has(.card-review-theme) .nav-links { gap: 16px; }
+}
+@media (max-width: 920px) {
+  .nav-in .card-review-theme { margin-inline-start: auto; }
+}
+
+:root:has(.card-review-theme[data-theme="light"]) {
+  --ivory: #141217;
+  --mut: #211d24;
+  --dim: #392f3d;
+}
+:root:has(.card-review-theme[data-theme="light"]) .chero h1 span {
+  color: var(--ivory) !important;
+}
+:root:has(.card-review-theme) .chero {
+  padding-block: clamp(32px, 4.5vw, 55px);
+}
+.reviewed-card-art {
+  display: block;
+  width: min(400px, 100%);
+  height: auto;
+  border-radius: 21px;
+  transform: rotate(-3.5deg);
+  box-shadow: 0 36px 68px #190f3447;
+}
+.featured-card-review { min-width: 0; }
+.featured-card-review > * { margin-block: 0 24px !important; }
+.featured-card-review > [id] { scroll-margin-top: 110px; }
+.featured-card-review p { font-size: 16px !important; line-height: 1.65; }
+.featured-card-review #cashback-example p + p { margin-top: 8px; }
+.card-review-heading { font: 500 clamp(23px, 2.5vw, 31px)/1.2 var(--disp); margin-bottom: 12px; }
+.card-feature-table table { width: 100%; table-layout: fixed; border-collapse: collapse; margin: 14px 0; }
+.card-feature-table th, .card-feature-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--hair);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+.card-feature-table th { font-weight: 600; }
+.card-feature-table thead th:first-child { width: 39%; }
+.card-feature-table .feature-group th { background: var(--bg2); color: var(--gold); }
+.card-feature-table a, #card-sources a { color: var(--gold); text-decoration: underline; }
+#card-sources ul { padding-left: 20px; }
+.card-mobile-index { display: none; }
+@media (max-width: 1020px) {
+  .card-mobile-index { display: block; }
+  .card-mobile-index summary { cursor: pointer; font-weight: 600; }
+  .art-layout:has(.featured-card-review) .sidebar > .side-box:has(.toc) { display: none; }
+}
+@media (max-width: 560px) {
+  .reviewed-card-art { width: min(235px, 90%); border-radius: 14px; }
+  .featured-card-review .verd > .score { display: none; }
+  .featured-card-review .verd > div > div:last-child { grid-template-columns: minmax(0, 1fr) !important; }
+  .card-feature-table { padding: 15px; }
+  .card-feature-table th, .card-feature-table td { padding-inline: 6px; font-size: 14px; }
+}

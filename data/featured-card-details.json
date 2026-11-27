@@ -1,0 +1,246 @@
+{
+  "groups": {
+    "Card and eligibility": [
+      "Card type",
+      "Network",
+      "Secured against a deposit",
+      "RuPay credit card on UPI",
+      "Eligibility",
+      "Add-on card"
+    ],
+    "Fees and charges": [
+      "Joining fee",
+      "Renewal fee",
+      "Renewal fee waiver",
+      "Lifetime-free offer",
+      "Foreign currency markup",
+      "Dynamic currency conversion",
+      "Interest and late payment fees",
+      "Cash advance fee",
+      "Interest-free period"
+    ],
+    "Rewards and redemption": [
+      "Reward currency",
+      "Base earn rate",
+      "Accelerated earn rate",
+      "Reward caps",
+      "Excluded spend",
+      "Statement credit",
+      "Travel portal redemption",
+      "Catalogue redemption",
+      "Airline miles redemption",
+      "Redemption fee",
+      "Points expiry",
+      "Welcome benefit",
+      "Renewal benefit",
+      "Spend milestone"
+    ],
+    "Travel and lifestyle": [
+      "Domestic airport lounges",
+      "International airport lounges",
+      "Guest lounge access",
+      "Railway lounges",
+      "International spending programme",
+      "Travel insurance",
+      "Airline or hotel status",
+      "Dining offers",
+      "Movie tickets",
+      "Shopping portal offers",
+      "Fuel surcharge waiver",
+      "Golf access",
+      "Concierge",
+      "Subscriptions or memberships"
+    ],
+    "Payments, servicing and protection": [
+      "Contactless payments",
+      "EMI conversion",
+      "Balance transfer",
+      "Digital card controls",
+      "Lost-card liability",
+      "Purchase protection",
+      "Extended warranty"
+    ]
+  },
+  "cards": {
+    "hdfc-millennia": {
+      "values": [
+        "Lifestyle rewards credit card",
+        "Visa / Mastercard per the review. Confirm the network when issued.",
+        "N/A",
+        "N/A for the Visa and Mastercard versions shown here",
+        "HDFC lists ages 21–40. Net monthly income over ₹35,000 for salaried applicants or annual ITR income over ₹6 lakh for self-employed applicants.",
+        "Not verified",
+        "₹1,000 + applicable tax",
+        "₹1,000 + applicable tax",
+        "Spend over ₹1 lakh in the year before renewal, per the issuer’s fee schedule",
+        "N/A on the standard published pricing",
+        "Not verified",
+        "1.75% on qualifying INR transactions at overseas or internationally registered merchants. See issuer terms.",
+        "See the issuer’s personal credit card terms for the applicable rates and slabs.",
+        "See the issuer’s personal credit card terms.",
+        "Up to 50 days, subject to merchant submission and payment terms",
+        "CashPoints",
+        "1% on other eligible purchases",
+        "5% at ten named online merchants",
+        "1,000 CashPoints per calendar month at the 5% rate and a separate 1,000 at the 1% rate",
+        "Includes fuel, EMI, wallet loads, rent and government payments. See reward terms for the full list.",
+        "₹1 per CashPoint. 500 points minimum and 3,000 points per calendar month.",
+        "₹0.30 per point for eligible flights and hotels via SmartBuy",
+        "Up to ₹0.30 per point",
+        "HDFC lists an airmiles option at ₹0.30 per reward point. Specific transfer partners and ratios are unverified.",
+        "₹50 + applicable tax per statement-credit redemption",
+        "Two years",
+        "1,000 CashPoints on payment of the joining fee",
+        "Not verified",
+        "Spend ₹1 lakh in a calendar quarter and choose a ₹1,000 gift voucher or one eligible domestic lounge voucher",
+        "One voucher as a quarterly milestone option, in place of the gift voucher",
+        "N/A on the standard published benefits",
+        "Not verified",
+        "N/A on the standard published benefits",
+        "HDFC lists a separate Global Value Proposition programme with activation and its own terms",
+        "Not verified",
+        "N/A on the standard published benefits",
+        "HDFC lists a Swiggy Dineout discount with an offer code. Offer terms apply.",
+        "BookMyShow is a named 5% merchant. A separate free-ticket benefit is unverified.",
+        "HDFC lists additional offers through SmartBuy and PayZapp Shop. Offer terms apply.",
+        "1% on eligible fuel purchases of ₹400–₹5,000, capped at ₹250 per statement cycle",
+        "N/A on the standard published benefits",
+        "N/A on the standard published benefits",
+        "Not verified",
+        "Available",
+        "HDFC lists Smart EMI on eligible purchases",
+        "Not verified",
+        "Available via HDFC MyCards",
+        "HDFC lists zero liability on fraudulent transactions if the loss is reported immediately, subject to terms",
+        "Not verified",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Does HDFC Millennia cashback work on Swiggy orders under ₹150?",
+          "a": "HDFC’s current MITC uses complete ₹100 transaction blocks. A qualifying direct Swiggy purchase below ₹100 earns no CashPoints under that rule. A purchase of ₹100–₹149 can earn on the first ₹100 if the merchant ID is eligible and there is cap remaining."
+        },
+        {
+          "q": "Is HDFC Millennia cashback real cashback or reward points?",
+          "a": "You earn HDFC CashPoints. You can redeem them for statement credit at ₹1 per CashPoint, subject to a 500-point minimum, a 3,000-point calendar-month redemption ceiling and ₹50 plus tax per redemption. Other redemption routes have different values."
+        },
+        {
+          "q": "Can I get the HDFC Millennia fee waived?",
+          "a": "HDFC lists ₹1,000 plus applicable tax for renewal. Its fee schedule says to spend over ₹1 lakh in the year before renewal for the waiver. Confirm qualifying spend and the renewal period on your account. The separate quarterly milestone is a different benefit."
+        },
+        {
+          "q": "Is HDFC Millennia better than Amazon Pay ICICI?",
+          "a": "For eligible Amazon.in goods, Amazon Pay ICICI can earn 5% with Prime or 3% without it, as Amazon Pay balance. Millennia’s 5% tier also covers nine other listed merchants, but they draw from the same calendar-month cap. Compare both on your own basket after membership and redemption costs."
+        },
+        {
+          "q": "What happens after I hit the ₹1,000 monthly cap?",
+          "a": "The named-merchant and other eligible purchase buckets each have a 1,000-CashPoint calendar-month cap. When you exhaust the 5% bucket, further purchases in that bucket do not switch to 1%. Purchases eligible for the separate 1% bucket can still earn until its own cap. Use the settlement date to track each bucket."
+        }
+      ],
+      "sources": [
+        [
+          "HDFC Millennia product page",
+          "https://www.hdfc.bank.in/credit-cards/millennia-credit-card"
+        ],
+        [
+          "Millennia card terms",
+          "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf"
+        ],
+        [
+          "HDFC personal card terms",
+          "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf"
+        ],
+        [
+          "Report a change or correction",
+          "https://www.assurefintech.com/contact"
+        ]
+      ]
+    },
+    "sbi-cashback": {
+      "values": [
+        "Cashback credit card",
+        "Visa in the variant reviewed. Confirm the network on your issued card.",
+        "N/A on standard published terms",
+        "Depends on the issued network. RuPay support for this product is unverified.",
+        "Subject to SBI Card approval. A card-specific income minimum is unverified.",
+        "Not verified",
+        "₹999 + applicable tax",
+        "₹999 + applicable tax",
+        "₹2 lakh or more in the preceding year",
+        "N/A on standard published pricing",
+        "Not verified",
+        "See SBI Card’s applicable charges for INR transactions at overseas merchants.",
+        "See SBI Card’s Most Important Terms and Conditions.",
+        "See SBI Card’s Most Important Terms and Conditions.",
+        "See SBI Card’s Most Important Terms and Conditions.",
+        "Cashback in rupees",
+        "1% on eligible offline point-of-sale purchases",
+        "5% on eligible online purchases",
+        "₹2,000 online and ₹2,000 offline per statement cycle. ₹4,000 combined.",
+        "Includes utilities, insurance, fuel, rent, wallet loads, education, jewellery, railways, eligible-category exclusions in the terms, merchant and Flexipay EMI, digital gaming, tolls and government transactions.",
+        "Automatic credit to the card account within two working days of statement generation",
+        "N/A",
+        "N/A",
+        "N/A",
+        "N/A for automatically credited cashback",
+        "N/A. Cashback is automatically credited and does not expire.",
+        "Not verified",
+        "Not verified",
+        "N/A for a separate standard spend reward. See the renewal fee waiver row.",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "Not verified",
+        "Not verified",
+        "N/A on standard published benefits",
+        "Eligible dining may earn by transaction channel. A standing dining discount is unverified.",
+        "Eligible purchases may earn by channel. A free-ticket benefit is unverified.",
+        "N/A for a required portal. The 5% rate depends on the eligible transaction channel.",
+        "1% on eligible domestic fuel transactions of ₹500–₹3,000, up to ₹100 per billing statement",
+        "N/A on standard published benefits",
+        "N/A on standard published benefits",
+        "Not verified",
+        "Not verified for the card variant shown",
+        "Flexipay is subject to eligibility and converted purchases are excluded from cashback",
+        "Subject to issuer eligibility. See SBI Card terms.",
+        "Cashback can be viewed on the SBI Card website or app",
+        "See SBI Card’s cardholder agreement.",
+        "Not verified",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Is SBI Cashback still worth it after the April 2026 changes?",
+          "a": "It can be if your eligible online shopping outweighs the fee. The 5% bucket reaches its cap at ₹40,000 in a statement cycle. Compare the rewards on any online spend beyond that amount separately."
+        },
+        {
+          "q": "Does SBI Cashback give 5% on Swiggy or Zomato?",
+          "a": "A direct order can qualify if SBI Card codes it as an eligible online purchase and there’s room in the online cap. Wallet loads and other excluded transactions earn nothing."
+        },
+        {
+          "q": "Is the cashback real money or points?",
+          "a": "It is a credit to the card account, applied automatically within two working days of statement generation. There are no points to redeem."
+        },
+        {
+          "q": "How does SBI Cashback compare with HDFC Millennia?",
+          "a": "SBI Cashback applies its 5% rate to eligible online transactions across merchants. HDFC Millennia limits its 5% tier to ten named merchants and pays in CashPoints. Millennia also has an optional domestic lounge voucher tied to its quarterly spend milestone."
+        }
+      ],
+      "sources": [
+        [
+          "SBI Cashback product page and fees",
+          "https://www.sbicard.com/en/personal/credit-cards/cashback-sbi-card.html"
+        ],
+        [
+          "April 2026 changes to caps and exclusions",
+          "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf"
+        ],
+        [
+          "SBI Card FAQ on posting, statement credit and reversals",
+          "https://www.sbicard.com/en/faq/cashback-sbi-card-faq.page"
+        ]
+      ]
+    }
+  }
+}
