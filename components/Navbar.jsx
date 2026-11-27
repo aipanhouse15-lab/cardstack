@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import CardReviewThemeToggle from "./CardReviewThemeToggle";
+import ThemeToggle from "./ThemeToggle";
 
 const TICKER_ITEMS = [
   { text: "Worked examples added to loan, tax, insurance, savings and mutual-fund guides", tag: "PRACTICAL GUIDES", tagClass: "t-grn", date: "OCT 2026" },
@@ -66,7 +66,7 @@ export default function Navbar() {
           <Link href="/smart-swipe" className="nav-cta">
             Find your card →
           </Link>
-          {["/cards/hdfc-millennia", "/cards/sbi-cashback"].includes(pathname) && <CardReviewThemeToggle />}
+          <ThemeToggle />
         </div>
         <div className="mobile-nav" aria-label="Primary navigation">
           {NAV_LINKS.map((link) => (
