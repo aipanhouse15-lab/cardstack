@@ -371,14 +371,34 @@ export default function CardPage({ params }) {
                   {ed?.capMath ? ed.capMath.title.toUpperCase() : "HOW CAPS AFFECT YOUR EFFECTIVE RATE"}
                 </div>
 
-                {ed?.capMath && (
-                  <div className="prose" style={{ marginBottom: 24 }}>
-                    {(ed.capMath.body || "").split("\n\n").map((para, i) => (
-                      <p key={i}>{para}</p>
-                    ))}
-                  </div>
-                )}
+                <div className="prose" style={{ marginBottom: 24 }}>
+                  {(ed.capMath.body || "").split("\n\n").map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
 
+                {ed.capMath.examples && (
+                  <table className="cap-example-table" aria-label={`${card.name} cap examples`}>
+                    <thead>
+                      <tr>
+                        {ed.capMath.examples.columns.map(column => <th key={column} scope="col">{column}</th>)}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {ed.capMath.examples.rows.map(([label, ...values], i) => (
+                        <tr key={i}>
+                          <th scope="row">{label}</th>
+                          {values.map((value, j) => <td key={j}>{value}</td>)}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                )}
+                {ed.capMath.source && (
+                  <a className="cap-source" href={ed.capMath.source[1]} target="_blank" rel="noopener noreferrer">
+                    {ed.capMath.source[0]} ↗
+                  </a>
+                )}
               </div>
             )}
 

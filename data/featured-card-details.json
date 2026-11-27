@@ -153,8 +153,79 @@
         [
           "Report a change or correction",
           "https://www.assurefintech.com/contact"
+        ],
+        [
+          "SBI Card ELITE fees, rewards and movies",
+          "https://www.sbicard.com/en/personal/credit-cards/sbi-card-elite.html"
         ]
-      ]
+      ],
+      "pairWith": [
+        {
+          "combo": "Millennia + Axis ACE",
+          "fee": "₹1,499 in standard renewal fees before tax and waivers",
+          "reason": "Use Millennia for eligible direct purchases at its named merchants. Use ACE for listed bills paid through Google Pay on Android and eligible other purchases. ACE’s 5% and 4% routes share one ₹500 statement cap.",
+          "cardId": "axis-ace"
+        },
+        {
+          "combo": "Millennia + Amazon Pay ICICI",
+          "fee": "₹1,000 in standard renewal fees before tax and waivers",
+          "reason": "Use Amazon Pay ICICI for eligible Amazon.in retail purchases at 5% with Prime or 3% without Prime. This leaves Millennia’s shared 1,000-CashPoint cap for other named merchants. ICICI credits earnings to Amazon Pay balance.",
+          "cardId": "amazon-icici"
+        },
+        {
+          "combo": "Millennia + SBI Card ELITE",
+          "fee": "₹5,999 in standard renewal fees before tax and waivers",
+          "reason": "Use Millennia for its named online merchants. If you already hold SBI Card ELITE, compare the dining and grocery points and the BookMyShow benefit against its much higher fee. Check the movie booking rules and how you would redeem the points.",
+          "cardId": "sbi-elite"
+        }
+      ],
+      "capMath": {
+        "title": "How Millennia’s two calendar-month caps work",
+        "body": "The ten named online merchants share one 1,000-CashPoint limit at 5% each calendar month. ₹10,000 in eligible Amazon purchases and ₹10,000 in eligible Swiggy purchases can use the whole limit if both settle in the same calendar month. Further purchases in that tier earn no additional CashPoints.\n\nOther eligible spending earns 1% up to its own 1,000-CashPoint limit. The examples below cover only the 5% tier. The last column values each CashPoint at ₹1 against the statement before redemption charges and ignores transaction-level adjustments.",
+        "examples": {
+          "columns": [
+            "Eligible 5% spend",
+            "CashPoints earned",
+            "Statement value rate"
+          ],
+          "rows": [
+            [
+              "₹5,000",
+              "250",
+              "5%"
+            ],
+            [
+              "₹10,000",
+              "500",
+              "5%"
+            ],
+            [
+              "₹20,000",
+              "1,000",
+              "5%"
+            ],
+            [
+              "₹25,000",
+              "1,000",
+              "4%"
+            ],
+            [
+              "₹50,000",
+              "1,000",
+              "2%"
+            ],
+            [
+              "₹1,00,000",
+              "1,000",
+              "1%"
+            ]
+          ]
+        },
+        "source": [
+          "Millennia card terms",
+          "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/millennia-credit-card/pdf/millennia-tnc-20th-jul26.pdf"
+        ]
+      }
     },
     "sbi-cashback": {
       "values": [
@@ -240,7 +311,68 @@
           "SBI Card FAQ on posting, statement credit and reversals",
           "https://www.sbicard.com/en/faq/cashback-sbi-card-faq.page"
         ]
-      ]
+      ],
+      "pairWith": [
+        {
+          "combo": "SBI Cashback + Axis ACE",
+          "fee": "₹1,498 in standard renewal fees before tax and waivers",
+          "reason": "Use SBI Cashback for eligible online purchases up to its ₹2,000 online cap per statement cycle. Compare ACE for listed utility payments via Google Pay on Android and for eligible purchases that earn its 1.5% base rate.",
+          "cardId": "axis-ace"
+        },
+        {
+          "combo": "SBI Cashback + Amazon Pay ICICI",
+          "fee": "₹999 in standard renewal fees before tax and waivers",
+          "reason": "Move eligible Amazon.in purchases to Amazon Pay ICICI if its 5% Prime or 3% non-Prime rate and Amazon Pay balance suit you. That leaves SBI’s ₹2,000 online cap available for other eligible purchases.",
+          "cardId": "amazon-icici"
+        }
+      ],
+      "capMath": {
+        "title": "The two SBI Cashback statement caps",
+        "body": "From 1 April 2026, SBI split the statement-cycle limit into ₹2,000 for eligible online purchases at 5% and ₹2,000 for eligible offline point-of-sale purchases at 1%. Online spending of ₹40,000 fills the online cap. Offline spending of ₹2 lakh fills the separate offline cap. The two limits sum to ₹4,000, and unused room in one category cannot be used in the other.\n\nUse the posting date to check which cycle gets the transaction. Digital gaming, tolls and government transactions joined the excluded categories in April 2026. The examples below assume all purchases are eligible online transactions in one cycle and exclude refunds and reversals.",
+        "examples": {
+          "columns": [
+            "Eligible online spend",
+            "Cashback after cap",
+            "Effective rate"
+          ],
+          "rows": [
+            [
+              "₹5,000",
+              "₹250",
+              "5%"
+            ],
+            [
+              "₹10,000",
+              "₹500",
+              "5%"
+            ],
+            [
+              "₹25,000",
+              "₹1,250",
+              "5%"
+            ],
+            [
+              "₹40,000",
+              "₹2,000",
+              "5%"
+            ],
+            [
+              "₹50,000",
+              "₹2,000",
+              "4%"
+            ],
+            [
+              "₹1,00,000",
+              "₹2,000",
+              "2%"
+            ]
+          ]
+        },
+        "source": [
+          "April 2026 changes to caps and exclusions",
+          "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/cashback-revised.pdf"
+        ]
+      }
     },
     "axis-ace": {
       "values": [
@@ -334,7 +466,69 @@
           "August 2026 changes to fees and exclusions",
           "https://campaign.axis.bank.in/generic/terms-and-conditions-generic-all.pdf"
         ]
-      ]
+      ],
+      "pairWith": [
+        {
+          "combo": "Axis ACE + HDFC Millennia",
+          "fee": "₹1,499 in standard renewal fees before tax and waivers",
+          "reason": "Use Millennia for eligible direct purchases at its ten named merchants. Use ACE for eligible Google Pay bills and keep track of its separate 1.5% tier on other eligible spending. Compare which shared cap has room before routing food-delivery orders.",
+          "cardId": "hdfc-millennia"
+        },
+        {
+          "combo": "Axis ACE + Amazon Pay ICICI",
+          "fee": "₹499 in standard renewal fees before tax and waivers",
+          "reason": "Use Amazon Pay ICICI for eligible Amazon.in orders at 5% with Prime or 3% without Prime. Use ACE where its payment-route and merchant rules qualify, including listed bills via Google Pay on Android.",
+          "cardId": "amazon-icici"
+        },
+        {
+          "combo": "Axis ACE + HDFC Regalia",
+          "fee": "₹2,999 in standard renewal fees before tax and waivers",
+          "reason": "For existing Regalia holders, use Regalia where you can use the SmartBuy travel redemption or meet its lounge conditions. Compare ACE for eligible everyday domestic spending. HDFC has stopped sourcing the legacy Regalia.",
+          "cardId": "hdfc-regalia"
+        }
+      ],
+      "capMath": {
+        "title": "How ACE’s shared ₹500 cap fills",
+        "body": "Listed utility payments through Google Pay on Android earn 5%. Eligible Swiggy, Zomato and Ola purchases earn 4%. These transactions share one ₹500 cap per statement cycle. Once the cap fills, additional purchases in those accelerated categories earn no further cashback in that cycle.\n\nThe uncapped 1.5% tier applies to other eligible purchases. For example, ₹10,000 in that tier earns ₹150 even when the accelerated cap is full. The table covers the two accelerated routes only and ignores transaction-level rounding and reversals.",
+        "examples": {
+          "columns": [
+            "Eligible Google Pay bills",
+            "Eligible 4% purchases",
+            "Accelerated cashback"
+          ],
+          "rows": [
+            [
+              "₹5,000",
+              "₹5,000",
+              "₹450"
+            ],
+            [
+              "₹10,000",
+              "₹0",
+              "₹500"
+            ],
+            [
+              "₹0",
+              "₹12,500",
+              "₹500"
+            ],
+            [
+              "₹6,000",
+              "₹7,500",
+              "₹500"
+            ],
+            [
+              "₹25,000",
+              "₹0",
+              "₹500"
+            ]
+          ]
+        },
+        "source": [
+          "Cashback terms, cap and credit timing",
+          "https://cug.axisbank.com/docs/default-source/default-document-library/axis-bank-ace-credit-card-tncs.pdf"
+        ]
+      }
     },
     "amazon-icici": {
       "values": [
@@ -424,6 +618,26 @@
           "ICICI Bank announcement on forex and separate Amazon Pay travel benefits",
           "https://www.icici.bank.in/about-us/news-room/2025/amazon-pay-and-icici-bank-renew-partnership-enhance-indias-most-adopted-co-branded-credit-card"
         ]
+      ],
+      "pairWith": [
+        {
+          "combo": "Amazon Pay ICICI + Flipkart Axis",
+          "fee": "₹500 in standard renewal fees before tax and waivers",
+          "reason": "Use Amazon Pay ICICI for eligible Amazon.in purchases at the Prime or non-Prime rate. Use Flipkart Axis at eligible Flipkart, Myntra and Cleartrip merchants. Each of those three merchants has its own ₹4,000 statement-quarter cap.",
+          "cardId": "axis-flipkart"
+        },
+        {
+          "combo": "Amazon Pay ICICI + Axis ACE",
+          "fee": "₹499 in standard renewal fees before tax and waivers",
+          "reason": "Keep eligible Amazon purchases on Amazon Pay ICICI. Use ACE for listed bills paid through Google Pay on Android or eligible Swiggy, Zomato and Ola spending. Those two accelerated routes share its ₹500 statement cap.",
+          "cardId": "axis-ace"
+        },
+        {
+          "combo": "Amazon Pay ICICI + HDFC Millennia",
+          "fee": "₹1,000 in standard renewal fees before tax and waivers",
+          "reason": "Eligible Amazon purchases can earn 5% with Prime or 3% without Prime on Amazon Pay ICICI. Moving those purchases can save Millennia’s shared 1,000-CashPoint cap for eligible Swiggy, Zomato, Flipkart and other named merchants.",
+          "cardId": "hdfc-millennia"
+        }
       ]
     },
     "hdfc-swiggy": {
@@ -506,7 +720,63 @@
           "HDFC migration FAQ for original Swiggy cardholders",
           "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-hdfc-bank-credit-card/pdf/faq-swiggy-migration-29-09-2026.pdf"
         ]
-      ]
+      ],
+      "pairWith": [
+        {
+          "combo": "Original HDFC Swiggy + Axis ACE",
+          "fee": "₹999 in standard renewal fees before tax and waivers",
+          "reason": "While you hold the original Swiggy card, use it for eligible in-app orders of ₹249 or more. ACE can cover eligible utility bills through Google Pay on Android and qualifying Zomato orders, subject to its shared cap. Recheck the split after any ORNGE or BLCK migration.",
+          "cardId": "axis-ace"
+        },
+        {
+          "combo": "Original HDFC Swiggy + Amazon Pay ICICI",
+          "fee": "₹500 in standard renewal fees before tax and waivers",
+          "reason": "Use the original Swiggy card for eligible Swiggy purchases before migration. Amazon Pay ICICI can cover eligible Amazon.in shopping at 5% with Prime or 3% without Prime, with earnings in Amazon Pay balance.",
+          "cardId": "amazon-icici"
+        }
+      ],
+      "capMath": {
+        "title": "Three separate billing-cycle caps on the original Swiggy card",
+        "body": "Eligible Swiggy app purchases earn 10% up to ₹1,500 per billing cycle. Eligible online shopping earns 5% up to a separate ₹1,500. Other eligible purchases earn 1% up to ₹500. The caps are applied separately, and excess spend in an accelerated tier does not switch to the 1% tier.\n\nEligible Swiggy app transactions require at least ₹249 each. The 5% and 1% tiers require at least ₹100 per eligible transaction. The examples show the two accelerated tiers only. They apply while you hold the original card. If HDFC migrates you, check your ORNGE or BLCK terms.",
+        "examples": {
+          "columns": [
+            "Eligible Swiggy spend",
+            "Eligible 5% online spend",
+            "Cashback from both tiers"
+          ],
+          "rows": [
+            [
+              "₹5,000",
+              "₹0",
+              "₹500"
+            ],
+            [
+              "₹10,000",
+              "₹10,000",
+              "₹1,500"
+            ],
+            [
+              "₹15,000",
+              "₹0",
+              "₹1,500"
+            ],
+            [
+              "₹25,000",
+              "₹10,000",
+              "₹2,000"
+            ],
+            [
+              "₹15,000",
+              "₹30,000",
+              "₹3,000"
+            ]
+          ]
+        },
+        "source": [
+          "Original card terms, including the minimum spends and separate caps",
+          "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/swiggy-hdfc-bank-credit-card/pdf/terms-and-conditions-swiggy-hdfc-bank-credit-card-26052026.pdf"
+        ]
+      }
     },
     "sbi-simplyclick": {
       "values": [
@@ -596,6 +866,20 @@
           "Welcome voucher terms",
           "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/personal/credit-cards/value-savings/simplyclick/simplyclick-welcome.pdf"
         ]
+      ],
+      "pairWith": [
+        {
+          "combo": "SimplyCLICK + Amazon Pay ICICI",
+          "fee": "₹499 in standard renewal fees before tax and waivers",
+          "reason": "Use Amazon Pay ICICI for eligible Amazon.in retail purchases. Use SimplyCLICK for eligible online purchases that earn its 10X named-partner or 5X other-online rates. SimplyCLICK earns points whose value depends on the voucher or other redemption you choose.",
+          "cardId": "amazon-icici"
+        },
+        {
+          "combo": "SimplyCLICK + Axis ACE",
+          "fee": "₹998 in standard renewal fees before tax and waivers",
+          "reason": "Use SimplyCLICK for eligible online spend and ACE for listed bills paid through Google Pay on Android or other eligible purchases. Check whether the points you can redeem justify carrying both cards.",
+          "cardId": "axis-ace"
+        }
       ]
     },
     "idfc-wow": {
@@ -686,6 +970,26 @@
           "Most Important Terms and Conditions",
           "https://www.idfcfirst.bank.in/MITC.pdf"
         ]
+      ],
+      "pairWith": [
+        {
+          "combo": "FIRST WOW! + Axis ACE",
+          "fee": "₹499 in standard renewal fees before tax and waivers",
+          "reason": "Use the fixed-deposit-backed WOW for purchases charged in a foreign currency where its zero forex markup applies. Use ACE for eligible domestic bills and purchases. Compare the deposit commitment with the foreign-currency charges you would otherwise pay.",
+          "cardId": "axis-ace"
+        },
+        {
+          "combo": "FIRST WOW! + HDFC Millennia",
+          "fee": "₹1,000 in standard renewal fees before tax and waivers",
+          "reason": "Use WOW for eligible foreign-currency purchases and Millennia for eligible direct purchases at its ten domestic online merchants. Millennia’s 5% tier shares a 1,000-CashPoint calendar-month limit.",
+          "cardId": "hdfc-millennia"
+        },
+        {
+          "combo": "FIRST WOW! + Axis Atlas",
+          "fee": "₹5,000 in standard renewal fees before tax and waivers",
+          "reason": "Use WOW where zero forex markup is the priority. Compare Atlas for eligible direct airline or hotel bookings and Travel EDGE purchases, which can earn 5 EDGE Miles per ₹100 within the accelerated travel limit. Value the miles at the redemption you will use.",
+          "cardId": "axis-atlas"
+        }
       ]
     },
     "amex-mrcc": {
@@ -787,7 +1091,35 @@
         [
           "Key facts and forex markup",
           "https://www.americanexpress.com/content/dam/amex/in/legal/mitc/key_fact_Statement.pdf"
+        ],
+        [
+          "YES Bank key facts and Uni variant fees",
+          "https://www.yes.bank.in/sites/web/content/published/api/v1.1/assets/CONT07A77C257C7A4BDD85DB97E51D2B5B8F/native/yesbank_key_fact_statement.pdf"
+        ],
+        [
+          "RBL World Safari fees and lounge conditions",
+          "https://www.rbl.bank.in/personal-banking/cards/credit-cards/world-safari-credit-card"
         ]
+      ],
+      "pairWith": [
+        {
+          "combo": "Amex MRCC + Uni YES Bank",
+          "fee": "Standard Uni: ₹1,000 in first-year fees and ₹4,999 at renewal before tax and waivers",
+          "reason": "Use Uni where Amex acceptance is limited, subject to Uni’s eligible spending rules. Use an existing MRCC for the monthly bonus thresholds you can reach naturally. YES Bank lists a separate no-fee Uni RuPay variant. Amex currently pauses new applications in India.",
+          "cardId": "yes-uni"
+        },
+        {
+          "combo": "Amex MRCC + Amazon Pay ICICI",
+          "fee": "₹1,000 in first-year fees and ₹4,500 at renewal before tax and waivers",
+          "reason": "Use Amazon Pay ICICI for eligible Amazon.in retail at the Prime or non-Prime rate. Keep eligible spending on an existing MRCC if it helps reach the monthly bonus thresholds. Check the MRCC full and partial renewal waivers before valuing this pairing.",
+          "cardId": "amazon-icici"
+        },
+        {
+          "combo": "Amex MRCC + RBL World Safari",
+          "fee": "₹4,000 in first-year fees and ₹7,500 at renewal before tax and waivers",
+          "reason": "Pair an existing MRCC’s monthly bonus opportunities with World Safari’s zero forex markup and conditional lounge access. RBL lists two Priority Pass visits outside India per calendar year and a separate quarterly spend route for an extra visit.",
+          "cardId": "rbl-world-safari"
+        }
       ]
     },
     "axis-atlas": {
@@ -874,6 +1206,20 @@
           "Travel EDGE redemption and partner transfer terms",
           "https://traveledge.axis.bank.in/travel/common/termsandcondition"
         ]
+      ],
+      "pairWith": [
+        {
+          "combo": "Axis Atlas + Axis ACE",
+          "fee": "₹5,499 in standard renewal fees before tax and waivers",
+          "reason": "Use Atlas for eligible airline, hotel and Travel EDGE bookings that earn EDGE Miles. Use ACE for listed bills via Google Pay on Android and eligible other spending. Check what moving a purchase does to Atlas’s eligible annual tier and milestone spend.",
+          "cardId": "axis-ace"
+        },
+        {
+          "combo": "Axis Atlas + FIRST WOW!",
+          "fee": "₹5,000 in standard renewal fees before tax and waivers",
+          "reason": "Use WOW when the zero forex markup on foreign-currency purchases is worth more to you than Atlas miles. Use Atlas for eligible travel bookings when the redemption value justifies it. WOW requires a fixed deposit.",
+          "cardId": "idfc-wow"
+        }
       ]
     },
     "icici-coral": {
@@ -956,6 +1302,20 @@
           "Railway lounge programme",
           "https://www.icici.bank.in/content/dam/icicibank/icici-assets/personal-banking/railway-lounge-programme.pdf"
         ]
+      ],
+      "pairWith": [
+        {
+          "combo": "ICICI Coral + HDFC Millennia",
+          "fee": "₹1,500 in standard renewal fees before tax and waivers",
+          "reason": "Use Coral for the movie-ticket discount if the selected tickets and booking route qualify. Use Millennia for eligible purchases at its named merchants. Compare each card’s fees and spend conditions separately before splitting your purchases.",
+          "cardId": "hdfc-millennia"
+        },
+        {
+          "combo": "ICICI Coral + Axis ACE",
+          "fee": "₹999 in standard renewal fees before tax and waivers",
+          "reason": "Compare Coral’s eligible movie discount and spend-gated lounge access with the benefits you actually use. Use ACE for eligible Google Pay bills and other cashback routes. Splitting spend can affect Coral’s lounge eligibility.",
+          "cardId": "axis-ace"
+        }
       ]
     },
     "sbi-simplysave": {
@@ -1053,8 +1413,83 @@
         [
           "SBI Card fees and reward redemption conditions",
           "https://www.sbicard.com/en/most-important-terms-and-conditions.page"
+        ],
+        [
+          "BPCL SBI Card OCTANE product and fee schedule",
+          "https://www.sbicard.com/en/personal/credit-cards/bpcl-sbi-card-octane.html"
+        ],
+        [
+          "IDFC FIRST Millennia product and fee schedule",
+          "https://www.idfcfirst.bank.in/credit-card/millennia"
         ]
-      ]
+      ],
+      "pairWith": [
+        {
+          "combo": "SimplySAVE + Amazon Pay ICICI",
+          "fee": "₹499 in standard renewal fees before tax and waivers",
+          "reason": "Use SimplySAVE for eligible dining, movies, groceries and departmental stores while the 10X limit has room. Use Amazon Pay ICICI for eligible Amazon.in retail purchases at 5% with Prime or 3% without Prime. Other online shopping follows its own eligibility and rates.",
+          "cardId": "amazon-icici"
+        },
+        {
+          "combo": "SimplySAVE + BPCL SBI Card OCTANE",
+          "fee": "₹1,998 in standard renewal fees before tax and waivers",
+          "reason": "Use SimplySAVE for its four promoted categories and OCTANE for eligible fuel purchases at BPCL. OCTANE has separate reward and fuel surcharge waiver limits. Check how much of your actual fuel spend qualifies before paying both fees.",
+          "cardId": "sbi-bpcl-octane"
+        },
+        {
+          "combo": "SimplySAVE + IDFC FIRST Millennia",
+          "fee": "₹499 in standard renewal fees before tax and waivers",
+          "reason": "Use SimplySAVE while its promoted spend has room under the points cap. Compare the no-fee FIRST Millennia for eligible travel and dining or as a backup. Check its earn categories, exclusions and point redemption charges before moving spend.",
+          "cardId": "idfc-millennia"
+        }
+      ],
+      "capMath": {
+        "title": "When SimplySAVE drops from 10X to the base rate",
+        "body": "Eligible dining, movies, groceries and departmental-store purchases share a 5,000-point cap at 10 points per ₹150 in a calendar month. It takes ₹75,000 in complete qualifying earning blocks to reach that cap. Eligible spend beyond it earns 1 point per ₹150.\n\nThe examples assume complete ₹150 blocks and value points at ₹0.25 each before redemption fees. Statement credit requires at least 2,000 points, so a month’s points value may have to be carried forward before you can redeem it.",
+        "examples": {
+          "columns": [
+            "Eligible promoted spend",
+            "Total points earned",
+            "Gross points value"
+          ],
+          "rows": [
+            [
+              "₹6,000",
+              "400",
+              "₹100"
+            ],
+            [
+              "₹15,000",
+              "1,000",
+              "₹250"
+            ],
+            [
+              "₹45,000",
+              "3,000",
+              "₹750"
+            ],
+            [
+              "₹75,000",
+              "5,000",
+              "₹1,250"
+            ],
+            [
+              "₹90,000",
+              "5,100",
+              "₹1,275"
+            ],
+            [
+              "₹1,20,000",
+              "5,300",
+              "₹1,325"
+            ]
+          ]
+        },
+        "source": [
+          "SimplySAVE terms, caps and qualifying merchant categories",
+          "https://www.sbicard.com/sbi-card-en/assets/docs/pdf/SimplySAVE-TnC.pdf"
+        ]
+      }
     },
     "hdfc-infinia": {
       "values": [
@@ -1140,6 +1575,20 @@
           "HDFC personal cards terms",
           "https://www.hdfc.bank.in/malayalam/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf"
         ]
+      ],
+      "pairWith": [
+        {
+          "combo": "Infinia Metal + Axis ACE",
+          "fee": "₹12,999 in standard renewal fees before tax and waivers",
+          "reason": "Keep eligible travel and high-value purchases on Infinia if its travel redemption works for you. Compare ACE for eligible bills via Google Pay on Android, taking account of its ₹500 shared cap and how the shift affects Infinia’s renewal waiver.",
+          "cardId": "axis-ace"
+        },
+        {
+          "combo": "Infinia Metal + Amazon Pay ICICI",
+          "fee": "₹12,500 in standard renewal fees before tax and waivers",
+          "reason": "Use Amazon Pay ICICI for eligible Amazon.in purchases when Amazon Pay balance at the Prime or non-Prime rate is worth more to you. Compare against Infinia’s actual redemption route and any eligible SmartBuy offer before moving a purchase.",
+          "cardId": "amazon-icici"
+        }
       ]
     },
     "axis-airtel": {
@@ -1237,8 +1686,68 @@
         [
           "April 2026 changes to cashback limits and lounge access",
           "https://www.axis.bank.in/docs/default-source/default-document-library/terms-and-conditions-for-airtel-cbcc-cvp.pdf"
+        ],
+        [
+          "HDFC Swiggy BLCK fees and cashback terms",
+          "https://www.hdfc.bank.in/credit-cards/swiggy-blck-hdfc-bank-credit-card"
         ]
-      ]
+      ],
+      "pairWith": [
+        {
+          "combo": "Airtel Axis + HDFC Swiggy BLCK",
+          "fee": "₹1,500 in standard renewal fees before tax and waivers",
+          "reason": "Use Airtel Axis for eligible Airtel Thanks bills when you already earn enough base cashback to unlock the limits. Compare its separate Zomato and Blinkit wallet offers with BLCK’s 10% on eligible Swiggy app orders up to ₹1,500 per billing cycle. Check whether you will use the wallet credits.",
+          "cardId": "hdfc-swiggy-blck"
+        },
+        {
+          "combo": "Airtel Axis + Axis ACE",
+          "fee": "₹999 in standard renewal fees before tax and waivers",
+          "reason": "Keep enough eligible regular spending on Airtel Axis to support the bill cashback you expect. Switching that spend to ACE’s 1.5% base rate lowers the Airtel and utility limits. Compare both statements before moving bills or everyday purchases.",
+          "cardId": "axis-ace"
+        }
+      ],
+      "capMath": {
+        "title": "How regular spending sets Airtel and utility cashback limits",
+        "body": "Axis uses the 1% base cashback earned in the same statement cycle to set two limits. Eligible Airtel bills paid through Airtel Thanks earn 25% up to twice the base cashback. Eligible other utility bills paid through the app earn 10% up to the base cashback. If you earn no base cashback, both limits are zero.\n\nThe table assumes ₹1,000 in eligible Airtel bills and ₹1,500 in eligible utility bills in every row. It shows bill cashback only, before any adjustments. Zomato, Blinkit and District Movies offers credit separate partner wallets and do not help raise the bill cashback limits.",
+        "examples": {
+          "columns": [
+            "Eligible regular spend",
+            "Airtel bill cashback",
+            "Other utility cashback"
+          ],
+          "rows": [
+            [
+              "₹0",
+              "₹0",
+              "₹0"
+            ],
+            [
+              "₹5,000",
+              "₹100",
+              "₹50"
+            ],
+            [
+              "₹10,000",
+              "₹200",
+              "₹100"
+            ],
+            [
+              "₹12,500",
+              "₹250",
+              "₹125"
+            ],
+            [
+              "₹15,000",
+              "₹250",
+              "₹150"
+            ]
+          ]
+        },
+        "source": [
+          "Axis cashback and partner-wallet terms",
+          "https://www.axis.bank.in/docs/default-source/default-document-library/credit-cards/terms-and-conditions-for-cashback-for-airtel-axis-bank-credit-card.pdf"
+        ]
+      }
     },
     "hdfc-regalia": {
       "values": [

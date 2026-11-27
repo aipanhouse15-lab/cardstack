@@ -34,6 +34,14 @@ cardstack/
 4. Click "Commit changes"
 5. Vercel auto-deploys in ~30 seconds
 
+## Card Review Checklist
+
+- Start from the existing review and compare it with the archived original when available. Preserve its sections, FAQs, links, and figures. Update stale claims using current issuer terms.
+- Keep the shared 50-row feature table immediately below the summary. Preview with dark as the default and check the light toggle on desktop and mobile.
+- Include card pairings in `pairWith` in `data/featured-card-details.json`. Explain which eligible spending each card covers, link to the partner review, and check fees and waivers for the correct variants.
+- Use `capMath` in the same file for cap explainers. Include the reset period, affected spending, what happens after the cap, a worked example, and the issuer source. If the issuer publishes no cap or the rule is unclear, say so and cite the terms.
+- Before publishing, verify the feature table, the restored sections, and their navigation links against the preview. Repeat the checks on the live pages after deployment.
+
 ## How to Deploy
 
 ### Step 1: Create Accounts (one-time)
