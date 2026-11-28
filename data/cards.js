@@ -760,7 +760,7 @@ Utilities, telecom, fuel and several other categories do not earn cashback. Fuel
   },
 
 
-  { id: "au-lit", name: "AU LIT Credit Card", bank: "AU Bank", img: "🔥", color: "#ea580c", fee: 0, feeWaiver: "Lifetime free", type: "Lifestyle", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card/features",
+  { id: "au-lit", name: "AU LIT Credit Card", bank: "AU Bank", img: "🔥", color: "#ea580c", fee: 0, feeWaiver: "Lifetime free", type: "Lifestyle", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card",
     rewards: { dining: 1, travel: 1, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
     partnerRates: [
       { name: "Shoppers' Reward feature", rate: "5X or 10X Reward Points on eligible retail spends" },
@@ -805,15 +805,15 @@ Utilities, telecom, fuel and several other categories do not earn cashback. Fuel
   { id: "au-zenith", name: "AU Zenith+", bank: "AU Bank", img: "⚜️", color: "#b45309", fee: 4999, feeWaiver: "₹8L net retail spend in previous card anniversary year", type: "Premium", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card",
     rewards: { dining: 2, travel: 2, online: 1, groceries: 1, fuel: 0, utilities: 1, entertainment: 1, shopping: 1, default: 1 },
     partnerRates: [
-      { name: "Dining", rate: "5 pts/₹100 (1.25%)" },
-      { name: "Travel", rate: "5 pts/₹100 (1.25%)" },
-      { name: "International", rate: "10 pts/₹100 (2.5%)" },
+      { name: "Dining", rate: "Up to 2 Reward Points per ₹100 of eligible purchases" },
+      { name: "Travel", rate: "Up to 2 Reward Points per ₹100 of eligible purchases" },
+      { name: "International", rate: "Up to 2 Reward Points per ₹100 of eligible purchases" },
     ],
-    pointsInfo: "Up to 2 Reward Points/₹100 on dining, travel and international spends; AU lists 1 Reward Point = ₹1 for Zenith+. ₹4,999 annual fee; ₹8L net retail spend waiver from year 2.",
-    highlights: ["16 domestic and 16 international lounge visits/year", "0.99% forex markup", "Up to 2 Reward Points/₹100 on dining, travel and international spends", "₹8L annual fee-waiver threshold"],
-    pros: ["Substantial domestic and international lounge access", "Low 0.99% forex markup", "₹8L anniversary-year fee waiver"],
+    pointsInfo: "Up to 2 Reward Points/₹100 on eligible dining, travel and international spends; 1 point/₹100 on other eligible spending. AU lists 1 Reward Point = ₹1 for Zenith+. Its November fee schedule lists 0.99% forex markup through 30 November 2026 and 0% from 1 December 2026. ₹4,999 annual fee; ₹8L net retail spend waiver from year 2.",
+    highlights: ["Up to 4 eligible domestic and 4 international lounge visits per quarter; domestic access requires ₹50K eligible preceding-quarter spend", "0.99% forex markup through 30 November 2026; 0% from 1 December 2026 under AU’s published schedule", "Up to 2 Reward Points/₹100 on dining, travel and international spends", "₹8L annual fee-waiver threshold"],
+    pros: ["Substantial domestic and international lounge access", "AU’s fee schedule lists 0% forex markup from 1 December 2026", "₹8L anniversary-year fee waiver"],
     cons: ["₹4,999 annual fee", "Reward value depends on AU redemption options", "Terms and milestone benefits can change"],
-    network: "Visa Infinite / RuPay", lounge: "16 domestic + 16 international annually; India Priority Pass visits are chargeable",
+    network: "Visa Infinite / RuPay", lounge: "Up to 4 domestic visits/quarter after ₹50K eligible preceding-quarter spend; 4 overseas visits/quarter via Priority Pass. Priority Pass usage within India is chargeable.",
 
     editorial: {
   verdict: {
@@ -882,46 +882,46 @@ Utilities, telecom, fuel and several other categories do not earn cashback. Fuel
 },
   },
 
-  { id: "idfc-select", name: "IDFC FIRST Select", bank: "IDFC", img: "⭐", color: "#0d9488", fee: 0, feeWaiver: "Lifetime free", type: "Premium Entry", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.idfcfirst.bank.in/credit-card/select",
+  { id: "idfc-select", name: "IDFC FIRST Select", bank: "IDFC", img: "⭐", color: "#0d9488", fee: 0, feeWaiver: "Lifetime free", type: "Premium Entry", verified: true, reviewedAt: "September 2026", sourceUrl: "https://www.idfcfirst.bank.in/credit-card/select", rewardSourceUrl: "https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/FIRST-Select-Credit-Card-Communication-May-26.pdf",
     rewards: { dining: 1.25, travel: 1.25, online: 0.375, groceries: 0.375, fuel: 0, utilities: 0.125, entertainment: 0.375, shopping: 0.375, default: 0.375 },
     partnerRates: [
       { name: "Dining, travel and international spends", rate: "Up to 10X Reward Points" },
-      { name: "Other eligible retail spends", rate: "3X up to ₹20,000 statement-cycle spend; 10X on incremental spend above ₹20,000 and on birthday spends" },
+      { name: "Other eligible retail spends", rate: "3 points per ₹200. Eligible birthday-day spend earns 10 points per ₹200." },
       { name: "Utilities, insurance, FASTag and railway spends", rate: "1X Reward Points" },
     ],
-    pointsInfo: "3 Reward Points/₹200 on eligible spends up to ₹20,000 per statement cycle; 10X on incremental spends above ₹20,000 and on birthday spends. Dining/travel/international may earn up to 10X; select categories earn 1X. 1 point = ₹0.25; points valid for 24 months.",
+    pointsInfo: "From 18 June 2026, 10 Reward Points per ₹200 on qualifying dining, travel and international purchases from the first eligible transaction. Other eligible retail earns 3 per ₹200. Utilities, insurance, railways and FASTag earn 1 per ₹200. Eligible purchases on your birthday earn 10 per ₹200 under the current product terms. Points are earned on eligible spending up to your credit limit per billing cycle. Fuel, EMI and cash withdrawals are excluded. 1 point = ₹0.25; points are valid for 24 months from credit.",
     highlights: ["Lifetime free", "Zero forex markup", "1 domestic airport visit/quarter after ₹20K spend in the previous month", "4 railway lounge visits/quarter after spend condition"],
     pros: ["No joining or annual fee", "Zero forex markup", "Airport and railway lounge access subject to spend eligibility"],
     cons: ["₹20K spend condition for lounge access", "Fuel excluded from rewards", "₹99 + GST redemption fee; points expire after 24 months"],
 
-    redemptionNote: "Reward earning is tiered by monthly spend and category; 1 point is worth ₹0.25. A ₹99 + GST redemption fee applies. IDFC FIRST also advertises bonus points on eligible flight and hotel bookings through its app; check the live offer terms.",
+    redemptionNote: "Reward earning depends on the category and is limited to eligible spending up to your credit limit per billing cycle. The old ₹20,000 rewards threshold ended on 18 June 2026. One point is worth ₹0.25 under the issuer’s terms. A ₹99 + GST redemption fee applies. IDFC FIRST also advertises bonus points on eligible flight and hotel bookings through its app; check the live offer terms.",
     network: "Visa", lounge: "1 domestic airport + 4 railway visits/quarter, each subject to the current ₹20K monthly spend condition",
-    recentChanges: { date: "January 2026", changes: ["Reward-point base revised to 1 point per ₹200", "Select railway/FASTag categories moved to 1X and excluded from milestone spend", "Airport lounge access requires ₹20K monthly spend"], impact: "Use the current point-per-₹200 basis and verify lounge eligibility each month" },
+    recentChanges: { date: "18 June 2026", changes: ["10X on eligible dining, travel and international purchases from the first qualifying transaction", "Other eligible retail earns 3X; certain categories earn 1X", "Points expire after 24 months"], impact: "The ₹20K requirement applies to eligible lounge and movie benefits rather than unlocking 10X reward points" },
 
     editorial: {
   verdict: {
     headline: "A lifetime-free card with zero forex and spend-gated domestic lounge access.",
-    body: `FIRST Select has no joining or annual fee and now carries zero forex markup under IDFC FIRST Bank's current card terms. Rewards depend on category and statement-cycle spending tiers: the bank lists up to 10X on dining, travel and international purchases, 3X on other eligible spends up to ₹20,000, and 10X on incremental spend above that threshold and birthday purchases. One domestic airport visit per quarter and railway lounge access require meeting the monthly spend condition. Points expire after 24 months.`,
+    body: `FIRST Select has no joining or annual fee and now carries zero forex markup under IDFC FIRST Bank's current card terms. Rewards depend on category: the bank lists 10X from the first eligible dining, travel or international purchase and on eligible birthday-day purchases, 3X on other eligible retail, and 1X on select categories. One domestic airport visit per quarter and railway lounge access require meeting the monthly spend condition. Points expire after 24 months.`,
     idealFor: "People seeking a lifetime-free card with zero forex and who can meet the monthly spend condition for lounge access.",
     skipIf: "You need unconditional lounge access or want straightforward cashback rather than tiered reward points.",
   },
   bestFor: [
-    { category: "Birthday-month spending", reason: "Eligible birthday-month purchases earn 10X Reward Points under the current program terms." },
+    { category: "Spending on your birthday", reason: "Eligible purchases on your birthday earn 10X Reward Points under the current program terms." },
     { category: "International transactions", reason: "IDFC FIRST currently lists zero forex markup for its credit cards; check the applicable terms and DCC choices when paying abroad." },
     { category: "Airport and railway lounges", reason: "Access is limited by quarterly visit counts and the current monthly spend condition; confirm eligibility and lounge lists before travel." },
-    { category: "Higher monthly spend", reason: "Eligible incremental spend above ₹20,000 can earn 10X Reward Points; points are not equivalent to a fixed cashback percentage." },
+    { category: "Eligible dining, travel and international spend", reason: "The 10X points rate starts with the first qualifying transaction. The overall billing-cycle earning limit still applies." },
   ],
   avoidFor: [
-    { category: "Regular everyday spending", reason: "Standard earning is 3 Reward Points per ₹200 before category and statement-cycle accelerators. Compare point value and redemption fees with a cashback card.", altCard: "axis-ace" },
+    { category: "Regular everyday spending", reason: "Standard earning is 3 Reward Points per ₹200 on other eligible purchases. Compare point value and redemption fees with a cashback card.", altCard: "axis-ace" },
     { category: "Unconditional lounge access", reason: "Airport lounge visits require meeting the bank's monthly spend condition; select visits are limited each quarter.", altCard: "hdfc-millennia" },
   ],
   pairWith: [
-    { combo: "IDFC Select + Axis ACE", fee: "₹499/year", reason: "Select for lounges, zero forex, and birthday month. ACE for all regular spending (1.5-5%). Free + ₹499 covers everything.", cardId: "axis-ace" },
+    { combo: "IDFC Select + Axis ACE", fee: "₹499/year", reason: "Select for lounges, zero forex and eligible birthday purchases. ACE for all regular spending (1.5-5%). Free + ₹499 covers everything.", cardId: "axis-ace" },
     { combo: "IDFC Select + HDFC Millennia", fee: "₹1,000/year", reason: "Select for lounges and international transactions, Millennia for domestic online partners (5%).", cardId: "hdfc-millennia" },
   ],
   faq: [
-    { q: "How do birthday-month rewards work?", a: "Eligible birthday-month purchases earn 10X Reward Points under the current program terms. This is a points multiplier, not a 5% cashback promise; exclusions and caps apply." },
-    { q: "How does the ₹20,000 spend tier work?", a: "The current program offers 3X on eligible spends up to ₹20,000 per statement cycle and 10X on incremental eligible spends above that threshold. Some categories have separate earning rates or exclusions." },
+    { q: "How do birthday rewards work?", a: "Eligible purchases on your birthday earn 10X Reward Points under the current program terms. This is a points multiplier, not a 5% cashback promise; exclusions and caps apply." },
+    { q: "Does ₹20,000 of spend unlock 10X rewards?", a: "The June 2026 update removed the rewards threshold. The monthly spend condition still applies to eligible lounge and movie benefits." },
     { q: "Is zero forex the same as IDFC WOW?", a: "IDFC FIRST currently lists zero forex markup across its credit cards. Select also has domestic airport and railway lounge benefits, subject to visit limits and spend eligibility." },
   ],
 },
@@ -2119,7 +2119,7 @@ const MODEL_GAPS = {
   "icici-emeralde": "Emeralde and Emeralde Private Metal are distinct products. Redemption routes and variant-dependent earning must not be combined.",
   "icici-rubyx": "Domestic/international/utility point tiers and redemption choice cannot be reduced to one cash percentage without a selected variant.",
   "au-lit": "Paid, time-limited feature selections change cashback and points. Feature charges, activation windows and cap buckets are not inputs in this model.",
-  "idfc-select": "Spend-threshold acceleration, transaction categories and redemption fees need a tier-aware portfolio model.",
+  "idfc-select": "Merchant classifications, the separate UPI tier, the billing-cycle credit-limit ceiling and redemption charges are not represented in the broad-category calculator.",
   "axis-airtel": "Thanks-app cashback caps depend on eligible 1% base cashback in the same statement month and merchant MID/VPA eligibility. Zomato/Blinkit/District benefits are separate partner-wallet value back, not card cashback, with app/website, payment-channel and order-minimum conditions. Aggregate category spend cannot safely calculate these combined routes; no model is enabled.",
   "axis-cashback": "The issuer's progressive online tiers apply to eligible card-not-present net spend, exclude travel and listed MCCs, round cashback down by transaction, and share a ₹4,000 accelerated statement-month cap. Broad online-category spend cannot isolate eligible channels/MCCs, individual transactions, reversals or the separate offline/travel and utility buckets, so no numerical estimate is enabled.",
   "axis-flipkart-supercoin": "SuperCoins are a non-cash currency with merchant redemption restrictions. Cash-value conversion and quarterly earning caps need a separate model.",

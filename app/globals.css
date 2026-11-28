@@ -382,7 +382,11 @@ footer { border-top: 1px solid var(--hair); background: #0A090D; padding: 70px 0
 .qfacts { border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); background: var(--bg2); }
 .qf-in { display: grid; grid-template-columns: repeat(5, 1fr); }
 @media (max-width: 880px) { .qf-in { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 560px) { .qf-in { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) {
+  .qf-in { grid-template-columns: repeat(2, 1fr); }
+  .qfacts-sapphiro .qf-in { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .qfacts-sapphiro .qf { overflow-wrap: anywhere; }
+}
 .qf { padding: 26px 22px; border-right: 1px solid var(--hair); }
 .qf:last-child { border: none; }
 .qf .l { font-family: var(--mono); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--dim); margin-bottom: 7px; }
@@ -630,7 +634,7 @@ main main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; 
   --mut: #211d24;
   --dim: #392f3d;
 }
-:root[data-theme="light"] .chero:has(.reviewed-card-art, .regalia-illustration, .flipkart-illustration) h1 span {
+:root[data-theme="light"] .chero:has(.reviewed-card-art, .regalia-illustration, .flipkart-illustration, .emeralde-illustration, .lit-illustration, .zenith-illustration, .first-select-illustration) h1 span {
   color: var(--ivory) !important;
 }
 .chero:has(.reviewed-card-art) {
@@ -760,6 +764,75 @@ main main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; 
   border-left-color: #9b5ad4;
   border-bottom-color: #d64d8e;
 }
+.bigcard:is(.emeralde-illustration, .lit-illustration, .zenith-illustration, .first-select-illustration) {
+  color: #f5f9f6;
+  border: 1px solid var(--card-edge);
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: inset 0 1px #ffffff18, 0 30px 54px #130e254f;
+}
+.bigcard.emeralde-illustration {
+  --card-edge: #3e846f;
+  background: linear-gradient(143deg, #164e41 0%, #10392e 30%, #0e1d19 74%);
+}
+.emeralde-illustration::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -24% -12% -22% 37%;
+  background: conic-gradient(from 30deg at 52% 46%, #397659, #143b30, #27775e, #153c32, #328169, #163e35, #397659);
+  clip-path: polygon(30% 0, 75% 0, 100% 25%, 100% 78%, 74% 100%, 27% 100%, 0 78%, 0 26%);
+  transform: rotate(25deg);
+  opacity: .65;
+}
+.bigcard.lit-illustration {
+  --card-edge: #a05e37;
+  background: radial-gradient(ellipse at 94% 8%, #88451866, transparent 56%),
+    linear-gradient(145deg, #33241e, #1a1617 66%);
+}
+.lit-illustration::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -34% -16% 12% 56%;
+  transform: rotate(30deg);
+  background: repeating-linear-gradient(90deg, #a95a2e45 0 7px, #f6a46153 8px 10px, #cc682c38 11px 17px),
+    linear-gradient(150deg, #f18747a8, #71362040 86%);
+  border-radius: 24px;
+}
+.bigcard.zenith-illustration {
+  --card-edge: #6c8461;
+  background: linear-gradient(145deg, #164539, #0d3029 52%, #0a211d);
+  color: #ffebc0;
+}
+.zenith-illustration::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: radial-gradient(ellipse at 106% 104%,
+    transparent 0 38%, #b6924a 38.3% 38.8%, transparent 39.1% 49%,
+    #a17c3e 49.3% 49.8%, transparent 50.1% 61%,
+    #93713b 61.3% 61.7%, transparent 62%);
+  mask-image: linear-gradient(120deg, transparent 14%, #000 60%);
+}
+.bigcard.first-select-illustration {
+  --card-edge: #9b4a56;
+  background: radial-gradient(ellipse at 72% 26%, #933849, transparent 67%),
+    linear-gradient(145deg, #4f1929, #381322 66%, #26111b);
+  color: #fff2f2;
+}
+.first-select-illustration::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 5% -24% -56% 53%;
+  background: repeating-linear-gradient(143deg,
+    #e2979d27 0 1px, #310a1829 2px 5px, transparent 6px 17px);
+  border: 1px solid #e2979d54;
+  box-shadow: 0 0 0 12px #08040925;
+  transform: rotate(-19deg);
+}
 .card-illustration-chip {
   display: block;
   width: 32px;
@@ -773,7 +846,7 @@ main main svg { display: block; background: #1A1926; border: 1px solid #3D3A4E; 
 }
 .card-illustration-label { color: var(--mut); font: 11px var(--mono); }
 @media (max-width: 560px) {
-  .bigcard:is(.simplyclick-illustration, .simplysave-illustration, .regalia-illustration, .flipkart-illustration) { width: min(300px, 90%); padding: 17px; border-radius: 14px; }
+  .bigcard:is(.simplyclick-illustration, .simplysave-illustration, .regalia-illustration, .flipkart-illustration, .emeralde-illustration, .lit-illustration, .zenith-illustration, .first-select-illustration) { width: min(300px, 90%); padding: 17px; border-radius: 14px; }
   .card-illustration-chip { margin-top: 14px; }
 }
 /* Axis supplies the Atlas image already angled, with transparent corners. */

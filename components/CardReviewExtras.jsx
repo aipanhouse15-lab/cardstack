@@ -2,6 +2,66 @@ import Link from "next/link";
 import details from "@/data/featured-card-details.json";
 
 export function CardCashbackExample({ cardId }) {
+  if (cardId === "au-zenith") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">Why one large utility payment can earn less</h2>
+        <p>One eligible ₹18,000 utility payment outside BBPS would earn 180 points before the transaction cap. AU limits it to <strong>100 points</strong>.</p>
+        <p>Two separate eligible ₹9,000 bills can earn <strong>180 points in total</strong> if both post in the same statement and there is room under the 1,000-point utility and telecom limit. Apply any redemption charges when valuing the points.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "idfc-select") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">What the same ₹10,000 earns in different categories</h2>
+        <p>₹10,000 in eligible dining earns <strong>500 points</strong> at 10 per ₹200. The same amount earns <strong>150 points</strong> on other eligible retail or <strong>50 points</strong> on eligible utilities.</p>
+        <p>At ₹0.25 per point, those are ₹125, ₹37.50, and ₹12.50 before any redemption fee. Each example assumes complete ₹200 earning blocks, eligible merchant codes and room under the billing-cycle credit-limit ceiling.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "icici-emeralde") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">What an overseas purchase earns and costs</h2>
+        <p>An eligible foreign-currency purchase that converts to ₹20,000 can earn <strong>800 Reward Points</strong> at 4 per ₹100. A 2% forex markup adds <strong>₹400 before applicable tax</strong>.</p>
+        <p>Those points would need to be worth ₹0.50 each to offset the markup alone. Check the actual redemption and exchange charges before treating the points as a saving.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "au-lit") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">What happens when the grocery feature cap fills</h2>
+        <p>If ₹12,000 of grocery purchases qualify in one 30-day feature period, 5% would be ₹600 before the cap. The feature pays at most <strong>₹500</strong> for that period.</p>
+        <p>If you reach that cap in all three qualifying 30-day periods, the gross feature cashback is ₹1,500 over 90 days. Subtract the price and tax shown in AU 0101. The points balance follows its own statement cycle and redemption rules.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "hdfc-diners-black") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">What 5,000 Diners Black points can cover</h2>
+        <p>₹1.5 lakh of eligible base-rate spending in complete ₹150 blocks can earn 5,000 points before category caps. Those points are worth <strong>₹5,000 toward eligible flights or hotels</strong>, or up to <strong>₹1,500 as statement cashback</strong>.</p>
+        <p>On an eligible ₹6,000 booking, the 70% payment limit lets you use at most 4,200 points. You pay ₹1,800 on the card and keep the other 800 points, assuming you have room under the calendar-month redemption cap.</p>
+      </section>
+    );
+  }
+
+  if (cardId === "icici-sapphiro") {
+    return (
+      <section id="cashback-example" className="side-box">
+        <h2 className="card-review-heading">When the movie offer qualifies but the lounge doesn’t</h2>
+        <p>If ₹50,000 qualifies in both of ICICI’s preceding spend windows, it clears the <strong>₹25,000 movie requirement</strong> and falls short of the <strong>₹75,000 domestic lounge requirement</strong>. The benefit windows can have different start and end dates, so check both before booking.</p>
+        <p>At an eligible booking with two ₹350 movie tickets, the ₹500 ceiling on the second ticket gives at most ₹350 off before fees. Availability and the offer count on your issued network still matter.</p>
+      </section>
+    );
+  }
+
   if (cardId === "hdfc-regalia") {
     return (
       <section id="cashback-example" className="side-box">

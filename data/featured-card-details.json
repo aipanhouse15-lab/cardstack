@@ -1958,6 +1958,899 @@
           "cardId": "axis-ace"
         }
       ]
+    },
+    "hdfc-diners-black": {
+      "values": [
+        "Legacy super-premium rewards card",
+        "Diners Club",
+        "N/A on the standard card",
+        "N/A on Diners Club",
+        "Existing holders. HDFC is not accepting new applications for this variant.",
+        "HDFC lists eligible lounge access for add-on cardholders.",
+        "₹10,000 plus applicable tax on the published legacy schedule",
+        "₹10,000 plus applicable tax",
+        "₹5 lakh in eligible annual spend",
+        "N/A on standard pricing",
+        "2% foreign-currency markup",
+        "1.75% for eligible international INR transactions under HDFC’s terms",
+        "See the current HDFC schedule.",
+        "See the HDFC schedule and cash withdrawal terms.",
+        "See the HDFC schedule and repayment conditions.",
+        "HDFC Reward Points",
+        "5 per ₹150 in complete eligible earning blocks",
+        "Up to 10X on qualifying SmartBuy bookings. Participating weekend dining can earn 2X.",
+        "75,000 points earned per statement cycle. Separate monthly category and redemption limits apply.",
+        "Includes fuel, rent, government payments, wallet loads and EasyEMI. SmartEMI conversion can reverse points.",
+        "Up to ₹0.30 per point. 50,000 points per calendar month for statement cashback.",
+        "₹1 per point on eligible flights and hotels, up to 70% of a booking and 75,000 points in a calendar month.",
+        "Up to ₹0.50 per point on eligible products and vouchers",
+        "Up to one airline mile per point depending on the transfer partner and limits",
+        "HDFC waives processing fees for eligible cashback and catalogue redemption requests.",
+        "Three years from accrual. Prolonged inactivity can forfeit points under the issuer’s terms.",
+        "New applications are closed. Check any legacy account-specific offer.",
+        "Fee waiver on qualifying spend. Check account-specific renewal benefits.",
+        "HDFC lists eligible memberships at ₹8 lakh in anniversary-year spend.",
+        "HDFC’s benefits section lists unlimited eligible visits for primary and add-on holders. Confirm the entitlement for your account.",
+        "HDFC’s benefits section lists unlimited eligible visits. Check the participating lounge list for your trip.",
+        "Confirm guest eligibility and charges with the lounge programme.",
+        "Not verified",
+        "HDFC lists an optional Global Value Programme. Check enrolment, fees and conditions.",
+        "HDFC lists accident, overseas hospitalisation and baggage-delay cover. See the policy for limits and exclusions.",
+        "No separate status benefit verified.",
+        "2X at participating restaurants on eligible weekend purchases",
+        "Current card-specific offer terms are unclear.",
+        "Eligible SmartBuy offers depend on the merchant, booking route and offer cap.",
+        "See HDFC’s fee and surcharge waiver terms. Fuel earns no points.",
+        "Six complimentary games per quarter, subject to participating courses and booking terms.",
+        "Not verified",
+        "Eligible memberships at ₹8 lakh in anniversary-year spending, subject to partner terms.",
+        "Confirm on your issued card.",
+        "See SmartEMI and EasyEMI terms. Conversion can reverse points.",
+        "Not verified",
+        "Use HDFC’s card controls for supported channels and transaction limits.",
+        "See HDFC’s reporting and liability terms.",
+        "Check HDFC’s applicable policy.",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Where might Diners Club acceptance be limited?",
+          "a": "Acceptance depends on the merchant, terminal and payment route. Confirm before a purchase and keep a second network for essential payments."
+        },
+        {
+          "q": "How does legacy Diners Black compare with legacy Regalia?",
+          "a": "Diners Black lists ₹1 per point on eligible flight and hotel redemptions and Regalia lists ₹0.50. Compare your actual renewal fees, booking limits and lounge requirements. Both reviews cover legacy accounts."
+        },
+        {
+          "q": "Can the ₹10,000 renewal fee be waived?",
+          "a": "HDFC lists a waiver at ₹5 lakh in eligible annual spend. Check the spend window and eligible transaction types before relying on it."
+        },
+        {
+          "q": "Does Diners Black work for international payments?",
+          "a": "You can use it with accepting overseas merchants where international payments are enabled. HDFC lists a 2% foreign-currency markup. Check merchant acceptance and any INR conversion charges before paying."
+        }
+      ],
+      "sources": [
+        [
+          "HDFC legacy Diners Club Black product and benefits",
+          "https://www.hdfc.bank.in/credit-cards/diners-club-black-credit-card"
+        ],
+        [
+          "HDFC personal-card terms for earning, redemption and fees",
+          "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf"
+        ],
+        [
+          "HDFC legacy Diners Black membership milestone terms",
+          "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/diners-club-black-credit-card/pdfs/T%20and%20C%20Diners%20Club%20Black.pdf"
+        ]
+      ],
+      "pairWith": [
+        {
+          "combo": "Diners Black + Axis ACE",
+          "fee": "₹10,499 in standard renewal fees before tax and waivers",
+          "reason": "For an existing Diners holder, use Diners Black where its points are useful and a Visa ACE as a backup where accepted. ACE earns 5% on listed bills through Google Pay for Android, sharing its ₹500 statement cap with the eligible 4% tier.",
+          "cardId": "axis-ace"
+        },
+        {
+          "combo": "Diners Black + HDFC Millennia",
+          "fee": "₹11,000 in standard renewal fees before tax and waivers",
+          "reason": "Compare Diners Black’s travel redemption with Millennia’s 5% on eligible direct purchases at named merchants such as Amazon and Swiggy. Millennia’s shared cap is 1,000 CashPoints per calendar month. If you need a different network, check the issued Millennia variant.",
+          "cardId": "hdfc-millennia"
+        }
+      ],
+      "capMath": {
+        "title": "Diners Black earning caps and redemption limits",
+        "body": "HDFC caps earning at 75,000 points per statement cycle. At the base rate, ₹22.5 lakh in fully eligible spending would reach that ceiling in complete ₹150 blocks. Grocery and utility earning each have a 2,000-point monthly cap, and insurance has a 5,000-point monthly cap. SmartBuy offers have their own rules, so the headline multiplier alone cannot predict the return.\n\nThe identical 75,000-point figure for flight and hotel redemption applies per calendar month. Points can cover at most 70% of the eligible booking value. Statement cashback has a separate 50,000-point calendar-month limit and is worth up to ₹0.30 per point.",
+        "examples": {
+          "columns": [
+            "Limit",
+            "Maximum",
+            "Resets"
+          ],
+          "rows": [
+            [
+              "Overall points earned",
+              "75,000 points",
+              "Statement cycle"
+            ],
+            [
+              "Grocery or utility points earned",
+              "2,000 points per category",
+              "Month"
+            ],
+            [
+              "Insurance points earned",
+              "5,000 points",
+              "Month"
+            ],
+            [
+              "Flight and hotel points redeemed",
+              "75,000 points",
+              "Calendar month"
+            ],
+            [
+              "Statement cashback points redeemed",
+              "50,000 points",
+              "Calendar month"
+            ]
+          ]
+        },
+        "source": [
+          "HDFC personal-card reward and redemption terms",
+          "https://www.hdfc.bank.in/content/dam/hdfcbankpws/in/en/personal-banking/discover-products/cards/credit-cards/personal-mitc/mitc-in-english.pdf"
+        ]
+      },
+      "avoidFor": [
+        {
+          "category": "Fuel",
+          "reason": "Fuel purchases earn no Diners Black points. Compare the current reward and surcharge rules of a card that covers your fuel station.",
+          "altCard": "rbl-shoprite"
+        }
+      ]
+    },
+    "icici-sapphiro": {
+      "values": [
+        "Premium lifestyle rewards card",
+        "Check your issued network. ICICI lists dual Mastercard–Amex and Visa–RuPay combinations for movie benefits.",
+        "N/A on standard pricing",
+        "Available on an eligible RuPay variant, subject to ICICI’s UPI terms.",
+        "Subject to ICICI approval and the offered variant.",
+        "Add-on movie eligibility depends on the add-on’s own qualifying spend.",
+        "₹6,500 plus GST on standard pricing",
+        "₹3,500 plus GST from year two",
+        "ICICI’s product page lists spending over ₹6 lakh to waive the next annual fee. Eligible spend rules apply.",
+        "Account-specific offers may differ from the published fee schedule.",
+        "3.5% foreign-currency markup",
+        "Separate from forex markup. See ICICI’s current terms.",
+        "See ICICI’s finance charge and late-payment schedule.",
+        "See ICICI’s cash advance charges and interest terms.",
+        "See ICICI’s repayment terms.",
+        "ICICI Reward Points",
+        "2 per ₹100 on eligible domestic spending. 1 per ₹100 on eligible utility and insurance spending.",
+        "4 per ₹100 on eligible international spending",
+        "Eligible-spend ceilings per statement cycle: ₹80,000 each for utilities and insurance, ₹40,000 for grocery/departmental stores, and ₹20,000 for eligible transportation. The anniversary milestone has a separate 20,000-point limit.",
+        "See the issuer’s included and excluded merchant categories, statement-cycle ceilings and EMI rules.",
+        "No fixed statement cashback value established for this review.",
+        "See the current ICICI reward catalogue for travel redemptions.",
+        "Eligible merchandise and vouchers. Value varies by selection.",
+        "Not verified",
+        "See the current ICICI redemption schedule.",
+        "See the current ICICI rewards programme terms.",
+        "ICICI lists partner vouchers after payment of the joining fee. Restrictions apply.",
+        "Next-year fee waiver on eligible spending. No separate standard renewal reward verified.",
+        "4,000 points at ₹4 lakh eligible anniversary-year spend, then 2,000 each additional ₹1 lakh up to 20,000 milestone points.",
+        "Up to four primary-cardholder visits after ₹75,000 in eligible preceding-quarter spend. ICICI lists two per variant for dual Mastercard/Amex.",
+        "Two per year for eligible primary cardholders through Priority Pass, subject to the issuer’s terms.",
+        "Check Priority Pass terms for guest charges.",
+        "Not verified",
+        "Standard foreign-currency markup applies. International spending can earn points under the issuer’s eligibility terms.",
+        "ICICI lists air accident cover. Check limits, exclusions and applicable variant.",
+        "No standard elite status verified.",
+        "Check current ICICI dining offers. The paid joining benefit includes an eligible EazyDiner membership.",
+        "After ₹25,000 eligible spend in the preceding spend quarter, up to ₹500 off the second eligible ticket. Up to two offers monthly under standard terms. Dual-network cards have one per variant.",
+        "Check ICICI’s current partner offers and welcome voucher redemption rules.",
+        "ICICI lists 1% waiver on eligible fuel transactions up to ₹4,000. Check surcharge terms.",
+        "One round or lesson per ₹50,000 eligible previous-month retail spending, up to four per month.",
+        "ICICI lists 24/7 concierge. Contact and services vary by variant.",
+        "Priority Pass for eligible primary cardholders. Welcome voucher memberships have separate terms.",
+        "Confirm on your issued card.",
+        "Check ICICI’s conversion rules and reward or waiver exclusions.",
+        "Not verified",
+        "Use ICICI iMobile or internet banking for supported controls.",
+        "See ICICI’s reporting and liability terms.",
+        "Check the policy that applies to your issued variant.",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Is ICICI Sapphiro worth keeping without golf?",
+          "a": "Compare the renewal fee including tax with the lounge and movie benefits you actually use. Count a benefit only if you meet its spending requirement. Eligible anniversary-year spending can also change the renewal fee."
+        },
+        {
+          "q": "Does ICICI Sapphiro have zero forex markup?",
+          "a": "ICICI publishes a 3.5% foreign-currency markup. International purchases may earn points under the card terms, and their value depends on redemption. Paying in INR on an international transaction can have separate charges."
+        },
+        {
+          "q": "Can I get the renewal fee waived?",
+          "a": "The product page lists a next-year annual fee waiver for eligible spending over ₹6 lakh. Check your own fee terms and which transactions count. The standard joining fee is separate."
+        }
+      ],
+      "sources": [
+        [
+          "ICICI Sapphiro fees, features and benefit eligibility",
+          "https://www.icici.bank.in/personal-banking/cards/credit-card/sapphiro-card"
+        ],
+        [
+          "ICICI card terms and qualifying spend ceilings",
+          "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/mitc_cc.pdf"
+        ]
+      ],
+      "pairWith": [
+        {
+          "combo": "Sapphiro + Axis ACE",
+          "fee": "₹3,999 in standard renewal fees before tax and waivers",
+          "reason": "Keep eligible spending on Sapphiro if you use its golf, movie or lounge benefits and need to meet their spend requirements. Compare ACE for eligible Google Pay bills and everyday cashback. Sapphiro’s 3.5% forex markup still applies to foreign-currency purchases.",
+          "cardId": "axis-ace"
+        }
+      ],
+      "capMath": {
+        "title": "Which Sapphiro limits reset each statement, month or year",
+        "body": "The ICICI terms limit how much spending in each listed merchant category can earn points in a statement cycle. If ₹1 lakh of qualifying utility spending posts in one cycle, at 1 point per ₹100 the ₹80,000 ceiling leaves 800 points for that category. Spending beyond the ceiling earns no additional points in that category that cycle. Insurance has its own ₹80,000 ceiling.\n\nThe 20,000-point milestone limit follows the anniversary year. ICICI lists 4,000 points at ₹4 lakh and 2,000 per additional ₹1 lakh, reaching that milestone limit at ₹12 lakh of eligible spend. Movie eligibility uses the issuer’s preceding spend quarter, lounge eligibility has its own ₹75,000 requirement, and golf uses the previous calendar month.",
+        "examples": {
+          "columns": [
+            "Category",
+            "Limit or threshold",
+            "Period"
+          ],
+          "rows": [
+            [
+              "Utilities and insurance",
+              "₹80,000 eligible spend each",
+              "Statement cycle"
+            ],
+            [
+              "Grocery and departmental stores",
+              "₹40,000 eligible spend",
+              "Statement cycle"
+            ],
+            [
+              "Transportation",
+              "₹20,000 eligible spend",
+              "Statement cycle"
+            ],
+            [
+              "Anniversary milestone",
+              "20,000 bonus points",
+              "Anniversary year"
+            ],
+            [
+              "Golf",
+              "One round per ₹50,000; max four",
+              "Previous calendar month spend"
+            ]
+          ]
+        },
+        "source": [
+          "ICICI card terms and qualifying spend ceilings",
+          "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/mitc_cc.pdf"
+        ]
+      },
+      "avoidFor": [
+        {
+          "category": "Everyday domestic cashback",
+          "reason": "Sapphiro earns points with redemption-dependent value. Compare ACE’s eligible base and bill-payment cashback routes.",
+          "altCard": "axis-ace"
+        },
+        {
+          "category": "Named online merchants",
+          "reason": "Compare the points from Sapphiro with Millennia’s capped 5% tier for eligible purchases at named merchants.",
+          "altCard": "hdfc-millennia"
+        },
+        {
+          "category": "Avoiding currency markup",
+          "reason": "ICICI lists 3.5% forex markup. FIRST WOW offers zero forex markup on eligible foreign-currency purchases and requires a fixed deposit.",
+          "altCard": "idfc-wow"
+        }
+      ]
+    },
+    "icici-emeralde": {
+      "values": [
+        "Standard Emeralde premium rewards card",
+        "ICICI lists Mastercard and American Express benefits. Check the network on your card.",
+        "N/A on standard pricing",
+        "N/A on Mastercard and Amex",
+        "Issuer approval and current income, age and eligibility requirements apply.",
+        "Check Plus Card terms. The add-on must qualify separately for movie eligibility.",
+        "₹12,000 plus GST on standard pricing",
+        "₹12,000 plus GST from year two",
+        "Issuer product page lists over ₹10 lakh of eligible annual spending for next-year waiver. EMI is excluded under the fee terms.",
+        "Check the offer on your account.",
+        "2% on foreign-currency transactions",
+        "See ICICI’s current terms for eligible INR transactions with overseas merchants.",
+        "See ICICI’s current schedule of finance charges and late fees.",
+        "See the ICICI schedule for cash advances.",
+        "See ICICI’s repayment terms.",
+        "ICICI Reward Points",
+        "4 points per ₹100 on eligible domestic and international spending. Utility and insurance spending earns 1 point per ₹100.",
+        "No separate standard accelerated international rate listed.",
+        "Per statement cycle, ₹80,000 eligible spending each on utility and insurance, ₹40,000 on grocery/departmental stores, and ₹20,000 on eligible transportation.",
+        "See the current ICICI terms for merchant categories, EMI and other excluded transactions.",
+        "No fixed cash value established for the standard Emeralde review.",
+        "See the ICICI rewards catalogue for available travel redemptions.",
+        "Redeem for eligible merchandise and vouchers. Value varies by selection.",
+        "Check current catalogue and transfer terms.",
+        "See ICICI’s fee schedule for the selected redemption.",
+        "See ICICI Rewards terms for validity.",
+        "Check the joining offer on your account. The published birthday benefits are separate.",
+        "Next-year fee waiver on eligible spending.",
+        "Check the account-specific fee waiver and benefit thresholds.",
+        "Unlimited eligible visits for the primary cardholder",
+        "Unlimited eligible visits for the primary cardholder through Priority Pass",
+        "See the participating lounge and Priority Pass guest rules.",
+        "Not verified",
+        "Standard 2% forex markup. Eligible international spending can earn points.",
+        "ICICI lists up to ₹3 crore air accident cover for eligible primary holders. Policy conditions apply.",
+        "No separate status benefit verified.",
+        "Check current offers and network eligibility.",
+        "After ₹25,000 in eligible preceding spend-quarter purchases, up to ₹750 off the second ticket, up to four offers per month under standard conditions.",
+        "Published birthday vouchers vary by network and terms.",
+        "ICICI lists a 1% waiver on eligible fuel transactions up to ₹4,000.",
+        "One golf round or lesson per ₹50,000 eligible retail spend in the previous calendar month, up to four per month.",
+        "ICICI lists 24/7 i-Assist concierge.",
+        "Priority Pass for eligible primary cardholders.",
+        "Confirm support on the issued card.",
+        "See ICICI conversion terms and excluded spend for the fee waiver.",
+        "Not verified",
+        "Use ICICI iMobile or internet banking for supported controls.",
+        "See ICICI’s reporting and liability terms.",
+        "Check the policy on your issued card.",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Do Emeralde points offset forex markup automatically?",
+          "a": "No. ICICI lists 4 Reward Points per ₹100 of eligible international spend and a separate 2% foreign-currency markup. The value of points depends on the redemption you choose."
+        },
+        {
+          "q": "Is standard ICICI Emeralde invite-only?",
+          "a": "ICICI lists an application route and eligibility criteria for standard Emeralde. Final approval is subject to the bank’s assessment. Emeralde Private Metal has separate eligibility and pricing."
+        },
+        {
+          "q": "How does Emeralde compare with HDFC Infinia Metal abroad?",
+          "a": "Compare the applicable forex charge and the redemption you actually use. Emeralde lists 4 points per ₹100, with value depending on the chosen reward. The commonly quoted Infinia base value assumes eligible travel redemption and its booking limits."
+        }
+      ],
+      "sources": [
+        [
+          "ICICI standard Emeralde product, fees and benefit conditions",
+          "https://www.icici.bank.in/personal-banking/cards/credit-card/emeralde-credit-card"
+        ],
+        [
+          "ICICI card terms and qualifying spend ceilings",
+          "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/mitc_cc.pdf"
+        ]
+      ],
+      "pairWith": [
+        {
+          "combo": "Emeralde + HDFC Millennia",
+          "fee": "₹13,000 in standard renewal fees before tax and waivers",
+          "reason": "Keep Emeralde for the eligible lounge and lifestyle benefits you use. Compare Millennia for direct purchases at its named online merchants, subject to its shared CashPoint cap. Check the effect on Emeralde’s annual waiver before moving spend.",
+          "cardId": "hdfc-millennia"
+        },
+        {
+          "combo": "Emeralde + Axis ACE",
+          "fee": "₹12,499 in standard renewal fees before tax and waivers",
+          "reason": "Keep enough spending on Emeralde to meet the conditions for perks you actually use. Compare ACE for eligible bills via Google Pay on Android and other eligible cashback routes. Its 5% and 4% routes share one ₹500 statement cap.",
+          "cardId": "axis-ace"
+        }
+      ],
+      "capMath": {
+        "title": "Emeralde reward limits and benefit windows",
+        "body": "ICICI’s terms apply category-specific eligible-spend limits per statement cycle. Utilities and insurance each have their own ₹80,000 ceiling, grocery and departmental stores share ₹40,000, and eligible transportation is limited to ₹20,000. In a statement cycle with ₹1 lakh of qualifying insurance spending, 1 point per ₹100 on the first ₹80,000 earns 800 points. The part above the ceiling earns no additional points in that category.\n\nThe lifestyle benefits use different periods. The movie offer uses eligible purchases in the preceding spend quarter. Golf uses eligible retail spending in the previous calendar month. The annual fee waiver uses its own eligible-spend threshold.",
+        "examples": {
+          "columns": [
+            "Category",
+            "Limit or threshold",
+            "Period"
+          ],
+          "rows": [
+            [
+              "Utilities and insurance",
+              "₹80,000 eligible spend each",
+              "Statement cycle"
+            ],
+            [
+              "Grocery and departmental stores",
+              "₹40,000 eligible spend",
+              "Statement cycle"
+            ],
+            [
+              "Transportation",
+              "₹20,000 eligible spend",
+              "Statement cycle"
+            ],
+            [
+              "Movie tickets",
+              "₹25,000 in eligible spend",
+              "Preceding spend quarter"
+            ],
+            [
+              "Golf",
+              "One round per ₹50,000, maximum four",
+              "Previous calendar month spend"
+            ]
+          ]
+        },
+        "source": [
+          "ICICI card terms and qualifying spend ceilings",
+          "https://www.icici.bank.in/content/dam/icicibank/india/managed-assets/revamp-page-images/docs/pdf/mitc_cc.pdf"
+        ]
+      },
+      "avoidFor": [
+        {
+          "category": "Domestic spending to justify the fee",
+          "reason": "If you already hold legacy Regalia, compare the renewal cost and the value of the rewards and lounge benefits you actually use. Legacy Regalia is closed to new sourcing.",
+          "altCard": "hdfc-regalia"
+        },
+        {
+          "category": "Named online merchants",
+          "reason": "Compare the points you would redeem from Emeralde with Millennia’s 5% tier on eligible named merchants and its calendar-month cap.",
+          "altCard": "hdfc-millennia"
+        },
+        {
+          "category": "Avoiding currency markup",
+          "reason": "Emeralde publishes a 2% foreign-currency markup. FIRST WOW offers zero forex markup on eligible foreign-currency purchases and requires a fixed deposit.",
+          "altCard": "idfc-wow"
+        }
+      ]
+    },
+    "au-lit": {
+      "values": [
+        "Customisable base card with optional paid features",
+        "Check the Visa or RuPay network on your issued card.",
+        "N/A on the standard LIT offer",
+        "Requires a qualifying RuPay variant. Check the card and feature terms.",
+        "Subject to AU Bank approval.",
+        "Check AU Bank’s add-on and feature terms.",
+        "₹0 for the standard base card. Optional features are priced separately.",
+        "₹0 for the standard base card. Selected features may auto-renew.",
+        "N/A for the base card",
+        "No standard joining or renewal fee on the base card.",
+        "3.49% foreign-currency markup under AU’s schedule.",
+        "AU’s schedule lists 3.49% under its currency conversion charges. Check the applicable route.",
+        "See AU’s current schedule.",
+        "See AU’s current cash advance fee and interest schedule.",
+        "See AU’s current repayment conditions.",
+        "AU Reward Points and separate optional feature cashback",
+        "1 point per ₹100 of eligible retail spending.",
+        "Eligible purchases can earn 5X or 10X points with a selected feature. The accelerated rate includes the base point.",
+        "10,000 points per statement cycle. Utilities and telecom earn up to 100 points per transaction. Applicable cashback has separate feature limits.",
+        "Depends on the feature. Base exclusions include fuel, rent, cash withdrawal, BBPS, EMI, education and government payments.",
+        "Check AU’s posting terms for optional cashback. Base points use the rewards programme.",
+        "Check AU Rewardz for current travel options.",
+        "Redeem eligible points through AU Rewardz. Check the value of the item you select.",
+        "Not verified for a dedicated airline transfer rate.",
+        "AU’s schedule lists ₹99 plus GST per successful points redemption.",
+        "Check the AU Rewardz expiry schedule for your points.",
+        "No standard welcome reward verified.",
+        "N/A for the base card. Paid features can renew for another term.",
+        "Optional cashback features may require fresh qualifying spend in each 30-day period.",
+        "Optional domestic lounge feature, subject to a fee, eligible lounge and offer terms.",
+        "AU’s LIT terms list overseas lounge visits as chargeable.",
+        "The optional domestic voucher is for the cardholder and is non-transferable.",
+        "Not verified",
+        "Standard currency charges apply. Check whether the selected feature covers international spending.",
+        "Not verified",
+        "Not verified",
+        "Optional dining benefits depend on the activated feature and merchant eligibility.",
+        "Check the current AU offer and account terms.",
+        "Check the rewards and category cashback features in AU 0101.",
+        "Optional feature for eligible fuel purchases between ₹400 and ₹5,000, up to ₹1,500 in the 90-day feature period.",
+        "Not verified",
+        "Not verified",
+        "Optional memberships have separate fees, terms and minimum spending.",
+        "Confirm support on your issued card.",
+        "See AU’s EMI conversion terms. EMI purchases are excluded from base point earning.",
+        "Not verified",
+        "Use AU 0101 to manage features, auto-renewal and available controls.",
+        "See AU Bank’s reporting and liability terms.",
+        "Not verified",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "How do AU LIT features work?",
+          "a": "Choose optional features in AU 0101. Paid features generally run for 90 days and may auto-renew. Check the exact fee, eligibility and reset dates before activating."
+        },
+        {
+          "q": "What if I skip the optional features?",
+          "a": "You keep the standard base earn of one point per ₹100 on eligible retail spending, with the card’s exclusions and statement-cycle limits. The redemption you choose determines the value of each point."
+        },
+        {
+          "q": "Where can I confirm how my AU LIT card is serviced?",
+          "a": "AU Small Finance Bank issues the card. Check the network on your card and use AU 0101 or AU’s official card support to confirm your feature settings, controls and current terms."
+        }
+      ],
+      "sources": [
+        [
+          "AU LIT product and optional features",
+          "https://www.au.bank.in/personal-banking/credit-cards/lit-credit-card"
+        ],
+        [
+          "AU LIT terms, feature periods, caps and exclusions",
+          "https://www.au.bank.in/lit-terms-and-conditions"
+        ],
+        [
+          "AU card fee and currency conversion schedule",
+          "https://www.au.bank.in/pdf/xcite-credit-card/soc-cc-schedule-of-charges-cc.pdf"
+        ]
+      ],
+      "pairWith": [
+        {
+          "combo": "AU LIT + Axis ACE",
+          "fee": "₹499 in standard renewal fees before tax and waivers, plus any LIT feature fees",
+          "reason": "Use a paid LIT feature only when your qualifying purchases can cover its fee and taxes. Compare ACE for eligible bills through Google Pay on Android and for its 1.5% on other eligible purchases. Account for ACE’s shared accelerated cap.",
+          "cardId": "axis-ace"
+        },
+        {
+          "combo": "AU LIT + Amazon Pay ICICI",
+          "fee": "₹0 in standard renewal fees for both base cards, plus any LIT feature fees",
+          "reason": "Use Amazon Pay ICICI for eligible Amazon.in retail at 5% with Prime or 3% without Prime. Compare LIT features for purchases that fit their categories and time windows before paying to activate one.",
+          "cardId": "amazon-icici"
+        }
+      ],
+      "capMath": {
+        "title": "AU LIT statement caps and feature windows",
+        "body": "The 10,000-point cap runs by statement cycle. Paid 5X and 10X points rates already include the base point. Once the statement points cap fills, further eligible spending earns no more points in that statement. AU separately limits utility or telecom earning to 100 points per transaction.\n\nPaid features generally last 90 days. The 5% grocery and apparel features each have a ₹500 cap per 30-day period under AU’s terms. Milestone cashback uses separate qualifying-spend rules. Once a feature cap is full, additional spending does not increase that feature cashback. Check the activation date, feature terms, fees and auto-renewal setting in AU 0101.",
+        "examples": {
+          "columns": [
+            "Limit",
+            "Maximum",
+            "Period"
+          ],
+          "rows": [
+            [
+              "Reward Points",
+              "10,000 points",
+              "Statement cycle"
+            ],
+            [
+              "Utility or telecom points",
+              "100 points",
+              "Per eligible transaction"
+            ],
+            [
+              "5% grocery cashback",
+              "₹500 per feature",
+              "30-day feature period"
+            ],
+            [
+              "5% apparel cashback",
+              "₹500 per feature",
+              "30-day feature period"
+            ],
+            [
+              "Optional fuel surcharge waiver",
+              "₹1,500",
+              "90-day feature period"
+            ]
+          ]
+        },
+        "source": [
+          "AU LIT terms and cap schedules",
+          "https://www.au.bank.in/lit-terms-and-conditions"
+        ]
+      },
+      "avoidFor": [
+        {
+          "category": "Everyday rewards without activating features",
+          "reason": "Compare one AU point per ₹100 on eligible retail purchases with ACE’s cashback rates on eligible spend. Include any LIT feature and redemption fees.",
+          "altCard": "axis-ace"
+        },
+        {
+          "category": "Selected online merchants",
+          "reason": "For merchants eligible on both cards, compare Millennia’s CashPoint cap with the fee, limits and reset dates on the LIT feature you plan to activate.",
+          "altCard": "hdfc-millennia"
+        }
+      ]
+    },
+    "au-zenith": {
+      "values": [
+        "Premium metal rewards card",
+        "Visa Infinite or RuPay. Check the issued variant and network offers.",
+        "N/A on the standard unsecured product",
+        "Available with an eligible RuPay variant under AU’s terms.",
+        "AU lists indicative income, age and residency criteria. Approval is subject to the bank’s assessment.",
+        "AU lists no extra add-on card fee. Benefits and shared usage depend on programme terms.",
+        "₹4,999 plus applicable taxes",
+        "₹4,999 plus applicable taxes",
+        "₹8 lakh in net retail spending in the preceding card-anniversary year for renewal from year two.",
+        "N/A on the standard published pricing",
+        "0.99% through 30 November 2026. AU’s November fee schedule lists 0% from 1 December 2026.",
+        "See AU’s separate currency conversion terms and the exchange rate offered by the merchant.",
+        "See AU’s fees and finance charge schedule.",
+        "See AU’s cash withdrawal terms and applicable charges.",
+        "See AU’s repayment terms.",
+        "AU Reward Points",
+        "1 point per ₹100 of other eligible spending.",
+        "Up to 2 points per ₹100 on eligible dining, travel and international purchases.",
+        "25,000 points per statement cycle overall. Eligible utilities and telecom have a combined 1,000-point statement cap and 100-point cap per transaction.",
+        "Includes rent, education and government, BBPS, fuel, cash withdrawals, quasi-cash and EMI. Check separate milestone exclusions.",
+        "AU quotes ₹1 per point for Zenith+ rewards. Check the available redemption route and fees.",
+        "See AU Rewardz for eligible travel options.",
+        "At least 1,000 points for eligible catalogue redemptions under the agreement.",
+        "No dedicated transfer rate verified.",
+        "AU’s fee schedule lists ₹99 plus applicable tax per reward redemption.",
+        "Two years from the date points become available for redemption, under the agreement.",
+        "AU advertises a choice of ₹5,000 in eligible brand voucher value or 5,000 points. Offer terms apply.",
+        "Waiver at ₹8 lakh of eligible net retail spend in the preceding anniversary year.",
+        "1,000 points for eligible ₹75,000 retail spend per statement cycle. The ₹12 lakh anniversary-year membership benefit changes from 1 December 2026.",
+        "Up to four visits per quarter after ₹50,000 in eligible net retail spend in the preceding calendar quarter. Use the domestic programme.",
+        "Up to four eligible visits per calendar quarter outside India via Priority Pass. India usage is chargeable.",
+        "Check lounge and add-on entitlements and charges.",
+        "No separate standard feature verified.",
+        "Check the relevant forex rate by transaction date and the eligible international earn tier.",
+        "AU lists air accident cover. Check policy conditions and eligibility.",
+        "Taj Epicure at the eligible annual milestone. AU lists Taj Preferred from 1 December 2026.",
+        "Eligible dining can earn up to 2 points per ₹100. Network offers vary.",
+        "AU advertises BookMyShow benefits. Check the applicable dates, quota and terms.",
+        "Check AU and network offers for the issued variant.",
+        "AU lists 1% relief on eligible ₹400–₹5,000 fuel transactions, capped at ₹1,000 per statement cycle.",
+        "AU lists eligible golf games or lessons. Check booking and entitlement terms.",
+        "AU lists 24/7 global concierge assistance.",
+        "Check Taj milestone conditions and the applicable benefit date.",
+        "Available under AU’s card controls.",
+        "Eligible Xpress EMI conversions are subject to AU terms. EMI transactions do not earn base points.",
+        "See AU’s current terms.",
+        "Use AU 0101 or internet banking for supported card controls.",
+        "See AU’s reporting and liability terms.",
+        "AU lists purchase protection. Check policy coverage and exclusions.",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Is Zenith+ worth the ₹4,999 fee?",
+          "a": "Compare its fee after tax with travel and lounge benefits you expect to use and the AU Rewardz value you can redeem. Domestic lounge access requires prior-quarter spend and both programmes have quarterly visit limits."
+        },
+        {
+          "q": "Can the Zenith+ renewal fee be waived?",
+          "a": "AU lists ₹8 lakh in eligible net retail spending in the preceding anniversary year to waive renewal from year two. Check which purchases count."
+        },
+        {
+          "q": "When does the Zenith+ forex markup change?",
+          "a": "AU’s November schedule lists 0.99% through 30 November 2026 and 0% from 1 December 2026. Merchant-offered currency conversion can have its own exchange rate and fees."
+        }
+      ],
+      "sources": [
+        [
+          "AU Zenith+ benefits and fees",
+          "https://www.au.bank.in/premium-banking/credit-cards/zenith-plus-credit-card"
+        ],
+        [
+          "AU November fee schedule and 1 December change",
+          "https://www.au.bank.in/credit-cards/mitc%28with-schedule-of-charges%29.pdf"
+        ],
+        [
+          "AU cardmember agreement and points limits",
+          "https://www.au.bank.in/as/pdf/debit-cards/credit-card-member-agreement.pdf"
+        ],
+        [
+          "AU domestic airport lounge terms",
+          "https://www.au.bank.in/pdf/zenith-plus-credit-card/au-small-finance-bank-cc-airport-lounge-terms-conditions.pdf"
+        ]
+      ],
+      "pairWith": [
+        {
+          "combo": "AU Zenith+ + Axis ACE",
+          "fee": "₹5,498 in standard renewal fees before tax and waivers",
+          "reason": "Use Zenith+ for travel and lounge benefits you qualify for. Compare ACE for eligible bills through Google Pay on Android and other eligible cashback routes. Moving spending can affect Zenith+’s ₹50,000 domestic lounge requirement or its annual waiver.",
+          "cardId": "axis-ace"
+        }
+      ],
+      "capMath": {
+        "title": "Zenith+ earning limits and when each one resets",
+        "body": "AU limits overall earnings to 25,000 points per statement cycle. Eligible utility and telecom spending has a separate 1,000-point combined statement limit, and a single eligible transaction earns at most 100 points. Once a limit fills, the excess earns no more points under that limit. BBPS payments are excluded.\n\nThe ₹75,000 statement milestone has a separate list of excluded transactions. Domestic lounge eligibility is based on ₹50,000 of eligible net retail spending in the preceding calendar quarter, while the next-year fee waiver uses the card-anniversary year.",
+        "examples": {
+          "columns": [
+            "Category",
+            "Limit or threshold",
+            "Period"
+          ],
+          "rows": [
+            [
+              "Overall points earned",
+              "25,000 points",
+              "Statement cycle"
+            ],
+            [
+              "Eligible utility and telecom points",
+              "1,000 points shared",
+              "Statement cycle"
+            ],
+            [
+              "Eligible utility or telecom payment",
+              "100 points",
+              "Per transaction"
+            ],
+            [
+              "Domestic lounge eligibility",
+              "₹50,000 eligible net retail spend",
+              "Preceding calendar quarter"
+            ],
+            [
+              "Next-year renewal waiver",
+              "₹8 lakh net retail spend",
+              "Preceding anniversary year"
+            ]
+          ]
+        },
+        "source": [
+          "AU cardmember agreement and points limits",
+          "https://www.au.bank.in/as/pdf/debit-cards/credit-card-member-agreement.pdf"
+        ]
+      },
+      "avoidFor": [
+        {
+          "category": "Everyday domestic cashback",
+          "reason": "Compare ACE’s eligible base cashback and the value you can redeem from Zenith+ points. Keep the Zenith+ eligibility thresholds in mind when moving spend.",
+          "altCard": "axis-ace"
+        },
+        {
+          "category": "Named online merchants",
+          "reason": "Compare Zenith+’s eligible base rate with Millennia’s capped 5% tier on its listed merchants.",
+          "altCard": "hdfc-millennia"
+        }
+      ]
+    },
+    "idfc-select": {
+      "values": [
+        "Unsecured lifetime-free rewards card",
+        "Visa on the reviewed standard variant. Check the issued network.",
+        "N/A for standard FIRST Select",
+        "IDFC lists a separate paid UPI add-on. Check eligibility and charges.",
+        "Issuer approval applies. The product page lists annual income of ₹12 lakh or more.",
+        "Check IDFC’s add-on fees and shared railway lounge entitlement.",
+        "₹0 on the standard card",
+        "₹0 on the standard card",
+        "N/A on standard pricing",
+        "No standard joining or annual fee",
+        "0% foreign-currency markup",
+        "Merchant INR conversion may have separate charges. Check the current IDFC terms.",
+        "See IDFC’s current interest and late-fee schedule.",
+        "IDFC lists ₹199 plus GST per cash withdrawal. Other conditions apply.",
+        "See IDFC’s repayment terms.",
+        "IDFC FIRST Reward Points",
+        "3 per ₹200 on other eligible spending. Utilities, insurance, railways and FASTag earn 1 per ₹200.",
+        "10 per ₹200 from the first eligible dining, travel or international transaction. IDFC lists the same rate on eligible purchases on your birthday.",
+        "Eligible spending earns points only up to your credit limit per billing cycle.",
+        "Fuel, EMI and cash withdrawals earn no points. Check merchant category and add-on UPI terms.",
+        "IDFC lists ₹0.25 per point for eligible redemption against online purchases. Charges apply.",
+        "Eligible flight and hotel redemption in FIRST Rewards Gallery. App booking bonuses have separate terms.",
+        "See available FIRST Rewards Gallery options.",
+        "No dedicated transfer rate verified.",
+        "₹99 plus applicable tax per redemption.",
+        "24 months from credit. See the June notice for the transition on existing balances.",
+        "IDFC lists a ₹500 voucher for qualifying ₹5,000 spending within 30 days of card generation.",
+        "No standard renewal fee or renewal bonus listed.",
+        "No ₹20,000 threshold for the 10X earn rate after the June 2026 change.",
+        "One eligible visit per quarter after ₹20,000 qualifying previous-calendar-month spend.",
+        "No standard international airport visit listed.",
+        "Check the specific lounge terms. The railway programme allows an eligible guest to use the cardholder’s quota.",
+        "Up to four visits per quarter after ₹20,000 qualifying previous-calendar-month spend. Primary and add-on holders share the quota.",
+        "0% forex markup and 10X on qualifying international purchases within the earning limit.",
+        "IDFC lists travel cover and trip cancellation protection, subject to policy conditions.",
+        "Not verified",
+        "Eligible dining can earn 10X points under IDFC’s merchant-category rules.",
+        "Buy one, get one on qualifying bookings after ₹20,000 in the preceding calendar month. Current offer limits apply.",
+        "Check current partner offers and cashback exclusions.",
+        "IDFC lists a 1% fuel surcharge waiver under the qualifying terms. Fuel earns no points.",
+        "IDFC lists eligible rounds or lessons. Check the active privileges terms.",
+        "IDFC lists travel concierge under applicable privileges.",
+        "Not verified",
+        "Check the issued variant.",
+        "Eligible EMI conversion is available. EMI purchases earn no points under the rewards terms.",
+        "See IDFC’s current terms.",
+        "Use the IDFC FIRST app for supported card controls.",
+        "See IDFC’s reporting and liability terms.",
+        "Check the current IDFC cover and exclusions.",
+        "Not verified"
+      ],
+      "faqs": [
+        {
+          "q": "Is the birthday reward for the whole month?",
+          "a": "IDFC’s product page specifies eligible purchases on your birthday. The 10X rate is 10 points per ₹200. Eligibility and the billing-cycle earning limit apply."
+        },
+        {
+          "q": "Does spending ₹20,000 unlock 10X points?",
+          "a": "Since 18 June 2026, the reward rate depends on the purchase category from the first eligible transaction. The ₹20,000 previous-calendar-month requirement is relevant to eligible movie and lounge benefits."
+        },
+        {
+          "q": "How is Select different from FIRST WOW?",
+          "a": "Both currently list zero forex markup. Select is unsecured, with category-based rewards and spend-gated domestic lounge benefits. WOW is fixed-deposit-backed with a separate earning schedule."
+        }
+      ],
+      "sources": [
+        [
+          "IDFC FIRST Select product, benefits and fee schedule",
+          "https://www.idfcfirst.bank.in/credit-card/select"
+        ],
+        [
+          "IDFC FIRST Select June 2026 rewards update",
+          "https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/FIRST-Select-Credit-Card-Communication-May-26.pdf"
+        ],
+        [
+          "IDFC FIRST Select privileges and lounge rules",
+          "https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/FIRST-Select-Privileges.pdf"
+        ]
+      ],
+      "pairWith": [
+        {
+          "combo": "IDFC FIRST Select + Axis ACE",
+          "fee": "₹499 in standard renewal fees before tax and waivers",
+          "reason": "Keep enough qualifying spending on Select to meet the lounge or movie requirements you use. Compare its zero forex and eligible travel and dining points with ACE’s eligible bill and everyday cashback. ACE’s accelerated routes share a ₹500 statement cap.",
+          "cardId": "axis-ace"
+        },
+        {
+          "combo": "IDFC FIRST Select + HDFC Millennia",
+          "fee": "₹1,000 in standard renewal fees before tax and waivers",
+          "reason": "Use Select for qualifying foreign-currency purchases and compare Millennia for eligible direct purchases at its named merchants. Check Millennia’s calendar-month cap and whether moving spend affects Select’s lounge access.",
+          "cardId": "hdfc-millennia"
+        }
+      ],
+      "capMath": {
+        "title": "Select earns by category and caps rewards at your credit limit",
+        "body": "From 18 June 2026, eligible dining, travel and international purchases earn 10 points per ₹200 from the first qualifying purchase. Other eligible spending earns 3 per ₹200, and utilities, insurance, railways and FASTag earn 1 per ₹200. The previous ₹20,000 rewards threshold no longer applies.\n\nThe bank awards points only on eligible spending up to your credit limit per billing cycle. Paying the bill early to free up available credit does not raise that rewards ceiling. The ₹20,000 prior-calendar-month condition still applies to eligible lounge and movie benefits. The paid UPI add-on has separate per-transaction earning rules.",
+        "examples": {
+          "columns": [
+            "Category",
+            "Rule",
+            "Period"
+          ],
+          "rows": [
+            [
+              "Eligible dining, travel and international",
+              "10 points per ₹200",
+              "Per eligible purchase"
+            ],
+            [
+              "Other eligible retail",
+              "3 points per ₹200",
+              "Per eligible purchase"
+            ],
+            [
+              "Utilities, insurance, railways and FASTag",
+              "1 point per ₹200",
+              "Per eligible purchase"
+            ],
+            [
+              "Overall earn ceiling",
+              "Eligible spend up to your credit limit",
+              "Billing cycle"
+            ],
+            [
+              "Domestic lounge and movie eligibility",
+              "₹20,000 qualifying spend",
+              "Previous calendar month"
+            ]
+          ]
+        },
+        "source": [
+          "IDFC FIRST Select June 2026 rewards update",
+          "https://www.idfcfirst.bank.in/content/dam/idfcfirstbank/pdf/credit-card/FIRST-Select-Credit-Card-Communication-May-26.pdf"
+        ]
+      },
+      "avoidFor": [
+        {
+          "category": "Other everyday purchases",
+          "reason": "Compare 3 Select points per ₹200 before redemption charges with ACE’s cash rate on eligible spending.",
+          "altCard": "axis-ace"
+        },
+        {
+          "category": "Named food delivery merchants",
+          "reason": "Select can earn 10X on qualifying dining merchant codes, while Millennia’s eligible named merchants earn capped CashPoints. Compare the actual payment route and redemption.",
+          "altCard": "hdfc-millennia"
+        }
+      ]
     }
   }
 }

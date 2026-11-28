@@ -12,6 +12,10 @@ const cardIllustrations = {
   "sbi-simplysave": "simplysave-illustration",
   "hdfc-regalia": "regalia-illustration",
   "axis-flipkart": "flipkart-illustration",
+  "icici-emeralde": "emeralde-illustration",
+  "au-lit": "lit-illustration",
+  "au-zenith": "zenith-illustration",
+  "idfc-select": "first-select-illustration",
 };
 
 /* ── Static generation ── */
@@ -51,7 +55,7 @@ function tocSections(card, ed) {
   if (ed?.verdict) items.push({ id: "verdict", label: "Verdict" });
   if (cardReviewDetails.cards[card.id]) items.push({
     id: "cashback-example",
-    label: ({ "sbi-simplyclick": "Voucher value example", "idfc-wow": "Travel and points example", "amex-mrcc": "Monthly points example", "axis-atlas": "Travel miles example", "icici-coral": "Movie and lounge example", "sbi-simplysave": "Reward points example", "hdfc-infinia": "Redemption value example", "axis-airtel": "Bill cashback example", "hdfc-regalia": "Redemption value example", "axis-flipkart": "Quarterly cap example" })[card.id] || "Cashback example",
+    label: ({ "sbi-simplyclick": "Voucher value example", "idfc-wow": "Travel and points example", "amex-mrcc": "Monthly points example", "axis-atlas": "Travel miles example", "icici-coral": "Movie and lounge example", "sbi-simplysave": "Reward points example", "hdfc-infinia": "Redemption value example", "axis-airtel": "Bill cashback example", "hdfc-regalia": "Redemption value example", "axis-flipkart": "Quarterly cap example", "hdfc-diners-black": "Redemption value example", "icici-sapphiro": "Benefit eligibility example", "icici-emeralde": "Foreign-currency example", "au-lit": "Feature cashback example", "au-zenith": "Utility cap example", "idfc-select": "Reward tiers example" })[card.id] || "Cashback example",
   });
   items.push({ id: "rewards", label: "Reward rates" });
   if (ed?.capMath) items.push({ id: "caps", label: "Cap terms" });
@@ -85,6 +89,7 @@ export default function CardPage({ params }) {
     ...editorial,
     capMath: details?.capMath ?? editorial.capMath,
     pairWith: details?.pairWith ?? editorial.pairWith,
+    avoidFor: details?.avoidFor ? [...(editorial.avoidFor || []), ...details.avoidFor] : editorial.avoidFor,
   };
   const toc = tocSections(card, ed);
   const illustrationClass = details || card.id === "sbi-simplyclick" ? cardIllustrations[card.id] : undefined;
@@ -198,7 +203,7 @@ export default function CardPage({ params }) {
               style={illustrationClass ? undefined : { background: `linear-gradient(140deg, ${card.color}cc 0%, ${card.color} 50%, ${card.color}99 115%)` }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
                 <span className="mono" style={{ fontSize: 11, opacity: 0.7, letterSpacing: ".12em" }}>{card.bank}</span>
-                {illustrationClass !== "flipkart-illustration" && (
+                {!["flipkart-illustration", "emeralde-illustration", "lit-illustration", "zenith-illustration", "first-select-illustration"].includes(illustrationClass) && (
                   <span className="mono" style={{ fontSize: 10, opacity: 0.6, letterSpacing: ".12em" }}>{card.network}</span>
                 )}
               </div>
@@ -240,7 +245,7 @@ export default function CardPage({ params }) {
       )}
 
       {/* ═══ QUICK FACTS ═══ */}
-      <div className="qfacts">
+      <div className={card.id === "icici-sapphiro" ? "qfacts qfacts-sapphiro" : "qfacts"}>
         <div className="wrap">
           <div className="qf-in">
             <div className="qf">
